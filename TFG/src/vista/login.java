@@ -17,7 +17,7 @@ import javax.swing.JDialog;
 import javax.swing.UIManager;
 import org.json.JSONException;
 import org.json.JSONObject;
-import resources.Utils;
+import controlador.Utils;
 
 /**
  *

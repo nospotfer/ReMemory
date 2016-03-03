@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
-import resources.Utils;
+import controlador.Utils;
 
 /**
  *
@@ -22,6 +22,8 @@ public class mainMenu extends javax.swing.JFrame {
 
     private boolean pacient = false;
     private Utils utils;
+    private String idPacient = "";
+    
     /**
      * Creates new form mainMenu
      */
@@ -29,6 +31,8 @@ public class mainMenu extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         utils = new Utils();
+        idText.requestFocusInWindow();
+        this.getRootPane().setDefaultButton(seleccionaBtn);
     }
 
     /**
@@ -51,6 +55,7 @@ public class mainMenu extends javax.swing.JFrame {
         nouPacientBtn = new javax.swing.JButton();
         editaBtn = new javax.swing.JButton();
         seleccionaBtn = new javax.swing.JButton();
+        fitxaBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -98,6 +103,14 @@ public class mainMenu extends javax.swing.JFrame {
             }
         });
 
+        fitxaBtn.setText("Veure fitxa");
+        fitxaBtn.setEnabled(false);
+        fitxaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fitxaBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -105,18 +118,19 @@ public class mainMenu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nomText))
+                                .addComponent(nomText, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(arxiuText, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(obrirBtn))
+                        .addComponent(obrirBtn)
+                        .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -128,9 +142,10 @@ public class mainMenu extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(editaBtn)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(fitxaBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(nouPacientBtn)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,7 +167,8 @@ public class mainMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nouPacientBtn)
-                    .addComponent(editaBtn))
+                    .addComponent(editaBtn)
+                    .addComponent(fitxaBtn))
                 .addContainerGap())
         );
 
@@ -160,11 +176,11 @@ public class mainMenu extends javax.swing.JFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/test.png"))); // NOI18N
 
-        jLabel1.setText("Test textual");
+        jLabel1.setText("Tests textuals");
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pictureTest.png"))); // NOI18N
 
-        jLabel2.setText("Test visual");
+        jLabel2.setText("Tests visuals");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -276,13 +292,21 @@ public class mainMenu extends javax.swing.JFrame {
             }
         }else {
             idText.setText("");
-            idText.setEnabled(true);
+            idText.setEditable(true);
             nomText.setText("");
             arxiuText.setText("");
             seleccionaBtn.setText("Selecciona");
             pacient = false;
+            editaBtn.setEnabled(false);
+            fitxaBtn.setEnabled(false);
+            idPacient = "";
         }
     }//GEN-LAST:event_seleccionaBtnActionPerformed
+
+    private void fitxaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitxaBtnActionPerformed
+        newFitxaPacient nF = new newFitxaPacient(this,true,idPacient);
+        nF.setVisible(true);
+    }//GEN-LAST:event_fitxaBtnActionPerformed
 
     private void checkPacient() throws JSONException{
         JSONObject obj;
@@ -291,7 +315,7 @@ public class mainMenu extends javax.swing.JFrame {
         int i = 0;
         boolean trobat = false;
         while ( i < pacients.length() && !trobat){
-            if (pacients.getJSONObject(i).getString("id").equals(idText.getText())){
+            if (pacients.getJSONObject(i).getString("id").equals(idText.getText().toLowerCase())){
                 trobat = true;
             }
             else{
@@ -299,11 +323,14 @@ public class mainMenu extends javax.swing.JFrame {
             }
         }
         if (trobat){
-            idText.setEnabled(false);
+            idText.setEditable(false);
+            idPacient = pacients.getJSONObject(i).getString("id");
             seleccionaBtn.setText("Canvia pacient");
             nomText.setText(pacients.getJSONObject(i).getString("name").toUpperCase());
             arxiuText.setText(pacients.getJSONObject(i).getString("file"));
             pacient = true;
+            editaBtn.setEnabled(true);
+            fitxaBtn.setEnabled(true);
         } else{
             System.out.println(trobat);
         }
@@ -347,6 +374,7 @@ public class mainMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField arxiuText;
     private javax.swing.JButton editaBtn;
+    private javax.swing.JButton fitxaBtn;
     private javax.swing.JTextField idText;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

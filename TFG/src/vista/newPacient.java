@@ -10,11 +10,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -47,12 +44,9 @@ public class newPacient extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         idTextBox = new javax.swing.JTextField();
         idLabel = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         newBtn = new javax.swing.JButton();
         cancelBtn = new javax.swing.JButton();
         nameTextBox = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        fileText = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -62,8 +56,6 @@ public class newPacient extends javax.swing.JDialog {
         jLabel1.setText("Nom:");
 
         idLabel.setText("ID:");
-
-        jLabel3.setText("Arxiu:");
 
         newBtn.setText("Nou");
         newBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -79,48 +71,33 @@ public class newPacient extends javax.swing.JDialog {
             }
         });
 
-        jButton1.setText("Selecciona");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(91, 91, 91)
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(4, 4, 4)
                                 .addComponent(idLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(8, 8, 8)
-                                .addComponent(nameTextBox, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
-                                .addContainerGap())
+                                .addComponent(nameTextBox, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(idTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(newBtn)
-                                .addGap(35, 35, 35)
-                                .addComponent(cancelBtn))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fileText, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton1)))
-                        .addContainerGap())))
+                        .addComponent(newBtn)
+                        .addGap(35, 35, 35)
+                        .addComponent(cancelBtn)
+                        .addGap(195, 195, 195)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,16 +110,11 @@ public class newPacient extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(nameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton1)
-                    .addComponent(fileText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newBtn)
                     .addComponent(cancelBtn))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,8 +123,8 @@ public class newPacient extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,8 +145,8 @@ public class newPacient extends javax.swing.JDialog {
 
         JSONObject obj = null;
         try {
-            obj = new JSONObject(getStringFile("res/pacients.json"));
-            JSONArray users = obj.getJSONArray("Pacients");
+            obj = new JSONObject(getStringFile("res/users.json"));
+            JSONArray users = obj.getJSONArray("Users");
             int i = 0;
             boolean trobat = false;
             while ( i < users.length() && !trobat){
@@ -184,7 +156,7 @@ public class newPacient extends javax.swing.JDialog {
                 i++;
             }
             boolean buits;
-            buits = "".equals(idTextBox.getText()) || "".equals(nameTextBox.getText()) || "".equals(fileText.getText());
+            buits = "".equals(idTextBox.getText()) || "".equals(nameTextBox.getText());
             
             if (trobat || buits){
                 if (buits) System.out.println("Has d'omplir tots els buits");
@@ -198,12 +170,12 @@ public class newPacient extends javax.swing.JDialog {
                 JSONObject o = new JSONObject();
                 o.put("id",idTextBox.getText().toLowerCase());
                 o.put("name", nameTextBox.getText().toLowerCase());
-                o.put("file", fileText.getText());
+                o.put("role", "pacient");
                 
                 usr.put(o);
                 
-                obj.put("Pacients", usr);
-                PrintWriter out = new PrintWriter("res/pacients.json");
+                obj.put("Users", usr);
+                PrintWriter out = new PrintWriter("res/users.json");
                 out.write(obj.toString());
                 out.close();
                 this.dispose();
@@ -217,17 +189,6 @@ public class newPacient extends javax.swing.JDialog {
         }
   
     }//GEN-LAST:event_newBtnActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JFileChooser chooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter(
-            "Documents", "doc", "xls", "txt");
-        chooser.setFileFilter(filter);
-        int returnVal = chooser.showOpenDialog(this);
-        if(returnVal == JFileChooser.APPROVE_OPTION) {
-            fileText.setText(chooser.getSelectedFile().getPath());
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -301,12 +262,9 @@ public class newPacient extends javax.swing.JDialog {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelBtn;
-    private javax.swing.JTextField fileText;
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextBox;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nameTextBox;
     private javax.swing.JButton newBtn;

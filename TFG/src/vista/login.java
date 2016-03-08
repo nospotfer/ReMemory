@@ -23,13 +23,13 @@ import controlador.Utils;
  *
  * @author USER
  */
-public class login extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame {
 
     Utils utils;
     /**
      * Creates new form login
      */
-    public login() {
+    public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.getRootPane().setDefaultButton(loginBtn);
@@ -155,9 +155,9 @@ public class login extends javax.swing.JFrame {
         try {
             loginCheck();
         } catch (IOException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         } catch (JSONException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_loginBtnActionPerformed
 
@@ -180,20 +180,21 @@ public class login extends javax.swing.JFrame {
             }*/
             javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                new Login().setVisible(true);
             }
         });
     }
@@ -206,19 +207,37 @@ public class login extends javax.swing.JFrame {
         org.json.JSONArray users = obj.getJSONArray("Users");
         int i = 0;
         boolean trobat = false;
+        String rol = "";
         while ( i < users.length() && !trobat){
             if (users.getJSONObject(i).getString("name").equals(userTxt.getText().toLowerCase())){
+                rol = users.getJSONObject(i).getString("role");
                 trobat = true;
             }
             else{
                 i++;
             }
         }
-        if (trobat && users.getJSONObject(i).getString("password").equals(passTxt.getText())){
-            mainMenu mM = new mainMenu();
-            mM.pack();
-            mM.setVisible(true);
-            this.dispose();
+        if (trobat){
+            switch(rol){
+                case "evaluador":
+                    if (users.getJSONObject(i).getString("password").equals(passTxt.getText())){
+                        menuEvaluador mE = new menuEvaluador(users.getJSONObject(i).getString("name"));
+                        mE.pack();
+                        mE.setVisible(true);
+                        this.dispose();
+                    }
+                    break;
+                    
+                case "pacient":
+                    menuPacient mP = new menuPacient(users.getJSONObject(i).getString("name"));
+                    mP.pack();
+                    mP.setVisible(true);
+                    this.dispose();
+                    break;
+                    
+                case "admin":
+                    break;
+            }
         }
         
     }

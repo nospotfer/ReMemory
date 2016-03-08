@@ -198,6 +198,7 @@ public class newUser extends javax.swing.JDialog {
                 o.put("id",idTextBox.getText());
                 o.put("name", nameTextBox.getText().toLowerCase());
                 o.put("password", passTextBox.getText());
+                o.put("role","evaluador");
                 
                 usr.put(o);
                 

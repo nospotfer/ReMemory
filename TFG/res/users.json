@@ -1,1 +1,1 @@
-{"Users":[{"password":"admin","ID":"0","name":"admin"}]}
+{"Users":[{"password":"admin","role":"evaluador","name":"admin","id":"0"},{"role":"pacient","name":"pacient de prova","id":"prova"}]}

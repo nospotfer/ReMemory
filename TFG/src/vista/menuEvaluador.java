@@ -13,22 +13,28 @@ import java.util.logging.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
 import controlador.Utils;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import javax.swing.JFrame;
 
 /**
  *
  * @author USER
  */
-public class mainMenu extends javax.swing.JFrame {
+public class menuEvaluador extends javax.swing.JFrame {
 
     private boolean pacient = false;
     private Utils utils;
     private String idPacient = "";
+    private String evaluador;
     
     /**
      * Creates new form mainMenu
      */
-    public mainMenu() {
+    public menuEvaluador(String evaluador) {
         initComponents();
+        this.evaluador = evaluador;
+        evaluadorLabel.setText(evaluador.toUpperCase());
         this.setLocationRelativeTo(null);
         utils = new Utils();
         idText.requestFocusInWindow();
@@ -48,10 +54,7 @@ public class mainMenu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         idText = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         nomText = new javax.swing.JTextField();
-        arxiuText = new javax.swing.JTextField();
-        obrirBtn = new javax.swing.JButton();
         nouPacientBtn = new javax.swing.JButton();
         editaBtn = new javax.swing.JButton();
         seleccionaBtn = new javax.swing.JButton();
@@ -64,6 +67,9 @@ public class mainMenu extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        backBtn = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        evaluadorLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,18 +79,7 @@ public class mainMenu extends javax.swing.JFrame {
 
         jLabel5.setText("Nom:");
 
-        jLabel6.setText("Arxiu:");
-
         nomText.setEditable(false);
-
-        arxiuText.setEditable(false);
-
-        obrirBtn.setText("Obrir");
-        obrirBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                obrirBtnActionPerformed(evt);
-            }
-        });
 
         nouPacientBtn.setText("Nou pacient");
         nouPacientBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +98,7 @@ public class mainMenu extends javax.swing.JFrame {
             }
         });
 
-        fitxaBtn.setText("Veure fitxa");
+        fitxaBtn.setText("Fitxa");
         fitxaBtn.setEnabled(false);
         fitxaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,18 +114,10 @@ public class mainMenu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nomText, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(arxiuText, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(obrirBtn)
-                        .addContainerGap())
+                        .addComponent(nomText, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
+                        .addGap(77, 77, 77))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -161,20 +148,20 @@ public class mainMenu extends javax.swing.JFrame {
                     .addComponent(nomText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(arxiuText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(obrirBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nouPacientBtn)
                     .addComponent(editaBtn)
-                    .addComponent(fitxaBtn))
-                .addContainerGap())
+                    .addComponent(fitxaBtn)
+                    .addComponent(nouPacientBtn))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Tests"));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/test.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Tests textuals");
 
@@ -238,18 +225,36 @@ public class mainMenu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        backBtn.setText("Surt al menú principal");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Evaluador:");
+
+        evaluadorLabel.setText("jLabel7");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(backBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(evaluadorLabel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -261,6 +266,11 @@ public class mainMenu extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn)
+                    .addComponent(jLabel6)
+                    .addComponent(evaluadorLabel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -272,29 +282,17 @@ public class mainMenu extends javax.swing.JFrame {
         nP.setVisible(true);
     }//GEN-LAST:event_nouPacientBtnActionPerformed
 
-    private void obrirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obrirBtnActionPerformed
-        if (!"".equals(arxiuText.getText())){
-            File file = new File(arxiuText.getText());
-            try {
-                Desktop.getDesktop().open(file);
-            } catch (IOException ex) {
-                Logger.getLogger(mainMenu.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }//GEN-LAST:event_obrirBtnActionPerformed
-
     private void seleccionaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaBtnActionPerformed
         if (!pacient){
             try {
                 checkPacient();
             } catch (JSONException ex) {
-                Logger.getLogger(mainMenu.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(menuEvaluador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else {
             idText.setText("");
             idText.setEditable(true);
             nomText.setText("");
-            arxiuText.setText("");
             seleccionaBtn.setText("Selecciona");
             pacient = false;
             editaBtn.setEnabled(false);
@@ -305,17 +303,34 @@ public class mainMenu extends javax.swing.JFrame {
 
     private void fitxaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitxaBtnActionPerformed
         newFitxaPacient nF = new newFitxaPacient(this,true,idPacient);
+        nF.pack();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        nF.setSize(screenSize.width, screenSize.height-30);
         nF.setVisible(true);
     }//GEN-LAST:event_fitxaBtnActionPerformed
 
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        Login l = new Login();
+        l.pack();
+        l.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backBtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        testsTextuals tT = new testsTextuals();
+        tT.pack();
+        tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        tT.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void checkPacient() throws JSONException{
         JSONObject obj;
-        obj = new JSONObject(utils.getStringFile("res/pacients.json"));
-        org.json.JSONArray pacients = obj.getJSONArray("Pacients");
+        obj = new JSONObject(utils.getStringFile("res/users.json"));
+        org.json.JSONArray pacients = obj.getJSONArray("Users");
         int i = 0;
         boolean trobat = false;
         while ( i < pacients.length() && !trobat){
-            if (pacients.getJSONObject(i).getString("id").equals(idText.getText().toLowerCase())){
+            if (pacients.getJSONObject(i).getString("id").equals(idText.getText().toLowerCase()) && pacients.getJSONObject(i).getString("role").equals("pacient")){
                 trobat = true;
             }
             else{
@@ -327,7 +342,6 @@ public class mainMenu extends javax.swing.JFrame {
             idPacient = pacients.getJSONObject(i).getString("id");
             seleccionaBtn.setText("Canvia pacient");
             nomText.setText(pacients.getJSONObject(i).getString("name").toUpperCase());
-            arxiuText.setText(pacients.getJSONObject(i).getString("file"));
             pacient = true;
             editaBtn.setEnabled(true);
             fitxaBtn.setEnabled(true);
@@ -353,27 +367,29 @@ public class mainMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(mainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(menuEvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(mainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(menuEvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(mainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(menuEvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(mainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(menuEvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new mainMenu().setVisible(true);
+                new menuEvaluador("").setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField arxiuText;
+    private javax.swing.JButton backBtn;
     private javax.swing.JButton editaBtn;
+    private javax.swing.JLabel evaluadorLabel;
     private javax.swing.JButton fitxaBtn;
     private javax.swing.JTextField idText;
     private javax.swing.JButton jButton1;
@@ -390,7 +406,6 @@ public class mainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField nomText;
     private javax.swing.JButton nouPacientBtn;
-    private javax.swing.JButton obrirBtn;
     private javax.swing.JButton seleccionaBtn;
     // End of variables declaration//GEN-END:variables
 }

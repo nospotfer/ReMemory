@@ -1,6 +1,6 @@
 #DADES BASIQUES
-#Thu Mar 03 03:39:13 CET 2016
-anysAlcohol=5
+#Thu Mar 03 20:01:15 CET 2016
+anysAlcohol=0
 nivellEscolaritat=Universitari grau mig
 consumAlcohol=S\u00ED
 dataNaixement=22/03/2016
@@ -20,10 +20,10 @@ sexe=Dona
 estatCivil=Divorciat
 anysEscolaritat=3
 anysFumar=
-numCigarrets=
+numCigarrets=4
 malaltiesCroniques=
 #DADES MEDIQUES
-#Thu Mar 03 03:39:13 CET 2016
+#Thu Mar 03 20:01:15 CET 2016
 insuficienciaCardiaca=No
 depresio=No
 gastritis=No
@@ -45,7 +45,7 @@ psicosis=No
 tempsTractament=Ara no, anteriorment s\u00ED (fa m\u00E9s de 12 mesos que no en fa)
 cannabis=No
 psicoestimulants=
-numCigarrets=
+numCigarrets=4
 malaltiesCroniques=
 obesitat=No
 anysFumar=
@@ -59,7 +59,7 @@ cardiopatia=No
 broncodilatadors=
 ACEsterasa=
 fumador=No
-tabac=
+tabac=73
 abusDrogues=No
 numBegudes=Cerveses esporadiques
 antecedentsMare=
@@ -73,7 +73,7 @@ antecedentsPare=
 dislipemia=No
 epilepsia=No
 antihipertensius=
-anysAlcohol=5
+anysAlcohol=0
 avcTransitori=No
 professio=Enginyer informatic
 memantina=
@@ -134,7 +134,7 @@ edatAlcohol=21
 artritis=No
 diabetis=No
 #PROVES COMPLEMENTARIES
-#Thu Mar 03 03:39:13 CET 2016
+#Thu Mar 03 20:01:15 CET 2016
 analiticaOrina=No realitzat
 emgCodi=No realitzat
 insuficienciaCardiaca=No
@@ -165,7 +165,7 @@ tempsTractament=Ara no, anteriorment s\u00ED (fa m\u00E9s de 12 mesos que no en 
 anatomiaData=
 cannabis=No
 psicoestimulants=
-numCigarrets=
+numCigarrets=4
 malaltiesCroniques=
 obesitat=No
 anysFumar=
@@ -180,7 +180,7 @@ cardiopatia=No
 broncodilatadors=
 ACEsterasa=
 fumador=No
-tabac=
+tabac=73
 ecgData=
 abusDrogues=No
 analiticaOrinaData=
@@ -201,7 +201,7 @@ antecedentsPare=
 dislipemia=No
 epilepsia=No
 antihipertensius=
-anysAlcohol=5
+anysAlcohol=0
 potencialsData=
 avcTransitori=No
 analiticaLcrCodi=No realitzat
@@ -278,7 +278,7 @@ artritis=No
 analiticaSangData=11/02/2016
 diabetis=No
 #NEUROIMATGE
-#Thu Mar 03 03:39:13 CET 2016
+#Thu Mar 03 20:01:15 CET 2016
 opioides=
 idioma=Catal\u00E0, castell\u00E0 i altres
 hormones=
@@ -287,7 +287,7 @@ ubeDia=3-4
 parkinson=No
 cataractes=No
 insuficienciaRenal=No
-numCigarrets=
+numCigarrets=4
 depresio=No
 antiinflamatoris=
 artrosi=No
@@ -321,7 +321,7 @@ cannabis=No
 avcTransitori=No
 spectCodi=No realitzat
 numBegudes=Cerveses esporadiques
-tabac=
+tabac=73
 eegCodi=Anormal NCS
 geneticaDescripcio=
 consumAlcohol=S\u00ED
@@ -402,7 +402,7 @@ edatFumar=
 hipertensio=No
 malaltiesCroniques=
 anysEscolaritat=3
-anysAlcohol=5
+anysAlcohol=0
 avcEstablert=No
 antecedentsMare=
 anatomiaCodi=No realitzat

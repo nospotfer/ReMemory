@@ -159,6 +159,7 @@ public class testsTextuals extends javax.swing.JFrame {
         rangLabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         provesComplementariesTab = new javax.swing.JPanel();
+        neuroimatgeTab = new javax.swing.JPanel();
         provesComplementariesScroll = new javax.swing.JScrollPane();
         provesComplementariesPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -196,44 +197,6 @@ public class testsTextuals extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         tapTotalLabel = new javax.swing.JLabel();
         ciLabel = new javax.swing.JLabel();
-        neuroimatgeTab = new javax.swing.JPanel();
-        provesComplementariesScroll1 = new javax.swing.JScrollPane();
-        provesComplementariesPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jCheckBox31 = new javax.swing.JCheckBox();
-        jCheckBox32 = new javax.swing.JCheckBox();
-        jCheckBox33 = new javax.swing.JCheckBox();
-        jCheckBox34 = new javax.swing.JCheckBox();
-        jCheckBox35 = new javax.swing.JCheckBox();
-        jCheckBox36 = new javax.swing.JCheckBox();
-        jCheckBox37 = new javax.swing.JCheckBox();
-        jCheckBox38 = new javax.swing.JCheckBox();
-        jCheckBox39 = new javax.swing.JCheckBox();
-        jCheckBox40 = new javax.swing.JCheckBox();
-        jCheckBox41 = new javax.swing.JCheckBox();
-        jCheckBox42 = new javax.swing.JCheckBox();
-        jCheckBox43 = new javax.swing.JCheckBox();
-        jCheckBox44 = new javax.swing.JCheckBox();
-        jCheckBox45 = new javax.swing.JCheckBox();
-        jCheckBox46 = new javax.swing.JCheckBox();
-        jCheckBox47 = new javax.swing.JCheckBox();
-        jCheckBox48 = new javax.swing.JCheckBox();
-        jCheckBox49 = new javax.swing.JCheckBox();
-        jCheckBox50 = new javax.swing.JCheckBox();
-        jCheckBox51 = new javax.swing.JCheckBox();
-        jCheckBox52 = new javax.swing.JCheckBox();
-        jCheckBox53 = new javax.swing.JCheckBox();
-        jCheckBox54 = new javax.swing.JCheckBox();
-        jCheckBox55 = new javax.swing.JCheckBox();
-        jCheckBox56 = new javax.swing.JCheckBox();
-        jCheckBox57 = new javax.swing.JCheckBox();
-        jCheckBox58 = new javax.swing.JCheckBox();
-        jCheckBox59 = new javax.swing.JCheckBox();
-        jCheckBox60 = new javax.swing.JCheckBox();
-        label2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        tapTotalLabel1 = new javax.swing.JLabel();
-        ciLabel1 = new javax.swing.JLabel();
         buttonPanel = new javax.swing.JPanel();
         acceptaBtn = new javax.swing.JButton();
         cancelaBtn = new javax.swing.JButton();
@@ -1017,6 +980,19 @@ public class testsTextuals extends javax.swing.JFrame {
 
         tabbedPanel.addTab("CRC", dadesMediquesTab);
 
+        javax.swing.GroupLayout provesComplementariesTabLayout = new javax.swing.GroupLayout(provesComplementariesTab);
+        provesComplementariesTab.setLayout(provesComplementariesTabLayout);
+        provesComplementariesTabLayout.setHorizontalGroup(
+            provesComplementariesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 900, Short.MAX_VALUE)
+        );
+        provesComplementariesTabLayout.setVerticalGroup(
+            provesComplementariesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 725, Short.MAX_VALUE)
+        );
+
+        tabbedPanel.addTab("MMSE", provesComplementariesTab);
+
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Fulla de correcció"));
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -1298,309 +1274,15 @@ public class testsTextuals extends javax.swing.JFrame {
 
         provesComplementariesScroll.setViewportView(provesComplementariesPanel);
 
-        javax.swing.GroupLayout provesComplementariesTabLayout = new javax.swing.GroupLayout(provesComplementariesTab);
-        provesComplementariesTab.setLayout(provesComplementariesTabLayout);
-        provesComplementariesTabLayout.setHorizontalGroup(
-            provesComplementariesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(provesComplementariesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
-        );
-        provesComplementariesTabLayout.setVerticalGroup(
-            provesComplementariesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(provesComplementariesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 725, Short.MAX_VALUE)
-        );
-
-        tabbedPanel.addTab("MMSE", provesComplementariesTab);
-
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Fulla de correcció"));
-
-        jCheckBox31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox31.setText("ACULLÁ");
-        jCheckBox31.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox32.setText("ALELÍ");
-        jCheckBox32.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox33.setText("ALEGORÍA");
-        jCheckBox33.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox34.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox34.setText("CÓNCAVO");
-        jCheckBox34.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox35.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox35.setText("ACMÉ");
-        jCheckBox35.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox36.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox36.setText("CÁNON");
-        jCheckBox36.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox37.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox37.setText("DESCORTÉS");
-        jCheckBox37.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox38.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox38.setText("ACÓLITO");
-        jCheckBox38.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox39.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox39.setText("ABOGACÍA");
-        jCheckBox39.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox40.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox40.setText("RABÍ");
-        jCheckBox40.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox41.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox41.setText("MANCHÚ");
-        jCheckBox41.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox42.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox42.setText("ÁMBAR");
-        jCheckBox42.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox43.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox43.setText("SÍLICE");
-        jCheckBox43.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox44.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox44.setText("PÍFANO");
-        jCheckBox44.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox45.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox45.setText("DÍSCOLO");
-        jCheckBox45.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox46.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox46.setText("CÚPULA");
-        jCheckBox46.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox47.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox47.setText("ANÓMALO");
-        jCheckBox47.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox48.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox48.setText("APÁTRIDA");
-        jCheckBox48.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox49.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox49.setText("DIÁMETRO");
-        jCheckBox49.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox50.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox50.setText("PÚGIL");
-        jCheckBox50.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox51.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox51.setText("BALADÍ");
-        jCheckBox51.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox52.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox52.setText("VOLÁTIL");
-        jCheckBox52.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox53.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox53.setText("GRISÚ");
-        jCheckBox53.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox54.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox54.setText("HÚSAR");
-        jCheckBox54.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox55.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox55.setText("BÚLGARO");
-        jCheckBox55.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox56.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox56.setText("POLÍGAMO");
-        jCheckBox56.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox57.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox57.setText("MOARÉ");
-        jCheckBox57.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox58.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox58.setText("TÁCTIL");
-        jCheckBox58.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox59.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox59.setText("CÉLIBE");
-        jCheckBox59.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jCheckBox60.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox60.setText("ALBEDRÍO");
-        jCheckBox60.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox31)
-                    .addComponent(jCheckBox32)
-                    .addComponent(jCheckBox33)
-                    .addComponent(jCheckBox34)
-                    .addComponent(jCheckBox35)
-                    .addComponent(jCheckBox36)
-                    .addComponent(jCheckBox37)
-                    .addComponent(jCheckBox38)
-                    .addComponent(jCheckBox39)
-                    .addComponent(jCheckBox40))
-                .addGap(93, 93, 93)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox50)
-                    .addComponent(jCheckBox46)
-                    .addComponent(jCheckBox47)
-                    .addComponent(jCheckBox48)
-                    .addComponent(jCheckBox49)
-                    .addComponent(jCheckBox41)
-                    .addComponent(jCheckBox42)
-                    .addComponent(jCheckBox43)
-                    .addComponent(jCheckBox44)
-                    .addComponent(jCheckBox45))
-                .addGap(101, 101, 101)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox51)
-                    .addComponent(jCheckBox57)
-                    .addComponent(jCheckBox56)
-                    .addComponent(jCheckBox60)
-                    .addComponent(jCheckBox52)
-                    .addComponent(jCheckBox54)
-                    .addComponent(jCheckBox53)
-                    .addComponent(jCheckBox58)
-                    .addComponent(jCheckBox55)
-                    .addComponent(jCheckBox59))
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jCheckBox53)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox58)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox55)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox59)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox54)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox57)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox56)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox60)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox52)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox51))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jCheckBox31)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox32)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox33)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox34)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox35))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jCheckBox41)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox42)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox43)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox44)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox45)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jCheckBox36)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox37)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox38)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox39)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox40))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jCheckBox46)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox47)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox48)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox49)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox50)))))
-                .addContainerGap())
-        );
-
-        label2.setText("Total correctes:");
-
-        jLabel6.setText("CI estimat:");
-
-        tapTotalLabel1.setText("0");
-
-        ciLabel1.setText("0");
-
-        javax.swing.GroupLayout provesComplementariesPanel1Layout = new javax.swing.GroupLayout(provesComplementariesPanel1);
-        provesComplementariesPanel1.setLayout(provesComplementariesPanel1Layout);
-        provesComplementariesPanel1Layout.setHorizontalGroup(
-            provesComplementariesPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(provesComplementariesPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(provesComplementariesPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(provesComplementariesPanel1Layout.createSequentialGroup()
-                        .addComponent(label2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tapTotalLabel1))
-                    .addGroup(provesComplementariesPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ciLabel1)))
-                .addContainerGap(573, Short.MAX_VALUE))
-        );
-        provesComplementariesPanel1Layout.setVerticalGroup(
-            provesComplementariesPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(provesComplementariesPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(provesComplementariesPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label2)
-                    .addComponent(tapTotalLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(provesComplementariesPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(ciLabel1))
-                .addContainerGap(324, Short.MAX_VALUE))
-        );
-
-        provesComplementariesScroll1.setViewportView(provesComplementariesPanel1);
-
         javax.swing.GroupLayout neuroimatgeTabLayout = new javax.swing.GroupLayout(neuroimatgeTab);
         neuroimatgeTab.setLayout(neuroimatgeTabLayout);
         neuroimatgeTabLayout.setHorizontalGroup(
             neuroimatgeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(provesComplementariesScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .addComponent(provesComplementariesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );
         neuroimatgeTabLayout.setVerticalGroup(
             neuroimatgeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(provesComplementariesScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 725, Short.MAX_VALUE)
+            .addComponent(provesComplementariesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 725, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("TAP", neuroimatgeTab);
@@ -1790,7 +1472,6 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> categoriaProCombo;
     private javax.swing.JLabel categoriaProLabel;
     private javax.swing.JLabel ciLabel;
-    private javax.swing.JLabel ciLabel1;
     private javax.swing.JComboBox<String> consumAlcoholCombo;
     private javax.swing.JLabel consumAlcoholLabel;
     private javax.swing.ButtonGroup cursosBtnGroup;
@@ -1860,39 +1541,9 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox29;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox30;
-    private javax.swing.JCheckBox jCheckBox31;
-    private javax.swing.JCheckBox jCheckBox32;
-    private javax.swing.JCheckBox jCheckBox33;
-    private javax.swing.JCheckBox jCheckBox34;
-    private javax.swing.JCheckBox jCheckBox35;
-    private javax.swing.JCheckBox jCheckBox36;
-    private javax.swing.JCheckBox jCheckBox37;
-    private javax.swing.JCheckBox jCheckBox38;
-    private javax.swing.JCheckBox jCheckBox39;
     private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox40;
-    private javax.swing.JCheckBox jCheckBox41;
-    private javax.swing.JCheckBox jCheckBox42;
-    private javax.swing.JCheckBox jCheckBox43;
-    private javax.swing.JCheckBox jCheckBox44;
-    private javax.swing.JCheckBox jCheckBox45;
-    private javax.swing.JCheckBox jCheckBox46;
-    private javax.swing.JCheckBox jCheckBox47;
-    private javax.swing.JCheckBox jCheckBox48;
-    private javax.swing.JCheckBox jCheckBox49;
     private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox50;
-    private javax.swing.JCheckBox jCheckBox51;
-    private javax.swing.JCheckBox jCheckBox52;
-    private javax.swing.JCheckBox jCheckBox53;
-    private javax.swing.JCheckBox jCheckBox54;
-    private javax.swing.JCheckBox jCheckBox55;
-    private javax.swing.JCheckBox jCheckBox56;
-    private javax.swing.JCheckBox jCheckBox57;
-    private javax.swing.JCheckBox jCheckBox58;
-    private javax.swing.JCheckBox jCheckBox59;
     private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox60;
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
@@ -1900,15 +1551,12 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.ButtonGroup jocsBtnGroup;
     private javax.swing.JRadioButton jocsRadio1;
     private javax.swing.JRadioButton jocsRadio2;
     private javax.swing.JRadioButton jocsRadio3;
     private javax.swing.JLabel label1;
-    private javax.swing.JLabel label2;
     private javax.swing.ButtonGroup lectoraBtnGroup;
     private javax.swing.JRadioButton lectoraRadio1;
     private javax.swing.JRadioButton lectoraRadio2;
@@ -1941,9 +1589,7 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JLabel professioLabel;
     private javax.swing.JTextField professioText;
     private javax.swing.JPanel provesComplementariesPanel;
-    private javax.swing.JPanel provesComplementariesPanel1;
     private javax.swing.JScrollPane provesComplementariesScroll;
-    private javax.swing.JScrollPane provesComplementariesScroll1;
     private javax.swing.JPanel provesComplementariesTab;
     private javax.swing.JLabel puntuacioLabel;
     private javax.swing.JLabel rangLabel;
@@ -1955,7 +1601,6 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JTextField subjecteText;
     private javax.swing.JTabbedPane tabbedPanel;
     private javax.swing.JLabel tapTotalLabel;
-    private javax.swing.JLabel tapTotalLabel1;
     private javax.swing.JComboBox<String> tempsTractamentCombo;
     private javax.swing.JLabel tempsTractamentLabel;
     private javax.swing.JPanel terapiaNoFarmatologicaPanel;
@@ -2037,9 +1682,16 @@ public class testsTextuals extends javax.swing.JFrame {
         llistaCheck.add(jCheckBox29);
         llistaCheck.add(jCheckBox30);
         
+        ActionListener action = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                actualitzaPuntuacioTAP();
+            }
+         };
+        /*
         ActionListener action = (ActionEvent e) -> {
             actualitzaPuntuacioTAP();
-        };
+        };*/
         
         llistaCheck.stream().forEach((cb) -> {
             cb.addActionListener(action);

@@ -7,6 +7,8 @@ package vista;
 
 import com.toedter.calendar.JDateChooser;
 import java.awt.GraphicsEnvironment;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -17,6 +19,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Properties;
 import javax.swing.JComboBox;
 import javax.swing.JRootPane;
@@ -31,6 +36,7 @@ import javax.swing.event.DocumentListener;
 public class newFitxaPacient extends javax.swing.JDialog {
 
     String idPacient;
+    Map<JComboBox, JDateChooser> dateMap;
     
     /**
      * Creates new form newFitxaPacient
@@ -42,6 +48,8 @@ public class newFitxaPacient extends javax.swing.JDialog {
         this.setLocation(0,0);
         this.idPacient = idPacient;
         System.out.println(this.idPacient);
+        initDateMap();
+        initCombos();
         numCigarretsText.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -246,12 +254,12 @@ public class newFitxaPacient extends javax.swing.JDialog {
         cardiopatiaCombo = new javax.swing.JComboBox<>();
         arritmiaCombo = new javax.swing.JComboBox<>();
         malaltiaVascularCombo = new javax.swing.JComboBox<>();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
-        jDateChooser4 = new com.toedter.calendar.JDateChooser();
-        jDateChooser5 = new com.toedter.calendar.JDateChooser();
-        jDateChooser6 = new com.toedter.calendar.JDateChooser();
+        hipertensioDate = new com.toedter.calendar.JDateChooser();
+        insuficienciaCardiacaDate = new com.toedter.calendar.JDateChooser();
+        infartDate = new com.toedter.calendar.JDateChooser();
+        cardiopatiaDate = new com.toedter.calendar.JDateChooser();
+        arritmiaDate = new com.toedter.calendar.JDateChooser();
+        malaltiaVascularDate = new com.toedter.calendar.JDateChooser();
         endocrinoMetabolicPanel = new javax.swing.JPanel();
         diabetisLabel = new javax.swing.JLabel();
         obesitatLabel = new javax.swing.JLabel();
@@ -261,10 +269,10 @@ public class newFitxaPacient extends javax.swing.JDialog {
         obesitatCombo = new javax.swing.JComboBox<>();
         dislipemiaCombo = new javax.swing.JComboBox<>();
         patologiaTiroidesCombo = new javax.swing.JComboBox<>();
-        jDateChooser7 = new com.toedter.calendar.JDateChooser();
-        jDateChooser8 = new com.toedter.calendar.JDateChooser();
-        jDateChooser9 = new com.toedter.calendar.JDateChooser();
-        jDateChooser10 = new com.toedter.calendar.JDateChooser();
+        diabetisDate = new com.toedter.calendar.JDateChooser();
+        obesitatDate = new com.toedter.calendar.JDateChooser();
+        dislipemiaDate = new com.toedter.calendar.JDateChooser();
+        patologiaTiroidesDate = new com.toedter.calendar.JDateChooser();
         digestiuPanel = new javax.swing.JPanel();
         ulcusLabel = new javax.swing.JLabel();
         gastritisLabel = new javax.swing.JLabel();
@@ -274,10 +282,10 @@ public class newFitxaPacient extends javax.swing.JDialog {
         gastritisCombo = new javax.swing.JComboBox<>();
         colelitiasisCombo = new javax.swing.JComboBox<>();
         hepatopatiaCombo = new javax.swing.JComboBox<>();
-        jDateChooser11 = new com.toedter.calendar.JDateChooser();
-        jDateChooser12 = new com.toedter.calendar.JDateChooser();
-        jDateChooser13 = new com.toedter.calendar.JDateChooser();
-        jDateChooser14 = new com.toedter.calendar.JDateChooser();
+        ulcusDate = new com.toedter.calendar.JDateChooser();
+        gastritisDate = new com.toedter.calendar.JDateChooser();
+        colelitiasisDate = new com.toedter.calendar.JDateChooser();
+        hepatopatiaDate = new com.toedter.calendar.JDateChooser();
         psiquiatricPanel = new javax.swing.JPanel();
         depresioLabel = new javax.swing.JLabel();
         ansietatLabel = new javax.swing.JLabel();
@@ -289,11 +297,11 @@ public class newFitxaPacient extends javax.swing.JDialog {
         psicosisCombo = new javax.swing.JComboBox<>();
         abusAlcoholCombo = new javax.swing.JComboBox<>();
         abusDroguesCombo = new javax.swing.JComboBox<>();
-        jDateChooser15 = new com.toedter.calendar.JDateChooser();
-        jDateChooser16 = new com.toedter.calendar.JDateChooser();
-        jDateChooser17 = new com.toedter.calendar.JDateChooser();
-        jDateChooser18 = new com.toedter.calendar.JDateChooser();
-        jDateChooser19 = new com.toedter.calendar.JDateChooser();
+        depresioDate = new com.toedter.calendar.JDateChooser();
+        ansietatDate = new com.toedter.calendar.JDateChooser();
+        psicosisDate = new com.toedter.calendar.JDateChooser();
+        abusAlcoholDate = new com.toedter.calendar.JDateChooser();
+        abusDroguesDate = new com.toedter.calendar.JDateChooser();
         cardiovascularPanel1 = new javax.swing.JPanel();
         avcEstablertLabel = new javax.swing.JLabel();
         avcTransitoriLabel = new javax.swing.JLabel();
@@ -309,45 +317,45 @@ public class newFitxaPacient extends javax.swing.JDialog {
         malaltiaParkinsonCombo = new javax.swing.JComboBox<>();
         esclerosisCombo = new javax.swing.JComboBox<>();
         cefaleaCombo = new javax.swing.JComboBox<>();
-        jDateChooser20 = new com.toedter.calendar.JDateChooser();
-        jDateChooser21 = new com.toedter.calendar.JDateChooser();
-        jDateChooser22 = new com.toedter.calendar.JDateChooser();
-        jDateChooser23 = new com.toedter.calendar.JDateChooser();
-        jDateChooser24 = new com.toedter.calendar.JDateChooser();
-        jDateChooser25 = new com.toedter.calendar.JDateChooser();
-        jDateChooser26 = new com.toedter.calendar.JDateChooser();
+        avcEstablertDate = new com.toedter.calendar.JDateChooser();
+        avcTransitoriDate = new com.toedter.calendar.JDateChooser();
+        epilepsiaDate = new com.toedter.calendar.JDateChooser();
+        traumaCranealDate = new com.toedter.calendar.JDateChooser();
+        malaltiaParkinsonDate = new com.toedter.calendar.JDateChooser();
+        esclerosisDate = new com.toedter.calendar.JDateChooser();
+        cefaleaDate = new com.toedter.calendar.JDateChooser();
         respiratoriPanel = new javax.swing.JPanel();
         asmaLabel = new javax.swing.JLabel();
         epocLabel = new javax.swing.JLabel();
         asmaCombo = new javax.swing.JComboBox<>();
         epocCombo = new javax.swing.JComboBox<>();
-        jDateChooser27 = new com.toedter.calendar.JDateChooser();
-        jDateChooser28 = new com.toedter.calendar.JDateChooser();
+        asmaDate = new com.toedter.calendar.JDateChooser();
+        epocDate = new com.toedter.calendar.JDateChooser();
         hematologicPanel = new javax.swing.JPanel();
         anemiaLabel = new javax.swing.JLabel();
         leucosisLabel = new javax.swing.JLabel();
         anemiaCombo = new javax.swing.JComboBox<>();
         leucosisCombo = new javax.swing.JComboBox<>();
-        jDateChooser29 = new com.toedter.calendar.JDateChooser();
-        jDateChooser30 = new com.toedter.calendar.JDateChooser();
+        anemiaDate = new com.toedter.calendar.JDateChooser();
+        leucosisDate = new com.toedter.calendar.JDateChooser();
         immunologicPanel = new javax.swing.JPanel();
         alergiaLabel = new javax.swing.JLabel();
         alergiaCombo = new javax.swing.JComboBox<>();
-        jDateChooser31 = new com.toedter.calendar.JDateChooser();
+        alergiaDate = new com.toedter.calendar.JDateChooser();
         oftalmologicPanel = new javax.swing.JPanel();
         glaucomaLabel = new javax.swing.JLabel();
         cataractesLabel = new javax.swing.JLabel();
         glaucomaCombo = new javax.swing.JComboBox<>();
         cataractesCombo = new javax.swing.JComboBox<>();
-        jDateChooser32 = new com.toedter.calendar.JDateChooser();
-        jDateChooser33 = new com.toedter.calendar.JDateChooser();
+        glaucomaDate = new com.toedter.calendar.JDateChooser();
+        cataractesDate = new com.toedter.calendar.JDateChooser();
         genitoUrinariPanel = new javax.swing.JPanel();
         insuficienciaRenalLabel = new javax.swing.JLabel();
         incontinenciaLabel = new javax.swing.JLabel();
         insuficienciaRenalCombo = new javax.swing.JComboBox<>();
         incontinenciaCombo = new javax.swing.JComboBox<>();
-        jDateChooser34 = new com.toedter.calendar.JDateChooser();
-        jDateChooser35 = new com.toedter.calendar.JDateChooser();
+        insuficienciaRenalDate = new com.toedter.calendar.JDateChooser();
+        incontinenciaDate = new com.toedter.calendar.JDateChooser();
         musculoEsqueleticPanel = new javax.swing.JPanel();
         artrosiLabel = new javax.swing.JLabel();
         artritisLabel = new javax.swing.JLabel();
@@ -355,16 +363,16 @@ public class newFitxaPacient extends javax.swing.JDialog {
         artrosiCombo = new javax.swing.JComboBox<>();
         artritisCombo = new javax.swing.JComboBox<>();
         fibromialgiaCombo = new javax.swing.JComboBox<>();
-        jDateChooser36 = new com.toedter.calendar.JDateChooser();
-        jDateChooser37 = new com.toedter.calendar.JDateChooser();
-        jDateChooser38 = new com.toedter.calendar.JDateChooser();
+        artrosiDate = new com.toedter.calendar.JDateChooser();
+        artritisDate = new com.toedter.calendar.JDateChooser();
+        fibromialgiaDate = new com.toedter.calendar.JDateChooser();
         neoplassicCombo = new javax.swing.JPanel();
         benigneLabel = new javax.swing.JLabel();
         maligneLabel = new javax.swing.JLabel();
         benigneCombo = new javax.swing.JComboBox<>();
         maligneCombo = new javax.swing.JComboBox<>();
-        jDateChooser39 = new com.toedter.calendar.JDateChooser();
-        jDateChooser40 = new com.toedter.calendar.JDateChooser();
+        benigneDate = new com.toedter.calendar.JDateChooser();
+        maligneDate = new com.toedter.calendar.JDateChooser();
         tractamentActualPanel = new javax.swing.JPanel();
         sistemaNerviosPanel = new javax.swing.JPanel();
         ansioliticsLabel = new javax.swing.JLabel();
@@ -1188,6 +1196,18 @@ public class newFitxaPacient extends javax.swing.JDialog {
         malaltiaVascularCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         malaltiaVascularCombo.setSelectedIndex(-1);
 
+        hipertensioDate.setDateFormatString("dd/MM/yyyy");
+
+        insuficienciaCardiacaDate.setDateFormatString("dd/MM/yyyy");
+
+        infartDate.setDateFormatString("dd/MM/yyyy");
+
+        cardiopatiaDate.setDateFormatString("dd/MM/yyyy");
+
+        arritmiaDate.setDateFormatString("dd/MM/yyyy");
+
+        malaltiaVascularDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout cardiovascularPanelLayout = new javax.swing.GroupLayout(cardiovascularPanel);
         cardiovascularPanel.setLayout(cardiovascularPanelLayout);
         cardiovascularPanelLayout.setHorizontalGroup(
@@ -1200,38 +1220,38 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(hipertensioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(hipertensioDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanelLayout.createSequentialGroup()
                         .addComponent(insuficienciaCardiacaLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(insuficienciaCardiacaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(insuficienciaCardiacaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanelLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(infartCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(infartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanelLayout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cardiopatiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cardiopatiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanelLayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(arritmiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(arritmiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanelLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(malaltiaVascularCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(138, Short.MAX_VALUE))
+                        .addComponent(malaltiaVascularDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         cardiovascularPanelLayout.setVerticalGroup(
             cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1243,36 +1263,36 @@ public class newFitxaPacient extends javax.swing.JDialog {
                             .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(hipertensioLabel)
                                 .addComponent(hipertensioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(hipertensioDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(insuficienciaCardiacaLabel)
                             .addComponent(insuficienciaCardiacaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(insuficienciaCardiacaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
                         .addComponent(infartCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(infartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
                         .addComponent(cardiopatiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cardiopatiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3)
                         .addComponent(arritmiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(arritmiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cardiovascularPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
                         .addComponent(malaltiaVascularCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(malaltiaVascularDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1298,6 +1318,14 @@ public class newFitxaPacient extends javax.swing.JDialog {
         patologiaTiroidesCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         patologiaTiroidesCombo.setSelectedIndex(-1);
 
+        diabetisDate.setDateFormatString("dd/MM/yyyy");
+
+        obesitatDate.setDateFormatString("dd/MM/yyyy");
+
+        dislipemiaDate.setDateFormatString("dd/MM/yyyy");
+
+        patologiaTiroidesDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout endocrinoMetabolicPanelLayout = new javax.swing.GroupLayout(endocrinoMetabolicPanel);
         endocrinoMetabolicPanel.setLayout(endocrinoMetabolicPanelLayout);
         endocrinoMetabolicPanelLayout.setHorizontalGroup(
@@ -1310,26 +1338,26 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(diabetisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(diabetisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(endocrinoMetabolicPanelLayout.createSequentialGroup()
                         .addComponent(obesitatLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(obesitatCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(obesitatDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(endocrinoMetabolicPanelLayout.createSequentialGroup()
                         .addComponent(dislipemiaLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(dislipemiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(dislipemiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(endocrinoMetabolicPanelLayout.createSequentialGroup()
                         .addComponent(patologiaTiroidesLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(patologiaTiroidesCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(205, Short.MAX_VALUE))
+                        .addComponent(patologiaTiroidesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
         endocrinoMetabolicPanelLayout.setVerticalGroup(
             endocrinoMetabolicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1341,24 +1369,24 @@ public class newFitxaPacient extends javax.swing.JDialog {
                             .addGroup(endocrinoMetabolicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(diabetisLabel)
                                 .addComponent(diabetisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jDateChooser7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(diabetisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(endocrinoMetabolicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(obesitatLabel)
                             .addComponent(obesitatCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jDateChooser8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(obesitatDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(endocrinoMetabolicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(endocrinoMetabolicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(dislipemiaLabel)
                         .addComponent(dislipemiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dislipemiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(endocrinoMetabolicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(endocrinoMetabolicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(patologiaTiroidesLabel)
                         .addComponent(patologiaTiroidesCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(patologiaTiroidesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1384,6 +1412,14 @@ public class newFitxaPacient extends javax.swing.JDialog {
         hepatopatiaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         hepatopatiaCombo.setSelectedIndex(-1);
 
+        ulcusDate.setDateFormatString("dd/MM/yyyy");
+
+        gastritisDate.setDateFormatString("dd/MM/yyyy");
+
+        colelitiasisDate.setDateFormatString("dd/MM/yyyy");
+
+        hepatopatiaDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout digestiuPanelLayout = new javax.swing.GroupLayout(digestiuPanel);
         digestiuPanel.setLayout(digestiuPanelLayout);
         digestiuPanelLayout.setHorizontalGroup(
@@ -1396,26 +1432,26 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ulcusCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ulcusDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(digestiuPanelLayout.createSequentialGroup()
                         .addComponent(gastritisLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(gastritisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jDateChooser12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(gastritisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(digestiuPanelLayout.createSequentialGroup()
                         .addComponent(colelitiasisLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(colelitiasisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(colelitiasisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(digestiuPanelLayout.createSequentialGroup()
                         .addComponent(hepatopatiaLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(hepatopatiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(171, Short.MAX_VALUE))
+                        .addComponent(hepatopatiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
         digestiuPanelLayout.setVerticalGroup(
             digestiuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1425,25 +1461,25 @@ public class newFitxaPacient extends javax.swing.JDialog {
                     .addGroup(digestiuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ulcusLabel)
                         .addComponent(ulcusCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ulcusDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(digestiuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(digestiuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(gastritisLabel)
                         .addComponent(gastritisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(gastritisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(digestiuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(digestiuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(colelitiasisLabel)
                         .addComponent(colelitiasisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(colelitiasisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(digestiuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(digestiuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(hepatopatiaLabel)
                         .addComponent(hepatopatiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(hepatopatiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1474,6 +1510,16 @@ public class newFitxaPacient extends javax.swing.JDialog {
         abusDroguesCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         abusDroguesCombo.setSelectedIndex(-1);
 
+        depresioDate.setDateFormatString("dd/MM/yyyy");
+
+        ansietatDate.setDateFormatString("dd/MM/yyyy");
+
+        psicosisDate.setDateFormatString("dd/MM/yyyy");
+
+        abusAlcoholDate.setDateFormatString("dd/MM/yyyy");
+
+        abusDroguesDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout psiquiatricPanelLayout = new javax.swing.GroupLayout(psiquiatricPanel);
         psiquiatricPanel.setLayout(psiquiatricPanelLayout);
         psiquiatricPanelLayout.setHorizontalGroup(
@@ -1486,32 +1532,32 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(depresioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(depresioDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(psiquiatricPanelLayout.createSequentialGroup()
                         .addComponent(ansietatLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ansietatCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ansietatDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(psiquiatricPanelLayout.createSequentialGroup()
                         .addComponent(psicosisLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(psicosisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(psicosisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(psiquiatricPanelLayout.createSequentialGroup()
                         .addComponent(abusAlcoholLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(abusAlcoholCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(abusAlcoholDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(psiquiatricPanelLayout.createSequentialGroup()
                         .addComponent(abusDroguesLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(abusDroguesCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(225, Short.MAX_VALUE))
+                        .addComponent(abusDroguesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(233, Short.MAX_VALUE))
         );
         psiquiatricPanelLayout.setVerticalGroup(
             psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1523,30 +1569,30 @@ public class newFitxaPacient extends javax.swing.JDialog {
                             .addGroup(psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(depresioLabel)
                                 .addComponent(depresioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jDateChooser15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(depresioDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ansietatLabel)
                             .addComponent(ansietatCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jDateChooser16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ansietatDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(psicosisLabel)
                         .addComponent(psicosisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(psicosisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(abusAlcoholLabel)
                         .addComponent(abusAlcoholCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(abusAlcoholDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(psiquiatricPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(abusDroguesLabel)
                         .addComponent(abusDroguesCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(abusDroguesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1587,6 +1633,20 @@ public class newFitxaPacient extends javax.swing.JDialog {
         cefaleaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         cefaleaCombo.setSelectedIndex(-1);
 
+        avcEstablertDate.setDateFormatString("dd/MM/yyyy");
+
+        avcTransitoriDate.setDateFormatString("dd/MM/yyyy");
+
+        epilepsiaDate.setDateFormatString("dd/MM/yyyy");
+
+        traumaCranealDate.setDateFormatString("dd/MM/yyyy");
+
+        malaltiaParkinsonDate.setDateFormatString("dd/MM/yyyy");
+
+        esclerosisDate.setDateFormatString("dd/MM/yyyy");
+
+        cefaleaDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout cardiovascularPanel1Layout = new javax.swing.GroupLayout(cardiovascularPanel1);
         cardiovascularPanel1.setLayout(cardiovascularPanel1Layout);
         cardiovascularPanel1Layout.setHorizontalGroup(
@@ -1599,44 +1659,44 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(avcEstablertCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(avcEstablertDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanel1Layout.createSequentialGroup()
                         .addComponent(avcTransitoriLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(avcTransitoriCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(avcTransitoriDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanel1Layout.createSequentialGroup()
                         .addComponent(epilepsiaLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(epilepsiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(epilepsiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanel1Layout.createSequentialGroup()
                         .addComponent(traumaCranealLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(traumaCranealCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(traumaCranealDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanel1Layout.createSequentialGroup()
                         .addComponent(malaltiaParkinson)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(malaltiaParkinsonCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(malaltiaParkinsonDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanel1Layout.createSequentialGroup()
                         .addComponent(esclerosisLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(esclerosisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(esclerosisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cardiovascularPanel1Layout.createSequentialGroup()
                         .addComponent(cefaleaLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cefaleaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(202, Short.MAX_VALUE))
+                        .addComponent(cefaleaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
         cardiovascularPanel1Layout.setVerticalGroup(
             cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1652,40 +1712,40 @@ public class newFitxaPacient extends javax.swing.JDialog {
                                             .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                 .addComponent(avcEstablertLabel)
                                                 .addComponent(avcEstablertCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jDateChooser20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(avcEstablertDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(avcTransitoriLabel)
                                             .addComponent(avcTransitoriCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jDateChooser21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(avcTransitoriDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(epilepsiaLabel)
                                         .addComponent(epilepsiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jDateChooser22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(epilepsiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(traumaCranealLabel)
                                         .addComponent(traumaCranealCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jDateChooser23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(traumaCranealDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(malaltiaParkinson)
                                     .addComponent(malaltiaParkinsonCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jDateChooser24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(malaltiaParkinsonDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(esclerosisLabel)
                             .addComponent(esclerosisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jDateChooser25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(esclerosisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(cardiovascularPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cefaleaLabel)
                         .addComponent(cefaleaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cefaleaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1700,6 +1760,10 @@ public class newFitxaPacient extends javax.swing.JDialog {
 
         epocCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         epocCombo.setSelectedIndex(-1);
+
+        asmaDate.setDateFormatString("dd/MM/yyyy");
+
+        epocDate.setDateFormatString("dd/MM/yyyy");
 
         javax.swing.GroupLayout respiratoriPanelLayout = new javax.swing.GroupLayout(respiratoriPanel);
         respiratoriPanel.setLayout(respiratoriPanelLayout);
@@ -1718,8 +1782,8 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addComponent(epocCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(respiratoriPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jDateChooser28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDateChooser27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(epocDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(asmaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         respiratoriPanelLayout.setVerticalGroup(
@@ -1730,13 +1794,13 @@ public class newFitxaPacient extends javax.swing.JDialog {
                     .addGroup(respiratoriPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(asmaLabel)
                         .addComponent(asmaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(asmaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(respiratoriPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(respiratoriPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(epocLabel)
                         .addComponent(epocCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(epocDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1752,6 +1816,10 @@ public class newFitxaPacient extends javax.swing.JDialog {
         leucosisCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         leucosisCombo.setSelectedIndex(-1);
 
+        anemiaDate.setDateFormatString("dd/MM/yyyy");
+
+        leucosisDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout hematologicPanelLayout = new javax.swing.GroupLayout(hematologicPanel);
         hematologicPanel.setLayout(hematologicPanelLayout);
         hematologicPanelLayout.setHorizontalGroup(
@@ -1764,14 +1832,14 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(anemiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(anemiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(hematologicPanelLayout.createSequentialGroup()
                         .addComponent(leucosisLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(leucosisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(262, Short.MAX_VALUE))
+                        .addComponent(leucosisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(270, Short.MAX_VALUE))
         );
         hematologicPanelLayout.setVerticalGroup(
             hematologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1781,13 +1849,13 @@ public class newFitxaPacient extends javax.swing.JDialog {
                     .addGroup(hematologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(anemiaLabel)
                         .addComponent(anemiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(anemiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(hematologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(hematologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(leucosisLabel)
                         .addComponent(leucosisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(leucosisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1797,6 +1865,8 @@ public class newFitxaPacient extends javax.swing.JDialog {
 
         alergiaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         alergiaCombo.setSelectedIndex(-1);
+
+        alergiaDate.setDateFormatString("dd/MM/yyyy");
 
         javax.swing.GroupLayout immunologicPanelLayout = new javax.swing.GroupLayout(immunologicPanel);
         immunologicPanel.setLayout(immunologicPanelLayout);
@@ -1808,7 +1878,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(alergiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jDateChooser31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(alergiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         immunologicPanelLayout.setVerticalGroup(
@@ -1816,7 +1886,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
             .addGroup(immunologicPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(immunologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(alergiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(immunologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(alergiaLabel)
                         .addComponent(alergiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1835,6 +1905,10 @@ public class newFitxaPacient extends javax.swing.JDialog {
         cataractesCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         cataractesCombo.setSelectedIndex(-1);
 
+        glaucomaDate.setDateFormatString("dd/MM/yyyy");
+
+        cataractesDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout oftalmologicPanelLayout = new javax.swing.GroupLayout(oftalmologicPanel);
         oftalmologicPanel.setLayout(oftalmologicPanelLayout);
         oftalmologicPanelLayout.setHorizontalGroup(
@@ -1847,14 +1921,14 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(glaucomaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(glaucomaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(oftalmologicPanelLayout.createSequentialGroup()
                         .addComponent(cataractesLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cataractesCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(249, Short.MAX_VALUE))
+                        .addComponent(cataractesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(257, Short.MAX_VALUE))
         );
         oftalmologicPanelLayout.setVerticalGroup(
             oftalmologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1864,13 +1938,13 @@ public class newFitxaPacient extends javax.swing.JDialog {
                     .addGroup(oftalmologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(glaucomaLabel)
                         .addComponent(glaucomaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(glaucomaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(oftalmologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(oftalmologicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cataractesLabel)
                         .addComponent(cataractesCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cataractesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1886,6 +1960,10 @@ public class newFitxaPacient extends javax.swing.JDialog {
         incontinenciaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         incontinenciaCombo.setSelectedIndex(-1);
 
+        insuficienciaRenalDate.setDateFormatString("dd/MM/yyyy");
+
+        incontinenciaDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout genitoUrinariPanelLayout = new javax.swing.GroupLayout(genitoUrinariPanel);
         genitoUrinariPanel.setLayout(genitoUrinariPanelLayout);
         genitoUrinariPanelLayout.setHorizontalGroup(
@@ -1898,14 +1976,14 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(insuficienciaRenalCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(insuficienciaRenalDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(genitoUrinariPanelLayout.createSequentialGroup()
                         .addComponent(incontinenciaLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(incontinenciaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(164, Short.MAX_VALUE))
+                        .addComponent(incontinenciaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         genitoUrinariPanelLayout.setVerticalGroup(
             genitoUrinariPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1915,13 +1993,13 @@ public class newFitxaPacient extends javax.swing.JDialog {
                     .addGroup(genitoUrinariPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(insuficienciaRenalLabel)
                         .addComponent(insuficienciaRenalCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(insuficienciaRenalDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(genitoUrinariPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(genitoUrinariPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(incontinenciaLabel)
                         .addComponent(incontinenciaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(incontinenciaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1942,6 +2020,12 @@ public class newFitxaPacient extends javax.swing.JDialog {
         fibromialgiaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         fibromialgiaCombo.setSelectedIndex(-1);
 
+        artrosiDate.setDateFormatString("dd/MM/yyyy");
+
+        artritisDate.setDateFormatString("dd/MM/yyyy");
+
+        fibromialgiaDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout musculoEsqueleticPanelLayout = new javax.swing.GroupLayout(musculoEsqueleticPanel);
         musculoEsqueleticPanel.setLayout(musculoEsqueleticPanelLayout);
         musculoEsqueleticPanelLayout.setHorizontalGroup(
@@ -1954,20 +2038,20 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(artrosiCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(artrosiDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(musculoEsqueleticPanelLayout.createSequentialGroup()
                         .addComponent(artritisLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(artritisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(artritisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(musculoEsqueleticPanelLayout.createSequentialGroup()
                         .addComponent(fibromialgiaLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(fibromialgiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(246, Short.MAX_VALUE))
+                        .addComponent(fibromialgiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
         musculoEsqueleticPanelLayout.setVerticalGroup(
             musculoEsqueleticPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1977,19 +2061,19 @@ public class newFitxaPacient extends javax.swing.JDialog {
                     .addGroup(musculoEsqueleticPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(artrosiLabel)
                         .addComponent(artrosiCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(artrosiDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(musculoEsqueleticPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(musculoEsqueleticPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(artritisLabel)
                         .addComponent(artritisCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(artritisDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(musculoEsqueleticPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(musculoEsqueleticPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(fibromialgiaLabel)
                         .addComponent(fibromialgiaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fibromialgiaDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2005,6 +2089,10 @@ public class newFitxaPacient extends javax.swing.JDialog {
         maligneCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
         maligneCombo.setSelectedIndex(-1);
 
+        benigneDate.setDateFormatString("dd/MM/yyyy");
+
+        maligneDate.setDateFormatString("dd/MM/yyyy");
+
         javax.swing.GroupLayout neoplassicComboLayout = new javax.swing.GroupLayout(neoplassicCombo);
         neoplassicCombo.setLayout(neoplassicComboLayout);
         neoplassicComboLayout.setHorizontalGroup(
@@ -2017,14 +2105,14 @@ public class newFitxaPacient extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(benigneCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(benigneDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(neoplassicComboLayout.createSequentialGroup()
                         .addComponent(maligneLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(maligneCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(268, Short.MAX_VALUE))
+                        .addComponent(maligneDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
         neoplassicComboLayout.setVerticalGroup(
             neoplassicComboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2034,13 +2122,13 @@ public class newFitxaPacient extends javax.swing.JDialog {
                     .addGroup(neoplassicComboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(benigneLabel)
                         .addComponent(benigneCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(benigneDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(neoplassicComboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(neoplassicComboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(maligneLabel)
                         .addComponent(maligneCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(maligneDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -3950,14 +4038,17 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JTextField ACEsterasaText;
     private javax.swing.JLabel AntitromboticsLabel;
     private javax.swing.JComboBox<String> abusAlcoholCombo;
+    private com.toedter.calendar.JDateChooser abusAlcoholDate;
     private javax.swing.JLabel abusAlcoholLabel;
     private javax.swing.JComboBox<String> abusDroguesCombo;
+    private com.toedter.calendar.JDateChooser abusDroguesDate;
     private javax.swing.JLabel abusDroguesLabel;
     private javax.swing.JButton acceptaBtn;
     private javax.swing.JLabel alcoholCheck;
     private javax.swing.JLabel alcoholLabel;
     private javax.swing.JTextField alcoholText;
     private javax.swing.JComboBox<String> alergiaCombo;
+    private com.toedter.calendar.JDateChooser alergiaDate;
     private javax.swing.JLabel alergiaLabel;
     private javax.swing.JLabel altresDemenciesLabel;
     private javax.swing.JTextField altresDemenciesText;
@@ -3985,8 +4076,10 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JPanel anatomiaPanel;
     private javax.swing.JTextField anatomiaText;
     private javax.swing.JComboBox<String> anemiaCombo;
+    private com.toedter.calendar.JDateChooser anemiaDate;
     private javax.swing.JLabel anemiaLabel;
     private javax.swing.JComboBox<String> ansietatCombo;
+    private com.toedter.calendar.JDateChooser ansietatDate;
     private javax.swing.JLabel ansietatLabel;
     private javax.swing.JLabel ansioliticsLabel;
     private javax.swing.JTextField ansioliticsText;
@@ -4030,17 +4123,24 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JLabel anysFumarLabel;
     private javax.swing.JTextField anysFumarText;
     private javax.swing.JComboBox<String> arritmiaCombo;
+    private com.toedter.calendar.JDateChooser arritmiaDate;
     private javax.swing.JComboBox<String> artritisCombo;
+    private com.toedter.calendar.JDateChooser artritisDate;
     private javax.swing.JLabel artritisLabel;
     private javax.swing.JComboBox<String> artrosiCombo;
+    private com.toedter.calendar.JDateChooser artrosiDate;
     private javax.swing.JLabel artrosiLabel;
     private javax.swing.JComboBox<String> asmaCombo;
+    private com.toedter.calendar.JDateChooser asmaDate;
     private javax.swing.JLabel asmaLabel;
     private javax.swing.JComboBox<String> avcEstablertCombo;
+    private com.toedter.calendar.JDateChooser avcEstablertDate;
     private javax.swing.JLabel avcEstablertLabel;
     private javax.swing.JComboBox<String> avcTransitoriCombo;
+    private com.toedter.calendar.JDateChooser avcTransitoriDate;
     private javax.swing.JLabel avcTransitoriLabel;
     private javax.swing.JComboBox<String> benigneCombo;
+    private com.toedter.calendar.JDateChooser benigneDate;
     private javax.swing.JLabel benigneLabel;
     private javax.swing.JLabel broncodilatadorsLabel;
     private javax.swing.JTextField broncodilatadorsText;
@@ -4052,15 +4152,18 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> cannabisCombo;
     private javax.swing.JLabel cannabisLabel;
     private javax.swing.JComboBox<String> cardiopatiaCombo;
+    private com.toedter.calendar.JDateChooser cardiopatiaDate;
     private javax.swing.JLabel cardiotonicsLabel;
     private javax.swing.JTextField cardiotonicsText;
     private javax.swing.JPanel cardiovascularPanel;
     private javax.swing.JPanel cardiovascularPanel1;
     private javax.swing.JComboBox<String> cataractesCombo;
+    private com.toedter.calendar.JDateChooser cataractesDate;
     private javax.swing.JLabel cataractesLabel;
     private javax.swing.JComboBox<String> categoriaProCombo;
     private javax.swing.JLabel categoriaProLabel;
     private javax.swing.JComboBox<String> cefaleaCombo;
+    private com.toedter.calendar.JDateChooser cefaleaDate;
     private javax.swing.JLabel cefaleaLabel;
     private javax.swing.JLabel codiResultatLabel;
     private javax.swing.JLabel codiResultatLabel1;
@@ -4084,6 +4187,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JLabel codisLabel;
     private javax.swing.JLabel codisLabel2;
     private javax.swing.JComboBox<String> colelitiasisCombo;
+    private com.toedter.calendar.JDateChooser colelitiasisDate;
     private javax.swing.JLabel colelitiasisLabel;
     private javax.swing.JComboBox<String> consumAlcoholCombo;
     private javax.swing.JLabel consumAlcoholLabel;
@@ -4124,6 +4228,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JPanel dataPanel;
     private com.toedter.calendar.JDateChooser dateChooser;
     private javax.swing.JComboBox<String> depresioCombo;
+    private com.toedter.calendar.JDateChooser depresioDate;
     private javax.swing.JLabel depresioLabel;
     private javax.swing.JLabel dermatologicsLabel;
     private javax.swing.JTextField dermatologicsText;
@@ -4149,9 +4254,11 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JLabel deshabituacioLabel;
     private javax.swing.JTextField deshabituacioText;
     private javax.swing.JComboBox<String> diabetisCombo;
+    private com.toedter.calendar.JDateChooser diabetisDate;
     private javax.swing.JLabel diabetisLabel;
     private javax.swing.JPanel digestiuPanel;
     private javax.swing.JComboBox<String> dislipemiaCombo;
+    private com.toedter.calendar.JDateChooser dislipemiaDate;
     private javax.swing.JLabel dislipemiaLabel;
     private javax.swing.JLabel diureticsLabel;
     private javax.swing.JTextField diureticsText;
@@ -4173,18 +4280,23 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JTextField emgText;
     private javax.swing.JPanel endocrinoMetabolicPanel;
     private javax.swing.JComboBox<String> epilepsiaCombo;
+    private com.toedter.calendar.JDateChooser epilepsiaDate;
     private javax.swing.JLabel epilepsiaLabel;
     private javax.swing.JComboBox<String> epocCombo;
+    private com.toedter.calendar.JDateChooser epocDate;
     private javax.swing.JLabel epocLabel;
     private javax.swing.JComboBox<String> esclerosisCombo;
+    private com.toedter.calendar.JDateChooser esclerosisDate;
     private javax.swing.JLabel esclerosisLabel;
     private javax.swing.JComboBox<String> estatCivilCombo;
     private javax.swing.JLabel estatCivilLabel;
     private javax.swing.JComboBox<String> fibromialgiaCombo;
+    private com.toedter.calendar.JDateChooser fibromialgiaDate;
     private javax.swing.JLabel fibromialgiaLabel;
     private javax.swing.JComboBox<String> fumadorCombo;
     private javax.swing.JLabel fumadorLabel;
     private javax.swing.JComboBox<String> gastritisCombo;
+    private com.toedter.calendar.JDateChooser gastritisDate;
     private javax.swing.JLabel gastritisLabel;
     private javax.swing.JComboBox<String> geneticaCombo;
     private com.toedter.calendar.JDateChooser geneticaData;
@@ -4192,11 +4304,14 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JTextField geneticaText;
     private javax.swing.JPanel genitoUrinariPanel;
     private javax.swing.JComboBox<String> glaucomaCombo;
+    private com.toedter.calendar.JDateChooser glaucomaDate;
     private javax.swing.JLabel glaucomaLabel;
     private javax.swing.JPanel hematologicPanel;
     private javax.swing.JComboBox<String> hepatopatiaCombo;
+    private com.toedter.calendar.JDateChooser hepatopatiaDate;
     private javax.swing.JLabel hepatopatiaLabel;
     private javax.swing.JComboBox<String> hipertensioCombo;
+    private com.toedter.calendar.JDateChooser hipertensioDate;
     private javax.swing.JLabel hipertensioLabel;
     private javax.swing.JLabel hipnoticsLabel;
     private javax.swing.JTextField hipnoticsText;
@@ -4208,6 +4323,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JLabel idiomaLabel;
     private javax.swing.JPanel immunologicPanel;
     private javax.swing.JComboBox<String> incontinenciaCombo;
+    private com.toedter.calendar.JDateChooser incontinenciaDate;
     private javax.swing.JLabel incontinenciaLabel;
     private javax.swing.JLabel indexClasseSocialFoto;
     private javax.swing.JPanel indexClasseSocialPanel;
@@ -4218,63 +4334,30 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JScrollPane indexSocioeconomicScroll;
     private javax.swing.JPanel indexSocioeconomicTab;
     private javax.swing.JComboBox<String> infartCombo;
+    private com.toedter.calendar.JDateChooser infartDate;
     private javax.swing.JComboBox<String> insuficienciaCardiacaCombo;
+    private com.toedter.calendar.JDateChooser insuficienciaCardiacaDate;
     private javax.swing.JLabel insuficienciaCardiacaLabel;
     private javax.swing.JComboBox<String> insuficienciaRenalCombo;
+    private com.toedter.calendar.JDateChooser insuficienciaRenalDate;
     private javax.swing.JLabel insuficienciaRenalLabel;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser10;
-    private com.toedter.calendar.JDateChooser jDateChooser11;
-    private com.toedter.calendar.JDateChooser jDateChooser12;
-    private com.toedter.calendar.JDateChooser jDateChooser13;
-    private com.toedter.calendar.JDateChooser jDateChooser14;
-    private com.toedter.calendar.JDateChooser jDateChooser15;
-    private com.toedter.calendar.JDateChooser jDateChooser16;
-    private com.toedter.calendar.JDateChooser jDateChooser17;
-    private com.toedter.calendar.JDateChooser jDateChooser18;
-    private com.toedter.calendar.JDateChooser jDateChooser19;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser20;
-    private com.toedter.calendar.JDateChooser jDateChooser21;
-    private com.toedter.calendar.JDateChooser jDateChooser22;
-    private com.toedter.calendar.JDateChooser jDateChooser23;
-    private com.toedter.calendar.JDateChooser jDateChooser24;
-    private com.toedter.calendar.JDateChooser jDateChooser25;
-    private com.toedter.calendar.JDateChooser jDateChooser26;
-    private com.toedter.calendar.JDateChooser jDateChooser27;
-    private com.toedter.calendar.JDateChooser jDateChooser28;
-    private com.toedter.calendar.JDateChooser jDateChooser29;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
-    private com.toedter.calendar.JDateChooser jDateChooser30;
-    private com.toedter.calendar.JDateChooser jDateChooser31;
-    private com.toedter.calendar.JDateChooser jDateChooser32;
-    private com.toedter.calendar.JDateChooser jDateChooser33;
-    private com.toedter.calendar.JDateChooser jDateChooser34;
-    private com.toedter.calendar.JDateChooser jDateChooser35;
-    private com.toedter.calendar.JDateChooser jDateChooser36;
-    private com.toedter.calendar.JDateChooser jDateChooser37;
-    private com.toedter.calendar.JDateChooser jDateChooser38;
-    private com.toedter.calendar.JDateChooser jDateChooser39;
-    private com.toedter.calendar.JDateChooser jDateChooser4;
-    private com.toedter.calendar.JDateChooser jDateChooser40;
-    private com.toedter.calendar.JDateChooser jDateChooser5;
-    private com.toedter.calendar.JDateChooser jDateChooser6;
-    private com.toedter.calendar.JDateChooser jDateChooser7;
-    private com.toedter.calendar.JDateChooser jDateChooser8;
-    private com.toedter.calendar.JDateChooser jDateChooser9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JComboBox<String> leucosisCombo;
+    private com.toedter.calendar.JDateChooser leucosisDate;
     private javax.swing.JLabel leucosisLabel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel malaltiaParkinson;
     private javax.swing.JComboBox<String> malaltiaParkinsonCombo;
+    private com.toedter.calendar.JDateChooser malaltiaParkinsonDate;
     private javax.swing.JComboBox<String> malaltiaVascularCombo;
+    private com.toedter.calendar.JDateChooser malaltiaVascularDate;
     private javax.swing.JLabel malaltiesCroniquesLabel;
     private javax.swing.JTextField malaltiesCroniquesText;
     private javax.swing.JComboBox<String> maligneCombo;
+    private com.toedter.calendar.JDateChooser maligneDate;
     private javax.swing.JLabel maligneLabel;
     private javax.swing.JLabel memantinaLabel;
     private javax.swing.JTextField memantinaText;
@@ -4299,6 +4382,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JLabel numCigarretsLabel;
     private javax.swing.JTextField numCigarretsText;
     private javax.swing.JComboBox<String> obesitatCombo;
+    private com.toedter.calendar.JDateChooser obesitatDate;
     private javax.swing.JLabel obesitatLabel;
     private javax.swing.JPanel oftalmologicPanel;
     private javax.swing.JLabel oftalmologicsLabel;
@@ -4308,6 +4392,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> parkinsonCombo;
     private javax.swing.JLabel parkinsonLabel;
     private javax.swing.JComboBox<String> patologiaTiroidesCombo;
+    private com.toedter.calendar.JDateChooser patologiaTiroidesDate;
     private javax.swing.JLabel patologiaTiroidesLabel;
     private javax.swing.JComboBox<String> petCombo;
     private com.toedter.calendar.JDateChooser petData;
@@ -4325,6 +4410,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JLabel psicoestimulantsLabel;
     private javax.swing.JTextField psicoestimulantsText;
     private javax.swing.JComboBox<String> psicosisCombo;
+    private com.toedter.calendar.JDateChooser psicosisDate;
     private javax.swing.JLabel psicosisLabel;
     private javax.swing.JPanel psiquiatricPanel;
     private javax.swing.JPanel respiratoriPanel;
@@ -4380,6 +4466,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JTextField toxicsLaboralsText;
     private javax.swing.JPanel tractamentActualPanel;
     private javax.swing.JComboBox<String> traumaCranealCombo;
+    private com.toedter.calendar.JDateChooser traumaCranealDate;
     private javax.swing.JLabel traumaCranealLabel;
     private javax.swing.JComboBox<String> ubeDiaCombo;
     private javax.swing.JLabel ubeDiaLabel;
@@ -4388,6 +4475,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     private javax.swing.JScrollPane ubeScroll;
     private javax.swing.JPanel ubeTab;
     private javax.swing.JComboBox<String> ulcusCombo;
+    private com.toedter.calendar.JDateChooser ulcusDate;
     private javax.swing.JLabel ulcusLabel;
     private javax.swing.JLabel urologicsLabel;
     private javax.swing.JTextField urologicsText;
@@ -4403,6 +4491,11 @@ public class newFitxaPacient extends javax.swing.JDialog {
             File file = new File(idPacient+".dat");    
             if(!file.exists()) {
                     file.createNewFile();
+                    Iterator it = dateMap.entrySet().iterator();
+                    while (it.hasNext()) {
+                        Map.Entry pair = (Map.Entry)it.next();
+                        dateMap.get((JComboBox)pair.getKey()).setVisible(false);
+                    }
             }
             else{
                 input = new FileInputStream(file);
@@ -4621,7 +4714,49 @@ public class newFitxaPacient extends javax.swing.JDialog {
                 getProperty(prop,"petCodi",petCombo);
                 getProperty(prop,"petDescripcio",petText);
                 getProperty(prop,"petData",petData);
-            }
+                
+                getProperty(prop,"hipertensioData",hipertensioDate);
+                getProperty(prop,"insuficienciaCardiacaData",insuficienciaCardiacaDate);
+                getProperty(prop,"infartData",infartDate);
+                getProperty(prop,"cardiopatiaData",cardiopatiaDate);
+                getProperty(prop,"arritmiaData",arritmiaDate);
+                getProperty(prop,"malaltiaVascularData",malaltiaVascularDate);
+                getProperty(prop,"diabetisData",diabetisDate);
+                getProperty(prop,"obesitatData",obesitatDate);
+                getProperty(prop,"dislipemiaData",dislipemiaDate);
+                getProperty(prop,"patologiaTiroidesData",patologiaTiroidesDate);
+                getProperty(prop,"ulcusData",ulcusDate);
+                getProperty(prop,"gastritisData",gastritisDate);
+                getProperty(prop,"colelitiasisData",colelitiasisDate);
+                getProperty(prop,"hepatopatiaData",hepatopatiaDate);
+                getProperty(prop,"depresioData",depresioDate);
+                getProperty(prop,"ansietatData",ansietatDate);
+                getProperty(prop,"psicosisData",psicosisDate);
+                getProperty(prop,"abusAlcoholData",abusAlcoholDate);
+                getProperty(prop,"abusDroguesData",abusDroguesDate);
+                getProperty(prop,"avcEstablertData",avcEstablertDate);
+                getProperty(prop,"avcTransitoriData",avcTransitoriDate);
+                getProperty(prop,"epilepsiaData",epilepsiaDate);
+                getProperty(prop,"traumaCranealData",traumaCranealDate);
+                getProperty(prop,"malaltiaParkinsonData",malaltiaParkinsonDate);
+                getProperty(prop,"esclerosisData",esclerosisDate);
+                getProperty(prop,"cefaleaData",cefaleaDate);
+                getProperty(prop,"asmaData",asmaDate);
+                getProperty(prop,"epocData",epocDate);
+                getProperty(prop,"anemiaData",anemiaDate);
+                getProperty(prop,"leucosisData",leucosisDate);
+                getProperty(prop,"alergiaData",alergiaDate);
+                getProperty(prop,"glaucomaData",glaucomaDate);
+                getProperty(prop,"cataractesData",cataractesDate);
+                getProperty(prop,"insuficienciaRenalData",insuficienciaRenalDate);
+                getProperty(prop,"incontinenciaData",incontinenciaDate);
+                getProperty(prop,"artrosiData",artrosiDate);
+                getProperty(prop,"artritisData",artritisDate);
+                getProperty(prop,"fibromialgiaData",fibromialgiaDate);
+                getProperty(prop,"benigneData",benigneDate);
+                getProperty(prop,"maligneData",maligneDate);
+                
+                }
 
 	} catch (IOException ex) {
 		ex.printStackTrace();
@@ -4657,14 +4792,16 @@ public class newFitxaPacient extends javax.swing.JDialog {
     }
     
     private void getProperty(Properties prop, String nom, JDateChooser dc){
-        if (!prop.getProperty(nom).equals("")){
-            DateFormat df = new SimpleDateFormat("dd/MM/yyyy"); 
-            Date data;
-            try {
-            data = df.parse(prop.getProperty(nom));
-            dc.setDate(data);
-            } catch (ParseException e) {
-                e.printStackTrace();
+        if (prop.getProperty(nom) != null){
+            if (!prop.getProperty(nom).equals("")){
+                DateFormat df = new SimpleDateFormat("dd/MM/yyyy"); 
+                Date data;
+                try {
+                data = df.parse(prop.getProperty(nom));
+                dc.setDate(data);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -4896,6 +5033,48 @@ public class newFitxaPacient extends javax.swing.JDialog {
                 setProperty(prop,"petDescripcio",petText);
                 setProperty(prop,"petData",petData);
                 
+                // Afegeix dates (introduit mes tard)
+                setProperty(prop,"hipertensioData",hipertensioDate);
+                setProperty(prop,"insuficienciaCardiacaData",insuficienciaCardiacaDate);
+                setProperty(prop,"infartData",infartDate);
+                setProperty(prop,"cardiopatiaData",cardiopatiaDate);
+                setProperty(prop,"arritmiaData",arritmiaDate);
+                setProperty(prop,"malaltiaVascularData",malaltiaVascularDate);
+                setProperty(prop,"diabetisData",diabetisDate);
+                setProperty(prop,"obesitatData",obesitatDate);
+                setProperty(prop,"dislipemiaData",dislipemiaDate);
+                setProperty(prop,"patologiaTiroidesData",patologiaTiroidesDate);
+                setProperty(prop,"ulcusData",ulcusDate);
+                setProperty(prop,"gastritisData",gastritisDate);
+                setProperty(prop,"colelitiasisData",colelitiasisDate);
+                setProperty(prop,"hepatopatiaData",hepatopatiaDate);
+                setProperty(prop,"depresioData",depresioDate);
+                setProperty(prop,"ansietatData",ansietatDate);
+                setProperty(prop,"psicosisData",psicosisDate);
+                setProperty(prop,"abusAlcoholData",abusAlcoholDate);
+                setProperty(prop,"abusDroguesData",abusDroguesDate);
+                setProperty(prop,"avcEstablertData",avcEstablertDate);
+                setProperty(prop,"avcTransitoriData",avcTransitoriDate);
+                setProperty(prop,"epilepsiaData",epilepsiaDate);
+                setProperty(prop,"traumaCranealData",traumaCranealDate);
+                setProperty(prop,"malaltiaParkinsonData",malaltiaParkinsonDate);
+                setProperty(prop,"esclerosisData",esclerosisDate);
+                setProperty(prop,"cefaleaData",cefaleaDate);
+                setProperty(prop,"asmaData",asmaDate);
+                setProperty(prop,"epocData",epocDate);
+                setProperty(prop,"anemiaData",anemiaDate);
+                setProperty(prop,"leucosisData",leucosisDate);
+                setProperty(prop,"alergiaData",alergiaDate);
+                setProperty(prop,"glaucomaData",glaucomaDate);
+                setProperty(prop,"cataractesData",cataractesDate);
+                setProperty(prop,"insuficienciaRenalData",insuficienciaRenalDate);
+                setProperty(prop,"incontinenciaData",incontinenciaDate);
+                setProperty(prop,"artrosiData",artrosiDate);
+                setProperty(prop,"artritisData",artritisDate);
+                setProperty(prop,"fibromialgiaData",fibromialgiaDate);
+                setProperty(prop,"benigneData",benigneDate);
+                setProperty(prop,"maligneData",maligneDate);
+                
                 prop.store(output, "NEUROIMATGE");
                 
 		// save properties to project root folder
@@ -4914,4 +5093,122 @@ public class newFitxaPacient extends javax.swing.JDialog {
 
 	}
     }
+
+    private void initDateMap() {
+        dateMap = new HashMap<JComboBox, JDateChooser>();
+        dateMap.put(hipertensioCombo, hipertensioDate);
+        dateMap.put(insuficienciaCardiacaCombo, insuficienciaCardiacaDate);
+        dateMap.put(infartCombo, infartDate);
+        dateMap.put(cardiopatiaCombo, cardiopatiaDate);
+        dateMap.put(arritmiaCombo, arritmiaDate);
+        dateMap.put(malaltiaVascularCombo, malaltiaVascularDate);
+        
+        dateMap.put(diabetisCombo, diabetisDate);
+        dateMap.put(obesitatCombo, obesitatDate);
+        dateMap.put(dislipemiaCombo, dislipemiaDate);
+        dateMap.put(patologiaTiroidesCombo, patologiaTiroidesDate);
+        
+        dateMap.put(ulcusCombo, ulcusDate);
+        dateMap.put(gastritisCombo, gastritisDate);
+        dateMap.put(colelitiasisCombo, colelitiasisDate);
+        dateMap.put(hepatopatiaCombo, hepatopatiaDate); 
+        
+        dateMap.put(depresioCombo, depresioDate);
+        dateMap.put(ansietatCombo, ansietatDate);       
+        dateMap.put(psicosisCombo, psicosisDate);       
+        dateMap.put(abusAlcoholCombo, abusAlcoholDate);       
+        dateMap.put(abusDroguesCombo, abusDroguesDate);
+               
+        dateMap.put(avcEstablertCombo, avcEstablertDate);       
+        dateMap.put(avcTransitoriCombo, avcTransitoriDate);       
+        dateMap.put(epilepsiaCombo, epilepsiaDate);       
+        dateMap.put(traumaCranealCombo, traumaCranealDate);       
+        dateMap.put(malaltiaParkinsonCombo, malaltiaParkinsonDate);       
+        dateMap.put(esclerosisCombo, esclerosisDate);       
+        dateMap.put(cefaleaCombo, cefaleaDate);
+               
+        dateMap.put(asmaCombo, asmaDate);       
+        dateMap.put(epocCombo, epocDate);
+               
+        dateMap.put(anemiaCombo, anemiaDate);       
+        dateMap.put(leucosisCombo, leucosisDate);
+               
+        dateMap.put(alergiaCombo, alergiaDate);
+               
+        dateMap.put(glaucomaCombo, glaucomaDate);       
+        dateMap.put(cataractesCombo, cataractesDate);
+               
+        dateMap.put(insuficienciaRenalCombo, insuficienciaRenalDate);       
+        dateMap.put(incontinenciaCombo, incontinenciaDate);
+               
+        dateMap.put(artrosiCombo, artrosiDate);       
+        dateMap.put(artritisCombo, artritisDate);       
+        dateMap.put(fibromialgiaCombo, fibromialgiaDate);
+               
+        dateMap.put(benigneCombo, benigneDate);       
+        dateMap.put(maligneCombo, maligneDate);
+        
+        Iterator it = dateMap.entrySet().iterator();
+        /*
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            dateMap.get((JComboBox)pair.getKey()).setVisible(false);
+        }*/
+    }
+
+    private void initCombos() {
+        ActionListener action = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JComboBox cb = (JComboBox) e.getSource();
+                if (cb.getSelectedIndex() == 0){
+                    dateMap.get(cb).setVisible(true);
+                }
+                else {
+                    dateMap.get(cb).setVisible(false);
+                }
+            }
+         };
+        hipertensioCombo.addActionListener(action);
+        insuficienciaCardiacaCombo.addActionListener(action);
+        infartCombo.addActionListener(action);
+        cardiopatiaCombo.addActionListener(action);
+        arritmiaCombo.addActionListener(action);
+        malaltiaVascularCombo.addActionListener(action);
+        diabetisCombo.addActionListener(action);
+        obesitatCombo.addActionListener(action);
+        dislipemiaCombo.addActionListener(action);
+        patologiaTiroidesCombo.addActionListener(action);
+        ulcusCombo.addActionListener(action);
+        gastritisCombo.addActionListener(action);
+        colelitiasisCombo.addActionListener(action);
+        hepatopatiaCombo.addActionListener(action);
+        depresioCombo.addActionListener(action);
+        ansietatCombo.addActionListener(action);
+        psicosisCombo.addActionListener(action);
+        abusAlcoholCombo.addActionListener(action);
+        abusDroguesCombo.addActionListener(action);
+        avcEstablertCombo.addActionListener(action);
+        avcTransitoriCombo.addActionListener(action);
+        epilepsiaCombo.addActionListener(action);
+        traumaCranealCombo.addActionListener(action);
+        malaltiaParkinsonCombo.addActionListener(action);
+        esclerosisCombo.addActionListener(action);
+        cefaleaCombo.addActionListener(action);
+        asmaCombo.addActionListener(action);
+        epocCombo.addActionListener(action);
+        anemiaCombo.addActionListener(action);
+        leucosisCombo.addActionListener(action);
+        alergiaCombo.addActionListener(action);
+        glaucomaCombo.addActionListener(action);
+        cataractesCombo.addActionListener(action);
+        insuficienciaRenalCombo.addActionListener(action);
+        incontinenciaCombo.addActionListener(action);
+        artrosiCombo.addActionListener(action);
+        artritisCombo.addActionListener(action);
+        fibromialgiaCombo.addActionListener(action);
+        benigneCombo.addActionListener(action);
+        maligneCombo.addActionListener(action);
+    }
+    
 }

@@ -1287,45 +1287,45 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="hipertensioCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="hipertensioDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="insuficienciaCardiacaLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="insuficienciaCardiacaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="insuficienciaCardiacaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="infartCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="infartDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="cardiopatiaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser4" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cardiopatiaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="arritmiaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser5" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="arritmiaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="malaltiaVascularCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser6" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="malaltiaVascularDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="138" max="32767" attributes="0"/>
+                                              <EmptySpace pref="146" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -1340,7 +1340,7 @@
                                                               <Component id="hipertensioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               <Component id="hipertensioCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="hipertensioDate" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1348,7 +1348,7 @@
                                                           <Component id="insuficienciaCardiacaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="insuficienciaCardiacaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1356,7 +1356,7 @@
                                                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="infartCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="infartDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1364,7 +1364,7 @@
                                                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="cardiopatiaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser4" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cardiopatiaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1372,7 +1372,7 @@
                                                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="arritmiaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser5" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="arritmiaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1380,7 +1380,7 @@
                                                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="malaltiaVascularCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser6" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="malaltiaVascularDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -1502,17 +1502,35 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="hipertensioDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="insuficienciaCardiacaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser3">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="infartDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser4">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="cardiopatiaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser5">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="arritmiaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser6">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="malaltiaVascularDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -1536,31 +1554,31 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="diabetisCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser7" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="diabetisDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="obesitatLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="obesitatCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser8" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="obesitatDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="dislipemiaLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="dislipemiaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser9" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="dislipemiaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="patologiaTiroidesLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="patologiaTiroidesCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser10" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="patologiaTiroidesDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="205" max="32767" attributes="0"/>
+                                              <EmptySpace pref="213" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -1575,7 +1593,7 @@
                                                               <Component id="diabetisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               <Component id="diabetisCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Component id="jDateChooser7" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="diabetisDate" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1583,7 +1601,7 @@
                                                           <Component id="obesitatCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jDateChooser8" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="obesitatDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1591,7 +1609,7 @@
                                                       <Component id="dislipemiaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="dislipemiaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser9" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="dislipemiaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1599,7 +1617,7 @@
                                                       <Component id="patologiaTiroidesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="patologiaTiroidesCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser10" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="patologiaTiroidesDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -1683,13 +1701,25 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser7">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="diabetisDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser8">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="obesitatDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser9">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="dislipemiaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser10">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="patologiaTiroidesDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -1713,31 +1743,31 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="ulcusCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser11" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="ulcusDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="gastritisLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="gastritisCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser12" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="gastritisDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="colelitiasisLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="colelitiasisCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser13" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="colelitiasisDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="hepatopatiaLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="hepatopatiaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser14" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="hepatopatiaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="171" max="32767" attributes="0"/>
+                                              <EmptySpace pref="179" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -1750,7 +1780,7 @@
                                                       <Component id="ulcusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="ulcusCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser11" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="ulcusDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1758,7 +1788,7 @@
                                                       <Component id="gastritisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="gastritisCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser12" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="gastritisDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1766,7 +1796,7 @@
                                                       <Component id="colelitiasisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="colelitiasisCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser13" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="colelitiasisDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1774,7 +1804,7 @@
                                                       <Component id="hepatopatiaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="hepatopatiaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser14" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="hepatopatiaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -1858,13 +1888,25 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser11">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="ulcusDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser12">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="gastritisDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser13">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="colelitiasisDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser14">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="hepatopatiaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -1888,38 +1930,38 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="depresioCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser15" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="depresioDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="ansietatLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="ansietatCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser16" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="ansietatDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="psicosisLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="psicosisCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser17" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="psicosisDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="abusAlcoholLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="abusAlcoholCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser18" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="abusAlcoholDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="abusDroguesLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="abusDroguesCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser19" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="abusDroguesDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="225" max="32767" attributes="0"/>
+                                              <EmptySpace pref="233" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -1934,7 +1976,7 @@
                                                               <Component id="depresioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               <Component id="depresioCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Component id="jDateChooser15" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="depresioDate" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1942,7 +1984,7 @@
                                                           <Component id="ansietatCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jDateChooser16" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="ansietatDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1950,7 +1992,7 @@
                                                       <Component id="psicosisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="psicosisCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser17" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="psicosisDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1958,7 +2000,7 @@
                                                       <Component id="abusAlcoholLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="abusAlcoholCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser18" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="abusAlcoholDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1966,7 +2008,7 @@
                                                       <Component id="abusDroguesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="abusDroguesCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser19" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="abusDroguesDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2069,15 +2111,30 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser15">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="depresioDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser16">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="ansietatDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser17">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="psicosisDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser18">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="abusAlcoholDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser19">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="abusDroguesDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -2101,52 +2158,52 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="avcEstablertCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser20" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="avcEstablertDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="avcTransitoriLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="avcTransitoriCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser21" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="avcTransitoriDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="epilepsiaLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="epilepsiaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser22" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="epilepsiaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="traumaCranealLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="traumaCranealCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser23" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="traumaCranealDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="malaltiaParkinson" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="malaltiaParkinsonCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser24" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="malaltiaParkinsonDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="esclerosisLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="esclerosisCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser25" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="esclerosisDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="cefaleaLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="cefaleaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser26" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cefaleaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="202" max="32767" attributes="0"/>
+                                              <EmptySpace pref="210" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -2165,7 +2222,7 @@
                                                                               <Component id="avcEstablertLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                               <Component id="avcEstablertCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                           </Group>
-                                                                          <Component id="jDateChooser20" min="-2" max="-2" attributes="0"/>
+                                                                          <Component id="avcEstablertDate" min="-2" max="-2" attributes="0"/>
                                                                       </Group>
                                                                       <EmptySpace max="-2" attributes="0"/>
                                                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -2173,7 +2230,7 @@
                                                                           <Component id="avcTransitoriCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                       </Group>
                                                                   </Group>
-                                                                  <Component id="jDateChooser21" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="avcTransitoriDate" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -2181,7 +2238,7 @@
                                                                       <Component id="epilepsiaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                       <Component id="epilepsiaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                   </Group>
-                                                                  <Component id="jDateChooser22" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="epilepsiaDate" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -2189,7 +2246,7 @@
                                                                       <Component id="traumaCranealLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                       <Component id="traumaCranealCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                   </Group>
-                                                                  <Component id="jDateChooser23" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="traumaCranealDate" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="3" attributes="0">
@@ -2197,7 +2254,7 @@
                                                                   <Component id="malaltiaParkinsonCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
-                                                          <Component id="jDateChooser24" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="malaltiaParkinsonDate" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -2205,7 +2262,7 @@
                                                           <Component id="esclerosisCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jDateChooser25" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="esclerosisDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -2213,7 +2270,7 @@
                                                       <Component id="cefaleaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="cefaleaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser26" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cefaleaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2354,19 +2411,40 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser20">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="avcEstablertDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser21">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="avcTransitoriDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser22">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="epilepsiaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser23">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="traumaCranealDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser24">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="malaltiaParkinsonDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser25">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="esclerosisDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser26">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="cefaleaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -2398,8 +2476,8 @@
                                               </Group>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jDateChooser28" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jDateChooser27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="epocDate" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="asmaDate" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2414,7 +2492,7 @@
                                                       <Component id="asmaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="asmaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser27" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="asmaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -2422,7 +2500,7 @@
                                                       <Component id="epocLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="epocCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser28" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="epocDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2468,9 +2546,15 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser27">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="asmaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser28">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="epocDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -2494,17 +2578,17 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="anemiaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser29" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="anemiaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="leucosisLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="leucosisCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser30" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="leucosisDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="262" max="32767" attributes="0"/>
+                                              <EmptySpace pref="270" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -2517,7 +2601,7 @@
                                                       <Component id="anemiaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="anemiaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser29" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="anemiaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -2525,7 +2609,7 @@
                                                       <Component id="leucosisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="leucosisCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser30" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="leucosisDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2571,9 +2655,15 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser29">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="anemiaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser30">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="leucosisDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -2595,7 +2685,7 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="alergiaCombo" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jDateChooser31" min="-2" max="-2" attributes="0"/>
+                                              <Component id="alergiaDate" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -2605,7 +2695,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="jDateChooser31" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="alergiaDate" min="-2" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="alergiaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="alergiaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2636,7 +2726,10 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser31">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="alergiaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -2660,17 +2753,17 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="glaucomaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser32" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="glaucomaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="cataractesLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="cataractesCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser33" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cataractesDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="249" max="32767" attributes="0"/>
+                                              <EmptySpace pref="257" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -2683,7 +2776,7 @@
                                                       <Component id="glaucomaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="glaucomaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser32" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="glaucomaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -2691,7 +2784,7 @@
                                                       <Component id="cataractesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="cataractesCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser33" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cataractesDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2737,9 +2830,15 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser32">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="glaucomaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser33">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="cataractesDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -2763,17 +2862,17 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="insuficienciaRenalCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser34" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="insuficienciaRenalDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
                                                       <Component id="incontinenciaLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="incontinenciaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser35" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="incontinenciaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="164" max="32767" attributes="0"/>
+                                              <EmptySpace pref="172" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -2786,7 +2885,7 @@
                                                       <Component id="insuficienciaRenalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="insuficienciaRenalCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser34" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="insuficienciaRenalDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -2794,7 +2893,7 @@
                                                       <Component id="incontinenciaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="incontinenciaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser35" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="incontinenciaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2840,9 +2939,15 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser34">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="insuficienciaRenalDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser35">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="incontinenciaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -2866,24 +2971,24 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="artrosiCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser36" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="artrosiDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="artritisLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="artritisCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser37" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="artritisDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="fibromialgiaLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="fibromialgiaCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser38" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fibromialgiaDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="246" max="32767" attributes="0"/>
+                                              <EmptySpace pref="254" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -2896,7 +3001,7 @@
                                                       <Component id="artrosiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="artrosiCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser36" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="artrosiDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -2904,7 +3009,7 @@
                                                       <Component id="artritisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="artritisCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser37" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="artritisDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -2912,7 +3017,7 @@
                                                       <Component id="fibromialgiaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="fibromialgiaCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser38" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fibromialgiaDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2977,11 +3082,20 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser36">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="artrosiDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser37">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="artritisDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser38">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="fibromialgiaDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -3005,17 +3119,17 @@
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="benigneCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser39" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="benigneDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
                                                       <Component id="maligneLabel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="maligneCombo" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser40" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="maligneDate" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="268" max="32767" attributes="0"/>
+                                              <EmptySpace pref="276" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -3028,7 +3142,7 @@
                                                       <Component id="benigneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="benigneCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser39" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="benigneDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -3036,7 +3150,7 @@
                                                       <Component id="maligneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="maligneCombo" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser40" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="maligneDate" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -3082,9 +3196,15 @@
                                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                       </AuxValues>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser39">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="benigneDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser40">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="maligneDate">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>

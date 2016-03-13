@@ -55,6 +55,7 @@ public class testsTextuals extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         escolaritatBtnGroup = new javax.swing.ButtonGroup();
         escolaritatParesBtnGroup = new javax.swing.ButtonGroup();
@@ -72,6 +73,12 @@ public class testsTextuals extends javax.swing.JFrame {
         carrersBtnGroup = new javax.swing.ButtonGroup();
         barriBtnGroup = new javax.swing.ButtonGroup();
         casaBtnGroup = new javax.swing.ButtonGroup();
+        cdrMemoriaBtnGroup = new javax.swing.ButtonGroup();
+        cdrOrientacioBtnGroup = new javax.swing.ButtonGroup();
+        cdrRaonamentBtnGroup = new javax.swing.ButtonGroup();
+        cdrForaCasaBtnGroup = new javax.swing.ButtonGroup();
+        cdrDomestiquesBtnGroup = new javax.swing.ButtonGroup();
+        cdrCuidatBtnGroup = new javax.swing.ButtonGroup();
         mainPanel = new javax.swing.JPanel();
         dataPanel = new javax.swing.JPanel();
         tabbedPanel = new javax.swing.JTabbedPane();
@@ -202,6 +209,299 @@ public class testsTextuals extends javax.swing.JFrame {
         jCheckBox93 = new javax.swing.JCheckBox();
         jCheckBox94 = new javax.swing.JCheckBox();
         jLabel55 = new javax.swing.JLabel();
+        CDRScroll4 = new javax.swing.JScrollPane();
+        CDRPanel3 = new javax.swing.JPanel();
+        memoriaPanel3 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        orientacioLabel16 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        orientacioLabel40 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        orientacioLabel41 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        orientacioLabel42 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        orientacioLabel43 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        orientacioLabel44 = new javax.swing.JLabel();
+        jCheckBox38 = new javax.swing.JCheckBox();
+        jCheckBox39 = new javax.swing.JCheckBox();
+        jCheckBox40 = new javax.swing.JCheckBox();
+        orientacioLabel45 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jLabel50 = new javax.swing.JLabel();
+        jCheckBox41 = new javax.swing.JCheckBox();
+        jCheckBox42 = new javax.swing.JCheckBox();
+        jCheckBox46 = new javax.swing.JCheckBox();
+        jCheckBox55 = new javax.swing.JCheckBox();
+        jCheckBox56 = new javax.swing.JCheckBox();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        CDRScroll5 = new javax.swing.JScrollPane();
+        CDRPanel4 = new javax.swing.JPanel();
+        memoriaPanel4 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        orientacioLabel28 = new javax.swing.JLabel();
+        jCheckBox105 = new javax.swing.JCheckBox();
+        jCheckBox113 = new javax.swing.JCheckBox();
+        jCheckBox114 = new javax.swing.JCheckBox();
+        orientacioLabel29 = new javax.swing.JLabel();
+        jCheckBox115 = new javax.swing.JCheckBox();
+        jCheckBox116 = new javax.swing.JCheckBox();
+        jCheckBox117 = new javax.swing.JCheckBox();
+        orientacioLabel30 = new javax.swing.JLabel();
+        jCheckBox118 = new javax.swing.JCheckBox();
+        jCheckBox119 = new javax.swing.JCheckBox();
+        jCheckBox120 = new javax.swing.JCheckBox();
+        jCheckBox121 = new javax.swing.JCheckBox();
+        jPanel11 = new javax.swing.JPanel();
+        orientacioLabel31 = new javax.swing.JLabel();
+        jCheckBox122 = new javax.swing.JCheckBox();
+        jCheckBox125 = new javax.swing.JCheckBox();
+        orientacioLabel32 = new javax.swing.JLabel();
+        orientacioLabel33 = new javax.swing.JLabel();
+        orientacioLabel34 = new javax.swing.JLabel();
+        jCheckBox126 = new javax.swing.JCheckBox();
+        jCheckBox127 = new javax.swing.JCheckBox();
+        orientacioLabel35 = new javax.swing.JLabel();
+        orientacioLabel36 = new javax.swing.JLabel();
+        jCheckBox149 = new javax.swing.JCheckBox();
+        jCheckBox150 = new javax.swing.JCheckBox();
+        orientacioLabel37 = new javax.swing.JLabel();
+        jCheckBox151 = new javax.swing.JCheckBox();
+        jCheckBox152 = new javax.swing.JCheckBox();
+        jCheckBox153 = new javax.swing.JCheckBox();
+        jCheckBox154 = new javax.swing.JCheckBox();
+        jCheckBox155 = new javax.swing.JCheckBox();
+        jCheckBox156 = new javax.swing.JCheckBox();
+        jCheckBox157 = new javax.swing.JCheckBox();
+        jCheckBox158 = new javax.swing.JCheckBox();
+        jTextField11 = new javax.swing.JTextField();
+        jCheckBox159 = new javax.swing.JCheckBox();
+        jCheckBox160 = new javax.swing.JCheckBox();
+        jCheckBox161 = new javax.swing.JCheckBox();
+        jCheckBox162 = new javax.swing.JCheckBox();
+        orientacioLabel38 = new javax.swing.JLabel();
+        jCheckBox163 = new javax.swing.JCheckBox();
+        jCheckBox164 = new javax.swing.JCheckBox();
+        jCheckBox165 = new javax.swing.JCheckBox();
+        jCheckBox166 = new javax.swing.JCheckBox();
+        orientacioLabel39 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        CDRScroll6 = new javax.swing.JScrollPane();
+        CDRPanel5 = new javax.swing.JPanel();
+        memoriaPanel5 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jCheckBox57 = new javax.swing.JCheckBox();
+        jCheckBox58 = new javax.swing.JCheckBox();
+        jCheckBox59 = new javax.swing.JCheckBox();
+        jCheckBox60 = new javax.swing.JCheckBox();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator12 = new javax.swing.JSeparator();
+        jLabel73 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jSeparator9 = new javax.swing.JSeparator();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jCheckBox61 = new javax.swing.JCheckBox();
+        jCheckBox62 = new javax.swing.JCheckBox();
+        jCheckBox99 = new javax.swing.JCheckBox();
+        jCheckBox100 = new javax.swing.JCheckBox();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel65 = new javax.swing.JLabel();
+        jCheckBox101 = new javax.swing.JCheckBox();
+        jSeparator10 = new javax.swing.JSeparator();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jCheckBox102 = new javax.swing.JCheckBox();
+        jCheckBox103 = new javax.swing.JCheckBox();
+        jCheckBox104 = new javax.swing.JCheckBox();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel69 = new javax.swing.JLabel();
+        jCheckBox106 = new javax.swing.JCheckBox();
+        jSeparator11 = new javax.swing.JSeparator();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jCheckBox107 = new javax.swing.JCheckBox();
+        jCheckBox108 = new javax.swing.JCheckBox();
+        jCheckBox109 = new javax.swing.JCheckBox();
+        jLabel58 = new javax.swing.JLabel();
+        CDRScroll7 = new javax.swing.JScrollPane();
+        CDRPanel6 = new javax.swing.JPanel();
+        memoriaPanel6 = new javax.swing.JPanel();
+        orientacioLabel17 = new javax.swing.JLabel();
+        jCheckBox112 = new javax.swing.JCheckBox();
+        jCheckBox123 = new javax.swing.JCheckBox();
+        orientacioLabel18 = new javax.swing.JLabel();
+        orientacioLabel23 = new javax.swing.JLabel();
+        orientacioLabel24 = new javax.swing.JLabel();
+        jCheckBox173 = new javax.swing.JCheckBox();
+        jCheckBox174 = new javax.swing.JCheckBox();
+        jCheckBox175 = new javax.swing.JCheckBox();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+        jCheckBox176 = new javax.swing.JCheckBox();
+        jCheckBox177 = new javax.swing.JCheckBox();
+        jCheckBox178 = new javax.swing.JCheckBox();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jCheckBox179 = new javax.swing.JCheckBox();
+        jCheckBox180 = new javax.swing.JCheckBox();
+        jCheckBox181 = new javax.swing.JCheckBox();
+        jCheckBox182 = new javax.swing.JCheckBox();
+        jCheckBox183 = new javax.swing.JCheckBox();
+        jSeparator13 = new javax.swing.JSeparator();
+        jCheckBox184 = new javax.swing.JCheckBox();
+        jCheckBox185 = new javax.swing.JCheckBox();
+        jCheckBox186 = new javax.swing.JCheckBox();
+        jCheckBox187 = new javax.swing.JCheckBox();
+        jCheckBox188 = new javax.swing.JCheckBox();
+        jCheckBox189 = new javax.swing.JCheckBox();
+        jCheckBox190 = new javax.swing.JCheckBox();
+        jCheckBox191 = new javax.swing.JCheckBox();
+        jCheckBox192 = new javax.swing.JCheckBox();
+        jCheckBox193 = new javax.swing.JCheckBox();
+        jTextField10 = new javax.swing.JTextField();
+        orientacioLabel25 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel83 = new javax.swing.JLabel();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel86 = new javax.swing.JLabel();
+        jTextField20 = new javax.swing.JTextField();
+        jLabel87 = new javax.swing.JLabel();
+        jTextField21 = new javax.swing.JTextField();
+        jLabel88 = new javax.swing.JLabel();
+        jTextField22 = new javax.swing.JTextField();
+        jLabel89 = new javax.swing.JLabel();
+        jTextField23 = new javax.swing.JTextField();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jCheckBox194 = new javax.swing.JCheckBox();
+        jCheckBox195 = new javax.swing.JCheckBox();
+        jCheckBox196 = new javax.swing.JCheckBox();
+        jCheckBox197 = new javax.swing.JCheckBox();
+        jCheckBox198 = new javax.swing.JCheckBox();
+        jSeparator14 = new javax.swing.JSeparator();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        CDRScroll8 = new javax.swing.JScrollPane();
+        CDRPanel7 = new javax.swing.JPanel();
+        memoriaPanel7 = new javax.swing.JPanel();
+        orientacioLabel26 = new javax.swing.JLabel();
+        orientacioLabel27 = new javax.swing.JLabel();
+        orientacioLabel49 = new javax.swing.JLabel();
+        jTextField33 = new javax.swing.JTextField();
+        jCheckBox124 = new javax.swing.JCheckBox();
+        jCheckBox128 = new javax.swing.JCheckBox();
+        jTextField34 = new javax.swing.JTextField();
+        jCheckBox129 = new javax.swing.JCheckBox();
+        jCheckBox130 = new javax.swing.JCheckBox();
+        orientacioLabel50 = new javax.swing.JLabel();
+        jTextField35 = new javax.swing.JTextField();
+        jCheckBox131 = new javax.swing.JCheckBox();
+        jCheckBox132 = new javax.swing.JCheckBox();
+        orientacioLabel51 = new javax.swing.JLabel();
+        jTextField36 = new javax.swing.JTextField();
+        jCheckBox133 = new javax.swing.JCheckBox();
+        jCheckBox134 = new javax.swing.JCheckBox();
+        orientacioLabel52 = new javax.swing.JLabel();
+        jTextField37 = new javax.swing.JTextField();
+        jCheckBox135 = new javax.swing.JCheckBox();
+        jCheckBox136 = new javax.swing.JCheckBox();
+        orientacioLabel53 = new javax.swing.JLabel();
+        jTextField38 = new javax.swing.JTextField();
+        jCheckBox137 = new javax.swing.JCheckBox();
+        jCheckBox138 = new javax.swing.JCheckBox();
+        orientacioLabel54 = new javax.swing.JLabel();
+        jTextField39 = new javax.swing.JTextField();
+        jCheckBox139 = new javax.swing.JCheckBox();
+        jCheckBox140 = new javax.swing.JCheckBox();
+        orientacioLabel55 = new javax.swing.JLabel();
+        jTextField40 = new javax.swing.JTextField();
+        jCheckBox141 = new javax.swing.JCheckBox();
+        jCheckBox142 = new javax.swing.JCheckBox();
+        jLabel123 = new javax.swing.JLabel();
+        CDRScroll9 = new javax.swing.JScrollPane();
+        CDRPanel8 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jToggleButton4 = new javax.swing.JToggleButton();
+        jToggleButton5 = new javax.swing.JToggleButton();
+        jToggleButton6 = new javax.swing.JToggleButton();
+        jToggleButton7 = new javax.swing.JToggleButton();
+        jToggleButton8 = new javax.swing.JToggleButton();
+        jToggleButton9 = new javax.swing.JToggleButton();
+        jToggleButton10 = new javax.swing.JToggleButton();
+        jToggleButton11 = new javax.swing.JToggleButton();
+        jToggleButton12 = new javax.swing.JToggleButton();
+        jToggleButton13 = new javax.swing.JToggleButton();
+        jToggleButton14 = new javax.swing.JToggleButton();
+        jToggleButton15 = new javax.swing.JToggleButton();
+        jToggleButton16 = new javax.swing.JToggleButton();
+        jToggleButton17 = new javax.swing.JToggleButton();
+        jToggleButton18 = new javax.swing.JToggleButton();
+        jToggleButton19 = new javax.swing.JToggleButton();
+        jToggleButton20 = new javax.swing.JToggleButton();
+        jToggleButton21 = new javax.swing.JToggleButton();
+        jToggleButton22 = new javax.swing.JToggleButton();
+        jToggleButton23 = new javax.swing.JToggleButton();
+        jToggleButton24 = new javax.swing.JToggleButton();
+        jToggleButton25 = new javax.swing.JToggleButton();
+        jToggleButton26 = new javax.swing.JToggleButton();
+        jToggleButton27 = new javax.swing.JToggleButton();
+        jToggleButton28 = new javax.swing.JToggleButton();
+        jToggleButton29 = new javax.swing.JToggleButton();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel124 = new javax.swing.JLabel();
+        jLabel125 = new javax.swing.JLabel();
+        jLabel126 = new javax.swing.JLabel();
+        jLabel127 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel129 = new javax.swing.JLabel();
+        jLabel130 = new javax.swing.JLabel();
+        jLabel131 = new javax.swing.JLabel();
+        jLabel132 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel102 = new javax.swing.JLabel();
+        jSeparator15 = new javax.swing.JSeparator();
+        jLabel103 = new javax.swing.JLabel();
         CRCTab = new javax.swing.JPanel();
         dadesMediquesScroll = new javax.swing.JScrollPane();
         dadesMediquesPanel = new javax.swing.JPanel();
@@ -326,6 +626,8 @@ public class testsTextuals extends javax.swing.JFrame {
         totalMMSELabel = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        referenciaMMSELabel = new javax.swing.JLabel();
         TAPTab = new javax.swing.JPanel();
         TAPScroll = new javax.swing.JScrollPane();
         TAPPanel = new javax.swing.JPanel();
@@ -388,7 +690,7 @@ public class testsTextuals extends javax.swing.JFrame {
 
         idiomaLabel.setText("1a. En cas afirmatiu, es tracta d'un problema constant (en lloc de intermitent)?");
 
-        naixementLabel.setText("2. ¿Puede él/ella recordar hechos recientes?");
+        naixementLabel.setText("2. ¿Pot ell/ella recordar fets recents?");
 
         nivellEscolaritatLabel.setText("3. Pot ell / a recordar una llista curta de coses (compres)?");
 
@@ -472,7 +774,7 @@ public class testsTextuals extends javax.swing.JFrame {
                 .addGroup(memoriaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(memoriaPanelLayout.createSequentialGroup()
                         .addGroup(memoriaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 1447, Short.MAX_VALUE)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 2000, Short.MAX_VALUE)
                             .addGroup(memoriaPanelLayout.createSequentialGroup()
                                 .addGroup(memoriaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(memoriaPanelLayout.createSequentialGroup()
@@ -663,7 +965,7 @@ public class testsTextuals extends javax.swing.JFrame {
                 .addComponent(jLabel40)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(306, Short.MAX_VALUE))
         );
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -830,7 +1132,7 @@ public class testsTextuals extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jCheckBox54))
                                     .addComponent(jLabel44))))
-                        .addGap(0, 763, Short.MAX_VALUE))))
+                        .addGap(0, 999, Short.MAX_VALUE))))
         );
         memoriaPanel1Layout.setVerticalGroup(
             memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -884,7 +1186,7 @@ public class testsTextuals extends javax.swing.JFrame {
                     .addComponent(jCheckBox54))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel44)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(850, Short.MAX_VALUE))
         );
 
         jLabel54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1107,7 +1409,7 @@ public class testsTextuals extends javax.swing.JFrame {
                                         .addComponent(jCheckBox93)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jCheckBox94)))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 1557, Short.MAX_VALUE))))
         );
         memoriaPanel2Layout.setVerticalGroup(
             memoriaPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1178,7 +1480,7 @@ public class testsTextuals extends javax.swing.JFrame {
                     .addComponent(jCheckBox92)
                     .addComponent(jCheckBox93)
                     .addComponent(jCheckBox94))
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(749, Short.MAX_VALUE))
         );
 
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1210,6 +1512,2026 @@ public class testsTextuals extends javax.swing.JFrame {
         CDRScroll3.setViewportView(CDRPanel2);
 
         CDRTab.add(CDRScroll3, "card3");
+
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntas sobre las actividades domésticas y las aficiones para el informador: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel16.setText("1a. Quins canvis s'han produït en la seva capacitat per realitzar les tasques domèstiques?");
+
+        orientacioLabel40.setText("1b. Què és el que encara pot fer bé?");
+
+        orientacioLabel41.setText("2a. Quins canvis s'han produït en la seva capacitat per dur a terme les seves aficions?");
+
+        orientacioLabel42.setText("3. Si està en una residència, què ha deixat de fer bé (Activitats domèstiques i Aficions)?");
+
+        orientacioLabel43.setText("2b. Què és el que encara pot fer bé?");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(orientacioLabel16)
+                    .addComponent(orientacioLabel40)
+                    .addComponent(orientacioLabel41)
+                    .addComponent(orientacioLabel43)
+                    .addComponent(orientacioLabel42)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(orientacioLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel40)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel41)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel42)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Activitats de la vida diària (The Dementia Scale of Blessed):", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel44.setText("4. Habilitat per realitzar les tasques domèstiques");
+
+        jCheckBox38.setToolTipText("");
+        jCheckBox38.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox38.setLabel("<html><center>Sense pèrdua<br>0");
+        jCheckBox38.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox39.setText("<html><br>0,5");
+        jCheckBox39.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox39.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox40.setText("<html><center>Pèrdua greu<br>1");
+        jCheckBox40.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox40.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        orientacioLabel45.setText("<html><t>Per favor, descriu-ho:");
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane4.setViewportView(jTextArea3);
+
+        jLabel50.setText("5. De quina manera és capaç ell / a de realitzar les tasques domèstiques? (Trieu una resposta. No cal preguntar a l'informador directament.)");
+
+        jCheckBox41.setText("<html><u>Cap funció significativa.</u> (Realitza activitats senzilles com fer el llit, però sota una supervisió exhaustiva)");
+
+        jCheckBox42.setText("<html><u>Funcions només en activitats limitades.</u> (Amb alguna supervisió, renta els plats amb una neteja acceptable, posa la taula)");
+
+        jCheckBox46.setText("<html><u>Funcions amb independència en algunes activitats.</u> (Maneja electrodomèstics, com per exemple, l'aspirador; prepara menjars senzills)");
+
+        jCheckBox55.setText("<Html> <u> Funcions en activitats habituals però no al nivell habitual.");
+
+        jCheckBox56.setText("<Html> <u> Funció normal en activitats habituals.");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(309, Short.MAX_VALUE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(orientacioLabel44)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jCheckBox38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jCheckBox39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jCheckBox40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(orientacioLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel50))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addContainerGap())))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCheckBox40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jCheckBox39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(orientacioLabel44)
+                            .addComponent(jCheckBox38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(orientacioLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel42.setText("<html><b>IMPORTANT:</b><br>Hi ha prou informació disponible per valorar el nivell de limitació del subjecte en les ACTIVITATS DOMÈSTIQUES i AFICIONS?<br><b>En cas negatiu, faci més preguntes.</b>");
+
+        jLabel45.setText("<Html> <u> Tasques domèstiques:</u> cuinar, rentar, netejar, comprar el menjar, treure les escombraries, tenir cura de les plantes, tasques de manteniment senzilles i reparacions a la llar.");
+
+        jLabel51.setText("<Html> <u> Aficions:</u> Cosir, pintar, fer manualitats, llegir, entreteniments, fotografia, jardineria, anar al teatre o a un concert, fusteria, fer esport.");
+
+        javax.swing.GroupLayout memoriaPanel3Layout = new javax.swing.GroupLayout(memoriaPanel3);
+        memoriaPanel3.setLayout(memoriaPanel3Layout);
+        memoriaPanel3Layout.setHorizontalGroup(
+            memoriaPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1037, Short.MAX_VALUE))
+        );
+        memoriaPanel3Layout.setVerticalGroup(
+            memoriaPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(430, Short.MAX_VALUE))
+        );
+
+        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel56.setText("Fulla de Valoració Clínica de Demència");
+
+        javax.swing.GroupLayout CDRPanel3Layout = new javax.swing.GroupLayout(CDRPanel3);
+        CDRPanel3.setLayout(CDRPanel3Layout);
+        CDRPanel3Layout.setHorizontalGroup(
+            CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(memoriaPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CDRPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel56)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CDRPanel3Layout.setVerticalGroup(
+            CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel56)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(memoriaPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        CDRScroll4.setViewportView(CDRPanel3);
+
+        CDRTab.add(CDRScroll4, "card4");
+
+        memoriaPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes d'activitats fora de casa per l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Laboral", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel28.setText("<html>1. Segueix treballant el subjecte? <br>Si no s'aplica, aneu a la pregunta 4 <br>Si la resposta és \"sí\", aneu a la pregunta 3 <br>Si la resposta és \"no\", aneu a la pregunta 2");
+
+        diaMesBtnGroup.add(jCheckBox105);
+        jCheckBox105.setText("No s'aplica");
+
+        diaMesBtnGroup.add(jCheckBox113);
+        jCheckBox113.setText("No");
+
+        diaMesBtnGroup.add(jCheckBox114);
+        jCheckBox114.setText("Sí");
+
+        orientacioLabel29.setText("2. Els problemes de raonament o de memòria van contribuir a la decisió del subjecte per jubilar-se? (Segueixi amb la pregunta 4)");
+
+        jCheckBox115.setText("Sí");
+
+        jCheckBox116.setText("No");
+
+        jCheckBox117.setText("No ho sé");
+
+        orientacioLabel30.setText("3. Té el subjecte alguna dificultat important en el seu treball a causa de problemes de memòria o raonament?");
+
+        jCheckBox118.setText("Quasi mai o mai");
+
+        jCheckBox119.setText("De vegades");
+
+        jCheckBox120.setText("Moltes vegades");
+
+        jCheckBox121.setText("No ho sé");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(orientacioLabel29)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jCheckBox115)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox116)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox117))
+                            .addComponent(orientacioLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox105)
+                            .addComponent(jCheckBox113)
+                            .addComponent(jCheckBox114)))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jCheckBox118)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox119)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox120)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox121))
+                    .addComponent(orientacioLabel30))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(orientacioLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jCheckBox114)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBox113)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBox105)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox115)
+                    .addComponent(jCheckBox116)
+                    .addComponent(jCheckBox117))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox118)
+                    .addComponent(jCheckBox119)
+                    .addComponent(jCheckBox120)
+                    .addComponent(jCheckBox121))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Social", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel31.setText("4. Ha conduït mai un cotxe?");
+
+        jCheckBox122.setText("Sí");
+
+        jCheckBox125.setText("No");
+
+        orientacioLabel32.setText("5. Si ell/ella encara condueix, té problemes o riscos degut a una ecassa capacitat de raonament?");
+
+        orientacioLabel33.setText("*6. És capaç de fer ell/ella sol/sola les compres que necessita?");
+
+        orientacioLabel34.setText("7. És ell/ella capaç de realitzar independentment activitats fora de casa?");
+
+        jCheckBox126.setText("Sí");
+
+        jCheckBox127.setText("No, perquè:");
+
+        orientacioLabel35.setText("8. Exerceix funcions socials fora de la casa?");
+
+        orientacioLabel36.setText("Condueix un cotxe actualment?");
+
+        jCheckBox149.setText("Sí");
+
+        jCheckBox150.setText("No");
+
+        orientacioLabel37.setText("Si no condueix, es degut a problemes de raonament o de memòria?");
+
+        jCheckBox151.setText("Sí");
+
+        jCheckBox152.setText("No");
+
+        jCheckBox153.setText("Sí");
+
+        jCheckBox154.setText("No");
+
+        jCheckBox155.setText("<html>Quasi mai o mai<br>(Necessita que l'acompanyin<br>per realitzar qualsevol compra)");
+
+        jCheckBox156.setText("<html>De vegades<br>(Compra poques coses;<br>compra coses per duplicat<br>o oblida comprar coses que necessita)");
+
+        jCheckBox157.setText("<html>Moltes vegades");
+
+        jCheckBox158.setText("No ho sé");
+
+        jCheckBox159.setText("<html>Quasi mai o mai<br>(Generalment es incapaç de<br>realitzar activitats sense ajuda)");
+
+        jCheckBox160.setText("<html>De vegades (Limitades i/o rutinàries,<br>per ex. participació superficial<br>a misa o en reunions,<br>anar a un saló de bellesa)");
+
+        jCheckBox161.setText("<html>Moltes vegades<br>(Participació segnificativa<br>en activitats, per ex. votar)");
+
+        jCheckBox162.setText("No ho sé");
+
+        orientacioLabel38.setText("9. Un observador casual del comportament del subjecte, pensaria que està malalt?");
+
+        jCheckBox163.setText("Sí");
+
+        jCheckBox164.setText("No");
+
+        jCheckBox165.setText("Sí");
+
+        jCheckBox166.setText("No");
+
+        orientacioLabel39.setText("10. Si és en una residència, ¿participa activament en les activitats socials (participació intel·lectual)?");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(400, Short.MAX_VALUE)
+                .addComponent(jCheckBox161, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox162)
+                .addGap(14, 14, 14))
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(orientacioLabel31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox122)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox125)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel11Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(orientacioLabel33)
+                        .addComponent(orientacioLabel39)
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                            .addComponent(orientacioLabel32)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jCheckBox153)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jCheckBox154))
+                        .addComponent(orientacioLabel35)
+                        .addComponent(orientacioLabel34)
+                        .addComponent(orientacioLabel38)
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel11Layout.createSequentialGroup()
+                                    .addComponent(jCheckBox165)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox166))
+                                .addGroup(jPanel11Layout.createSequentialGroup()
+                                    .addComponent(jCheckBox163)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox164))
+                                .addGroup(jPanel11Layout.createSequentialGroup()
+                                    .addComponent(jCheckBox159, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox160, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel11Layout.createSequentialGroup()
+                                    .addComponent(jCheckBox155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox156, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox157, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox158))
+                                .addGroup(jPanel11Layout.createSequentialGroup()
+                                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(orientacioLabel37)
+                                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                            .addComponent(orientacioLabel36)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jCheckBox149)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jCheckBox150)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox151)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox152))
+                                .addGroup(jPanel11Layout.createSequentialGroup()
+                                    .addComponent(jCheckBox126)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox127)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addContainerGap(63, Short.MAX_VALUE)))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(orientacioLabel31)
+                    .addComponent(jCheckBox125)
+                    .addComponent(jCheckBox122))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox161, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox162))
+                .addGap(164, 164, 164))
+            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel11Layout.createSequentialGroup()
+                    .addGap(33, 33, 33)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(orientacioLabel36)
+                        .addComponent(jCheckBox149)
+                        .addComponent(jCheckBox150))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(orientacioLabel37)
+                        .addComponent(jCheckBox151)
+                        .addComponent(jCheckBox152))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(orientacioLabel32)
+                        .addComponent(jCheckBox153)
+                        .addComponent(jCheckBox154))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(orientacioLabel33)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBox156, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBox157, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBox158))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(orientacioLabel34)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox159, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBox160, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(orientacioLabel35)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox126)
+                        .addComponent(jCheckBox127)
+                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(orientacioLabel38)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox163)
+                        .addComponent(jCheckBox164))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(orientacioLabel39)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox165)
+                        .addComponent(jCheckBox166))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jLabel47.setText("<html><b>IMPORTANT:</b><br>Existeix suficient informació disponible per valorar el nivell de limitació del subjecte respecte a les activitats fora de casa?<br><b><u>Si la resposta és No, faci més preguntes.</u></b>");
+
+        jLabel48.setText("<Html> <u> Activitats fora de casa: </u> Com ara anar a l'església, visitar amics o la família, activitats polítiques, associacions professionals com el Col·legi d'Advocats, altres grups professionals, clubs socials, organitzacions professionals amb activitat assistencial, programes educatius.");
+
+        jLabel49.setText("<html><b>* Si us plau, afegiu anotacions si cal per aclarir el nivell de funcionament del subjecte en aquesta àrea.");
+
+        javax.swing.GroupLayout memoriaPanel4Layout = new javax.swing.GroupLayout(memoriaPanel4);
+        memoriaPanel4.setLayout(memoriaPanel4Layout);
+        memoriaPanel4Layout.setHorizontalGroup(
+            memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(memoriaPanel4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 739, Short.MAX_VALUE))
+        );
+        memoriaPanel4Layout.setVerticalGroup(
+            memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(368, Short.MAX_VALUE))
+        );
+
+        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel57.setText("Fulla de Valoració Clínica de Demència");
+
+        javax.swing.GroupLayout CDRPanel4Layout = new javax.swing.GroupLayout(CDRPanel4);
+        CDRPanel4.setLayout(CDRPanel4Layout);
+        CDRPanel4Layout.setHorizontalGroup(
+            CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(memoriaPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CDRPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel57)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CDRPanel4Layout.setVerticalGroup(
+            CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel57)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(memoriaPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        CDRScroll5.setViewportView(CDRPanel4);
+
+        CDRTab.add(CDRScroll5, "card5");
+
+        memoriaPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes respecte a la cura personal per l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>A. Vestir-se<br>(The Dementia Scale of Blessed)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jCheckBox57.setText("0");
+        jCheckBox57.setToolTipText("");
+        jCheckBox57.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox57.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox58.setText("1");
+        jCheckBox58.setToolTipText("");
+        jCheckBox58.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox58.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox59.setText("2");
+        jCheckBox59.setToolTipText("");
+        jCheckBox59.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox59.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox60.setText("3");
+        jCheckBox60.setToolTipText("");
+        jCheckBox60.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox60.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jLabel46.setText("Sense ajuda");
+
+        jLabel53.setText("<html><center>De vegades es corda<br>malament els botons, etc");
+
+        jLabel59.setText("<html><center>En desordre,<br>sovint s'oblida peces");
+
+        jLabel60.setText("<html><center>Incapaç de vestir-se");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 449, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel12Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                            .addComponent(jLabel46)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jCheckBox57)
+                            .addGap(105, 105, 105)
+                            .addComponent(jCheckBox58)
+                            .addGap(97, 97, 97)
+                            .addComponent(jCheckBox59)
+                            .addGap(95, 95, 95)
+                            .addComponent(jCheckBox60))
+                        .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel12Layout.createSequentialGroup()
+                    .addGap(5, 5, 5)
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel46, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel60, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(11, 11, 11)
+                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jCheckBox59)
+                        .addComponent(jCheckBox57)
+                        .addComponent(jCheckBox58)
+                        .addComponent(jCheckBox60))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jLabel73.setText("<html><b>* Pot puntuar-se amb un 1, si la cura personal del subjecte s'ha vist limitat pel que fa a un nivell previ, fins i tot si no rep consell.");
+
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>B. Rentar-se, arreglar-se", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel61.setText("Sense ajuda");
+
+        jLabel62.setText("<html><center>Necessita consells");
+
+        jLabel63.setText("<html><center>De vegades<br>necessita ajuda");
+
+        jLabel64.setText("<html><center>Sempre o quasi sempre<br>necessita ajuda");
+
+        jCheckBox61.setText("3");
+        jCheckBox61.setToolTipText("");
+        jCheckBox61.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox61.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox62.setText("2");
+        jCheckBox62.setToolTipText("");
+        jCheckBox62.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox62.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox99.setText("1");
+        jCheckBox99.setToolTipText("");
+        jCheckBox99.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox99.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox100.setText("0");
+        jCheckBox100.setToolTipText("");
+        jCheckBox100.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox100.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jSeparator9, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
+                            .addComponent(jLabel61)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jCheckBox100)
+                        .addGap(84, 84, 84)
+                        .addComponent(jCheckBox99)
+                        .addGap(75, 75, 75)
+                        .addComponent(jCheckBox62)
+                        .addGap(92, 92, 92)
+                        .addComponent(jCheckBox61)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel61)
+                            .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                        .addGap(0, 26, Short.MAX_VALUE)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCheckBox62)
+                    .addComponent(jCheckBox100)
+                    .addComponent(jCheckBox99)
+                    .addComponent(jCheckBox61)))
+        );
+
+        jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "C. Hàbits en el menjar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel65.setText("<html><center>Net/a; utilitza<br>els coberts<br>correctament");
+
+        jCheckBox101.setText("0");
+        jCheckBox101.setToolTipText("");
+        jCheckBox101.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox101.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jLabel66.setText("<html><center>Embruta;<br>només amb la cullera");
+
+        jLabel67.setText("<html><center>Sòlids simples");
+
+        jLabel68.setText("<html><center>Ha de ser alimentat/da<br>per complet");
+
+        jCheckBox102.setText("2");
+        jCheckBox102.setToolTipText("");
+        jCheckBox102.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox102.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox103.setText("3");
+        jCheckBox103.setToolTipText("");
+        jCheckBox103.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox103.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox104.setText("1");
+        jCheckBox104.setToolTipText("");
+        jCheckBox104.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox104.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jCheckBox101)
+                        .addGap(79, 79, 79)
+                        .addComponent(jCheckBox104)
+                        .addGap(80, 80, 80)
+                        .addComponent(jCheckBox102)
+                        .addGap(84, 84, 84)
+                        .addComponent(jCheckBox103))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel67, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCheckBox102)
+                    .addComponent(jCheckBox101)
+                    .addComponent(jCheckBox104)
+                    .addComponent(jCheckBox103))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>D. Control d'esfínters <br>(The Dementia Scale of Blessed)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel69.setText("<html><center>Control complet<br>normal");
+
+        jCheckBox106.setText("0");
+        jCheckBox106.setToolTipText("");
+        jCheckBox106.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox106.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jLabel70.setText("<html><center>Mulla el llit<br>en ocasions");
+
+        jLabel71.setText("<html><center>Mulla el llit<br>amb freqüència");
+
+        jLabel72.setText("<html><center>Incontinent doble");
+
+        jCheckBox107.setText("2");
+        jCheckBox107.setToolTipText("");
+        jCheckBox107.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox107.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox108.setText("3");
+        jCheckBox108.setToolTipText("");
+        jCheckBox108.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox108.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jCheckBox109.setText("1");
+        jCheckBox109.setToolTipText("");
+        jCheckBox109.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBox109.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jSeparator11)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel15Layout.createSequentialGroup()
+                    .addGap(35, 35, 35)
+                    .addComponent(jCheckBox106)
+                    .addGap(64, 64, 64)
+                    .addComponent(jCheckBox109)
+                    .addGap(62, 62, 62)
+                    .addComponent(jCheckBox107)
+                    .addGap(77, 77, 77)
+                    .addComponent(jCheckBox108)
+                    .addContainerGap(83, Short.MAX_VALUE)))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel15Layout.createSequentialGroup()
+                    .addGap(53, 53, 53)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jCheckBox107)
+                        .addComponent(jCheckBox106)
+                        .addComponent(jCheckBox109)
+                        .addComponent(jCheckBox108))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout memoriaPanel5Layout = new javax.swing.GroupLayout(memoriaPanel5);
+        memoriaPanel5.setLayout(memoriaPanel5Layout);
+        memoriaPanel5Layout.setHorizontalGroup(
+            memoriaPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(memoriaPanel5Layout.createSequentialGroup()
+                        .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(memoriaPanel5Layout.createSequentialGroup()
+                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1133, Short.MAX_VALUE))
+        );
+        memoriaPanel5Layout.setVerticalGroup(
+            memoriaPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(memoriaPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(848, Short.MAX_VALUE))
+        );
+
+        jLabel58.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel58.setText("Fulla de Valoració Clínica de Demència");
+
+        javax.swing.GroupLayout CDRPanel5Layout = new javax.swing.GroupLayout(CDRPanel5);
+        CDRPanel5.setLayout(CDRPanel5Layout);
+        CDRPanel5Layout.setHorizontalGroup(
+            CDRPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CDRPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(memoriaPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CDRPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel58)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CDRPanel5Layout.setVerticalGroup(
+            CDRPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel58)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(memoriaPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        CDRScroll6.setViewportView(CDRPanel5);
+
+        CDRTab.add(CDRScroll6, "card6");
+
+        memoriaPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes de memòria per al subjecte:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel17.setText("1. Té vostè problemes de memòria o de raonament?");
+
+        diaMesBtnGroup.add(jCheckBox112);
+        jCheckBox112.setText("Sí");
+
+        diaMesBtnGroup.add(jCheckBox123);
+        jCheckBox123.setText("No");
+
+        orientacioLabel18.setText("<html>2. Fa una estona la seva (espòs/a, etc.) m'ha explicat algunes experiències recents que vostè ha tingut. Pot explicar-me alguna cosa d'elles?<br>(Demani detalls si cal, com el lloc de l'esdeveniment, l'hora, els participants, duració de l'esdeveniment, quan es va acabar o com el subjecte o altres participants van arribar allà.)");
+
+        orientacioLabel23.setText("<html>3. Li diré un nom i una adreça perquè els memoritzi durant uns minuts. Repetiu el nom i la direcció després de mi:<br>(Repetiu fins que la frase sigui repetida correctament, amb un màxim de tres intents.)");
+
+        orientacioLabel24.setText("4. Quan va néixer vostè?");
+
+        jCheckBox173.setText("1.0 - En gran part correcte");
+
+        jCheckBox174.setText("0.5");
+
+        jCheckBox175.setText("0.0 - En gran part incorrecte");
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jScrollPane5.setViewportView(jTextArea4);
+
+        jLabel75.setText("En una setmana:");
+
+        jLabel76.setText("En un mes:");
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setRows(5);
+        jScrollPane6.setViewportView(jTextArea5);
+
+        jCheckBox176.setText("1.0 - En gran part correcte");
+
+        jCheckBox177.setText("0.5");
+
+        jCheckBox178.setText("1.0 - En gran part incorrecte");
+
+        jLabel77.setText("Elements");
+
+        jLabel78.setText("1");
+
+        jLabel79.setText("2");
+
+        jLabel80.setText("3");
+
+        jLabel81.setText("4");
+
+        jLabel82.setText("5");
+
+        jCheckBox179.setText("Juan");
+
+        jCheckBox180.setText("García,");
+
+        jCheckBox181.setText("Carrer Aragó");
+
+        jCheckBox182.setText("42");
+
+        jCheckBox183.setText("Barcelona");
+
+        jCheckBox184.setText("Juan");
+
+        jCheckBox185.setText("García,");
+
+        jCheckBox186.setText("Carrer Aragó");
+
+        jCheckBox187.setText("42");
+
+        jCheckBox188.setText("Barcelona");
+
+        jCheckBox189.setText("Juan");
+
+        jCheckBox190.setText("García,");
+
+        jCheckBox191.setText("Carrer Aragó");
+
+        jCheckBox192.setText("42");
+
+        jCheckBox193.setText("Barcelona");
+
+        orientacioLabel25.setText("5. On va néixer vostè?");
+
+        jLabel83.setText("6. Quina va ser la darrera escola a la qual vostè va assistir?");
+
+        jLabel84.setText("Nom:");
+
+        jLabel85.setText("Lloc:");
+
+        jLabel86.setText("Curs:");
+
+        jLabel87.setText("7. Quina era la seva principal ocupació (o el del seu espòs/a si vostè no treballava)?");
+
+        jLabel88.setText("8. Quin va ser la seva última feina (o el del seu espòs/a si vostè no treballava)?");
+
+        jLabel89.setText("9. Quan es va jubilar vostè (o el seu marit/a) i per què?");
+
+        jLabel90.setText("(Seleccioneu els elements repetits correctament en cada intent.)");
+
+        jLabel91.setText("Elements");
+
+        jLabel92.setText("1");
+
+        jLabel93.setText("2");
+
+        jLabel94.setText("3");
+
+        jLabel95.setText("4");
+
+        jLabel96.setText("5");
+
+        jCheckBox194.setText("Juan");
+
+        jCheckBox195.setText("García,");
+
+        jCheckBox196.setText("Carrer Aragó");
+
+        jCheckBox197.setText("42");
+
+        jCheckBox198.setText("Barcelona");
+
+        jLabel97.setText("(Seleccioneu els elements repetits correctament)");
+
+        jLabel98.setText("10. Repetiu el nom i l'adreça que li he demanat abans que memoritzés:");
+
+        javax.swing.GroupLayout memoriaPanel6Layout = new javax.swing.GroupLayout(memoriaPanel6);
+        memoriaPanel6.setLayout(memoriaPanel6Layout);
+        memoriaPanel6Layout.setHorizontalGroup(
+            memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox173)
+                            .addComponent(jCheckBox174)
+                            .addComponent(jCheckBox175))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel75)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(orientacioLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel77)
+                                        .addGap(77, 77, 77)
+                                        .addComponent(jLabel78)
+                                        .addGap(63, 63, 63)
+                                        .addComponent(jLabel79)
+                                        .addGap(86, 86, 86)
+                                        .addComponent(jLabel80)
+                                        .addGap(75, 75, 75)
+                                        .addComponent(jLabel81)
+                                        .addGap(59, 59, 59)
+                                        .addComponent(jLabel82))
+                                    .addComponent(jLabel90)))))
+                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                .addComponent(jCheckBox184)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox185)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox186)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox187)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox188))
+                            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                .addComponent(jCheckBox179)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox180)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox181)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox182)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox183))
+                            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                .addComponent(jCheckBox189)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox190)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox191)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox192)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox193)))))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                        .addComponent(orientacioLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox112)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox123))
+                    .addComponent(orientacioLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel83)
+                    .addComponent(jLabel88)
+                    .addComponent(jLabel87)
+                    .addComponent(jLabel89)
+                    .addComponent(jLabel98)
+                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBox176)
+                                    .addComponent(jCheckBox177)
+                                    .addComponent(jCheckBox178))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel76)
+                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                    .addComponent(jLabel84)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel86)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel85)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel91)
+                                .addGap(77, 77, 77)
+                                .addComponent(jLabel92)
+                                .addGap(63, 63, 63)
+                                .addComponent(jLabel93)
+                                .addGap(86, 86, 86)
+                                .addComponent(jLabel94)
+                                .addGap(75, 75, 75)
+                                .addComponent(jLabel95)
+                                .addGap(59, 59, 59)
+                                .addComponent(jLabel96))
+                            .addComponent(jLabel97)
+                            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                                .addGap(94, 94, 94)
+                                .addComponent(jCheckBox194)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox195)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox196)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox197)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCheckBox198))))
+                    .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, memoriaPanel6Layout.createSequentialGroup()
+                            .addComponent(orientacioLabel25)
+                            .addGap(18, 18, 18)
+                            .addComponent(jTextField17))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, memoriaPanel6Layout.createSequentialGroup()
+                            .addComponent(orientacioLabel24)
+                            .addGap(18, 18, 18)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(1180, Short.MAX_VALUE))
+        );
+        memoriaPanel6Layout.setVerticalGroup(
+            memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(orientacioLabel17)
+                    .addComponent(jCheckBox112)
+                    .addComponent(jCheckBox123))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel75)
+                .addGap(8, 8, 8)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                        .addComponent(jCheckBox173)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox174)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox175))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel76)
+                .addGap(8, 8, 8)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(memoriaPanel6Layout.createSequentialGroup()
+                        .addComponent(jCheckBox176)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox177)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox178))
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(orientacioLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel77)
+                    .addComponent(jLabel78)
+                    .addComponent(jLabel79)
+                    .addComponent(jLabel80)
+                    .addComponent(jLabel81)
+                    .addComponent(jLabel82))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox179)
+                    .addComponent(jCheckBox180)
+                    .addComponent(jCheckBox181)
+                    .addComponent(jCheckBox182)
+                    .addComponent(jCheckBox183))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox184)
+                    .addComponent(jCheckBox185)
+                    .addComponent(jCheckBox186)
+                    .addComponent(jCheckBox187)
+                    .addComponent(jCheckBox188))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox189)
+                    .addComponent(jCheckBox190)
+                    .addComponent(jCheckBox191)
+                    .addComponent(jCheckBox192)
+                    .addComponent(jCheckBox193))
+                .addGap(8, 8, 8)
+                .addComponent(jLabel90)
+                .addGap(18, 18, 18)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(orientacioLabel24)
+                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(orientacioLabel25)
+                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel83)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel84)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel85)
+                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel86)
+                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel87)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel88)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel89)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel98)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel91)
+                    .addComponent(jLabel92)
+                    .addComponent(jLabel93)
+                    .addComponent(jLabel94)
+                    .addComponent(jLabel95)
+                    .addComponent(jLabel96))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addGroup(memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox194)
+                    .addComponent(jCheckBox195)
+                    .addComponent(jCheckBox196)
+                    .addComponent(jCheckBox197)
+                    .addComponent(jCheckBox198))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel97)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel74.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel74.setText("Fulla de Valoració Clínica de Demència");
+
+        javax.swing.GroupLayout CDRPanel6Layout = new javax.swing.GroupLayout(CDRPanel6);
+        CDRPanel6.setLayout(CDRPanel6Layout);
+        CDRPanel6Layout.setHorizontalGroup(
+            CDRPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CDRPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(memoriaPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CDRPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel74)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CDRPanel6Layout.setVerticalGroup(
+            CDRPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel74)
+                .addGap(17, 17, 17)
+                .addComponent(memoriaPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        CDRScroll7.setViewportView(CDRPanel6);
+
+        CDRTab.add(CDRScroll7, "card7");
+
+        memoriaPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes d'orientació per al subjecte:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel26.setText("Anoti al peu de la lletra el que respongui el subjecte per cada pregunta");
+
+        orientacioLabel27.setText("1. Quina és la data d'avui?");
+
+        orientacioLabel49.setText("2. A quin dia de la setmana estem?");
+
+        jCheckBox124.setText("Correcte");
+
+        jCheckBox128.setText("Incorrecte");
+
+        jCheckBox129.setText("Correcte");
+
+        jCheckBox130.setText("Incorrecte");
+
+        orientacioLabel50.setText("3. A quin mes estem?");
+
+        jCheckBox131.setText("Correcte");
+
+        jCheckBox132.setText("Incorrecte");
+
+        orientacioLabel51.setText("4. A quin any estem?");
+
+        jCheckBox133.setText("Correcte");
+
+        jCheckBox134.setText("Incorrecte");
+
+        orientacioLabel52.setText("5. Com es diu aquest lloc?");
+
+        jCheckBox135.setText("Correcte");
+
+        jCheckBox136.setText("Incorrecte");
+
+        orientacioLabel53.setText("6. A quina ciutat o poble estem?");
+
+        jCheckBox137.setText("Correcte");
+
+        jCheckBox138.setText("Incorrecte");
+
+        orientacioLabel54.setText("7. Quina hora és?");
+
+        jCheckBox139.setText("Correcte");
+
+        jCheckBox140.setText("Incorrecte");
+
+        orientacioLabel55.setText("8. Sap el subjecte qui és l'informador (segons l'opinió de l'entrevistador)?");
+
+        jCheckBox141.setText("Correcte");
+
+        jCheckBox142.setText("Incorrecte");
+
+        javax.swing.GroupLayout memoriaPanel7Layout = new javax.swing.GroupLayout(memoriaPanel7);
+        memoriaPanel7.setLayout(memoriaPanel7Layout);
+        memoriaPanel7Layout.setHorizontalGroup(
+            memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(orientacioLabel26)
+                    .addComponent(orientacioLabel27)
+                    .addComponent(orientacioLabel49)
+                    .addComponent(orientacioLabel50)
+                    .addComponent(orientacioLabel51)
+                    .addComponent(orientacioLabel52)
+                    .addComponent(orientacioLabel53)
+                    .addComponent(orientacioLabel54)
+                    .addComponent(orientacioLabel55)
+                    .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                                .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox129)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox130))
+                            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                                .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox124)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox128))
+                            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                                .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox131)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox132))
+                            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                                .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox133)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox134))
+                            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                                .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox135)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox136))
+                            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                                .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox137)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox138))
+                            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                                .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox139)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox140))
+                            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                                .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox141)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox142)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        memoriaPanel7Layout.setVerticalGroup(
+            memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(orientacioLabel26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox129)
+                    .addComponent(jCheckBox130))
+                .addGap(6, 6, 6)
+                .addComponent(orientacioLabel49)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox124)
+                    .addComponent(jCheckBox128))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox131)
+                    .addComponent(jCheckBox132))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel51)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox133)
+                    .addComponent(jCheckBox134))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel52)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox135)
+                    .addComponent(jCheckBox136))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel53)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox137)
+                    .addComponent(jCheckBox138))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel54)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox139)
+                    .addComponent(jCheckBox140))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(memoriaPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox141)
+                    .addComponent(jCheckBox142))
+                .addContainerGap(754, Short.MAX_VALUE))
+        );
+
+        jLabel123.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel123.setText("Fulla de Valoració Clínica de Demència");
+
+        javax.swing.GroupLayout CDRPanel7Layout = new javax.swing.GroupLayout(CDRPanel7);
+        CDRPanel7.setLayout(CDRPanel7Layout);
+        CDRPanel7Layout.setHorizontalGroup(
+            CDRPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CDRPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(memoriaPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CDRPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel123)
+                        .addGap(0, 1794, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CDRPanel7Layout.setVerticalGroup(
+            CDRPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel123)
+                .addGap(17, 17, 17)
+                .addComponent(memoriaPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        CDRScroll8.setViewportView(CDRPanel7);
+
+        CDRTab.add(CDRScroll8, "card8");
+
+        CDRPanel8.setLayout(new java.awt.GridBagLayout());
+
+        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VALORACIÓ CLÍNICA DE DEMÈNCA (CDR)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel16.setLayout(new java.awt.GridBagLayout());
+
+        cdrMemoriaBtnGroup.add(jToggleButton1);
+        jToggleButton1.setText("<html>Sense pèrdua de memòria<br>o lleus oblits inconstants");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton1, gridBagConstraints);
+
+        cdrOrientacioBtnGroup.add(jToggleButton2);
+        jToggleButton2.setText("Completament orientat");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton2, gridBagConstraints);
+
+        cdrOrientacioBtnGroup.add(jToggleButton3);
+        jToggleButton3.setText("<html>Completament orientat<br>però amb lleu dificultat<br>per les relacions temporals");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton3, gridBagConstraints);
+
+        cdrMemoriaBtnGroup.add(jToggleButton4);
+        jToggleButton4.setText("<html>Oblits lleus constants;<br>recol·lecció parcial <br>d'esdeveniments; <br>oblits \"benignes\"");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton4, gridBagConstraints);
+
+        cdrOrientacioBtnGroup.add(jToggleButton5);
+        jToggleButton5.setText("<html>Dificultat moderada amb<br>les relacions temporals;<br>orientat en el lloc de l'exàmen;<br>pot tenir una mica de<br>desorientació geogràfica en un<br>altre lloc");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton5, gridBagConstraints);
+
+        cdrMemoriaBtnGroup.add(jToggleButton6);
+        jToggleButton6.setText("<html>Pèrdua moderada de memòria;<br>més marcada per a<br>esdeveniments recents;<br>el defecte interfereix amb<br>les activitats diàries");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton6, gridBagConstraints);
+
+        cdrOrientacioBtnGroup.add(jToggleButton7);
+        jToggleButton7.setText("<html>Dificultat greu amb les<br>relacions temporals;<br>habitualment desorientat<br>en el temps; sovint en el lloc");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton7, gridBagConstraints);
+
+        cdrMemoriaBtnGroup.add(jToggleButton8);
+        jToggleButton8.setText("<Html> Pèrdua greu de memòria;<br> només reté matèries<br>amb molt aprenentatge;<br> matèries noves es perden<br> amb rapidesa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton8, gridBagConstraints);
+
+        cdrMemoriaBtnGroup.add(jToggleButton9);
+        jToggleButton9.setText("<html>Pèrdua greu de memòria;<br>només reté fragments");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel16.add(jToggleButton9, gridBagConstraints);
+
+        cdrOrientacioBtnGroup.add(jToggleButton10);
+        jToggleButton10.setText("<html>Orientat només<br>en persona");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel16.add(jToggleButton10, gridBagConstraints);
+
+        cdrRaonamentBtnGroup.add(jToggleButton11);
+        jToggleButton11.setText("<html>Resol els problemes<br>diàris i s'encarrega bé<br>dels negòcis i finances;<br> raonament bo amb relació<br>al comportament prèvi");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton11, gridBagConstraints);
+
+        cdrRaonamentBtnGroup.add(jToggleButton12);
+        jToggleButton12.setText("<html>Lleu dificultat per<br>resoldre problemes,<br>similituds i diferències");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton12, gridBagConstraints);
+
+        cdrRaonamentBtnGroup.add(jToggleButton13);
+        jToggleButton13.setText("<html>Incapaç de raonar o<br>resoldre problemes");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel16.add(jToggleButton13, gridBagConstraints);
+
+        cdrRaonamentBtnGroup.add(jToggleButton14);
+        jToggleButton14.setText("<html>Dificultat moderada per<br>afrontar problemes, similituds<br>i diferències; raonament social<br>habitual mantingut");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton14, gridBagConstraints);
+
+        cdrRaonamentBtnGroup.add(jToggleButton15);
+        jToggleButton15.setText("<html>Grans dificultats per<br>fer front a problemes,<br>similituts i diferències;<br>judici social habitual limitat");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton15, gridBagConstraints);
+
+        cdrForaCasaBtnGroup.add(jToggleButton16);
+        jToggleButton16.setText("<html>Funció independent al seu<br> nivell habitual en la feina,<br>compres, voluntariat<br>i agrupacions socials");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton16, gridBagConstraints);
+
+        cdrForaCasaBtnGroup.add(jToggleButton17);
+        jToggleButton17.setText("<html>Lleu dificultat en<br>aquestes activitats");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton17, gridBagConstraints);
+
+        cdrDomestiquesBtnGroup.add(jToggleButton18);
+        jToggleButton18.setText("<html>Vida a casa, aficions i<br>interessos intel·lectuals<br>ben conservats");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton18, gridBagConstraints);
+
+        cdrForaCasaBtnGroup.add(jToggleButton19);
+        jToggleButton19.setText("<html>Lleu dificultat en<br>aquestes activitats");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton19, gridBagConstraints);
+
+        cdrForaCasaBtnGroup.add(jToggleButton20);
+        jToggleButton20.setText("<html>Sembla estar prou bé<br>com per realitzar funcions<br>fora de casa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton20, gridBagConstraints);
+
+        cdrForaCasaBtnGroup.add(jToggleButton21);
+        jToggleButton21.setText("<html>Sembla massa malalt/a<br>com per realitzar<br>funcions fora de casa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel16.add(jToggleButton21, gridBagConstraints);
+
+        cdrDomestiquesBtnGroup.add(jToggleButton22);
+        jToggleButton22.setText("<html>Sense funció significativa<br>a casa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel16.add(jToggleButton22, gridBagConstraints);
+
+        cdrDomestiquesBtnGroup.add(jToggleButton23);
+        jToggleButton23.setText("<html>Només realitza tasques<br>simples; interessos molt<br>restringits i mal mantinguts");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton23, gridBagConstraints);
+
+        cdrDomestiquesBtnGroup.add(jToggleButton24);
+        jToggleButton24.setText("<html>Vida a casa, aficions i<br>interessos intel·lectuals<br>una mica limitats");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton24, gridBagConstraints);
+
+        cdrDomestiquesBtnGroup.add(jToggleButton25);
+        jToggleButton25.setText("<html>Vida a casa, aficions<br>i interessos intel·lectuals<br>una mica limitats");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton25, gridBagConstraints);
+
+        cdrCuidatBtnGroup.add(jToggleButton26);
+        jToggleButton26.setText("Completament capaç de cuidar-se per si mateix/a");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton26, gridBagConstraints);
+
+        cdrCuidatBtnGroup.add(jToggleButton27);
+        jToggleButton27.setText("Necessita recordatoris");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton27, gridBagConstraints);
+
+        cdrCuidatBtnGroup.add(jToggleButton28);
+        jToggleButton28.setText("<html>Requereix ajuda per<br>vestir-se, rentar-se i<br>encarregar-se dels seus<br>efectes personals");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jToggleButton28, gridBagConstraints);
+
+        cdrCuidatBtnGroup.add(jToggleButton29);
+        jToggleButton29.setText("<html>Requereix molta ajuda<br>per al seu cuidat personal;<br>incontinència freqüent");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel16.add(jToggleButton29, gridBagConstraints);
+
+        jLabel52.setText("<html><center>Cap<br>0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 2, 0);
+        jPanel16.add(jLabel52, gridBagConstraints);
+
+        jLabel99.setText("<html><center>Dubtós<br>0.5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 2, 0);
+        jPanel16.add(jLabel99, gridBagConstraints);
+
+        jLabel100.setText("<html><center>Lleu<br>1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 2, 0);
+        jPanel16.add(jLabel100, gridBagConstraints);
+
+        jLabel124.setText("Deteriorament");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.insets = new java.awt.Insets(3, 0, 2, 0);
+        jPanel16.add(jLabel124, gridBagConstraints);
+
+        jLabel125.setText("<html><center>Greu<br>3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 2, 0);
+        jPanel16.add(jLabel125, gridBagConstraints);
+
+        jLabel126.setText("<html><center>Moderat<br>2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 2, 0);
+        jPanel16.add(jLabel126, gridBagConstraints);
+
+        jLabel127.setText("Memòria");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 0);
+        jPanel16.add(jLabel127, gridBagConstraints);
+
+        jLabel128.setText("Orientació");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 0);
+        jPanel16.add(jLabel128, gridBagConstraints);
+
+        jLabel129.setText("<html><center>Raonament<br>i solució<br>de problemes");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 0);
+        jPanel16.add(jLabel129, gridBagConstraints);
+
+        jLabel130.setText("<html><center>Activitats fora<br>de casa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 0);
+        jPanel16.add(jLabel130, gridBagConstraints);
+
+        jLabel131.setText("<html><center>Activitats<br>domèstiques<br>i aficions");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 0);
+        jPanel16.add(jLabel131, gridBagConstraints);
+
+        jLabel132.setText("Cuidat personal");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 4);
+        jPanel16.add(jLabel132, gridBagConstraints);
+
+        jLabel101.setText("Incapaç de ser independent fora de casa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel16.add(jLabel101, gridBagConstraints);
+
+        jLabel102.setText("Puntuï només quan disminueix el nivell previ habitual a causa de pèrdua cognitiva, no a limitacions degudes a altres factors.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.insets = new java.awt.Insets(5, 0, 0, 5);
+        jPanel16.add(jLabel102, gridBagConstraints);
+
+        jSeparator15.setPreferredSize(new java.awt.Dimension(800, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel16.add(jSeparator15, gridBagConstraints);
+
+        jLabel103.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel103.setText("Valoració clínica de demència (CDR):");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 5, 5);
+        jPanel16.add(jLabel103, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
+        CDRPanel8.add(jPanel16, gridBagConstraints);
+
+        CDRScroll9.setViewportView(CDRPanel8);
+
+        CDRTab.add(CDRScroll9, "card9");
 
         tabbedPanel.addTab("CDR", CDRTab);
 
@@ -1633,11 +3955,11 @@ public class testsTextuals extends javax.swing.JFrame {
         CRCTab.setLayout(CRCTabLayout);
         CRCTabLayout.setHorizontalGroup(
             CRCTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1537, Short.MAX_VALUE)
+            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 2073, Short.MAX_VALUE)
         );
         CRCTabLayout.setVerticalGroup(
             CRCTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
+            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1267, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("CRC", CRCTab);
@@ -2140,6 +4462,12 @@ public class testsTextuals extends javax.swing.JFrame {
 
         jLabel26.setText("(màx. 30)");
 
+        jLabel41.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel41.setText("Puntuacions de referència:");
+
+        referenciaMMSELabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        referenciaMMSELabel.setText("0");
+
         javax.swing.GroupLayout MMSEPanelLayout = new javax.swing.GroupLayout(MMSEPanel);
         MMSEPanel.setLayout(MMSEPanelLayout);
         MMSEPanelLayout.setHorizontalGroup(
@@ -2163,10 +4491,14 @@ public class testsTextuals extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(totalMMSELabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel26)))
+                        .addComponent(jLabel26))
+                    .addGroup(MMSEPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel41)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(referenciaMMSELabel)))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(273, Short.MAX_VALUE))
+                .addContainerGap(826, Short.MAX_VALUE))
         );
         MMSEPanelLayout.setVerticalGroup(
             MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2174,26 +4506,27 @@ public class testsTextuals extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MMSEPanelLayout.createSequentialGroup()
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(MMSEPanelLayout.createSequentialGroup()
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(MMSEPanelLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(MMSEPanelLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel27)
                             .addComponent(totalMMSELabel)
                             .addComponent(jLabel26))
-                        .addGap(721, 721, 721))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel41)
+                            .addComponent(referenciaMMSELabel))
+                        .addGap(827, 827, 827))))
         );
 
         jScrollPane1.setViewportView(MMSEPanel);
@@ -2489,11 +4822,11 @@ public class testsTextuals extends javax.swing.JFrame {
         TAPTab.setLayout(TAPTabLayout);
         TAPTabLayout.setHorizontalGroup(
             TAPTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TAPScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1537, Short.MAX_VALUE)
+            .addComponent(TAPScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 2073, Short.MAX_VALUE)
         );
         TAPTabLayout.setVerticalGroup(
             TAPTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TAPScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
+            .addComponent(TAPScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1267, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("TAP", TAPTab);
@@ -2548,7 +4881,7 @@ public class testsTextuals extends javax.swing.JFrame {
                 .addComponent(paginaLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(paginaLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1161, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1697, Short.MAX_VALUE)
                 .addComponent(acceptaBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelaBtn)
@@ -2602,7 +4935,7 @@ public class testsTextuals extends javax.swing.JFrame {
         pagina++;
         paginaLabel.setText((pagina+1)+"");
         card.show(CDRTab, llistaPagines[pagina]);
-        if (pagina == 2){
+        if (pagina == 8){
             seguentBtn.setEnabled(false);
         } 
         else if (pagina == 1){
@@ -2701,9 +5034,21 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JPanel CDRPanel;
     private javax.swing.JPanel CDRPanel1;
     private javax.swing.JPanel CDRPanel2;
+    private javax.swing.JPanel CDRPanel3;
+    private javax.swing.JPanel CDRPanel4;
+    private javax.swing.JPanel CDRPanel5;
+    private javax.swing.JPanel CDRPanel6;
+    private javax.swing.JPanel CDRPanel7;
+    private javax.swing.JPanel CDRPanel8;
     private javax.swing.JScrollPane CDRScroll1;
     private javax.swing.JScrollPane CDRScroll2;
     private javax.swing.JScrollPane CDRScroll3;
+    private javax.swing.JScrollPane CDRScroll4;
+    private javax.swing.JScrollPane CDRScroll5;
+    private javax.swing.JScrollPane CDRScroll6;
+    private javax.swing.JScrollPane CDRScroll7;
+    private javax.swing.JScrollPane CDRScroll8;
+    private javax.swing.JScrollPane CDRScroll9;
     private javax.swing.JPanel CDRTab;
     private javax.swing.JPanel CRCTab;
     private javax.swing.JPanel MMSEPanel;
@@ -2735,6 +5080,12 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.ButtonGroup carrersBtnGroup;
     private javax.swing.ButtonGroup casaBtnGroup;
     private javax.swing.JLabel categoriaProLabel;
+    private javax.swing.ButtonGroup cdrCuidatBtnGroup;
+    private javax.swing.ButtonGroup cdrDomestiquesBtnGroup;
+    private javax.swing.ButtonGroup cdrForaCasaBtnGroup;
+    private javax.swing.ButtonGroup cdrMemoriaBtnGroup;
+    private javax.swing.ButtonGroup cdrOrientacioBtnGroup;
+    private javax.swing.ButtonGroup cdrRaonamentBtnGroup;
     private javax.swing.JLabel ciLabel;
     private javax.swing.ButtonGroup cursosBtnGroup;
     private javax.swing.JRadioButton cursosRadio1;
@@ -2776,15 +5127,100 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JRadioButton idiomesRadio4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
+    private javax.swing.JCheckBox jCheckBox100;
+    private javax.swing.JCheckBox jCheckBox101;
+    private javax.swing.JCheckBox jCheckBox102;
+    private javax.swing.JCheckBox jCheckBox103;
+    private javax.swing.JCheckBox jCheckBox104;
+    private javax.swing.JCheckBox jCheckBox105;
+    private javax.swing.JCheckBox jCheckBox106;
+    private javax.swing.JCheckBox jCheckBox107;
+    private javax.swing.JCheckBox jCheckBox108;
+    private javax.swing.JCheckBox jCheckBox109;
     private javax.swing.JCheckBox jCheckBox11;
+    private javax.swing.JCheckBox jCheckBox112;
+    private javax.swing.JCheckBox jCheckBox113;
+    private javax.swing.JCheckBox jCheckBox114;
+    private javax.swing.JCheckBox jCheckBox115;
+    private javax.swing.JCheckBox jCheckBox116;
+    private javax.swing.JCheckBox jCheckBox117;
+    private javax.swing.JCheckBox jCheckBox118;
+    private javax.swing.JCheckBox jCheckBox119;
     private javax.swing.JCheckBox jCheckBox12;
+    private javax.swing.JCheckBox jCheckBox120;
+    private javax.swing.JCheckBox jCheckBox121;
+    private javax.swing.JCheckBox jCheckBox122;
+    private javax.swing.JCheckBox jCheckBox123;
+    private javax.swing.JCheckBox jCheckBox124;
+    private javax.swing.JCheckBox jCheckBox125;
+    private javax.swing.JCheckBox jCheckBox126;
+    private javax.swing.JCheckBox jCheckBox127;
+    private javax.swing.JCheckBox jCheckBox128;
+    private javax.swing.JCheckBox jCheckBox129;
     private javax.swing.JCheckBox jCheckBox13;
+    private javax.swing.JCheckBox jCheckBox130;
+    private javax.swing.JCheckBox jCheckBox131;
+    private javax.swing.JCheckBox jCheckBox132;
+    private javax.swing.JCheckBox jCheckBox133;
+    private javax.swing.JCheckBox jCheckBox134;
+    private javax.swing.JCheckBox jCheckBox135;
+    private javax.swing.JCheckBox jCheckBox136;
+    private javax.swing.JCheckBox jCheckBox137;
+    private javax.swing.JCheckBox jCheckBox138;
+    private javax.swing.JCheckBox jCheckBox139;
     private javax.swing.JCheckBox jCheckBox14;
+    private javax.swing.JCheckBox jCheckBox140;
+    private javax.swing.JCheckBox jCheckBox141;
+    private javax.swing.JCheckBox jCheckBox142;
+    private javax.swing.JCheckBox jCheckBox149;
     private javax.swing.JCheckBox jCheckBox15;
+    private javax.swing.JCheckBox jCheckBox150;
+    private javax.swing.JCheckBox jCheckBox151;
+    private javax.swing.JCheckBox jCheckBox152;
+    private javax.swing.JCheckBox jCheckBox153;
+    private javax.swing.JCheckBox jCheckBox154;
+    private javax.swing.JCheckBox jCheckBox155;
+    private javax.swing.JCheckBox jCheckBox156;
+    private javax.swing.JCheckBox jCheckBox157;
+    private javax.swing.JCheckBox jCheckBox158;
+    private javax.swing.JCheckBox jCheckBox159;
     private javax.swing.JCheckBox jCheckBox16;
+    private javax.swing.JCheckBox jCheckBox160;
+    private javax.swing.JCheckBox jCheckBox161;
+    private javax.swing.JCheckBox jCheckBox162;
+    private javax.swing.JCheckBox jCheckBox163;
+    private javax.swing.JCheckBox jCheckBox164;
+    private javax.swing.JCheckBox jCheckBox165;
+    private javax.swing.JCheckBox jCheckBox166;
     private javax.swing.JCheckBox jCheckBox17;
+    private javax.swing.JCheckBox jCheckBox173;
+    private javax.swing.JCheckBox jCheckBox174;
+    private javax.swing.JCheckBox jCheckBox175;
+    private javax.swing.JCheckBox jCheckBox176;
+    private javax.swing.JCheckBox jCheckBox177;
+    private javax.swing.JCheckBox jCheckBox178;
+    private javax.swing.JCheckBox jCheckBox179;
     private javax.swing.JCheckBox jCheckBox18;
+    private javax.swing.JCheckBox jCheckBox180;
+    private javax.swing.JCheckBox jCheckBox181;
+    private javax.swing.JCheckBox jCheckBox182;
+    private javax.swing.JCheckBox jCheckBox183;
+    private javax.swing.JCheckBox jCheckBox184;
+    private javax.swing.JCheckBox jCheckBox185;
+    private javax.swing.JCheckBox jCheckBox186;
+    private javax.swing.JCheckBox jCheckBox187;
+    private javax.swing.JCheckBox jCheckBox188;
+    private javax.swing.JCheckBox jCheckBox189;
     private javax.swing.JCheckBox jCheckBox19;
+    private javax.swing.JCheckBox jCheckBox190;
+    private javax.swing.JCheckBox jCheckBox191;
+    private javax.swing.JCheckBox jCheckBox192;
+    private javax.swing.JCheckBox jCheckBox193;
+    private javax.swing.JCheckBox jCheckBox194;
+    private javax.swing.JCheckBox jCheckBox195;
+    private javax.swing.JCheckBox jCheckBox196;
+    private javax.swing.JCheckBox jCheckBox197;
+    private javax.swing.JCheckBox jCheckBox198;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox20;
     private javax.swing.JCheckBox jCheckBox21;
@@ -2805,10 +5241,16 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox35;
     private javax.swing.JCheckBox jCheckBox36;
     private javax.swing.JCheckBox jCheckBox37;
+    private javax.swing.JCheckBox jCheckBox38;
+    private javax.swing.JCheckBox jCheckBox39;
     private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox40;
+    private javax.swing.JCheckBox jCheckBox41;
+    private javax.swing.JCheckBox jCheckBox42;
     private javax.swing.JCheckBox jCheckBox43;
     private javax.swing.JCheckBox jCheckBox44;
     private javax.swing.JCheckBox jCheckBox45;
+    private javax.swing.JCheckBox jCheckBox46;
     private javax.swing.JCheckBox jCheckBox47;
     private javax.swing.JCheckBox jCheckBox48;
     private javax.swing.JCheckBox jCheckBox49;
@@ -2818,7 +5260,15 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox52;
     private javax.swing.JCheckBox jCheckBox53;
     private javax.swing.JCheckBox jCheckBox54;
+    private javax.swing.JCheckBox jCheckBox55;
+    private javax.swing.JCheckBox jCheckBox56;
+    private javax.swing.JCheckBox jCheckBox57;
+    private javax.swing.JCheckBox jCheckBox58;
+    private javax.swing.JCheckBox jCheckBox59;
     private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox60;
+    private javax.swing.JCheckBox jCheckBox61;
+    private javax.swing.JCheckBox jCheckBox62;
     private javax.swing.JCheckBox jCheckBox63;
     private javax.swing.JCheckBox jCheckBox64;
     private javax.swing.JCheckBox jCheckBox65;
@@ -2858,11 +5308,26 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox96;
     private javax.swing.JCheckBox jCheckBox97;
     private javax.swing.JCheckBox jCheckBox98;
+    private javax.swing.JCheckBox jCheckBox99;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel123;
+    private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -2893,42 +5358,172 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator14;
+    private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField33;
+    private javax.swing.JTextField jTextField34;
+    private javax.swing.JTextField jTextField35;
+    private javax.swing.JTextField jTextField36;
+    private javax.swing.JTextField jTextField37;
+    private javax.swing.JTextField jTextField38;
+    private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton10;
+    private javax.swing.JToggleButton jToggleButton11;
+    private javax.swing.JToggleButton jToggleButton12;
+    private javax.swing.JToggleButton jToggleButton13;
+    private javax.swing.JToggleButton jToggleButton14;
+    private javax.swing.JToggleButton jToggleButton15;
+    private javax.swing.JToggleButton jToggleButton16;
+    private javax.swing.JToggleButton jToggleButton17;
+    private javax.swing.JToggleButton jToggleButton18;
+    private javax.swing.JToggleButton jToggleButton19;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton20;
+    private javax.swing.JToggleButton jToggleButton21;
+    private javax.swing.JToggleButton jToggleButton22;
+    private javax.swing.JToggleButton jToggleButton23;
+    private javax.swing.JToggleButton jToggleButton24;
+    private javax.swing.JToggleButton jToggleButton25;
+    private javax.swing.JToggleButton jToggleButton26;
+    private javax.swing.JToggleButton jToggleButton27;
+    private javax.swing.JToggleButton jToggleButton28;
+    private javax.swing.JToggleButton jToggleButton29;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JToggleButton jToggleButton5;
+    private javax.swing.JToggleButton jToggleButton6;
+    private javax.swing.JToggleButton jToggleButton7;
+    private javax.swing.JToggleButton jToggleButton8;
+    private javax.swing.JToggleButton jToggleButton9;
     private javax.swing.ButtonGroup jocsBtnGroup;
     private javax.swing.JRadioButton jocsRadio1;
     private javax.swing.JRadioButton jocsRadio2;
@@ -2954,6 +5549,11 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JPanel memoriaPanel;
     private javax.swing.JPanel memoriaPanel1;
     private javax.swing.JPanel memoriaPanel2;
+    private javax.swing.JPanel memoriaPanel3;
+    private javax.swing.JPanel memoriaPanel4;
+    private javax.swing.JPanel memoriaPanel5;
+    private javax.swing.JPanel memoriaPanel6;
+    private javax.swing.JPanel memoriaPanel7;
     private javax.swing.ButtonGroup mesBtnGroup;
     private javax.swing.ButtonGroup musicalBtnGroup;
     private javax.swing.JRadioButton musicalRadio1;
@@ -2976,15 +5576,45 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JLabel orientacioLabel13;
     private javax.swing.JLabel orientacioLabel14;
     private javax.swing.JLabel orientacioLabel15;
+    private javax.swing.JLabel orientacioLabel16;
+    private javax.swing.JLabel orientacioLabel17;
+    private javax.swing.JLabel orientacioLabel18;
     private javax.swing.JLabel orientacioLabel2;
+    private javax.swing.JLabel orientacioLabel23;
+    private javax.swing.JLabel orientacioLabel24;
+    private javax.swing.JLabel orientacioLabel25;
+    private javax.swing.JLabel orientacioLabel26;
+    private javax.swing.JLabel orientacioLabel27;
+    private javax.swing.JLabel orientacioLabel28;
+    private javax.swing.JLabel orientacioLabel29;
     private javax.swing.JLabel orientacioLabel3;
+    private javax.swing.JLabel orientacioLabel30;
+    private javax.swing.JLabel orientacioLabel31;
+    private javax.swing.JLabel orientacioLabel32;
+    private javax.swing.JLabel orientacioLabel33;
+    private javax.swing.JLabel orientacioLabel34;
+    private javax.swing.JLabel orientacioLabel35;
+    private javax.swing.JLabel orientacioLabel36;
+    private javax.swing.JLabel orientacioLabel37;
+    private javax.swing.JLabel orientacioLabel38;
+    private javax.swing.JLabel orientacioLabel39;
     private javax.swing.JLabel orientacioLabel4;
+    private javax.swing.JLabel orientacioLabel40;
+    private javax.swing.JLabel orientacioLabel41;
+    private javax.swing.JLabel orientacioLabel42;
+    private javax.swing.JLabel orientacioLabel43;
+    private javax.swing.JLabel orientacioLabel44;
+    private javax.swing.JLabel orientacioLabel45;
+    private javax.swing.JLabel orientacioLabel49;
     private javax.swing.JLabel orientacioLabel5;
+    private javax.swing.JLabel orientacioLabel50;
+    private javax.swing.JLabel orientacioLabel51;
+    private javax.swing.JLabel orientacioLabel52;
+    private javax.swing.JLabel orientacioLabel53;
+    private javax.swing.JLabel orientacioLabel54;
+    private javax.swing.JLabel orientacioLabel55;
     private javax.swing.JLabel orientacioLabel8;
     private javax.swing.JLabel orientacioLabel9;
-    private javax.swing.JPanel orientacioTemporalPanel2;
-    private javax.swing.JPanel orientacioTemporalPanel3;
-    private javax.swing.JPanel orientacioTemporalPanel4;
     private javax.swing.JLabel paginaLabel;
     private javax.swing.JLabel paginaLabel2;
     private javax.swing.JLabel professioLabel;
@@ -2994,6 +5624,7 @@ public class testsTextuals extends javax.swing.JFrame {
     private javax.swing.JCheckBox recordCheck2;
     private javax.swing.JCheckBox recordCheck3;
     private javax.swing.JLabel recordLabel;
+    private javax.swing.JLabel referenciaMMSELabel;
     private javax.swing.JButton seguentBtn;
     private javax.swing.JComboBox<String> sexeCombo;
     private javax.swing.JComboBox<String> sexeCombo1;
@@ -3166,6 +5797,22 @@ public class testsTextuals extends javax.swing.JFrame {
         }
         llenguatgeLabel.setText(parcial+"");
         totalMMSELabel.setText(total+"");
+        
+        if (total>26){
+            referenciaMMSELabel.setText("Normal");
+        }
+        else if(total>23 && total<27){
+            referenciaMMSELabel.setText("Sospita patològica");
+        }
+        else if(total<24 && total>12){
+            referenciaMMSELabel.setText("Deteriorament");
+        }
+        else if (total<13 && total>8){
+            referenciaMMSELabel.setText("Demència");
+        }
+        else if (total<9){
+            referenciaMMSELabel.setText("");
+        }
     }
     private void initCheckMMSE() {
         llistaCheckMMSE = new ArrayList<>();

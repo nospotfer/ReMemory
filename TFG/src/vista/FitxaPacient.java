@@ -33,7 +33,7 @@ import javax.swing.event.DocumentListener;
  *
  * @author USER
  */
-public class newFitxaPacient extends javax.swing.JDialog {
+public class FitxaPacient extends javax.swing.JDialog {
 
     String idPacient;
     Map<JComboBox, JDateChooser> dateMap;
@@ -41,7 +41,7 @@ public class newFitxaPacient extends javax.swing.JDialog {
     /**
      * Creates new form newFitxaPacient
      */
-    public newFitxaPacient(java.awt.Frame parent, boolean modal, String idPacient) {
+    public FitxaPacient(java.awt.Frame parent, boolean modal, String idPacient) {
         super(parent, modal);
         initComponents();
         //this.setLocationRelativeTo(null);
@@ -4008,20 +4008,21 @@ public class newFitxaPacient extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(newFitxaPacient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FitxaPacient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(newFitxaPacient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FitxaPacient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(newFitxaPacient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FitxaPacient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(newFitxaPacient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FitxaPacient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                newFitxaPacient dialog = new newFitxaPacient(new javax.swing.JFrame(), true, "");
+                FitxaPacient dialog = new FitxaPacient(new javax.swing.JFrame(), true, "");
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import vista.newUser;
+import vista.NewUser;
 
 /**
  *
@@ -32,15 +32,15 @@ public class Utils {
 	    }
 	    return stringBuilder.toString();
 	} catch (FileNotFoundException ex) {
-	    Logger.getLogger(newUser.class.getName()).log(Level.SEVERE, null, ex);
+	    Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
 	} catch (IOException ex) {
-	    Logger.getLogger(newUser.class.getName()).log(Level.SEVERE, null, ex);
+	    Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
 	} finally {
 	    try {
 		if(reader != null)
 		    reader.close();
 	    } catch (IOException ex) {
-		Logger.getLogger(newUser.class.getName()).log(Level.SEVERE, null, ex);
+		Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
 	    }
 	}
 	return null;

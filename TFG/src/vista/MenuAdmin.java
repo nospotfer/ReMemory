@@ -5,6 +5,22 @@
  */
 package vista;
 
+import controlador.Evaluador;
+import controlador.Utils;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  *
  * @author USER
@@ -12,15 +28,37 @@ package vista;
 public class MenuAdmin extends javax.swing.JFrame {
 
     private String pacient;
+    private ArrayList<Evaluador> llistaEvaluadors = new ArrayList<>();
+    private GridBagConstraints constraint;
+    WindowListener winListe;
+    private ArrayList<JButton> llistaButtons = new ArrayList<>();
     
     /**
      * Creates new form pacientMenu
      */
-    public MenuAdmin(String pacient) {
+    public MenuAdmin(String pacient){
         initComponents();
         this.pacient = pacient;
-        pacientLabel.setText("Benvingut "+pacient.toUpperCase()+"!");
+        pacientLabel.setText(pacient.toUpperCase());
         this.setLocationRelativeTo(null);
+        
+        constraint = new GridBagConstraints();
+        constraint.anchor = GridBagConstraints.NORTHWEST;
+        constraint.fill = GridBagConstraints.NONE;
+        //constraint.gridx = 0;
+        //constraint.gridy = GridBagConstraints.RELATIVE;
+        constraint.weightx = 1.0f;
+        constraint.weighty = 1.0f;
+
+
+
+        try {
+            initUsers();
+        } catch (JSONException ex) {
+            Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        initListener();
+        initButtons();
     }
 
     /**
@@ -35,8 +73,11 @@ public class MenuAdmin extends javax.swing.JFrame {
         backBtn = new javax.swing.JButton();
         pacientLabel = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menú administració");
 
         backBtn.setText("Tornar al menú principal");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -45,6 +86,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        pacientLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         pacientLabel.setText("jLabel1");
 
         jButton1.setText("Nou evaluador");
@@ -54,6 +96,9 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setLayout(new java.awt.GridBagLayout());
+        jScrollPane1.setViewportView(jPanel1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -61,10 +106,16 @@ public class MenuAdmin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backBtn)
-                    .addComponent(pacientLabel)
-                    .addComponent(jButton1))
-                .addContainerGap(52, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pacientLabel)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(backBtn)))
+                        .addGap(0, 163, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,9 +123,12 @@ public class MenuAdmin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(pacientLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(backBtn))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn)
+                    .addComponent(jButton1))
+                .addGap(5, 5, 5))
         );
 
         pack();
@@ -89,6 +143,7 @@ public class MenuAdmin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         NewUser nU = new NewUser(this,true);
+        nU.addWindowListener(winListe);
         nU.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -137,6 +192,120 @@ public class MenuAdmin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
     private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel pacientLabel;
     // End of variables declaration//GEN-END:variables
+
+    private void initUsers() throws JSONException {
+        llistaEvaluadors.clear();
+        JSONObject obj;
+        obj = new JSONObject(Utils.getStringFile("res/users.json"));
+        org.json.JSONArray users = obj.getJSONArray("Users");
+        for (int i=0; i<users.length();i++){
+            if (users.getJSONObject(i).getString("role").equals("evaluador")){
+                String nom = users.getJSONObject(i).getString("name");
+                String id = users.getJSONObject(i).getString("id");
+                String password = users.getJSONObject(i).getString("password");
+                
+                Evaluador eva = new Evaluador(nom,id,"evaluador",password);
+                llistaEvaluadors.add(eva);
+            }
+        }
+    }
+
+    private void editaUsuari(Evaluador eva){
+        NewUser nU = new NewUser(this,true,llistaEvaluadors,eva);
+        nU.addWindowListener(winListe);
+        nU.setVisible(true);
+    }
+    
+    private void initButtons() {
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.repaint();
+        llistaButtons.clear();
+        ActionListener action = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton jb = (JButton) e.getSource();
+                Evaluador eva = null;
+                String comp = "";
+                if (!"EVALUADOR SENSE NOM".equals(jb.getText())){
+                    comp = jb.getText();
+                }
+                for (Evaluador ev : llistaEvaluadors){
+                    if (ev.getNom().equals(comp)){
+                        eva = ev;
+                    }
+                }
+                editaUsuari(eva);
+            }
+         };
+        int i = 0;
+        for (Evaluador e : llistaEvaluadors){
+            JButton button = new JButton();
+            String nom = "EVALUADOR SENSE NOM";
+            if (!"".equals(e.getNom())){
+                nom = e.getNom();
+            }
+            button.setText(nom);
+            button.addActionListener(action);
+            button.setPreferredSize(new Dimension(200, 100));
+            if (i%2 == 0){
+                constraint.gridy++;
+            }
+            llistaButtons.add(button);
+            jPanel1.add(button, constraint);
+            i++;
+        }
+        jPanel1.invalidate();
+        jPanel1.validate();
+        jPanel1.repaint();
+    }
+
+    private void initListener() {
+        winListe = new WindowListener(){
+            @Override
+            public void windowOpened(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                try {
+                    initUsers();
+                } catch (JSONException ex) {
+                    Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                initButtons();
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+                
+            }
+            
+        };
+    }
 }

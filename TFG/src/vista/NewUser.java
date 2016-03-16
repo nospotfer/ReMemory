@@ -5,12 +5,15 @@
  */
 package vista;
 
+import controlador.Evaluador;
+import controlador.Persona;
+import controlador.Utils;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.JSONArray;
@@ -23,6 +26,9 @@ import org.json.JSONObject;
  */
 public class NewUser extends javax.swing.JDialog {
 
+    ArrayList<Evaluador> llistaEvaluadors;
+    Evaluador eva;
+    
     /**
      * Creates new form newUser
      */
@@ -30,6 +36,22 @@ public class NewUser extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.modificaBtn.setVisible(false);
+        this.eliminaBtn.setVisible(false);
+    }
+    
+    public NewUser(java.awt.Frame parent, boolean modal, ArrayList<Evaluador> llistaEvaluadors, Evaluador eva) {
+        super(parent, modal);
+        initComponents();
+        this.setLocationRelativeTo(null);
+        this.eva = eva;
+        this.llistaEvaluadors = llistaEvaluadors;
+        this.newBtn.setVisible(false);
+        
+        this.idTextBox.setText(eva.getId());
+        this.nameTextBox.setText(eva.getNom());
+        this.passTextBox.setText(eva.getPassword());
+        this.pass2TextBox.setText(eva.getPassword());
     }
 
     /**
@@ -52,6 +74,8 @@ public class NewUser extends javax.swing.JDialog {
         cancelBtn = new javax.swing.JButton();
         passTextBox = new javax.swing.JPasswordField();
         pass2TextBox = new javax.swing.JPasswordField();
+        eliminaBtn = new javax.swing.JButton();
+        modificaBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -66,7 +90,7 @@ public class NewUser extends javax.swing.JDialog {
 
         jLabel4.setText("Repeteix contrasenya:");
 
-        newBtn.setText("Nou");
+        newBtn.setText("Crea");
         newBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newBtnActionPerformed(evt);
@@ -80,6 +104,20 @@ public class NewUser extends javax.swing.JDialog {
             }
         });
 
+        eliminaBtn.setText("Elimina");
+        eliminaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminaBtnActionPerformed(evt);
+            }
+        });
+
+        modificaBtn.setText("Modifica");
+        modificaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificaBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -90,7 +128,7 @@ public class NewUser extends javax.swing.JDialog {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(105, 105, 105)
-                                .addComponent(idLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                                .addComponent(idLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(95, 95, 95)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -102,19 +140,24 @@ public class NewUser extends javax.swing.JDialog {
                             .addComponent(nameTextBox)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passTextBox)
-                            .addComponent(pass2TextBox)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(newBtn)
-                        .addGap(63, 63, 63)
-                        .addComponent(cancelBtn)
-                        .addGap(71, 71, 71)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(passTextBox)
+                                    .addComponent(pass2TextBox)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(modificaBtn)
+                                .addGap(8, 8, 8)
+                                .addComponent(eliminaBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(newBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cancelBtn)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -136,11 +179,15 @@ public class NewUser extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(pass2TextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGap(22, 59, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newBtn)
-                    .addComponent(cancelBtn))
-                .addGap(22, 22, 22))
+                    .addComponent(eliminaBtn)
+                    .addComponent(cancelBtn)
+                    .addComponent(modificaBtn))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -218,6 +265,40 @@ public class NewUser extends javax.swing.JDialog {
   
     }//GEN-LAST:event_newBtnActionPerformed
 
+    private void modificaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificaBtnActionPerformed
+        boolean idTrobat = false, nomTrobat = false;
+        for (Evaluador e : llistaEvaluadors){
+            if (e.getNom().equals(nameTextBox.getText()) && !e.getNom().equals(eva.getNom())){
+                nomTrobat = true;
+            }
+            if (e.getId().equals(idTextBox.getText()) && !e.getId().equals(eva.getId()) ){
+                idTrobat = true;
+            }
+        }
+        boolean buits, pass;
+        buits = "".equals(idTextBox.getText()) || "".equals(nameTextBox.getText()) || "".equals(passTextBox.getText()) || "".equals(pass2TextBox.getText());
+        pass = !passTextBox.getText().equals(pass2TextBox.getText());
+        if (nomTrobat || idTrobat || buits || pass){
+            if (buits) System.out.println("Has d'omplir tots els buits");
+            else if(nomTrobat) System.out.println("Nom ja utilitzat");
+            else if(idTrobat) System.out.println("ID ja utilitzat");
+            else if(pass)System.out.println("Les contrasenyes no coincideixen");
+        } 
+        else{
+            eva.setId(idTextBox.getText());
+            eva.setNom(nameTextBox.getText());
+            eva.setPassword(passTextBox.getText());
+            guardarJSON();
+            this.dispose();
+        }
+    }//GEN-LAST:event_modificaBtnActionPerformed
+
+    private void eliminaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminaBtnActionPerformed
+        llistaEvaluadors.remove(eva);
+        guardarJSON();
+        this.dispose();
+    }//GEN-LAST:event_eliminaBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -290,15 +371,61 @@ public class NewUser extends javax.swing.JDialog {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelBtn;
+    private javax.swing.JButton eliminaBtn;
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton modificaBtn;
     private javax.swing.JTextField nameTextBox;
     private javax.swing.JButton newBtn;
     private javax.swing.JPasswordField pass2TextBox;
     private javax.swing.JPasswordField passTextBox;
     // End of variables declaration//GEN-END:variables
+
+    private void guardarJSON() {
+        JSONArray usr = new JSONArray();
+        JSONObject obj = new JSONObject();
+        
+        getUsers(usr);
+        
+        for (Evaluador e : llistaEvaluadors){
+            try {
+                    usr.put(e.toJSON());
+            } catch (JSONException ex) {
+                Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        try {
+            obj.put("Users", usr);
+        } catch (JSONException ex) {
+            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        PrintWriter out = null;
+        try {
+            out = new PrintWriter("res/users.json");
+            out.write(obj.toString());
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            out.close();
+        }
+    }
+
+    private void getUsers(JSONArray u) {
+        JSONObject obj;
+        try {
+            obj = new JSONObject(Utils.getStringFile("res/users.json"));
+            JSONArray users = obj.getJSONArray("Users");
+            for (int i=0; i<users.length();i++){
+                if (!users.getJSONObject(i).getString("role").equals("evaluador")){
+                    u.put(users.getJSONObject(i));
+                }
+            }
+        } catch (JSONException ex) {
+            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

@@ -3,10 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/testsTextuals.java</file>
-            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/menuEvaluador.java</file>
-            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/newFitxaPacient.java</file>
-            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/login.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/NewUser.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/MenuTests.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/res/users.json</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/NewPacient.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/MenuAdmin.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/FitxaPacient.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/MenuEvaluador.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/MenuPacient.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/ValoracioCognitivaPrevia.java</file>
+            <file>file:/C:/Users/USER/Documents/GitHub/ReMemory/TFG/src/vista/Login.java</file>
         </group>
     </open-files>
 </project-private>

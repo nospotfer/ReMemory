@@ -6,6 +6,7 @@
 package vista;
 
 import com.toedter.calendar.JDateChooser;
+import controlador.Utils;
 import java.awt.GraphicsEnvironment;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -4489,7 +4490,7 @@ public class FitxaPacient extends javax.swing.JDialog {
 	InputStream input = null;
 
 	try {
-            File file = new File(idPacient+".dat");    
+            File file = new File(idPacient+"Fitxa.dat");    
             if(!file.exists()) {
                     file.createNewFile();
                     Iterator it = dateMap.entrySet().iterator();
@@ -4505,257 +4506,257 @@ public class FitxaPacient extends javax.swing.JDialog {
                 prop.load(input);
 
                 // Carrega el codi del subjecte
-                getProperty(prop,"codiSubjecte",subjecteText);
+                Utils.getProperty(prop,"codiSubjecte",subjecteText);
                 
                 // Carrega les dades basiques
-                getProperty(prop,"sexe",sexeCombo);
-                getProperty(prop,"idioma",idiomaCombo);
-                getProperty(prop,"dataNaixement",dateChooser);
-                getProperty(prop,"nivellEscolaritat",nivellEscolaritatCombo);
-                getProperty(prop,"anysEscolaritat",anysEscolaritatText);
-                getProperty(prop,"estatCivil",estatCivilCombo);
-                getProperty(prop,"professio",professioText);
-                getProperty(prop,"categoriaPro",categoriaProCombo);
-                getProperty(prop,"situacioLaboral",situacioLaboralCombo);
-                getProperty(prop,"nivellSocioeconomic",nivellSocioecomomicCombo);
-                getProperty(prop,"professio",professioText);
+                Utils.getProperty(prop,"sexe",sexeCombo);
+                Utils.getProperty(prop,"idioma",idiomaCombo);
+                Utils.getProperty(prop,"dataNaixement",dateChooser);
+                Utils.getProperty(prop,"nivellEscolaritat",nivellEscolaritatCombo);
+                Utils.getProperty(prop,"anysEscolaritat",anysEscolaritatText);
+                Utils.getProperty(prop,"estatCivil",estatCivilCombo);
+                Utils.getProperty(prop,"professio",professioText);
+                Utils.getProperty(prop,"categoriaPro",categoriaProCombo);
+                Utils.getProperty(prop,"situacioLaboral",situacioLaboralCombo);
+                Utils.getProperty(prop,"nivellSocioeconomic",nivellSocioecomomicCombo);
+                Utils.getProperty(prop,"professio",professioText);
 
-                getProperty(prop,"fumador",fumadorCombo);
-                getProperty(prop,"numCigarrets",numCigarretsText);
-                getProperty(prop,"anysFumar",anysFumarText);
-                getProperty(prop,"edatFumar",edatFumarText);
-                getProperty(prop,"consumAlcohol",consumAlcoholCombo);
-                getProperty(prop,"numBegudes",numBegudesText);
-                getProperty(prop,"ubeDia",ubeDiaCombo);
-                getProperty(prop,"anysAlcohol",anysAlcoholText);
-                getProperty(prop,"edatAlcohol",edatAlcoholText);
-                getProperty(prop,"malaltiesCroniques",malaltiesCroniquesText);
+                Utils.getProperty(prop,"fumador",fumadorCombo);
+                Utils.getProperty(prop,"numCigarrets",numCigarretsText);
+                Utils.getProperty(prop,"anysFumar",anysFumarText);
+                Utils.getProperty(prop,"edatFumar",edatFumarText);
+                Utils.getProperty(prop,"consumAlcohol",consumAlcoholCombo);
+                Utils.getProperty(prop,"numBegudes",numBegudesText);
+                Utils.getProperty(prop,"ubeDia",ubeDiaCombo);
+                Utils.getProperty(prop,"anysAlcohol",anysAlcoholText);
+                Utils.getProperty(prop,"edatAlcohol",edatAlcoholText);
+                Utils.getProperty(prop,"malaltiesCroniques",malaltiesCroniquesText);
 
-                getProperty(prop,"tempsTractament",tempsTractamentCombo);
+                Utils.getProperty(prop,"tempsTractament",tempsTractamentCombo);
 
                 // Carrega les dades mediques
-                getProperty(prop,"alzheimer",alzheimerCombo);
-                getProperty(prop,"parkinson",parkinsonCombo);
-                getProperty(prop,"sindromeDown",sindromeDownCombo);
-                getProperty(prop,"altresDemencies",altresDemenciesText);
-                getProperty(prop,"antecedentsPare",antecedentsPareText);
-                getProperty(prop,"antecedentsMare",antecedentsMareText);
-                getProperty(prop,"altresFamiliars",altresFamiliarsText);
+                Utils.getProperty(prop,"alzheimer",alzheimerCombo);
+                Utils.getProperty(prop,"parkinson",parkinsonCombo);
+                Utils.getProperty(prop,"sindromeDown",sindromeDownCombo);
+                Utils.getProperty(prop,"altresDemencies",altresDemenciesText);
+                Utils.getProperty(prop,"antecedentsPare",antecedentsPareText);
+                Utils.getProperty(prop,"antecedentsMare",antecedentsMareText);
+                Utils.getProperty(prop,"altresFamiliars",altresFamiliarsText);
 
-                getProperty(prop,"cafe",cafeText);
-                getProperty(prop,"tabac",tabacText);
-                getProperty(prop,"alcohol",alcoholText);
-                getProperty(prop,"cannabis",cannabisCombo);
-                getProperty(prop,"toxicsLaborals",toxicsLaboralsText);
-                getProperty(prop,"antecedentsPersonals",antecedentsPersonalsText);
+                Utils.getProperty(prop,"cafe",cafeText);
+                Utils.getProperty(prop,"tabac",tabacText);
+                Utils.getProperty(prop,"alcohol",alcoholText);
+                Utils.getProperty(prop,"cannabis",cannabisCombo);
+                Utils.getProperty(prop,"toxicsLaborals",toxicsLaboralsText);
+                Utils.getProperty(prop,"antecedentsPersonals",antecedentsPersonalsText);
 
-                getProperty(prop,"hipertensio",hipertensioCombo);
-                getProperty(prop,"insuficienciaCardiaca",insuficienciaCardiacaCombo);
-                getProperty(prop,"infart",infartCombo);
-                getProperty(prop,"cardiopatia",cardiopatiaCombo);
-                getProperty(prop,"arritmia",arritmiaCombo);
-                getProperty(prop,"malaltiaVascularPeriferica",malaltiaVascularCombo);
+                Utils.getProperty(prop,"hipertensio",hipertensioCombo);
+                Utils.getProperty(prop,"insuficienciaCardiaca",insuficienciaCardiacaCombo);
+                Utils.getProperty(prop,"infart",infartCombo);
+                Utils.getProperty(prop,"cardiopatia",cardiopatiaCombo);
+                Utils.getProperty(prop,"arritmia",arritmiaCombo);
+                Utils.getProperty(prop,"malaltiaVascularPeriferica",malaltiaVascularCombo);
 
-                getProperty(prop,"diabetis",diabetisCombo);
-                getProperty(prop,"obesitat",obesitatCombo);
-                getProperty(prop,"dislipemia",dislipemiaCombo);
-                getProperty(prop,"patologiaTiroides",patologiaTiroidesCombo);
+                Utils.getProperty(prop,"diabetis",diabetisCombo);
+                Utils.getProperty(prop,"obesitat",obesitatCombo);
+                Utils.getProperty(prop,"dislipemia",dislipemiaCombo);
+                Utils.getProperty(prop,"patologiaTiroides",patologiaTiroidesCombo);
 
-                getProperty(prop,"ulcus",ulcusCombo);
-                getProperty(prop,"gastritis",gastritisCombo);
-                getProperty(prop,"colelitiasis",colelitiasisCombo);
-                getProperty(prop,"hepatopatia",hepatopatiaCombo);
+                Utils.getProperty(prop,"ulcus",ulcusCombo);
+                Utils.getProperty(prop,"gastritis",gastritisCombo);
+                Utils.getProperty(prop,"colelitiasis",colelitiasisCombo);
+                Utils.getProperty(prop,"hepatopatia",hepatopatiaCombo);
 
-                getProperty(prop,"depresio",depresioCombo);
-                getProperty(prop,"ansietat",ansietatCombo);
-                getProperty(prop,"psicosis",psicosisCombo);
-                getProperty(prop,"abusAlcohol",abusAlcoholCombo);
-                getProperty(prop,"abusDrogues",abusDroguesCombo);
+                Utils.getProperty(prop,"depresio",depresioCombo);
+                Utils.getProperty(prop,"ansietat",ansietatCombo);
+                Utils.getProperty(prop,"psicosis",psicosisCombo);
+                Utils.getProperty(prop,"abusAlcohol",abusAlcoholCombo);
+                Utils.getProperty(prop,"abusDrogues",abusDroguesCombo);
 
-                getProperty(prop,"avcEstablert",avcEstablertCombo);
-                getProperty(prop,"avcTransitori",avcTransitoriCombo);
-                getProperty(prop,"epilepsia",epilepsiaCombo);
-                getProperty(prop,"traumaCraneal",traumaCranealCombo);
-                getProperty(prop,"malaltiaParkinson",malaltiaParkinsonCombo);
-                getProperty(prop,"esclerosis",esclerosisCombo);
-                getProperty(prop,"cefalea",cefaleaCombo);
+                Utils.getProperty(prop,"avcEstablert",avcEstablertCombo);
+                Utils.getProperty(prop,"avcTransitori",avcTransitoriCombo);
+                Utils.getProperty(prop,"epilepsia",epilepsiaCombo);
+                Utils.getProperty(prop,"traumaCraneal",traumaCranealCombo);
+                Utils.getProperty(prop,"malaltiaParkinson",malaltiaParkinsonCombo);
+                Utils.getProperty(prop,"esclerosis",esclerosisCombo);
+                Utils.getProperty(prop,"cefalea",cefaleaCombo);
 
-                getProperty(prop,"asma",asmaCombo);
-                getProperty(prop,"epoc",epocCombo);
+                Utils.getProperty(prop,"asma",asmaCombo);
+                Utils.getProperty(prop,"epoc",epocCombo);
 
-                getProperty(prop,"anemia",anemiaCombo);
-                getProperty(prop,"leucosis",leucosisCombo);
+                Utils.getProperty(prop,"anemia",anemiaCombo);
+                Utils.getProperty(prop,"leucosis",leucosisCombo);
 
-                getProperty(prop,"alergia",alergiaCombo);
+                Utils.getProperty(prop,"alergia",alergiaCombo);
 
-                getProperty(prop,"glaucoma",glaucomaCombo);
-                getProperty(prop,"cataractes",cataractesCombo);
+                Utils.getProperty(prop,"glaucoma",glaucomaCombo);
+                Utils.getProperty(prop,"cataractes",cataractesCombo);
 
-                getProperty(prop,"insuficienciaRenal",insuficienciaRenalCombo);
-                getProperty(prop,"incontinencia",incontinenciaCombo);
+                Utils.getProperty(prop,"insuficienciaRenal",insuficienciaRenalCombo);
+                Utils.getProperty(prop,"incontinencia",incontinenciaCombo);
 
-                getProperty(prop,"artrosi",artrosiCombo);
-                getProperty(prop,"artritis",artritisCombo);
-                getProperty(prop,"fibromialgia",fibromialgiaCombo);
+                Utils.getProperty(prop,"artrosi",artrosiCombo);
+                Utils.getProperty(prop,"artritis",artritisCombo);
+                Utils.getProperty(prop,"fibromialgia",fibromialgiaCombo);
 
-                getProperty(prop,"benigne",benigneCombo);
-                getProperty(prop,"maligne",maligneCombo);
+                Utils.getProperty(prop,"benigne",benigneCombo);
+                Utils.getProperty(prop,"maligne",maligneCombo);
 
-                getProperty(prop,"ansiolitics",ansioliticsText);
-                getProperty(prop,"hipnotics",hipnoticsText);
-                getProperty(prop,"antidepresius",antidepresiusText);
-                getProperty(prop,"antimaniacs",antimaniacsText);
-                getProperty(prop,"antipsicotics",antipsicoticsText);
-                getProperty(prop,"antimigranyosos",antimigranyososText);
-                getProperty(prop,"opioides",opioidesText);
-                getProperty(prop,"antiepileptics",antiepilepticsText);
-                getProperty(prop,"antiparkinsonians",antiparkinsoniansText);
-                getProperty(prop,"musculEstriat",musculEstriatText);
-                getProperty(prop,"vasodilatadors",vasodilatadorsText);
-                getProperty(prop,"ACEsterasa",ACEsterasaText);
-                getProperty(prop,"memantina",memantinaText);
-                getProperty(prop,"psicoestimulants",psicoestimulantsText);
-                getProperty(prop,"substanciesAbus",substanciesAbusText);
-                getProperty(prop,"deshabituacio",deshabituacioText);
+                Utils.getProperty(prop,"ansiolitics",ansioliticsText);
+                Utils.getProperty(prop,"hipnotics",hipnoticsText);
+                Utils.getProperty(prop,"antidepresius",antidepresiusText);
+                Utils.getProperty(prop,"antimaniacs",antimaniacsText);
+                Utils.getProperty(prop,"antipsicotics",antipsicoticsText);
+                Utils.getProperty(prop,"antimigranyosos",antimigranyososText);
+                Utils.getProperty(prop,"opioides",opioidesText);
+                Utils.getProperty(prop,"antiepileptics",antiepilepticsText);
+                Utils.getProperty(prop,"antiparkinsonians",antiparkinsoniansText);
+                Utils.getProperty(prop,"musculEstriat",musculEstriatText);
+                Utils.getProperty(prop,"vasodilatadors",vasodilatadorsText);
+                Utils.getProperty(prop,"ACEsterasa",ACEsterasaText);
+                Utils.getProperty(prop,"memantina",memantinaText);
+                Utils.getProperty(prop,"psicoestimulants",psicoestimulantsText);
+                Utils.getProperty(prop,"substanciesAbus",substanciesAbusText);
+                Utils.getProperty(prop,"deshabituacio",deshabituacioText);
 
-                getProperty(prop,"antiacids",antiacidsText);
-                getProperty(prop,"antidiabetics",antidiabeticsText);
-                getProperty(prop,"antitrombotics",antitromboticsText);
-                getProperty(prop,"antiagregants",antiagregantsText);
-                getProperty(prop,"cardiotonics",cardiotonicsText);
-                getProperty(prop,"antihipertensius",antihipertensiusText);
-                getProperty(prop,"diuretics",diureticsText);
-                getProperty(prop,"hipolipemiants",hipolipemiantsText);
-                getProperty(prop,"dermatologics",dermatologicsText);
-                getProperty(prop,"hormones",hormonesText);
-                getProperty(prop,"urologics",urologicsText);
-                getProperty(prop,"corticosteroides",corticosteroidesText);
-                getProperty(prop,"terapiaTiroidea",terapiaTiroideaText);
-                getProperty(prop,"antineopasics",antineopasicsText);
-                getProperty(prop,"antiinflamatoris",antiinflamatorisText);
-                getProperty(prop,"analgesics",analgesicsText);
-                getProperty(prop,"broncodilatadors",broncodilatadorsText);
-                getProperty(prop,"oftalmologics",oftalmologicsText);
+                Utils.getProperty(prop,"antiacids",antiacidsText);
+                Utils.getProperty(prop,"antidiabetics",antidiabeticsText);
+                Utils.getProperty(prop,"antitrombotics",antitromboticsText);
+                Utils.getProperty(prop,"antiagregants",antiagregantsText);
+                Utils.getProperty(prop,"cardiotonics",cardiotonicsText);
+                Utils.getProperty(prop,"antihipertensius",antihipertensiusText);
+                Utils.getProperty(prop,"diuretics",diureticsText);
+                Utils.getProperty(prop,"hipolipemiants",hipolipemiantsText);
+                Utils.getProperty(prop,"dermatologics",dermatologicsText);
+                Utils.getProperty(prop,"hormones",hormonesText);
+                Utils.getProperty(prop,"urologics",urologicsText);
+                Utils.getProperty(prop,"corticosteroides",corticosteroidesText);
+                Utils.getProperty(prop,"terapiaTiroidea",terapiaTiroideaText);
+                Utils.getProperty(prop,"antineopasics",antineopasicsText);
+                Utils.getProperty(prop,"antiinflamatoris",antiinflamatorisText);
+                Utils.getProperty(prop,"analgesics",analgesicsText);
+                Utils.getProperty(prop,"broncodilatadors",broncodilatadorsText);
+                Utils.getProperty(prop,"oftalmologics",oftalmologicsText);
 
                 // Carrega les proves complementaries
-                getProperty(prop,"ecgCodi",ecgCombo);
-                getProperty(prop,"ecgDescripcio",ecgText);
-                getProperty(prop,"ecgData",ecgData);
+                Utils.getProperty(prop,"ecgCodi",ecgCombo);
+                Utils.getProperty(prop,"ecgDescripcio",ecgText);
+                Utils.getProperty(prop,"ecgData",ecgData);
 
-                getProperty(prop,"analiticaSangCodi",analiticaSangCombo);
-                getProperty(prop,"analiticaSangDescripcio",analiticaSangText);
-                getProperty(prop,"analiticaSangData",analiticaSangData);
+                Utils.getProperty(prop,"analiticaSangCodi",analiticaSangCombo);
+                Utils.getProperty(prop,"analiticaSangDescripcio",analiticaSangText);
+                Utils.getProperty(prop,"analiticaSangData",analiticaSangData);
 
-                getProperty(prop,"analiticaOrina",analiticaOrinaCombo);
-                getProperty(prop,"analiticaOrinaDescripcio",analiticaOrinaText);
-                getProperty(prop,"analiticaOrinaData",analiticaOrinaData);
+                Utils.getProperty(prop,"analiticaOrina",analiticaOrinaCombo);
+                Utils.getProperty(prop,"analiticaOrinaDescripcio",analiticaOrinaText);
+                Utils.getProperty(prop,"analiticaOrinaData",analiticaOrinaData);
 
-                getProperty(prop,"analiticaLcrCodi",analiticaLcrCombo);
-                getProperty(prop,"analiticaLcrDescripcio",analiticaLcrText);
-                getProperty(prop,"analiticaLcrData",analiticaLcrData);
+                Utils.getProperty(prop,"analiticaLcrCodi",analiticaLcrCombo);
+                Utils.getProperty(prop,"analiticaLcrDescripcio",analiticaLcrText);
+                Utils.getProperty(prop,"analiticaLcrData",analiticaLcrData);
 
-                getProperty(prop,"geneticaCodi",geneticaCombo);
-                getProperty(prop,"geneticaDescripcio",geneticaText);
-                getProperty(prop,"geneticaData",geneticaData);
+                Utils.getProperty(prop,"geneticaCodi",geneticaCombo);
+                Utils.getProperty(prop,"geneticaDescripcio",geneticaText);
+                Utils.getProperty(prop,"geneticaData",geneticaData);
 
-                getProperty(prop,"toraxCodi",toraxCombo);
-                getProperty(prop,"toraxDescripcio",toraxText);
-                getProperty(prop,"toraxData",toraxData);
+                Utils.getProperty(prop,"toraxCodi",toraxCombo);
+                Utils.getProperty(prop,"toraxDescripcio",toraxText);
+                Utils.getProperty(prop,"toraxData",toraxData);
 
-                getProperty(prop,"eegCodi",eegCombo);
-                getProperty(prop,"eegDescripcio",eegText);
-                getProperty(prop,"eegData",eegData);
+                Utils.getProperty(prop,"eegCodi",eegCombo);
+                Utils.getProperty(prop,"eegDescripcio",eegText);
+                Utils.getProperty(prop,"eegData",eegData);
 
-                getProperty(prop,"potencialsCodi",potencialsCombo);
-                getProperty(prop,"potencialsDescripcio",potencialsText);
-                getProperty(prop,"potencialsData",potencialsData);
+                Utils.getProperty(prop,"potencialsCodi",potencialsCombo);
+                Utils.getProperty(prop,"potencialsDescripcio",potencialsText);
+                Utils.getProperty(prop,"potencialsData",potencialsData);
 
-                getProperty(prop,"emgCodi",emgCombo);
-                getProperty(prop,"emgDescripcio",emgText);
-                getProperty(prop,"emgData",emgData);
+                Utils.getProperty(prop,"emgCodi",emgCombo);
+                Utils.getProperty(prop,"emgDescripcio",emgText);
+                Utils.getProperty(prop,"emgData",emgData);
 
-                getProperty(prop,"ntmsCodi",ntmsCombo);
-                getProperty(prop,"ntmsDescripcio",ntmsText);
-                getProperty(prop,"ntmsData",ntmsData);
+                Utils.getProperty(prop,"ntmsCodi",ntmsCombo);
+                Utils.getProperty(prop,"ntmsDescripcio",ntmsText);
+                Utils.getProperty(prop,"ntmsData",ntmsData);
 
-                getProperty(prop,"anatomiaCodi",anatomiaCombo);
-                getProperty(prop,"anatomiaDescripcio",anatomiaText);
-                getProperty(prop,"anatomiaData",anatomiaData);
+                Utils.getProperty(prop,"anatomiaCodi",anatomiaCombo);
+                Utils.getProperty(prop,"anatomiaDescripcio",anatomiaText);
+                Utils.getProperty(prop,"anatomiaData",anatomiaData);
 
                 // Carrega la neuroimatge
 
-                getProperty(prop,"tcCodi",tcCombo);
-                getProperty(prop,"tcDescripcio",tcText);
-                getProperty(prop,"tcData",tcData);
+                Utils.getProperty(prop,"tcCodi",tcCombo);
+                Utils.getProperty(prop,"tcDescripcio",tcText);
+                Utils.getProperty(prop,"tcData",tcData);
 
-                getProperty(prop,"rmCodi",rmCombo);
-                getProperty(prop,"rmDescripcio",rmText);
-                getProperty(prop,"rmData",rmData);
+                Utils.getProperty(prop,"rmCodi",rmCombo);
+                Utils.getProperty(prop,"rmDescripcio",rmText);
+                Utils.getProperty(prop,"rmData",rmData);
 
-                getProperty(prop,"rmFuncionalCodi",rmFuncionalCombo);
-                getProperty(prop,"rmFuncionalDescripcio",rmFuncionalText);
-                getProperty(prop,"rmFuncionalData",rmFuncionalData);
+                Utils.getProperty(prop,"rmFuncionalCodi",rmFuncionalCombo);
+                Utils.getProperty(prop,"rmFuncionalDescripcio",rmFuncionalText);
+                Utils.getProperty(prop,"rmFuncionalData",rmFuncionalData);
 
-                getProperty(prop,"rmTractografiaCodi",rmTractografiaCombo);
-                getProperty(prop,"rmTractografiaDescripcio",rmTractografiaText);
-                getProperty(prop,"rmTractografiaData",rmTractografiaData);
+                Utils.getProperty(prop,"rmTractografiaCodi",rmTractografiaCombo);
+                Utils.getProperty(prop,"rmTractografiaDescripcio",rmTractografiaText);
+                Utils.getProperty(prop,"rmTractografiaData",rmTractografiaData);
 
-                getProperty(prop,"spectCodi",spectCombo);
-                getProperty(prop,"spectDescripcio",spectText);
-                getProperty(prop,"spectData",spectData);
+                Utils.getProperty(prop,"spectCodi",spectCombo);
+                Utils.getProperty(prop,"spectDescripcio",spectText);
+                Utils.getProperty(prop,"spectData",spectData);
 
-                getProperty(prop,"siscomCodi",siscomCombo);
-                getProperty(prop,"siscomDescripcio",siscomText);
-                getProperty(prop,"siscomData",siscomData);
+                Utils.getProperty(prop,"siscomCodi",siscomCombo);
+                Utils.getProperty(prop,"siscomDescripcio",siscomText);
+                Utils.getProperty(prop,"siscomData",siscomData);
 
-                getProperty(prop,"datScanCodi",datScanCombo);
-                getProperty(prop,"datScanDescripcio",datScanText);
-                getProperty(prop,"datScanData",datScanData);
+                Utils.getProperty(prop,"datScanCodi",datScanCombo);
+                Utils.getProperty(prop,"datScanDescripcio",datScanText);
+                Utils.getProperty(prop,"datScanData",datScanData);
 
-                getProperty(prop,"petCodi",petCombo);
-                getProperty(prop,"petDescripcio",petText);
-                getProperty(prop,"petData",petData);
+                Utils.getProperty(prop,"petCodi",petCombo);
+                Utils.getProperty(prop,"petDescripcio",petText);
+                Utils.getProperty(prop,"petData",petData);
                 
-                getProperty(prop,"hipertensioData",hipertensioDate);
-                getProperty(prop,"insuficienciaCardiacaData",insuficienciaCardiacaDate);
-                getProperty(prop,"infartData",infartDate);
-                getProperty(prop,"cardiopatiaData",cardiopatiaDate);
-                getProperty(prop,"arritmiaData",arritmiaDate);
-                getProperty(prop,"malaltiaVascularData",malaltiaVascularDate);
-                getProperty(prop,"diabetisData",diabetisDate);
-                getProperty(prop,"obesitatData",obesitatDate);
-                getProperty(prop,"dislipemiaData",dislipemiaDate);
-                getProperty(prop,"patologiaTiroidesData",patologiaTiroidesDate);
-                getProperty(prop,"ulcusData",ulcusDate);
-                getProperty(prop,"gastritisData",gastritisDate);
-                getProperty(prop,"colelitiasisData",colelitiasisDate);
-                getProperty(prop,"hepatopatiaData",hepatopatiaDate);
-                getProperty(prop,"depresioData",depresioDate);
-                getProperty(prop,"ansietatData",ansietatDate);
-                getProperty(prop,"psicosisData",psicosisDate);
-                getProperty(prop,"abusAlcoholData",abusAlcoholDate);
-                getProperty(prop,"abusDroguesData",abusDroguesDate);
-                getProperty(prop,"avcEstablertData",avcEstablertDate);
-                getProperty(prop,"avcTransitoriData",avcTransitoriDate);
-                getProperty(prop,"epilepsiaData",epilepsiaDate);
-                getProperty(prop,"traumaCranealData",traumaCranealDate);
-                getProperty(prop,"malaltiaParkinsonData",malaltiaParkinsonDate);
-                getProperty(prop,"esclerosisData",esclerosisDate);
-                getProperty(prop,"cefaleaData",cefaleaDate);
-                getProperty(prop,"asmaData",asmaDate);
-                getProperty(prop,"epocData",epocDate);
-                getProperty(prop,"anemiaData",anemiaDate);
-                getProperty(prop,"leucosisData",leucosisDate);
-                getProperty(prop,"alergiaData",alergiaDate);
-                getProperty(prop,"glaucomaData",glaucomaDate);
-                getProperty(prop,"cataractesData",cataractesDate);
-                getProperty(prop,"insuficienciaRenalData",insuficienciaRenalDate);
-                getProperty(prop,"incontinenciaData",incontinenciaDate);
-                getProperty(prop,"artrosiData",artrosiDate);
-                getProperty(prop,"artritisData",artritisDate);
-                getProperty(prop,"fibromialgiaData",fibromialgiaDate);
-                getProperty(prop,"benigneData",benigneDate);
-                getProperty(prop,"maligneData",maligneDate);
+                Utils.getProperty(prop,"hipertensioData",hipertensioDate);
+                Utils.getProperty(prop,"insuficienciaCardiacaData",insuficienciaCardiacaDate);
+                Utils.getProperty(prop,"infartData",infartDate);
+                Utils.getProperty(prop,"cardiopatiaData",cardiopatiaDate);
+                Utils.getProperty(prop,"arritmiaData",arritmiaDate);
+                Utils.getProperty(prop,"malaltiaVascularData",malaltiaVascularDate);
+                Utils.getProperty(prop,"diabetisData",diabetisDate);
+                Utils.getProperty(prop,"obesitatData",obesitatDate);
+                Utils.getProperty(prop,"dislipemiaData",dislipemiaDate);
+                Utils.getProperty(prop,"patologiaTiroidesData",patologiaTiroidesDate);
+                Utils.getProperty(prop,"ulcusData",ulcusDate);
+                Utils.getProperty(prop,"gastritisData",gastritisDate);
+                Utils.getProperty(prop,"colelitiasisData",colelitiasisDate);
+                Utils.getProperty(prop,"hepatopatiaData",hepatopatiaDate);
+                Utils.getProperty(prop,"depresioData",depresioDate);
+                Utils.getProperty(prop,"ansietatData",ansietatDate);
+                Utils.getProperty(prop,"psicosisData",psicosisDate);
+                Utils.getProperty(prop,"abusAlcoholData",abusAlcoholDate);
+                Utils.getProperty(prop,"abusDroguesData",abusDroguesDate);
+                Utils.getProperty(prop,"avcEstablertData",avcEstablertDate);
+                Utils.getProperty(prop,"avcTransitoriData",avcTransitoriDate);
+                Utils.getProperty(prop,"epilepsiaData",epilepsiaDate);
+                Utils.getProperty(prop,"traumaCranealData",traumaCranealDate);
+                Utils.getProperty(prop,"malaltiaParkinsonData",malaltiaParkinsonDate);
+                Utils.getProperty(prop,"esclerosisData",esclerosisDate);
+                Utils.getProperty(prop,"cefaleaData",cefaleaDate);
+                Utils.getProperty(prop,"asmaData",asmaDate);
+                Utils.getProperty(prop,"epocData",epocDate);
+                Utils.getProperty(prop,"anemiaData",anemiaDate);
+                Utils.getProperty(prop,"leucosisData",leucosisDate);
+                Utils.getProperty(prop,"alergiaData",alergiaDate);
+                Utils.getProperty(prop,"glaucomaData",glaucomaDate);
+                Utils.getProperty(prop,"cataractesData",cataractesDate);
+                Utils.getProperty(prop,"insuficienciaRenalData",insuficienciaRenalDate);
+                Utils.getProperty(prop,"incontinenciaData",incontinenciaDate);
+                Utils.getProperty(prop,"artrosiData",artrosiDate);
+                Utils.getProperty(prop,"artritisData",artritisDate);
+                Utils.getProperty(prop,"fibromialgiaData",fibromialgiaDate);
+                Utils.getProperty(prop,"benigneData",benigneDate);
+                Utils.getProperty(prop,"maligneData",maligneDate);
                 
                 }
 
@@ -4772,309 +4773,276 @@ public class FitxaPacient extends javax.swing.JDialog {
 	}
     }
     
-    private void setProperty(Properties prop, String nom, JComboBox cb){
-        prop.setProperty(nom, ((cb.getSelectedIndex()==-1) ? "" : cb.getSelectedItem().toString()));
-    }
     
-    private void setProperty(Properties prop, String nom, JTextField tf){
-        prop.setProperty(nom, tf.getText());
-    }
-    
-    private void setProperty(Properties prop, String nom, JDateChooser dc){
-        prop.setProperty(nom, ((dc.getDate()==null) ? "" : new SimpleDateFormat("dd/MM/yyyy").format(dc.getDate())));
-    }
-    
-    private void getProperty(Properties prop, String nom, JComboBox cb){
-        cb.setSelectedItem(prop.getProperty(nom));
-    }
-    
-    private void getProperty(Properties prop, String nom, JTextField tf){
-        tf.setText(prop.getProperty(nom));
-    }
-    
-    private void getProperty(Properties prop, String nom, JDateChooser dc){
-        if (prop.getProperty(nom) != null){
-            if (!prop.getProperty(nom).equals("")){
-                DateFormat df = new SimpleDateFormat("dd/MM/yyyy"); 
-                Date data;
-                try {
-                data = df.parse(prop.getProperty(nom));
-                dc.setDate(data);
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
     
     private void guardarFitxa() {
         Properties prop = new Properties();
 	OutputStream output = null;
 
 	try {
-                File file = new File(idPacient+".dat");
+                File file = new File(idPacient+"Fitxa.dat");
                 
 		output = new FileOutputStream(file);
                 
                 // Guarda el codi del subjecte
-                setProperty(prop,"codiSubjecte",subjecteText);
+                Utils.setProperty(prop,"codiSubjecte",subjecteText);
                 
 		// Guarda les dades basiques
-                setProperty(prop,"sexe",sexeCombo);
-                setProperty(prop,"idioma",idiomaCombo);
-                setProperty(prop,"dataNaixement",dateChooser);
-                setProperty(prop,"nivellEscolaritat",nivellEscolaritatCombo);
-                setProperty(prop,"anysEscolaritat",anysEscolaritatText);
-                setProperty(prop,"estatCivil",estatCivilCombo);
-                setProperty(prop,"professio",professioText);
-                setProperty(prop,"categoriaPro",categoriaProCombo);
-                setProperty(prop,"situacioLaboral",situacioLaboralCombo);
-                setProperty(prop,"nivellSocioeconomic",nivellSocioecomomicCombo);
-                setProperty(prop,"professio",professioText);
+                Utils.setProperty(prop,"sexe",sexeCombo);
+                Utils.setProperty(prop,"idioma",idiomaCombo);
+                Utils.setProperty(prop,"dataNaixement",dateChooser);
+                Utils.setProperty(prop,"nivellEscolaritat",nivellEscolaritatCombo);
+                Utils.setProperty(prop,"anysEscolaritat",anysEscolaritatText);
+                Utils.setProperty(prop,"estatCivil",estatCivilCombo);
+                Utils.setProperty(prop,"professio",professioText);
+                Utils.setProperty(prop,"categoriaPro",categoriaProCombo);
+                Utils.setProperty(prop,"situacioLaboral",situacioLaboralCombo);
+                Utils.setProperty(prop,"nivellSocioeconomic",nivellSocioecomomicCombo);
+                Utils.setProperty(prop,"professio",professioText);
                 
-                setProperty(prop,"fumador",fumadorCombo);
-                setProperty(prop,"numCigarrets",numCigarretsText);
-                setProperty(prop,"anysFumar",anysFumarText);
-                setProperty(prop,"edatFumar",edatFumarText);
-                setProperty(prop,"consumAlcohol",consumAlcoholCombo);
-                setProperty(prop,"numBegudes",numBegudesText);
-                setProperty(prop,"ubeDia",ubeDiaCombo);
-                setProperty(prop,"anysAlcohol",anysAlcoholText);
-                setProperty(prop,"edatAlcohol",edatAlcoholText);
-                setProperty(prop,"malaltiesCroniques",malaltiesCroniquesText);
+                Utils.setProperty(prop,"fumador",fumadorCombo);
+                Utils.setProperty(prop,"numCigarrets",numCigarretsText);
+                Utils.setProperty(prop,"anysFumar",anysFumarText);
+                Utils.setProperty(prop,"edatFumar",edatFumarText);
+                Utils.setProperty(prop,"consumAlcohol",consumAlcoholCombo);
+                Utils.setProperty(prop,"numBegudes",numBegudesText);
+                Utils.setProperty(prop,"ubeDia",ubeDiaCombo);
+                Utils.setProperty(prop,"anysAlcohol",anysAlcoholText);
+                Utils.setProperty(prop,"edatAlcohol",edatAlcoholText);
+                Utils.setProperty(prop,"malaltiesCroniques",malaltiesCroniquesText);
                 
-                setProperty(prop,"tempsTractament",tempsTractamentCombo);
+                Utils.setProperty(prop,"tempsTractament",tempsTractamentCombo);
                 
                 prop.store(output, "DADES BASIQUES");
                 
                 // Guarda les dades mediques
-                setProperty(prop,"alzheimer",alzheimerCombo);
-                setProperty(prop,"parkinson",parkinsonCombo);
-                setProperty(prop,"sindromeDown",sindromeDownCombo);
-                setProperty(prop,"altresDemencies",altresDemenciesText);
-                setProperty(prop,"antecedentsPare",antecedentsPareText);
-                setProperty(prop,"antecedentsMare",antecedentsMareText);
-                setProperty(prop,"altresFamiliars",altresFamiliarsText);
+                Utils.setProperty(prop,"alzheimer",alzheimerCombo);
+                Utils.setProperty(prop,"parkinson",parkinsonCombo);
+                Utils.setProperty(prop,"sindromeDown",sindromeDownCombo);
+                Utils.setProperty(prop,"altresDemencies",altresDemenciesText);
+                Utils.setProperty(prop,"antecedentsPare",antecedentsPareText);
+                Utils.setProperty(prop,"antecedentsMare",antecedentsMareText);
+                Utils.setProperty(prop,"altresFamiliars",altresFamiliarsText);
                 
-                setProperty(prop,"cafe",cafeText);
-                setProperty(prop,"tabac",tabacText);
-                setProperty(prop,"alcohol",alcoholText);
-                setProperty(prop,"cannabis",cannabisCombo);
-                setProperty(prop,"toxicsLaborals",toxicsLaboralsText);
-                setProperty(prop,"antecedentsPersonals",antecedentsPersonalsText);
+                Utils.setProperty(prop,"cafe",cafeText);
+                Utils.setProperty(prop,"tabac",tabacText);
+                Utils.setProperty(prop,"alcohol",alcoholText);
+                Utils.setProperty(prop,"cannabis",cannabisCombo);
+                Utils.setProperty(prop,"toxicsLaborals",toxicsLaboralsText);
+                Utils.setProperty(prop,"antecedentsPersonals",antecedentsPersonalsText);
                 
-                setProperty(prop,"hipertensio",hipertensioCombo);
-                setProperty(prop,"insuficienciaCardiaca",insuficienciaCardiacaCombo);
-                setProperty(prop,"infart",infartCombo);
-                setProperty(prop,"cardiopatia",cardiopatiaCombo);
-                setProperty(prop,"arritmia",arritmiaCombo);
-                setProperty(prop,"malaltiaVascularPeriferica",malaltiaVascularCombo);
+                Utils.setProperty(prop,"hipertensio",hipertensioCombo);
+                Utils.setProperty(prop,"insuficienciaCardiaca",insuficienciaCardiacaCombo);
+                Utils.setProperty(prop,"infart",infartCombo);
+                Utils.setProperty(prop,"cardiopatia",cardiopatiaCombo);
+                Utils.setProperty(prop,"arritmia",arritmiaCombo);
+                Utils.setProperty(prop,"malaltiaVascularPeriferica",malaltiaVascularCombo);
                 
-                setProperty(prop,"diabetis",diabetisCombo);
-                setProperty(prop,"obesitat",obesitatCombo);
-                setProperty(prop,"dislipemia",dislipemiaCombo);
-                setProperty(prop,"patologiaTiroides",this.patologiaTiroidesCombo);
+                Utils.setProperty(prop,"diabetis",diabetisCombo);
+                Utils.setProperty(prop,"obesitat",obesitatCombo);
+                Utils.setProperty(prop,"dislipemia",dislipemiaCombo);
+                Utils.setProperty(prop,"patologiaTiroides",this.patologiaTiroidesCombo);
                 
-                setProperty(prop,"ulcus",ulcusCombo);
-                setProperty(prop,"gastritis",gastritisCombo);
-                setProperty(prop,"colelitiasis",colelitiasisCombo);
-                setProperty(prop,"hepatopatia",hepatopatiaCombo);
+                Utils.setProperty(prop,"ulcus",ulcusCombo);
+                Utils.setProperty(prop,"gastritis",gastritisCombo);
+                Utils.setProperty(prop,"colelitiasis",colelitiasisCombo);
+                Utils.setProperty(prop,"hepatopatia",hepatopatiaCombo);
                 
-                setProperty(prop,"depresio",depresioCombo);
-                setProperty(prop,"ansietat",ansietatCombo);
-                setProperty(prop,"psicosis",psicosisCombo);
-                setProperty(prop,"abusAlcohol",abusAlcoholCombo);
-                setProperty(prop,"abusDrogues",abusDroguesCombo);
+                Utils.setProperty(prop,"depresio",depresioCombo);
+                Utils.setProperty(prop,"ansietat",ansietatCombo);
+                Utils.setProperty(prop,"psicosis",psicosisCombo);
+                Utils.setProperty(prop,"abusAlcohol",abusAlcoholCombo);
+                Utils.setProperty(prop,"abusDrogues",abusDroguesCombo);
                 
-                setProperty(prop,"avcEstablert",avcEstablertCombo);
-                setProperty(prop,"avcTransitori",avcTransitoriCombo);
-                setProperty(prop,"epilepsia",epilepsiaCombo);
-                setProperty(prop,"traumaCraneal",traumaCranealCombo);
-                setProperty(prop,"malaltiaParkinson",malaltiaParkinsonCombo);
-                setProperty(prop,"esclerosis",esclerosisCombo);
-                setProperty(prop,"cefalea",cefaleaCombo);
+                Utils.setProperty(prop,"avcEstablert",avcEstablertCombo);
+                Utils.setProperty(prop,"avcTransitori",avcTransitoriCombo);
+                Utils.setProperty(prop,"epilepsia",epilepsiaCombo);
+                Utils.setProperty(prop,"traumaCraneal",traumaCranealCombo);
+                Utils.setProperty(prop,"malaltiaParkinson",malaltiaParkinsonCombo);
+                Utils.setProperty(prop,"esclerosis",esclerosisCombo);
+                Utils.setProperty(prop,"cefalea",cefaleaCombo);
                 
-                setProperty(prop,"asma",asmaCombo);
-                setProperty(prop,"epoc",epocCombo);
+                Utils.setProperty(prop,"asma",asmaCombo);
+                Utils.setProperty(prop,"epoc",epocCombo);
                 
-                setProperty(prop,"anemia",anemiaCombo);
-                setProperty(prop,"leucosis",leucosisCombo);
+                Utils.setProperty(prop,"anemia",anemiaCombo);
+                Utils.setProperty(prop,"leucosis",leucosisCombo);
                 
-                setProperty(prop,"alergia",alergiaCombo);
+                Utils.setProperty(prop,"alergia",alergiaCombo);
                 
-                setProperty(prop,"glaucoma",glaucomaCombo);
-                setProperty(prop,"cataractes",cataractesCombo);
+                Utils.setProperty(prop,"glaucoma",glaucomaCombo);
+                Utils.setProperty(prop,"cataractes",cataractesCombo);
                 
-                setProperty(prop,"insuficienciaRenal",insuficienciaRenalCombo);
-                setProperty(prop,"incontinencia",incontinenciaCombo);
+                Utils.setProperty(prop,"insuficienciaRenal",insuficienciaRenalCombo);
+                Utils.setProperty(prop,"incontinencia",incontinenciaCombo);
                 
-                setProperty(prop,"artrosi",artrosiCombo);
-                setProperty(prop,"artritis",artritisCombo);
-                setProperty(prop,"fibromialgia",fibromialgiaCombo);
+                Utils.setProperty(prop,"artrosi",artrosiCombo);
+                Utils.setProperty(prop,"artritis",artritisCombo);
+                Utils.setProperty(prop,"fibromialgia",fibromialgiaCombo);
                 
-                setProperty(prop,"benigne",benigneCombo);
-                setProperty(prop,"maligne",maligneCombo);
+                Utils.setProperty(prop,"benigne",benigneCombo);
+                Utils.setProperty(prop,"maligne",maligneCombo);
                 
-                setProperty(prop,"ansiolitics",ansioliticsText);
-                setProperty(prop,"hipnotics",hipnoticsText);
-                setProperty(prop,"antidepresius",antidepresiusText);
-                setProperty(prop,"antimaniacs",antimaniacsText);
-                setProperty(prop,"antipsicotics",antipsicoticsText);
-                setProperty(prop,"antimigranyosos",antimigranyososText);
-                setProperty(prop,"opioides",opioidesText);
-                setProperty(prop,"antiepileptics",antiepilepticsText);
-                setProperty(prop,"antiparkinsonians",antiparkinsoniansText);
-                setProperty(prop,"musculEstriat",musculEstriatText);
-                setProperty(prop,"vasodilatadors",vasodilatadorsText);
-                setProperty(prop,"ACEsterasa",ACEsterasaText);
-                setProperty(prop,"memantina",memantinaText);
-                setProperty(prop,"psicoestimulants",psicoestimulantsText);
-                setProperty(prop,"substanciesAbus",substanciesAbusText);
-                setProperty(prop,"deshabituacio",deshabituacioText);
+                Utils.setProperty(prop,"ansiolitics",ansioliticsText);
+                Utils.setProperty(prop,"hipnotics",hipnoticsText);
+                Utils.setProperty(prop,"antidepresius",antidepresiusText);
+                Utils.setProperty(prop,"antimaniacs",antimaniacsText);
+                Utils.setProperty(prop,"antipsicotics",antipsicoticsText);
+                Utils.setProperty(prop,"antimigranyosos",antimigranyososText);
+                Utils.setProperty(prop,"opioides",opioidesText);
+                Utils.setProperty(prop,"antiepileptics",antiepilepticsText);
+                Utils.setProperty(prop,"antiparkinsonians",antiparkinsoniansText);
+                Utils.setProperty(prop,"musculEstriat",musculEstriatText);
+                Utils.setProperty(prop,"vasodilatadors",vasodilatadorsText);
+                Utils.setProperty(prop,"ACEsterasa",ACEsterasaText);
+                Utils.setProperty(prop,"memantina",memantinaText);
+                Utils.setProperty(prop,"psicoestimulants",psicoestimulantsText);
+                Utils.setProperty(prop,"substanciesAbus",substanciesAbusText);
+                Utils.setProperty(prop,"deshabituacio",deshabituacioText);
                 
-                setProperty(prop,"antiacids",antiacidsText);
-                setProperty(prop,"antidiabetics",antidiabeticsText);
-                setProperty(prop,"antitrombotics",antitromboticsText);
-                setProperty(prop,"antiagregants",antiagregantsText);
-                setProperty(prop,"cardiotonics",cardiotonicsText);
-                setProperty(prop,"antihipertensius",antihipertensiusText);
-                setProperty(prop,"diuretics",diureticsText);
-                setProperty(prop,"hipolipemiants",hipolipemiantsText);
-                setProperty(prop,"dermatologics",dermatologicsText);
-                setProperty(prop,"hormones",hormonesText);
-                setProperty(prop,"urologics",urologicsText);
-                setProperty(prop,"corticosteroides",corticosteroidesText);
-                setProperty(prop,"terapiaTiroidea",terapiaTiroideaText);
-                setProperty(prop,"antineopasics",antineopasicsText);
-                setProperty(prop,"antiinflamatoris",antiinflamatorisText);
-                setProperty(prop,"analgesics",analgesicsText);
-                setProperty(prop,"broncodilatadors",broncodilatadorsText);
-                setProperty(prop,"oftalmologics",oftalmologicsText);
+                Utils.setProperty(prop,"antiacids",antiacidsText);
+                Utils.setProperty(prop,"antidiabetics",antidiabeticsText);
+                Utils.setProperty(prop,"antitrombotics",antitromboticsText);
+                Utils.setProperty(prop,"antiagregants",antiagregantsText);
+                Utils.setProperty(prop,"cardiotonics",cardiotonicsText);
+                Utils.setProperty(prop,"antihipertensius",antihipertensiusText);
+                Utils.setProperty(prop,"diuretics",diureticsText);
+                Utils.setProperty(prop,"hipolipemiants",hipolipemiantsText);
+                Utils.setProperty(prop,"dermatologics",dermatologicsText);
+                Utils.setProperty(prop,"hormones",hormonesText);
+                Utils.setProperty(prop,"urologics",urologicsText);
+                Utils.setProperty(prop,"corticosteroides",corticosteroidesText);
+                Utils.setProperty(prop,"terapiaTiroidea",terapiaTiroideaText);
+                Utils.setProperty(prop,"antineopasics",antineopasicsText);
+                Utils.setProperty(prop,"antiinflamatoris",antiinflamatorisText);
+                Utils.setProperty(prop,"analgesics",analgesicsText);
+                Utils.setProperty(prop,"broncodilatadors",broncodilatadorsText);
+                Utils.setProperty(prop,"oftalmologics",oftalmologicsText);
                 
                 prop.store(output, "DADES MEDIQUES");
                 
                 // Guarda les proves complementaries
-                setProperty(prop,"ecgCodi",ecgCombo);
-                setProperty(prop,"ecgDescripcio",ecgText);
-                setProperty(prop,"ecgData",ecgData);
+                Utils.setProperty(prop,"ecgCodi",ecgCombo);
+                Utils.setProperty(prop,"ecgDescripcio",ecgText);
+                Utils.setProperty(prop,"ecgData",ecgData);
                 
-                setProperty(prop,"analiticaSangCodi",analiticaSangCombo);
-                setProperty(prop,"analiticaSangDescripcio",analiticaSangText);
-                setProperty(prop,"analiticaSangData",analiticaSangData);
+                Utils.setProperty(prop,"analiticaSangCodi",analiticaSangCombo);
+                Utils.setProperty(prop,"analiticaSangDescripcio",analiticaSangText);
+                Utils.setProperty(prop,"analiticaSangData",analiticaSangData);
                 
-                setProperty(prop,"analiticaOrina",analiticaOrinaCombo);
-                setProperty(prop,"analiticaOrinaDescripcio",analiticaOrinaText);
-                setProperty(prop,"analiticaOrinaData",analiticaOrinaData);
+                Utils.setProperty(prop,"analiticaOrina",analiticaOrinaCombo);
+                Utils.setProperty(prop,"analiticaOrinaDescripcio",analiticaOrinaText);
+                Utils.setProperty(prop,"analiticaOrinaData",analiticaOrinaData);
                 
-                setProperty(prop,"analiticaLcrCodi",analiticaLcrCombo);
-                setProperty(prop,"analiticaLcrDescripcio",analiticaLcrText);
-                setProperty(prop,"analiticaLcrData",analiticaLcrData);
+                Utils.setProperty(prop,"analiticaLcrCodi",analiticaLcrCombo);
+                Utils.setProperty(prop,"analiticaLcrDescripcio",analiticaLcrText);
+                Utils.setProperty(prop,"analiticaLcrData",analiticaLcrData);
                 
-                setProperty(prop,"geneticaCodi",geneticaCombo);
-                setProperty(prop,"geneticaDescripcio",geneticaText);
-                setProperty(prop,"geneticaData",geneticaData);
+                Utils.setProperty(prop,"geneticaCodi",geneticaCombo);
+                Utils.setProperty(prop,"geneticaDescripcio",geneticaText);
+                Utils.setProperty(prop,"geneticaData",geneticaData);
                 
-                setProperty(prop,"toraxCodi",toraxCombo);
-                setProperty(prop,"toraxDescripcio",toraxText);
-                setProperty(prop,"toraxData",toraxData);
+                Utils.setProperty(prop,"toraxCodi",toraxCombo);
+                Utils.setProperty(prop,"toraxDescripcio",toraxText);
+                Utils.setProperty(prop,"toraxData",toraxData);
                 
-                setProperty(prop,"eegCodi",eegCombo);
-                setProperty(prop,"eegDescripcio",eegText);
-                setProperty(prop,"eegData",eegData);
+                Utils.setProperty(prop,"eegCodi",eegCombo);
+                Utils.setProperty(prop,"eegDescripcio",eegText);
+                Utils.setProperty(prop,"eegData",eegData);
                 
-                setProperty(prop,"potencialsCodi",potencialsCombo);
-                setProperty(prop,"potencialsDescripcio",potencialsText);
-                setProperty(prop,"potencialsData",potencialsData);
+                Utils.setProperty(prop,"potencialsCodi",potencialsCombo);
+                Utils.setProperty(prop,"potencialsDescripcio",potencialsText);
+                Utils.setProperty(prop,"potencialsData",potencialsData);
                 
-                setProperty(prop,"emgCodi",emgCombo);
-                setProperty(prop,"emgDescripcio",emgText);
-                setProperty(prop,"emgData",emgData);
+                Utils.setProperty(prop,"emgCodi",emgCombo);
+                Utils.setProperty(prop,"emgDescripcio",emgText);
+                Utils.setProperty(prop,"emgData",emgData);
                 
-                setProperty(prop,"ntmsCodi",ntmsCombo);
-                setProperty(prop,"ntmsDescripcio",ntmsText);
-                setProperty(prop,"ntmsData",ntmsData);
+                Utils.setProperty(prop,"ntmsCodi",ntmsCombo);
+                Utils.setProperty(prop,"ntmsDescripcio",ntmsText);
+                Utils.setProperty(prop,"ntmsData",ntmsData);
                 
-                setProperty(prop,"anatomiaCodi",anatomiaCombo);
-                setProperty(prop,"anatomiaDescripcio",anatomiaText);
-                setProperty(prop,"anatomiaData",anatomiaData);
+                Utils.setProperty(prop,"anatomiaCodi",anatomiaCombo);
+                Utils.setProperty(prop,"anatomiaDescripcio",anatomiaText);
+                Utils.setProperty(prop,"anatomiaData",anatomiaData);
                 
                 prop.store(output, "PROVES COMPLEMENTARIES");
                 
                 // Guarda la neuroimatge
                 
-                setProperty(prop,"tcCodi",tcCombo);
-                setProperty(prop,"tcDescripcio",tcText);
-                setProperty(prop,"tcData",tcData);
+                Utils.setProperty(prop,"tcCodi",tcCombo);
+                Utils.setProperty(prop,"tcDescripcio",tcText);
+                Utils.setProperty(prop,"tcData",tcData);
                 
-                setProperty(prop,"rmCodi",rmCombo);
-                setProperty(prop,"rmDescripcio",rmText);
-                setProperty(prop,"rmData",rmData);
+                Utils.setProperty(prop,"rmCodi",rmCombo);
+                Utils.setProperty(prop,"rmDescripcio",rmText);
+                Utils.setProperty(prop,"rmData",rmData);
                 
-                setProperty(prop,"rmFuncionalCodi",rmFuncionalCombo);
-                setProperty(prop,"rmFuncionalDescripcio",rmFuncionalText);
-                setProperty(prop,"rmFuncionalData",rmFuncionalData);
+                Utils.setProperty(prop,"rmFuncionalCodi",rmFuncionalCombo);
+                Utils.setProperty(prop,"rmFuncionalDescripcio",rmFuncionalText);
+                Utils.setProperty(prop,"rmFuncionalData",rmFuncionalData);
                 
-                setProperty(prop,"rmTractografiaCodi",rmTractografiaCombo);
-                setProperty(prop,"rmTractografiaDescripcio",rmTractografiaText);
-                setProperty(prop,"rmTractografiaData",rmTractografiaData);
+                Utils.setProperty(prop,"rmTractografiaCodi",rmTractografiaCombo);
+                Utils.setProperty(prop,"rmTractografiaDescripcio",rmTractografiaText);
+                Utils.setProperty(prop,"rmTractografiaData",rmTractografiaData);
                 
-                setProperty(prop,"spectCodi",spectCombo);
-                setProperty(prop,"spectDescripcio",spectText);
-                setProperty(prop,"spectData",spectData);
+                Utils.setProperty(prop,"spectCodi",spectCombo);
+                Utils.setProperty(prop,"spectDescripcio",spectText);
+                Utils.setProperty(prop,"spectData",spectData);
                 
-                setProperty(prop,"siscomCodi",siscomCombo);
-                setProperty(prop,"siscomDescripcio",siscomText);
-                setProperty(prop,"siscomData",siscomData);
+                Utils.setProperty(prop,"siscomCodi",siscomCombo);
+                Utils.setProperty(prop,"siscomDescripcio",siscomText);
+                Utils.setProperty(prop,"siscomData",siscomData);
                 
-                setProperty(prop,"datScanCodi",datScanCombo);
-                setProperty(prop,"datScanDescripcio",datScanText);
-                setProperty(prop,"datScanData",datScanData);
+                Utils.setProperty(prop,"datScanCodi",datScanCombo);
+                Utils.setProperty(prop,"datScanDescripcio",datScanText);
+                Utils.setProperty(prop,"datScanData",datScanData);
                 
-                setProperty(prop,"petCodi",petCombo);
-                setProperty(prop,"petDescripcio",petText);
-                setProperty(prop,"petData",petData);
+                Utils.setProperty(prop,"petCodi",petCombo);
+                Utils.setProperty(prop,"petDescripcio",petText);
+                Utils.setProperty(prop,"petData",petData);
                 
                 // Afegeix dates (introduit mes tard)
-                setProperty(prop,"hipertensioData",hipertensioDate);
-                setProperty(prop,"insuficienciaCardiacaData",insuficienciaCardiacaDate);
-                setProperty(prop,"infartData",infartDate);
-                setProperty(prop,"cardiopatiaData",cardiopatiaDate);
-                setProperty(prop,"arritmiaData",arritmiaDate);
-                setProperty(prop,"malaltiaVascularData",malaltiaVascularDate);
-                setProperty(prop,"diabetisData",diabetisDate);
-                setProperty(prop,"obesitatData",obesitatDate);
-                setProperty(prop,"dislipemiaData",dislipemiaDate);
-                setProperty(prop,"patologiaTiroidesData",patologiaTiroidesDate);
-                setProperty(prop,"ulcusData",ulcusDate);
-                setProperty(prop,"gastritisData",gastritisDate);
-                setProperty(prop,"colelitiasisData",colelitiasisDate);
-                setProperty(prop,"hepatopatiaData",hepatopatiaDate);
-                setProperty(prop,"depresioData",depresioDate);
-                setProperty(prop,"ansietatData",ansietatDate);
-                setProperty(prop,"psicosisData",psicosisDate);
-                setProperty(prop,"abusAlcoholData",abusAlcoholDate);
-                setProperty(prop,"abusDroguesData",abusDroguesDate);
-                setProperty(prop,"avcEstablertData",avcEstablertDate);
-                setProperty(prop,"avcTransitoriData",avcTransitoriDate);
-                setProperty(prop,"epilepsiaData",epilepsiaDate);
-                setProperty(prop,"traumaCranealData",traumaCranealDate);
-                setProperty(prop,"malaltiaParkinsonData",malaltiaParkinsonDate);
-                setProperty(prop,"esclerosisData",esclerosisDate);
-                setProperty(prop,"cefaleaData",cefaleaDate);
-                setProperty(prop,"asmaData",asmaDate);
-                setProperty(prop,"epocData",epocDate);
-                setProperty(prop,"anemiaData",anemiaDate);
-                setProperty(prop,"leucosisData",leucosisDate);
-                setProperty(prop,"alergiaData",alergiaDate);
-                setProperty(prop,"glaucomaData",glaucomaDate);
-                setProperty(prop,"cataractesData",cataractesDate);
-                setProperty(prop,"insuficienciaRenalData",insuficienciaRenalDate);
-                setProperty(prop,"incontinenciaData",incontinenciaDate);
-                setProperty(prop,"artrosiData",artrosiDate);
-                setProperty(prop,"artritisData",artritisDate);
-                setProperty(prop,"fibromialgiaData",fibromialgiaDate);
-                setProperty(prop,"benigneData",benigneDate);
-                setProperty(prop,"maligneData",maligneDate);
+                Utils.setProperty(prop,"hipertensioData",hipertensioDate);
+                Utils.setProperty(prop,"insuficienciaCardiacaData",insuficienciaCardiacaDate);
+                Utils.setProperty(prop,"infartData",infartDate);
+                Utils.setProperty(prop,"cardiopatiaData",cardiopatiaDate);
+                Utils.setProperty(prop,"arritmiaData",arritmiaDate);
+                Utils.setProperty(prop,"malaltiaVascularData",malaltiaVascularDate);
+                Utils.setProperty(prop,"diabetisData",diabetisDate);
+                Utils.setProperty(prop,"obesitatData",obesitatDate);
+                Utils.setProperty(prop,"dislipemiaData",dislipemiaDate);
+                Utils.setProperty(prop,"patologiaTiroidesData",patologiaTiroidesDate);
+                Utils.setProperty(prop,"ulcusData",ulcusDate);
+                Utils.setProperty(prop,"gastritisData",gastritisDate);
+                Utils.setProperty(prop,"colelitiasisData",colelitiasisDate);
+                Utils.setProperty(prop,"hepatopatiaData",hepatopatiaDate);
+                Utils.setProperty(prop,"depresioData",depresioDate);
+                Utils.setProperty(prop,"ansietatData",ansietatDate);
+                Utils.setProperty(prop,"psicosisData",psicosisDate);
+                Utils.setProperty(prop,"abusAlcoholData",abusAlcoholDate);
+                Utils.setProperty(prop,"abusDroguesData",abusDroguesDate);
+                Utils.setProperty(prop,"avcEstablertData",avcEstablertDate);
+                Utils.setProperty(prop,"avcTransitoriData",avcTransitoriDate);
+                Utils.setProperty(prop,"epilepsiaData",epilepsiaDate);
+                Utils.setProperty(prop,"traumaCranealData",traumaCranealDate);
+                Utils.setProperty(prop,"malaltiaParkinsonData",malaltiaParkinsonDate);
+                Utils.setProperty(prop,"esclerosisData",esclerosisDate);
+                Utils.setProperty(prop,"cefaleaData",cefaleaDate);
+                Utils.setProperty(prop,"asmaData",asmaDate);
+                Utils.setProperty(prop,"epocData",epocDate);
+                Utils.setProperty(prop,"anemiaData",anemiaDate);
+                Utils.setProperty(prop,"leucosisData",leucosisDate);
+                Utils.setProperty(prop,"alergiaData",alergiaDate);
+                Utils.setProperty(prop,"glaucomaData",glaucomaDate);
+                Utils.setProperty(prop,"cataractesData",cataractesDate);
+                Utils.setProperty(prop,"insuficienciaRenalData",insuficienciaRenalDate);
+                Utils.setProperty(prop,"incontinenciaData",incontinenciaDate);
+                Utils.setProperty(prop,"artrosiData",artrosiDate);
+                Utils.setProperty(prop,"artritisData",artritisDate);
+                Utils.setProperty(prop,"fibromialgiaData",fibromialgiaDate);
+                Utils.setProperty(prop,"benigneData",benigneDate);
+                Utils.setProperty(prop,"maligneData",maligneDate);
                 
                 prop.store(output, "NEUROIMATGE");
                 

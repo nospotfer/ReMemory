@@ -15,6 +15,8 @@ import org.json.JSONObject;
 import controlador.Utils;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 /**
@@ -317,11 +319,25 @@ public class MenuEvaluador extends javax.swing.JFrame {
     }//GEN-LAST:event_backBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuTests mT = new MenuTests(this,true);
-        mT.pack();
-        mT.setVisible(true);
+        if (idPacient != ""){
+            MenuTests mT = new MenuTests(this,true,idPacient);
+            mT.addWindowListener(new WindowAdapter()
+            {
+                public void windowClosed(WindowEvent e)
+                {
+                  back();
+                }
+            });
+            mT.pack();
+            mT.setVisible(true);
+            this.toBack();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void back(){
+        this.toBack();
+    }
+    
     private void checkPacient() throws JSONException{
         JSONObject obj;
         obj = new JSONObject(utils.getStringFile("res/users.json"));

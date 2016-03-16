@@ -5,21 +5,29 @@
  */
 package vista;
 
+import controlador.Utils;
 import java.awt.CardLayout;
 import java.awt.Component;
-import java.util.List;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Enumeration;
-import static javafx.scene.input.KeyCode.T;
-import javax.swing.AbstractButton;
+import java.util.Properties;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JTabbedPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JToggleButton;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -29,15 +37,22 @@ import javax.swing.event.ChangeListener;
  */
 public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     
+    int textF = 0;
+    int combo = 0;
+    int textA = 0;
+    int check = 0;
+    int button = 0;
     int total = 0;
     ArrayList<JCheckBox> llistaCheck;
     ArrayList<JCheckBox> llistaCheckMMSE;
     int pagina = 0;
+    String idPacient = "";
     String [] llistaPagines = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10"};
+    private int radioButton = 0;
     /**
      * Creates new form testsTextuals
      */
-    public ValoracioCognitivaPrevia() {
+    public ValoracioCognitivaPrevia(String idPacient) {
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
@@ -45,6 +60,15 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         initCheckBox();
         initCheckMMSE();
         initTabs();
+        initToggleButton();
+        this.idPacient = idPacient;
+        carregar();
+        this.actualitzaPuntuacioCrc();
+        this.actualitzaPuntuacioMMSE();
+        this.actualitzaPuntuacioTAP();
+        actualitzaPuntuacioCDR();
+        this.toFront();
+        this.repaint();
     }
 
     /**
@@ -79,6 +103,57 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         cdrForaCasaBtnGroup = new javax.swing.ButtonGroup();
         cdrDomestiquesBtnGroup = new javax.swing.ButtonGroup();
         cdrCuidatBtnGroup = new javax.swing.ButtonGroup();
+        cdrRaonament1BtnGroup = new javax.swing.ButtonGroup();
+        cdrMesBtnGroup = new javax.swing.ButtonGroup();
+        cdrAnyBtnGroup = new javax.swing.ButtonGroup();
+        cdrDiaBtnGroup = new javax.swing.ButtonGroup();
+        cdrTemporalBtnGroup = new javax.swing.ButtonGroup();
+        cdrCamiBtnGroup = new javax.swing.ButtonGroup();
+        cdrBarriBtnGroup = new javax.swing.ButtonGroup();
+        cdrCasaBtnGroup = new javax.swing.ButtonGroup();
+        cdrRaonament2BtnGroup = new javax.swing.ButtonGroup();
+        cdrRaonament3BtnGroup = new javax.swing.ButtonGroup();
+        cdrRaonament4BtnGroup = new javax.swing.ButtonGroup();
+        cdrRaonament5BtnGroup = new javax.swing.ButtonGroup();
+        cdrRaonament6BtnGroup = new javax.swing.ButtonGroup();
+        cdrLaboral1BtnGroup = new javax.swing.ButtonGroup();
+        cdrLaboral2BtnGroup = new javax.swing.ButtonGroup();
+        cdrLaboral3BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial1BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial2BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial3BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial4BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial5BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial6BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial7BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial8BtnGroup = new javax.swing.ButtonGroup();
+        cdrSocial9BtnGroup = new javax.swing.ButtonGroup();
+        cdrHabilitatBtnGroup = new javax.swing.ButtonGroup();
+        cdrTasquesDomestiquesBtnGroup = new javax.swing.ButtonGroup();
+        cdrVestirBtnGroup = new javax.swing.ButtonGroup();
+        cdrRentarBtnGroup = new javax.swing.ButtonGroup();
+        cdrHabitsBtnGroup = new javax.swing.ButtonGroup();
+        cdrEsfintersBtnGroup = new javax.swing.ButtonGroup();
+        cdrMemo1BtnGroup = new javax.swing.ButtonGroup();
+        cdrMemo2BtnGroup = new javax.swing.ButtonGroup();
+        cdrMemo3BtnGroup = new javax.swing.ButtonGroup();
+        orientacioBtnGroup1 = new javax.swing.ButtonGroup();
+        orientacioBtnGroup2 = new javax.swing.ButtonGroup();
+        orientacioBtnGroup3 = new javax.swing.ButtonGroup();
+        orientacioBtnGroup4 = new javax.swing.ButtonGroup();
+        orientacioBtnGroup5 = new javax.swing.ButtonGroup();
+        orientacioBtnGroup6 = new javax.swing.ButtonGroup();
+        orientacioBtnGroup7 = new javax.swing.ButtonGroup();
+        orientacioBtnGroup8 = new javax.swing.ButtonGroup();
+        raoBtnGroup1 = new javax.swing.ButtonGroup();
+        raoBtnGroup2 = new javax.swing.ButtonGroup();
+        raoBtnGroup3 = new javax.swing.ButtonGroup();
+        raoBtnGroup4 = new javax.swing.ButtonGroup();
+        raoBtnGroup5 = new javax.swing.ButtonGroup();
+        raoBtnGroup6 = new javax.swing.ButtonGroup();
+        raoBtnGroup7 = new javax.swing.ButtonGroup();
+        raoBtnGroup8 = new javax.swing.ButtonGroup();
+        raoBtnGroup9 = new javax.swing.ButtonGroup();
         mainPanel = new javax.swing.JPanel();
         dataPanel = new javax.swing.JPanel();
         tabbedPanel = new javax.swing.JTabbedPane();
@@ -130,40 +205,6 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
-        CDRScroll2 = new javax.swing.JScrollPane();
-        CDRPanel1 = new javax.swing.JPanel();
-        memoriaPanel1 = new javax.swing.JPanel();
-        orientacioLabel = new javax.swing.JLabel();
-        jCheckBox31 = new javax.swing.JCheckBox();
-        jCheckBox32 = new javax.swing.JCheckBox();
-        jCheckBox33 = new javax.swing.JCheckBox();
-        jCheckBox34 = new javax.swing.JCheckBox();
-        orientacioLabel1 = new javax.swing.JLabel();
-        jCheckBox35 = new javax.swing.JCheckBox();
-        jCheckBox36 = new javax.swing.JCheckBox();
-        jCheckBox37 = new javax.swing.JCheckBox();
-        orientacioLabel2 = new javax.swing.JLabel();
-        orientacioLabel3 = new javax.swing.JLabel();
-        jCheckBox43 = new javax.swing.JCheckBox();
-        jCheckBox44 = new javax.swing.JCheckBox();
-        jCheckBox45 = new javax.swing.JCheckBox();
-        orientacioLabel4 = new javax.swing.JLabel();
-        jCheckBox47 = new javax.swing.JCheckBox();
-        jCheckBox48 = new javax.swing.JCheckBox();
-        jCheckBox49 = new javax.swing.JCheckBox();
-        jCheckBox50 = new javax.swing.JCheckBox();
-        orientacioLabel5 = new javax.swing.JLabel();
-        jCheckBox51 = new javax.swing.JCheckBox();
-        jCheckBox52 = new javax.swing.JCheckBox();
-        jCheckBox53 = new javax.swing.JCheckBox();
-        jCheckBox54 = new javax.swing.JCheckBox();
-        jCheckBox95 = new javax.swing.JCheckBox();
-        jCheckBox96 = new javax.swing.JCheckBox();
-        jCheckBox97 = new javax.swing.JCheckBox();
-        jCheckBox98 = new javax.swing.JCheckBox();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
         CDRScroll3 = new javax.swing.JScrollPane();
         CDRPanel2 = new javax.swing.JPanel();
         memoriaPanel2 = new javax.swing.JPanel();
@@ -209,38 +250,40 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jCheckBox93 = new javax.swing.JCheckBox();
         jCheckBox94 = new javax.swing.JCheckBox();
         jLabel55 = new javax.swing.JLabel();
-        CDRScroll4 = new javax.swing.JScrollPane();
-        CDRPanel3 = new javax.swing.JPanel();
-        memoriaPanel3 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        orientacioLabel16 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        orientacioLabel40 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        orientacioLabel41 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        orientacioLabel42 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
-        orientacioLabel43 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        orientacioLabel44 = new javax.swing.JLabel();
-        jCheckBox38 = new javax.swing.JCheckBox();
-        jCheckBox39 = new javax.swing.JCheckBox();
-        jCheckBox40 = new javax.swing.JCheckBox();
-        orientacioLabel45 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jLabel50 = new javax.swing.JLabel();
-        jCheckBox41 = new javax.swing.JCheckBox();
-        jCheckBox42 = new javax.swing.JCheckBox();
-        jCheckBox46 = new javax.swing.JCheckBox();
-        jCheckBox55 = new javax.swing.JCheckBox();
-        jCheckBox56 = new javax.swing.JCheckBox();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
+        CDRScroll2 = new javax.swing.JScrollPane();
+        CDRPanel1 = new javax.swing.JPanel();
+        memoriaPanel1 = new javax.swing.JPanel();
+        orientacioLabel = new javax.swing.JLabel();
+        jCheckBox31 = new javax.swing.JCheckBox();
+        jCheckBox32 = new javax.swing.JCheckBox();
+        jCheckBox33 = new javax.swing.JCheckBox();
+        jCheckBox34 = new javax.swing.JCheckBox();
+        orientacioLabel1 = new javax.swing.JLabel();
+        jCheckBox35 = new javax.swing.JCheckBox();
+        jCheckBox36 = new javax.swing.JCheckBox();
+        jCheckBox37 = new javax.swing.JCheckBox();
+        orientacioLabel2 = new javax.swing.JLabel();
+        orientacioLabel3 = new javax.swing.JLabel();
+        jCheckBox43 = new javax.swing.JCheckBox();
+        jCheckBox44 = new javax.swing.JCheckBox();
+        jCheckBox45 = new javax.swing.JCheckBox();
+        orientacioLabel4 = new javax.swing.JLabel();
+        jCheckBox47 = new javax.swing.JCheckBox();
+        jCheckBox48 = new javax.swing.JCheckBox();
+        jCheckBox49 = new javax.swing.JCheckBox();
+        jCheckBox50 = new javax.swing.JCheckBox();
+        orientacioLabel5 = new javax.swing.JLabel();
+        jCheckBox51 = new javax.swing.JCheckBox();
+        jCheckBox52 = new javax.swing.JCheckBox();
+        jCheckBox53 = new javax.swing.JCheckBox();
+        jCheckBox54 = new javax.swing.JCheckBox();
+        jCheckBox95 = new javax.swing.JCheckBox();
+        jCheckBox96 = new javax.swing.JCheckBox();
+        jCheckBox97 = new javax.swing.JCheckBox();
+        jCheckBox98 = new javax.swing.JCheckBox();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
         CDRScroll5 = new javax.swing.JScrollPane();
         CDRPanel4 = new javax.swing.JPanel();
         memoriaPanel4 = new javax.swing.JPanel();
@@ -296,6 +339,37 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jSeparator8 = new javax.swing.JSeparator();
         jLabel49 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
+        CDRScroll4 = new javax.swing.JScrollPane();
+        CDRPanel3 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        orientacioLabel16 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        orientacioLabel40 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        orientacioLabel41 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        orientacioLabel42 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        orientacioLabel43 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        orientacioLabel44 = new javax.swing.JLabel();
+        jCheckBox38 = new javax.swing.JCheckBox();
+        jCheckBox39 = new javax.swing.JCheckBox();
+        jCheckBox40 = new javax.swing.JCheckBox();
+        orientacioLabel45 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jLabel50 = new javax.swing.JLabel();
+        jCheckBox41 = new javax.swing.JCheckBox();
+        jCheckBox42 = new javax.swing.JCheckBox();
+        jCheckBox46 = new javax.swing.JCheckBox();
+        jCheckBox55 = new javax.swing.JCheckBox();
+        jCheckBox56 = new javax.swing.JCheckBox();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
         CDRScroll6 = new javax.swing.JScrollPane();
         CDRPanel5 = new javax.swing.JPanel();
         memoriaPanel5 = new javax.swing.JPanel();
@@ -454,54 +528,6 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jCheckBox141 = new javax.swing.JCheckBox();
         jCheckBox142 = new javax.swing.JCheckBox();
         jLabel123 = new javax.swing.JLabel();
-        CDRScroll9 = new javax.swing.JScrollPane();
-        CDRPanel8 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        jToggleButton4 = new javax.swing.JToggleButton();
-        jToggleButton5 = new javax.swing.JToggleButton();
-        jToggleButton6 = new javax.swing.JToggleButton();
-        jToggleButton7 = new javax.swing.JToggleButton();
-        jToggleButton8 = new javax.swing.JToggleButton();
-        jToggleButton9 = new javax.swing.JToggleButton();
-        jToggleButton10 = new javax.swing.JToggleButton();
-        jToggleButton11 = new javax.swing.JToggleButton();
-        jToggleButton12 = new javax.swing.JToggleButton();
-        jToggleButton13 = new javax.swing.JToggleButton();
-        jToggleButton14 = new javax.swing.JToggleButton();
-        jToggleButton15 = new javax.swing.JToggleButton();
-        jToggleButton16 = new javax.swing.JToggleButton();
-        jToggleButton17 = new javax.swing.JToggleButton();
-        jToggleButton18 = new javax.swing.JToggleButton();
-        jToggleButton19 = new javax.swing.JToggleButton();
-        jToggleButton20 = new javax.swing.JToggleButton();
-        jToggleButton21 = new javax.swing.JToggleButton();
-        jToggleButton22 = new javax.swing.JToggleButton();
-        jToggleButton23 = new javax.swing.JToggleButton();
-        jToggleButton24 = new javax.swing.JToggleButton();
-        jToggleButton25 = new javax.swing.JToggleButton();
-        jToggleButton26 = new javax.swing.JToggleButton();
-        jToggleButton27 = new javax.swing.JToggleButton();
-        jToggleButton28 = new javax.swing.JToggleButton();
-        jToggleButton29 = new javax.swing.JToggleButton();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
-        jLabel125 = new javax.swing.JLabel();
-        jLabel126 = new javax.swing.JLabel();
-        jLabel127 = new javax.swing.JLabel();
-        jLabel128 = new javax.swing.JLabel();
-        jLabel129 = new javax.swing.JLabel();
-        jLabel130 = new javax.swing.JLabel();
-        jLabel131 = new javax.swing.JLabel();
-        jLabel132 = new javax.swing.JLabel();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jSeparator15 = new javax.swing.JSeparator();
-        jLabel103 = new javax.swing.JLabel();
         CDRScroll10 = new javax.swing.JScrollPane();
         CDRPanel9 = new javax.swing.JPanel();
         memoriaPanel8 = new javax.swing.JPanel();
@@ -555,6 +581,54 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jCheckBox216 = new javax.swing.JCheckBox();
         jCheckBox218 = new javax.swing.JCheckBox();
         jLabel121 = new javax.swing.JLabel();
+        CDRScroll9 = new javax.swing.JScrollPane();
+        CDRPanel8 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        memoBtn1 = new javax.swing.JToggleButton();
+        orientacioBtn1 = new javax.swing.JToggleButton();
+        orientacioBtn2 = new javax.swing.JToggleButton();
+        memoBtn2 = new javax.swing.JToggleButton();
+        orientacioBtn3 = new javax.swing.JToggleButton();
+        memoBtn3 = new javax.swing.JToggleButton();
+        orientacioBtn4 = new javax.swing.JToggleButton();
+        memoBtn4 = new javax.swing.JToggleButton();
+        memoBtn5 = new javax.swing.JToggleButton();
+        orientacioBtn5 = new javax.swing.JToggleButton();
+        raoBtn1 = new javax.swing.JToggleButton();
+        raoBtn2 = new javax.swing.JToggleButton();
+        raoBtn5 = new javax.swing.JToggleButton();
+        raoBtn3 = new javax.swing.JToggleButton();
+        raoBtn4 = new javax.swing.JToggleButton();
+        activitatsFBtn1 = new javax.swing.JToggleButton();
+        activitatsFBtn2 = new javax.swing.JToggleButton();
+        activitatsDBtn1 = new javax.swing.JToggleButton();
+        activitatsFBtn3 = new javax.swing.JToggleButton();
+        activitatsFBtn4 = new javax.swing.JToggleButton();
+        activitatsFBtn5 = new javax.swing.JToggleButton();
+        activitatsDBtn5 = new javax.swing.JToggleButton();
+        activitatsDBtn4 = new javax.swing.JToggleButton();
+        activitatsDBtn2 = new javax.swing.JToggleButton();
+        activitatsDBtn3 = new javax.swing.JToggleButton();
+        cuidatBtn1 = new javax.swing.JToggleButton();
+        cuidatBtn2 = new javax.swing.JToggleButton();
+        cuidatBtn3 = new javax.swing.JToggleButton();
+        cuidatBtn4 = new javax.swing.JToggleButton();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel124 = new javax.swing.JLabel();
+        jLabel125 = new javax.swing.JLabel();
+        jLabel126 = new javax.swing.JLabel();
+        jLabel127 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel129 = new javax.swing.JLabel();
+        jLabel130 = new javax.swing.JLabel();
+        jLabel131 = new javax.swing.JLabel();
+        jLabel132 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel102 = new javax.swing.JLabel();
+        jSeparator15 = new javax.swing.JSeparator();
+        valoracioCDRLabel = new javax.swing.JLabel();
         CRCTab = new javax.swing.JPanel();
         dadesMediquesScroll = new javax.swing.JScrollPane();
         dadesMediquesPanel = new javax.swing.JPanel();
@@ -604,6 +678,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         rangLabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel106 = new javax.swing.JLabel();
+        jLabel107 = new javax.swing.JLabel();
         MMSETab = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         MMSEPanel = new javax.swing.JPanel();
@@ -681,6 +757,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         referenciaMMSELabel = new javax.swing.JLabel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel110 = new javax.swing.JLabel();
         TAPTab = new javax.swing.JPanel();
         TAPScroll = new javax.swing.JScrollPane();
         TAPPanel = new javax.swing.JPanel();
@@ -719,6 +797,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         tapTotalLabel = new javax.swing.JLabel();
         ciLabel = new javax.swing.JLabel();
+        jLabel111 = new javax.swing.JLabel();
+        jLabel112 = new javax.swing.JLabel();
         buttonPanel = new javax.swing.JPanel();
         acceptaBtn = new javax.swing.JButton();
         cancelaBtn = new javax.swing.JButton();
@@ -726,6 +806,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         seguentBtn = new javax.swing.JButton();
         paginaLabel = new javax.swing.JLabel();
         paginaLabel2 = new javax.swing.JLabel();
+        copyLabel = new javax.swing.JLabel();
+        sepBottom = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -734,10 +816,11 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         dataPanel.setLayout(new java.awt.BorderLayout());
 
         tabbedPanel.setToolTipText("");
+        tabbedPanel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
         CDRTab.setLayout(new java.awt.CardLayout());
 
-        memoriaPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes de memòria per l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        memoriaPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes de memòria per a l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         sexeLabel.setText("1. Té ell / a algun problema de memòria o de pensament?");
 
@@ -827,7 +910,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addGroup(memoriaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(memoriaPanelLayout.createSequentialGroup()
                         .addGroup(memoriaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 2000, Short.MAX_VALUE)
+                            .addComponent(jLabel28)
                             .addGroup(memoriaPanelLayout.createSequentialGroup()
                                 .addGroup(memoriaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(memoriaPanelLayout.createSequentialGroup()
@@ -1018,7 +1101,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addComponent(jLabel40)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(306, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1051,228 +1134,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         CDRTab.add(CDRScroll1, "card1");
 
-        memoriaPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes de raonament i solució de problemes per a l'informador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        orientacioLabel.setText("1. En general, si vostè hagués de valorar la seva capacitat per resoldre problemes en aquest moment, la consideraria:");
-
-        diaMesBtnGroup.add(jCheckBox31);
-        jCheckBox31.setText("Tan bona com sempre ha estat");
-
-        diaMesBtnGroup.add(jCheckBox32);
-        jCheckBox32.setText("Bona, però no tant com abans");
-
-        diaMesBtnGroup.add(jCheckBox33);
-        jCheckBox33.setText("Regular");
-
-        diaMesBtnGroup.add(jCheckBox34);
-        jCheckBox34.setText("Dolenta");
-
-        orientacioLabel1.setText("2. Valori la seva capacitat per sortir-se'n amb petites sumes de diners (per ex., Donar canvi, donar una petita propina):");
-
-        jCheckBox35.setText("Sense pèrdua de capacitat");
-
-        jCheckBox36.setText("Pèrdua moderada de capacitat");
-
-        jCheckBox37.setText("Pèrdua greu de capacitat");
-
-        orientacioLabel2.setText("3. Valore su capacidad para realizar complejas transacciones financieras o de negocios (por ej., llevar de forma correcta las cuentas de la casa, pagar facturas): ");
-
-        orientacioLabel3.setText("4. Pot sortir-se'n amb una emergència casolana (per ex., Una fuita d'aigua, un petit incendi)?");
-
-        jCheckBox43.setText("Tan bé com abans");
-
-        jCheckBox44.setText("Pitjor que abans per problemes de raonament");
-
-        jCheckBox45.setText("Peor que antes, por otro motivos (¿cuáles?)");
-
-        orientacioLabel4.setText("5. Pot ell/a entendre situacions o explicacions?");
-
-        jCheckBox47.setText("La majoria de les vegades");
-
-        jCheckBox48.setText("De vegades");
-
-        jCheckBox49.setText("Quasi mai");
-
-        jCheckBox50.setText("No ho sé");
-
-        orientacioLabel5.setText("6. ¿Es comporta* de manera adequada [per ex., Com acostumava a fer-ho (abans d'emmalaltir)] en societat i en les seves relacions amb altres persones?");
-
-        jCheckBox51.setText("La majoria de les vegades");
-
-        jCheckBox52.setText("De vegades");
-
-        jCheckBox53.setText("Quasi mai");
-
-        jCheckBox54.setText("No ho sé");
-
-        diaMesBtnGroup.add(jCheckBox95);
-        jCheckBox95.setText("Sense cap capacitat");
-
-        jCheckBox96.setText("Sense pèrdua de capacitat");
-
-        jCheckBox97.setText("Pèrdua moderada de capacitat");
-
-        jCheckBox98.setText("Pèrdua greu de capacitat");
-
-        jLabel44.setText("* Aquesta pregunta avalua el comportament, no l'aparença.");
-
-        javax.swing.GroupLayout memoriaPanel1Layout = new javax.swing.GroupLayout(memoriaPanel1);
-        memoriaPanel1.setLayout(memoriaPanel1Layout);
-        memoriaPanel1Layout.setHorizontalGroup(
-            memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                        .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orientacioLabel)
-                            .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jCheckBox31)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox32)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox33)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox34)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox95)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                        .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orientacioLabel2)
-                            .addComponent(orientacioLabel3)
-                            .addComponent(orientacioLabel4)
-                            .addComponent(orientacioLabel1)
-                            .addComponent(orientacioLabel5)
-                            .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                                        .addComponent(jCheckBox47)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox48)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox49)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox50))
-                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                                        .addComponent(jCheckBox43)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox44)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox45)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                                        .addComponent(jCheckBox96)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox97)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox98))
-                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                                        .addComponent(jCheckBox35)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox36)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox37))
-                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                                        .addComponent(jCheckBox51)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox52)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox53)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCheckBox54))
-                                    .addComponent(jLabel44))))
-                        .addGap(0, 999, Short.MAX_VALUE))))
-        );
-        memoriaPanel1Layout.setVerticalGroup(
-            memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(memoriaPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(orientacioLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox31)
-                    .addComponent(jCheckBox32)
-                    .addComponent(jCheckBox33)
-                    .addComponent(jCheckBox34)
-                    .addComponent(jCheckBox95))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(orientacioLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox35)
-                    .addComponent(jCheckBox36)
-                    .addComponent(jCheckBox37))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(orientacioLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox96)
-                    .addComponent(jCheckBox97)
-                    .addComponent(jCheckBox98))
-                .addGap(7, 7, 7)
-                .addComponent(orientacioLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox43)
-                    .addComponent(jCheckBox44)
-                    .addComponent(jCheckBox45)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(orientacioLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox47)
-                    .addComponent(jCheckBox48)
-                    .addComponent(jCheckBox49)
-                    .addComponent(jCheckBox50))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(orientacioLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox51)
-                    .addComponent(jCheckBox52)
-                    .addComponent(jCheckBox53)
-                    .addComponent(jCheckBox54))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel44)
-                .addContainerGap(850, Short.MAX_VALUE))
-        );
-
-        jLabel54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel54.setText("Fulla de Valoració Clínica de Demència");
-
-        javax.swing.GroupLayout CDRPanel1Layout = new javax.swing.GroupLayout(CDRPanel1);
-        CDRPanel1.setLayout(CDRPanel1Layout);
-        CDRPanel1Layout.setHorizontalGroup(
-            CDRPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CDRPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CDRPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(memoriaPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(CDRPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel54)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        CDRPanel1Layout.setVerticalGroup(
-            CDRPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel54)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(memoriaPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        CDRScroll2.setViewportView(CDRPanel1);
-
-        CDRTab.add(CDRScroll2, "card2");
-
-        memoriaPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes de memòria per l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        memoriaPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes d'orientació per a l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         orientacioLabel8.setText("1. El dia del mes?");
 
@@ -1292,72 +1154,100 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         orientacioLabel9.setText("2. El mes?");
 
+        cdrMesBtnGroup.add(jCheckBox67);
         jCheckBox67.setText("La majoria de les vegades");
 
+        cdrMesBtnGroup.add(jCheckBox68);
         jCheckBox68.setText("De vegades");
 
+        cdrMesBtnGroup.add(jCheckBox69);
         jCheckBox69.setText("Quasi mai");
 
+        cdrMesBtnGroup.add(jCheckBox70);
         jCheckBox70.setText("No ho sé");
 
         orientacioLabel10.setText("3. L'any?");
 
+        cdrAnyBtnGroup.add(jCheckBox71);
         jCheckBox71.setText("La majoria de les vegades");
 
+        cdrAnyBtnGroup.add(jCheckBox72);
         jCheckBox72.setText("De vegades");
 
+        cdrAnyBtnGroup.add(jCheckBox73);
         jCheckBox73.setText("Quasi mai");
 
+        cdrAnyBtnGroup.add(jCheckBox74);
         jCheckBox74.setText("No ho sé");
 
         orientacioLabel11.setText("4. El dia de la setmana?");
 
+        cdrDiaBtnGroup.add(jCheckBox75);
         jCheckBox75.setText("La majoria de les vegades");
 
+        cdrDiaBtnGroup.add(jCheckBox76);
         jCheckBox76.setText("De vegades");
 
+        cdrDiaBtnGroup.add(jCheckBox77);
         jCheckBox77.setText("Quasi mai");
 
+        cdrDiaBtnGroup.add(jCheckBox78);
         jCheckBox78.setText("No ho sé");
 
         orientacioLabel12.setText("5. Té dificultats amb la relació temporal (quan van ocórrer els esdeveniments en relació als altres)?");
 
+        cdrTemporalBtnGroup.add(jCheckBox79);
         jCheckBox79.setText("La majoria de les vegades");
 
+        cdrTemporalBtnGroup.add(jCheckBox80);
         jCheckBox80.setText("De vegades");
 
+        cdrTemporalBtnGroup.add(jCheckBox81);
         jCheckBox81.setText("Quasi mai");
 
+        cdrTemporalBtnGroup.add(jCheckBox82);
         jCheckBox82.setText("No ho sé");
 
         orientacioLabel13.setText("6. Pot trobar el camí per carrers familiars?");
 
+        cdrCamiBtnGroup.add(jCheckBox83);
         jCheckBox83.setText("La majoria de les vegades");
 
+        cdrCamiBtnGroup.add(jCheckBox84);
         jCheckBox84.setText("De vegades");
 
+        cdrCamiBtnGroup.add(jCheckBox85);
         jCheckBox85.setText("Quasi mai");
 
+        cdrCamiBtnGroup.add(jCheckBox86);
         jCheckBox86.setText("No ho sé");
 
         orientacioLabel14.setText("7. Sap com anar d'un lloc a un altre fora del seu barri?");
 
+        cdrBarriBtnGroup.add(jCheckBox87);
         jCheckBox87.setText("La majoria de les vegades");
 
+        cdrBarriBtnGroup.add(jCheckBox88);
         jCheckBox88.setText("De vegades");
 
+        cdrBarriBtnGroup.add(jCheckBox89);
         jCheckBox89.setText("Quasi mai");
 
+        cdrBarriBtnGroup.add(jCheckBox90);
         jCheckBox90.setText("No ho sé");
 
         orientacioLabel15.setText("8. Pot trobar el camí dins de casa?");
 
+        casaBtnGroup.add(jCheckBox91);
         jCheckBox91.setText("La majoria de les vegades");
 
+        casaBtnGroup.add(jCheckBox92);
         jCheckBox92.setText("De vegades");
 
+        casaBtnGroup.add(jCheckBox93);
         jCheckBox93.setText("Quasi mai");
 
+        casaBtnGroup.add(jCheckBox94);
         jCheckBox94.setText("No ho sé");
 
         javax.swing.GroupLayout memoriaPanel2Layout = new javax.swing.GroupLayout(memoriaPanel2);
@@ -1462,7 +1352,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                                         .addComponent(jCheckBox93)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jCheckBox94)))))
-                        .addGap(0, 1557, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         memoriaPanel2Layout.setVerticalGroup(
             memoriaPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1533,7 +1423,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addComponent(jCheckBox92)
                     .addComponent(jCheckBox93)
                     .addComponent(jCheckBox94))
-                .addContainerGap(749, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1564,9 +1454,666 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         CDRScroll3.setViewportView(CDRPanel2);
 
-        CDRTab.add(CDRScroll3, "card3");
+        CDRTab.add(CDRScroll3, "card2");
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntas sobre las actividades domésticas y las aficiones para el informador: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        memoriaPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes de raonament i solució de problemes per a l'informador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel.setText("1. En general, si vostè hagués de valorar la seva capacitat per resoldre problemes en aquest moment, la consideraria:");
+
+        cdrRaonament1BtnGroup.add(jCheckBox31);
+        jCheckBox31.setText("Tan bona com sempre ha estat");
+
+        cdrRaonament1BtnGroup.add(jCheckBox32);
+        jCheckBox32.setText("Bona, però no tant com abans");
+
+        cdrRaonament1BtnGroup.add(jCheckBox33);
+        jCheckBox33.setText("Regular");
+
+        cdrRaonament1BtnGroup.add(jCheckBox34);
+        jCheckBox34.setText("Dolenta");
+
+        orientacioLabel1.setText("2. Valori la seva capacitat per sortir-se'n amb petites sumes de diners (per ex., Donar canvi, donar una petita propina):");
+
+        cdrRaonament2BtnGroup.add(jCheckBox35);
+        jCheckBox35.setText("Sense pèrdua de capacitat");
+
+        cdrRaonament2BtnGroup.add(jCheckBox36);
+        jCheckBox36.setText("Pèrdua moderada de capacitat");
+
+        cdrRaonament2BtnGroup.add(jCheckBox37);
+        jCheckBox37.setText("Pèrdua greu de capacitat");
+
+        orientacioLabel2.setText("3. Valori la seva capacitat per realitzar complexes transaccions financeres o de negocis (per ex., Portar de forma correcta els comptes de la casa, pagar factures):");
+
+        orientacioLabel3.setText("4. Pot sortir-se'n amb una emergència casolana (per ex., Una fuita d'aigua, un petit incendi)?");
+
+        cdrRaonament4BtnGroup.add(jCheckBox43);
+        jCheckBox43.setText("Tan bé com abans");
+
+        cdrRaonament4BtnGroup.add(jCheckBox44);
+        jCheckBox44.setText("Pitjor que abans per problemes de raonament");
+
+        cdrRaonament4BtnGroup.add(jCheckBox45);
+        jCheckBox45.setText("Pitjor que abans, per altres motius (Quins?)");
+        jCheckBox45.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jCheckBox45StateChanged(evt);
+            }
+        });
+
+        orientacioLabel4.setText("5. Pot ell/a entendre situacions o explicacions?");
+
+        cdrRaonament5BtnGroup.add(jCheckBox47);
+        jCheckBox47.setText("La majoria de les vegades");
+
+        cdrRaonament5BtnGroup.add(jCheckBox48);
+        jCheckBox48.setText("De vegades");
+
+        cdrRaonament5BtnGroup.add(jCheckBox49);
+        jCheckBox49.setText("Quasi mai");
+
+        cdrRaonament5BtnGroup.add(jCheckBox50);
+        jCheckBox50.setText("No ho sé");
+
+        orientacioLabel5.setText("6. ¿Es comporta* de manera adequada [per ex., Com acostumava a fer-ho (abans d'emmalaltir)] en societat i en les seves relacions amb altres persones?");
+
+        cdrRaonament6BtnGroup.add(jCheckBox51);
+        jCheckBox51.setText("La majoria de les vegades");
+
+        cdrRaonament6BtnGroup.add(jCheckBox52);
+        jCheckBox52.setText("De vegades");
+
+        cdrRaonament6BtnGroup.add(jCheckBox53);
+        jCheckBox53.setText("Quasi mai");
+
+        cdrRaonament6BtnGroup.add(jCheckBox54);
+        jCheckBox54.setText("No ho sé");
+
+        cdrRaonament1BtnGroup.add(jCheckBox95);
+        jCheckBox95.setText("Sense cap capacitat");
+
+        cdrRaonament3BtnGroup.add(jCheckBox96);
+        jCheckBox96.setText("Sense pèrdua de capacitat");
+
+        cdrRaonament3BtnGroup.add(jCheckBox97);
+        jCheckBox97.setText("Pèrdua moderada de capacitat");
+
+        cdrRaonament3BtnGroup.add(jCheckBox98);
+        jCheckBox98.setText("Pèrdua greu de capacitat");
+
+        jTextField9.setEnabled(false);
+
+        jLabel44.setText("* Aquesta pregunta avalua el comportament, no l'aparença.");
+
+        javax.swing.GroupLayout memoriaPanel1Layout = new javax.swing.GroupLayout(memoriaPanel1);
+        memoriaPanel1.setLayout(memoriaPanel1Layout);
+        memoriaPanel1Layout.setHorizontalGroup(
+            memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                        .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(orientacioLabel)
+                            .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jCheckBox31)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox32)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox33)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox34)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox95)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                        .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(orientacioLabel2)
+                            .addComponent(orientacioLabel3)
+                            .addComponent(orientacioLabel4)
+                            .addComponent(orientacioLabel1)
+                            .addComponent(orientacioLabel5)
+                            .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox47)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox48)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox49)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox50))
+                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox43)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox44)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox45)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox96)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox97)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox98))
+                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox35)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox36)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox37))
+                                    .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox51)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox52)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox53)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox54))
+                                    .addComponent(jLabel44))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        memoriaPanel1Layout.setVerticalGroup(
+            memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(orientacioLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox31)
+                    .addComponent(jCheckBox32)
+                    .addComponent(jCheckBox33)
+                    .addComponent(jCheckBox34)
+                    .addComponent(jCheckBox95))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox35)
+                    .addComponent(jCheckBox36)
+                    .addComponent(jCheckBox37))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox96)
+                    .addComponent(jCheckBox97)
+                    .addComponent(jCheckBox98))
+                .addGap(7, 7, 7)
+                .addComponent(orientacioLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox43)
+                    .addComponent(jCheckBox44)
+                    .addComponent(jCheckBox45)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox47)
+                    .addComponent(jCheckBox48)
+                    .addComponent(jCheckBox49)
+                    .addComponent(jCheckBox50))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox51)
+                    .addComponent(jCheckBox52)
+                    .addComponent(jCheckBox53)
+                    .addComponent(jCheckBox54))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel44)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel54.setText("Fulla de Valoració Clínica de Demència");
+
+        javax.swing.GroupLayout CDRPanel1Layout = new javax.swing.GroupLayout(CDRPanel1);
+        CDRPanel1.setLayout(CDRPanel1Layout);
+        CDRPanel1Layout.setHorizontalGroup(
+            CDRPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CDRPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(memoriaPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CDRPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel54)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CDRPanel1Layout.setVerticalGroup(
+            CDRPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel54)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(memoriaPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        CDRScroll2.setViewportView(CDRPanel1);
+
+        CDRTab.add(CDRScroll2, "card3");
+
+        memoriaPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes d'activitats fora de casa per l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Laboral", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel28.setText("<html>1. Segueix treballant el subjecte? <br>Si no s'aplica, aneu a la pregunta 4 <br>Si la resposta és \"sí\", aneu a la pregunta 3 <br>Si la resposta és \"no\", aneu a la pregunta 2");
+
+        cdrLaboral1BtnGroup.add(jCheckBox105);
+        jCheckBox105.setText("No s'aplica");
+
+        cdrLaboral1BtnGroup.add(jCheckBox113);
+        jCheckBox113.setText("No");
+
+        cdrLaboral1BtnGroup.add(jCheckBox114);
+        jCheckBox114.setText("Sí");
+
+        orientacioLabel29.setText("2. Els problemes de raonament o de memòria van contribuir a la decisió del subjecte per jubilar-se? (Segueixi amb la pregunta 4)");
+
+        cdrLaboral2BtnGroup.add(jCheckBox115);
+        jCheckBox115.setText("Sí");
+
+        cdrLaboral2BtnGroup.add(jCheckBox116);
+        jCheckBox116.setText("No");
+
+        cdrLaboral2BtnGroup.add(jCheckBox117);
+        jCheckBox117.setText("No ho sé");
+
+        orientacioLabel30.setText("3. Té el subjecte alguna dificultat important en el seu treball a causa de problemes de memòria o raonament?");
+
+        cdrLaboral3BtnGroup.add(jCheckBox118);
+        jCheckBox118.setText("Quasi mai o mai");
+
+        cdrLaboral3BtnGroup.add(jCheckBox119);
+        jCheckBox119.setText("De vegades");
+
+        cdrLaboral3BtnGroup.add(jCheckBox120);
+        jCheckBox120.setText("Moltes vegades");
+
+        cdrLaboral3BtnGroup.add(jCheckBox121);
+        jCheckBox121.setText("No ho sé");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(orientacioLabel29)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jCheckBox115)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox116)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox117))
+                            .addComponent(orientacioLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox105)
+                            .addComponent(jCheckBox113)
+                            .addComponent(jCheckBox114)))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jCheckBox118)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox119)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox120)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox121))
+                    .addComponent(orientacioLabel30))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(orientacioLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jCheckBox114)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBox113)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBox105)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox115)
+                    .addComponent(jCheckBox116)
+                    .addComponent(jCheckBox117))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox118)
+                    .addComponent(jCheckBox119)
+                    .addComponent(jCheckBox120)
+                    .addComponent(jCheckBox121))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Social", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        orientacioLabel31.setText("4. Ha conduït mai un cotxe?");
+
+        cdrSocial1BtnGroup.add(jCheckBox122);
+        jCheckBox122.setText("Sí");
+
+        cdrSocial1BtnGroup.add(jCheckBox125);
+        jCheckBox125.setText("No");
+
+        orientacioLabel32.setText("5. Si ell/ella encara condueix, té problemes o riscos degut a una ecassa capacitat de raonament?");
+
+        orientacioLabel33.setText("*6. És capaç de fer ell/ella sol/sola les compres que necessita?");
+
+        orientacioLabel34.setText("7. És ell/ella capaç de realitzar independentment activitats fora de casa?");
+
+        cdrSocial7BtnGroup.add(jCheckBox126);
+        jCheckBox126.setText("Sí");
+
+        cdrSocial7BtnGroup.add(jCheckBox127);
+        jCheckBox127.setText("No, perquè:");
+        jCheckBox127.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jCheckBox127StateChanged(evt);
+            }
+        });
+
+        orientacioLabel35.setText("8. Exerceix funcions socials fora de la casa?");
+
+        orientacioLabel36.setText("Condueix un cotxe actualment?");
+
+        cdrSocial2BtnGroup.add(jCheckBox149);
+        jCheckBox149.setText("Sí");
+
+        cdrSocial2BtnGroup.add(jCheckBox150);
+        jCheckBox150.setText("No");
+
+        orientacioLabel37.setText("Si no condueix, es degut a problemes de raonament o de memòria?");
+
+        cdrSocial3BtnGroup.add(jCheckBox151);
+        jCheckBox151.setText("Sí");
+
+        cdrSocial3BtnGroup.add(jCheckBox152);
+        jCheckBox152.setText("No");
+
+        cdrSocial4BtnGroup.add(jCheckBox153);
+        jCheckBox153.setText("Sí");
+
+        cdrSocial4BtnGroup.add(jCheckBox154);
+        jCheckBox154.setText("No");
+
+        cdrSocial5BtnGroup.add(jCheckBox155);
+        jCheckBox155.setText("<html>Quasi mai o mai<br>(Necessita que l'acompanyin<br>per realitzar qualsevol compra)");
+
+        cdrSocial5BtnGroup.add(jCheckBox156);
+        jCheckBox156.setText("<html>De vegades<br>(Compra poques coses;<br>compra coses per duplicat<br>o oblida comprar coses que necessita)");
+
+        cdrSocial5BtnGroup.add(jCheckBox157);
+        jCheckBox157.setText("<html>Moltes vegades");
+
+        cdrSocial5BtnGroup.add(jCheckBox158);
+        jCheckBox158.setText("No ho sé");
+
+        cdrSocial6BtnGroup.add(jCheckBox159);
+        jCheckBox159.setText("<html>Quasi mai o mai<br>(Generalment es incapaç de<br>realitzar activitats sense ajuda)");
+
+        cdrSocial6BtnGroup.add(jCheckBox160);
+        jCheckBox160.setText("<html>De vegades (Limitades i/o rutinàries,<br>per ex. participació superficial<br>a misa o en reunions,<br>anar a un saló de bellesa)");
+
+        cdrSocial6BtnGroup.add(jCheckBox161);
+        jCheckBox161.setText("<html>Moltes vegades<br>(Participació segnificativa<br>en activitats, per ex. votar)");
+
+        cdrSocial6BtnGroup.add(jCheckBox162);
+        jCheckBox162.setText("No ho sé");
+
+        orientacioLabel38.setText("9. Un observador casual del comportament del subjecte, pensaria que està malalt?");
+
+        cdrSocial8BtnGroup.add(jCheckBox163);
+        jCheckBox163.setText("Sí");
+
+        cdrSocial8BtnGroup.add(jCheckBox164);
+        jCheckBox164.setText("No");
+
+        cdrSocial9BtnGroup.add(jCheckBox165);
+        jCheckBox165.setText("Sí");
+
+        cdrSocial9BtnGroup.add(jCheckBox166);
+        jCheckBox166.setText("No");
+
+        orientacioLabel39.setText("10. Si és en una residència, ¿participa activament en les activitats socials (participació intel·lectual)?");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jCheckBox159, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox160, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox161, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox162))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(orientacioLabel31)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox122)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox125))
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(orientacioLabel32)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox153)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox154))
+                            .addComponent(orientacioLabel33)
+                            .addComponent(orientacioLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(orientacioLabel39)
+                            .addComponent(orientacioLabel35)
+                            .addComponent(orientacioLabel38)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(4, 4, 4)
+                                        .addComponent(jCheckBox156, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCheckBox157, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox158))
+                                    .addComponent(orientacioLabel37)
+                                    .addComponent(orientacioLabel36)
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox165)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox166))
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox163)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox164))
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(jCheckBox126)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jCheckBox127)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel11Layout.createSequentialGroup()
+                    .addGap(177, 177, 177)
+                    .addComponent(jCheckBox149)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jCheckBox150)
+                    .addGap(96, 96, 96)
+                    .addComponent(jCheckBox151)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jCheckBox152)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(orientacioLabel31)
+                    .addComponent(jCheckBox125)
+                    .addComponent(jCheckBox122))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel36)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(orientacioLabel32)
+                    .addComponent(jCheckBox153)
+                    .addComponent(jCheckBox154))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox156, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox157, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox158))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox161, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox162)
+                    .addComponent(jCheckBox159, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox160, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox126)
+                    .addComponent(jCheckBox127)
+                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox163)
+                    .addComponent(jCheckBox164))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(orientacioLabel39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox165)
+                    .addComponent(jCheckBox166))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel11Layout.createSequentialGroup()
+                    .addGap(33, 33, 33)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox149)
+                        .addComponent(jCheckBox150))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox151)
+                        .addComponent(jCheckBox152))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jLabel47.setText("<html><b>IMPORTANT:</b><br>Existeix suficient informació disponible per valorar el nivell de limitació del subjecte respecte a les activitats fora de casa?<br><b><u>Si la resposta és No, faci més preguntes.</u></b>");
+
+        jLabel48.setText("<Html> <u> Activitats fora de casa: </u> Com ara anar a l'església, visitar amics o la família, activitats polítiques, associacions professionals com el Col·legi d'Advocats, altres grups professionals, clubs socials, organitzacions professionals amb activitat assistencial, programes educatius.");
+
+        jLabel49.setText("<html><b>* Si us plau, afegiu anotacions si cal per aclarir el nivell de funcionament del subjecte en aquesta àrea.");
+
+        javax.swing.GroupLayout memoriaPanel4Layout = new javax.swing.GroupLayout(memoriaPanel4);
+        memoriaPanel4.setLayout(memoriaPanel4Layout);
+        memoriaPanel4Layout.setHorizontalGroup(
+            memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(memoriaPanel4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        memoriaPanel4Layout.setVerticalGroup(
+            memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel57.setText("Fulla de Valoració Clínica de Demència");
+
+        javax.swing.GroupLayout CDRPanel4Layout = new javax.swing.GroupLayout(CDRPanel4);
+        CDRPanel4.setLayout(CDRPanel4Layout);
+        CDRPanel4Layout.setHorizontalGroup(
+            CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(memoriaPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CDRPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel57)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CDRPanel4Layout.setVerticalGroup(
+            CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel57)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(memoriaPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        CDRScroll5.setViewportView(CDRPanel4);
+
+        CDRTab.add(CDRScroll5, "card4");
+
+        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel56.setText("Fulla de Valoració Clínica de Demència");
+
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes sobre les activitats domèstiques i les aficions per l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         orientacioLabel16.setText("1a. Quins canvis s'han produït en la seva capacitat per realitzar les tasques domèstiques?");
 
@@ -1630,15 +2177,18 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         orientacioLabel44.setText("4. Habilitat per realitzar les tasques domèstiques");
 
+        cdrHabilitatBtnGroup.add(jCheckBox38);
         jCheckBox38.setToolTipText("");
         jCheckBox38.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox38.setLabel("<html><center>Sense pèrdua<br>0");
         jCheckBox38.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrHabilitatBtnGroup.add(jCheckBox39);
         jCheckBox39.setText("<html><br>0,5");
         jCheckBox39.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox39.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrHabilitatBtnGroup.add(jCheckBox40);
         jCheckBox40.setText("<html><center>Pèrdua greu<br>1");
         jCheckBox40.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox40.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
@@ -1651,14 +2201,19 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         jLabel50.setText("5. De quina manera és capaç ell / a de realitzar les tasques domèstiques? (Trieu una resposta. No cal preguntar a l'informador directament.)");
 
+        cdrTasquesDomestiquesBtnGroup.add(jCheckBox41);
         jCheckBox41.setText("<html><u>Cap funció significativa.</u> (Realitza activitats senzilles com fer el llit, però sota una supervisió exhaustiva)");
 
+        cdrTasquesDomestiquesBtnGroup.add(jCheckBox42);
         jCheckBox42.setText("<html><u>Funcions només en activitats limitades.</u> (Amb alguna supervisió, renta els plats amb una neteja acceptable, posa la taula)");
 
+        cdrTasquesDomestiquesBtnGroup.add(jCheckBox46);
         jCheckBox46.setText("<html><u>Funcions amb independència en algunes activitats.</u> (Maneja electrodomèstics, com per exemple, l'aspirador; prepara menjars senzills)");
 
+        cdrTasquesDomestiquesBtnGroup.add(jCheckBox55);
         jCheckBox55.setText("<Html> <u> Funcions en activitats habituals però no al nivell habitual.");
 
+        cdrTasquesDomestiquesBtnGroup.add(jCheckBox56);
         jCheckBox56.setText("<Html> <u> Funció normal en activitats habituals.");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -1731,24 +2286,27 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         jLabel51.setText("<Html> <u> Aficions:</u> Cosir, pintar, fer manualitats, llegir, entreteniments, fotografia, jardineria, anar al teatre o a un concert, fusteria, fer esport.");
 
-        javax.swing.GroupLayout memoriaPanel3Layout = new javax.swing.GroupLayout(memoriaPanel3);
-        memoriaPanel3.setLayout(memoriaPanel3Layout);
-        memoriaPanel3Layout.setHorizontalGroup(
-            memoriaPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(memoriaPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout CDRPanel3Layout = new javax.swing.GroupLayout(CDRPanel3);
+        CDRPanel3.setLayout(CDRPanel3Layout);
+        CDRPanel3Layout.setHorizontalGroup(
+            CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(memoriaPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel56)
                     .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1037, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        memoriaPanel3Layout.setVerticalGroup(
-            memoriaPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(memoriaPanel3Layout.createSequentialGroup()
+        CDRPanel3Layout.setVerticalGroup(
+            CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel3Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel56)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1758,434 +2316,36 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(430, Short.MAX_VALUE))
-        );
-
-        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel56.setText("Fulla de Valoració Clínica de Demència");
-
-        javax.swing.GroupLayout CDRPanel3Layout = new javax.swing.GroupLayout(CDRPanel3);
-        CDRPanel3.setLayout(CDRPanel3Layout);
-        CDRPanel3Layout.setHorizontalGroup(
-            CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CDRPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(memoriaPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(CDRPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel56)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        CDRPanel3Layout.setVerticalGroup(
-            CDRPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel56)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(memoriaPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         CDRScroll4.setViewportView(CDRPanel3);
 
-        CDRTab.add(CDRScroll4, "card4");
-
-        memoriaPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes d'activitats fora de casa per l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Laboral", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        orientacioLabel28.setText("<html>1. Segueix treballant el subjecte? <br>Si no s'aplica, aneu a la pregunta 4 <br>Si la resposta és \"sí\", aneu a la pregunta 3 <br>Si la resposta és \"no\", aneu a la pregunta 2");
-
-        diaMesBtnGroup.add(jCheckBox105);
-        jCheckBox105.setText("No s'aplica");
-
-        diaMesBtnGroup.add(jCheckBox113);
-        jCheckBox113.setText("No");
-
-        diaMesBtnGroup.add(jCheckBox114);
-        jCheckBox114.setText("Sí");
-
-        orientacioLabel29.setText("2. Els problemes de raonament o de memòria van contribuir a la decisió del subjecte per jubilar-se? (Segueixi amb la pregunta 4)");
-
-        jCheckBox115.setText("Sí");
-
-        jCheckBox116.setText("No");
-
-        jCheckBox117.setText("No ho sé");
-
-        orientacioLabel30.setText("3. Té el subjecte alguna dificultat important en el seu treball a causa de problemes de memòria o raonament?");
-
-        jCheckBox118.setText("Quasi mai o mai");
-
-        jCheckBox119.setText("De vegades");
-
-        jCheckBox120.setText("Moltes vegades");
-
-        jCheckBox121.setText("No ho sé");
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(orientacioLabel29)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jCheckBox115)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox116)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox117))
-                            .addComponent(orientacioLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox105)
-                            .addComponent(jCheckBox113)
-                            .addComponent(jCheckBox114)))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jCheckBox118)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox119)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox120)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox121))
-                    .addComponent(orientacioLabel30))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(orientacioLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jCheckBox114)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox113)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox105)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(orientacioLabel29)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox115)
-                    .addComponent(jCheckBox116)
-                    .addComponent(jCheckBox117))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(orientacioLabel30)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox118)
-                    .addComponent(jCheckBox119)
-                    .addComponent(jCheckBox120)
-                    .addComponent(jCheckBox121))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Social", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        orientacioLabel31.setText("4. Ha conduït mai un cotxe?");
-
-        jCheckBox122.setText("Sí");
-
-        jCheckBox125.setText("No");
-
-        orientacioLabel32.setText("5. Si ell/ella encara condueix, té problemes o riscos degut a una ecassa capacitat de raonament?");
-
-        orientacioLabel33.setText("*6. És capaç de fer ell/ella sol/sola les compres que necessita?");
-
-        orientacioLabel34.setText("7. És ell/ella capaç de realitzar independentment activitats fora de casa?");
-
-        jCheckBox126.setText("Sí");
-
-        jCheckBox127.setText("No, perquè:");
-
-        orientacioLabel35.setText("8. Exerceix funcions socials fora de la casa?");
-
-        orientacioLabel36.setText("Condueix un cotxe actualment?");
-
-        jCheckBox149.setText("Sí");
-
-        jCheckBox150.setText("No");
-
-        orientacioLabel37.setText("Si no condueix, es degut a problemes de raonament o de memòria?");
-
-        jCheckBox151.setText("Sí");
-
-        jCheckBox152.setText("No");
-
-        jCheckBox153.setText("Sí");
-
-        jCheckBox154.setText("No");
-
-        jCheckBox155.setText("<html>Quasi mai o mai<br>(Necessita que l'acompanyin<br>per realitzar qualsevol compra)");
-
-        jCheckBox156.setText("<html>De vegades<br>(Compra poques coses;<br>compra coses per duplicat<br>o oblida comprar coses que necessita)");
-
-        jCheckBox157.setText("<html>Moltes vegades");
-
-        jCheckBox158.setText("No ho sé");
-
-        jCheckBox159.setText("<html>Quasi mai o mai<br>(Generalment es incapaç de<br>realitzar activitats sense ajuda)");
-
-        jCheckBox160.setText("<html>De vegades (Limitades i/o rutinàries,<br>per ex. participació superficial<br>a misa o en reunions,<br>anar a un saló de bellesa)");
-
-        jCheckBox161.setText("<html>Moltes vegades<br>(Participació segnificativa<br>en activitats, per ex. votar)");
-
-        jCheckBox162.setText("No ho sé");
-
-        orientacioLabel38.setText("9. Un observador casual del comportament del subjecte, pensaria que està malalt?");
-
-        jCheckBox163.setText("Sí");
-
-        jCheckBox164.setText("No");
-
-        jCheckBox165.setText("Sí");
-
-        jCheckBox166.setText("No");
-
-        orientacioLabel39.setText("10. Si és en una residència, ¿participa activament en les activitats socials (participació intel·lectual)?");
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap(400, Short.MAX_VALUE)
-                .addComponent(jCheckBox161, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox162)
-                .addGap(14, 14, 14))
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(orientacioLabel31)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox122)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox125)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel11Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(orientacioLabel33)
-                        .addComponent(orientacioLabel39)
-                        .addGroup(jPanel11Layout.createSequentialGroup()
-                            .addComponent(orientacioLabel32)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jCheckBox153)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jCheckBox154))
-                        .addComponent(orientacioLabel35)
-                        .addComponent(orientacioLabel34)
-                        .addComponent(orientacioLabel38)
-                        .addGroup(jPanel11Layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addComponent(jCheckBox165)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox166))
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addComponent(jCheckBox163)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox164))
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addComponent(jCheckBox159, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox160, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addComponent(jCheckBox155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox156, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox157, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox158))
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(orientacioLabel37)
-                                        .addGroup(jPanel11Layout.createSequentialGroup()
-                                            .addComponent(orientacioLabel36)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jCheckBox149)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jCheckBox150)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox151)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox152))
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addComponent(jCheckBox126)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox127)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addContainerGap(63, Short.MAX_VALUE)))
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(orientacioLabel31)
-                    .addComponent(jCheckBox125)
-                    .addComponent(jCheckBox122))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox161, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox162))
-                .addGap(164, 164, 164))
-            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel11Layout.createSequentialGroup()
-                    .addGap(33, 33, 33)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(orientacioLabel36)
-                        .addComponent(jCheckBox149)
-                        .addComponent(jCheckBox150))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(orientacioLabel37)
-                        .addComponent(jCheckBox151)
-                        .addComponent(jCheckBox152))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(orientacioLabel32)
-                        .addComponent(jCheckBox153)
-                        .addComponent(jCheckBox154))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(orientacioLabel33)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jCheckBox155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jCheckBox156, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jCheckBox157, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jCheckBox158))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(orientacioLabel34)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jCheckBox159, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jCheckBox160, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(orientacioLabel35)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jCheckBox126)
-                        .addComponent(jCheckBox127)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(orientacioLabel38)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jCheckBox163)
-                        .addComponent(jCheckBox164))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(orientacioLabel39)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jCheckBox165)
-                        .addComponent(jCheckBox166))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-
-        jLabel47.setText("<html><b>IMPORTANT:</b><br>Existeix suficient informació disponible per valorar el nivell de limitació del subjecte respecte a les activitats fora de casa?<br><b><u>Si la resposta és No, faci més preguntes.</u></b>");
-
-        jLabel48.setText("<Html> <u> Activitats fora de casa: </u> Com ara anar a l'església, visitar amics o la família, activitats polítiques, associacions professionals com el Col·legi d'Advocats, altres grups professionals, clubs socials, organitzacions professionals amb activitat assistencial, programes educatius.");
-
-        jLabel49.setText("<html><b>* Si us plau, afegiu anotacions si cal per aclarir el nivell de funcionament del subjecte en aquesta àrea.");
-
-        javax.swing.GroupLayout memoriaPanel4Layout = new javax.swing.GroupLayout(memoriaPanel4);
-        memoriaPanel4.setLayout(memoriaPanel4Layout);
-        memoriaPanel4Layout.setHorizontalGroup(
-            memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(memoriaPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(memoriaPanel4Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 739, Short.MAX_VALUE))
-        );
-        memoriaPanel4Layout.setVerticalGroup(
-            memoriaPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(memoriaPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(368, Short.MAX_VALUE))
-        );
-
-        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel57.setText("Fulla de Valoració Clínica de Demència");
-
-        javax.swing.GroupLayout CDRPanel4Layout = new javax.swing.GroupLayout(CDRPanel4);
-        CDRPanel4.setLayout(CDRPanel4Layout);
-        CDRPanel4Layout.setHorizontalGroup(
-            CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CDRPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(memoriaPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(CDRPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel57)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        CDRPanel4Layout.setVerticalGroup(
-            CDRPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel57)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(memoriaPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        CDRScroll5.setViewportView(CDRPanel4);
-
-        CDRTab.add(CDRScroll5, "card5");
+        CDRTab.add(CDRScroll4, "card5");
 
         memoriaPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes respecte a la cura personal per l'informador:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>A. Vestir-se<br>(The Dementia Scale of Blessed)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        cdrVestirBtnGroup.add(jCheckBox57);
         jCheckBox57.setText("0");
         jCheckBox57.setToolTipText("");
         jCheckBox57.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox57.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrVestirBtnGroup.add(jCheckBox58);
         jCheckBox58.setText("1");
         jCheckBox58.setToolTipText("");
         jCheckBox58.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox58.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrVestirBtnGroup.add(jCheckBox59);
         jCheckBox59.setText("2");
         jCheckBox59.setToolTipText("");
         jCheckBox59.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox59.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrVestirBtnGroup.add(jCheckBox60);
         jCheckBox60.setText("3");
         jCheckBox60.setToolTipText("");
         jCheckBox60.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2263,21 +2423,25 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         jLabel64.setText("<html><center>Sempre o quasi sempre<br>necessita ajuda");
 
+        cdrRentarBtnGroup.add(jCheckBox61);
         jCheckBox61.setText("3");
         jCheckBox61.setToolTipText("");
         jCheckBox61.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox61.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrRentarBtnGroup.add(jCheckBox62);
         jCheckBox62.setText("2");
         jCheckBox62.setToolTipText("");
         jCheckBox62.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox62.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrRentarBtnGroup.add(jCheckBox99);
         jCheckBox99.setText("1");
         jCheckBox99.setToolTipText("");
         jCheckBox99.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox99.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrRentarBtnGroup.add(jCheckBox100);
         jCheckBox100.setText("0");
         jCheckBox100.setToolTipText("");
         jCheckBox100.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2339,6 +2503,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         jLabel65.setText("<html><center>Net/a; utilitza<br>els coberts<br>correctament");
 
+        cdrHabitsBtnGroup.add(jCheckBox101);
         jCheckBox101.setText("0");
         jCheckBox101.setToolTipText("");
         jCheckBox101.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2350,16 +2515,19 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         jLabel68.setText("<html><center>Ha de ser alimentat/da<br>per complet");
 
+        cdrHabitsBtnGroup.add(jCheckBox102);
         jCheckBox102.setText("2");
         jCheckBox102.setToolTipText("");
         jCheckBox102.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox102.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrHabitsBtnGroup.add(jCheckBox103);
         jCheckBox103.setText("3");
         jCheckBox103.setToolTipText("");
         jCheckBox103.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox103.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrHabitsBtnGroup.add(jCheckBox104);
         jCheckBox104.setText("1");
         jCheckBox104.setToolTipText("");
         jCheckBox104.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2418,6 +2586,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         jLabel69.setText("<html><center>Control complet<br>normal");
 
+        cdrEsfintersBtnGroup.add(jCheckBox106);
         jCheckBox106.setText("0");
         jCheckBox106.setToolTipText("");
         jCheckBox106.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2429,16 +2598,19 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         jLabel72.setText("<html><center>Incontinent doble");
 
+        cdrEsfintersBtnGroup.add(jCheckBox107);
         jCheckBox107.setText("2");
         jCheckBox107.setToolTipText("");
         jCheckBox107.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox107.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrEsfintersBtnGroup.add(jCheckBox108);
         jCheckBox108.setText("3");
         jCheckBox108.setToolTipText("");
         jCheckBox108.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jCheckBox108.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        cdrEsfintersBtnGroup.add(jCheckBox109);
         jCheckBox109.setText("1");
         jCheckBox109.setToolTipText("");
         jCheckBox109.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2471,7 +2643,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addComponent(jCheckBox107)
                     .addGap(77, 77, 77)
                     .addComponent(jCheckBox108)
-                    .addContainerGap(83, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2514,7 +2686,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                         .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1133, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         memoriaPanel5Layout.setVerticalGroup(
             memoriaPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2531,7 +2703,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(848, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel58.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -2568,10 +2740,10 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         orientacioLabel17.setText("1. Té vostè problemes de memòria o de raonament?");
 
-        diaMesBtnGroup.add(jCheckBox112);
+        cdrMemo1BtnGroup.add(jCheckBox112);
         jCheckBox112.setText("Sí");
 
-        diaMesBtnGroup.add(jCheckBox123);
+        cdrMemo1BtnGroup.add(jCheckBox123);
         jCheckBox123.setText("No");
 
         orientacioLabel18.setText("<html>2. Fa una estona la seva (espòs/a, etc.) m'ha explicat algunes experiències recents que vostè ha tingut. Pot explicar-me alguna cosa d'elles?<br>(Demani detalls si cal, com el lloc de l'esdeveniment, l'hora, els participants, duració de l'esdeveniment, quan es va acabar o com el subjecte o altres participants van arribar allà.)");
@@ -2580,10 +2752,13 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         orientacioLabel24.setText("4. Quan va néixer vostè?");
 
+        cdrMemo2BtnGroup.add(jCheckBox173);
         jCheckBox173.setText("1.0 - En gran part correcte");
 
+        cdrMemo2BtnGroup.add(jCheckBox174);
         jCheckBox174.setText("0.5");
 
+        cdrMemo2BtnGroup.add(jCheckBox175);
         jCheckBox175.setText("0.0 - En gran part incorrecte");
 
         jTextArea4.setColumns(20);
@@ -2598,10 +2773,13 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jTextArea5.setRows(5);
         jScrollPane6.setViewportView(jTextArea5);
 
+        cdrMemo3BtnGroup.add(jCheckBox176);
         jCheckBox176.setText("1.0 - En gran part correcte");
 
+        cdrMemo3BtnGroup.add(jCheckBox177);
         jCheckBox177.setText("0.5");
 
+        cdrMemo3BtnGroup.add(jCheckBox178);
         jCheckBox178.setText("1.0 - En gran part incorrecte");
 
         jLabel77.setText("Elements");
@@ -2839,7 +3017,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                             .addComponent(orientacioLabel24)
                             .addGap(18, 18, 18)
                             .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(1180, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         memoriaPanel6Layout.setVerticalGroup(
             memoriaPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2987,8 +3165,9 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel74)
-                .addGap(17, 17, 17)
-                .addComponent(memoriaPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(memoriaPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         CDRScroll7.setViewportView(CDRPanel6);
@@ -3003,48 +3182,64 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         orientacioLabel49.setText("2. A quin dia de la setmana estem?");
 
+        orientacioBtnGroup2.add(jCheckBox124);
         jCheckBox124.setText("Correcte");
 
+        orientacioBtnGroup2.add(jCheckBox128);
         jCheckBox128.setText("Incorrecte");
 
+        orientacioBtnGroup1.add(jCheckBox129);
         jCheckBox129.setText("Correcte");
 
+        orientacioBtnGroup1.add(jCheckBox130);
         jCheckBox130.setText("Incorrecte");
 
         orientacioLabel50.setText("3. A quin mes estem?");
 
+        orientacioBtnGroup3.add(jCheckBox131);
         jCheckBox131.setText("Correcte");
 
+        orientacioBtnGroup3.add(jCheckBox132);
         jCheckBox132.setText("Incorrecte");
 
         orientacioLabel51.setText("4. A quin any estem?");
 
+        orientacioBtnGroup4.add(jCheckBox133);
         jCheckBox133.setText("Correcte");
 
+        orientacioBtnGroup4.add(jCheckBox134);
         jCheckBox134.setText("Incorrecte");
 
         orientacioLabel52.setText("5. Com es diu aquest lloc?");
 
+        orientacioBtnGroup5.add(jCheckBox135);
         jCheckBox135.setText("Correcte");
 
+        orientacioBtnGroup5.add(jCheckBox136);
         jCheckBox136.setText("Incorrecte");
 
         orientacioLabel53.setText("6. A quina ciutat o poble estem?");
 
+        orientacioBtnGroup6.add(jCheckBox137);
         jCheckBox137.setText("Correcte");
 
+        orientacioBtnGroup6.add(jCheckBox138);
         jCheckBox138.setText("Incorrecte");
 
         orientacioLabel54.setText("7. Quina hora és?");
 
+        orientacioBtnGroup7.add(jCheckBox139);
         jCheckBox139.setText("Correcte");
 
+        orientacioBtnGroup7.add(jCheckBox140);
         jCheckBox140.setText("Incorrecte");
 
         orientacioLabel55.setText("8. Sap el subjecte qui és l'informador (segons l'opinió de l'entrevistador)?");
 
+        orientacioBtnGroup8.add(jCheckBox141);
         jCheckBox141.setText("Correcte");
 
+        orientacioBtnGroup8.add(jCheckBox142);
         jCheckBox142.setText("Incorrecte");
 
         javax.swing.GroupLayout memoriaPanel7Layout = new javax.swing.GroupLayout(memoriaPanel7);
@@ -3177,7 +3372,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCheckBox141)
                     .addComponent(jCheckBox142))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel123.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -3201,261 +3396,682 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel123)
-                .addGap(17, 17, 17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(memoriaPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(22, 22, 22))
         );
 
         CDRScroll8.setViewportView(CDRPanel7);
 
         CDRTab.add(CDRScroll8, "card8");
 
+        memoriaPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes de raonament i solució de problemes per al subjecte:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>Similituds:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel133.setText("Exemple: \"¿En què s'assemblen un llapis i un bolígraf?\" (Instruments per escriure)");
+
+        jLabel134.setText("\"¿En què s'assemblen aquestes coses?\"");
+
+        jLabel135.setText("Resposta del subjecte");
+
+        jLabel136.setText("1. Pastanaga ... Coliflor");
+
+        raoBtnGroup1.add(jCheckBox201);
+        jCheckBox201.setText("(0 = verdures)");
+
+        raoBtnGroup1.add(jCheckBox202);
+        jCheckBox202.setText("(1 = aliments comestibles, coses vives, es poden cuinar, etc.)");
+
+        raoBtnGroup1.add(jCheckBox203);
+        jCheckBox203.setText("(2 = respostes inadecuades; diferències; es compren)");
+
+        jLabel137.setText("Resposta del subjecte");
+
+        jLabel138.setText("2. Taula ... Llibreria");
+
+        raoBtnGroup2.add(jCheckBox204);
+        jCheckBox204.setText("(0 = mobles, moble d'oficina, en els dos s'hi posen llibres)");
+
+        raoBtnGroup2.add(jCheckBox205);
+        jCheckBox205.setText("(1 = de fusta, tenen potes)");
+
+        raoBtnGroup2.add(jCheckBox206);
+        jCheckBox206.setText("(2 = respostes inadecuades; diferències; es compren)");
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addComponent(jLabel138)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(jLabel137)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jTextField25)))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox202)
+                            .addComponent(jCheckBox201)
+                            .addComponent(jCheckBox203)
+                            .addComponent(jCheckBox205)
+                            .addComponent(jCheckBox204)
+                            .addComponent(jCheckBox206))
+                        .addGap(186, 186, 186))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel133)
+                                    .addComponent(jLabel134))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(jLabel136)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel17Layout.createSequentialGroup()
+                                        .addComponent(jLabel135)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jTextField24))))
+                        .addContainerGap())))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel133)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel134)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel135)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel136)
+                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox201)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox202)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox203)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel137)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel138)
+                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox204)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox205)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox206)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>Càlculs", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel109.setText("5. Quantes pessetes hi ha en un duro?");
+
+        raoBtnGroup5.add(jCheckBox110);
+        jCheckBox110.setText("Correcte");
+
+        raoBtnGroup5.add(jCheckBox111);
+        jCheckBox111.setText("Incorrecte");
+
+        raoBtnGroup6.add(jCheckBox143);
+        jCheckBox143.setText("Incorrecte");
+
+        raoBtnGroup6.add(jCheckBox144);
+        jCheckBox144.setText("Correcte");
+
+        jLabel151.setText("6. Quants duros es necessiten per tenir 135 pts?");
+
+        jLabel152.setText("7. Començant a partir de 20, vagi restant de 3 en 3.");
+
+        raoBtnGroup7.add(jCheckBox217);
+        jCheckBox217.setText("Correcte");
+
+        raoBtnGroup7.add(jCheckBox219);
+        jCheckBox219.setText("Incorrecte");
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel18Layout.createSequentialGroup()
+                            .addComponent(jLabel151)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jCheckBox144)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jCheckBox143))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel18Layout.createSequentialGroup()
+                            .addComponent(jLabel109)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jCheckBox110)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jCheckBox111)))
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addComponent(jLabel152)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox217)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox219)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel109)
+                    .addComponent(jCheckBox110)
+                    .addComponent(jCheckBox111))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel151)
+                    .addComponent(jCheckBox144)
+                    .addComponent(jCheckBox143))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel152)
+                    .addComponent(jCheckBox217)
+                    .addComponent(jCheckBox219))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Raonament", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel104.setText("8. Si vostè arribés a una ciutat nova, com localitzaria a un amic que li agradaria veure?");
+
+        raoBtnGroup8.add(jCheckBox145);
+        jCheckBox145.setText("<html>(0 = buscar-lo a l'agenda de telèfons, a la guía de telèfons de la ciutat,<br>anar a l'ajuntament a demanar el padró, trucar un amic comú)");
+
+        raoBtnGroup8.add(jCheckBox146);
+        jCheckBox146.setText("(1 = trucar a la policia, trucar a telefònica (normalment no donen la direcció==");
+
+        raoBtnGroup8.add(jCheckBox147);
+        jCheckBox147.setText("(2 = sense resposta clara)");
+
+        jLabel105.setText("<html>9. Valoració del pacient de la seva pròpia discapacitat i de la seva situació actual, i el grau de comprensió del motiu<br> pel qual està sent explorat/da (aquest temà potser ja s'ha examinat, però digui la seva opinió personal):");
+
+        raoBtnGroup9.add(jCheckBox148);
+        jCheckBox148.setText("Bona percepció");
+
+        raoBtnGroup9.add(jCheckBox220);
+        jCheckBox220.setText("Percepció parcial");
+
+        raoBtnGroup9.add(jCheckBox221);
+        jCheckBox221.setText("Poca percepció");
+
+        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
+        jPanel19.setLayout(jPanel19Layout);
+        jPanel19Layout.setHorizontalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel19Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel104)
+                    .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel19Layout.createSequentialGroup()
+                                .addComponent(jCheckBox148)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox220)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox221))
+                            .addComponent(jCheckBox146)
+                            .addComponent(jCheckBox145, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox147))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel19Layout.setVerticalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel19Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel104)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox145, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox146)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox147)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox148)
+                    .addComponent(jCheckBox220)
+                    .addComponent(jCheckBox221))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel122.setText("Instruccions: Si la resposta inicial del subjecte no correspon a un grau 0, insisteixi per assegurar la millor comprensió possible del problema per part del subjecte. Seleccioneu la resposta que consideri més aproximada.");
+
+        jPanel22.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>Diferències:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel145.setText("Exemple: \"¿En què es diferencien el sucre i el vinagre?\" (dolç / amarg)");
+
+        jLabel146.setText("\"¿En què es diferencien aquestes coses?\"");
+
+        jLabel147.setText("Resposta del subjecte");
+
+        jLabel148.setText("3. Mentida ... Error");
+
+        raoBtnGroup3.add(jCheckBox213);
+        jCheckBox213.setText("(0 = una intencionada, l'altra sense intenció)");
+
+        raoBtnGroup3.add(jCheckBox214);
+        jCheckBox214.setText("(1 = una dolenta, l'altra bona o només n'explica una)");
+
+        raoBtnGroup3.add(jCheckBox215);
+        jCheckBox215.setText("(2 = qualsevol altra cosa, similituds)");
+
+        jLabel149.setText("Resposta del subjecte");
+
+        jLabel150.setText("4. Riu ... Canal");
+
+        raoBtnGroup4.add(jCheckBox216);
+        jCheckBox216.setText("(0 = natural / artificial)");
+
+        raoBtnGroup4.add(jCheckBox218);
+        jCheckBox218.setText("(2 = qualsevol altra cosa)");
+
+        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
+        jPanel22.setLayout(jPanel22Layout);
+        jPanel22Layout.setHorizontalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addComponent(jLabel150)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel22Layout.createSequentialGroup()
+                                .addComponent(jLabel149)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jTextField29)))
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox214)
+                            .addComponent(jCheckBox213)
+                            .addComponent(jCheckBox215)
+                            .addComponent(jCheckBox216)
+                            .addComponent(jCheckBox218))
+                        .addGap(186, 186, 186))
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel22Layout.createSequentialGroup()
+                                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel145)
+                                    .addComponent(jLabel146))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel22Layout.createSequentialGroup()
+                                .addComponent(jLabel148)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel22Layout.createSequentialGroup()
+                                        .addComponent(jLabel147)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jTextField28))))
+                        .addContainerGap())))
+        );
+        jPanel22Layout.setVerticalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel145)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel146)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel147)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel148)
+                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox213)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox214)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox215)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel149)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel150)
+                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox216)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox218)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout memoriaPanel8Layout = new javax.swing.GroupLayout(memoriaPanel8);
+        memoriaPanel8.setLayout(memoriaPanel8Layout);
+        memoriaPanel8Layout.setHorizontalGroup(
+            memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memoriaPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel122)
+                    .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(memoriaPanel8Layout.createSequentialGroup()
+                            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(memoriaPanel8Layout.createSequentialGroup()
+                            .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        memoriaPanel8Layout.setVerticalGroup(
+            memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memoriaPanel8Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel122)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jLabel121.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel121.setText("Fulla de Valoració Clínica de Demència");
+
+        javax.swing.GroupLayout CDRPanel9Layout = new javax.swing.GroupLayout(CDRPanel9);
+        CDRPanel9.setLayout(CDRPanel9Layout);
+        CDRPanel9Layout.setHorizontalGroup(
+            CDRPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CDRPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CDRPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(memoriaPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CDRPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel121)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CDRPanel9Layout.setVerticalGroup(
+            CDRPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel121)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(memoriaPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        CDRScroll10.setViewportView(CDRPanel9);
+
+        CDRTab.add(CDRScroll10, "card9");
+
         CDRPanel8.setLayout(new java.awt.GridBagLayout());
 
         jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VALORACIÓ CLÍNICA DE DEMÈNCA (CDR)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         jPanel16.setLayout(new java.awt.GridBagLayout());
 
-        cdrMemoriaBtnGroup.add(jToggleButton1);
-        jToggleButton1.setText("<html>Sense pèrdua de memòria<br>o lleus oblits inconstants");
+        cdrMemoriaBtnGroup.add(memoBtn1);
+        memoBtn1.setText("<html>Sense pèrdua de memòria<br>o lleus oblits inconstants");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton1, gridBagConstraints);
+        jPanel16.add(memoBtn1, gridBagConstraints);
 
-        cdrOrientacioBtnGroup.add(jToggleButton2);
-        jToggleButton2.setText("Completament orientat");
+        cdrOrientacioBtnGroup.add(orientacioBtn1);
+        orientacioBtn1.setText("Completament orientat");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton2, gridBagConstraints);
+        jPanel16.add(orientacioBtn1, gridBagConstraints);
 
-        cdrOrientacioBtnGroup.add(jToggleButton3);
-        jToggleButton3.setText("<html>Completament orientat<br>però amb lleu dificultat<br>per les relacions temporals");
+        cdrOrientacioBtnGroup.add(orientacioBtn2);
+        orientacioBtn2.setText("<html>Completament orientat<br>però amb lleu dificultat<br>per les relacions temporals");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton3, gridBagConstraints);
+        jPanel16.add(orientacioBtn2, gridBagConstraints);
 
-        cdrMemoriaBtnGroup.add(jToggleButton4);
-        jToggleButton4.setText("<html>Oblits lleus constants;<br>recol·lecció parcial <br>d'esdeveniments; <br>oblits \"benignes\"");
+        cdrMemoriaBtnGroup.add(memoBtn2);
+        memoBtn2.setText("<html>Oblits lleus constants;<br>recol·lecció parcial <br>d'esdeveniments; <br>oblits \"benignes\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton4, gridBagConstraints);
+        jPanel16.add(memoBtn2, gridBagConstraints);
 
-        cdrOrientacioBtnGroup.add(jToggleButton5);
-        jToggleButton5.setText("<html>Dificultat moderada amb<br>les relacions temporals;<br>orientat en el lloc de l'exàmen;<br>pot tenir una mica de<br>desorientació geogràfica en un<br>altre lloc");
+        cdrOrientacioBtnGroup.add(orientacioBtn3);
+        orientacioBtn3.setText("<html>Dificultat moderada amb<br>les relacions temporals;<br>orientat en el lloc de l'exàmen;<br>pot tenir una mica de<br>desorientació geogràfica en un<br>altre lloc");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton5, gridBagConstraints);
+        jPanel16.add(orientacioBtn3, gridBagConstraints);
 
-        cdrMemoriaBtnGroup.add(jToggleButton6);
-        jToggleButton6.setText("<html>Pèrdua moderada de memòria;<br>més marcada per a<br>esdeveniments recents;<br>el defecte interfereix amb<br>les activitats diàries");
+        cdrMemoriaBtnGroup.add(memoBtn3);
+        memoBtn3.setText("<html>Pèrdua moderada de memòria;<br>més marcada per a<br>esdeveniments recents;<br>el defecte interfereix amb<br>les activitats diàries");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton6, gridBagConstraints);
+        jPanel16.add(memoBtn3, gridBagConstraints);
 
-        cdrOrientacioBtnGroup.add(jToggleButton7);
-        jToggleButton7.setText("<html>Dificultat greu amb les<br>relacions temporals;<br>habitualment desorientat<br>en el temps; sovint en el lloc");
+        cdrOrientacioBtnGroup.add(orientacioBtn4);
+        orientacioBtn4.setText("<html>Dificultat greu amb les<br>relacions temporals;<br>habitualment desorientat<br>en el temps; sovint en el lloc");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton7, gridBagConstraints);
+        jPanel16.add(orientacioBtn4, gridBagConstraints);
 
-        cdrMemoriaBtnGroup.add(jToggleButton8);
-        jToggleButton8.setText("<Html> Pèrdua greu de memòria;<br> només reté matèries<br>amb molt aprenentatge;<br> matèries noves es perden<br> amb rapidesa");
+        cdrMemoriaBtnGroup.add(memoBtn4);
+        memoBtn4.setText("<Html> Pèrdua greu de memòria;<br> només reté matèries<br>amb molt aprenentatge;<br> matèries noves es perden<br> amb rapidesa");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton8, gridBagConstraints);
+        jPanel16.add(memoBtn4, gridBagConstraints);
 
-        cdrMemoriaBtnGroup.add(jToggleButton9);
-        jToggleButton9.setText("<html>Pèrdua greu de memòria;<br>només reté fragments");
+        cdrMemoriaBtnGroup.add(memoBtn5);
+        memoBtn5.setText("<html>Pèrdua greu de memòria;<br>només reté fragments");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        jPanel16.add(jToggleButton9, gridBagConstraints);
+        jPanel16.add(memoBtn5, gridBagConstraints);
 
-        cdrOrientacioBtnGroup.add(jToggleButton10);
-        jToggleButton10.setText("<html>Orientat només<br>en persona");
+        cdrOrientacioBtnGroup.add(orientacioBtn5);
+        orientacioBtn5.setText("<html>Orientat només<br>en persona");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        jPanel16.add(jToggleButton10, gridBagConstraints);
+        jPanel16.add(orientacioBtn5, gridBagConstraints);
 
-        cdrRaonamentBtnGroup.add(jToggleButton11);
-        jToggleButton11.setText("<html>Resol els problemes<br>diàris i s'encarrega bé<br>dels negòcis i finances;<br> raonament bo amb relació<br>al comportament prèvi");
+        cdrRaonamentBtnGroup.add(raoBtn1);
+        raoBtn1.setText("<html>Resol els problemes<br>diàris i s'encarrega bé<br>dels negòcis i finances;<br> raonament bo amb relació<br>al comportament prèvi");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton11, gridBagConstraints);
+        jPanel16.add(raoBtn1, gridBagConstraints);
 
-        cdrRaonamentBtnGroup.add(jToggleButton12);
-        jToggleButton12.setText("<html>Lleu dificultat per<br>resoldre problemes,<br>similituds i diferències");
+        cdrRaonamentBtnGroup.add(raoBtn2);
+        raoBtn2.setText("<html>Lleu dificultat per<br>resoldre problemes,<br>similituds i diferències");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton12, gridBagConstraints);
+        jPanel16.add(raoBtn2, gridBagConstraints);
 
-        cdrRaonamentBtnGroup.add(jToggleButton13);
-        jToggleButton13.setText("<html>Incapaç de raonar o<br>resoldre problemes");
+        cdrRaonamentBtnGroup.add(raoBtn5);
+        raoBtn5.setText("<html>Incapaç de raonar o<br>resoldre problemes");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        jPanel16.add(jToggleButton13, gridBagConstraints);
+        jPanel16.add(raoBtn5, gridBagConstraints);
 
-        cdrRaonamentBtnGroup.add(jToggleButton14);
-        jToggleButton14.setText("<html>Dificultat moderada per<br>afrontar problemes, similituds<br>i diferències; raonament social<br>habitual mantingut");
+        cdrRaonamentBtnGroup.add(raoBtn3);
+        raoBtn3.setText("<html>Dificultat moderada per<br>afrontar problemes, similituds<br>i diferències; raonament social<br>habitual mantingut");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton14, gridBagConstraints);
+        jPanel16.add(raoBtn3, gridBagConstraints);
 
-        cdrRaonamentBtnGroup.add(jToggleButton15);
-        jToggleButton15.setText("<html>Grans dificultats per<br>fer front a problemes,<br>similituts i diferències;<br>judici social habitual limitat");
+        cdrRaonamentBtnGroup.add(raoBtn4);
+        raoBtn4.setText("<html>Grans dificultats per<br>fer front a problemes,<br>similituts i diferències;<br>judici social habitual limitat");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton15, gridBagConstraints);
+        jPanel16.add(raoBtn4, gridBagConstraints);
 
-        cdrForaCasaBtnGroup.add(jToggleButton16);
-        jToggleButton16.setText("<html>Funció independent al seu<br> nivell habitual en la feina,<br>compres, voluntariat<br>i agrupacions socials");
+        cdrForaCasaBtnGroup.add(activitatsFBtn1);
+        activitatsFBtn1.setText("<html>Funció independent al seu<br> nivell habitual en la feina,<br>compres, voluntariat<br>i agrupacions socials");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton16, gridBagConstraints);
+        jPanel16.add(activitatsFBtn1, gridBagConstraints);
 
-        cdrForaCasaBtnGroup.add(jToggleButton17);
-        jToggleButton17.setText("<html>Lleu dificultat en<br>aquestes activitats");
+        cdrForaCasaBtnGroup.add(activitatsFBtn2);
+        activitatsFBtn2.setText("<html>Lleu dificultat en<br>aquestes activitats");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton17, gridBagConstraints);
+        jPanel16.add(activitatsFBtn2, gridBagConstraints);
 
-        cdrDomestiquesBtnGroup.add(jToggleButton18);
-        jToggleButton18.setText("<html>Vida a casa, aficions i<br>interessos intel·lectuals<br>ben conservats");
+        cdrDomestiquesBtnGroup.add(activitatsDBtn1);
+        activitatsDBtn1.setText("<html>Vida a casa, aficions i<br>interessos intel·lectuals<br>ben conservats");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton18, gridBagConstraints);
+        jPanel16.add(activitatsDBtn1, gridBagConstraints);
 
-        cdrForaCasaBtnGroup.add(jToggleButton19);
-        jToggleButton19.setText("<html>Lleu dificultat en<br>aquestes activitats");
+        cdrForaCasaBtnGroup.add(activitatsFBtn3);
+        activitatsFBtn3.setText("<html>Lleu dificultat en<br>aquestes activitats");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton19, gridBagConstraints);
+        jPanel16.add(activitatsFBtn3, gridBagConstraints);
 
-        cdrForaCasaBtnGroup.add(jToggleButton20);
-        jToggleButton20.setText("<html>Sembla estar prou bé<br>com per realitzar funcions<br>fora de casa");
+        cdrForaCasaBtnGroup.add(activitatsFBtn4);
+        activitatsFBtn4.setText("<html>Sembla estar prou bé<br>com per realitzar funcions<br>fora de casa");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton20, gridBagConstraints);
+        jPanel16.add(activitatsFBtn4, gridBagConstraints);
 
-        cdrForaCasaBtnGroup.add(jToggleButton21);
-        jToggleButton21.setText("<html>Sembla massa malalt/a<br>com per realitzar<br>funcions fora de casa");
+        cdrForaCasaBtnGroup.add(activitatsFBtn5);
+        activitatsFBtn5.setText("<html>Sembla massa malalt/a<br>com per realitzar<br>funcions fora de casa");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        jPanel16.add(jToggleButton21, gridBagConstraints);
+        jPanel16.add(activitatsFBtn5, gridBagConstraints);
 
-        cdrDomestiquesBtnGroup.add(jToggleButton22);
-        jToggleButton22.setText("<html>Sense funció significativa<br>a casa");
+        cdrDomestiquesBtnGroup.add(activitatsDBtn5);
+        activitatsDBtn5.setText("<html>Sense funció significativa<br>a casa");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        jPanel16.add(jToggleButton22, gridBagConstraints);
+        jPanel16.add(activitatsDBtn5, gridBagConstraints);
 
-        cdrDomestiquesBtnGroup.add(jToggleButton23);
-        jToggleButton23.setText("<html>Només realitza tasques<br>simples; interessos molt<br>restringits i mal mantinguts");
+        cdrDomestiquesBtnGroup.add(activitatsDBtn4);
+        activitatsDBtn4.setText("<html>Només realitza tasques<br>simples; interessos molt<br>restringits i mal mantinguts");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton23, gridBagConstraints);
+        jPanel16.add(activitatsDBtn4, gridBagConstraints);
 
-        cdrDomestiquesBtnGroup.add(jToggleButton24);
-        jToggleButton24.setText("<html>Vida a casa, aficions i<br>interessos intel·lectuals<br>una mica limitats");
+        cdrDomestiquesBtnGroup.add(activitatsDBtn2);
+        activitatsDBtn2.setText("<html>Vida a casa, aficions i<br>interessos intel·lectuals<br>una mica limitats");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton24, gridBagConstraints);
+        jPanel16.add(activitatsDBtn2, gridBagConstraints);
 
-        cdrDomestiquesBtnGroup.add(jToggleButton25);
-        jToggleButton25.setText("<html>Vida a casa, aficions<br>i interessos intel·lectuals<br>una mica limitats");
+        cdrDomestiquesBtnGroup.add(activitatsDBtn3);
+        activitatsDBtn3.setText("<html>Vida a casa, aficions<br>i interessos intel·lectuals<br>una mica limitats");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton25, gridBagConstraints);
+        jPanel16.add(activitatsDBtn3, gridBagConstraints);
 
-        cdrCuidatBtnGroup.add(jToggleButton26);
-        jToggleButton26.setText("Completament capaç de cuidar-se per si mateix/a");
+        cdrCuidatBtnGroup.add(cuidatBtn1);
+        cuidatBtn1.setText("Completament capaç de cuidar-se per si mateix/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton26, gridBagConstraints);
+        jPanel16.add(cuidatBtn1, gridBagConstraints);
 
-        cdrCuidatBtnGroup.add(jToggleButton27);
-        jToggleButton27.setText("Necessita recordatoris");
+        cdrCuidatBtnGroup.add(cuidatBtn2);
+        cuidatBtn2.setText("Necessita recordatoris");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton27, gridBagConstraints);
+        jPanel16.add(cuidatBtn2, gridBagConstraints);
 
-        cdrCuidatBtnGroup.add(jToggleButton28);
-        jToggleButton28.setText("<html>Requereix ajuda per<br>vestir-se, rentar-se i<br>encarregar-se dels seus<br>efectes personals");
+        cdrCuidatBtnGroup.add(cuidatBtn3);
+        cuidatBtn3.setText("<html>Requereix ajuda per<br>vestir-se, rentar-se i<br>encarregar-se dels seus<br>efectes personals");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        jPanel16.add(jToggleButton28, gridBagConstraints);
+        jPanel16.add(cuidatBtn3, gridBagConstraints);
 
-        cdrCuidatBtnGroup.add(jToggleButton29);
-        jToggleButton29.setText("<html>Requereix molta ajuda<br>per al seu cuidat personal;<br>incontinència freqüent");
+        cdrCuidatBtnGroup.add(cuidatBtn4);
+        cuidatBtn4.setText("<html>Requereix molta ajuda<br>per al seu cuidat personal;<br>incontinència freqüent");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        jPanel16.add(jToggleButton29, gridBagConstraints);
+        jPanel16.add(cuidatBtn4, gridBagConstraints);
 
         jLabel52.setText("<html><center>Cap<br>0");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3567,15 +4183,15 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         jPanel16.add(jSeparator15, gridBagConstraints);
 
-        jLabel103.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel103.setText("Valoració clínica de demència (CDR):");
+        valoracioCDRLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        valoracioCDRLabel.setText("Valoració clínica de demència (CDR):");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.gridwidth = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 5, 5);
-        jPanel16.add(jLabel103, gridBagConstraints);
+        jPanel16.add(valoracioCDRLabel, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
@@ -3585,404 +4201,6 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         CDRScroll9.setViewportView(CDRPanel8);
 
         CDRTab.add(CDRScroll9, "card10");
-
-        memoriaPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preguntes de raonament i solució de problemes per al subjecte:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>Similituds:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        jLabel133.setText("Exemple: \"¿En què s'assemblen un llapis i un bolígraf?\" (Instruments per escriure)");
-
-        jLabel134.setText("\"¿En què s'assemblen aquestes coses?\"");
-
-        jLabel135.setText("Resposta del subjecte");
-
-        jLabel136.setText("1. Pastanaga ... Coliflor");
-
-        jCheckBox201.setText("(0 = verdures)");
-
-        jCheckBox202.setText("(1 = aliments comestibles, coses vives, es poden cuinar, etc.)");
-
-        jCheckBox203.setText("(2 = respostes inadecuades; diferències; es compren)");
-
-        jLabel137.setText("Resposta del subjecte");
-
-        jLabel138.setText("2. Taula ... Llibreria");
-
-        jCheckBox204.setText("(0 = mobles, moble d'oficina, en els dos s'hi posen llibres)");
-
-        jCheckBox205.setText("(1 = de fusta, tenen potes)");
-
-        jCheckBox206.setText("(2 = respostes inadecuades; diferències; es compren)");
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addComponent(jLabel138)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addComponent(jLabel137)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jTextField25)))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox202)
-                            .addComponent(jCheckBox201)
-                            .addComponent(jCheckBox203)
-                            .addComponent(jCheckBox205)
-                            .addComponent(jCheckBox204)
-                            .addComponent(jCheckBox206))
-                        .addGap(186, 186, 186))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel133)
-                                    .addComponent(jLabel134))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addComponent(jLabel136)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel17Layout.createSequentialGroup()
-                                        .addComponent(jLabel135)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(jTextField24))))
-                        .addContainerGap())))
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel133)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel134)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel135)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel136)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox201)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox202)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox203)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel137)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel138)
-                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox204)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox205)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox206)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>Càlculs", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        jLabel109.setText("5. Quantes pessetes hi ha en un duro?");
-
-        jCheckBox110.setText("Correcte");
-
-        jCheckBox111.setText("Incorrecte");
-
-        jCheckBox143.setText("Incorrecte");
-
-        jCheckBox144.setText("Correcte");
-
-        jLabel151.setText("6. Quants duros es necessiten per tenir 135 pts?");
-
-        jLabel152.setText("7. Començant a partir de 20, vagi restant de 3 en 3.");
-
-        jCheckBox217.setText("Correcte");
-
-        jCheckBox219.setText("Incorrecte");
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel18Layout.createSequentialGroup()
-                            .addComponent(jLabel151)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jCheckBox144)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jCheckBox143))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel18Layout.createSequentialGroup()
-                            .addComponent(jLabel109)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jCheckBox110)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jCheckBox111)))
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addComponent(jLabel152)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox217)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox219)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel109)
-                    .addComponent(jCheckBox110)
-                    .addComponent(jCheckBox111))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel151)
-                    .addComponent(jCheckBox144)
-                    .addComponent(jCheckBox143))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel152)
-                    .addComponent(jCheckBox217)
-                    .addComponent(jCheckBox219))
-                .addContainerGap(122, Short.MAX_VALUE))
-        );
-
-        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Raonament", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        jLabel104.setText("8. Si vostè arribés a una ciutat nova, com localitzaria a un amic que li agradaria veure?");
-
-        jCheckBox145.setText("<html>(0 = buscar-lo a l'agenda de telèfons, a la guía de telèfons de la ciutat,<br>anar a l'ajuntament a demanar el padró, trucar un amic comú)");
-
-        jCheckBox146.setText("(1 = trucar a la policia, trucar a telefònica (normalment no donen la direcció==");
-
-        jCheckBox147.setText("(2 = sense resposta clara)");
-
-        jLabel105.setText("<html>9. Valoració del pacient de la seva pròpia discapacitat i de la seva situació actual, i el grau de comprensió del motiu<br> pel qual està sent explorat/da (aquest temà potser ja s'ha examinat, però digui la seva opinió personal):");
-
-        jCheckBox148.setText("Bona percepció");
-
-        jCheckBox220.setText("Percepció parcial");
-
-        jCheckBox221.setText("Poca percepció");
-
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel104)
-                    .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                .addComponent(jCheckBox148)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox220)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox221))
-                            .addComponent(jCheckBox146)
-                            .addComponent(jCheckBox145, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox147))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel104)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox145, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox146)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox147)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox148)
-                    .addComponent(jCheckBox220)
-                    .addComponent(jCheckBox221))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jLabel122.setText("Instruccions: Si la resposta inicial del subjecte no correspon a un grau 0, insisteixi per assegurar la millor comprensió possible del problema per part del subjecte. Seleccioneu la resposta que consideri més aproximada.");
-
-        jPanel22.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>Diferències:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        jLabel145.setText("Exemple: \"¿En què es diferencien el sucre i el vinagre?\" (dolç / amarg)");
-
-        jLabel146.setText("\"¿En què es diferencien aquestes coses?\"");
-
-        jLabel147.setText("Resposta del subjecte");
-
-        jLabel148.setText("3. Mentida ... Error");
-
-        jCheckBox213.setText("(0 = una intencionada, l'altra sense intenció)");
-
-        jCheckBox214.setText("(1 = una dolenta, l'altra bona o només n'explica una)");
-
-        jCheckBox215.setText("(2 = qualsevol altra cosa, similituds)");
-
-        jLabel149.setText("Resposta del subjecte");
-
-        jLabel150.setText("4. Riu ... Canal");
-
-        jCheckBox216.setText("(0 = natural / artificial)");
-
-        jCheckBox218.setText("(2 = qualsevol altra cosa)");
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addComponent(jLabel150)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel22Layout.createSequentialGroup()
-                                .addComponent(jLabel149)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jTextField29)))
-                    .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox214)
-                            .addComponent(jCheckBox213)
-                            .addComponent(jCheckBox215)
-                            .addComponent(jCheckBox216)
-                            .addComponent(jCheckBox218))
-                        .addGap(186, 186, 186))
-                    .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel22Layout.createSequentialGroup()
-                                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel145)
-                                    .addComponent(jLabel146))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel22Layout.createSequentialGroup()
-                                .addComponent(jLabel148)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel22Layout.createSequentialGroup()
-                                        .addComponent(jLabel147)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(jTextField28))))
-                        .addContainerGap())))
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel145)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel146)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel147)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel148)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox213)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox214)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox215)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel149)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel150)
-                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox216)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox218)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout memoriaPanel8Layout = new javax.swing.GroupLayout(memoriaPanel8);
-        memoriaPanel8.setLayout(memoriaPanel8Layout);
-        memoriaPanel8Layout.setHorizontalGroup(
-            memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(memoriaPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel122)
-                    .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(memoriaPanel8Layout.createSequentialGroup()
-                            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(memoriaPanel8Layout.createSequentialGroup()
-                            .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        memoriaPanel8Layout.setVerticalGroup(
-            memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memoriaPanel8Layout.createSequentialGroup()
-                .addGap(0, 11, Short.MAX_VALUE)
-                .addComponent(jLabel122)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jLabel121.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel121.setText("Fulla de Valoració Clínica de Demència");
-
-        javax.swing.GroupLayout CDRPanel9Layout = new javax.swing.GroupLayout(CDRPanel9);
-        CDRPanel9.setLayout(CDRPanel9Layout);
-        CDRPanel9Layout.setHorizontalGroup(
-            CDRPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CDRPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CDRPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(memoriaPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(CDRPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel121)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        CDRPanel9Layout.setVerticalGroup(
-            CDRPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDRPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel121)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(memoriaPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        CDRScroll10.setViewportView(CDRPanel9);
-
-        CDRTab.add(CDRScroll10, "card9");
 
         tabbedPanel.addTab("CDR", CDRTab);
 
@@ -4019,7 +4237,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addComponent(escoRadio4)
                     .addComponent(escoRadio5)
                     .addComponent(escoRadio6))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         antecedentsFamiliarsPanelLayout.setVerticalGroup(
             antecedentsFamiliarsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4060,7 +4278,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addComponent(escoParesRadio1)
                     .addComponent(escoParesRadio2)
                     .addComponent(escoParesRadio3))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         antecedentsFamiliarsPanel1Layout.setVerticalGroup(
             antecedentsFamiliarsPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4099,7 +4317,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addComponent(cursosRadio2)
                     .addComponent(cursosRadio3)
                     .addComponent(cursosRadio4))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         antecedentsFamiliarsPanel3Layout.setVerticalGroup(
             antecedentsFamiliarsPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4312,12 +4530,12 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addComponent(jocsRadio1)
                     .addComponent(jocsRadio2)
                     .addComponent(jocsRadio3))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         antecedentsFamiliarsPanel2Layout.setVerticalGroup(
             antecedentsFamiliarsPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(antecedentsFamiliarsPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addComponent(jocsRadio1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jocsRadio2)
@@ -4338,56 +4556,66 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         jLabel5.setText("/ 25");
 
+        jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel106.setText("<html><center><b>QUESTIONARI DE RESERVA COGNITIVA (CRC)</b><br>L. Rami 2011");
+
+        jLabel107.setText("<html>Rami L, Valls-Pedret C, Bartres-Faz D, Caprile C, Sole-Padulles C, Castellvi M, et al. Cuestionario de reserva cognitiva.<br>Valores obtenidos en poblacion anciana sana y con enfermedad de Alzheimer. Rev Neurol 2011; 52: 195-201. ");
+
         javax.swing.GroupLayout dadesMediquesPanelLayout = new javax.swing.GroupLayout(dadesMediquesPanel);
         dadesMediquesPanel.setLayout(dadesMediquesPanelLayout);
         dadesMediquesPanelLayout.setHorizontalGroup(
             dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
-                        .addComponent(antecedentsFamiliarsPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(antecedentsFamiliarsPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(antecedentsFamiliarsPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(antecedentsFamiliarsPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
-                        .addComponent(antecedentsFamiliarsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(antecedentsFamiliarsPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(antecedentsFamiliarsPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(antecedentsFamiliarsPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(puntuacioLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5))
-                    .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rangLabel)))
-                .addContainerGap(1781, Short.MAX_VALUE))
+                .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
+                            .addComponent(antecedentsFamiliarsPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(antecedentsFamiliarsPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(antecedentsFamiliarsPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(antecedentsFamiliarsPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
+                            .addComponent(antecedentsFamiliarsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(antecedentsFamiliarsPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(antecedentsFamiliarsPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(antecedentsFamiliarsPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(puntuacioLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel5))
+                        .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
+                            .addComponent(jLabel3)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(rangLabel)))
+                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         dadesMediquesPanelLayout.setVerticalGroup(
             dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(antecedentsFamiliarsPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(antecedentsFamiliarsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(antecedentsFamiliarsPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(antecedentsFamiliarsPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(antecedentsFamiliarsPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(antecedentsFamiliarsPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(antecedentsFamiliarsPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(antecedentsFamiliarsPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(antecedentsFamiliarsPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(antecedentsFamiliarsPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -4397,7 +4625,9 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(rangLabel))
-                .addContainerGap(875, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         dadesMediquesScroll.setViewportView(dadesMediquesPanel);
@@ -4406,16 +4636,14 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         CRCTab.setLayout(CRCTabLayout);
         CRCTabLayout.setHorizontalGroup(
             CRCTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 2073, Short.MAX_VALUE)
+            .addComponent(dadesMediquesScroll)
         );
         CRCTabLayout.setVerticalGroup(
             CRCTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
+            .addComponent(dadesMediquesScroll)
         );
 
         tabbedPanel.addTab("CRC", CRCTab);
-
-        MMSETab.setLayout(new java.awt.CardLayout());
 
         MMSEPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
@@ -4580,7 +4808,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         recordLabel.setText("0");
 
-        jLabel8.setText("<html>Nomena tres paraules pesseta-cavall-poma (o pilota-bandera-arbre) a raó de 1 per segon. Llavors es demana al pacient que les repeteixi. Aquesta primera repetició atorga la puntuació. Atorgui 1 punt per cada paraula correcta, pero continui dient-les fins que el subjecte repeteixi las 3, fins un máxim de 6 vegades.");
+        jLabel8.setText("<html>Nomena tres paraules pesseta-cavall-poma (o pilota-bandera-arbre) a<br>raó de 1 per segon. Llavors es demana al pacient que les repeteixi.<br>Aquesta primera repetició atorga la puntuació. Atorgui 1 punt per cada<br>paraula correcta, pero continui dient-les fins que el subjecte repeteixi<br>les 3, fins un máxim de 6 vegades.");
 
         jLabel22.setText("(màx. 3)");
 
@@ -4591,7 +4819,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel8)
                     .addComponent(jSeparator3)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4607,7 +4835,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                                 .addComponent(recordLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel22)))
-                        .addGap(0, 117, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -4652,7 +4880,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         calculLabel.setText("0");
 
-        jLabel10.setText("<html>Si té 30 euros i me'n va donant de tres en tres, quants li van quedant ?. Atureu la prova després de 5 sostraccions. Si el subjecte no pot realitzar aquesta prova, demani-li que lletregi la paraula MUNDO a l'inrevés.");
+        jLabel10.setText("<html>Si té 30 euros i me'n va donant de tres en tres, quants li van quedant?.<br>Atureu la prova després de 5 sostraccions. Si el subjecte no pot realitzar<br>aquesta prova, demani-li que lletregi la paraula MUNDO a l'inrevés.");
 
         jLabel24.setText("(màx. 5)");
 
@@ -4663,7 +4891,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel10)
                     .addComponent(jSeparator4)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4683,7 +4911,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                                 .addComponent(calculCheck4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(calculCheck5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 105, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -4787,16 +5015,16 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         llenguatgeLabel.setText("0");
 
-        jLabel14.setText("<html><b>DENOMINACIÓ.</b> Mostra un llapis o un bolígraf i preguntar, què és això? Fer el mateix amb un rellotge de polsera.");
+        jLabel14.setText("<html><b>DENOMINACIÓ.</b> Mostra un llapis o un bolígraf i preguntar, què és això? Fer<br>el mateix amb un rellotge de polsera.");
 
         jLabel15.setText("<html><b>REPETICIÓ.</b> Demanar-li que repeteixi la frase:");
 
         llenguatgeCheck3.setText("<html> \"ni sí, ni no, ni però\" o<br>\"en un camp de blat hi havia 5 gossos\"");
         llenguatgeCheck3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
-        jLabel16.setText("<html><b>ORDRES. </b>Demanar-li que segueixi l'ordre: \"agafi un paper amb la mà dreta, doblegueu-lo per la meitat, i poseu-lo a terra\"");
+        jLabel16.setText("<html><b>ORDRES. </b>Demanar-li que segueixi l'ordre: \"agafi un paper amb la mà dreta,<br>doblegueu-lo per la meitat, i poseu-lo a terra\"");
 
-        jLabel17.setText("<html><b>LECTURA. </b>Escriure llegible en un paper \"tanqui els ulls\". Demaneu que ho llegeixi i faci el que diu la frase.");
+        jLabel17.setText("<html><b>LECTURA. </b>Escriure llegible en un paper \"tanqui els ulls\". Demaneu que ho<br>llegeixi i faci el que diu la frase.");
 
         llenguatgeCheck4.setText("Agafa amb la mà dreta");
         llenguatgeCheck4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -4830,14 +5058,14 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator6)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel14)
                     .addComponent(jLabel15)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel18)
                         .addGap(51, 51, 51))
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel19)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(llenguatgeCheck8)
@@ -4919,6 +5147,11 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         referenciaMMSELabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         referenciaMMSELabel.setText("0");
 
+        jLabel108.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel108.setText("<html><center><b>MINI MENTAL STATE EXAMINATION (MMSE)</b><br>Basat en Folstein et al. (1975), Lobo et al. (1979)");
+
+        jLabel110.setText(" a.e.g.(1999)");
+
         javax.swing.GroupLayout MMSEPanelLayout = new javax.swing.GroupLayout(MMSEPanel);
         MMSEPanel.setLayout(MMSEPanelLayout);
         MMSEPanelLayout.setHorizontalGroup(
@@ -4926,51 +5159,52 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
             .addGroup(MMSEPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(MMSEPanelLayout.createSequentialGroup()
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(MMSEPanelLayout.createSequentialGroup()
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MMSEPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel27)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(totalMMSELabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel26))
-                    .addGroup(MMSEPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel41)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(referenciaMMSELabel)))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(826, Short.MAX_VALUE))
+                        .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(MMSEPanelLayout.createSequentialGroup()
+                                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(MMSEPanelLayout.createSequentialGroup()
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(MMSEPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel41)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(referenciaMMSELabel))
+                            .addGroup(MMSEPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(totalMMSELabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel26)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel110))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         MMSEPanelLayout.setVerticalGroup(
             MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MMSEPanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MMSEPanelLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MMSEPanelLayout.createSequentialGroup()
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(MMSEPanelLayout.createSequentialGroup()
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(MMSEPanelLayout.createSequentialGroup()
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel27)
                             .addComponent(totalMMSELabel)
@@ -4978,13 +5212,25 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel41)
-                            .addComponent(referenciaMMSELabel))
-                        .addGap(827, 827, 827))))
+                            .addComponent(referenciaMMSELabel)))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(jLabel110)
+                .addContainerGap())
         );
 
         jScrollPane1.setViewportView(MMSEPanel);
 
-        MMSETab.add(jScrollPane1, "card6");
+        javax.swing.GroupLayout MMSETabLayout = new javax.swing.GroupLayout(MMSETab);
+        MMSETab.setLayout(MMSETabLayout);
+        MMSETabLayout.setHorizontalGroup(
+            MMSETabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
+        );
+        MMSETabLayout.setVerticalGroup(
+            MMSETabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
+        );
 
         tabbedPanel.addTab("MMSE", MMSETab);
 
@@ -5235,6 +5481,11 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         ciLabel.setText("0");
 
+        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel111.setText("<html><center><b>TAP.");
+
+        jLabel112.setText("<html>Gomar et al, 2011. Validation of the Word Accentuation Test (TAP) as a means of estimating premorbid IQ in Spanish speakers ");
+
         javax.swing.GroupLayout TAPPanelLayout = new javax.swing.GroupLayout(TAPPanel);
         TAPPanel.setLayout(TAPPanelLayout);
         TAPPanelLayout.setHorizontalGroup(
@@ -5242,7 +5493,6 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
             .addGroup(TAPPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(TAPPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(TAPPanelLayout.createSequentialGroup()
                         .addComponent(label1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -5250,15 +5500,20 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addGroup(TAPPanelLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ciLabel)))
-                .addContainerGap(2139, Short.MAX_VALUE))
+                        .addComponent(ciLabel))
+                    .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TAPPanelLayout.setVerticalGroup(
             TAPPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TAPPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TAPPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label1)
                     .addComponent(tapTotalLabel))
@@ -5266,7 +5521,9 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addGroup(TAPPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(ciLabel))
-                .addContainerGap(911, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         TAPScroll.setViewportView(TAPPanel);
@@ -5275,11 +5532,11 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         TAPTab.setLayout(TAPTabLayout);
         TAPTabLayout.setHorizontalGroup(
             TAPTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TAPScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 2073, Short.MAX_VALUE)
+            .addComponent(TAPScroll)
         );
         TAPTabLayout.setVerticalGroup(
             TAPTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TAPScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
+            .addComponent(TAPScroll)
         );
 
         tabbedPanel.addTab("TAP", TAPTab);
@@ -5321,6 +5578,10 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
         paginaLabel2.setText("/ 10");
 
+        copyLabel.setText("CDR – Spain/Spanish. Final version. 24 May 06 – Mapi Research Institute.");
+
+        sepBottom.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
         javax.swing.GroupLayout buttonPanelLayout = new javax.swing.GroupLayout(buttonPanel);
         buttonPanel.setLayout(buttonPanelLayout);
         buttonPanelLayout.setHorizontalGroup(
@@ -5334,7 +5595,11 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addComponent(paginaLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(paginaLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1697, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(sepBottom, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(copyLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 729, Short.MAX_VALUE)
                 .addComponent(acceptaBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelaBtn)
@@ -5344,14 +5609,19 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buttonPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(acceptaBtn)
-                    .addComponent(cancelaBtn)
-                    .addComponent(anteriorBtn)
-                    .addComponent(seguentBtn)
-                    .addComponent(paginaLabel)
-                    .addComponent(paginaLabel2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(buttonPanelLayout.createSequentialGroup()
+                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(acceptaBtn)
+                            .addComponent(cancelaBtn)
+                            .addComponent(anteriorBtn)
+                            .addComponent(seguentBtn)
+                            .addComponent(paginaLabel)
+                            .addComponent(paginaLabel2)
+                            .addComponent(copyLabel))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(sepBottom))
+                .addContainerGap())
         );
 
         mainPanel.add(buttonPanel, java.awt.BorderLayout.SOUTH);
@@ -5362,8 +5632,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        
-        
+        guardar();
+        this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 
     private void cancelaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelaBtnActionPerformed
@@ -5396,6 +5666,26 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_seguentBtnActionPerformed
 
+    private void jCheckBox45StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCheckBox45StateChanged
+        if (jCheckBox45.isSelected()){
+            jTextField9.setEnabled(true);
+        }
+        else {
+            jTextField9.setEnabled(false);
+            jTextField9.setText("");
+        }
+    }//GEN-LAST:event_jCheckBox45StateChanged
+
+    private void jCheckBox127StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCheckBox127StateChanged
+        if (jCheckBox127.isSelected()){
+            jTextField11.setEnabled(true);
+        }
+        else {
+            jTextField11.setEnabled(false);
+            jTextField11.setText("");
+        }
+    }//GEN-LAST:event_jCheckBox127StateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -5427,7 +5717,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ValoracioCognitivaPrevia().setVisible(true);
+                new ValoracioCognitivaPrevia("").setVisible(true);
             }
         });
     }
@@ -5513,6 +5803,16 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JScrollPane TAPScroll;
     private javax.swing.JPanel TAPTab;
     private javax.swing.JButton acceptaBtn;
+    private javax.swing.JToggleButton activitatsDBtn1;
+    private javax.swing.JToggleButton activitatsDBtn2;
+    private javax.swing.JToggleButton activitatsDBtn3;
+    private javax.swing.JToggleButton activitatsDBtn4;
+    private javax.swing.JToggleButton activitatsDBtn5;
+    private javax.swing.JToggleButton activitatsFBtn1;
+    private javax.swing.JToggleButton activitatsFBtn2;
+    private javax.swing.JToggleButton activitatsFBtn3;
+    private javax.swing.JToggleButton activitatsFBtn4;
+    private javax.swing.JToggleButton activitatsFBtn5;
     private javax.swing.JPanel antecedentsFamiliarsPanel;
     private javax.swing.JPanel antecedentsFamiliarsPanel1;
     private javax.swing.JPanel antecedentsFamiliarsPanel2;
@@ -5536,13 +5836,52 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.ButtonGroup carrersBtnGroup;
     private javax.swing.ButtonGroup casaBtnGroup;
     private javax.swing.JLabel categoriaProLabel;
+    private javax.swing.ButtonGroup cdrAnyBtnGroup;
+    private javax.swing.ButtonGroup cdrBarriBtnGroup;
+    private javax.swing.ButtonGroup cdrCamiBtnGroup;
+    private javax.swing.ButtonGroup cdrCasaBtnGroup;
     private javax.swing.ButtonGroup cdrCuidatBtnGroup;
+    private javax.swing.ButtonGroup cdrDiaBtnGroup;
     private javax.swing.ButtonGroup cdrDomestiquesBtnGroup;
+    private javax.swing.ButtonGroup cdrEsfintersBtnGroup;
     private javax.swing.ButtonGroup cdrForaCasaBtnGroup;
+    private javax.swing.ButtonGroup cdrHabilitatBtnGroup;
+    private javax.swing.ButtonGroup cdrHabitsBtnGroup;
+    private javax.swing.ButtonGroup cdrLaboral1BtnGroup;
+    private javax.swing.ButtonGroup cdrLaboral2BtnGroup;
+    private javax.swing.ButtonGroup cdrLaboral3BtnGroup;
+    private javax.swing.ButtonGroup cdrMemo1BtnGroup;
+    private javax.swing.ButtonGroup cdrMemo2BtnGroup;
+    private javax.swing.ButtonGroup cdrMemo3BtnGroup;
     private javax.swing.ButtonGroup cdrMemoriaBtnGroup;
+    private javax.swing.ButtonGroup cdrMesBtnGroup;
     private javax.swing.ButtonGroup cdrOrientacioBtnGroup;
+    private javax.swing.ButtonGroup cdrRaonament1BtnGroup;
+    private javax.swing.ButtonGroup cdrRaonament2BtnGroup;
+    private javax.swing.ButtonGroup cdrRaonament3BtnGroup;
+    private javax.swing.ButtonGroup cdrRaonament4BtnGroup;
+    private javax.swing.ButtonGroup cdrRaonament5BtnGroup;
+    private javax.swing.ButtonGroup cdrRaonament6BtnGroup;
     private javax.swing.ButtonGroup cdrRaonamentBtnGroup;
+    private javax.swing.ButtonGroup cdrRentarBtnGroup;
+    private javax.swing.ButtonGroup cdrSocial1BtnGroup;
+    private javax.swing.ButtonGroup cdrSocial2BtnGroup;
+    private javax.swing.ButtonGroup cdrSocial3BtnGroup;
+    private javax.swing.ButtonGroup cdrSocial4BtnGroup;
+    private javax.swing.ButtonGroup cdrSocial5BtnGroup;
+    private javax.swing.ButtonGroup cdrSocial6BtnGroup;
+    private javax.swing.ButtonGroup cdrSocial7BtnGroup;
+    private javax.swing.ButtonGroup cdrSocial8BtnGroup;
+    private javax.swing.ButtonGroup cdrSocial9BtnGroup;
+    private javax.swing.ButtonGroup cdrTasquesDomestiquesBtnGroup;
+    private javax.swing.ButtonGroup cdrTemporalBtnGroup;
+    private javax.swing.ButtonGroup cdrVestirBtnGroup;
     private javax.swing.JLabel ciLabel;
+    private javax.swing.JLabel copyLabel;
+    private javax.swing.JToggleButton cuidatBtn1;
+    private javax.swing.JToggleButton cuidatBtn2;
+    private javax.swing.JToggleButton cuidatBtn3;
+    private javax.swing.JToggleButton cuidatBtn4;
     private javax.swing.ButtonGroup cursosBtnGroup;
     private javax.swing.JRadioButton cursosRadio1;
     private javax.swing.JRadioButton cursosRadio2;
@@ -5693,13 +6032,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox204;
     private javax.swing.JCheckBox jCheckBox205;
     private javax.swing.JCheckBox jCheckBox206;
-    private javax.swing.JCheckBox jCheckBox207;
-    private javax.swing.JCheckBox jCheckBox208;
-    private javax.swing.JCheckBox jCheckBox209;
     private javax.swing.JCheckBox jCheckBox21;
-    private javax.swing.JCheckBox jCheckBox210;
-    private javax.swing.JCheckBox jCheckBox211;
-    private javax.swing.JCheckBox jCheckBox212;
     private javax.swing.JCheckBox jCheckBox213;
     private javax.swing.JCheckBox jCheckBox214;
     private javax.swing.JCheckBox jCheckBox215;
@@ -5799,11 +6132,16 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel122;
@@ -5824,13 +6162,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel136;
     private javax.swing.JLabel jLabel137;
     private javax.swing.JLabel jLabel138;
-    private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel140;
-    private javax.swing.JLabel jLabel141;
-    private javax.swing.JLabel jLabel142;
-    private javax.swing.JLabel jLabel143;
-    private javax.swing.JLabel jLabel144;
     private javax.swing.JLabel jLabel145;
     private javax.swing.JLabel jLabel146;
     private javax.swing.JLabel jLabel147;
@@ -5944,7 +6276,6 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -5997,8 +6328,6 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
@@ -6016,35 +6345,6 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton10;
-    private javax.swing.JToggleButton jToggleButton11;
-    private javax.swing.JToggleButton jToggleButton12;
-    private javax.swing.JToggleButton jToggleButton13;
-    private javax.swing.JToggleButton jToggleButton14;
-    private javax.swing.JToggleButton jToggleButton15;
-    private javax.swing.JToggleButton jToggleButton16;
-    private javax.swing.JToggleButton jToggleButton17;
-    private javax.swing.JToggleButton jToggleButton18;
-    private javax.swing.JToggleButton jToggleButton19;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton20;
-    private javax.swing.JToggleButton jToggleButton21;
-    private javax.swing.JToggleButton jToggleButton22;
-    private javax.swing.JToggleButton jToggleButton23;
-    private javax.swing.JToggleButton jToggleButton24;
-    private javax.swing.JToggleButton jToggleButton25;
-    private javax.swing.JToggleButton jToggleButton26;
-    private javax.swing.JToggleButton jToggleButton27;
-    private javax.swing.JToggleButton jToggleButton28;
-    private javax.swing.JToggleButton jToggleButton29;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JToggleButton jToggleButton4;
-    private javax.swing.JToggleButton jToggleButton5;
-    private javax.swing.JToggleButton jToggleButton6;
-    private javax.swing.JToggleButton jToggleButton7;
-    private javax.swing.JToggleButton jToggleButton8;
-    private javax.swing.JToggleButton jToggleButton9;
     private javax.swing.ButtonGroup jocsBtnGroup;
     private javax.swing.JRadioButton jocsRadio1;
     private javax.swing.JRadioButton jocsRadio2;
@@ -6067,10 +6367,14 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JCheckBox llenguatgeCheck9;
     private javax.swing.JLabel llenguatgeLabel;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JToggleButton memoBtn1;
+    private javax.swing.JToggleButton memoBtn2;
+    private javax.swing.JToggleButton memoBtn3;
+    private javax.swing.JToggleButton memoBtn4;
+    private javax.swing.JToggleButton memoBtn5;
     private javax.swing.JPanel memoriaPanel;
     private javax.swing.JPanel memoriaPanel1;
     private javax.swing.JPanel memoriaPanel2;
-    private javax.swing.JPanel memoriaPanel3;
     private javax.swing.JPanel memoriaPanel4;
     private javax.swing.JPanel memoriaPanel5;
     private javax.swing.JPanel memoriaPanel6;
@@ -6090,6 +6394,19 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JRadioButton ocupacioRadio3;
     private javax.swing.JRadioButton ocupacioRadio4;
     private javax.swing.JRadioButton ocupacioRadio5;
+    private javax.swing.JToggleButton orientacioBtn1;
+    private javax.swing.JToggleButton orientacioBtn2;
+    private javax.swing.JToggleButton orientacioBtn3;
+    private javax.swing.JToggleButton orientacioBtn4;
+    private javax.swing.JToggleButton orientacioBtn5;
+    private javax.swing.ButtonGroup orientacioBtnGroup1;
+    private javax.swing.ButtonGroup orientacioBtnGroup2;
+    private javax.swing.ButtonGroup orientacioBtnGroup3;
+    private javax.swing.ButtonGroup orientacioBtnGroup4;
+    private javax.swing.ButtonGroup orientacioBtnGroup5;
+    private javax.swing.ButtonGroup orientacioBtnGroup6;
+    private javax.swing.ButtonGroup orientacioBtnGroup7;
+    private javax.swing.ButtonGroup orientacioBtnGroup8;
     private javax.swing.JLabel orientacioLabel;
     private javax.swing.JLabel orientacioLabel1;
     private javax.swing.JLabel orientacioLabel10;
@@ -6142,12 +6459,27 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JLabel professioLabel;
     private javax.swing.JLabel puntuacioLabel;
     private javax.swing.JLabel rangLabel;
+    private javax.swing.JToggleButton raoBtn1;
+    private javax.swing.JToggleButton raoBtn2;
+    private javax.swing.JToggleButton raoBtn3;
+    private javax.swing.JToggleButton raoBtn4;
+    private javax.swing.JToggleButton raoBtn5;
+    private javax.swing.ButtonGroup raoBtnGroup1;
+    private javax.swing.ButtonGroup raoBtnGroup2;
+    private javax.swing.ButtonGroup raoBtnGroup3;
+    private javax.swing.ButtonGroup raoBtnGroup4;
+    private javax.swing.ButtonGroup raoBtnGroup5;
+    private javax.swing.ButtonGroup raoBtnGroup6;
+    private javax.swing.ButtonGroup raoBtnGroup7;
+    private javax.swing.ButtonGroup raoBtnGroup8;
+    private javax.swing.ButtonGroup raoBtnGroup9;
     private javax.swing.JCheckBox recordCheck1;
     private javax.swing.JCheckBox recordCheck2;
     private javax.swing.JCheckBox recordCheck3;
     private javax.swing.JLabel recordLabel;
     private javax.swing.JLabel referenciaMMSELabel;
     private javax.swing.JButton seguentBtn;
+    private javax.swing.JSeparator sepBottom;
     private javax.swing.JComboBox<String> sexeCombo;
     private javax.swing.JComboBox<String> sexeCombo1;
     private javax.swing.JComboBox<String> sexeCombo2;
@@ -6169,6 +6501,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JCheckBox temporalCheck5;
     private javax.swing.JLabel temporalLabel;
     private javax.swing.JLabel totalMMSELabel;
+    private javax.swing.JLabel valoracioCDRLabel;
     // End of variables declaration//GEN-END:variables
 
     private void initRadioButtons() {
@@ -6337,11 +6670,11 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         llistaCheckMMSE = new ArrayList<>();
         for (Component c : MMSEPanel.getComponents()){
             if (c instanceof JPanel){
-                System.out.println("PANEL NAME: "+c.getName());
+                //System.out.println("PANEL NAME: "+c.getName());
                 for (Component cb : ((JPanel) c).getComponents()){
                     if (cb instanceof JCheckBox){
-                        System.out.println("CHECK TEXT: "+((JCheckBox) cb).getText());
-                        System.out.println("");
+                        //System.out.println("CHECK TEXT: "+((JCheckBox) cb).getText());
+                        //System.out.println("");
                         llistaCheckMMSE.add((JCheckBox) cb);
                     }
                 }
@@ -6367,19 +6700,272 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                   if (pagina > 0){
                       anteriorBtn.setEnabled(true);
                   }
-                  if (pagina < 2){
+                  if (pagina < 9){
                     seguentBtn.setEnabled(true);
                   }
                   paginaLabel.setVisible(true);
                   paginaLabel2.setVisible(true);
+                  //sepBottom.setVisible(true);
+                  copyLabel.setVisible(true);
               }
               else {
                   anteriorBtn.setEnabled(false);
                   seguentBtn.setEnabled(false);
                   paginaLabel.setVisible(false);
                   paginaLabel2.setVisible(false);
+                  //sepBottom.setVisible(false);
+                  copyLabel.setVisible(false);
               }
             }
         });
     }
+
+    private void guardar() {
+        Properties prop = new Properties();
+	OutputStream output = null;
+        
+	try {
+                File file = new File(idPacient+"Test0.dat");    
+                if(!file.exists()) {
+                        file.createNewFile();
+                }
+		output = new FileOutputStream(file);
+                
+                textF = combo = check = textA = button = radioButton = 0;
+                setComponents(prop, mainPanel);
+                prop.store(output, "VALORACIO COGNITIVA PREVIA");
+        }
+        catch(IOException e){
+            System.out.println("EEEEEERROR");
+        }finally {
+		if (output != null) {
+			try {
+				output.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+                                System.out.println("ERROR OUTPUT");
+			}
+		}
+	}
+    }
+
+    private void setComponents(Properties prop,Container c) {
+        Component[] components = c.getComponents();
+        for (Component com : components){
+            if (com instanceof JTextField){
+                Utils.setProperty(prop, "textField"+textF, (JTextField) com);
+                textF++;
+            }
+            else if (com instanceof JComboBox){
+                Utils.setProperty(prop, "comboBox"+combo, (JComboBox) com);
+                combo++;
+            }
+            else if (com instanceof JTextArea){
+                Utils.setProperty(prop, "textArea"+textA, (JTextArea) com);
+                textA++;
+            }
+            else if (com instanceof JToggleButton && !(com instanceof JCheckBox) && !(com instanceof JRadioButton)){
+                Utils.setProperty(prop, "toggleButton"+button, (JToggleButton) com);
+                button++;
+            }
+            else if (com instanceof JRadioButton){
+                Utils.setProperty(prop, "radioButton"+radioButton, (JRadioButton) com);
+                radioButton++;
+            }
+            else if (com instanceof JCheckBox ){
+                Utils.setProperty(prop, "checkBox"+check, (JCheckBox) com);
+                check++;
+            }
+            else if (com instanceof Container){
+                setComponents(prop, (Container) com);
+            }
+        }
+    }
+    
+    private void carregar() {
+        Properties prop = new Properties();
+	InputStream input = null;
+        
+	try {
+                File file = new File(idPacient+"Test0.dat");    
+                if(!file.exists()) {
+                        file.createNewFile();
+                }
+                else{
+                    input = new FileInputStream(file);
+                    
+                    // load a properties file
+                    prop.load(input);
+                    
+                    textF = combo = check = textA = button = 0;
+                    getComponents(prop, this);
+                }
+        }
+        catch(IOException e){
+            System.out.println("EERRRROOOOOOR");
+        }finally {
+		if (input != null) {
+			try {
+				input.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+                                System.out.println("ERROR INPUT");
+			}
+		}
+	}
+    }
+    
+    private void getComponents(Properties prop,Container c) {
+        Component[] components = c.getComponents();
+        for (Component com : components){
+            if (com instanceof JTextField){
+                Utils.getProperty(prop, "textField"+textF, (JTextField) com);
+                textF++;
+            }
+            else if (com instanceof JComboBox){
+                Utils.getProperty(prop, "comboBox"+combo, (JComboBox) com);
+                combo++;
+            }
+            else if (com instanceof JTextArea){
+                Utils.getProperty(prop, "textArea"+textA, (JTextArea) com);
+                textA++;
+            }
+            else if (com instanceof JToggleButton && !(com instanceof JCheckBox) && !(com instanceof JRadioButton)){
+                Utils.getProperty(prop, "toggleButton"+button, (JToggleButton) com);
+                button++;
+            }
+            else if (com instanceof JRadioButton){
+                Utils.getProperty(prop, "radioButton"+radioButton, (JRadioButton) com);
+                radioButton++;
+            }
+            else if (com instanceof JCheckBox ){
+                Utils.getProperty(prop, "checkBox"+check, (JCheckBox) com);
+                check++;
+            }
+            else if (com instanceof Container){
+                getComponents(prop, (Container) com);
+            }
+        }
+    }
+    
+    private void actualitzaPuntuacioCDR(){
+        double tot = 0;
+        
+        // Memòria
+        if(memoBtn2.isSelected()){
+            tot += 0.5;
+        }
+        else if (memoBtn3.isSelected()){
+            tot++;
+        }
+        else if (memoBtn4.isSelected()){
+            tot += 2;
+        }
+        else if (memoBtn5.isSelected()){
+            tot += 3;
+        }
+        
+        // Orientació
+        if(orientacioBtn2.isSelected()){
+            tot += 0.5;
+        }
+        else if (orientacioBtn3.isSelected()){
+            tot++;
+        }
+        else if (orientacioBtn4.isSelected()){
+            tot += 2;
+        }
+        else if (orientacioBtn5.isSelected()){
+            tot += 3;
+        }
+        
+        // Raonamen
+        if(raoBtn2.isSelected()){
+            tot += 0.5;
+        }
+        else if (raoBtn3.isSelected()){
+            tot++;
+        }
+        else if (raoBtn4.isSelected()){
+            tot += 2;
+        }
+        else if (raoBtn5.isSelected()){
+            tot += 3;
+        }
+        
+        // Activitats fora de casa
+        if(activitatsFBtn2.isSelected()){
+            tot += 0.5;
+        }
+        else if (activitatsFBtn3.isSelected()){
+            tot++;
+        }
+        else if (activitatsFBtn4.isSelected()){
+            tot += 2;
+        }
+        else if (activitatsFBtn5.isSelected()){
+            tot += 3;
+        }
+        
+        // Activitats domèstiques
+        if(activitatsDBtn2.isSelected()){
+            tot += 0.5;
+        }
+        else if (activitatsDBtn3.isSelected()){
+            tot++;
+        }
+        else if (activitatsDBtn4.isSelected()){
+            tot += 2;
+        }
+        else if (activitatsDBtn5.isSelected()){
+            tot += 3;
+        }
+        
+        // Cuidat personal
+        if (cuidatBtn2.isSelected()){
+            tot++;
+        }
+        else if (cuidatBtn3.isSelected()){
+            tot += 2;
+        }
+        else if (cuidatBtn4.isSelected()){
+            tot += 3;
+        }
+        
+        // Resultats
+        String res = "";
+        tot = tot/6;
+        if (tot<=0.25){
+            res = " (Cap deteriorament)";
+        }
+        else if(tot>0.25 && tot<= 0.75){
+            res = " (Deteriorament dubtós)";
+        }
+        else if (tot>0.75 && tot <= 1.5){
+            res = " (Deteriorament lleu)";
+        }
+        else if (tot>1.5 && tot <= 2.5){
+            res = " (Deteriorament moderat)";
+        }
+        else if (tot>2.5){
+            res = " (Deteriorament greu)";
+        }
+        
+        valoracioCDRLabel.setText("Valoració clínica de demència (CDR): "+String.format("%.2g%n", tot)+res);
+    }
+
+    private void initToggleButton() {
+        ActionListener action = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                actualitzaPuntuacioCDR();
+            }
+         };
+        for (Component c : this.jPanel16.getComponents()){
+            if (c instanceof JToggleButton){
+                ((JToggleButton)c).addActionListener(action);
+            }
+        }
+    }
+
 }

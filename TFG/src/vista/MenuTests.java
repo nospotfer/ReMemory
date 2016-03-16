@@ -13,13 +13,16 @@ import javax.swing.JFrame;
  */
 public class MenuTests extends javax.swing.JDialog {
 
+    String idPacient = "";
+    
     /**
      * Creates new form menuTests
      */
-    public MenuTests(java.awt.Frame parent, boolean modal) {
+    public MenuTests(java.awt.Frame parent, boolean modal, String idPacient) {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.idPacient = idPacient;
     }
 
     /**
@@ -145,11 +148,12 @@ public class MenuTests extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ValoracioCognitivaPrevia tT = new ValoracioCognitivaPrevia();
+        ValoracioCognitivaPrevia tT = new ValoracioCognitivaPrevia(idPacient);
         tT.pack();
         tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
         tT.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -183,7 +187,7 @@ public class MenuTests extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                MenuTests dialog = new MenuTests(new javax.swing.JFrame(), true);
+                MenuTests dialog = new MenuTests(new javax.swing.JFrame(), true,"");
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

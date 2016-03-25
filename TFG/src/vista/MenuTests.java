@@ -36,10 +36,10 @@ public class MenuTests extends javax.swing.JDialog {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        sessio1Btn = new javax.swing.JButton();
+        sessio2Btn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        valoracioCognitivaPreviaBtn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
 
@@ -48,9 +48,14 @@ public class MenuTests extends javax.swing.JDialog {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Protocol neuropsicològic", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        jButton1.setText("Primera sessió");
+        sessio1Btn.setText("Primera sessió");
+        sessio1Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sessio1BtnActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Segona sessió");
+        sessio2Btn.setText("Segona sessió");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -59,17 +64,17 @@ public class MenuTests extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(sessio1Btn)
+                    .addComponent(sessio2Btn))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(sessio1Btn)
                 .addGap(11, 11, 11)
-                .addComponent(jButton2)
+                .addComponent(sessio2Btn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -83,10 +88,10 @@ public class MenuTests extends javax.swing.JDialog {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Valoració cognitiva prèvia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        jButton3.setText("Valoració cognitiva prèvia");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        valoracioCognitivaPreviaBtn.setText("Valoració cognitiva prèvia");
+        valoracioCognitivaPreviaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                valoracioCognitivaPreviaBtnActionPerformed(evt);
             }
         });
 
@@ -96,14 +101,14 @@ public class MenuTests extends javax.swing.JDialog {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3)
+                .addComponent(valoracioCognitivaPreviaBtn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3)
+                .addComponent(valoracioCognitivaPreviaBtn)
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
@@ -147,14 +152,21 @@ public class MenuTests extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void valoracioCognitivaPreviaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valoracioCognitivaPreviaBtnActionPerformed
         ValoracioCognitivaPrevia tT = new ValoracioCognitivaPrevia(idPacient);
         tT.pack();
         tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
         tT.setVisible(true);
         this.dispose();
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_valoracioCognitivaPreviaBtnActionPerformed
+
+    private void sessio1BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessio1BtnActionPerformed
+        Sessio1 tT = new Sessio1();
+        tT.pack();
+        tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        tT.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_sessio1BtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,12 +212,12 @@ public class MenuTests extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton sessio1Btn;
+    private javax.swing.JButton sessio2Btn;
+    private javax.swing.JButton valoracioCognitivaPreviaBtn;
     // End of variables declaration//GEN-END:variables
 }

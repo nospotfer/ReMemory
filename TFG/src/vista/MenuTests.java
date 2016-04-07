@@ -5,7 +5,9 @@
  */
 package vista;
 
+import controlador.Pacient;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,15 +16,17 @@ import javax.swing.JFrame;
 public class MenuTests extends javax.swing.JDialog {
 
     String idPacient = "";
+    Pacient pacientActual = null;
     
     /**
      * Creates new form menuTests
      */
-    public MenuTests(java.awt.Frame parent, boolean modal, String idPacient) {
+    public MenuTests(java.awt.Frame parent, boolean modal, String idPacient, Pacient pacientActual) {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
         this.idPacient = idPacient;
+        this.pacientActual = pacientActual;
     }
 
     /**
@@ -161,11 +165,23 @@ public class MenuTests extends javax.swing.JDialog {
     }//GEN-LAST:event_valoracioCognitivaPreviaBtnActionPerformed
 
     private void sessio1BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessio1BtnActionPerformed
-        Sessio1 tT = new Sessio1();
-        tT.pack();
-        tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        tT.setVisible(true);
-        this.dispose();
+        if (pacientActual.getEdat() == -1){
+            JOptionPane.showMessageDialog(this,
+            "Falta l'edat del pacient. Per favor introdueixi-la a la fitxa. Comprovi també que el camp de \"Escolaritat (anys total)\" no estigui buit.",
+            "Falten dades",
+            JOptionPane.WARNING_MESSAGE);
+        }else if (pacientActual.getAnysEscola() == -1){
+            JOptionPane.showMessageDialog(this,
+            "Falten els anys d'escolaritat del pacient. Per favor introdueixi'ls a la fitxa.",
+            "Falten dades",
+            JOptionPane.WARNING_MESSAGE);
+        }else{
+            Sessio1 tT = new Sessio1(this.pacientActual);
+            tT.pack();
+            tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            tT.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_sessio1BtnActionPerformed
 
     /**
@@ -199,7 +215,7 @@ public class MenuTests extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                MenuTests dialog = new MenuTests(new javax.swing.JFrame(), true,"");
+                MenuTests dialog = new MenuTests(new javax.swing.JFrame(), true,"",null);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

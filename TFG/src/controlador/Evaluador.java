@@ -16,8 +16,8 @@ public class Evaluador extends Persona{
 
     private String password;
     
-    public Evaluador(String nom, String id, String rol, String password) {
-        super(nom, id, rol);
+    public Evaluador(String nom, String id, String password) {
+        super(nom, id, "evaluador");
         this.password = password;
     }
     

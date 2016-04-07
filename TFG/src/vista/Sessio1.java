@@ -11,18 +11,28 @@ import javax.swing.Action;
 import javax.swing.JTable;
 import javax.swing.UIManager;
 import controlador.ButtonColumn;
+import controlador.Pacient;
 import controlador.VerticalTableHeaderCellRenderer;
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.lang.reflect.Array;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-import javax.swing.text.Highlighter;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 
 /**
@@ -33,12 +43,27 @@ public class Sessio1 extends javax.swing.JFrame {
 
     int pagina = 0;
     int numPaginesTotal = 2;
+    Pacient pacientActual;
+    private HashMap<String, HashMap<Integer, List<Object>>> taulaDigitsDD;
+    private HashMap<String, HashMap<Integer, List<Object>>> taulaDigitsDI;
+    private HashMap<String, HashMap<Integer, List<Object>>> taulaBNTA;
+    private HashMap<String, HashMap<Integer, List<Object>>> taulaBNTB;
+    private HashMap<String, HashMap<Integer, List<Object>>> taulaBNTC;
+    private Timer timer;
+    private long startTime;
+    DecimalFormat timeFormatter;
+    JButton[] llistaBtn5digits;
+    String edatPacient;
     
     /**
      * Creates new form Sessio1
      */
-    public Sessio1() {
+    public Sessio1(Pacient pacientActual) {
         initComponents();
+        
+        this.pacientActual = pacientActual;
+        
+        convertEdat();
         
         initTabs();
         
@@ -55,6 +80,19 @@ public class Sessio1 extends javax.swing.JFrame {
         initBNTATable();
         initBNTBTable();
         initBNTCTable();
+        
+        initColorTrails();
+        
+        initFluenciaVerbalTable();
+        
+        initTimer();
+        
+        initHashDD();
+        initHashDI();
+        
+        initHashBNTA();
+        initHashBNTB();
+        initHashBNTC();
         
         anteriorBtn.setEnabled(false);
         this.toFront();
@@ -95,6 +133,7 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel88 = new javax.swing.JLabel();
         spanDD = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        resetDD = new javax.swing.JButton();
         digitsInversScroll = new javax.swing.JScrollPane();
         digitsInversPanel = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
@@ -113,6 +152,7 @@ public class Sessio1 extends javax.swing.JFrame {
         percentilDI = new javax.swing.JLabel();
         jLabel92 = new javax.swing.JLabel();
         nssaDI = new javax.swing.JLabel();
+        resetDI = new javax.swing.JButton();
         ML1Tab = new javax.swing.JPanel();
         ML1Scroll = new javax.swing.JScrollPane();
         ML1Panel = new javax.swing.JPanel();
@@ -228,9 +268,9 @@ public class Sessio1 extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
         jLabel81 = new javax.swing.JLabel();
-        puntuacioML7 = new javax.swing.JLabel();
+        percentilBNTA = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
-        puntuacioML8 = new javax.swing.JLabel();
+        nssaBNTA = new javax.swing.JLabel();
         BNTScroll6 = new javax.swing.JScrollPane();
         MLPanel5 = new javax.swing.JPanel();
         jLabel112 = new javax.swing.JLabel();
@@ -244,9 +284,9 @@ public class Sessio1 extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jLabel73 = new javax.swing.JLabel();
-        puntuacioML4 = new javax.swing.JLabel();
+        percentilBNTB = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
-        puntuacioML6 = new javax.swing.JLabel();
+        nssaBNTB = new javax.swing.JLabel();
         semanticaBntB = new javax.swing.JLabel();
         correctesBntB = new javax.swing.JLabel();
         jLabel74 = new javax.swing.JLabel();
@@ -268,9 +308,208 @@ public class Sessio1 extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
         jLabel83 = new javax.swing.JLabel();
-        puntuacioML9 = new javax.swing.JLabel();
+        percentilBNTC = new javax.swing.JLabel();
         jLabel84 = new javax.swing.JLabel();
-        puntuacioML10 = new javax.swing.JLabel();
+        nssaBNTC = new javax.swing.JLabel();
+        colorTrailsTab = new javax.swing.JPanel();
+        digitsDirecteScroll1 = new javax.swing.JScrollPane();
+        digitsDirectePanel1 = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        colorTrailsTable = new org.jdesktop.swingx.JXTable();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        fiveDigitsTab = new javax.swing.JPanel();
+        fiveDigitsScroll = new javax.swing.JScrollPane();
+        Panel = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        fiveDigitStart1 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        temps1 = new javax.swing.JLabel();
+        temps2 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        fiveDigitsScroll1 = new javax.swing.JScrollPane();
+        Panel1 = new javax.swing.JPanel();
+        jLabel93 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        fiveDigitStart2 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel102 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
+        jLabel104 = new javax.swing.JLabel();
+        jLabel105 = new javax.swing.JLabel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
+        jLabel116 = new javax.swing.JLabel();
+        jLabel117 = new javax.swing.JLabel();
+        jLabel118 = new javax.swing.JLabel();
+        jLabel119 = new javax.swing.JLabel();
+        temps3 = new javax.swing.JLabel();
+        temps4 = new javax.swing.JLabel();
+        jLabel120 = new javax.swing.JLabel();
+        jLabel121 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        fiveDigitsScroll2 = new javax.swing.JScrollPane();
+        Panel2 = new javax.swing.JPanel();
+        jLabel122 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel123 = new javax.swing.JLabel();
+        jLabel124 = new javax.swing.JLabel();
+        jLabel125 = new javax.swing.JLabel();
+        jLabel126 = new javax.swing.JLabel();
+        fiveDigitStart3 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jLabel127 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel129 = new javax.swing.JLabel();
+        jLabel130 = new javax.swing.JLabel();
+        jLabel131 = new javax.swing.JLabel();
+        jLabel132 = new javax.swing.JLabel();
+        jLabel133 = new javax.swing.JLabel();
+        jLabel134 = new javax.swing.JLabel();
+        jLabel135 = new javax.swing.JLabel();
+        jLabel136 = new javax.swing.JLabel();
+        jLabel137 = new javax.swing.JLabel();
+        jLabel138 = new javax.swing.JLabel();
+        temps5 = new javax.swing.JLabel();
+        temps6 = new javax.swing.JLabel();
+        jLabel139 = new javax.swing.JLabel();
+        jLabel140 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        fiveDigitsScroll3 = new javax.swing.JScrollPane();
+        Panel3 = new javax.swing.JPanel();
+        jLabel141 = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel142 = new javax.swing.JLabel();
+        jLabel143 = new javax.swing.JLabel();
+        jLabel144 = new javax.swing.JLabel();
+        jLabel145 = new javax.swing.JLabel();
+        fiveDigitStart4 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jLabel146 = new javax.swing.JLabel();
+        jLabel147 = new javax.swing.JLabel();
+        jLabel148 = new javax.swing.JLabel();
+        jLabel149 = new javax.swing.JLabel();
+        jLabel150 = new javax.swing.JLabel();
+        jLabel151 = new javax.swing.JLabel();
+        jLabel152 = new javax.swing.JLabel();
+        jLabel153 = new javax.swing.JLabel();
+        jLabel154 = new javax.swing.JLabel();
+        jLabel155 = new javax.swing.JLabel();
+        jLabel156 = new javax.swing.JLabel();
+        jLabel157 = new javax.swing.JLabel();
+        temps7 = new javax.swing.JLabel();
+        temps8 = new javax.swing.JLabel();
+        jLabel158 = new javax.swing.JLabel();
+        jLabel159 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        fiveDigitsScroll4 = new javax.swing.JScrollPane();
+        Panel4 = new javax.swing.JPanel();
+        jLabel160 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel161 = new javax.swing.JLabel();
+        jLabel162 = new javax.swing.JLabel();
+        jLabel163 = new javax.swing.JLabel();
+        lecturaTemps = new javax.swing.JLabel();
+        lecturaErrors = new javax.swing.JLabel();
+        jLabel166 = new javax.swing.JLabel();
+        jLabel167 = new javax.swing.JLabel();
+        lecturaTempsPC = new javax.swing.JLabel();
+        lecturaErrorsPC = new javax.swing.JLabel();
+        jLabel170 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
+        compteigTemps = new javax.swing.JLabel();
+        compteigTempsPC = new javax.swing.JLabel();
+        compteigErrorsPC = new javax.swing.JLabel();
+        jLabel176 = new javax.swing.JLabel();
+        jLabel177 = new javax.swing.JLabel();
+        compteigErrors = new javax.swing.JLabel();
+        jLabel179 = new javax.swing.JLabel();
+        jLabel180 = new javax.swing.JLabel();
+        jLabel181 = new javax.swing.JLabel();
+        eleccioTemps = new javax.swing.JLabel();
+        eleccioTempsPC = new javax.swing.JLabel();
+        eleccioErrorsPC = new javax.swing.JLabel();
+        jLabel185 = new javax.swing.JLabel();
+        jLabel186 = new javax.swing.JLabel();
+        eleccioErrors = new javax.swing.JLabel();
+        jLabel188 = new javax.swing.JLabel();
+        jLabel189 = new javax.swing.JLabel();
+        jLabel190 = new javax.swing.JLabel();
+        alternTemps = new javax.swing.JLabel();
+        alternTempsPC = new javax.swing.JLabel();
+        alternErrorsPC = new javax.swing.JLabel();
+        jLabel194 = new javax.swing.JLabel();
+        jLabel195 = new javax.swing.JLabel();
+        alternErrors = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel198 = new javax.swing.JLabel();
+        jLabel199 = new javax.swing.JLabel();
+        eleccioTemps2 = new javax.swing.JLabel();
+        lecturaTemps2 = new javax.swing.JLabel();
+        jLabel233 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel202 = new javax.swing.JLabel();
+        inhibicioPD = new javax.swing.JLabel();
+        inhibicioPC = new javax.swing.JLabel();
+        jLabel205 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel206 = new javax.swing.JLabel();
+        alternanTemps2 = new javax.swing.JLabel();
+        compteigTemps2 = new javax.swing.JLabel();
+        jLabel234 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel210 = new javax.swing.JLabel();
+        flexibilitatPD = new javax.swing.JLabel();
+        flexibilitatPC = new javax.swing.JLabel();
+        jLabel213 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jLabel207 = new javax.swing.JLabel();
+        calculPercentilsFiveDigit = new javax.swing.JButton();
+        colorTrailsTab1 = new javax.swing.JPanel();
+        digitsDirecteScroll2 = new javax.swing.JScrollPane();
+        digitsDirectePanel2 = new javax.swing.JPanel();
+        jLabel164 = new javax.swing.JLabel();
+        jScrollPane19 = new javax.swing.JScrollPane();
+        fluenciaVerbalTable = new org.jdesktop.swingx.JXTable();
         buttonPanel = new javax.swing.JPanel();
         acceptaBtn = new javax.swing.JButton();
         cancelaBtn = new javax.swing.JButton();
@@ -352,6 +591,11 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton8.setText("Calcular");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jLabel85.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel85.setText("<html>Percentil<br>range:");
@@ -469,6 +713,13 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
+        resetDD.setText("Reset");
+        resetDD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetDDActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout digitsDirectePanelLayout = new javax.swing.GroupLayout(digitsDirectePanel);
         digitsDirectePanel.setLayout(digitsDirectePanelLayout);
         digitsDirectePanelLayout.setHorizontalGroup(
@@ -483,7 +734,8 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(digitsDirectePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resetDD))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         digitsDirectePanelLayout.setVerticalGroup(
@@ -494,10 +746,11 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(digitsDirectePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(digitsDirectePanelLayout.createSequentialGroup()
-                        .addGap(0, 0, 0)
                         .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(13, 13, 13)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(resetDD))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -627,6 +880,11 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton9.setText("Calcular");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jLabel91.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel91.setText("<html>Percentil<br>range:");
@@ -685,6 +943,8 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        resetDI.setText("Reset");
+
         javax.swing.GroupLayout digitsInversPanelLayout = new javax.swing.GroupLayout(digitsInversPanel);
         digitsInversPanel.setLayout(digitsInversPanelLayout);
         digitsInversPanelLayout.setHorizontalGroup(
@@ -699,8 +959,9 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(digitsInversPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(resetDI))))
+                .addContainerGap(588, Short.MAX_VALUE))
         );
         digitsInversPanelLayout.setVerticalGroup(
             digitsInversPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -713,7 +974,9 @@ public class Sessio1 extends javax.swing.JFrame {
                     .addGroup(digitsInversPanelLayout.createSequentialGroup()
                         .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(13, 13, 13)
-                        .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(resetDI)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -846,7 +1109,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(ML1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane3)
+                                    .addComponent(jScrollPane2)
                                     .addGroup(ML1PanelLayout.createSequentialGroup()
                                         .addGroup(ML1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel5)
@@ -860,8 +1123,8 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(jLabel36)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(historiaAsegonTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(0, 109, Short.MAX_VALUE))
-                                    .addComponent(jScrollPane2)))
+                                        .addGap(0, 673, Short.MAX_VALUE))
+                                    .addComponent(jScrollPane3)))
                             .addGroup(ML1PanelLayout.createSequentialGroup()
                                 .addComponent(jLabel34)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1002,6 +1265,11 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("Calcular");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(105, 150, 200));
@@ -1086,7 +1354,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(jLabel45))
                                             .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 17, Short.MAX_VALUE))))
+                                        .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(ML1Panel1Layout.createSequentialGroup()
                                 .addComponent(jLabel38)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1126,7 +1394,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 613, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1252,7 +1520,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(historiaAprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(resetHistoriaA1)
                                             .addComponent(jLabel7))
-                                        .addGap(0, 82, Short.MAX_VALUE))))
+                                        .addGap(0, 702, Short.MAX_VALUE))))
                             .addGroup(ML2Panel2Layout.createSequentialGroup()
                                 .addComponent(jLabel41)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1387,6 +1655,11 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton2.setText("Calcular");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel58.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel58.setForeground(new java.awt.Color(105, 150, 200));
@@ -1471,7 +1744,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addGap(10, 10, 10)
                                                 .addComponent(jLabel55))
                                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 11, Short.MAX_VALUE))))
+                                        .addGap(0, 586, Short.MAX_VALUE))))
                             .addGroup(MLPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel51)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1507,8 +1780,8 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addComponent(resetHistoriaB1)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 143, Short.MAX_VALUE))
-                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE))
+                        .addGap(0, 262, Short.MAX_VALUE))
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 613, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1727,7 +2000,7 @@ public class Sessio1 extends javax.swing.JFrame {
                             .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel61)
                                 .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(528, Short.MAX_VALUE))
         );
         ML2Panel4Layout.setVerticalGroup(
             ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1753,7 +2026,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
                     .addComponent(totalRecB, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         ML2Scroll4.setViewportView(ML2Panel4);
@@ -1870,24 +2143,29 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton6.setText("Calcular");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jLabel81.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel81.setText("<html>Percentil<br>range:");
 
-        puntuacioML7.setBackground(new java.awt.Color(255, 255, 255));
-        puntuacioML7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        puntuacioML7.setText("0");
-        puntuacioML7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        puntuacioML7.setOpaque(true);
+        percentilBNTA.setBackground(new java.awt.Color(255, 255, 255));
+        percentilBNTA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        percentilBNTA.setText("0");
+        percentilBNTA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        percentilBNTA.setOpaque(true);
 
         jLabel82.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel82.setText("<html>NSSA<br>NEURONORMA<br>Scaled Score<br>age-adjusted");
 
-        puntuacioML8.setBackground(new java.awt.Color(255, 255, 255));
-        puntuacioML8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        puntuacioML8.setText("0");
-        puntuacioML8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        puntuacioML8.setOpaque(true);
+        nssaBNTA.setBackground(new java.awt.Color(255, 255, 255));
+        nssaBNTA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nssaBNTA.setText("0");
+        nssaBNTA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        nssaBNTA.setOpaque(true);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -1899,11 +2177,11 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(puntuacioML7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(percentilBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(puntuacioML8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nssaBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -1917,8 +2195,8 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(puntuacioML7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(puntuacioML8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(percentilBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nssaBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1983,7 +2261,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addComponent(resetHistoriaB2)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 186, Short.MAX_VALUE))
+                        .addGap(0, 418, Short.MAX_VALUE))
                     .addComponent(jScrollPane16))
                 .addContainerGap())
         );
@@ -2070,24 +2348,29 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton4.setText("Calcular");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel73.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel73.setText("<html>Percentil<br>range:");
 
-        puntuacioML4.setBackground(new java.awt.Color(255, 255, 255));
-        puntuacioML4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        puntuacioML4.setText("0");
-        puntuacioML4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        puntuacioML4.setOpaque(true);
+        percentilBNTB.setBackground(new java.awt.Color(255, 255, 255));
+        percentilBNTB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        percentilBNTB.setText("0");
+        percentilBNTB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        percentilBNTB.setOpaque(true);
 
         jLabel80.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel80.setText("<html>NSSA<br>NEURONORMA<br>Scaled Score<br>age-adjusted");
 
-        puntuacioML6.setBackground(new java.awt.Color(255, 255, 255));
-        puntuacioML6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        puntuacioML6.setText("0");
-        puntuacioML6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        puntuacioML6.setOpaque(true);
+        nssaBNTB.setBackground(new java.awt.Color(255, 255, 255));
+        nssaBNTB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nssaBNTB.setText("0");
+        nssaBNTB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        nssaBNTB.setOpaque(true);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -2099,11 +2382,11 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(puntuacioML4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(percentilBNTB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(puntuacioML6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nssaBNTB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -2117,8 +2400,8 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(puntuacioML4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(puntuacioML6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(percentilBNTB, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nssaBNTB, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2326,24 +2609,29 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton7.setText("Calcular");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jLabel83.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel83.setText("<html>Percentil<br>range:");
 
-        puntuacioML9.setBackground(new java.awt.Color(255, 255, 255));
-        puntuacioML9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        puntuacioML9.setText("0");
-        puntuacioML9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        puntuacioML9.setOpaque(true);
+        percentilBNTC.setBackground(new java.awt.Color(255, 255, 255));
+        percentilBNTC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        percentilBNTC.setText("0");
+        percentilBNTC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        percentilBNTC.setOpaque(true);
 
         jLabel84.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel84.setText("<html>NSSA<br>NEURONORMA<br>Scaled Score<br>age-adjusted");
 
-        puntuacioML10.setBackground(new java.awt.Color(255, 255, 255));
-        puntuacioML10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        puntuacioML10.setText("0");
-        puntuacioML10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        puntuacioML10.setOpaque(true);
+        nssaBNTC.setBackground(new java.awt.Color(255, 255, 255));
+        nssaBNTC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nssaBNTC.setText("0");
+        nssaBNTC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        nssaBNTC.setOpaque(true);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -2355,11 +2643,11 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(puntuacioML9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(percentilBNTC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(puntuacioML10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nssaBNTC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
@@ -2373,8 +2661,8 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(puntuacioML9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(puntuacioML10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(percentilBNTC, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nssaBNTC, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2450,6 +2738,1615 @@ public class Sessio1 extends javax.swing.JFrame {
 
         tabbedPanel.addTab("BNT", BNTTab);
 
+        colorTrailsTab.setLayout(new java.awt.CardLayout());
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel30.setText("Color Trails");
+
+        colorTrailsTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", null},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", null},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+            },
+            new String [] {
+                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                true, false, true, true, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        colorTrailsTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        colorTrailsTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        colorTrailsTable.setRowSelectionAllowed(false);
+        colorTrailsTable.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        colorTrailsTable.setSortable(false);
+        colorTrailsTable.setSortsOnUpdates(false);
+        jScrollPane9.setViewportView(colorTrailsTable);
+        if (colorTrailsTable.getColumnModel().getColumnCount() > 0) {
+            colorTrailsTable.getColumnModel().getColumn(0).setResizable(false);
+            colorTrailsTable.getColumnModel().getColumn(1).setResizable(false);
+            colorTrailsTable.getColumnModel().getColumn(3).setResizable(false);
+            colorTrailsTable.getColumnModel().getColumn(4).setResizable(false);
+        }
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel10.setText("Normative table:");
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel17.setText("Notes:");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout digitsDirectePanel1Layout = new javax.swing.GroupLayout(digitsDirectePanel1);
+        digitsDirectePanel1.setLayout(digitsDirectePanel1Layout);
+        digitsDirectePanel1Layout.setHorizontalGroup(
+            digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel17)
+                            .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addComponent(jLabel30))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        digitsDirectePanel1Layout.setVerticalGroup(
+            digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, digitsDirectePanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel30)
+                .addGap(18, 18, 18)
+                .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        digitsDirecteScroll1.setViewportView(digitsDirectePanel1);
+
+        colorTrailsTab.add(digitsDirecteScroll1, "card1");
+
+        tabbedPanel.addTab("COLOR TRAILS", colorTrailsTab);
+
+        fiveDigitsTab.setLayout(new java.awt.CardLayout());
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel33.setText("Five digit test");
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Part 1. Processos Automàtics: LECTURA"));
+
+        jLabel15.setText("1a fila: \"Vull que llegeixi un nombre en cada quadre: un, dos ...\" (... tres, quatre, cinc).");
+
+        jLabel16.setText("2a fila: \"Continuï\" (Repetiu la tasca fins que l'examinat no cometi cap error).");
+
+        jLabel18.setText("\"D'acord, ara comenci aquí dalt i treballi el més de pressa que pugui\" (comenci a cronometrar el temps)");
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("<html>1 2 3 4 5<br>5 2 3 1 4");
+        jLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        fiveDigitStart1.setText("<html><center>Comença Crono<br>Lectura");
+        fiveDigitStart1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fiveDigitStart1ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Marcar Temps");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("Parar Crono");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("1 4 3 2 5");
+        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel21.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("4 3 1 5 2");
+        jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel22.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("5 4 2 3 1");
+        jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel23.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("2 5 1 4 3");
+        jLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel24.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("1 3 2 5 4");
+        jLabel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel25.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("3 5 4 1 2");
+        jLabel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel26.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("1 4 3 2 5");
+        jLabel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel27.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("4 1 5 3 2");
+        jLabel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel28.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel57.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setText("5 2 1 4 3");
+        jLabel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel57.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel70.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel70.setText("2 5 3 1 4");
+        jLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel70.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel20.setText("Temps:");
+
+        jLabel78.setText("Temps:");
+
+        temps1.setText("00:00:00");
+
+        temps2.setText("00:00:00");
+
+        jLabel95.setText("Errors:");
+
+        jLabel96.setText("Errors:");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel15)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitStart1, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel20)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps1))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel78)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps2)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel95)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel96)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(fiveDigitStart1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel20)
+                    .addComponent(temps1)
+                    .addComponent(jLabel95)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton10)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel27)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel57)
+                    .addComponent(jLabel70)
+                    .addComponent(jLabel78)
+                    .addComponent(temps2)
+                    .addComponent(jLabel96)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
+        Panel.setLayout(PanelLayout);
+        PanelLayout.setHorizontalGroup(
+            PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel33)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(569, Short.MAX_VALUE))
+        );
+        PanelLayout.setVerticalGroup(
+            PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(444, Short.MAX_VALUE))
+        );
+
+        fiveDigitsScroll.setViewportView(Panel);
+
+        fiveDigitsTab.add(fiveDigitsScroll, "card1");
+
+        jLabel93.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel93.setText("Five digit test");
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Part 2. Processos Automàtics: COMPTEIG"));
+
+        jLabel94.setText("1a fila: \"Vull que compti un nombre en cada quadre: un, dos ...\" (... tres, quatre, cinc).");
+
+        jLabel97.setText("2a fila: \"Continuï\" (Repetiu la tasca fins que l'examinat no cometi cap error).");
+
+        jLabel98.setText("\"D'acord, ara comenci aquí dalt i treballi el més de pressa que pugui\" (comenci a cronometrar el temps)");
+
+        jLabel99.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel99.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel99.setText("<html>1 2 3 4 5<br>5 2 3 1 4");
+        jLabel99.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel99.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        fiveDigitStart2.setText("<html><center>Comença Crono<br>Lectura");
+        fiveDigitStart2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fiveDigitStart2ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("Marcar Temps");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Parar Crono");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jLabel100.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel100.setText("1 4 3 2 5");
+        jLabel100.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel100.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel101.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel101.setText("4 3 1 5 2");
+        jLabel101.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel101.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel102.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel102.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel102.setText("5 4 2 3 1");
+        jLabel102.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel102.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel103.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel103.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel103.setText("2 5 1 4 3");
+        jLabel103.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel103.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel104.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel104.setText("1 3 2 5 4");
+        jLabel104.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel104.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel105.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel105.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel105.setText("3 5 4 1 2");
+        jLabel105.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel105.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel108.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel108.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel108.setText("1 4 3 2 5");
+        jLabel108.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel108.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel115.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel115.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel115.setText("4 1 5 3 2");
+        jLabel115.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel115.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel116.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel116.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel116.setText("5 2 1 4 3");
+        jLabel116.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel116.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel117.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel117.setText("2 5 3 1 4");
+        jLabel117.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel117.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel118.setText("Temps:");
+
+        jLabel119.setText("Temps:");
+
+        temps3.setText("00:00:00");
+
+        temps4.setText("00:00:00");
+
+        jLabel120.setText("Errors:");
+
+        jLabel121.setText("Errors:");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel97)
+                    .addComponent(jLabel94)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitStart2, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel98)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel118)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps3))
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel119)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps4)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel120)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel121)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel94)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel97)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel98)
+                    .addComponent(fiveDigitStart2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton11)
+                    .addComponent(jLabel100)
+                    .addComponent(jLabel101)
+                    .addComponent(jLabel102)
+                    .addComponent(jLabel103)
+                    .addComponent(jLabel104)
+                    .addComponent(jLabel118)
+                    .addComponent(temps3)
+                    .addComponent(jLabel120)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton12)
+                    .addComponent(jLabel105)
+                    .addComponent(jLabel108)
+                    .addComponent(jLabel115)
+                    .addComponent(jLabel116)
+                    .addComponent(jLabel117)
+                    .addComponent(jLabel119)
+                    .addComponent(temps4)
+                    .addComponent(jLabel121)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
+        Panel1.setLayout(Panel1Layout);
+        Panel1Layout.setHorizontalGroup(
+            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel93)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(569, Short.MAX_VALUE))
+        );
+        Panel1Layout.setVerticalGroup(
+            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel93)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(444, Short.MAX_VALUE))
+        );
+
+        fiveDigitsScroll1.setViewportView(Panel1);
+
+        fiveDigitsTab.add(fiveDigitsScroll1, "card2");
+
+        jLabel122.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel122.setText("Five digit test");
+
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Part 3. Processos Automàtics: ELECCIÓ"));
+
+        jLabel123.setText("<html>1a fila: \"Ara vull que compti quants números hi ha en cada quadre. <br> Recordi que ha de comptar els nombres en lloc de llegir-los: un, dos, tres ... \"(quatre, cinc).");
+
+        jLabel124.setText("2a fila: \"Continuï\" (Repetiu la tasca fins que l'examinat no cometi cap error).");
+
+        jLabel125.setText("\"D'acord, ara comenci aquí dalt i treballi el més de pressa que pugui\" (comenci a cronometrar el temps)");
+
+        jLabel126.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel126.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel126.setText("<html>1 2 3 4 5<br>5 2 3 1 4");
+        jLabel126.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel126.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        fiveDigitStart3.setText("<html><center>Comença Crono<br>Lectura");
+        fiveDigitStart3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fiveDigitStart3ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("Marcar Temps");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Parar Crono");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jLabel127.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel127.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel127.setText("1 4 3 2 5");
+        jLabel127.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel127.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel128.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel128.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel128.setText("4 3 1 5 2");
+        jLabel128.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel128.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel129.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel129.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel129.setText("5 4 2 3 1");
+        jLabel129.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel129.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel130.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel130.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel130.setText("2 5 1 4 3");
+        jLabel130.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel130.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel131.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel131.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel131.setText("1 3 2 5 4");
+        jLabel131.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel131.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel132.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel132.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel132.setText("3 5 4 1 2");
+        jLabel132.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel132.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel133.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel133.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel133.setText("1 4 3 2 5");
+        jLabel133.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel133.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel134.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel134.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel134.setText("4 1 5 3 2");
+        jLabel134.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel134.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel135.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel135.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel135.setText("5 2 1 4 3");
+        jLabel135.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel135.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel136.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel136.setText("2 5 3 1 4");
+        jLabel136.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel136.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel137.setText("Temps:");
+
+        jLabel138.setText("Temps:");
+
+        temps5.setText("00:00:00");
+
+        temps6.setText("00:00:00");
+
+        jLabel139.setText("Errors:");
+
+        jLabel140.setText("Errors:");
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel124)
+                    .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitStart3, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel125)
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel13Layout.createSequentialGroup()
+                                        .addComponent(jLabel127, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel129, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel130, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel137)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps5))
+                                    .addGroup(jPanel13Layout.createSequentialGroup()
+                                        .addComponent(jLabel132, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel133, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel134, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel135, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel136, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel138)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps6)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel13Layout.createSequentialGroup()
+                                        .addComponent(jLabel139)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel13Layout.createSequentialGroup()
+                                        .addComponent(jLabel140)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel124)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel125)
+                    .addComponent(fiveDigitStart3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton13)
+                    .addComponent(jLabel127)
+                    .addComponent(jLabel128)
+                    .addComponent(jLabel129)
+                    .addComponent(jLabel130)
+                    .addComponent(jLabel131)
+                    .addComponent(jLabel137)
+                    .addComponent(temps5)
+                    .addComponent(jLabel139)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton14)
+                    .addComponent(jLabel132)
+                    .addComponent(jLabel133)
+                    .addComponent(jLabel134)
+                    .addComponent(jLabel135)
+                    .addComponent(jLabel136)
+                    .addComponent(jLabel138)
+                    .addComponent(temps6)
+                    .addComponent(jLabel140)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout Panel2Layout = new javax.swing.GroupLayout(Panel2);
+        Panel2.setLayout(Panel2Layout);
+        Panel2Layout.setHorizontalGroup(
+            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel122)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(569, Short.MAX_VALUE))
+        );
+        Panel2Layout.setVerticalGroup(
+            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel122)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(430, Short.MAX_VALUE))
+        );
+
+        fiveDigitsScroll2.setViewportView(Panel2);
+
+        fiveDigitsTab.add(fiveDigitsScroll2, "card3");
+
+        jLabel141.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel141.setText("Five digit test");
+
+        jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder("Part 1. Processos Automàtics: ALTERNANÇA"));
+
+        jLabel142.setText("<html>1a fila: \"Ara ha de comptar els números com ha fet abans, però quan arribi a un quadre amb la vora més gruixuda (assenyalar) <br> ha de canviar la regla i llegir el número: un, dos, tres ...\" (quatre, cinc).");
+
+        jLabel143.setText("2a fila: \"Continuï\" (Repetiu la tasca fins que l'examinat no cometi cap error).");
+
+        jLabel144.setText("\"D'acord, ara comenci aquí dalt i treballi el més de pressa que pugui\" (comenci a cronometrar el temps)");
+
+        jLabel145.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel145.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel145.setText("<html>1 2 3 4 5<br>5 2 3 1 4");
+        jLabel145.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel145.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        fiveDigitStart4.setText("<html><center>Comença Crono<br>Lectura");
+        fiveDigitStart4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fiveDigitStart4ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("Marcar Temps");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("Parar Crono");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jLabel146.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel146.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel146.setText("1 4 3 2 5");
+        jLabel146.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel146.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel147.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel147.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel147.setText("4 3 1 5 2");
+        jLabel147.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel147.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel148.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel148.setText("5 4 2 3 1");
+        jLabel148.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel148.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel149.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel149.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel149.setText("2 5 1 4 3");
+        jLabel149.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel149.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel150.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel150.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel150.setText("1 3 2 5 4");
+        jLabel150.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel150.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel151.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel151.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel151.setText("3 5 4 1 2");
+        jLabel151.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel151.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel152.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel152.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel152.setText("1 4 3 2 5");
+        jLabel152.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel152.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel153.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel153.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel153.setText("4 1 5 3 2");
+        jLabel153.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel153.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel154.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel154.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel154.setText("5 2 1 4 3");
+        jLabel154.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel154.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel155.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel155.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel155.setText("2 5 3 1 4");
+        jLabel155.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel155.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel156.setText("Temps:");
+
+        jLabel157.setText("Temps:");
+
+        temps7.setText("00:00:00");
+
+        temps8.setText("00:00:00");
+
+        jLabel158.setText("Errors:");
+
+        jLabel159.setText("Errors:");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel143)
+                    .addComponent(jLabel142, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel145, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitStart4, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel144)
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel14Layout.createSequentialGroup()
+                                        .addComponent(jLabel146, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel147, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel148, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel149, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel150, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel156)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps7))
+                                    .addGroup(jPanel14Layout.createSequentialGroup()
+                                        .addComponent(jLabel151, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel152, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel153, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel154, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel155, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel157)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps8)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel14Layout.createSequentialGroup()
+                                        .addComponent(jLabel158)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel14Layout.createSequentialGroup()
+                                        .addComponent(jLabel159)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel142, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel143)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel145, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel144)
+                    .addComponent(fiveDigitStart4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton15)
+                    .addComponent(jLabel146)
+                    .addComponent(jLabel147)
+                    .addComponent(jLabel148)
+                    .addComponent(jLabel149)
+                    .addComponent(jLabel150)
+                    .addComponent(jLabel156)
+                    .addComponent(temps7)
+                    .addComponent(jLabel158)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton16)
+                    .addComponent(jLabel151)
+                    .addComponent(jLabel152)
+                    .addComponent(jLabel153)
+                    .addComponent(jLabel154)
+                    .addComponent(jLabel155)
+                    .addComponent(jLabel157)
+                    .addComponent(temps8)
+                    .addComponent(jLabel159)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout Panel3Layout = new javax.swing.GroupLayout(Panel3);
+        Panel3.setLayout(Panel3Layout);
+        Panel3Layout.setHorizontalGroup(
+            Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel141)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(569, Short.MAX_VALUE))
+        );
+        Panel3Layout.setVerticalGroup(
+            Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel141)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(430, Short.MAX_VALUE))
+        );
+
+        fiveDigitsScroll3.setViewportView(Panel3);
+
+        fiveDigitsTab.add(fiveDigitsScroll3, "card4");
+
+        jLabel160.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel160.setText("RESUM DE PUNTUACIONS");
+
+        jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder("Processos Automàtics"));
+
+        jLabel161.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel161.setText("Lectura:");
+
+        jLabel162.setText("Temps:");
+
+        jLabel163.setText("Errors:");
+
+        lecturaTemps.setText("0");
+
+        lecturaErrors.setText("0");
+
+        jLabel166.setText("PC:");
+
+        jLabel167.setText("PC:");
+
+        lecturaTempsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lecturaTempsPC.setText("0");
+
+        lecturaErrorsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lecturaErrorsPC.setText("0");
+
+        jLabel170.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel170.setText("Compteig:");
+
+        jLabel171.setText("Temps:");
+
+        jLabel172.setText("PC:");
+
+        compteigTemps.setText("0");
+
+        compteigTempsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        compteigTempsPC.setText("0");
+
+        compteigErrorsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        compteigErrorsPC.setText("0");
+
+        jLabel176.setText("PC:");
+
+        jLabel177.setText("Errors:");
+
+        compteigErrors.setText("0");
+
+        jLabel179.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel179.setText("Elecció:");
+
+        jLabel180.setText("Temps:");
+
+        jLabel181.setText("PC:");
+
+        eleccioTemps.setText("0");
+
+        eleccioTempsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        eleccioTempsPC.setText("0");
+
+        eleccioErrorsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        eleccioErrorsPC.setText("0");
+
+        jLabel185.setText("PC:");
+
+        jLabel186.setText("Errors:");
+
+        eleccioErrors.setText("0");
+
+        jLabel188.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel188.setText("Alternança:");
+
+        jLabel189.setText("Temps:");
+
+        jLabel190.setText("PC:");
+
+        alternTemps.setText("0");
+
+        alternTempsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        alternTempsPC.setText("0");
+
+        alternErrorsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        alternErrorsPC.setText("0");
+
+        jLabel194.setText("PC:");
+
+        jLabel195.setText("Errors:");
+
+        alternErrors.setText("0");
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel161)
+                    .addComponent(jLabel170)
+                    .addComponent(jLabel179)
+                    .addComponent(jLabel188)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel163)
+                                    .addComponent(jLabel162))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lecturaTemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lecturaErrors, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel166)
+                                    .addComponent(jLabel167))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lecturaTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lecturaErrorsPC)))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel177)
+                                    .addComponent(jLabel171))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(compteigTemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(compteigErrors))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel176)
+                                    .addComponent(jLabel172))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(compteigTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(compteigErrorsPC)))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel186)
+                                    .addComponent(jLabel180))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(eleccioTemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(eleccioErrors))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel185)
+                                    .addComponent(jLabel181))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(eleccioTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(eleccioErrorsPC)))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel195)
+                                    .addComponent(jLabel189))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(alternTemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(alternErrors))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel194)
+                                    .addComponent(jLabel190))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(alternTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(alternErrorsPC))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel161)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel162)
+                            .addComponent(lecturaTemps)
+                            .addComponent(jLabel167))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel163)
+                            .addComponent(lecturaErrors)
+                            .addComponent(jLabel166)))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(lecturaTempsPC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lecturaErrorsPC)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel170)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel171)
+                            .addComponent(compteigTemps)
+                            .addComponent(jLabel172))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel177)
+                            .addComponent(compteigErrors)
+                            .addComponent(jLabel176)))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(compteigTempsPC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(compteigErrorsPC)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel179)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel180)
+                            .addComponent(eleccioTemps)
+                            .addComponent(jLabel181))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel186)
+                            .addComponent(eleccioErrors)
+                            .addComponent(jLabel185)))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(eleccioTempsPC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(eleccioErrorsPC)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel188)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel189)
+                            .addComponent(alternTemps)
+                            .addComponent(jLabel190))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel195)
+                            .addComponent(alternErrors)
+                            .addComponent(jLabel194)))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(alternTempsPC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(alternErrorsPC)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inhibició", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel198.setText("Temps d'elecció:");
+
+        jLabel199.setText("Temps de lectura:");
+
+        eleccioTemps2.setText("0");
+
+        lecturaTemps2.setText("0");
+
+        jLabel233.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel233.setText("-");
+
+        jLabel202.setText("PD inhibició:");
+
+        inhibicioPD.setText("0");
+
+        inhibicioPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        inhibicioPC.setText("0");
+
+        jLabel205.setText("PC:");
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator2)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel199)
+                                    .addComponent(jLabel198)
+                                    .addComponent(jLabel202))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel16Layout.createSequentialGroup()
+                                            .addComponent(jLabel233)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(lecturaTemps2))
+                                        .addComponent(eleccioTemps2))
+                                    .addComponent(inhibicioPD)))
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addComponent(jLabel205)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(inhibicioPC)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel198)
+                    .addComponent(eleccioTemps2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel199)
+                    .addComponent(lecturaTemps2)
+                    .addComponent(jLabel233))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel202)
+                    .addComponent(inhibicioPD))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel205)
+                    .addComponent(inhibicioPC))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Flexibilitat", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jLabel206.setText("Temps de compteig:");
+
+        alternanTemps2.setText("0");
+
+        compteigTemps2.setText("0");
+
+        jLabel234.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel234.setText("-");
+
+        jLabel210.setText("PD flexibilitat:");
+
+        flexibilitatPD.setText("0");
+
+        flexibilitatPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        flexibilitatPC.setText("0");
+
+        jLabel213.setText("PC:");
+
+        jLabel207.setText("Temps d'alternança:");
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator4)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel17Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel206)
+                                            .addComponent(jLabel210)))
+                                    .addComponent(jLabel207))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel17Layout.createSequentialGroup()
+                                            .addComponent(jLabel234)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(compteigTemps2))
+                                        .addComponent(alternanTemps2))
+                                    .addComponent(flexibilitatPD)))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(jLabel213)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(flexibilitatPC)))
+                        .addGap(0, 49, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(alternanTemps2)
+                    .addComponent(jLabel207))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(compteigTemps2)
+                    .addComponent(jLabel234)
+                    .addComponent(jLabel206))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel210)
+                    .addComponent(flexibilitatPD))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel213)
+                    .addComponent(flexibilitatPC))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        calculPercentilsFiveDigit.setText("Calcular percentils");
+
+        javax.swing.GroupLayout Panel4Layout = new javax.swing.GroupLayout(Panel4);
+        Panel4.setLayout(Panel4Layout);
+        Panel4Layout.setHorizontalGroup(
+            Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Panel4Layout.createSequentialGroup()
+                                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(calculPercentilsFiveDigit)))
+                    .addComponent(jLabel160))
+                .addContainerGap(930, Short.MAX_VALUE))
+        );
+        Panel4Layout.setVerticalGroup(
+            Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel160)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(Panel4Layout.createSequentialGroup()
+                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(calculPercentilsFiveDigit)
+                .addContainerGap(344, Short.MAX_VALUE))
+        );
+
+        jPanel15.getAccessibleContext().setAccessibleName("Processos Automàtics");
+
+        fiveDigitsScroll4.setViewportView(Panel4);
+
+        fiveDigitsTab.add(fiveDigitsScroll4, "card5");
+
+        tabbedPanel.addTab("FIVE DIGIT", fiveDigitsTab);
+
+        colorTrailsTab1.setLayout(new java.awt.CardLayout());
+
+        jLabel164.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel164.setText("Fluència verbal");
+
+        fluenciaVerbalTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", null},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", null},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+            },
+            new String [] {
+                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                true, false, true, true, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        fluenciaVerbalTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        fluenciaVerbalTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fluenciaVerbalTable.setRowSelectionAllowed(false);
+        fluenciaVerbalTable.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        fluenciaVerbalTable.setSortable(false);
+        fluenciaVerbalTable.setSortsOnUpdates(false);
+        jScrollPane19.setViewportView(fluenciaVerbalTable);
+        if (fluenciaVerbalTable.getColumnModel().getColumnCount() > 0) {
+            fluenciaVerbalTable.getColumnModel().getColumn(0).setResizable(false);
+            fluenciaVerbalTable.getColumnModel().getColumn(1).setResizable(false);
+            fluenciaVerbalTable.getColumnModel().getColumn(3).setResizable(false);
+            fluenciaVerbalTable.getColumnModel().getColumn(4).setResizable(false);
+        }
+
+        javax.swing.GroupLayout digitsDirectePanel2Layout = new javax.swing.GroupLayout(digitsDirectePanel2);
+        digitsDirectePanel2.setLayout(digitsDirectePanel2Layout);
+        digitsDirectePanel2Layout.setHorizontalGroup(
+            digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel164))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        digitsDirectePanel2Layout.setVerticalGroup(
+            digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, digitsDirectePanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel164)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        digitsDirecteScroll2.setViewportView(digitsDirectePanel2);
+
+        colorTrailsTab1.add(digitsDirecteScroll2, "card1");
+
+        tabbedPanel.addTab("FLUÈNCIA VERBAL", colorTrailsTab1);
+
         dataPanel.add(tabbedPanel, java.awt.BorderLayout.CENTER);
 
         mainPanel.add(dataPanel, java.awt.BorderLayout.CENTER);
@@ -2504,7 +4401,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(paginaLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(sepBottom, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 405, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 904, Short.MAX_VALUE)
                 .addComponent(acceptaBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelaBtn)
@@ -2545,6 +4442,8 @@ public class Sessio1 extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelaBtnActionPerformed
 
     private void anteriorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorBtnActionPerformed
+        if (timer.isRunning())
+            timer.stop();
         JPanel currentPanel = (JPanel) tabbedPanel.getSelectedComponent();
         CardLayout card = (CardLayout)currentPanel.getLayout();
         pagina--;
@@ -2561,6 +4460,8 @@ public class Sessio1 extends javax.swing.JFrame {
     }//GEN-LAST:event_anteriorBtnActionPerformed
 
     private void seguentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seguentBtnActionPerformed
+        if (timer.isRunning())
+            timer.stop();
         JPanel currentPanel = (JPanel) tabbedPanel.getSelectedComponent();
         CardLayout card = (CardLayout)currentPanel.getLayout();
         pagina++;
@@ -2631,6 +4532,144 @@ public class Sessio1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_resetHistoriaB4ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+          calcularDigits(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        calcularDigits(false);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        if (timer.isRunning()){
+            temps1.setText(this.fiveDigitStart1.getText());
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        if (timer.isRunning()){
+            temps2.setText(this.fiveDigitStart1.getText());
+            timer.stop();
+            fiveDigitStart1.setText("<html><center>Comença Crono<br>Lectura");
+            fiveDigitStart1.setEnabled(true);
+        }else {
+            fiveDigitStart1.setText("<html><center>Comença Crono<br>Lectura");
+            fiveDigitStart1.setEnabled(true);
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void fiveDigitStart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitStart1ActionPerformed
+        temps1.setText("00:00.00");
+        temps2.setText("00:00.00");
+        startTime = System.currentTimeMillis();
+        timer.start();
+        fiveDigitStart1.setEnabled(false);
+    }//GEN-LAST:event_fiveDigitStart1ActionPerformed
+
+    private void fiveDigitStart2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitStart2ActionPerformed
+        temps3.setText("00:00.00");
+        temps4.setText("00:00.00");
+        startTime = System.currentTimeMillis();
+        timer.start();
+        fiveDigitStart2.setEnabled(false);
+    }//GEN-LAST:event_fiveDigitStart2ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        if (timer.isRunning()){
+            temps3.setText(this.fiveDigitStart2.getText());
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        if (timer.isRunning()){
+            temps4.setText(this.fiveDigitStart2.getText());
+            timer.stop();
+            fiveDigitStart2.setText("<html><center>Comença Crono<br>Lectura");
+            fiveDigitStart2.setEnabled(true);
+        }else {
+            fiveDigitStart2.setText("<html><center>Comença Crono<br>Lectura");
+            fiveDigitStart2.setEnabled(true);
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void fiveDigitStart3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitStart3ActionPerformed
+        temps5.setText("00:00.00");
+        temps6.setText("00:00.00");
+        startTime = System.currentTimeMillis();
+        timer.start();
+        fiveDigitStart3.setEnabled(false);
+    }//GEN-LAST:event_fiveDigitStart3ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        if (timer.isRunning()){
+            temps5.setText(this.fiveDigitStart3.getText());
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        if (timer.isRunning()){
+            temps6.setText(this.fiveDigitStart3.getText());
+            timer.stop();
+            fiveDigitStart3.setText("<html><center>Comença Crono<br>Lectura");
+            fiveDigitStart3.setEnabled(true);
+        }else {
+            fiveDigitStart3.setText("<html><center>Comença Crono<br>Lectura");
+            fiveDigitStart3.setEnabled(true);
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void fiveDigitStart4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitStart4ActionPerformed
+        temps7.setText("00:00.00");
+        temps8.setText("00:00.00");
+        startTime = System.currentTimeMillis();
+        timer.start();
+        fiveDigitStart4.setEnabled(false);
+    }//GEN-LAST:event_fiveDigitStart4ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        if (timer.isRunning()){
+            temps7.setText(this.fiveDigitStart4.getText());
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        if (timer.isRunning()){
+            temps8.setText(this.fiveDigitStart4.getText());
+            timer.stop();
+            fiveDigitStart4.setText("<html><center>Comença Crono<br>Lectura");
+            fiveDigitStart4.setEnabled(true);
+        }else {
+            fiveDigitStart4.setText("<html><center>Comença Crono<br>Lectura");
+            fiveDigitStart4.setEnabled(true);
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void resetDDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetDDActionPerformed
+        
+    }//GEN-LAST:event_resetDDActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        calcularBNTC();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        calcularBNTB();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        calcularBNTA();
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int MLI = calculaMLI(Integer.parseInt(ML1Total.getText()));
+        puntuacioML1.setText(MLI+"");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        int MLII = calculaMLII(Integer.parseInt(ML2Total.getText()));
+        puntuacioML2.setText(MLII+"");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2662,7 +4701,7 @@ public class Sessio1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sessio1().setVisible(true);
+                new Sessio1(null).setVisible(true);
             }
         });
     }
@@ -2698,36 +4737,95 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JPanel MLPanel4;
     private javax.swing.JPanel MLPanel5;
     private javax.swing.JPanel MLPanel6;
+    private javax.swing.JPanel Panel;
+    private javax.swing.JPanel Panel1;
+    private javax.swing.JPanel Panel2;
+    private javax.swing.JPanel Panel3;
+    private javax.swing.JPanel Panel4;
     private javax.swing.JButton acceptaBtn;
+    private javax.swing.JLabel alternErrors;
+    private javax.swing.JLabel alternErrorsPC;
+    private javax.swing.JLabel alternTemps;
+    private javax.swing.JLabel alternTempsPC;
+    private javax.swing.JLabel alternanTemps2;
     private javax.swing.JButton anteriorBtn;
     private javax.swing.JPanel buttonPanel;
+    private javax.swing.JButton calculPercentilsFiveDigit;
     private javax.swing.JButton cancelaBtn;
+    private javax.swing.JPanel colorTrailsTab;
+    private javax.swing.JPanel colorTrailsTab1;
+    private org.jdesktop.swingx.JXTable colorTrailsTable;
+    private javax.swing.JLabel compteigErrors;
+    private javax.swing.JLabel compteigErrorsPC;
+    private javax.swing.JLabel compteigTemps;
+    private javax.swing.JLabel compteigTemps2;
+    private javax.swing.JLabel compteigTempsPC;
     private javax.swing.JLabel correctesBntA;
     private javax.swing.JLabel correctesBntB;
     private javax.swing.JLabel correctesBntC;
     private javax.swing.JPanel dataPanel;
     private javax.swing.JPanel digitsDirectePanel;
+    private javax.swing.JPanel digitsDirectePanel1;
+    private javax.swing.JPanel digitsDirectePanel2;
     private javax.swing.JScrollPane digitsDirecteScroll;
+    private javax.swing.JScrollPane digitsDirecteScroll1;
+    private javax.swing.JScrollPane digitsDirecteScroll2;
     private org.jdesktop.swingx.JXTable digitsDirecteTable;
     private javax.swing.JPanel digitsInversPanel;
     private javax.swing.JScrollPane digitsInversScroll;
     private org.jdesktop.swingx.JXTable digitsInversTable;
     private javax.swing.JPanel digitsTab;
+    private javax.swing.JLabel eleccioErrors;
+    private javax.swing.JLabel eleccioErrorsPC;
+    private javax.swing.JLabel eleccioTemps;
+    private javax.swing.JLabel eleccioTemps2;
+    private javax.swing.JLabel eleccioTempsPC;
+    private javax.swing.JButton fiveDigitStart1;
+    private javax.swing.JButton fiveDigitStart2;
+    private javax.swing.JButton fiveDigitStart3;
+    private javax.swing.JButton fiveDigitStart4;
+    private javax.swing.JScrollPane fiveDigitsScroll;
+    private javax.swing.JScrollPane fiveDigitsScroll1;
+    private javax.swing.JScrollPane fiveDigitsScroll2;
+    private javax.swing.JScrollPane fiveDigitsScroll3;
+    private javax.swing.JScrollPane fiveDigitsScroll4;
+    private javax.swing.JPanel fiveDigitsTab;
+    private javax.swing.JLabel flexibilitatPC;
+    private javax.swing.JLabel flexibilitatPD;
+    private org.jdesktop.swingx.JXTable fluenciaVerbalTable;
     private javax.swing.JLabel historiaAprimerTotal;
     private javax.swing.JLabel historiaAprimerTotal2;
     private javax.swing.JLabel historiaAsegonTotal;
     private javax.swing.JLabel historiaBprimerTotal;
     private javax.swing.JLabel historiaBprimerTotal2;
+    private javax.swing.JLabel inhibicioPC;
+    private javax.swing.JLabel inhibicioPD;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
@@ -2735,14 +4833,107 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel112;
     private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
+    private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel120;
+    private javax.swing.JLabel jLabel121;
+    private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
+    private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel136;
+    private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel138;
+    private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel140;
+    private javax.swing.JLabel jLabel141;
+    private javax.swing.JLabel jLabel142;
+    private javax.swing.JLabel jLabel143;
+    private javax.swing.JLabel jLabel144;
+    private javax.swing.JLabel jLabel145;
+    private javax.swing.JLabel jLabel146;
+    private javax.swing.JLabel jLabel147;
+    private javax.swing.JLabel jLabel148;
+    private javax.swing.JLabel jLabel149;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel150;
+    private javax.swing.JLabel jLabel151;
+    private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel153;
+    private javax.swing.JLabel jLabel154;
+    private javax.swing.JLabel jLabel155;
+    private javax.swing.JLabel jLabel156;
+    private javax.swing.JLabel jLabel157;
+    private javax.swing.JLabel jLabel158;
+    private javax.swing.JLabel jLabel159;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel jLabel179;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel180;
+    private javax.swing.JLabel jLabel181;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel188;
+    private javax.swing.JLabel jLabel189;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel190;
+    private javax.swing.JLabel jLabel194;
+    private javax.swing.JLabel jLabel195;
+    private javax.swing.JLabel jLabel198;
+    private javax.swing.JLabel jLabel199;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel202;
+    private javax.swing.JLabel jLabel205;
+    private javax.swing.JLabel jLabel206;
+    private javax.swing.JLabel jLabel207;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel210;
+    private javax.swing.JLabel jLabel213;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel233;
+    private javax.swing.JLabel jLabel234;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
@@ -2768,6 +4959,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
@@ -2782,6 +4974,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
@@ -2789,6 +4982,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
@@ -2805,16 +4999,31 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
@@ -2824,6 +5033,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2831,23 +5041,45 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel lecturaErrors;
+    private javax.swing.JLabel lecturaErrorsPC;
+    private javax.swing.JLabel lecturaTemps;
+    private javax.swing.JLabel lecturaTemps2;
+    private javax.swing.JLabel lecturaTempsPC;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JLabel nssaBNTA;
+    private javax.swing.JLabel nssaBNTB;
+    private javax.swing.JLabel nssaBNTC;
     private javax.swing.JLabel nssaDD;
     private javax.swing.JLabel nssaDI;
     private javax.swing.JLabel paginaLabel;
     private javax.swing.JLabel paginaLabel2;
+    private javax.swing.JLabel percentilBNTA;
+    private javax.swing.JLabel percentilBNTB;
+    private javax.swing.JLabel percentilBNTC;
     private javax.swing.JLabel percentilDD;
     private javax.swing.JLabel percentilDI;
     private javax.swing.JLabel puntuacioDirectaDD;
     private javax.swing.JLabel puntuacioDirectaDI;
     private javax.swing.JLabel puntuacioML1;
-    private javax.swing.JLabel puntuacioML10;
     private javax.swing.JLabel puntuacioML2;
-    private javax.swing.JLabel puntuacioML4;
-    private javax.swing.JLabel puntuacioML6;
-    private javax.swing.JLabel puntuacioML7;
-    private javax.swing.JLabel puntuacioML8;
-    private javax.swing.JLabel puntuacioML9;
+    private javax.swing.JButton resetDD;
+    private javax.swing.JButton resetDI;
     private javax.swing.JButton resetHistoriaA;
     private javax.swing.JButton resetHistoriaA1;
     private javax.swing.JButton resetHistoriaB;
@@ -2863,6 +5095,14 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel spanDD;
     private javax.swing.JLabel spanDI;
     private javax.swing.JTabbedPane tabbedPanel;
+    private javax.swing.JLabel temps1;
+    private javax.swing.JLabel temps2;
+    private javax.swing.JLabel temps3;
+    private javax.swing.JLabel temps4;
+    private javax.swing.JLabel temps5;
+    private javax.swing.JLabel temps6;
+    private javax.swing.JLabel temps7;
+    private javax.swing.JLabel temps8;
     private javax.swing.JTextArea textHistoriaAprimer;
     private javax.swing.JTextArea textHistoriaAprimer2;
     private javax.swing.JTextArea textHistoriaAsegon;
@@ -2880,35 +5120,44 @@ public class Sessio1 extends javax.swing.JFrame {
     private void initDigitsDirecteTable() {
         String header = "<html><font color=\"rgb(255,255,255)\">";
         customModel model = new customModel(
-        new Object [][] {
-            {"1", "9 - 7			 ", null, "0", null},
-            {null, "6 - 3", null, "0", "0"},
-            {"2", "5 - 8 - 2			 ", null, "0", null},
-            {null, "6 - 9 - 4			 ", null, "0", "0"},
-            {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
-            {null, "6 - 4 - 3 - 9			 ", null, "0", "0"},
-            {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
-            {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", "0"},
-            {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
-            {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", "0"},
-            {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
-            {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", "0"},
-            {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
-            {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", "0"},
-            {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
-            {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", "0"}
-        },
-        new String [] {
-            header+"Ítem", header+"Intent", header+"Resposta", header+"<center>Puntuació intent<br>(0-1)", header+"Puntuació ítem"
-        }
-    );
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", "0"},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", "0"},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", "0"},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", "0"},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", "0"},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", "0"},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", "0"},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", "0"}
+            },
+            new String [] {
+                header+"Ítem", header+"Intent", header+"Resposta", header+"<center>Puntuació intent<br>(0-1)", header+"Puntuació ítem"
+            }
+        );
+        
+        
+//        boolean colors[][] = new boolean[digitsDirecteTable.getRowCount()][digitsDirecteTable.getColumnCount()];
+//        for (boolean[] r: colors)
+//            Arrays.fill(r, false);
+
         //editModel model = new editModel(digitsDirecteTable.getRowCount(),digitsDirecteTable.getColumnCount());
         digitsDirecteTable.setModel(model);
         
         //DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         //centerRenderer.setHorizontalAlignment( JLabel.CENTER );
-        digitsDirecteTable.getColumnModel().getColumn(0).setCellRenderer( new customRenderer( true) );
+
+        
         digitsDirecteTable.getColumnModel().getColumn(4).setCellRenderer( new customRenderer(true) );
+        digitsDirecteTable.getColumnModel().getColumn(0).setCellRenderer( new customRenderer(true) );
+        digitsDirecteTable.getColumnModel().getColumn(2).setCellRenderer( new customRenderer(true) );
         
         for (int i=0; i<digitsDirecteTable.getColumnModel().getColumnCount();i++){
             digitsDirecteTable.getColumnModel().getColumn(i).setResizable(false);
@@ -2918,6 +5167,10 @@ public class Sessio1 extends javax.swing.JFrame {
         digitsDirecteTable.setHighlighters(HighlighterFactory.createSimpleStriping());
         
         digitsDirecteTable.getTableHeader().setReorderingAllowed(false);
+        
+        
+        
+        
         
         for (int i = 0; i<digitsDirecteTable.getRowCount(); i++){
             digitsDirecteTable.setRowHeight(i, 30);
@@ -2931,11 +5184,21 @@ public class Sessio1 extends javax.swing.JFrame {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
                 int val = Integer.parseInt((String)table.getValueAt(row, 3));
-                table.setValueAt(val == 0 ? "1" : "0", row, 3);
+                
+                if ((row == 0 || (Integer.parseInt((String)table.getValueAt(row-1, 3))==1)) && Integer.parseInt((String)table.getValueAt(row+1, 3))==0){
+                    if (val == 0){
+                        table.setValueAt("1",row, 3);
+                        table.setValueAt(table.getValueAt(row,1),row, 2);
+                    } else{
+                        table.setValueAt("0",row, 3);
+                        table.setValueAt("",row, 2);
+                    }
+                }
                 
                 
                 int sumaTotal = 0;
                 int suma = 0;
+                int span = 0;
                 
                 model.setEditable(4,true);
                 for (int i = 0; i<table.getRowCount(); i++){
@@ -2943,13 +5206,36 @@ public class Sessio1 extends javax.swing.JFrame {
                     if (i%2 == 1){
                         suma = Integer.parseInt((String)table.getValueAt(i, 3))+Integer.parseInt((String)table.getValueAt(i-1, 3));
                         table.setValueAt(suma+"", i, 4);
-                        table.setRowHeight(i, 30);
                     }
                 }
                 model.setEditable(4,false);
+                span = sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1;
+                spanDD.setText(span+"");
                 puntuacioDirectaDD.setText(sumaTotal+"");
             }
         };
+        
+        resetDD.addActionListener(new ActionListener()
+        {
+          public void actionPerformed(ActionEvent e)
+          {
+            for (int i = 0; i<digitsDirecteTable.getRowCount(); i++){
+            digitsDirecteTable.setValueAt("", i, 2);
+            digitsDirecteTable.setValueAt("0", i, 3);
+                if (i%2 == 1){
+                    model.setEditable(4,true);
+                    digitsDirecteTable.setValueAt("0", i, 4);
+                    model.setEditable(4,false);
+                }
+            }
+            spanDD.setText("0");
+            puntuacioDirectaDD.setText("0");
+            percentilDD.setText("0");
+            nssaDD.setText("0");
+          }
+        });
+        
+        
         
         ButtonColumn buttonColumn = new ButtonColumn(digitsDirecteTable, action, 3);
         digitsDirecteTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
@@ -2987,7 +5273,7 @@ public class Sessio1 extends javax.swing.JFrame {
             java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
         };
         boolean[] canEdit = new boolean [] {
-            true, false, false, true, true, false
+            false, false, false, true, true, false
         };
         
         model.setTypes(types);
@@ -2999,6 +5285,7 @@ public class Sessio1 extends javax.swing.JFrame {
         centerRenderer.setHorizontalAlignment( JLabel.CENTER );
         digitsInversTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         digitsInversTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
+        digitsInversTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         
         for (int i=0; i<digitsInversTable.getColumnModel().getColumnCount();i++){
             digitsInversTable.getColumnModel().getColumn(i).setResizable(false);
@@ -3023,11 +5310,20 @@ public class Sessio1 extends javax.swing.JFrame {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
                 int val = Integer.parseInt((String)table.getValueAt(row, 4));
-                table.setValueAt(val == 0 ? "1" : "0", row, 4);
                 
+                if ((row == 0 || (Integer.parseInt((String)table.getValueAt(row-1, 4))==1)) && Integer.parseInt((String)table.getValueAt(row+1, 4))==0){
+                    if (val == 0){
+                        table.setValueAt("1",row, 4);
+                        table.setValueAt(table.getValueAt(row,2),row, 3);
+                    } else{
+                        table.setValueAt("0",row, 4);
+                        table.setValueAt("",row, 3);
+                    }
+                }
                 
                 int sumaTotal = 0;
                 int suma = 0;
+                int span = 0;
                 
                 for (int i = 0; i<table.getRowCount(); i++){
                     sumaTotal += Integer.parseInt((String)table.getValueAt(i, 4));
@@ -3038,9 +5334,31 @@ public class Sessio1 extends javax.swing.JFrame {
                     }
                 }
                 model.setEditable(5,false);
+                span = sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1;
+                spanDI.setText(span+"");
                 puntuacioDirectaDI.setText(sumaTotal+"");
             }
         };
+        
+        resetDI.addActionListener(new ActionListener()
+        {
+          public void actionPerformed(ActionEvent e)
+          {
+            for (int i = 0; i<digitsInversTable.getRowCount(); i++){
+            digitsInversTable.setValueAt("", i, 3);
+            digitsInversTable.setValueAt("0", i, 4);
+                if (i%2 == 1){
+                    model.setEditable(5,true);
+                    digitsInversTable.setValueAt("0", i, 5);
+                    model.setEditable(5,false);
+                }
+            }
+            spanDI.setText("0");
+            puntuacioDirectaDI.setText("0");
+            percentilDI.setText("0");
+            nssaDI.setText("0");
+          }
+        });
         
         ButtonColumn buttonColumn = new ButtonColumn(digitsInversTable, action, 4);
         digitsInversTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
@@ -3068,7 +5386,7 @@ public class Sessio1 extends javax.swing.JFrame {
             {"14", "del Retiro.", "<html>es requereix <i>Retiro</i> (en qualsevol context)", "0", "0"}
         },
         new String [] {
-            header+"Ítem", header+"Detall", header+"Criteri de puntuació", header+"<center>Puntuació<br>Primer record", header+"<center>Puntuació<br>Primer record"
+            header+"Ítem", header+"Detall", header+"Criteri de puntuació", header+"<center>Puntuació<br>Primer record", header+"<center>Puntuació<br>Segon record"
         }
     );
         
@@ -3318,7 +5636,9 @@ public class Sessio1 extends javax.swing.JFrame {
             @Override
             public void stateChanged(ChangeEvent e) {
                 pagina = 0;
-              
+                
+                if (timer.isRunning())
+                    timer.stop();
                 
                 numPaginesTotal = ((JPanel)tabbedPanel.getSelectedComponent()).getComponentCount();
                 if (numPaginesTotal > 1){
@@ -3332,6 +5652,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 }
                 paginaLabel.setText((pagina+1)+"");
                 paginaLabel2.setText("/ "+(numPaginesTotal)+"");
+                
             }
         });
     }
@@ -3889,11 +6210,1336 @@ public class Sessio1 extends javax.swing.JFrame {
         BNTCTable.packAll();
     }
 
+    private void initHashDD() {
+        taulaDigitsDD = new HashMap<>();
+        List<Object> auxList;
+        HashMap<Integer, List<Object>> auxMap = new HashMap<>();
+        
+        auxList = Arrays.asList(2, "<1");
+        auxMap.put(0, auxList);
+        auxMap.put(1, auxList);
+        auxMap.put(2, auxList);
+        auxMap.put(3, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(4, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(5, auxList);
+        auxList = Arrays.asList(11, "60-71");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(14, "90-94");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(15, "95-97");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(9, auxList);
+        taulaDigitsDD.put("50-56", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(4, auxList);
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(5, auxList);
+        auxList = Arrays.asList(12, "72-81");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(16, "98");
+        auxMap.put(8, auxList);
+        taulaDigitsDD.put("57-59", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(4, auxList);
+        taulaDigitsDD.put("60-62", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(15, "95-97");
+        auxMap.put(7, auxList);
+        taulaDigitsDD.put("63-65", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(4, "2");
+        auxMap.put(3, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(4, auxList);
+        auxList = Arrays.asList(17, "99");
+        auxMap.put(8, auxList);
+        taulaDigitsDD.put("66-68", new HashMap(auxMap));
+        
+        taulaDigitsDD.put("69-71", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(4, auxList);
+        taulaDigitsDD.put("72-74", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(3, auxList);
+        auxList = Arrays.asList(16, "1");
+        auxMap.put(7, auxList);
+        taulaDigitsDD.put("75-77", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(17, "99");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(8, auxList);
+        taulaDigitsDD.put("78-80", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(2, "<1");
+        auxMap.put(3, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(4, auxList);
+        auxList = Arrays.asList(11, "60-71");
+        auxMap.put(5, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(7, auxList);
+        taulaDigitsDD.put("81-90", new HashMap(auxMap));
+        
+    }
+
+    private void calcularDigits(boolean digits) {
+        int edatPacient = pacientActual.getEdat();
+        String edat = "";
+        if (edatPacient<=56){
+            edat = "50-56";
+        }
+        else if (edatPacient>=57 && edatPacient<=59){
+            edat = "57-59";
+        }
+        else if (edatPacient>=60 && edatPacient<=62){
+            edat = "60-62";
+        }
+        else if (edatPacient>=63 && edatPacient<=65){
+            edat = "63-65";
+        }
+        else if (edatPacient>=66 && edatPacient<=68){
+            edat = "66-68";
+        }
+        else if (edatPacient>=69 && edatPacient<=71){
+            edat = "69-71";
+        }
+        else if (edatPacient>=72 && edatPacient<=74){
+            edat = "72-74";
+        }
+        else if (edatPacient>=75 && edatPacient<=77){
+            edat = "75-77";
+        }
+        else if (edatPacient>=78 && edatPacient<=80){
+            edat = "78-80";
+        }
+        else if (edatPacient<=81){
+            edat = "81-90";
+        }
+        
+        List<Object> list;
+        if (digits){
+            System.out.println(Integer.parseInt(spanDD.getText()));
+            System.out.println(edat);
+            list = taulaDigitsDD.get(edat).get(Integer.parseInt(spanDD.getText()));
+            percentilDD.setText((String) list.get(1));
+        } else {
+            list = taulaDigitsDI.get(edat).get(Integer.parseInt(spanDI.getText()));
+            percentilDI.setText((String) list.get(1));
+        }
+        int scaledScore = (int) list.get(0);
+        
+        int anysEscola = pacientActual.getAnysEscola();
+        int modificador = 0;
+        
+        if (anysEscola <= 2){
+            modificador = 2;
+        }
+        else if (anysEscola >=3 && anysEscola <=7){
+            modificador = 1;
+        }
+        else if (anysEscola >=8 && anysEscola <=12){
+            modificador = 0;
+        }
+        else if (anysEscola >=13 && anysEscola <=16){
+            modificador = -1;
+        }
+        else if (anysEscola >=17){
+            modificador = -2;
+        }
+        if (digits)
+            nssaDD.setText(scaledScore+modificador+"");
+        else
+            nssaDI.setText(scaledScore+modificador+"");
+    }
+
+    private void initHashDI() {
+    
+        taulaDigitsDI = new HashMap<>();
+        List<Object> auxList;
+        HashMap<Integer, List<Object>> auxMap = new HashMap<>();
+        
+        auxList = Arrays.asList(2, "<1");
+        auxMap.put(0, auxList);
+        auxMap.put(1, auxList);
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(2, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(3, auxList);
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(4, auxList);
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(5, auxList);
+        auxList = Arrays.asList(15, "95-97");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(7, auxList);
+        taulaDigitsDI.put("50-56", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(2, auxList);
+        taulaDigitsDI.put("57-59", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(11, "60-71");
+        auxMap.put(4, auxList);
+        auxList = Arrays.asList(14, "90-94");
+        auxMap.put(5, auxList);
+        taulaDigitsDI.put("60-62", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(3, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(6, auxList);
+        taulaDigitsDI.put("63-65", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(3, auxList);
+        taulaDigitsDI.put("66-68", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(3, auxList);
+        auxList = Arrays.asList(12, "72-81");
+        auxMap.put(4, auxList);
+        auxList = Arrays.asList(17, "99");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(7, auxList);
+        taulaDigitsDI.put("69-71", new HashMap(auxMap));
+        
+        taulaDigitsDI.put("72-74", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(2, auxList);
+        taulaDigitsDI.put("75-77", new HashMap(auxMap));
+        
+        taulaDigitsDI.put("78-80", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(3, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(6, auxList);
+        taulaDigitsDI.put("81-90", new HashMap(auxMap));
+    
+    }
+
+    private void initColorTrails() {
+        String header = "<html><center><font color=\"rgb(255,255,255)\">";
+        customModel model = new customModel(
+            new Object [][] {
+                {"<html><b>Color Trails 1 - Time in seconds",null, "X", null, null, null},
+                {"<html><b>Color Trails 1 - Errors",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 1 - Near-Misses",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 1 - Prompts",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 2 - Time in seconds",null, "X", null, null, null},
+                {"<html><b>Color Trails 1 - Errors",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 1 - Near-Misses",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 1 - Prompts",null, null, "X", "X", "X"},
+                {"<html><b>Interference Index</b><br>(Color Trails 2 times raw score<br>minus Color Trails 1 time raw score)<br>/Color Trails 1 time raw score",null, null, "X", "X", "X"}
+            },
+            new String [] {
+                "",header+"Raw<br>score", header+"Percentile<br>range", header+"Standard<br>score", header+"T<br>score", header+"Percentile<br>score"
+            }
+        );
+        
+        
+        Class[] types = new Class [] {
+            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class,java.lang.String.class
+        };
+        boolean[] canEdit = new boolean [] {
+            false, true, true, false, false, false
+        };
+        
+        System.out.println(model.getColumnCount());
+        System.out.println(model.getRowCount());
+        boolean edit[][] = new boolean[model.getColumnCount()][model.getRowCount()];
+        for (boolean[] r: edit)
+            Arrays.fill(r, false);
+        
+        Arrays.fill(edit[1],true);
+        Arrays.fill(edit[2],true);
+        
+        model.setCanEditMatrix(edit);
+        
+        model.setCustom(true);
+        model.setEditable(2, 0, false);
+        model.setEditable(2, 4, false);
+        model.setEditable(3, 0, true);
+        model.setEditable(3, 4, true);
+        model.setEditable(4, 0, true);
+        model.setEditable(4, 4, true);
+        model.setEditable(5, 0, true);
+        model.setEditable(5, 4, true);
+        
+        model.setTypes(types);
+        model.setCanEdit(canEdit);
+        
+        colorTrailsTable.setModel(model);
+        
+        //digitsDirecteTable.getColumnModel().getColumn(4).setCellRenderer( new customRenderer(true) );
+        //digitsDirecteTable.getColumnModel().getColumn(0).setCellRenderer( new customRenderer(true) );
+        
+        
+        for (int i=1; i<colorTrailsTable.getColumnModel().getColumnCount();i++){
+            colorTrailsTable.getColumnModel().getColumn(i).setResizable(false);
+            colorTrailsTable.getColumn(i).setHeaderRenderer(new customRenderer(new Color(190,80,80),true));
+            colorTrailsTable.getColumnModel().getColumn(i).setPreferredWidth(120);
+            colorTrailsTable.getColumnModel().getColumn(i).setCellRenderer( new customRenderer(true) );
+        }
+        
+        colorTrailsTable.getColumnModel().getColumn(0).setResizable(false);
+        
+        //digitsDirecteTable.setHighlighters(HighlighterFactory.createSimpleStriping());
+        
+        colorTrailsTable.getTableHeader().setReorderingAllowed(false);
+        
+        //colorTrailsTable.setHighlighters(HighlighterFactory.createSimpleStriping());
+        
+        for (int i = 0; i<colorTrailsTable.getRowCount()-1; i++){
+            colorTrailsTable.setRowHeight(i, 30);
+        }
+        colorTrailsTable.setRowHeight(8, 80);
+        colorTrailsTable.getColumn(3).setPreferredWidth(120);
+        colorTrailsTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        colorTrailsTable.packAll();
+        
+    }
+
+    private void initTimer() {
+        this.llistaBtn5digits = new JButton[4];
+        llistaBtn5digits[0] = fiveDigitStart1;
+        llistaBtn5digits[1] = fiveDigitStart2;
+        llistaBtn5digits[2] = fiveDigitStart3;
+        llistaBtn5digits[3] = fiveDigitStart4;
+        timeFormatter = new DecimalFormat("00");
+        timer = new Timer(10, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                long now = System.currentTimeMillis();
+                long dif = now - startTime;
+
+                long minutes = dif / (60 * 1000);
+                dif = Math.round(dif % (60 * 1000));
+                long seconds = dif / 1000;
+                dif = Math.round(dif % 1000);
+                long centiseconds = dif / 10;
+
+                llistaBtn5digits[pagina].setText(timeFormatter.format(minutes) + ":"
+                        + timeFormatter.format(seconds) + "."
+                        + timeFormatter.format(centiseconds));
+            }
+        });
+    }
+
+    private void initFluenciaVerbalTable() {
+        String header = "<html><font color=\"rgb(255,255,255)\">";
+        customModel model = new customModel(
+            new Object [][] {
+                {"1.", null,"1.",null,"1.",null,"1.",null},
+                {"2.", null,"2.",null,"2.",null,"2.",null},
+                {"3.", null,"3.",null,"3.",null,"3.",null},
+                {"4.", null,"4.",null,"4.",null,"4.",null},
+                {"5.", null,"5.",null,"5.",null,"5.",null},
+                {"6.", null,"6.",null,"6.",null,"6.",null},
+                {"7.", null,"7.",null,"7.",null,"7.",null},
+                {"8.", null,"8.",null,"8.",null,"8.",null},
+                {"9.", null,"9.",null,"9.",null,"9.",null},
+                {"10.", null,"10.",null,"10.",null,"10.",null},
+                {"11.", null,"11.",null,"11.",null,"11.",null},
+                {"12.", null,"12.",null,"12.",null,"12.",null},
+                {"13.", null,"13.",null,"13.",null,"13.",null},
+                {"14.", null,"14.",null,"14.",null,"14.",null},
+                {"15.", null,"15.",null,"15.",null,"15.",null},
+                {"16.", null,"16.",null,"16.",null,"16.",null},
+                {"17.", null,"17.",null,"17.",null,"17.",null},
+                {"18.", null,"18.",null,"18.",null,"18.",null},
+                {"19.", null,"19.",null,"19.",null,"19.",null},
+                {"20.", null,"20.",null,"20.",null,"20.",null},
+                {"21.", null,"21.",null,"21.",null,"21.",null},
+                {"22.", null,"22.",null,"22.",null,"22.",null},
+                {"23.", null,"23.",null,"23.",null,"23.",null},
+                {"24.", null,"24.",null,"24.",null,"24.",null},
+                {"25.", null,"25.",null,"25.",null,"25.",null},
+                {"<html><b>Total", null,"<html><b>Total",null,"<html><b>Total",null,"<html><b>Total",null}
+            },
+            new String [] {
+                "", header+"P", "", header+"M","", header+"R","", header+"ANIMALS"
+            }
+        );
+        
+        Class[] types = new Class [] {
+            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class,java.lang.String.class,java.lang.String.class,java.lang.String.class,java.lang.String.class
+        };
+        boolean[] canEdit = new boolean [] {
+            false, true, false, true,false, true,false, true
+        };
+        
+        model.setTypes(types);
+        model.setCanEdit(canEdit);
+        
+        fluenciaVerbalTable.setModel(model);
+        
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+        fluenciaVerbalTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
+        fluenciaVerbalTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
+        fluenciaVerbalTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
+        fluenciaVerbalTable.getColumnModel().getColumn(7).setCellRenderer( centerRenderer );
+        
+        for (int i=0; i<fluenciaVerbalTable.getColumnModel().getColumnCount();i++){
+            fluenciaVerbalTable.getColumnModel().getColumn(i).setResizable(false);
+            fluenciaVerbalTable.getColumn(i).setHeaderRenderer(new customRenderer(new Color(190,80,80),true));
+        }
+        
+        
+        fluenciaVerbalTable.getTableHeader().setReorderingAllowed(false);
+        fluenciaVerbalTable.setHighlighters(HighlighterFactory.createSimpleStriping());
+        
+        for (int i = 0; i<fluenciaVerbalTable.getRowCount(); i++){
+            fluenciaVerbalTable.setRowHeight(i, 20);
+        }
+        
+        fluenciaVerbalTable.setRowHeight(25, 35);
+        
+        
+        fluenciaVerbalTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        fluenciaVerbalTable.packAll();
+        fluenciaVerbalTable.getColumn(1).setPreferredWidth(150);
+        fluenciaVerbalTable.getColumn(3).setPreferredWidth(150);
+        fluenciaVerbalTable.getColumn(5).setPreferredWidth(150);
+        fluenciaVerbalTable.getColumn(7).setPreferredWidth(150);
+    }
+
+    private int calculaMLI(int punt) {
+        int percentil = 0;
+        int edat = pacientActual.getEdat();
+        if(edat <= 64){
+            if (punt <=3){
+               percentil = 1; 
+            } else if (punt>=4 && punt<=5){
+                percentil = 2;
+            }else if (punt>=6 && punt<=7){
+                percentil = 3;
+            }else if (punt==8){
+                percentil = 4;
+            }else if (punt>=9 && punt<=10){
+                percentil = 5;
+            }else if (punt>=11 && punt<=12){
+                percentil = 6;
+            }else if (punt>=13 && punt<=14){
+                percentil = 7;
+            }else if (punt>=15 && punt<=17){
+                percentil = 8;
+            }else if (punt>=18 && punt<=19){
+                percentil = 9;
+            }else if (punt>=20 && punt<=21){
+                percentil = 10;
+            }else if (punt>=22 && punt<=23){
+                percentil = 11;
+            }else if (punt>=24 && punt<=25){
+                percentil = 12;
+            }else if (punt>=26 && punt<=28){
+                percentil = 13;
+            }else if (punt>=29 && punt<=30){
+                percentil = 14;
+            }else if (punt>=31 && punt<=32){
+                percentil = 15;
+            }else if (punt>=33 && punt<=35){
+                percentil = 16;
+            }else if (punt>=36 && punt<=37){
+                percentil = 17;
+            }else if (punt>=38 && punt<=40){
+                percentil = 18;
+            }else if (punt>=41){
+                percentil = 19;
+            }
+            
+        } else if (edat >= 65 && edat<=69){
+            
+            if (punt <=4){
+               percentil = 1; 
+            } else if (punt>=5 && punt<=6){
+                percentil = 2;
+            }else if (punt>=7 && punt<=9){
+                percentil = 3;
+            }else if (punt>=10 && punt<=11){
+                percentil = 4;
+            }else if (punt>=12 && punt<=14){
+                percentil = 5;
+            }else if (punt>=15 && punt<=17){
+                percentil = 6;
+            }else if (punt>=18 && punt<=19){
+                percentil = 7;
+            }else if (punt>=20 && punt<=22){
+                percentil = 8;
+            }else if (punt>=23 && punt<=24){
+                percentil = 9;
+            }else if (punt>=25 && punt<=27){
+                percentil = 10;
+            }else if (punt>=28 && punt<=30){
+                percentil = 11;
+            }else if (punt>=31 && punt<=33){
+                percentil = 12;
+            }else if (punt>=34 && punt<=35){
+                percentil = 13;
+            }else if (punt>=36 && punt<=38){
+                percentil = 14;
+            }else if (punt>=39 && punt<=41){
+                percentil = 15;
+            }else if (punt>=42 && punt<=44){
+                percentil = 16;
+            }else if (punt>=45 && punt<=47){
+                percentil = 17;
+            }else if (punt>=48 && punt<=50){
+                percentil = 18;
+            }else if (punt>=51){
+                percentil = 19;
+            }
+            
+        } else if (edat >= 70 && edat<=74){
+            
+            if (punt <=3){
+               percentil = 1; 
+            } else if (punt>=4 && punt<=5){
+                percentil = 2;
+            }else if (punt>=6 && punt<=8){
+                percentil = 3;
+            }else if (punt>=9 && punt<=10){
+                percentil = 4;
+            }else if (punt>=11 && punt<=12){
+                percentil = 5;
+            }else if (punt>=13 && punt<=15){
+                percentil = 6;
+            }else if (punt>=16 && punt<=17){
+                percentil = 7;
+            }else if (punt>=18 && punt<=20){
+                percentil = 8;
+            }else if (punt>=21 && punt<=22){
+                percentil = 9;
+            }else if (punt>=23 && punt<=25){
+                percentil = 10;
+            }else if (punt>=26 && punt<=28){
+                percentil = 11;
+            }else if (punt>=29 && punt<=31){
+                percentil = 12;
+            }else if (punt>=32 && punt<=34){
+                percentil = 13;
+            }else if (punt>=35 && punt<=37){
+                percentil = 14;
+            }else if (punt>=38 && punt<=40){
+                percentil = 15;
+            }else if (punt>=41 && punt<=43){
+                percentil = 16;
+            }else if (punt>=44 && punt<=46){
+                percentil = 17;
+            }else if (punt>=47 && punt<=49){
+                percentil = 18;
+            }else if (punt>=50){
+                percentil = 19;
+            }
+            
+        }else if (edat >= 75 && edat<=79){
+            
+            if (punt <=1){
+               percentil = 1; 
+            } else if (punt>=2 && punt<=3){
+                percentil = 2;
+            }else if (punt>=4 && punt<=6){
+                percentil = 3;
+            }else if (punt>=7 && punt<=8){
+                percentil = 4;
+            }else if (punt>=9 && punt<=10){
+                percentil = 5;
+            }else if (punt>=11 && punt<=13){
+                percentil = 6;
+            }else if (punt>=14 && punt<=16){
+                percentil = 7;
+            }else if (punt>=17 && punt<=18){
+                percentil = 8;
+            }else if (punt>=19 && punt<=21){
+                percentil = 9;
+            }else if (punt>=22 && punt<=23){
+                percentil = 10;
+            }else if (punt>=24 && punt<=26){
+                percentil = 11;
+            }else if (punt>=27 && punt<=29){
+                percentil = 12;
+            }else if (punt>=30 && punt<=32){
+                percentil = 13;
+            }else if (punt>=33 && punt<=35){
+                percentil = 14;
+            }else if (punt>=36 && punt<=38){
+                percentil = 15;
+            }else if (punt>=39 && punt<=41){
+                percentil = 16;
+            }else if (punt>=42 && punt<=44){
+                percentil = 17;
+            }else if (punt>=45 && punt<=47){
+                percentil = 18;
+            }else if (punt>=48){
+                percentil = 19;
+            }
+            
+        }else if (edat >= 80){
+            
+            if (punt == 0){
+               percentil = 2; 
+            }else if (punt>=1 && punt<=2){
+                percentil = 3;
+            }else if (punt>=3 && punt<=5){
+                percentil = 4;
+            }else if (punt>=6 && punt<=7){
+                percentil = 5;
+            }else if (punt>=8 && punt<=10){
+                percentil = 6;
+            }else if (punt>=11 && punt<=12){
+                percentil = 7;
+            }else if (punt>=13 && punt<=15){
+                percentil = 8;
+            }else if (punt>=16 && punt<=17){
+                percentil = 9;
+            }else if (punt>=18 && punt<=20){
+                percentil = 10;
+            }else if (punt>=21 && punt<=23){
+                percentil = 11;
+            }else if (punt>=24 && punt<=26){
+                percentil = 12;
+            }else if (punt>=27 && punt<=29){
+                percentil = 13;
+            }else if (punt>=30 && punt<=32){
+                percentil = 14;
+            }else if (punt>=33 && punt<=35){
+                percentil = 15;
+            }else if (punt>=36 && punt<=38){
+                percentil = 16;
+            }else if (punt>=39 && punt<=41){
+                percentil = 17;
+            }else if (punt>=42 && punt<=44){
+                percentil = 18;
+            }else if (punt>=45){
+                percentil = 19;
+            }
+            
+        }
+        
+        return percentil;
+    }
+
+    private int calculaMLII(int punt) {
+        int edat = pacientActual.getEdat();
+        int percentil = 0;
+        
+        if(edat <= 64){
+            if (punt == 0){
+               percentil = 2;
+            }else if (punt>=1 && punt<=2){
+                percentil = 3;
+            }else if (punt>=3 && punt<=4){
+                percentil = 4;
+            }else if (punt>=5 && punt<=7){
+                percentil = 5;
+            }else if (punt>=8 && punt<=9){
+                percentil = 6;
+            }else if (punt>=10 && punt<=11){
+                percentil = 7;
+            }else if (punt>=12 && punt<=13){
+                percentil = 8;
+            }else if (punt>=14 && punt<=15){
+                percentil = 9;
+            }else if (punt>=16 && punt<=17){
+                percentil = 10;
+            }else if (punt>=18 && punt<=19){
+                percentil = 11;
+            }else if (punt>=20 && punt<=21){
+                percentil = 12;
+            }else if (punt>=22 && punt<=23){
+                percentil = 13;
+            }else if (punt>=24 && punt<=25){
+                percentil = 14;
+            }else if (punt>=26 && punt<=27){
+                percentil = 15;
+            }else if (punt>=28 && punt<=29){
+                percentil = 16;
+            }else if (punt>=30 && punt<=31){
+                percentil = 17;
+            }else if (punt>=32 && punt<=33){
+                percentil = 18;
+            }else if (punt>=34){
+                percentil = 19;
+            }
+            
+        } else if (edat >= 65 && edat<=69){
+            
+            if (punt ==0){
+               percentil = 2; 
+            } else if (punt==1){
+                percentil = 3;
+            }else if (punt>=2 && punt<=3){
+                percentil = 4;
+            }else if (punt==4){
+                percentil = 5;
+            }else if (punt>=5 && punt<=6){
+                percentil = 6;
+            }else if (punt>=7 && punt<=8){
+                percentil = 7;
+            }else if (punt>=9 && punt<=10){
+                percentil = 8;
+            }else if (punt>=11 && punt<=12){
+                percentil = 9;
+            }else if (punt>=13 && punt<=14){
+                percentil = 10;
+            }else if (punt>=15 && punt<=16){
+                percentil = 11;
+            }else if (punt>=17 && punt<=18){
+                percentil = 12;
+            }else if (punt>=19 && punt<=21){
+                percentil = 13;
+            }else if (punt>=22 && punt<=23){
+                percentil = 14;
+            }else if (punt>=24 && punt<=26){
+                percentil = 15;
+            }else if (punt>=27 && punt<=29){
+                percentil = 16;
+            }else if (punt>=30 && punt<=32){
+                percentil = 17;
+            }else if (punt>=33 && punt<=35){
+                percentil = 18;
+            }else if (punt>=36){
+                percentil = 19;
+            }
+            
+        } else if (edat >= 70 && edat<=74){
+            
+            if (punt == 0){
+               percentil = 4; 
+            } else if (punt>=1 && punt<=2){
+                percentil = 5;
+            }else if (punt==3){
+                percentil = 6;
+            }else if (punt>=4 && punt<=5){
+                percentil = 7;
+            }else if (punt>=6 && punt<=7){
+                percentil = 8;
+            }else if (punt>=8 && punt<=10){
+                percentil = 9;
+            }else if (punt>=11 && punt<=12){
+                percentil = 10;
+            }else if (punt>=13 && punt<=14){
+                percentil = 11;
+            }else if (punt>=15 && punt<=17){
+                percentil = 12;
+            }else if (punt>=18 && punt<=19){
+                percentil = 13;
+            }else if (punt>=20 && punt<=22){
+                percentil = 14;
+            }else if (punt>=23 && punt<=25){
+                percentil = 15;
+            }else if (punt>=26 && punt<=28){
+                percentil = 16;
+            }else if (punt>=29 && punt<=32){
+                percentil = 17;
+            }else if (punt>=33 && punt<=34){
+                percentil = 18;
+            }else if (punt>=35){
+                percentil = 19;
+            }
+            
+        }else if (edat >= 75 && edat<=79){
+            
+            if (punt == 0){
+               percentil = 4; 
+            } else if (punt>=1 && punt<=2){
+                percentil = 5;
+            }else if (punt==3){
+                percentil = 6;
+            }else if (punt>=4 && punt<=5){
+                percentil = 7;
+            }else if (punt>=6 && punt<=7){
+                percentil = 8;
+            }else if (punt>=8 && punt<=9){
+                percentil = 9;
+            }else if (punt>=10 && punt<=11){
+                percentil = 10;
+            }else if (punt>=12 && punt<=13){
+                percentil = 11;
+            }else if (punt>=14 && punt<=15){
+                percentil = 12;
+            }else if (punt>=16 && punt<=17){
+                percentil = 13;
+            }else if (punt>=18 && punt<=20){
+                percentil = 14;
+            }else if (punt>=21 && punt<=22){
+                percentil = 15;
+            }else if (punt>=23 && punt<=25){
+                percentil = 16;
+            }else if (punt>=26 && punt<=28){
+                percentil = 17;
+            }else if (punt>=29 && punt<=31){
+                percentil = 18;
+            }else if (punt>=32){
+                percentil = 19;
+            }
+            
+        }else if (edat >= 80){
+            
+            if (punt>=0 && punt<=1){
+                percentil = 6;
+            }else if (punt>=2 && punt<=3){
+                percentil = 7;
+            }else if (punt==4){
+                percentil = 8;
+            }else if (punt>=5 && punt<=6){
+                percentil = 9;
+            }else if (punt>=7 && punt<=8){
+                percentil = 10;
+            }else if (punt>=9 && punt<=10){
+                percentil = 11;
+            }else if (punt>=11 && punt<=12){
+                percentil = 12;
+            }else if (punt>=13 && punt<=15){
+                percentil = 13;
+            }else if (punt>=16 && punt<=17){
+                percentil = 14;
+            }else if (punt>=18 && punt<=20){
+                percentil = 15;
+            }else if (punt>=21 && punt<=22){
+                percentil = 16;
+            }else if (punt>=23 && punt<=25){
+                percentil = 17;
+            }else if (punt>=26 && punt<=28){
+                percentil = 18;
+            }else if (punt>=29){
+                percentil = 19;
+            }
+            
+        }
+        
+        return percentil;
+        
+    }
+
+    private void initHashBNTA() {
+        
+        taulaBNTA = new HashMap<>();
+        List<Object> auxList;
+        HashMap<Integer, List<Object>> auxMap = new HashMap<>();
+        
+        auxList = Arrays.asList(2, "<1");
+        auxMap.put(0, auxList);
+        auxMap.put(1, auxList);
+        auxMap.put(2, auxList);
+        auxMap.put(3, auxList);
+        auxMap.put(4, auxList);
+        auxMap.put(5, auxList);
+        auxMap.put(6, auxList);
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(11, auxList);
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(11, "60-71");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(14, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(15, auxList);
+        taulaBNTA.put("50-56", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(14, "90-94");
+        auxMap.put(14, auxList);
+        taulaBNTA.put("57-59", new HashMap(auxMap));
+        
+        taulaBNTA.put("60-62", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(7, auxList);
+        taulaBNTA.put("63-65", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(15, "95-97");
+        auxMap.put(14, auxList);
+        taulaBNTA.put("66-68", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(4, "2");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(9, auxList);
+        taulaBNTA.put("69-71", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(4, "2");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(11, auxList);
+        taulaBNTA.put("72-74", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(5, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(11, "60-71");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(16, "98");
+        auxMap.put(14, auxList);
+        taulaBNTA.put("75-77", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(12, "72-81");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(14, "90-94");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(17, "99");
+        auxMap.put(14, auxList);
+        taulaBNTA.put("78-80", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(4, "2");
+        auxMap.put(5, auxList);
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(16, "98");
+        auxMap.put(14, auxList);
+        taulaBNTA.put("81+", new HashMap(auxMap));
+        
+    }
+    
+    private void convertEdat(){
+        int edatP = pacientActual.getEdat();
+        String edat = "";
+        if (edatP<=56){
+            edat = "50-56";
+        }
+        else if (edatP>=57 && edatP<=59){
+            edat = "57-59";
+        }
+        else if (edatP>=60 && edatP<=62){
+            edat = "60-62";
+        }
+        else if (edatP>=63 && edatP<=65){
+            edat = "63-65";
+        }
+        else if (edatP>=66 && edatP<=68){
+            edat = "66-68";
+        }
+        else if (edatP>=69 && edatP<=71){
+            edat = "69-71";
+        }
+        else if (edatP>=72 && edatP<=74){
+            edat = "72-74";
+        }
+        else if (edatP>=75 && edatP<=77){
+            edat = "75-77";
+        }
+        else if (edatP>=78 && edatP<=80){
+            edat = "78-80";
+        }
+        else if (edatP<=81){
+            edat = "81+";
+        }
+        edatPacient =  edat;
+    }
+    
+    private void calcularBNTA() {
+        List<Object> list;
+        System.out.println(Integer.parseInt(correctesBntA.getText()));
+        System.out.println(edatPacient);
+        list = taulaBNTA.get(edatPacient).get(Integer.parseInt(correctesBntA.getText()));
+        percentilBNTA.setText((String) list.get(1));
+        
+        int scaledScore = (int) list.get(0);
+        
+        int anysEscola = pacientActual.getAnysEscola();
+        int modificador = 0;
+        
+        if (anysEscola == 0){
+            modificador = 3;
+        }
+        else if (anysEscola >=1 && anysEscola <=4){
+            modificador = 2;
+        }
+        else if (anysEscola >=5 && anysEscola <=8){
+            modificador = 1;
+        }
+        else if (anysEscola >=9 && anysEscola <=12){
+            modificador = 0;
+        }
+        else if (anysEscola >=13 && anysEscola <=15){
+            modificador = -1;
+        }
+        else if (anysEscola >=16 && anysEscola <=19){
+            modificador = -2;
+        }
+        else if (anysEscola == 20){
+            modificador = -3;
+        }
+        
+        nssaBNTA.setText(scaledScore+modificador+"");
+    }
+
+    private void initHashBNTB() {
+        taulaBNTB = new HashMap<>();
+        List<Object> auxList;
+        HashMap<Integer, List<Object>> auxMap = new HashMap<>();
+        
+        auxList = Arrays.asList(2, "<1");
+        auxMap.put(0, auxList);
+        auxMap.put(1, auxList);
+        auxMap.put(2, auxList);
+        auxMap.put(3, auxList);
+        auxMap.put(4, auxList);
+        auxMap.put(5, auxList);
+        auxMap.put(6, auxList);
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(11, auxList);
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(12, "72-81");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(15, "95-97");
+        auxMap.put(14, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(15, auxList);
+        taulaBNTB.put("50-56", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(10, auxList);
+        taulaBNTB.put("57-59", new HashMap(auxMap));
+        
+        taulaBNTB.put("60-62", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(11, auxList);
+        auxList = Arrays.asList(16, "98");
+        auxMap.put(14, auxList);
+        taulaBNTB.put("63-65", new HashMap(auxMap));
+        
+        taulaBNTB.put("66-68", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(11, auxList);
+        auxList = Arrays.asList(11, "60-71");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(15, "95-97");
+        auxMap.put(14, auxList);
+        taulaBNTB.put("69-71", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(16, "98");
+        auxMap.put(14, auxList);
+        taulaBNTB.put("72-74", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(9, auxList);
+        taulaBNTB.put("75-77", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(12, "72-81");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(14, "90-94");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(17, "99");
+        auxMap.put(14, auxList);
+        taulaBNTB.put("78-80", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(16, "98");
+        auxMap.put(14, auxList);
+        taulaBNTB.put("81+", new HashMap(auxMap));
+    }
+    
+    private void calcularBNTB() {
+        List<Object> list;
+        System.out.println(Integer.parseInt(correctesBntB.getText()));
+        System.out.println(edatPacient);
+        list = taulaBNTB.get(edatPacient).get(Integer.parseInt(correctesBntB.getText()));
+        percentilBNTB.setText((String) list.get(1));
+        
+        int scaledScore = (int) list.get(0);
+        
+        int anysEscola = pacientActual.getAnysEscola();
+        int modificador = 0;
+        
+        if (anysEscola == 0){
+            modificador = 0;
+        }
+        else if (anysEscola == 1){
+            modificador = 3;
+        }
+        else if (anysEscola >=2 && anysEscola <=4){
+            modificador = 2;
+        }
+        else if (anysEscola >=6 && anysEscola <=9){
+            modificador = 1;
+        }
+        else if (anysEscola >=10 && anysEscola <=13){
+            modificador = 0;
+        }
+        else if (anysEscola >=14 && anysEscola <=16){
+            modificador = -1;
+        }
+        else if (anysEscola >=16 && anysEscola <=20){
+            modificador = -2;
+        }
+        
+        nssaBNTB.setText(scaledScore+modificador+"");
+    }
+
+    private void initHashBNTC() {
+        taulaBNTC = new HashMap<>();
+        List<Object> auxList;
+        HashMap<Integer, List<Object>> auxMap = new HashMap<>();
+        
+        auxList = Arrays.asList(2, "<1");
+        auxMap.put(0, auxList);
+        auxMap.put(1, auxList);
+        auxMap.put(2, auxList);
+        auxMap.put(3, auxList);
+        auxMap.put(4, auxList);
+        auxMap.put(5, auxList);
+        auxMap.put(6, auxList);
+        auxMap.put(7, auxList);
+        auxMap.put(8, auxList);
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(11, auxList);
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(11, "60-71");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(14, auxList);
+        auxList = Arrays.asList(18, ">99");
+        auxMap.put(15, auxList);
+        taulaBNTC.put("50-56", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(4, "2");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(12, "72-81");
+        auxMap.put(13, auxList);
+        taulaBNTC.put("57-59", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(10, auxList);
+        taulaBNTC.put("60-62", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(14, "90-94");
+        auxMap.put(14, auxList);
+        taulaBNTC.put("63-65", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(11, "60-71");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(14, auxList);
+        taulaBNTC.put("66-68", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(2, "<1");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(4, "2");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(10, "41-59");
+        auxMap.put(11, auxList);
+        auxList = Arrays.asList(12, "72-81");
+        auxMap.put(13, auxList);
+        taulaBNTC.put("69-71", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(3, "1");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(5, "3-5");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(13, "82-89");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(14, "90-94");
+        auxMap.put(14, auxList);
+        taulaBNTC.put("72-74", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(7, "11-18");
+        auxMap.put(8, auxList);
+        taulaBNTC.put("75-77", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(6, "6-10");
+        auxMap.put(7, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(8, auxList);
+        auxList = Arrays.asList(8, "19-28");
+        auxMap.put(9, auxList);
+        auxList = Arrays.asList(9, "29-40");
+        auxMap.put(10, auxList);
+        auxList = Arrays.asList(12, "72-81");
+        auxMap.put(12, auxList);
+        auxList = Arrays.asList(15, "95-97");
+        auxMap.put(14, auxList);
+        taulaBNTC.put("78-80", new HashMap(auxMap));
+        
+        auxList = Arrays.asList(4, "2");
+        auxMap.put(6, auxList);
+        auxList = Arrays.asList(14, "90-94");
+        auxMap.put(13, auxList);
+        auxList = Arrays.asList(16, "98");
+        auxMap.put(14, auxList);
+        taulaBNTC.put("81+", new HashMap(auxMap));
+    }
+    
+    private void calcularBNTC() {
+        List<Object> list;
+        System.out.println(Integer.parseInt(correctesBntC.getText()));
+        System.out.println(edatPacient);
+        list = taulaBNTC.get(edatPacient).get(Integer.parseInt(correctesBntC.getText()));
+        percentilBNTC.setText((String) list.get(1));
+        
+        int scaledScore = (int) list.get(0);
+        
+        int anysEscola = pacientActual.getAnysEscola();
+        int modificador = 0;
+        
+        if (anysEscola == 0){
+            modificador = 4;
+        }
+        else if (anysEscola >=1 && anysEscola <=3){
+            modificador = 3;
+        }
+        else if (anysEscola >=4 && anysEscola <=6){
+            modificador = 2;
+        }
+        else if (anysEscola >=7 && anysEscola <=9){
+            modificador = 1;
+        }
+        else if (anysEscola >=10 && anysEscola <=12){
+            modificador = 0;
+        }
+        else if (anysEscola >=13 && anysEscola <=14){
+            modificador = -1;
+        }
+        else if (anysEscola >=15 && anysEscola <=17){
+            modificador = -2;
+        }
+        else if (anysEscola >=18 && anysEscola <=20){
+            modificador = -3;
+        }
+        
+        nssaBNTC.setText(scaledScore+modificador+"");
+    }
+
 }
 
 class customRenderer extends javax.swing.table.DefaultTableCellRenderer {
     Color color = java.awt.Color.WHITE;
+    boolean cust = false;
+    boolean[][] customColors;
+    
     public customRenderer (Color color, boolean center){
+        this.color = color;
+        if (center){
+            this.setHorizontalAlignment( JLabel.CENTER );
+        }
+    }
+    
+    public customRenderer (Color color, boolean[][] customColors,boolean center){
+        setOpaque(true);
+        this.customColors = customColors;
+        this.cust = true;
         this.color = color;
         if (center){
             this.setHorizontalAlignment( JLabel.CENTER );
@@ -3905,42 +7551,70 @@ class customRenderer extends javax.swing.table.DefaultTableCellRenderer {
             this.setHorizontalAlignment( JLabel.CENTER );
         }
     }
-    
+        
     public java.awt.Component getTableCellRendererComponent(javax.swing.JTable table, java.lang.Object value, boolean isSelected, boolean hasFocus, int row, int column) {
         java.awt.Component cellComponent = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-        cellComponent.setBackground(color);
+        if(cust){
+            if (row == 0 && column == 1 || row == 3 && column == 4){//customColors[row][column]){
+                cellComponent.setBackground(java.awt.Color.ORANGE);
+            }
+            else {
+                cellComponent.setBackground(java.awt.Color.WHITE);
+            }
+        }else {
+            cellComponent.setBackground(color);
+        }
         return cellComponent;
     }
 }
 
 class customModel extends DefaultTableModel{
-        public customModel(Object[][] data, Object[] columnNames){
-            super(data,columnNames);
-        }
-        Class[] types = new Class [] {
-            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
-        };
-        boolean[] canEdit = new boolean [] {
-            true, false, true, true, false
-        };
-
-        public Class getColumnClass(int columnIndex) {
-            return types [columnIndex];
-        }
-
-        public boolean isCellEditable(int rowIndex, int columnIndex) {
-            return canEdit [columnIndex];
-        }
-
-        public void setEditable(int column, boolean value){
-            canEdit[column] = value;
-        }
-        
-        public void setTypes(Class[] types){
-            this.types = types;
-        }
-
-        void setCanEdit(boolean[] canEdit) {
-            this.canEdit = canEdit;
-        }
+    
+    boolean[][] customEdit;
+    boolean cust = false;
+            
+    public customModel(Object[][] data, Object[] columnNames){
+        super(data,columnNames);
     }
+    Class[] types = new Class [] {
+        java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+    };
+    boolean[] canEdit = new boolean [] {
+        false, false, true, true, false
+    };
+
+    public Class getColumnClass(int columnIndex) {
+        return types [columnIndex];
+    }
+
+    public boolean isCellEditable(int rowIndex, int columnIndex) {
+        if (cust)
+            return customEdit [columnIndex][rowIndex];
+        else
+            return canEdit [columnIndex];
+    }
+
+    public void setEditable(int column, boolean value){
+        canEdit[column] = value;
+    }
+    
+    public void setEditable(int column, int row, boolean value){
+        customEdit[column] [row] = value;
+    }
+
+    public void setTypes(Class[] types){
+        this.types = types;
+    }
+
+    void setCanEdit(boolean[] canEdit) {
+        this.canEdit = canEdit;
+    }
+    
+    void setCanEditMatrix(boolean[][] customEdit) {
+        this.customEdit = customEdit;
+    }
+    
+    void setCustom(boolean cust){
+        this.cust = cust;
+    }
+}

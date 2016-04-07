@@ -5,7 +5,7 @@
  */
 package vista;
 
-import java.awt.Desktop;
+import controlador.Pacient;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -17,7 +17,17 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import javax.swing.JFrame;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
+import java.time.ZoneId;
+import java.util.Date;
+import java.util.Properties;
 
 /**
  *
@@ -26,6 +36,7 @@ import javax.swing.JFrame;
 public class MenuEvaluador extends javax.swing.JFrame {
 
     private boolean pacient = false;
+    private Pacient pacientActual;
     private Utils utils;
     private String idPacient = "";
     private String evaluador;
@@ -39,6 +50,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
         evaluadorLabel.setText(evaluador.toUpperCase());
         this.setLocationRelativeTo(null);
         utils = new Utils();
+        pacientActual = null;
         idText.requestFocusInWindow();
         this.getRootPane().setDefaultButton(seleccionaBtn);
     }
@@ -287,8 +299,12 @@ public class MenuEvaluador extends javax.swing.JFrame {
     private void seleccionaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaBtnActionPerformed
         if (!pacient){
             try {
-                checkPacient();
-            } catch (JSONException ex) {
+                try {
+                    checkPacient();
+                } catch (JSONException ex) {
+                    Logger.getLogger(MenuEvaluador.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } catch (IOException ex) {
                 Logger.getLogger(MenuEvaluador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else {
@@ -320,14 +336,14 @@ public class MenuEvaluador extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (idPacient != ""){
-            MenuTests mT = new MenuTests(this,true,idPacient);
-            mT.addWindowListener(new WindowAdapter()
-            {
-                public void windowClosed(WindowEvent e)
-                {
-                  back();
-                }
-            });
+            MenuTests mT = new MenuTests(this,true,idPacient,pacientActual);
+//            mT.addWindowListener(new WindowAdapter()
+//            {
+//                public void windowClosed(WindowEvent e)
+//                {
+//                  back();
+//                }
+//            });
             mT.pack();
             mT.setVisible(true);
             this.toBack();
@@ -338,7 +354,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
         this.toBack();
     }
     
-    private void checkPacient() throws JSONException{
+    private void checkPacient() throws JSONException, IOException{
         JSONObject obj;
         obj = new JSONObject(utils.getStringFile("res/users.json"));
         org.json.JSONArray pacients = obj.getJSONArray("Users");
@@ -356,12 +372,52 @@ public class MenuEvaluador extends javax.swing.JFrame {
             idText.setEditable(false);
             idPacient = pacients.getJSONObject(i).getString("id");
             seleccionaBtn.setText("Canvia pacient");
-            nomText.setText(pacients.getJSONObject(i).getString("name").toUpperCase());
+            String nom = pacients.getJSONObject(i).getString("name");
+            nomText.setText(nom.toUpperCase());
+            
+            File file = new File(idPacient+"Fitxa.dat");    
+            Properties prop = new Properties();
+            InputStream input = null;
+            
+            int anysEscola = -1;
+            int edat = -1;
+            
+            if(!file.exists()) {
+                    
+            }
+            else{
+                input = new FileInputStream(file);
+
+                // load a properties file
+                prop.load(input);
+                anysEscola = Integer.parseInt((String)prop.get("anysEscolaritat"));
+                
+                if (prop.getProperty("dataNaixement") != null){
+                    if (!prop.getProperty("dataNaixement").equals("")){
+                        DateFormat df = new SimpleDateFormat("dd/MM/yyyy"); 
+                        Date data;
+                        try {
+                            data = df.parse(prop.getProperty("dataNaixement"));
+                            System.out.println(data);
+                            LocalDate today = LocalDate.now();
+                            LocalDate birthday = data.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();;
+
+                            Period p = Period.between(birthday, today);
+                            edat = p.getYears();
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+            
+            pacientActual = new Pacient(nom.toLowerCase(),idPacient,edat,anysEscola);
+            System.out.println("EDAT: "+edat+"\nANYS ESCOLA: "+anysEscola);
             pacient = true;
             editaBtn.setEnabled(true);
             fitxaBtn.setEnabled(true);
         } else{
-            System.out.println(trobat);
+//            System.out.println(trobat);
         }
     }
     

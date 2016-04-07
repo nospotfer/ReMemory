@@ -208,7 +208,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                 String id = users.getJSONObject(i).getString("id");
                 String password = users.getJSONObject(i).getString("password");
                 
-                Evaluador eva = new Evaluador(nom,id,"evaluador",password);
+                Evaluador eva = new Evaluador(nom,id,password);
                 llistaEvaluadors.add(eva);
             }
         }

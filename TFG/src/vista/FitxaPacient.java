@@ -177,12 +177,12 @@ public class FitxaPacient extends javax.swing.JDialog {
         idiomaCombo = new javax.swing.JComboBox<>();
         dateChooser = new com.toedter.calendar.JDateChooser();
         nivellEscolaritatCombo = new javax.swing.JComboBox<>();
-        anysEscolaritatText = new javax.swing.JTextField();
         estatCivilCombo = new javax.swing.JComboBox<>();
         professioText = new javax.swing.JTextField();
         categoriaProCombo = new javax.swing.JComboBox<>();
         situacioLaboralCombo = new javax.swing.JComboBox<>();
         nivellSocioecomomicCombo = new javax.swing.JComboBox<>();
+        anysEscolaritatCombo = new javax.swing.JComboBox<>();
         dadesCliniquesPanel = new javax.swing.JPanel();
         fumadorLabel = new javax.swing.JLabel();
         numCigarretsLabel = new javax.swing.JLabel();
@@ -658,6 +658,9 @@ public class FitxaPacient extends javax.swing.JDialog {
         nivellSocioecomomicCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8" }));
         nivellSocioecomomicCombo.setSelectedIndex(-1);
 
+        anysEscolaritatCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+        anysEscolaritatCombo.setSelectedIndex(-1);
+
         javax.swing.GroupLayout dadesSociodemografiquesPanelLayout = new javax.swing.GroupLayout(dadesSociodemografiquesPanel);
         dadesSociodemografiquesPanel.setLayout(dadesSociodemografiquesPanelLayout);
         dadesSociodemografiquesPanelLayout.setHorizontalGroup(
@@ -700,7 +703,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                     .addGroup(dadesSociodemografiquesPanelLayout.createSequentialGroup()
                         .addComponent(anysEscolaritatLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(anysEscolaritatText, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(anysEscolaritatCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dadesSociodemografiquesPanelLayout.createSequentialGroup()
                         .addComponent(nivellEscolaritatLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -728,7 +731,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dadesSociodemografiquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(anysEscolaritatLabel)
-                    .addComponent(anysEscolaritatText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(anysEscolaritatCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dadesSociodemografiquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(estatCivilLabel)
@@ -942,7 +945,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 .addComponent(dadesCliniquesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addComponent(terapiaNoFarmatologicaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1490, Short.MAX_VALUE))
+                .addContainerGap(1496, Short.MAX_VALUE))
         );
 
         dadesBasiquesScroll.setViewportView(dadesBasiquesPanel);
@@ -4120,8 +4123,8 @@ public class FitxaPacient extends javax.swing.JDialog {
     private javax.swing.JTextField antitromboticsText;
     private javax.swing.JLabel anysAlcoholLabel;
     private javax.swing.JTextField anysAlcoholText;
+    private javax.swing.JComboBox<String> anysEscolaritatCombo;
     private javax.swing.JLabel anysEscolaritatLabel;
-    private javax.swing.JTextField anysEscolaritatText;
     private javax.swing.JLabel anysFumarLabel;
     private javax.swing.JTextField anysFumarText;
     private javax.swing.JComboBox<String> arritmiaCombo;
@@ -4513,7 +4516,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 Utils.getProperty(prop,"idioma",idiomaCombo);
                 Utils.getProperty(prop,"dataNaixement",dateChooser);
                 Utils.getProperty(prop,"nivellEscolaritat",nivellEscolaritatCombo);
-                Utils.getProperty(prop,"anysEscolaritat",anysEscolaritatText);
+                Utils.getProperty(prop,"anysEscolaritat",anysEscolaritatCombo);
                 Utils.getProperty(prop,"estatCivil",estatCivilCombo);
                 Utils.getProperty(prop,"professio",professioText);
                 Utils.getProperty(prop,"categoriaPro",categoriaProCombo);
@@ -4792,7 +4795,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 Utils.setProperty(prop,"idioma",idiomaCombo);
                 Utils.setProperty(prop,"dataNaixement",dateChooser);
                 Utils.setProperty(prop,"nivellEscolaritat",nivellEscolaritatCombo);
-                Utils.setProperty(prop,"anysEscolaritat",anysEscolaritatText);
+                Utils.setProperty(prop,"anysEscolaritat",anysEscolaritatCombo);
                 Utils.setProperty(prop,"estatCivil",estatCivilCombo);
                 Utils.setProperty(prop,"professio",professioText);
                 Utils.setProperty(prop,"categoriaPro",categoriaProCombo);

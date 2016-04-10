@@ -28,6 +28,7 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.Properties;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -347,6 +348,11 @@ public class MenuEvaluador extends javax.swing.JFrame {
             mT.pack();
             mT.setVisible(true);
             this.toBack();
+        } else {
+            JOptionPane.showMessageDialog(this,
+            "Introdueix un pacient",
+            "Alerta",
+            JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

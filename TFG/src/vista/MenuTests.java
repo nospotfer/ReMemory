@@ -60,6 +60,11 @@ public class MenuTests extends javax.swing.JDialog {
         });
 
         sessio2Btn.setText("Segona sessió");
+        sessio2Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sessio2BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -183,6 +188,26 @@ public class MenuTests extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_sessio1BtnActionPerformed
+
+    private void sessio2BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessio2BtnActionPerformed
+        if (pacientActual.getEdat() == -1){
+            JOptionPane.showMessageDialog(this,
+            "Falta l'edat del pacient. Per favor introdueixi-la a la fitxa. Comprovi també que el camp de \"Escolaritat (anys total)\" no estigui buit.",
+            "Falten dades",
+            JOptionPane.WARNING_MESSAGE);
+        }else if (pacientActual.getAnysEscola() == -1){
+            JOptionPane.showMessageDialog(this,
+            "Falten els anys d'escolaritat del pacient. Per favor introdueixi'ls a la fitxa.",
+            "Falten dades",
+            JOptionPane.WARNING_MESSAGE);
+        }else{
+            Sessio2 tT = new Sessio2(this.pacientActual);
+            tT.pack();
+            tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            tT.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_sessio2BtnActionPerformed
 
     /**
      * @param args the command line arguments

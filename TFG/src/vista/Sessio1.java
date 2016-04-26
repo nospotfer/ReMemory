@@ -510,6 +510,11 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel164 = new javax.swing.JLabel();
         jScrollPane19 = new javax.swing.JScrollPane();
         fluenciaVerbalTable = new org.jdesktop.swingx.JXTable();
+        cogstateTab = new javax.swing.JPanel();
+        digitsDirecteScroll3 = new javax.swing.JScrollPane();
+        digitsDirectePanel3 = new javax.swing.JPanel();
+        jLabel165 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         buttonPanel = new javax.swing.JPanel();
         acceptaBtn = new javax.swing.JButton();
         cancelaBtn = new javax.swing.JButton();
@@ -4253,8 +4258,6 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addContainerGap(344, Short.MAX_VALUE))
         );
 
-        jPanel15.getAccessibleContext().setAccessibleName("Processos Automàtics");
-
         fiveDigitsScroll4.setViewportView(Panel4);
 
         fiveDigitsTab.add(fiveDigitsScroll4, "card5");
@@ -4347,7 +4350,43 @@ public class Sessio1 extends javax.swing.JFrame {
 
         tabbedPanel.addTab("FLUÈNCIA VERBAL", colorTrailsTab1);
 
-        dataPanel.add(tabbedPanel, java.awt.BorderLayout.CENTER);
+        cogstateTab.setLayout(new java.awt.CardLayout());
+
+        jLabel165.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel165.setText("Cogstate");
+
+        jButton3.setText("Importar COGSTATE");
+
+        javax.swing.GroupLayout digitsDirectePanel3Layout = new javax.swing.GroupLayout(digitsDirectePanel3);
+        digitsDirectePanel3.setLayout(digitsDirectePanel3Layout);
+        digitsDirectePanel3Layout.setHorizontalGroup(
+            digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(digitsDirectePanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(digitsDirectePanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton3))
+                    .addComponent(jLabel165))
+                .addContainerGap(1217, Short.MAX_VALUE))
+        );
+        digitsDirectePanel3Layout.setVerticalGroup(
+            digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, digitsDirectePanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel165)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton3)
+                .addContainerGap(678, Short.MAX_VALUE))
+        );
+
+        digitsDirecteScroll3.setViewportView(digitsDirectePanel3);
+
+        cogstateTab.add(digitsDirecteScroll3, "card1");
+
+        tabbedPanel.addTab("COGSTATE", cogstateTab);
+
+        dataPanel.add(tabbedPanel, java.awt.BorderLayout.PAGE_START);
 
         mainPanel.add(dataPanel, java.awt.BorderLayout.CENTER);
 
@@ -4752,6 +4791,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton calculPercentilsFiveDigit;
     private javax.swing.JButton cancelaBtn;
+    private javax.swing.JPanel cogstateTab;
     private javax.swing.JPanel colorTrailsTab;
     private javax.swing.JPanel colorTrailsTab1;
     private org.jdesktop.swingx.JXTable colorTrailsTable;
@@ -4767,9 +4807,11 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JPanel digitsDirectePanel;
     private javax.swing.JPanel digitsDirectePanel1;
     private javax.swing.JPanel digitsDirectePanel2;
+    private javax.swing.JPanel digitsDirectePanel3;
     private javax.swing.JScrollPane digitsDirecteScroll;
     private javax.swing.JScrollPane digitsDirecteScroll1;
     private javax.swing.JScrollPane digitsDirecteScroll2;
+    private javax.swing.JScrollPane digitsDirecteScroll3;
     private org.jdesktop.swingx.JXTable digitsDirecteTable;
     private javax.swing.JPanel digitsInversPanel;
     private javax.swing.JScrollPane digitsInversScroll;
@@ -4809,6 +4851,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -4888,6 +4931,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel166;
     private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel17;

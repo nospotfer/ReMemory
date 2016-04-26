@@ -46,9 +46,37 @@ public class Sessio2 extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        buttonGroup7 = new javax.swing.ButtonGroup();
+        buttonGroup8 = new javax.swing.ButtonGroup();
+        buttonGroup9 = new javax.swing.ButtonGroup();
+        buttonGroup10 = new javax.swing.ButtonGroup();
+        buttonGroup11 = new javax.swing.ButtonGroup();
+        buttonGroup12 = new javax.swing.ButtonGroup();
+        buttonGroup13 = new javax.swing.ButtonGroup();
+        buttonGroup14 = new javax.swing.ButtonGroup();
+        upsaButtonGrup1 = new javax.swing.ButtonGroup();
+        upsaButtonGrup2 = new javax.swing.ButtonGroup();
+        upsaButtonGrup3 = new javax.swing.ButtonGroup();
+        upsaButtonGrup4 = new javax.swing.ButtonGroup();
+        upsaButtonGrup5 = new javax.swing.ButtonGroup();
         mainPanel = new javax.swing.JPanel();
         dataPanel = new javax.swing.JPanel();
+        buttonPanel = new javax.swing.JPanel();
+        acceptaBtn = new javax.swing.JButton();
+        cancelaBtn = new javax.swing.JButton();
+        anteriorBtn = new javax.swing.JButton();
+        seguentBtn = new javax.swing.JButton();
+        paginaLabel = new javax.swing.JLabel();
+        paginaLabel2 = new javax.swing.JLabel();
+        sepBottom = new javax.swing.JSeparator();
         tabbedPanel = new javax.swing.JTabbedPane();
         mocaTab = new javax.swing.JPanel();
         mocaScroll = new javax.swing.JScrollPane();
@@ -58,6 +86,116 @@ public class Sessio2 extends javax.swing.JFrame {
         upsa2Scroll = new javax.swing.JScrollPane();
         upsa2Panel = new javax.swing.JPanel();
         jLabel106 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel116 = new javax.swing.JLabel();
+        jLabel189 = new javax.swing.JLabel();
+        jLabel196 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
+        jLabel197 = new javax.swing.JLabel();
+        jLabel198 = new javax.swing.JLabel();
+        jLabel199 = new javax.swing.JLabel();
+        jLabel201 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jCheckBox10 = new javax.swing.JCheckBox();
+        jCheckBox11 = new javax.swing.JCheckBox();
+        jCheckBox12 = new javax.swing.JCheckBox();
+        jPanel24 = new javax.swing.JPanel();
+        orientacioBtn20 = new javax.swing.JToggleButton();
+        memoBtn20 = new javax.swing.JToggleButton();
+        raoBtn19 = new javax.swing.JToggleButton();
+        raoBtn21 = new javax.swing.JToggleButton();
+        activitatsDBtn22 = new javax.swing.JToggleButton();
+        cuidatBtn15 = new javax.swing.JToggleButton();
+        jLabel166 = new javax.swing.JLabel();
+        jLabel190 = new javax.swing.JLabel();
+        jLabel191 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel192 = new javax.swing.JLabel();
+        jLabel193 = new javax.swing.JLabel();
+        jLabel194 = new javax.swing.JLabel();
+        jLabel202 = new javax.swing.JLabel();
+        jToggleButton118 = new javax.swing.JToggleButton();
+        jToggleButton122 = new javax.swing.JToggleButton();
+        jToggleButton134 = new javax.swing.JToggleButton();
+        jToggleButton138 = new javax.swing.JToggleButton();
+        jToggleButton142 = new javax.swing.JToggleButton();
+        jToggleButton146 = new javax.swing.JToggleButton();
+        jToggleButton147 = new javax.swing.JToggleButton();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jTextField17 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
+        jTextField19 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
+        jTextField24 = new javax.swing.JTextField();
+        jLabel195 = new javax.swing.JLabel();
+        jLabel206 = new javax.swing.JLabel();
+        activitatsDBtn25 = new javax.swing.JToggleButton();
+        jToggleButton150 = new javax.swing.JToggleButton();
+        jToggleButton151 = new javax.swing.JToggleButton();
+        jToggleButton152 = new javax.swing.JToggleButton();
+        jToggleButton153 = new javax.swing.JToggleButton();
+        jPanel25 = new javax.swing.JPanel();
+        jLabel200 = new javax.swing.JLabel();
+        jLabel203 = new javax.swing.JLabel();
+        jLabel204 = new javax.swing.JLabel();
+        jLabel140 = new javax.swing.JLabel();
+        jLabel205 = new javax.swing.JLabel();
+        jLabel207 = new javax.swing.JLabel();
+        jLabel208 = new javax.swing.JLabel();
+        jLabel209 = new javax.swing.JLabel();
+        jLabel210 = new javax.swing.JLabel();
+        jLabel211 = new javax.swing.JLabel();
+        jLabel212 = new javax.swing.JLabel();
+        jLabel213 = new javax.swing.JLabel();
+        jLabel214 = new javax.swing.JLabel();
+        jLabel215 = new javax.swing.JLabel();
+        jLabel216 = new javax.swing.JLabel();
+        jLabel217 = new javax.swing.JLabel();
+        jLabel218 = new javax.swing.JLabel();
+        jLabel219 = new javax.swing.JLabel();
+        jLabel220 = new javax.swing.JLabel();
+        jLabel221 = new javax.swing.JLabel();
+        jLabel222 = new javax.swing.JLabel();
+        jLabel223 = new javax.swing.JLabel();
+        jLabel224 = new javax.swing.JLabel();
+        jLabel225 = new javax.swing.JLabel();
+        jLabel226 = new javax.swing.JLabel();
+        jLabel227 = new javax.swing.JLabel();
+        jLabel228 = new javax.swing.JLabel();
+        jLabel229 = new javax.swing.JLabel();
+        jLabel230 = new javax.swing.JLabel();
         upsa3Scroll = new javax.swing.JScrollPane();
         upsa3Panel = new javax.swing.JPanel();
         jLabel107 = new javax.swing.JLabel();
@@ -68,286 +206,492 @@ public class Sessio2 extends javax.swing.JFrame {
         mfeScroll1 = new javax.swing.JScrollPane();
         mfePanel2 = new javax.swing.JPanel();
         jLabel109 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        orientacioBtn22 = new javax.swing.JToggleButton();
+        memoBtn22 = new javax.swing.JToggleButton();
+        orientacioBtn23 = new javax.swing.JToggleButton();
+        memoBtn23 = new javax.swing.JToggleButton();
+        orientacioBtn24 = new javax.swing.JToggleButton();
+        memoBtn24 = new javax.swing.JToggleButton();
+        raoBtn22 = new javax.swing.JToggleButton();
+        raoBtn24 = new javax.swing.JToggleButton();
+        raoBtn25 = new javax.swing.JToggleButton();
+        activitatsFBtn22 = new javax.swing.JToggleButton();
+        activitatsFBtn23 = new javax.swing.JToggleButton();
+        activitatsFBtn24 = new javax.swing.JToggleButton();
+        activitatsDBtn23 = new javax.swing.JToggleButton();
+        activitatsDBtn24 = new javax.swing.JToggleButton();
+        cuidatBtn17 = new javax.swing.JToggleButton();
+        cuidatBtn18 = new javax.swing.JToggleButton();
+        jLabel118 = new javax.swing.JLabel();
+        jLabel119 = new javax.swing.JLabel();
+        jLabel167 = new javax.swing.JLabel();
+        jLabel168 = new javax.swing.JLabel();
+        jLabel169 = new javax.swing.JLabel();
+        jLabel170 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
+        jLabel173 = new javax.swing.JLabel();
+        jLabel120 = new javax.swing.JLabel();
+        jLabel87 = new javax.swing.JLabel();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel102 = new javax.swing.JLabel();
+        jLabel104 = new javax.swing.JLabel();
+        jLabel121 = new javax.swing.JLabel();
+        jLabel122 = new javax.swing.JLabel();
+        jLabel123 = new javax.swing.JLabel();
+        jLabel124 = new javax.swing.JLabel();
+        jToggleButton83 = new javax.swing.JToggleButton();
+        jToggleButton84 = new javax.swing.JToggleButton();
+        jToggleButton85 = new javax.swing.JToggleButton();
+        jToggleButton86 = new javax.swing.JToggleButton();
+        jToggleButton87 = new javax.swing.JToggleButton();
+        jToggleButton88 = new javax.swing.JToggleButton();
+        jToggleButton89 = new javax.swing.JToggleButton();
+        jToggleButton90 = new javax.swing.JToggleButton();
+        jToggleButton92 = new javax.swing.JToggleButton();
+        jToggleButton93 = new javax.swing.JToggleButton();
+        jToggleButton94 = new javax.swing.JToggleButton();
+        jToggleButton95 = new javax.swing.JToggleButton();
+        jToggleButton96 = new javax.swing.JToggleButton();
+        jToggleButton97 = new javax.swing.JToggleButton();
+        jToggleButton99 = new javax.swing.JToggleButton();
+        jToggleButton100 = new javax.swing.JToggleButton();
+        jToggleButton101 = new javax.swing.JToggleButton();
+        jToggleButton103 = new javax.swing.JToggleButton();
+        jToggleButton104 = new javax.swing.JToggleButton();
+        jToggleButton105 = new javax.swing.JToggleButton();
+        jToggleButton107 = new javax.swing.JToggleButton();
+        jToggleButton109 = new javax.swing.JToggleButton();
+        jToggleButton111 = new javax.swing.JToggleButton();
+        jLabel117 = new javax.swing.JLabel();
+        jLabel133 = new javax.swing.JLabel();
+        jLabel136 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
+        jLabel134 = new javax.swing.JLabel();
+        jLabel135 = new javax.swing.JLabel();
+        jToggleButton57 = new javax.swing.JToggleButton();
+        jToggleButton58 = new javax.swing.JToggleButton();
+        jToggleButton59 = new javax.swing.JToggleButton();
+        jLabel137 = new javax.swing.JLabel();
+        jToggleButton61 = new javax.swing.JToggleButton();
+        jToggleButton62 = new javax.swing.JToggleButton();
+        jToggleButton63 = new javax.swing.JToggleButton();
+        jLabel138 = new javax.swing.JLabel();
+        jToggleButton65 = new javax.swing.JToggleButton();
+        jToggleButton66 = new javax.swing.JToggleButton();
+        jToggleButton67 = new javax.swing.JToggleButton();
+        jLabel139 = new javax.swing.JLabel();
+        jLabel157 = new javax.swing.JLabel();
+        jLabel158 = new javax.swing.JLabel();
+        jLabel159 = new javax.swing.JLabel();
+        jLabel160 = new javax.swing.JLabel();
+        jLabel161 = new javax.swing.JLabel();
+        jLabel162 = new javax.swing.JLabel();
+        jLabel163 = new javax.swing.JLabel();
+        jLabel164 = new javax.swing.JLabel();
+        jLabel174 = new javax.swing.JLabel();
+        jLabel175 = new javax.swing.JLabel();
+        jLabel176 = new javax.swing.JLabel();
+        jLabel177 = new javax.swing.JLabel();
+        jLabel178 = new javax.swing.JLabel();
+        jLabel179 = new javax.swing.JLabel();
+        jLabel180 = new javax.swing.JLabel();
+        jLabel181 = new javax.swing.JLabel();
+        jLabel182 = new javax.swing.JLabel();
+        jLabel183 = new javax.swing.JLabel();
+        jLabel184 = new javax.swing.JLabel();
+        jLabel185 = new javax.swing.JLabel();
+        jLabel186 = new javax.swing.JLabel();
+        jLabel187 = new javax.swing.JLabel();
+        jLabel188 = new javax.swing.JLabel();
+        jToggleButton69 = new javax.swing.JToggleButton();
+        jToggleButton70 = new javax.swing.JToggleButton();
+        jToggleButton71 = new javax.swing.JToggleButton();
+        jToggleButton73 = new javax.swing.JToggleButton();
+        jToggleButton74 = new javax.swing.JToggleButton();
+        jToggleButton75 = new javax.swing.JToggleButton();
+        jToggleButton77 = new javax.swing.JToggleButton();
+        jToggleButton78 = new javax.swing.JToggleButton();
+        jToggleButton79 = new javax.swing.JToggleButton();
+        jToggleButton81 = new javax.swing.JToggleButton();
+        jToggleButton82 = new javax.swing.JToggleButton();
+        jToggleButton113 = new javax.swing.JToggleButton();
+        jToggleButton115 = new javax.swing.JToggleButton();
+        jToggleButton116 = new javax.swing.JToggleButton();
+        jToggleButton117 = new javax.swing.JToggleButton();
+        jToggleButton119 = new javax.swing.JToggleButton();
+        jToggleButton120 = new javax.swing.JToggleButton();
+        jToggleButton121 = new javax.swing.JToggleButton();
+        jToggleButton123 = new javax.swing.JToggleButton();
+        jToggleButton124 = new javax.swing.JToggleButton();
+        jToggleButton125 = new javax.swing.JToggleButton();
+        jToggleButton127 = new javax.swing.JToggleButton();
+        jToggleButton128 = new javax.swing.JToggleButton();
+        jToggleButton129 = new javax.swing.JToggleButton();
+        jToggleButton131 = new javax.swing.JToggleButton();
+        jToggleButton132 = new javax.swing.JToggleButton();
+        jToggleButton133 = new javax.swing.JToggleButton();
+        jToggleButton135 = new javax.swing.JToggleButton();
+        jToggleButton136 = new javax.swing.JToggleButton();
+        jToggleButton137 = new javax.swing.JToggleButton();
+        jToggleButton139 = new javax.swing.JToggleButton();
+        jToggleButton140 = new javax.swing.JToggleButton();
+        jToggleButton141 = new javax.swing.JToggleButton();
+        jToggleButton143 = new javax.swing.JToggleButton();
+        jToggleButton144 = new javax.swing.JToggleButton();
+        jToggleButton145 = new javax.swing.JToggleButton();
+        jLabel16 = new javax.swing.JLabel();
         hadTab = new javax.swing.JPanel();
         hadScroll = new javax.swing.JScrollPane();
         hadPanel = new javax.swing.JPanel();
         jLabel111 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jLabel17 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jLabel18 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jRadioButton13 = new javax.swing.JRadioButton();
+        jRadioButton14 = new javax.swing.JRadioButton();
+        jRadioButton15 = new javax.swing.JRadioButton();
+        jRadioButton16 = new javax.swing.JRadioButton();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jRadioButton17 = new javax.swing.JRadioButton();
+        jRadioButton18 = new javax.swing.JRadioButton();
+        jRadioButton19 = new javax.swing.JRadioButton();
+        jRadioButton20 = new javax.swing.JRadioButton();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jRadioButton21 = new javax.swing.JRadioButton();
+        jRadioButton22 = new javax.swing.JRadioButton();
+        jRadioButton23 = new javax.swing.JRadioButton();
+        jRadioButton24 = new javax.swing.JRadioButton();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jRadioButton28 = new javax.swing.JRadioButton();
+        jRadioButton27 = new javax.swing.JRadioButton();
+        jRadioButton26 = new javax.swing.JRadioButton();
+        jRadioButton25 = new javax.swing.JRadioButton();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jRadioButton29 = new javax.swing.JRadioButton();
+        jRadioButton30 = new javax.swing.JRadioButton();
+        jRadioButton31 = new javax.swing.JRadioButton();
+        jRadioButton32 = new javax.swing.JRadioButton();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jRadioButton33 = new javax.swing.JRadioButton();
+        jRadioButton34 = new javax.swing.JRadioButton();
+        jRadioButton35 = new javax.swing.JRadioButton();
+        jRadioButton36 = new javax.swing.JRadioButton();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jRadioButton37 = new javax.swing.JRadioButton();
+        jRadioButton38 = new javax.swing.JRadioButton();
+        jRadioButton39 = new javax.swing.JRadioButton();
+        jRadioButton40 = new javax.swing.JRadioButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jRadioButton12 = new javax.swing.JRadioButton();
+        jRadioButton11 = new javax.swing.JRadioButton();
+        jRadioButton10 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jRadioButton41 = new javax.swing.JRadioButton();
+        jRadioButton42 = new javax.swing.JRadioButton();
+        jRadioButton43 = new javax.swing.JRadioButton();
+        jRadioButton44 = new javax.swing.JRadioButton();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jRadioButton45 = new javax.swing.JRadioButton();
+        jRadioButton46 = new javax.swing.JRadioButton();
+        jRadioButton47 = new javax.swing.JRadioButton();
+        jRadioButton48 = new javax.swing.JRadioButton();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
+        jRadioButton49 = new javax.swing.JRadioButton();
+        jRadioButton50 = new javax.swing.JRadioButton();
+        jRadioButton51 = new javax.swing.JRadioButton();
+        jRadioButton52 = new javax.swing.JRadioButton();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel71 = new javax.swing.JLabel();
+        jRadioButton61 = new javax.swing.JRadioButton();
+        jRadioButton62 = new javax.swing.JRadioButton();
+        jRadioButton63 = new javax.swing.JRadioButton();
+        jRadioButton64 = new javax.swing.JRadioButton();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
         qolTab = new javax.swing.JPanel();
         qolScroll = new javax.swing.JScrollPane();
         qolPanel = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
+        orientacioBtn10 = new javax.swing.JToggleButton();
+        memoBtn10 = new javax.swing.JToggleButton();
+        orientacioBtn11 = new javax.swing.JToggleButton();
+        memoBtn11 = new javax.swing.JToggleButton();
+        orientacioBtn12 = new javax.swing.JToggleButton();
+        memoBtn12 = new javax.swing.JToggleButton();
+        memoBtn13 = new javax.swing.JToggleButton();
+        orientacioBtn13 = new javax.swing.JToggleButton();
+        raoBtn10 = new javax.swing.JToggleButton();
+        raoBtn11 = new javax.swing.JToggleButton();
+        raoBtn12 = new javax.swing.JToggleButton();
+        raoBtn13 = new javax.swing.JToggleButton();
+        activitatsFBtn10 = new javax.swing.JToggleButton();
+        activitatsFBtn11 = new javax.swing.JToggleButton();
+        activitatsFBtn12 = new javax.swing.JToggleButton();
+        activitatsFBtn13 = new javax.swing.JToggleButton();
+        activitatsDBtn10 = new javax.swing.JToggleButton();
+        activitatsDBtn11 = new javax.swing.JToggleButton();
+        activitatsDBtn12 = new javax.swing.JToggleButton();
+        activitatsDBtn13 = new javax.swing.JToggleButton();
+        cuidatBtn8 = new javax.swing.JToggleButton();
+        cuidatBtn9 = new javax.swing.JToggleButton();
+        cuidatBtn10 = new javax.swing.JToggleButton();
+        jLabel105 = new javax.swing.JLabel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel141 = new javax.swing.JLabel();
+        jLabel142 = new javax.swing.JLabel();
+        jLabel143 = new javax.swing.JLabel();
+        jLabel144 = new javax.swing.JLabel();
+        jLabel145 = new javax.swing.JLabel();
+        jLabel146 = new javax.swing.JLabel();
+        jLabel147 = new javax.swing.JLabel();
+        jLabel148 = new javax.swing.JLabel();
+        jLabel110 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jToggleButton4 = new javax.swing.JToggleButton();
+        jToggleButton5 = new javax.swing.JToggleButton();
+        jToggleButton6 = new javax.swing.JToggleButton();
+        jToggleButton7 = new javax.swing.JToggleButton();
+        jToggleButton8 = new javax.swing.JToggleButton();
+        jToggleButton9 = new javax.swing.JToggleButton();
+        jToggleButton10 = new javax.swing.JToggleButton();
+        jToggleButton11 = new javax.swing.JToggleButton();
+        jToggleButton12 = new javax.swing.JToggleButton();
+        jToggleButton13 = new javax.swing.JToggleButton();
+        jToggleButton14 = new javax.swing.JToggleButton();
+        jToggleButton15 = new javax.swing.JToggleButton();
+        jToggleButton16 = new javax.swing.JToggleButton();
+        jToggleButton17 = new javax.swing.JToggleButton();
+        jToggleButton18 = new javax.swing.JToggleButton();
+        jToggleButton19 = new javax.swing.JToggleButton();
+        jToggleButton20 = new javax.swing.JToggleButton();
+        jToggleButton21 = new javax.swing.JToggleButton();
+        jToggleButton22 = new javax.swing.JToggleButton();
+        jToggleButton23 = new javax.swing.JToggleButton();
+        jToggleButton24 = new javax.swing.JToggleButton();
+        jToggleButton25 = new javax.swing.JToggleButton();
+        jToggleButton26 = new javax.swing.JToggleButton();
+        jToggleButton27 = new javax.swing.JToggleButton();
+        jToggleButton28 = new javax.swing.JToggleButton();
+        jToggleButton29 = new javax.swing.JToggleButton();
+        jToggleButton30 = new javax.swing.JToggleButton();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         dukeTab = new javax.swing.JPanel();
         dukeScroll = new javax.swing.JScrollPane();
         dukePanel = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        orientacioBtn14 = new javax.swing.JToggleButton();
+        memoBtn14 = new javax.swing.JToggleButton();
+        orientacioBtn15 = new javax.swing.JToggleButton();
+        memoBtn15 = new javax.swing.JToggleButton();
+        orientacioBtn16 = new javax.swing.JToggleButton();
+        memoBtn16 = new javax.swing.JToggleButton();
+        memoBtn17 = new javax.swing.JToggleButton();
+        orientacioBtn17 = new javax.swing.JToggleButton();
+        raoBtn14 = new javax.swing.JToggleButton();
+        raoBtn15 = new javax.swing.JToggleButton();
+        raoBtn16 = new javax.swing.JToggleButton();
+        raoBtn17 = new javax.swing.JToggleButton();
+        activitatsFBtn14 = new javax.swing.JToggleButton();
+        activitatsFBtn15 = new javax.swing.JToggleButton();
+        activitatsFBtn16 = new javax.swing.JToggleButton();
+        activitatsFBtn17 = new javax.swing.JToggleButton();
+        activitatsDBtn14 = new javax.swing.JToggleButton();
+        activitatsDBtn15 = new javax.swing.JToggleButton();
+        activitatsDBtn16 = new javax.swing.JToggleButton();
+        activitatsDBtn17 = new javax.swing.JToggleButton();
+        cuidatBtn11 = new javax.swing.JToggleButton();
+        cuidatBtn12 = new javax.swing.JToggleButton();
+        cuidatBtn13 = new javax.swing.JToggleButton();
+        jLabel112 = new javax.swing.JLabel();
+        jLabel113 = new javax.swing.JLabel();
+        jLabel149 = new javax.swing.JLabel();
+        jLabel150 = new javax.swing.JLabel();
+        jLabel151 = new javax.swing.JLabel();
+        jLabel152 = new javax.swing.JLabel();
+        jLabel153 = new javax.swing.JLabel();
+        jLabel154 = new javax.swing.JLabel();
+        jLabel155 = new javax.swing.JLabel();
+        jLabel156 = new javax.swing.JLabel();
+        jLabel114 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jToggleButton35 = new javax.swing.JToggleButton();
+        jToggleButton36 = new javax.swing.JToggleButton();
+        jToggleButton37 = new javax.swing.JToggleButton();
+        jToggleButton38 = new javax.swing.JToggleButton();
+        jToggleButton39 = new javax.swing.JToggleButton();
+        jToggleButton40 = new javax.swing.JToggleButton();
+        jToggleButton41 = new javax.swing.JToggleButton();
+        jToggleButton42 = new javax.swing.JToggleButton();
+        jToggleButton43 = new javax.swing.JToggleButton();
+        jToggleButton44 = new javax.swing.JToggleButton();
+        jToggleButton45 = new javax.swing.JToggleButton();
+        jToggleButton46 = new javax.swing.JToggleButton();
+        jToggleButton47 = new javax.swing.JToggleButton();
+        jToggleButton48 = new javax.swing.JToggleButton();
+        jToggleButton49 = new javax.swing.JToggleButton();
+        jToggleButton50 = new javax.swing.JToggleButton();
+        jToggleButton51 = new javax.swing.JToggleButton();
+        jToggleButton52 = new javax.swing.JToggleButton();
+        jToggleButton53 = new javax.swing.JToggleButton();
+        jToggleButton54 = new javax.swing.JToggleButton();
+        jToggleButton55 = new javax.swing.JToggleButton();
+        jToggleButton56 = new javax.swing.JToggleButton();
         rseTab = new javax.swing.JPanel();
         rseScroll = new javax.swing.JScrollPane();
         rsePanel = new javax.swing.JPanel();
-        jLabel164 = new javax.swing.JLabel();
-        buttonPanel = new javax.swing.JPanel();
-        acceptaBtn = new javax.swing.JButton();
-        cancelaBtn = new javax.swing.JButton();
-        anteriorBtn = new javax.swing.JButton();
-        seguentBtn = new javax.swing.JButton();
-        paginaLabel = new javax.swing.JLabel();
-        paginaLabel2 = new javax.swing.JLabel();
-        sepBottom = new javax.swing.JSeparator();
+        jPanel16 = new javax.swing.JPanel();
+        orientacioBtn2 = new javax.swing.JToggleButton();
+        memoBtn2 = new javax.swing.JToggleButton();
+        orientacioBtn3 = new javax.swing.JToggleButton();
+        memoBtn3 = new javax.swing.JToggleButton();
+        orientacioBtn4 = new javax.swing.JToggleButton();
+        memoBtn4 = new javax.swing.JToggleButton();
+        memoBtn5 = new javax.swing.JToggleButton();
+        orientacioBtn5 = new javax.swing.JToggleButton();
+        raoBtn2 = new javax.swing.JToggleButton();
+        raoBtn5 = new javax.swing.JToggleButton();
+        raoBtn3 = new javax.swing.JToggleButton();
+        raoBtn4 = new javax.swing.JToggleButton();
+        activitatsFBtn2 = new javax.swing.JToggleButton();
+        activitatsFBtn3 = new javax.swing.JToggleButton();
+        activitatsFBtn4 = new javax.swing.JToggleButton();
+        activitatsFBtn5 = new javax.swing.JToggleButton();
+        activitatsDBtn5 = new javax.swing.JToggleButton();
+        activitatsDBtn4 = new javax.swing.JToggleButton();
+        activitatsDBtn2 = new javax.swing.JToggleButton();
+        activitatsDBtn3 = new javax.swing.JToggleButton();
+        cuidatBtn2 = new javax.swing.JToggleButton();
+        cuidatBtn3 = new javax.swing.JToggleButton();
+        cuidatBtn4 = new javax.swing.JToggleButton();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel125 = new javax.swing.JLabel();
+        jLabel126 = new javax.swing.JLabel();
+        jLabel127 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel129 = new javax.swing.JLabel();
+        jLabel130 = new javax.swing.JLabel();
+        jLabel131 = new javax.swing.JLabel();
+        jLabel132 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sessió 2");
 
         mainPanel.setLayout(new java.awt.BorderLayout());
 
         dataPanel.setLayout(new java.awt.BorderLayout());
-
-        tabbedPanel.setToolTipText("");
-        tabbedPanel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-
-        mocaTab.setLayout(new java.awt.CardLayout());
-
-        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel29.setText("MONTREAL COGNITIVE ASSESSMENT (MoCA)");
-
-        javax.swing.GroupLayout mocaPanelLayout = new javax.swing.GroupLayout(mocaPanel);
-        mocaPanel.setLayout(mocaPanelLayout);
-        mocaPanelLayout.setHorizontalGroup(
-            mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mocaPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel29)
-                .addContainerGap(1655, Short.MAX_VALUE))
-        );
-        mocaPanelLayout.setVerticalGroup(
-            mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mocaPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel29)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        mocaScroll.setViewportView(mocaPanel);
-
-        mocaTab.add(mocaScroll, "card1");
-
-        tabbedPanel.addTab("MOCA", mocaTab);
-
-        upsaTab.setLayout(new java.awt.CardLayout());
-
-        jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel106.setText("<html><center><b>HABILITATS DE COMUNICACIÓ: Telèfon i carta</b>");
-
-        javax.swing.GroupLayout upsa2PanelLayout = new javax.swing.GroupLayout(upsa2Panel);
-        upsa2Panel.setLayout(upsa2PanelLayout);
-        upsa2PanelLayout.setHorizontalGroup(
-            upsa2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsa2PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1648, Short.MAX_VALUE))
-        );
-        upsa2PanelLayout.setVerticalGroup(
-            upsa2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsa2PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        upsa2Scroll.setViewportView(upsa2Panel);
-
-        upsaTab.add(upsa2Scroll, "card1");
-
-        jLabel107.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel107.setText("<html><center><b>COMPRENSIÓ I PLANIFICACIÓ: La platja</b>");
-
-        javax.swing.GroupLayout upsa3PanelLayout = new javax.swing.GroupLayout(upsa3Panel);
-        upsa3Panel.setLayout(upsa3PanelLayout);
-        upsa3PanelLayout.setHorizontalGroup(
-            upsa3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsa3PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1690, Short.MAX_VALUE))
-        );
-        upsa3PanelLayout.setVerticalGroup(
-            upsa3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsa3PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        upsa3Scroll.setViewportView(upsa3Panel);
-
-        upsaTab.add(upsa3Scroll, "card2");
-
-        jLabel165.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel165.setText("<html><center><b>COMPRENSIÓ I PLANIFICACIÓ: La platja</b>");
-
-        javax.swing.GroupLayout upsaRPanelLayout = new javax.swing.GroupLayout(upsaRPanel);
-        upsaRPanel.setLayout(upsaRPanelLayout);
-        upsaRPanelLayout.setHorizontalGroup(
-            upsaRPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsaRPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel165, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1690, Short.MAX_VALUE))
-        );
-        upsaRPanelLayout.setVerticalGroup(
-            upsaRPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsaRPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel165, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        upsaRScroll.setViewportView(upsaRPanel);
-
-        upsaTab.add(upsaRScroll, "card2");
-
-        tabbedPanel.addTab("UPSA", upsaTab);
-
-        mfeTab.setLayout(new java.awt.CardLayout());
-
-        jLabel109.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel109.setText("<html><center><b>QÜESTIONARI DE MEMÒRIA DE LA VIDA DIÀRIA</b>");
-
-        javax.swing.GroupLayout mfePanel2Layout = new javax.swing.GroupLayout(mfePanel2);
-        mfePanel2.setLayout(mfePanel2Layout);
-        mfePanel2Layout.setHorizontalGroup(
-            mfePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mfePanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1634, Short.MAX_VALUE))
-        );
-        mfePanel2Layout.setVerticalGroup(
-            mfePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mfePanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        mfeScroll1.setViewportView(mfePanel2);
-
-        mfeTab.add(mfeScroll1, "card1");
-
-        tabbedPanel.addTab("MFE", mfeTab);
-
-        hadTab.setLayout(new java.awt.CardLayout());
-
-        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel111.setText("<html><center><b>Escala Hospitalària d'Ansietat i Depressió</b>");
-
-        javax.swing.GroupLayout hadPanelLayout = new javax.swing.GroupLayout(hadPanel);
-        hadPanel.setLayout(hadPanelLayout);
-        hadPanelLayout.setHorizontalGroup(
-            hadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hadPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1701, Short.MAX_VALUE))
-        );
-        hadPanelLayout.setVerticalGroup(
-            hadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hadPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        hadScroll.setViewportView(hadPanel);
-
-        hadTab.add(hadScroll, "card1");
-
-        tabbedPanel.addTab("HAD", hadTab);
-
-        qolTab.setLayout(new java.awt.CardLayout());
-
-        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel30.setText("Quality of Life in Alzheimer’s Disease");
-
-        javax.swing.GroupLayout qolPanelLayout = new javax.swing.GroupLayout(qolPanel);
-        qolPanel.setLayout(qolPanelLayout);
-        qolPanelLayout.setHorizontalGroup(
-            qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(qolPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel30)
-                .addContainerGap(1733, Short.MAX_VALUE))
-        );
-        qolPanelLayout.setVerticalGroup(
-            qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, qolPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel30)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        qolScroll.setViewportView(qolPanel);
-
-        qolTab.add(qolScroll, "card1");
-
-        tabbedPanel.addTab("QOL-AD", qolTab);
-
-        dukeTab.setLayout(new java.awt.CardLayout());
-
-        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel33.setText("Duke Suport Social Index");
-
-        javax.swing.GroupLayout dukePanelLayout = new javax.swing.GroupLayout(dukePanel);
-        dukePanel.setLayout(dukePanelLayout);
-        dukePanelLayout.setHorizontalGroup(
-            dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dukePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel33)
-                .addContainerGap(1805, Short.MAX_VALUE))
-        );
-        dukePanelLayout.setVerticalGroup(
-            dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dukePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel33)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        dukeScroll.setViewportView(dukePanel);
-
-        dukeTab.add(dukeScroll, "card1");
-
-        tabbedPanel.addTab(" DUKE-UNC ", dukeTab);
-
-        rseTab.setLayout(new java.awt.CardLayout());
-
-        jLabel164.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel164.setText("Escala d'autoestima de Rosemberg");
-
-        javax.swing.GroupLayout rsePanelLayout = new javax.swing.GroupLayout(rsePanel);
-        rsePanel.setLayout(rsePanelLayout);
-        rsePanelLayout.setHorizontalGroup(
-            rsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(rsePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel164)
-                .addContainerGap(1740, Short.MAX_VALUE))
-        );
-        rsePanelLayout.setVerticalGroup(
-            rsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rsePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel164)
-                .addContainerGap(740, Short.MAX_VALUE))
-        );
-
-        rseScroll.setViewportView(rsePanel);
-
-        rseTab.add(rseScroll, "card1");
-
-        tabbedPanel.addTab("RSE", rseTab);
-
-        dataPanel.add(tabbedPanel, java.awt.BorderLayout.CENTER);
-
         mainPanel.add(dataPanel, java.awt.BorderLayout.LINE_START);
 
         acceptaBtn.setText("Accepta");
@@ -400,7 +744,7 @@ public class Sessio2 extends javax.swing.JFrame {
                 .addComponent(paginaLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(sepBottom, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1429, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 771, Short.MAX_VALUE)
                 .addComponent(acceptaBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelaBtn)
@@ -425,6 +769,4359 @@ public class Sessio2 extends javax.swing.JFrame {
         );
 
         mainPanel.add(buttonPanel, java.awt.BorderLayout.SOUTH);
+
+        tabbedPanel.setToolTipText("");
+        tabbedPanel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+
+        mocaTab.setLayout(new java.awt.CardLayout());
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel29.setText("MONTREAL COGNITIVE ASSESSMENT (MoCA)");
+
+        javax.swing.GroupLayout mocaPanelLayout = new javax.swing.GroupLayout(mocaPanel);
+        mocaPanel.setLayout(mocaPanelLayout);
+        mocaPanelLayout.setHorizontalGroup(
+            mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mocaPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel29)
+                .addContainerGap())
+        );
+        mocaPanelLayout.setVerticalGroup(
+            mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mocaPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel29)
+                .addContainerGap())
+        );
+
+        mocaScroll.setViewportView(mocaPanel);
+
+        mocaTab.add(mocaScroll, "card1");
+
+        tabbedPanel.addTab("MOCA", mocaTab);
+
+        upsaTab.setLayout(new java.awt.CardLayout());
+
+        jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel106.setText("<html><center><b>HABILITATS DE COMUNICACIÓ: Telèfon i carta</b>");
+
+        jPanel23.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "2. HABILITAT DE COMUNICACIÓ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel23.setLayout(new java.awt.GridBagLayout());
+
+        jLabel116.setText("<html><center>Correcte/<br> Incorrecte");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel23.add(jLabel116, gridBagConstraints);
+
+        jLabel189.setText("Resposta");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 50, 2, 50);
+        jPanel23.add(jLabel189, gridBagConstraints);
+
+        jLabel196.setText("Marcar nº de memòria");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel23.add(jLabel196, gridBagConstraints);
+
+        jLabel78.setText("Trucada nº emergència");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel78, gridBagConstraints);
+
+        jLabel79.setText("Trucada a casa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
+        jPanel23.add(jLabel79, gridBagConstraints);
+
+        jLabel80.setText("Missatge apropiat");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel80, gridBagConstraints);
+
+        jLabel81.setText("Marcar nº de la carta");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel81, gridBagConstraints);
+
+        jLabel82.setText("Nom del pacient");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel82, gridBagConstraints);
+
+        jLabel94.setText("Data cita actual");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel94, gridBagConstraints);
+
+        jLabel103.setText("Data de la nova cita");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel103, gridBagConstraints);
+
+        jLabel197.setText("Nº per tornar la trucada");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel197, gridBagConstraints);
+
+        jLabel198.setText("Targeta sanitària");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel198, gridBagConstraints);
+
+        jLabel199.setText("Llista de medicaments");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel199, gridBagConstraints);
+
+        jLabel201.setText("Dejú per extracció");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel23.add(jLabel201, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField1, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField2, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField3, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField4, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField5, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField6, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField7, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField8, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField9, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField10, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField11, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel23.add(jTextField12, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        jPanel23.add(jCheckBox1, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        jPanel23.add(jCheckBox2, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        jPanel23.add(jCheckBox3, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        jPanel23.add(jCheckBox4, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        jPanel23.add(jCheckBox5, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        jPanel23.add(jCheckBox6, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 9;
+        jPanel23.add(jCheckBox7, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        jPanel23.add(jCheckBox8, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 11;
+        jPanel23.add(jCheckBox9, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 12;
+        jPanel23.add(jCheckBox10, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 13;
+        jPanel23.add(jCheckBox11, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 14;
+        jPanel23.add(jCheckBox12, gridBagConstraints);
+
+        jPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "3. COMPRENSÓ / PLANIFICACIÓ Viatge a la platja", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel24.setLayout(new java.awt.GridBagLayout());
+
+        orientacioBtn20.setText("0");
+        orientacioBtn20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orientacioBtn20ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(orientacioBtn20, gridBagConstraints);
+
+        memoBtn20.setText("0");
+        memoBtn20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                memoBtn20ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(memoBtn20, gridBagConstraints);
+
+        raoBtn19.setText("0");
+        raoBtn19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                raoBtn19ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(raoBtn19, gridBagConstraints);
+
+        upsaButtonGrup1.add(raoBtn21);
+        raoBtn21.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(raoBtn21, gridBagConstraints);
+
+        upsaButtonGrup1.add(activitatsDBtn22);
+        activitatsDBtn22.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(activitatsDBtn22, gridBagConstraints);
+
+        upsaButtonGrup3.add(cuidatBtn15);
+        cuidatBtn15.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(cuidatBtn15, gridBagConstraints);
+
+        jLabel166.setText("Correcte");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel24.add(jLabel166, gridBagConstraints);
+
+        jLabel190.setText("Dubtós");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel24.add(jLabel190, gridBagConstraints);
+
+        jLabel191.setText("Resposta");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 50, 2, 50);
+        jPanel24.add(jLabel191, gridBagConstraints);
+
+        jLabel83.setText("Com arribar");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel24.add(jLabel83, gridBagConstraints);
+
+        jLabel84.setText("Activitat a la platja 1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
+        jPanel24.add(jLabel84, gridBagConstraints);
+
+        jLabel85.setText("Activitat a la platja 2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel24.add(jLabel85, gridBagConstraints);
+
+        jLabel86.setText("Article necessari 1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel24.add(jLabel86, gridBagConstraints);
+
+        jLabel192.setText("Article necessari 2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel24.add(jLabel192, gridBagConstraints);
+
+        jLabel193.setText("Article necessari 3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel24.add(jLabel193, gridBagConstraints);
+
+        jLabel194.setText("Article necessari 4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel24.add(jLabel194, gridBagConstraints);
+
+        jLabel202.setText("Article necessari 5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel24.add(jLabel202, gridBagConstraints);
+
+        upsaButtonGrup2.add(jToggleButton118);
+        jToggleButton118.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton118, gridBagConstraints);
+
+        upsaButtonGrup2.add(jToggleButton122);
+        jToggleButton122.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton122, gridBagConstraints);
+
+        upsaButtonGrup3.add(jToggleButton134);
+        jToggleButton134.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton134, gridBagConstraints);
+
+        upsaButtonGrup4.add(jToggleButton138);
+        jToggleButton138.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton138, gridBagConstraints);
+
+        upsaButtonGrup4.add(jToggleButton142);
+        jToggleButton142.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton142, gridBagConstraints);
+
+        upsaButtonGrup5.add(jToggleButton146);
+        jToggleButton146.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton146, gridBagConstraints);
+
+        upsaButtonGrup5.add(jToggleButton147);
+        jToggleButton147.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton147, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField13, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField14, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField15, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField16, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField17, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField18, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField19, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField20, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel24.add(jTextField24, gridBagConstraints);
+
+        jLabel195.setText("Incorrecte");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel24.add(jLabel195, gridBagConstraints);
+
+        jLabel206.setText("<html><center>Correcte/<br> Incorrecte");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel24.add(jLabel206, gridBagConstraints);
+
+        upsaButtonGrup1.add(activitatsDBtn25);
+        activitatsDBtn25.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(activitatsDBtn25, gridBagConstraints);
+
+        upsaButtonGrup2.add(jToggleButton150);
+        jToggleButton150.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton150, gridBagConstraints);
+
+        upsaButtonGrup3.add(jToggleButton151);
+        jToggleButton151.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton151, gridBagConstraints);
+
+        upsaButtonGrup4.add(jToggleButton152);
+        jToggleButton152.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton152, gridBagConstraints);
+
+        upsaButtonGrup5.add(jToggleButton153);
+        jToggleButton153.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel24.add(jToggleButton153, gridBagConstraints);
+
+        jPanel25.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FULL DE RESUM DE PUNTUACIÓ DE LA Sp-UPSA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel25.setLayout(new java.awt.GridBagLayout());
+
+        jLabel200.setText("<html><center>Puntuació<br>total");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel200, gridBagConstraints);
+
+        jLabel203.setText("<html><center> Puntuació<br>subescala");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel203, gridBagConstraints);
+
+        jLabel204.setText("5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel204, gridBagConstraints);
+
+        jLabel140.setText("Domini");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel140, gridBagConstraints);
+
+        jLabel205.setText("Comunicació");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel205, gridBagConstraints);
+
+        jLabel207.setText("<html>Comprensió/<br>Planificació");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel207, gridBagConstraints);
+
+        jLabel208.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel208, gridBagConstraints);
+
+        jLabel209.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel209, gridBagConstraints);
+
+        jLabel210.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel210, gridBagConstraints);
+
+        jLabel211.setText("6");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel211, gridBagConstraints);
+
+        jLabel212.setText("÷");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel212, gridBagConstraints);
+
+        jLabel213.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel213.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel213, gridBagConstraints);
+
+        jLabel214.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel214, gridBagConstraints);
+
+        jLabel215.setText("=");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 0);
+        jPanel25.add(jLabel215, gridBagConstraints);
+
+        jLabel216.setText("÷ 13");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel216, gridBagConstraints);
+
+        jLabel217.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel217.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel217, gridBagConstraints);
+
+        jLabel218.setText("<html><center>Puntuació total<br>UPSA<br><font color=\"red\">Rang 0 - 50");
+        jLabel218.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel218, gridBagConstraints);
+
+        jLabel219.setText("X25");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel219, gridBagConstraints);
+
+        jLabel220.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel220.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel220, gridBagConstraints);
+
+        jLabel221.setText("X 25");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        jPanel25.add(jLabel221, gridBagConstraints);
+
+        jLabel222.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel222.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel222, gridBagConstraints);
+
+        jLabel223.setText("X 25");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanel25.add(jLabel223, gridBagConstraints);
+
+        jLabel224.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel224.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        jPanel25.add(jLabel224, gridBagConstraints);
+
+        jLabel225.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel225.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel225, gridBagConstraints);
+
+        jLabel226.setText("=");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 0);
+        jPanel25.add(jLabel226, gridBagConstraints);
+
+        jLabel227.setText("=");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 0);
+        jPanel25.add(jLabel227, gridBagConstraints);
+
+        jLabel228.setText("÷ 12");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        jPanel25.add(jLabel228, gridBagConstraints);
+
+        jLabel229.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel229.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel229, gridBagConstraints);
+
+        jLabel230.setText("<html><center>Percentatge<br>correcte(%)");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(4, 5, 4, 5);
+        jPanel25.add(jLabel230, gridBagConstraints);
+
+        javax.swing.GroupLayout upsa2PanelLayout = new javax.swing.GroupLayout(upsa2Panel);
+        upsa2Panel.setLayout(upsa2PanelLayout);
+        upsa2PanelLayout.setHorizontalGroup(
+            upsa2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(upsa2PanelLayout.createSequentialGroup()
+                .addGroup(upsa2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(upsa2PanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(upsa2PanelLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        upsa2PanelLayout.setVerticalGroup(
+            upsa2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(upsa2PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(upsa2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        upsa2Scroll.setViewportView(upsa2Panel);
+
+        upsaTab.add(upsa2Scroll, "card1");
+
+        jLabel107.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel107.setText("<html><center><b>COMPRENSIÓ I PLANIFICACIÓ: La platja</b>");
+
+        javax.swing.GroupLayout upsa3PanelLayout = new javax.swing.GroupLayout(upsa3Panel);
+        upsa3Panel.setLayout(upsa3PanelLayout);
+        upsa3PanelLayout.setHorizontalGroup(
+            upsa3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(upsa3PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(4234, Short.MAX_VALUE))
+        );
+        upsa3PanelLayout.setVerticalGroup(
+            upsa3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(upsa3PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1113, Short.MAX_VALUE))
+        );
+
+        upsa3Scroll.setViewportView(upsa3Panel);
+
+        upsaTab.add(upsa3Scroll, "card2");
+
+        jLabel165.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel165.setText("<html><center><b>COMPRENSIÓ I PLANIFICACIÓ: La platja</b>");
+
+        javax.swing.GroupLayout upsaRPanelLayout = new javax.swing.GroupLayout(upsaRPanel);
+        upsaRPanel.setLayout(upsaRPanelLayout);
+        upsaRPanelLayout.setHorizontalGroup(
+            upsaRPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(upsaRPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel165, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(4234, Short.MAX_VALUE))
+        );
+        upsaRPanelLayout.setVerticalGroup(
+            upsaRPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(upsaRPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel165, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1113, Short.MAX_VALUE))
+        );
+
+        upsaRScroll.setViewportView(upsaRPanel);
+
+        upsaTab.add(upsaRScroll, "card2");
+
+        tabbedPanel.addTab("UPSA", upsaTab);
+
+        mfeTab.setLayout(new java.awt.CardLayout());
+
+        jLabel109.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel109.setText("<html><center><b>QÜESTIONARI DE MEMÒRIA DE LA VIDA DIÀRIA</b>");
+
+        jPanel21.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Qüestionari", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel21.setLayout(new java.awt.GridBagLayout());
+
+        orientacioBtn22.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(orientacioBtn22, gridBagConstraints);
+
+        memoBtn22.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(memoBtn22, gridBagConstraints);
+
+        orientacioBtn23.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(orientacioBtn23, gridBagConstraints);
+
+        memoBtn23.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(memoBtn23, gridBagConstraints);
+
+        orientacioBtn24.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(orientacioBtn24, gridBagConstraints);
+
+        memoBtn24.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(memoBtn24, gridBagConstraints);
+
+        raoBtn22.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(raoBtn22, gridBagConstraints);
+
+        raoBtn24.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(raoBtn24, gridBagConstraints);
+
+        raoBtn25.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(raoBtn25, gridBagConstraints);
+
+        activitatsFBtn22.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(activitatsFBtn22, gridBagConstraints);
+
+        activitatsFBtn23.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(activitatsFBtn23, gridBagConstraints);
+
+        activitatsFBtn24.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(activitatsFBtn24, gridBagConstraints);
+
+        activitatsDBtn23.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(activitatsDBtn23, gridBagConstraints);
+
+        activitatsDBtn24.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(activitatsDBtn24, gridBagConstraints);
+
+        cuidatBtn17.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(cuidatBtn17, gridBagConstraints);
+
+        cuidatBtn18.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(cuidatBtn18, gridBagConstraints);
+
+        jLabel118.setText("<html><center>Mai /<br>poques vegades");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel21.add(jLabel118, gridBagConstraints);
+
+        jLabel119.setText("<html><center>Algun cop /<br>poques vegades");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel21.add(jLabel119, gridBagConstraints);
+
+        jLabel167.setText("<html><center>Moltes vegades<br>");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel21.add(jLabel167, gridBagConstraints);
+
+        jLabel168.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        jPanel21.add(jLabel168, gridBagConstraints);
+
+        jLabel169.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        jPanel21.add(jLabel169, gridBagConstraints);
+
+        jLabel170.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        jPanel21.add(jLabel170, gridBagConstraints);
+
+        jLabel171.setText("5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        jPanel21.add(jLabel171, gridBagConstraints);
+
+        jLabel172.setText("6");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        jPanel21.add(jLabel172, gridBagConstraints);
+
+        jLabel173.setText("7");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        jPanel21.add(jLabel173, gridBagConstraints);
+
+        jLabel120.setText("<html>No recordar un canvi en les seves activitats diàries; per exemple, haver canviat<br> el lloc on guardava una cosa, o no recordar l'hora de fer alguna cosa en concret.<br>Seguir per error l'antiga rutina.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel21.add(jLabel120, gridBagConstraints);
+
+        jLabel87.setText("Oblidar on ha posat alguna cosa. Perdre coses per casa.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel87, gridBagConstraints);
+
+        jLabel88.setText("No recordar llocs en els que li diuen que ha estat vàries vegades amb anterioritat.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
+        jPanel21.add(jLabel88, gridBagConstraints);
+
+        jLabel89.setText("Tenir dificultats per seguir una història per televisió.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel89, gridBagConstraints);
+
+        jLabel90.setText("<html>Haver de tornar a comprovar si ha fet realment alguna cosa que tenia la intenció<br>de fer; per exemple, tancar el gas.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel90, gridBagConstraints);
+
+        jLabel91.setText("<html>Oblidar quan va passar alguna cosa; per exemple, oblidar si va passar ahir o bé<br>la setmana passada");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel91, gridBagConstraints);
+
+        jLabel92.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        jPanel21.add(jLabel92, gridBagConstraints);
+
+        jLabel93.setText("8");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        jPanel21.add(jLabel93, gridBagConstraints);
+
+        jLabel95.setText("10");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel95, gridBagConstraints);
+
+        jLabel96.setText("<html>Oblidar completament fer coses que hauria de fer, o que tenia planejat fer.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel96, gridBagConstraints);
+
+        jLabel97.setText("Oblidar detalls importants del que va fer o li va passar el dia anterior.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel97, gridBagConstraints);
+
+        jLabel98.setText("<html>Quan parla amb algú, oblidar el que acaba de dir o preguntar a vegades:<br>\"¿de què estàvem parlant?\"");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 18;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel98, gridBagConstraints);
+
+        jLabel102.setText("<html>Quan llegeix un diari o una revista, ser incapaç de seguir la trama d'una història,<br>perdre el fil de l'argumentació.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 19;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel102, gridBagConstraints);
+
+        jLabel104.setText("11");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel104, gridBagConstraints);
+
+        jLabel121.setText("<html>Tenir dificultats en l'aprenentatge d'una nova habilitat; per exemple, en aprendre<br>les regles d'un nou joc o el funcionament d'un mecanisme, després de practicar-una<br>o dues vegades.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel121, gridBagConstraints);
+
+        jLabel122.setText("<html>Tenir una paraula \"a la punta de la llengua\". Saber el que vol dir, però no trobar<br>l'expressió adequada.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel122, gridBagConstraints);
+
+        jLabel123.setText("12");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel123, gridBagConstraints);
+
+        jLabel124.setText("13");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel124, gridBagConstraints);
+
+        jToggleButton83.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton83, gridBagConstraints);
+
+        jToggleButton84.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton84, gridBagConstraints);
+
+        jToggleButton85.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton85, gridBagConstraints);
+
+        jToggleButton86.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton86, gridBagConstraints);
+
+        jToggleButton87.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton87, gridBagConstraints);
+
+        jToggleButton88.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton88, gridBagConstraints);
+
+        jToggleButton89.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton89, gridBagConstraints);
+
+        jToggleButton90.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton90, gridBagConstraints);
+
+        jToggleButton92.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton92, gridBagConstraints);
+
+        jToggleButton93.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton93, gridBagConstraints);
+
+        jToggleButton94.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton94, gridBagConstraints);
+
+        jToggleButton95.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton95, gridBagConstraints);
+
+        jToggleButton96.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton96, gridBagConstraints);
+
+        jToggleButton97.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton97, gridBagConstraints);
+
+        jToggleButton99.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton99, gridBagConstraints);
+
+        jToggleButton100.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton100, gridBagConstraints);
+
+        jToggleButton101.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton101, gridBagConstraints);
+
+        jToggleButton103.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton103, gridBagConstraints);
+
+        jToggleButton104.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton104, gridBagConstraints);
+
+        jToggleButton105.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton105, gridBagConstraints);
+
+        jToggleButton107.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton107, gridBagConstraints);
+
+        jToggleButton109.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton109, gridBagConstraints);
+
+        jToggleButton111.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton111, gridBagConstraints);
+
+        jLabel117.setText("<html>Oblidar completament portar amb ell/a objectes que necessita (claus, ulleres,<br>moneder,...) o deixar-se objectes i haver de tornar a buscar-los.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel117, gridBagConstraints);
+
+        jLabel133.setText("<html>Oblidar una cosa que li van dir ahir o fa pocs dies, i potser veure obligat a demanar<br>que l'hi repeteixin.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel133, gridBagConstraints);
+
+        jLabel136.setText("<html>No reconèixer, encara havent-se vist, a parents i amics quan es creua amb ells<br>pel carrer.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel136, gridBagConstraints);
+
+        jLabel115.setText("9");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        jPanel21.add(jLabel115, gridBagConstraints);
+
+        jLabel134.setText("<html>Començar a llegir alguna cosa (un llibre o un article d'un diari o revista) sense<br> adonar-se que ja ho havia llegit anteriorment.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel134, gridBagConstraints);
+
+        jLabel135.setText("Divagar en una conversa i deixar-se portar cap a temes sense importància.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel135, gridBagConstraints);
+
+        jToggleButton57.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton57, gridBagConstraints);
+
+        jToggleButton58.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton58, gridBagConstraints);
+
+        jToggleButton59.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton59, gridBagConstraints);
+
+        jLabel137.setText("<html>Oblidar dir a algú alguna cosa important; per exemple, donar un avís o recordar<br>a algú alguna cosa.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 20;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel137, gridBagConstraints);
+
+        jToggleButton61.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton61, gridBagConstraints);
+
+        jToggleButton62.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton62, gridBagConstraints);
+
+        jToggleButton63.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton63, gridBagConstraints);
+
+        jLabel138.setText("Barrejar i confondre els detalls de coses que li han explicat altres persones.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 22;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel138, gridBagConstraints);
+
+        jToggleButton65.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 18;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton65, gridBagConstraints);
+
+        jToggleButton66.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 18;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton66, gridBagConstraints);
+
+        jToggleButton67.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 18;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton67, gridBagConstraints);
+
+        jLabel139.setText("<html>Oblidar detalls importants sobre si mateix; per exemple, el dia del seu aniversari<br>o el lloc on viu.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel139, gridBagConstraints);
+
+        jLabel157.setText("14");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel157, gridBagConstraints);
+
+        jLabel158.setText("16");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 18;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel158, gridBagConstraints);
+
+        jLabel159.setText("15");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel159, gridBagConstraints);
+
+        jLabel160.setText("17");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 19;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel160, gridBagConstraints);
+
+        jLabel161.setText("19");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel161, gridBagConstraints);
+
+        jLabel162.setText("18");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 20;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel162, gridBagConstraints);
+
+        jLabel163.setText("20");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 22;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel163, gridBagConstraints);
+
+        jLabel164.setText("21");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 23;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel164, gridBagConstraints);
+
+        jLabel174.setText("22");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel174, gridBagConstraints);
+
+        jLabel175.setText("23");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 25;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel175, gridBagConstraints);
+
+        jLabel176.setText("24");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 26;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel176, gridBagConstraints);
+
+        jLabel177.setText("25");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 27;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel177, gridBagConstraints);
+
+        jLabel178.setText("26");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 28;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel178, gridBagConstraints);
+
+        jLabel179.setText("27");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 29;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel179, gridBagConstraints);
+
+        jLabel180.setText("28");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 30;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel21.add(jLabel180, gridBagConstraints);
+
+        jLabel181.setText("Explicar-li a algú una anècdota o un acudit que li havia explicat anteriorment.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 23;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel181, gridBagConstraints);
+
+        jLabel182.setText("<html>Oblidar detalls de coses que fa habitualment, ja sigui a casa oa la feina; per exemple<br>oblidar detalls sobre el que ha de fer o bé sobre l'hora en què ha de fer.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel182, gridBagConstraints);
+
+        jLabel183.setText("Oblidar on es guarden normalment les coses i buscar-les en un lloc equivocat.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 26;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel183, gridBagConstraints);
+
+        jLabel184.setText("<html>No reconèixer les cares de persones famoses que veu amb freqüència a la televisió<br>o en fotografia.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 25;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel184, gridBagConstraints);
+
+        jLabel185.setText("<html>Perdre o seguir una adreça errònia en un viatge, en un passeig o en un edifici <br>on ha estat <b>moltes vegades.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 27;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel185, gridBagConstraints);
+
+        jLabel186.setText("<html>Realizar una acción dos veces por error. Por ejemplo, echar doble ración de sal<br>a la comida o ir a peinarse de nuevo cuando acaba de hacerlo.  0 ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 29;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel186, gridBagConstraints);
+
+        jLabel187.setText("<html>Perdre o seguir una adreça errònia en un viatge, en un passeig o en un edifici <br>on ha estat només <b>una o dues vegades");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 28;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel187, gridBagConstraints);
+
+        jLabel188.setText("Repetir a algú el que acaba d'explicar-o fer-ho dues vegades la mateixa pregunta.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 30;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel21.add(jLabel188, gridBagConstraints);
+
+        jToggleButton69.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 19;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton69, gridBagConstraints);
+
+        jToggleButton70.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 19;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton70, gridBagConstraints);
+
+        jToggleButton71.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 19;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton71, gridBagConstraints);
+
+        jToggleButton73.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 20;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton73, gridBagConstraints);
+
+        jToggleButton74.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 20;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton74, gridBagConstraints);
+
+        jToggleButton75.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 20;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton75, gridBagConstraints);
+
+        jToggleButton77.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 21;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton77, gridBagConstraints);
+
+        jToggleButton78.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 21;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton78, gridBagConstraints);
+
+        jToggleButton79.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 21;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton79, gridBagConstraints);
+
+        jToggleButton81.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 22;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton81, gridBagConstraints);
+
+        jToggleButton82.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 22;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton82, gridBagConstraints);
+
+        jToggleButton113.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 22;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton113, gridBagConstraints);
+
+        jToggleButton115.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 23;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton115, gridBagConstraints);
+
+        jToggleButton116.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 23;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton116, gridBagConstraints);
+
+        jToggleButton117.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 23;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton117, gridBagConstraints);
+
+        jToggleButton119.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 24;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton119, gridBagConstraints);
+
+        jToggleButton120.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 24;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton120, gridBagConstraints);
+
+        jToggleButton121.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 24;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton121, gridBagConstraints);
+
+        jToggleButton123.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 25;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton123, gridBagConstraints);
+
+        jToggleButton124.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 25;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton124, gridBagConstraints);
+
+        jToggleButton125.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 25;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton125, gridBagConstraints);
+
+        jToggleButton127.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 26;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton127, gridBagConstraints);
+
+        jToggleButton128.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 26;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton128, gridBagConstraints);
+
+        jToggleButton129.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 26;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton129, gridBagConstraints);
+
+        jToggleButton131.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 27;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton131, gridBagConstraints);
+
+        jToggleButton132.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 27;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton132, gridBagConstraints);
+
+        jToggleButton133.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 27;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton133, gridBagConstraints);
+
+        jToggleButton135.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 28;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton135, gridBagConstraints);
+
+        jToggleButton136.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 28;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton136, gridBagConstraints);
+
+        jToggleButton137.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 28;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton137, gridBagConstraints);
+
+        jToggleButton139.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 29;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton139, gridBagConstraints);
+
+        jToggleButton140.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 29;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton140, gridBagConstraints);
+
+        jToggleButton141.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 29;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton141, gridBagConstraints);
+
+        jToggleButton143.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 30;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton143, gridBagConstraints);
+
+        jToggleButton144.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 30;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton144, gridBagConstraints);
+
+        jToggleButton145.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 30;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel21.add(jToggleButton145, gridBagConstraints);
+
+        jLabel16.setText("ASSENYALI AMB QUINA FREQÜÈNCIA LI OCORREN A VOSTÈ ELS SEGÜENTS ERRORS DE MEMÒRIA");
+
+        javax.swing.GroupLayout mfePanel2Layout = new javax.swing.GroupLayout(mfePanel2);
+        mfePanel2.setLayout(mfePanel2Layout);
+        mfePanel2Layout.setHorizontalGroup(
+            mfePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mfePanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mfePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(mfePanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(mfePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16))))
+                .addContainerGap())
+        );
+        mfePanel2Layout.setVerticalGroup(
+            mfePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mfePanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        mfeScroll1.setViewportView(mfePanel2);
+
+        mfeTab.add(mfeScroll1, "card1");
+
+        tabbedPanel.addTab("MFE", mfeTab);
+
+        hadTab.setLayout(new java.awt.CardLayout());
+
+        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel111.setText("<html><center><b>Escala Hospitalària d'Ansietat i Depressió</b>");
+
+        buttonGroup1.add(jRadioButton4);
+        jRadioButton4.setText("Tots els dies");
+
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setText("Moltes vegades");
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("De vegades");
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setText("Mai");
+
+        jLabel17.setText("1. Em sento tens o nerviós (A)");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton1)
+                            .addComponent(jRadioButton3)
+                            .addComponent(jRadioButton4))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        buttonGroup2.add(jRadioButton5);
+        jRadioButton5.setText("Gens");
+
+        buttonGroup2.add(jRadioButton6);
+        jRadioButton6.setText("Només una mica");
+
+        buttonGroup2.add(jRadioButton7);
+        jRadioButton7.setText("No prou");
+
+        buttonGroup2.add(jRadioButton8);
+        jRadioButton8.setText("Com sempre");
+
+        jLabel18.setText("2. Encara gaudeixo amb el que abans m'agradava (D)");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton7)
+                            .addComponent(jRadioButton8)
+                            .addComponent(jRadioButton6)
+                            .addComponent(jRadioButton5))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel20.setText("<html>4. Puc riure i veure el costat divertit de les coses (D)");
+
+        buttonGroup4.add(jRadioButton13);
+        jRadioButton13.setText("Igual que sempre ho vaig fer");
+
+        buttonGroup4.add(jRadioButton14);
+        jRadioButton14.setText("No tant ara");
+
+        buttonGroup4.add(jRadioButton15);
+        jRadioButton15.setText("Quasi mai");
+
+        buttonGroup4.add(jRadioButton16);
+        jRadioButton16.setText("Mai");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton14)
+                            .addComponent(jRadioButton13)
+                            .addComponent(jRadioButton15)
+                            .addComponent(jRadioButton16))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton16)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel21.setText("5. Tinc la meva ment plena de preocupacions (A)");
+
+        buttonGroup5.add(jRadioButton17);
+        jRadioButton17.setText("Només en ocasions");
+
+        buttonGroup5.add(jRadioButton18);
+        jRadioButton18.setText("De vegades, encara que no molt sovint");
+
+        buttonGroup5.add(jRadioButton19);
+        jRadioButton19.setText("Amb bastanta freqüència");
+
+        buttonGroup5.add(jRadioButton20);
+        jRadioButton20.setText("La majoria de vegades");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel21)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton18)
+                            .addComponent(jRadioButton17)
+                            .addComponent(jRadioButton19)
+                            .addComponent(jRadioButton20))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton20)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel22.setText("6. Em sento alegre (D)");
+
+        buttonGroup6.add(jRadioButton21);
+        jRadioButton21.setText("Quasi sempre");
+
+        buttonGroup6.add(jRadioButton22);
+        jRadioButton22.setText("De vegades");
+
+        buttonGroup6.add(jRadioButton23);
+        jRadioButton23.setText("No molt sovint");
+
+        buttonGroup6.add(jRadioButton24);
+        jRadioButton24.setText("Mai");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel22)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton22)
+                            .addComponent(jRadioButton21)
+                            .addComponent(jRadioButton23)
+                            .addComponent(jRadioButton24))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton24)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel23.setText("<html>7. Puc estar assegut tranquil·lament<br>i sentir-se relaxat (A)");
+
+        buttonGroup7.add(jRadioButton28);
+        jRadioButton28.setText("Sempre");
+
+        buttonGroup7.add(jRadioButton27);
+        jRadioButton27.setText("Generalment");
+
+        buttonGroup7.add(jRadioButton26);
+        jRadioButton26.setText("No molt sovint");
+
+        buttonGroup7.add(jRadioButton25);
+        jRadioButton25.setText("Mai");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton27)
+                            .addComponent(jRadioButton28)
+                            .addComponent(jRadioButton26)
+                            .addComponent(jRadioButton25))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton25)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel24.setText("8. Em sento com si cada dia estés més lent (D)");
+
+        buttonGroup8.add(jRadioButton29);
+        jRadioButton29.setText("Mai");
+
+        buttonGroup8.add(jRadioButton30);
+        jRadioButton30.setText("De vegades");
+
+        buttonGroup8.add(jRadioButton31);
+        jRadioButton31.setText("Molt sovint");
+
+        buttonGroup8.add(jRadioButton32);
+        jRadioButton32.setText("Generalment en tot moment");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel24)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton30)
+                            .addComponent(jRadioButton29)
+                            .addComponent(jRadioButton31)
+                            .addComponent(jRadioButton32))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton32)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel25.setText("<html>9. Tinc una sensació estranya, com de <br>\"aleteig\" a l'estómac (A)");
+
+        buttonGroup9.add(jRadioButton33);
+        jRadioButton33.setText("Mai");
+
+        buttonGroup9.add(jRadioButton34);
+        jRadioButton34.setText("En certes ocasions");
+
+        buttonGroup9.add(jRadioButton35);
+        jRadioButton35.setText("Amb bastanta freqüència");
+
+        buttonGroup9.add(jRadioButton36);
+        jRadioButton36.setText("Molt sovint");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton34)
+                            .addComponent(jRadioButton33)
+                            .addComponent(jRadioButton35)
+                            .addComponent(jRadioButton36))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton36)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel26.setText("10. He perdut interès pel meu aspecte personal (D)");
+
+        buttonGroup10.add(jRadioButton37);
+        jRadioButton37.setText("Em preocupo igual que sempre");
+
+        buttonGroup10.add(jRadioButton38);
+        jRadioButton38.setText("Podria tenir una mica més de cura");
+
+        buttonGroup10.add(jRadioButton39);
+        jRadioButton39.setText("No em preocupo tant com hauria");
+
+        buttonGroup10.add(jRadioButton40);
+        jRadioButton40.setText("Totalment");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton38)
+                            .addComponent(jRadioButton37)
+                            .addComponent(jRadioButton39)
+                            .addComponent(jRadioButton40))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton40)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel19.setText("<html>3. Tinc una sensació de por, com si alguna<br>cosa horrible m'hagués de passar (A)");
+
+        buttonGroup3.add(jRadioButton12);
+        jRadioButton12.setText("Mai");
+
+        buttonGroup3.add(jRadioButton11);
+        jRadioButton11.setText("De vegades");
+
+        buttonGroup3.add(jRadioButton10);
+        jRadioButton10.setText("Moltes vegades");
+
+        buttonGroup3.add(jRadioButton9);
+        jRadioButton9.setText("Tots els dies");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton11)
+                            .addComponent(jRadioButton12)
+                            .addComponent(jRadioButton10)
+                            .addComponent(jRadioButton9))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel27.setText("<html>11. Em sento inquiet, com si no em <br>pogués parar de moure (A)");
+
+        buttonGroup11.add(jRadioButton41);
+        jRadioButton41.setText("Gens");
+
+        buttonGroup11.add(jRadioButton42);
+        jRadioButton42.setText("No molt");
+
+        buttonGroup11.add(jRadioButton43);
+        jRadioButton43.setText("Bastant");
+
+        buttonGroup11.add(jRadioButton44);
+        jRadioButton44.setText("Molt");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton42)
+                            .addComponent(jRadioButton41)
+                            .addComponent(jRadioButton43)
+                            .addComponent(jRadioButton44))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton41)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton42)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton44)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel28.setText("12. Em sento optimista respecte al futur (D)");
+
+        buttonGroup12.add(jRadioButton45);
+        jRadioButton45.setText("Igual que sempre");
+
+        buttonGroup12.add(jRadioButton46);
+        jRadioButton46.setText("Menys del que acostumava");
+
+        buttonGroup12.add(jRadioButton47);
+        jRadioButton47.setText("Molt menys del que acostumava");
+
+        buttonGroup12.add(jRadioButton48);
+        jRadioButton48.setText("Gens");
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel28)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton46)
+                            .addComponent(jRadioButton45)
+                            .addComponent(jRadioButton47)
+                            .addComponent(jRadioButton48))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton48)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel68.setText("13. M'assalten sentiments sobtats de pànic (A)");
+
+        buttonGroup13.add(jRadioButton49);
+        jRadioButton49.setText("Gens");
+
+        buttonGroup13.add(jRadioButton50);
+        jRadioButton50.setText("No molt sovint");
+
+        buttonGroup13.add(jRadioButton51);
+        jRadioButton51.setText("Bastant sovint");
+
+        buttonGroup13.add(jRadioButton52);
+        jRadioButton52.setText("Molt freqüentment");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel68)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton50)
+                            .addComponent(jRadioButton49)
+                            .addComponent(jRadioButton51)
+                            .addComponent(jRadioButton52))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel68)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton49)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton51)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton52)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel71.setText("<html>14. Em diverteixo amb un bon llibre, <br>la ràdio o un programa de television (D)");
+
+        buttonGroup14.add(jRadioButton61);
+        jRadioButton61.setText("Sovint");
+
+        buttonGroup14.add(jRadioButton62);
+        jRadioButton62.setText("A vegades");
+
+        buttonGroup14.add(jRadioButton63);
+        jRadioButton63.setText("No gaire sovint");
+
+        buttonGroup14.add(jRadioButton64);
+        jRadioButton64.setText("Poques vegades");
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton62)
+                            .addComponent(jRadioButton61)
+                            .addComponent(jRadioButton63)
+                            .addComponent(jRadioButton64))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton61)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton62)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton63)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton64)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel72.setText("TOTAL A:");
+
+        jLabel73.setText("TOTAL B:");
+
+        jLabel74.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel74.setText("0");
+
+        jLabel75.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel75.setText("0");
+
+        jLabel76.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel76.setText("Cas dubtós");
+
+        jLabel77.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel77.setText("Cas dubtós");
+
+        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
+        jPanel22.setLayout(jPanel22Layout);
+        jPanel22Layout.setHorizontalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addComponent(jLabel72)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel74))
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addComponent(jLabel73)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel75))
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel77)
+                            .addComponent(jLabel76))))
+                .addContainerGap(72, Short.MAX_VALUE))
+        );
+        jPanel22Layout.setVerticalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel72)
+                    .addComponent(jLabel74))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel76)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel73)
+                    .addComponent(jLabel75))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel77)
+                .addGap(23, 23, 23))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel69.setText("<html>Aquesta prova està dirigida a determinar com t'has sentit en l'última setmana tot i que les preguntes estan formulades en present.<br>Has de triar entre una de quatre possibilitats pel que fa a la pregunta realitzada, envoltant amb un cercle la resposta triada.");
+
+        javax.swing.GroupLayout hadPanelLayout = new javax.swing.GroupLayout(hadPanel);
+        hadPanel.setLayout(hadPanelLayout);
+        hadPanelLayout.setHorizontalGroup(
+            hadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hadPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(hadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(hadPanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(hadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        hadPanelLayout.setVerticalGroup(
+            hadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hadPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        hadScroll.setViewportView(hadPanel);
+
+        hadTab.add(hadScroll, "card1");
+
+        tabbedPanel.addTab("HAD", hadTab);
+
+        qolTab.setLayout(new java.awt.CardLayout());
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel30.setText("Quality of Life in Alzheimer’s Disease");
+
+        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Qüestionari", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel18.setLayout(new java.awt.GridBagLayout());
+
+        orientacioBtn10.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(orientacioBtn10, gridBagConstraints);
+
+        memoBtn10.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(memoBtn10, gridBagConstraints);
+
+        orientacioBtn11.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(orientacioBtn11, gridBagConstraints);
+
+        memoBtn11.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(memoBtn11, gridBagConstraints);
+
+        orientacioBtn12.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(orientacioBtn12, gridBagConstraints);
+
+        memoBtn12.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(memoBtn12, gridBagConstraints);
+
+        memoBtn13.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(memoBtn13, gridBagConstraints);
+
+        orientacioBtn13.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(orientacioBtn13, gridBagConstraints);
+
+        raoBtn10.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(raoBtn10, gridBagConstraints);
+
+        raoBtn11.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(raoBtn11, gridBagConstraints);
+
+        raoBtn12.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(raoBtn12, gridBagConstraints);
+
+        raoBtn13.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(raoBtn13, gridBagConstraints);
+
+        activitatsFBtn10.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(activitatsFBtn10, gridBagConstraints);
+
+        activitatsFBtn11.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(activitatsFBtn11, gridBagConstraints);
+
+        activitatsFBtn12.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(activitatsFBtn12, gridBagConstraints);
+
+        activitatsFBtn13.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(activitatsFBtn13, gridBagConstraints);
+
+        activitatsDBtn10.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(activitatsDBtn10, gridBagConstraints);
+
+        activitatsDBtn11.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(activitatsDBtn11, gridBagConstraints);
+
+        activitatsDBtn12.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(activitatsDBtn12, gridBagConstraints);
+
+        activitatsDBtn13.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(activitatsDBtn13, gridBagConstraints);
+
+        cuidatBtn8.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(cuidatBtn8, gridBagConstraints);
+
+        cuidatBtn9.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(cuidatBtn9, gridBagConstraints);
+
+        cuidatBtn10.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(cuidatBtn10, gridBagConstraints);
+
+        jLabel105.setText("<html><center>Dolent/a");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel18.add(jLabel105, gridBagConstraints);
+
+        jLabel108.setText("<html><center>Regular<br>");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel18.add(jLabel108, gridBagConstraints);
+
+        jLabel141.setText("<html><center>Excel·lent<br>");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 2;
+        jPanel18.add(jLabel141, gridBagConstraints);
+
+        jLabel142.setText("<html><center>Bo<br>");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel18.add(jLabel142, gridBagConstraints);
+
+        jLabel143.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        jPanel18.add(jLabel143, gridBagConstraints);
+
+        jLabel144.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        jPanel18.add(jLabel144, gridBagConstraints);
+
+        jLabel145.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        jPanel18.add(jLabel145, gridBagConstraints);
+
+        jLabel146.setText("5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        jPanel18.add(jLabel146, gridBagConstraints);
+
+        jLabel147.setText("6");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        jPanel18.add(jLabel147, gridBagConstraints);
+
+        jLabel148.setText("7");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        jPanel18.add(jLabel148, gridBagConstraints);
+
+        jLabel110.setText("Condicions de vida");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel18.add(jLabel110, gridBagConstraints);
+
+        jLabel34.setText("Salud física");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel34, gridBagConstraints);
+
+        jLabel35.setText("Energia");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
+        jPanel18.add(jLabel35, gridBagConstraints);
+
+        jLabel36.setText("Estat d'ànim");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel36, gridBagConstraints);
+
+        jLabel37.setText("Memòria");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel37, gridBagConstraints);
+
+        jLabel38.setText("Familia");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel38, gridBagConstraints);
+
+        jLabel39.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        jPanel18.add(jLabel39, gridBagConstraints);
+
+        jLabel40.setText("8");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        jPanel18.add(jLabel40, gridBagConstraints);
+
+        jLabel41.setText("9");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        jPanel18.add(jLabel41, gridBagConstraints);
+
+        jLabel42.setText("10");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel18.add(jLabel42, gridBagConstraints);
+
+        jLabel43.setText("Matrimoni / Relació personal estreta");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel43, gridBagConstraints);
+
+        jLabel44.setText("Vida social (amistats)");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel44, gridBagConstraints);
+
+        jLabel45.setText("Visió general de si mateix/a");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel45, gridBagConstraints);
+
+        jLabel46.setText("Capacitat per realitzar tasques a casa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel46, gridBagConstraints);
+
+        jLabel47.setText("Capacitat per fer coses per diversió");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel47, gridBagConstraints);
+
+        jLabel48.setText("11");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel18.add(jLabel48, gridBagConstraints);
+
+        jLabel49.setText("Situació financera");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel49, gridBagConstraints);
+
+        jLabel50.setText("La vida en general");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel18.add(jLabel50, gridBagConstraints);
+
+        jLabel51.setText("12");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel18.add(jLabel51, gridBagConstraints);
+
+        jLabel52.setText("13");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel18.add(jLabel52, gridBagConstraints);
+
+        jToggleButton1.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton1, gridBagConstraints);
+
+        jToggleButton2.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton2, gridBagConstraints);
+
+        jToggleButton3.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton3, gridBagConstraints);
+
+        jToggleButton4.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton4, gridBagConstraints);
+
+        jToggleButton5.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton5, gridBagConstraints);
+
+        jToggleButton6.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton6, gridBagConstraints);
+
+        jToggleButton7.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton7, gridBagConstraints);
+
+        jToggleButton8.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton8, gridBagConstraints);
+
+        jToggleButton9.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton9, gridBagConstraints);
+
+        jToggleButton10.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton10, gridBagConstraints);
+
+        jToggleButton11.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton11, gridBagConstraints);
+
+        jToggleButton12.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton12, gridBagConstraints);
+
+        jToggleButton13.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton13, gridBagConstraints);
+
+        jToggleButton14.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton14, gridBagConstraints);
+
+        jToggleButton15.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 10;
+        jPanel18.add(jToggleButton15, gridBagConstraints);
+
+        jToggleButton16.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton16, gridBagConstraints);
+
+        jToggleButton17.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton17, gridBagConstraints);
+
+        jToggleButton18.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton18, gridBagConstraints);
+
+        jToggleButton19.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 11;
+        jPanel18.add(jToggleButton19, gridBagConstraints);
+
+        jToggleButton20.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton20, gridBagConstraints);
+
+        jToggleButton21.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton21, gridBagConstraints);
+
+        jToggleButton22.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton22, gridBagConstraints);
+
+        jToggleButton23.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 12;
+        jPanel18.add(jToggleButton23, gridBagConstraints);
+
+        jToggleButton24.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton24, gridBagConstraints);
+
+        jToggleButton25.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 13;
+        jPanel18.add(jToggleButton25, gridBagConstraints);
+
+        jToggleButton26.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton26, gridBagConstraints);
+
+        jToggleButton27.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 14;
+        jPanel18.add(jToggleButton27, gridBagConstraints);
+
+        jToggleButton28.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton28, gridBagConstraints);
+
+        jToggleButton29.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 15;
+        jPanel18.add(jToggleButton29, gridBagConstraints);
+
+        jToggleButton30.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel18.add(jToggleButton30, gridBagConstraints);
+
+        jLabel14.setText("<html>Administrar en format entrevista: \"a continuació li faré algunes preguntes que fan<br> referència a diferents aspectes de la seva vida, com la salut física, l'energia que té, la<br> família, el diners, etc. Voldríem conèixer com valora vostè la seva situació actual en<br>les diferents àrees sobre les que li preguntaré\".");
+
+        jLabel15.setText("L'entrevistaror/a haurà d'administrar el qüestionari seguint les instruccions estàndard");
+
+        javax.swing.GroupLayout qolPanelLayout = new javax.swing.GroupLayout(qolPanel);
+        qolPanel.setLayout(qolPanelLayout);
+        qolPanelLayout.setHorizontalGroup(
+            qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(qolPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel30)
+                    .addGroup(qolPanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        qolPanelLayout.setVerticalGroup(
+            qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, qolPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        qolScroll.setViewportView(qolPanel);
+
+        qolTab.add(qolScroll, "card1");
+
+        tabbedPanel.addTab("QOL-AD", qolTab);
+
+        dukeTab.setLayout(new java.awt.CardLayout());
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel33.setText("Duke Suport Social Index");
+
+        jLabel31.setText("<html><b><u>Població diana:</u></b> Població general. Es tracta d'un qüestionari <b>autoadministrat");
+
+        jLabel32.setText("<html><b><u>Instruccions per al pacient:</u></b><br>En la següent llista es mostren algunes coses que altres persones fan per nosaltres o ens proporcionen.<br>Esculli per cada una la resposta que millor reflexi la seva situació, segons els següents criteris:");
+
+        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Qüestionari Duke-UNC", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel19.setLayout(new java.awt.GridBagLayout());
+
+        orientacioBtn14.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(orientacioBtn14, gridBagConstraints);
+
+        memoBtn14.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(memoBtn14, gridBagConstraints);
+
+        orientacioBtn15.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(orientacioBtn15, gridBagConstraints);
+
+        memoBtn15.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(memoBtn15, gridBagConstraints);
+
+        orientacioBtn16.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(orientacioBtn16, gridBagConstraints);
+
+        memoBtn16.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(memoBtn16, gridBagConstraints);
+
+        memoBtn17.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(memoBtn17, gridBagConstraints);
+
+        orientacioBtn17.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(orientacioBtn17, gridBagConstraints);
+
+        raoBtn14.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(raoBtn14, gridBagConstraints);
+
+        raoBtn15.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(raoBtn15, gridBagConstraints);
+
+        raoBtn16.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(raoBtn16, gridBagConstraints);
+
+        raoBtn17.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(raoBtn17, gridBagConstraints);
+
+        activitatsFBtn14.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(activitatsFBtn14, gridBagConstraints);
+
+        activitatsFBtn15.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(activitatsFBtn15, gridBagConstraints);
+
+        activitatsFBtn16.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(activitatsFBtn16, gridBagConstraints);
+
+        activitatsFBtn17.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(activitatsFBtn17, gridBagConstraints);
+
+        activitatsDBtn14.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(activitatsDBtn14, gridBagConstraints);
+
+        activitatsDBtn15.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(activitatsDBtn15, gridBagConstraints);
+
+        activitatsDBtn16.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(activitatsDBtn16, gridBagConstraints);
+
+        activitatsDBtn17.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(activitatsDBtn17, gridBagConstraints);
+
+        cuidatBtn11.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(cuidatBtn11, gridBagConstraints);
+
+        cuidatBtn12.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(cuidatBtn12, gridBagConstraints);
+
+        cuidatBtn13.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(cuidatBtn13, gridBagConstraints);
+
+        jLabel112.setText("<html><center>Molt menys<br>del que desitjo");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel19.add(jLabel112, gridBagConstraints);
+
+        jLabel113.setText("<html><center>Menys del<br>que desitjo");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel19.add(jLabel113, gridBagConstraints);
+
+        jLabel149.setText("<html><center>Tant com<br>desitjo");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 2;
+        jPanel19.add(jLabel149, gridBagConstraints);
+
+        jLabel150.setText("<html><center>Ni molt<br>ni poc");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel19.add(jLabel150, gridBagConstraints);
+
+        jLabel151.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        jPanel19.add(jLabel151, gridBagConstraints);
+
+        jLabel152.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        jPanel19.add(jLabel152, gridBagConstraints);
+
+        jLabel153.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        jPanel19.add(jLabel153, gridBagConstraints);
+
+        jLabel154.setText("5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        jPanel19.add(jLabel154, gridBagConstraints);
+
+        jLabel155.setText("6");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        jPanel19.add(jLabel155, gridBagConstraints);
+
+        jLabel156.setText("7");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        jPanel19.add(jLabel156, gridBagConstraints);
+
+        jLabel114.setText("Compto amb persones que es preocupen del que em passa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel19.add(jLabel114, gridBagConstraints);
+
+        jLabel53.setText("Rebo visites dels meus amics i familiars");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel53, gridBagConstraints);
+
+        jLabel54.setText("Rebo ajuda en assumptes relacionats amb casa meva");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
+        jPanel19.add(jLabel54, gridBagConstraints);
+
+        jLabel55.setText("Rebo elogis i reconeixements quan faig bé la meva feina");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel55, gridBagConstraints);
+
+        jLabel56.setText("Rebo amor i afecte");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel56, gridBagConstraints);
+
+        jLabel57.setText("Tinc la possibilitat de parlar amb algú dels meus problemes a la feina o a casa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel57, gridBagConstraints);
+
+        jLabel58.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        jPanel19.add(jLabel58, gridBagConstraints);
+
+        jLabel59.setText("8");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        jPanel19.add(jLabel59, gridBagConstraints);
+
+        jLabel60.setText("9");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        jPanel19.add(jLabel60, gridBagConstraints);
+
+        jLabel61.setText("10");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel19.add(jLabel61, gridBagConstraints);
+
+        jLabel62.setText("Tinc la possibilitat de parlar amb algú dels meus problemes personals i familiars");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel62, gridBagConstraints);
+
+        jLabel63.setText("Tinc la possibilitat de parlar amb algú dels meus problemes econòmics");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel63, gridBagConstraints);
+
+        jLabel64.setText("Rebo invitacions per distreure'm i sortir amb altres persones");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel64, gridBagConstraints);
+
+        jLabel65.setText("Rebo consells útils quan em passa algun aconteixement important a la meva vida");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel65, gridBagConstraints);
+
+        jLabel66.setText("Rebo ajuda quan estic malalt al llit");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel19.add(jLabel66, gridBagConstraints);
+
+        jLabel67.setText("11");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel19.add(jLabel67, gridBagConstraints);
+
+        jToggleButton35.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton35, gridBagConstraints);
+
+        jToggleButton36.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton36, gridBagConstraints);
+
+        jToggleButton37.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton37, gridBagConstraints);
+
+        jToggleButton38.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton38, gridBagConstraints);
+
+        jToggleButton39.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton39, gridBagConstraints);
+
+        jToggleButton40.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton40, gridBagConstraints);
+
+        jToggleButton41.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton41, gridBagConstraints);
+
+        jToggleButton42.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton42, gridBagConstraints);
+
+        jToggleButton43.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton43, gridBagConstraints);
+
+        jToggleButton44.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton44, gridBagConstraints);
+
+        jToggleButton45.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 10;
+        jPanel19.add(jToggleButton45, gridBagConstraints);
+
+        jToggleButton46.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton46, gridBagConstraints);
+
+        jToggleButton47.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton47, gridBagConstraints);
+
+        jToggleButton48.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton48, gridBagConstraints);
+
+        jToggleButton49.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 11;
+        jPanel19.add(jToggleButton49, gridBagConstraints);
+
+        jToggleButton50.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton50, gridBagConstraints);
+
+        jToggleButton51.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton51, gridBagConstraints);
+
+        jToggleButton52.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton52, gridBagConstraints);
+
+        jToggleButton53.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 12;
+        jPanel19.add(jToggleButton53, gridBagConstraints);
+
+        jToggleButton54.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton54, gridBagConstraints);
+
+        jToggleButton55.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 13;
+        jPanel19.add(jToggleButton55, gridBagConstraints);
+
+        jToggleButton56.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel19.add(jToggleButton56, gridBagConstraints);
+
+        javax.swing.GroupLayout dukePanelLayout = new javax.swing.GroupLayout(dukePanel);
+        dukePanel.setLayout(dukePanelLayout);
+        dukePanelLayout.setHorizontalGroup(
+            dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dukePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel33)
+                    .addGroup(dukePanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        dukePanelLayout.setVerticalGroup(
+            dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dukePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        dukeScroll.setViewportView(dukePanel);
+
+        dukeTab.add(dukeScroll, "card1");
+
+        tabbedPanel.addTab(" DUKE-UNC ", dukeTab);
+
+        rseTab.setLayout(new java.awt.CardLayout());
+
+        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Escala d'autoestima de Rosemberg", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel16.setLayout(new java.awt.GridBagLayout());
+
+        orientacioBtn2.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(orientacioBtn2, gridBagConstraints);
+
+        memoBtn2.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(memoBtn2, gridBagConstraints);
+
+        orientacioBtn3.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(orientacioBtn3, gridBagConstraints);
+
+        memoBtn3.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(memoBtn3, gridBagConstraints);
+
+        orientacioBtn4.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(orientacioBtn4, gridBagConstraints);
+
+        memoBtn4.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(memoBtn4, gridBagConstraints);
+
+        memoBtn5.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(memoBtn5, gridBagConstraints);
+
+        orientacioBtn5.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(orientacioBtn5, gridBagConstraints);
+
+        raoBtn2.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(raoBtn2, gridBagConstraints);
+
+        raoBtn5.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(raoBtn5, gridBagConstraints);
+
+        raoBtn3.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(raoBtn3, gridBagConstraints);
+
+        raoBtn4.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(raoBtn4, gridBagConstraints);
+
+        activitatsFBtn2.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(activitatsFBtn2, gridBagConstraints);
+
+        activitatsFBtn3.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(activitatsFBtn3, gridBagConstraints);
+
+        activitatsFBtn4.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(activitatsFBtn4, gridBagConstraints);
+
+        activitatsFBtn5.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(activitatsFBtn5, gridBagConstraints);
+
+        activitatsDBtn5.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(activitatsDBtn5, gridBagConstraints);
+
+        activitatsDBtn4.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(activitatsDBtn4, gridBagConstraints);
+
+        activitatsDBtn2.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(activitatsDBtn2, gridBagConstraints);
+
+        activitatsDBtn3.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(activitatsDBtn3, gridBagConstraints);
+
+        cuidatBtn2.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(cuidatBtn2, gridBagConstraints);
+
+        cuidatBtn3.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(cuidatBtn3, gridBagConstraints);
+
+        cuidatBtn4.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(cuidatBtn4, gridBagConstraints);
+
+        jLabel99.setText("<html><center>Molt en<br>desacord");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel16.add(jLabel99, gridBagConstraints);
+
+        jLabel100.setText("<html><center>En<br>desacord");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel16.add(jLabel100, gridBagConstraints);
+
+        jLabel125.setText("<html><center>Molt<br>d'acord");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 2;
+        jPanel16.add(jLabel125, gridBagConstraints);
+
+        jLabel126.setText("<html><center>D'acord<br>");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
+        jPanel16.add(jLabel126, gridBagConstraints);
+
+        jLabel127.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        jPanel16.add(jLabel127, gridBagConstraints);
+
+        jLabel128.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        jPanel16.add(jLabel128, gridBagConstraints);
+
+        jLabel129.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        jPanel16.add(jLabel129, gridBagConstraints);
+
+        jLabel130.setText("5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        jPanel16.add(jLabel130, gridBagConstraints);
+
+        jLabel131.setText("6");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        jPanel16.add(jLabel131, gridBagConstraints);
+
+        jLabel132.setText("7");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        jPanel16.add(jLabel132, gridBagConstraints);
+
+        jLabel101.setText("Sóc capaç de fer les coses tan bé com els demés");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        jPanel16.add(jLabel101, gridBagConstraints);
+
+        jLabel1.setText("Em sento una persona tan valiosa com les altres");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel16.add(jLabel1, gridBagConstraints);
+
+        jLabel2.setText("Generalment m'inclino a pensar que soc un fracàs");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
+        jPanel16.add(jLabel2, gridBagConstraints);
+
+        jLabel3.setText("Crec que tinc algunes qualitats bones");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel16.add(jLabel3, gridBagConstraints);
+
+        jLabel4.setText("Crec que tinc molt del que estar orgullós");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel16.add(jLabel4, gridBagConstraints);
+
+        jLabel5.setText("Tinc una actitud positiva cap a mi mateix");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel16.add(jLabel5, gridBagConstraints);
+
+        jButton1.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton1, gridBagConstraints);
+
+        jLabel6.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        jPanel16.add(jLabel6, gridBagConstraints);
+
+        jButton6.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton6, gridBagConstraints);
+
+        jButton7.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton7, gridBagConstraints);
+
+        jButton8.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton8, gridBagConstraints);
+
+        jButton3.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton3, gridBagConstraints);
+
+        jButton4.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton4, gridBagConstraints);
+
+        jButton5.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton5, gridBagConstraints);
+
+        jButton2.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton2, gridBagConstraints);
+
+        jButton10.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton10, gridBagConstraints);
+
+        jButton9.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton9, gridBagConstraints);
+
+        jButton11.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton11, gridBagConstraints);
+
+        jButton12.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton12, gridBagConstraints);
+
+        jButton14.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton14, gridBagConstraints);
+
+        jButton13.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton13, gridBagConstraints);
+
+        jButton15.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton15, gridBagConstraints);
+
+        jButton16.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton16, gridBagConstraints);
+
+        jButton17.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        jPanel16.add(jButton17, gridBagConstraints);
+
+        jButton18.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 6;
+        jPanel16.add(jButton18, gridBagConstraints);
+
+        jLabel7.setText("8");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        jPanel16.add(jLabel7, gridBagConstraints);
+
+        jLabel8.setText("9");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        jPanel16.add(jLabel8, gridBagConstraints);
+
+        jLabel9.setText("10");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
+        jPanel16.add(jLabel9, gridBagConstraints);
+
+        jLabel10.setText("En general em sento satisfet amb mi mateix");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel16.add(jLabel10, gridBagConstraints);
+
+        jLabel11.setText("M'agradaria tenir més respecte per mi mateix");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel16.add(jLabel11, gridBagConstraints);
+
+        jLabel12.setText("Realment em sento inútil en algunes ocasions");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel16.add(jLabel12, gridBagConstraints);
+
+        jLabel13.setText("De vegades penso que no serveixo per res");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel16.add(jLabel13, gridBagConstraints);
+
+        javax.swing.GroupLayout rsePanelLayout = new javax.swing.GroupLayout(rsePanel);
+        rsePanel.setLayout(rsePanelLayout);
+        rsePanelLayout.setHorizontalGroup(
+            rsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rsePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        rsePanelLayout.setVerticalGroup(
+            rsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rsePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        rseScroll.setViewportView(rsePanel);
+
+        rseTab.add(rseScroll, "card1");
+
+        tabbedPanel.addTab("RSE", rseTab);
+
+        mainPanel.add(tabbedPanel, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
 
@@ -470,6 +5167,30 @@ public class Sessio2 extends javax.swing.JFrame {
             anteriorBtn.setEnabled(true);
         }
     }//GEN-LAST:event_seguentBtnActionPerformed
+
+    private void memoBtn20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memoBtn20ActionPerformed
+        if (memoBtn20.getText() == "0"){
+            memoBtn20.setText("1");
+        } else {
+            memoBtn20.setText("0");
+        }
+    }//GEN-LAST:event_memoBtn20ActionPerformed
+
+    private void orientacioBtn20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orientacioBtn20ActionPerformed
+        if (orientacioBtn20.getText() == "0"){
+            orientacioBtn20.setText("1");
+        } else {
+            orientacioBtn20.setText("0");
+        }
+    }//GEN-LAST:event_orientacioBtn20ActionPerformed
+
+    private void raoBtn19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raoBtn19ActionPerformed
+        if (raoBtn19.getText() == "0"){
+            raoBtn19.setText("1");
+        } else {
+            raoBtn19.setText("0");
+        }
+    }//GEN-LAST:event_raoBtn19ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -533,9 +5254,66 @@ public class Sessio2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton acceptaBtn;
+    private javax.swing.JToggleButton activitatsDBtn10;
+    private javax.swing.JToggleButton activitatsDBtn11;
+    private javax.swing.JToggleButton activitatsDBtn12;
+    private javax.swing.JToggleButton activitatsDBtn13;
+    private javax.swing.JToggleButton activitatsDBtn14;
+    private javax.swing.JToggleButton activitatsDBtn15;
+    private javax.swing.JToggleButton activitatsDBtn16;
+    private javax.swing.JToggleButton activitatsDBtn17;
+    private javax.swing.JToggleButton activitatsDBtn2;
+    private javax.swing.JToggleButton activitatsDBtn22;
+    private javax.swing.JToggleButton activitatsDBtn23;
+    private javax.swing.JToggleButton activitatsDBtn24;
+    private javax.swing.JToggleButton activitatsDBtn25;
+    private javax.swing.JToggleButton activitatsDBtn3;
+    private javax.swing.JToggleButton activitatsDBtn4;
+    private javax.swing.JToggleButton activitatsDBtn5;
+    private javax.swing.JToggleButton activitatsFBtn10;
+    private javax.swing.JToggleButton activitatsFBtn11;
+    private javax.swing.JToggleButton activitatsFBtn12;
+    private javax.swing.JToggleButton activitatsFBtn13;
+    private javax.swing.JToggleButton activitatsFBtn14;
+    private javax.swing.JToggleButton activitatsFBtn15;
+    private javax.swing.JToggleButton activitatsFBtn16;
+    private javax.swing.JToggleButton activitatsFBtn17;
+    private javax.swing.JToggleButton activitatsFBtn2;
+    private javax.swing.JToggleButton activitatsFBtn22;
+    private javax.swing.JToggleButton activitatsFBtn23;
+    private javax.swing.JToggleButton activitatsFBtn24;
+    private javax.swing.JToggleButton activitatsFBtn3;
+    private javax.swing.JToggleButton activitatsFBtn4;
+    private javax.swing.JToggleButton activitatsFBtn5;
     private javax.swing.JButton anteriorBtn;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup10;
+    private javax.swing.ButtonGroup buttonGroup11;
+    private javax.swing.ButtonGroup buttonGroup12;
+    private javax.swing.ButtonGroup buttonGroup13;
+    private javax.swing.ButtonGroup buttonGroup14;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
+    private javax.swing.ButtonGroup buttonGroup8;
+    private javax.swing.ButtonGroup buttonGroup9;
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton cancelaBtn;
+    private javax.swing.JToggleButton cuidatBtn10;
+    private javax.swing.JToggleButton cuidatBtn11;
+    private javax.swing.JToggleButton cuidatBtn12;
+    private javax.swing.JToggleButton cuidatBtn13;
+    private javax.swing.JToggleButton cuidatBtn15;
+    private javax.swing.JToggleButton cuidatBtn17;
+    private javax.swing.JToggleButton cuidatBtn18;
+    private javax.swing.JToggleButton cuidatBtn2;
+    private javax.swing.JToggleButton cuidatBtn3;
+    private javax.swing.JToggleButton cuidatBtn4;
+    private javax.swing.JToggleButton cuidatBtn8;
+    private javax.swing.JToggleButton cuidatBtn9;
     private javax.swing.JPanel dataPanel;
     private javax.swing.JPanel dukePanel;
     private javax.swing.JScrollPane dukeScroll;
@@ -543,27 +5321,557 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JPanel hadPanel;
     private javax.swing.JScrollPane hadScroll;
     private javax.swing.JPanel hadTab;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox10;
+    private javax.swing.JCheckBox jCheckBox11;
+    private javax.swing.JCheckBox jCheckBox12;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
+    private javax.swing.JLabel jLabel119;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel120;
+    private javax.swing.JLabel jLabel121;
+    private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
+    private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel136;
+    private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel138;
+    private javax.swing.JLabel jLabel139;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel140;
+    private javax.swing.JLabel jLabel141;
+    private javax.swing.JLabel jLabel142;
+    private javax.swing.JLabel jLabel143;
+    private javax.swing.JLabel jLabel144;
+    private javax.swing.JLabel jLabel145;
+    private javax.swing.JLabel jLabel146;
+    private javax.swing.JLabel jLabel147;
+    private javax.swing.JLabel jLabel148;
+    private javax.swing.JLabel jLabel149;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel150;
+    private javax.swing.JLabel jLabel151;
+    private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel153;
+    private javax.swing.JLabel jLabel154;
+    private javax.swing.JLabel jLabel155;
+    private javax.swing.JLabel jLabel156;
+    private javax.swing.JLabel jLabel157;
+    private javax.swing.JLabel jLabel158;
+    private javax.swing.JLabel jLabel159;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel164;
     private javax.swing.JLabel jLabel165;
+    private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel169;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel173;
+    private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel175;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel jLabel178;
+    private javax.swing.JLabel jLabel179;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel180;
+    private javax.swing.JLabel jLabel181;
+    private javax.swing.JLabel jLabel182;
+    private javax.swing.JLabel jLabel183;
+    private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel187;
+    private javax.swing.JLabel jLabel188;
+    private javax.swing.JLabel jLabel189;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel190;
+    private javax.swing.JLabel jLabel191;
+    private javax.swing.JLabel jLabel192;
+    private javax.swing.JLabel jLabel193;
+    private javax.swing.JLabel jLabel194;
+    private javax.swing.JLabel jLabel195;
+    private javax.swing.JLabel jLabel196;
+    private javax.swing.JLabel jLabel197;
+    private javax.swing.JLabel jLabel198;
+    private javax.swing.JLabel jLabel199;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel200;
+    private javax.swing.JLabel jLabel201;
+    private javax.swing.JLabel jLabel202;
+    private javax.swing.JLabel jLabel203;
+    private javax.swing.JLabel jLabel204;
+    private javax.swing.JLabel jLabel205;
+    private javax.swing.JLabel jLabel206;
+    private javax.swing.JLabel jLabel207;
+    private javax.swing.JLabel jLabel208;
+    private javax.swing.JLabel jLabel209;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel210;
+    private javax.swing.JLabel jLabel211;
+    private javax.swing.JLabel jLabel212;
+    private javax.swing.JLabel jLabel213;
+    private javax.swing.JLabel jLabel214;
+    private javax.swing.JLabel jLabel215;
+    private javax.swing.JLabel jLabel216;
+    private javax.swing.JLabel jLabel217;
+    private javax.swing.JLabel jLabel218;
+    private javax.swing.JLabel jLabel219;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel220;
+    private javax.swing.JLabel jLabel221;
+    private javax.swing.JLabel jLabel222;
+    private javax.swing.JLabel jLabel223;
+    private javax.swing.JLabel jLabel224;
+    private javax.swing.JLabel jLabel225;
+    private javax.swing.JLabel jLabel226;
+    private javax.swing.JLabel jLabel227;
+    private javax.swing.JLabel jLabel228;
+    private javax.swing.JLabel jLabel229;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel230;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton12;
+    private javax.swing.JRadioButton jRadioButton13;
+    private javax.swing.JRadioButton jRadioButton14;
+    private javax.swing.JRadioButton jRadioButton15;
+    private javax.swing.JRadioButton jRadioButton16;
+    private javax.swing.JRadioButton jRadioButton17;
+    private javax.swing.JRadioButton jRadioButton18;
+    private javax.swing.JRadioButton jRadioButton19;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton20;
+    private javax.swing.JRadioButton jRadioButton21;
+    private javax.swing.JRadioButton jRadioButton22;
+    private javax.swing.JRadioButton jRadioButton23;
+    private javax.swing.JRadioButton jRadioButton24;
+    private javax.swing.JRadioButton jRadioButton25;
+    private javax.swing.JRadioButton jRadioButton26;
+    private javax.swing.JRadioButton jRadioButton27;
+    private javax.swing.JRadioButton jRadioButton28;
+    private javax.swing.JRadioButton jRadioButton29;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton30;
+    private javax.swing.JRadioButton jRadioButton31;
+    private javax.swing.JRadioButton jRadioButton32;
+    private javax.swing.JRadioButton jRadioButton33;
+    private javax.swing.JRadioButton jRadioButton34;
+    private javax.swing.JRadioButton jRadioButton35;
+    private javax.swing.JRadioButton jRadioButton36;
+    private javax.swing.JRadioButton jRadioButton37;
+    private javax.swing.JRadioButton jRadioButton38;
+    private javax.swing.JRadioButton jRadioButton39;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton40;
+    private javax.swing.JRadioButton jRadioButton41;
+    private javax.swing.JRadioButton jRadioButton42;
+    private javax.swing.JRadioButton jRadioButton43;
+    private javax.swing.JRadioButton jRadioButton44;
+    private javax.swing.JRadioButton jRadioButton45;
+    private javax.swing.JRadioButton jRadioButton46;
+    private javax.swing.JRadioButton jRadioButton47;
+    private javax.swing.JRadioButton jRadioButton48;
+    private javax.swing.JRadioButton jRadioButton49;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton50;
+    private javax.swing.JRadioButton jRadioButton51;
+    private javax.swing.JRadioButton jRadioButton52;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton61;
+    private javax.swing.JRadioButton jRadioButton62;
+    private javax.swing.JRadioButton jRadioButton63;
+    private javax.swing.JRadioButton jRadioButton64;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton10;
+    private javax.swing.JToggleButton jToggleButton100;
+    private javax.swing.JToggleButton jToggleButton101;
+    private javax.swing.JToggleButton jToggleButton103;
+    private javax.swing.JToggleButton jToggleButton104;
+    private javax.swing.JToggleButton jToggleButton105;
+    private javax.swing.JToggleButton jToggleButton107;
+    private javax.swing.JToggleButton jToggleButton109;
+    private javax.swing.JToggleButton jToggleButton11;
+    private javax.swing.JToggleButton jToggleButton111;
+    private javax.swing.JToggleButton jToggleButton113;
+    private javax.swing.JToggleButton jToggleButton115;
+    private javax.swing.JToggleButton jToggleButton116;
+    private javax.swing.JToggleButton jToggleButton117;
+    private javax.swing.JToggleButton jToggleButton118;
+    private javax.swing.JToggleButton jToggleButton119;
+    private javax.swing.JToggleButton jToggleButton12;
+    private javax.swing.JToggleButton jToggleButton120;
+    private javax.swing.JToggleButton jToggleButton121;
+    private javax.swing.JToggleButton jToggleButton122;
+    private javax.swing.JToggleButton jToggleButton123;
+    private javax.swing.JToggleButton jToggleButton124;
+    private javax.swing.JToggleButton jToggleButton125;
+    private javax.swing.JToggleButton jToggleButton127;
+    private javax.swing.JToggleButton jToggleButton128;
+    private javax.swing.JToggleButton jToggleButton129;
+    private javax.swing.JToggleButton jToggleButton13;
+    private javax.swing.JToggleButton jToggleButton131;
+    private javax.swing.JToggleButton jToggleButton132;
+    private javax.swing.JToggleButton jToggleButton133;
+    private javax.swing.JToggleButton jToggleButton134;
+    private javax.swing.JToggleButton jToggleButton135;
+    private javax.swing.JToggleButton jToggleButton136;
+    private javax.swing.JToggleButton jToggleButton137;
+    private javax.swing.JToggleButton jToggleButton138;
+    private javax.swing.JToggleButton jToggleButton139;
+    private javax.swing.JToggleButton jToggleButton14;
+    private javax.swing.JToggleButton jToggleButton140;
+    private javax.swing.JToggleButton jToggleButton141;
+    private javax.swing.JToggleButton jToggleButton142;
+    private javax.swing.JToggleButton jToggleButton143;
+    private javax.swing.JToggleButton jToggleButton144;
+    private javax.swing.JToggleButton jToggleButton145;
+    private javax.swing.JToggleButton jToggleButton146;
+    private javax.swing.JToggleButton jToggleButton147;
+    private javax.swing.JToggleButton jToggleButton15;
+    private javax.swing.JToggleButton jToggleButton150;
+    private javax.swing.JToggleButton jToggleButton151;
+    private javax.swing.JToggleButton jToggleButton152;
+    private javax.swing.JToggleButton jToggleButton153;
+    private javax.swing.JToggleButton jToggleButton16;
+    private javax.swing.JToggleButton jToggleButton17;
+    private javax.swing.JToggleButton jToggleButton18;
+    private javax.swing.JToggleButton jToggleButton19;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton20;
+    private javax.swing.JToggleButton jToggleButton21;
+    private javax.swing.JToggleButton jToggleButton22;
+    private javax.swing.JToggleButton jToggleButton23;
+    private javax.swing.JToggleButton jToggleButton24;
+    private javax.swing.JToggleButton jToggleButton25;
+    private javax.swing.JToggleButton jToggleButton26;
+    private javax.swing.JToggleButton jToggleButton27;
+    private javax.swing.JToggleButton jToggleButton28;
+    private javax.swing.JToggleButton jToggleButton29;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton30;
+    private javax.swing.JToggleButton jToggleButton35;
+    private javax.swing.JToggleButton jToggleButton36;
+    private javax.swing.JToggleButton jToggleButton37;
+    private javax.swing.JToggleButton jToggleButton38;
+    private javax.swing.JToggleButton jToggleButton39;
+    private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JToggleButton jToggleButton40;
+    private javax.swing.JToggleButton jToggleButton41;
+    private javax.swing.JToggleButton jToggleButton42;
+    private javax.swing.JToggleButton jToggleButton43;
+    private javax.swing.JToggleButton jToggleButton44;
+    private javax.swing.JToggleButton jToggleButton45;
+    private javax.swing.JToggleButton jToggleButton46;
+    private javax.swing.JToggleButton jToggleButton47;
+    private javax.swing.JToggleButton jToggleButton48;
+    private javax.swing.JToggleButton jToggleButton49;
+    private javax.swing.JToggleButton jToggleButton5;
+    private javax.swing.JToggleButton jToggleButton50;
+    private javax.swing.JToggleButton jToggleButton51;
+    private javax.swing.JToggleButton jToggleButton52;
+    private javax.swing.JToggleButton jToggleButton53;
+    private javax.swing.JToggleButton jToggleButton54;
+    private javax.swing.JToggleButton jToggleButton55;
+    private javax.swing.JToggleButton jToggleButton56;
+    private javax.swing.JToggleButton jToggleButton57;
+    private javax.swing.JToggleButton jToggleButton58;
+    private javax.swing.JToggleButton jToggleButton59;
+    private javax.swing.JToggleButton jToggleButton6;
+    private javax.swing.JToggleButton jToggleButton61;
+    private javax.swing.JToggleButton jToggleButton62;
+    private javax.swing.JToggleButton jToggleButton63;
+    private javax.swing.JToggleButton jToggleButton65;
+    private javax.swing.JToggleButton jToggleButton66;
+    private javax.swing.JToggleButton jToggleButton67;
+    private javax.swing.JToggleButton jToggleButton69;
+    private javax.swing.JToggleButton jToggleButton7;
+    private javax.swing.JToggleButton jToggleButton70;
+    private javax.swing.JToggleButton jToggleButton71;
+    private javax.swing.JToggleButton jToggleButton73;
+    private javax.swing.JToggleButton jToggleButton74;
+    private javax.swing.JToggleButton jToggleButton75;
+    private javax.swing.JToggleButton jToggleButton77;
+    private javax.swing.JToggleButton jToggleButton78;
+    private javax.swing.JToggleButton jToggleButton79;
+    private javax.swing.JToggleButton jToggleButton8;
+    private javax.swing.JToggleButton jToggleButton81;
+    private javax.swing.JToggleButton jToggleButton82;
+    private javax.swing.JToggleButton jToggleButton83;
+    private javax.swing.JToggleButton jToggleButton84;
+    private javax.swing.JToggleButton jToggleButton85;
+    private javax.swing.JToggleButton jToggleButton86;
+    private javax.swing.JToggleButton jToggleButton87;
+    private javax.swing.JToggleButton jToggleButton88;
+    private javax.swing.JToggleButton jToggleButton89;
+    private javax.swing.JToggleButton jToggleButton9;
+    private javax.swing.JToggleButton jToggleButton90;
+    private javax.swing.JToggleButton jToggleButton92;
+    private javax.swing.JToggleButton jToggleButton93;
+    private javax.swing.JToggleButton jToggleButton94;
+    private javax.swing.JToggleButton jToggleButton95;
+    private javax.swing.JToggleButton jToggleButton96;
+    private javax.swing.JToggleButton jToggleButton97;
+    private javax.swing.JToggleButton jToggleButton99;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JToggleButton memoBtn10;
+    private javax.swing.JToggleButton memoBtn11;
+    private javax.swing.JToggleButton memoBtn12;
+    private javax.swing.JToggleButton memoBtn13;
+    private javax.swing.JToggleButton memoBtn14;
+    private javax.swing.JToggleButton memoBtn15;
+    private javax.swing.JToggleButton memoBtn16;
+    private javax.swing.JToggleButton memoBtn17;
+    private javax.swing.JToggleButton memoBtn2;
+    private javax.swing.JToggleButton memoBtn20;
+    private javax.swing.JToggleButton memoBtn22;
+    private javax.swing.JToggleButton memoBtn23;
+    private javax.swing.JToggleButton memoBtn24;
+    private javax.swing.JToggleButton memoBtn3;
+    private javax.swing.JToggleButton memoBtn4;
+    private javax.swing.JToggleButton memoBtn5;
     private javax.swing.JPanel mfePanel2;
     private javax.swing.JScrollPane mfeScroll1;
     private javax.swing.JPanel mfeTab;
     private javax.swing.JPanel mocaPanel;
     private javax.swing.JScrollPane mocaScroll;
     private javax.swing.JPanel mocaTab;
+    private javax.swing.JToggleButton orientacioBtn10;
+    private javax.swing.JToggleButton orientacioBtn11;
+    private javax.swing.JToggleButton orientacioBtn12;
+    private javax.swing.JToggleButton orientacioBtn13;
+    private javax.swing.JToggleButton orientacioBtn14;
+    private javax.swing.JToggleButton orientacioBtn15;
+    private javax.swing.JToggleButton orientacioBtn16;
+    private javax.swing.JToggleButton orientacioBtn17;
+    private javax.swing.JToggleButton orientacioBtn2;
+    private javax.swing.JToggleButton orientacioBtn20;
+    private javax.swing.JToggleButton orientacioBtn22;
+    private javax.swing.JToggleButton orientacioBtn23;
+    private javax.swing.JToggleButton orientacioBtn24;
+    private javax.swing.JToggleButton orientacioBtn3;
+    private javax.swing.JToggleButton orientacioBtn4;
+    private javax.swing.JToggleButton orientacioBtn5;
     private javax.swing.JLabel paginaLabel;
     private javax.swing.JLabel paginaLabel2;
     private javax.swing.JPanel qolPanel;
     private javax.swing.JScrollPane qolScroll;
     private javax.swing.JPanel qolTab;
+    private javax.swing.JToggleButton raoBtn10;
+    private javax.swing.JToggleButton raoBtn11;
+    private javax.swing.JToggleButton raoBtn12;
+    private javax.swing.JToggleButton raoBtn13;
+    private javax.swing.JToggleButton raoBtn14;
+    private javax.swing.JToggleButton raoBtn15;
+    private javax.swing.JToggleButton raoBtn16;
+    private javax.swing.JToggleButton raoBtn17;
+    private javax.swing.JToggleButton raoBtn19;
+    private javax.swing.JToggleButton raoBtn2;
+    private javax.swing.JToggleButton raoBtn21;
+    private javax.swing.JToggleButton raoBtn22;
+    private javax.swing.JToggleButton raoBtn24;
+    private javax.swing.JToggleButton raoBtn25;
+    private javax.swing.JToggleButton raoBtn3;
+    private javax.swing.JToggleButton raoBtn4;
+    private javax.swing.JToggleButton raoBtn5;
     private javax.swing.JPanel rsePanel;
     private javax.swing.JScrollPane rseScroll;
     private javax.swing.JPanel rseTab;
@@ -574,6 +5882,11 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JScrollPane upsa2Scroll;
     private javax.swing.JPanel upsa3Panel;
     private javax.swing.JScrollPane upsa3Scroll;
+    private javax.swing.ButtonGroup upsaButtonGrup1;
+    private javax.swing.ButtonGroup upsaButtonGrup2;
+    private javax.swing.ButtonGroup upsaButtonGrup3;
+    private javax.swing.ButtonGroup upsaButtonGrup4;
+    private javax.swing.ButtonGroup upsaButtonGrup5;
     private javax.swing.JPanel upsaRPanel;
     private javax.swing.JScrollPane upsaRScroll;
     private javax.swing.JPanel upsaTab;

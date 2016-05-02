@@ -6725,7 +6725,12 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 	OutputStream output = null;
         
 	try {
-                File file = new File(idPacient+"Test0.dat");    
+            
+                File f = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator);
+                if (!f.exists()){
+                f.mkdir();
+                }
+                File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Test0.dat");    
                 if(!file.exists()) {
                         file.createNewFile();
                 }
@@ -6736,6 +6741,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 prop.store(output, "VALORACIO COGNITIVA PREVIA");
         }
         catch(IOException e){
+            System.out.println(e.toString());
             System.out.println("EEEEEERROR");
         }finally {
 		if (output != null) {
@@ -6787,7 +6793,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 	InputStream input = null;
         
 	try {
-                File file = new File(idPacient+"Test0.dat");    
+                File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Test0.dat");    
                 if(!file.exists()) {
                         file.createNewFile();
                 }

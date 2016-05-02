@@ -210,6 +210,7 @@ public class MenuTests extends javax.swing.JDialog {
             tT.pack();
             tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
             tT.setVisible(true);
+            tT.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             this.dispose();
         }
     }//GEN-LAST:event_sessio2BtnActionPerformed
@@ -219,6 +220,7 @@ public class MenuTests extends javax.swing.JDialog {
         vC.pack();
         vC.setExtendedState(JFrame.MAXIMIZED_BOTH);
         vC.setVisible(true);
+        vC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 

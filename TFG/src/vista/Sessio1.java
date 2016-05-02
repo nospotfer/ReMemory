@@ -12,17 +12,24 @@ import javax.swing.JTable;
 import javax.swing.UIManager;
 import controlador.ButtonColumn;
 import controlador.Pacient;
+import controlador.Utils;
 import controlador.VerticalTableHeaderCellRenderer;
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Desktop;
+import java.awt.FileDialog;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -93,6 +100,9 @@ public class Sessio1 extends javax.swing.JFrame {
         initHashBNTA();
         initHashBNTB();
         initHashBNTC();
+        
+        
+        initCogstateButtons();
         
         anteriorBtn.setEnabled(false);
         this.toFront();
@@ -514,7 +524,10 @@ public class Sessio1 extends javax.swing.JFrame {
         digitsDirecteScroll3 = new javax.swing.JScrollPane();
         digitsDirectePanel3 = new javax.swing.JPanel();
         jLabel165 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        obrePdfBtn = new javax.swing.JButton();
+        obreExcelBtn = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
         buttonPanel = new javax.swing.JPanel();
         acceptaBtn = new javax.swing.JButton();
         cancelaBtn = new javax.swing.JButton();
@@ -4352,10 +4365,40 @@ public class Sessio1 extends javax.swing.JFrame {
 
         cogstateTab.setLayout(new java.awt.CardLayout());
 
+        digitsDirectePanel3.setEnabled(false);
+
         jLabel165.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel165.setText("Cogstate");
 
-        jButton3.setText("Importar COGSTATE");
+        obrePdfBtn.setText("Obre pdf");
+        obrePdfBtn.setEnabled(false);
+        obrePdfBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obrePdfBtnActionPerformed(evt);
+            }
+        });
+
+        obreExcelBtn.setText("Obre excel");
+        obreExcelBtn.setEnabled(false);
+        obreExcelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obreExcelBtnActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("Importar pdf");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setText("Importar excel");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout digitsDirectePanel3Layout = new javax.swing.GroupLayout(digitsDirectePanel3);
         digitsDirectePanel3.setLayout(digitsDirectePanel3Layout);
@@ -4364,11 +4407,17 @@ public class Sessio1 extends javax.swing.JFrame {
             .addGroup(digitsDirectePanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel165)
                     .addGroup(digitsDirectePanel3Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jButton3))
-                    .addComponent(jLabel165))
-                .addContainerGap(1217, Short.MAX_VALUE))
+                        .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton18)
+                            .addComponent(obrePdfBtn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(obreExcelBtn)
+                            .addComponent(jButton19))))
+                .addContainerGap(1104, Short.MAX_VALUE))
         );
         digitsDirectePanel3Layout.setVerticalGroup(
             digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4376,8 +4425,14 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel165)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
-                .addContainerGap(678, Short.MAX_VALUE))
+                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(obrePdfBtn)
+                    .addComponent(obreExcelBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton18)
+                    .addComponent(jButton19))
+                .addContainerGap(644, Short.MAX_VALUE))
         );
 
         digitsDirecteScroll3.setViewportView(digitsDirectePanel3);
@@ -4472,7 +4527,7 @@ public class Sessio1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-//        guardar();
+        //guardar();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 
@@ -4709,6 +4764,69 @@ public class Sessio1 extends javax.swing.JFrame {
         puntuacioML2.setText(MLII+"");
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        FileDialog fd = new FileDialog(this, "Esculli un arxiu", FileDialog.LOAD);
+        fd.setDirectory(System.getProperty("user.home"));
+        fd.setFile("*.pdf");
+        fd.setVisible(true);
+        String filename = fd.getFile();
+        String dir=fd.getDirectory();
+        if (filename != null){
+            try {
+                File f = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator);
+                if (!f.exists()){
+                    f.mkdir();
+                }
+                Files.copy(Paths.get(dir+filename), Paths.get(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.pdf"), StandardCopyOption.REPLACE_EXISTING);
+                
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            } finally{
+                obrePdfBtn.setEnabled(true);
+            }
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void obrePdfBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obrePdfBtnActionPerformed
+        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.pdf");
+        try {
+            Desktop.getDesktop().open(file);
+        } catch (IOException ex) {
+            Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_obrePdfBtnActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        FileDialog fd = new FileDialog(this, "Esculli un arxiu", FileDialog.LOAD);
+        fd.setDirectory(System.getProperty("user.home"));
+        fd.setFile("*.xlsx");
+        fd.setVisible(true);
+        String filename = fd.getFile();
+        String dir=fd.getDirectory();
+        if (filename != null){
+            try {
+                File f = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator);
+                if (!f.exists()){
+                    f.mkdir();
+                }
+                Files.copy(Paths.get(dir+filename), Paths.get(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.xlsx"), StandardCopyOption.REPLACE_EXISTING);
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            } finally{
+                obreExcelBtn.setEnabled(true);
+            }
+        }
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void obreExcelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obreExcelBtnActionPerformed
+        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.xlsx");
+        try {
+            Desktop.getDesktop().open(file);
+        } catch (IOException ex) {
+            Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_obreExcelBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -4850,8 +4968,9 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -5111,6 +5230,8 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel nssaBNTC;
     private javax.swing.JLabel nssaDD;
     private javax.swing.JLabel nssaDI;
+    private javax.swing.JButton obreExcelBtn;
+    private javax.swing.JButton obrePdfBtn;
     private javax.swing.JLabel paginaLabel;
     private javax.swing.JLabel paginaLabel2;
     private javax.swing.JLabel percentilBNTA;
@@ -5228,8 +5349,6 @@ public class Sessio1 extends javax.swing.JFrame {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
                 int val = Integer.parseInt((String)table.getValueAt(row, 3));
-                
-                if ((row == 0 || (Integer.parseInt((String)table.getValueAt(row-1, 3))==1)) && Integer.parseInt((String)table.getValueAt(row+1, 3))==0){
                     if (val == 0){
                         table.setValueAt("1",row, 3);
                         table.setValueAt(table.getValueAt(row,1),row, 2);
@@ -5237,7 +5356,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         table.setValueAt("0",row, 3);
                         table.setValueAt("",row, 2);
                     }
-                }
+                
                 
                 
                 int sumaTotal = 0;
@@ -5355,15 +5474,13 @@ public class Sessio1 extends javax.swing.JFrame {
                 int row = Integer.parseInt(e.getActionCommand());
                 int val = Integer.parseInt((String)table.getValueAt(row, 4));
                 
-                if ((row == 0 || (Integer.parseInt((String)table.getValueAt(row-1, 4))==1)) && Integer.parseInt((String)table.getValueAt(row+1, 4))==0){
-                    if (val == 0){
+                if (val == 0){
                         table.setValueAt("1",row, 4);
                         table.setValueAt(table.getValueAt(row,2),row, 3);
                     } else{
                         table.setValueAt("0",row, 4);
                         table.setValueAt("",row, 3);
                     }
-                }
                 
                 int sumaTotal = 0;
                 int suma = 0;
@@ -7564,6 +7681,17 @@ public class Sessio1 extends javax.swing.JFrame {
         }
         
         nssaBNTC.setText(scaledScore+modificador+"");
+    }
+
+    private void initCogstateButtons() {
+        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.pdf");
+        if (file.exists()){
+            obrePdfBtn.setEnabled(true);
+        }
+        file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.xlsx");
+        if (file.exists()){
+            obreExcelBtn.setEnabled(true);
+        }
     }
 
 }

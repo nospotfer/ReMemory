@@ -4493,7 +4493,9 @@ public class FitxaPacient extends javax.swing.JDialog {
 	InputStream input = null;
 
 	try {
-            File file = new File(idPacient+"Fitxa.dat");    
+            String str = Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Fitxa.dat";
+            System.out.println(str);
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Fitxa.dat");    
             if(!file.exists()) {
                     file.createNewFile();
                     Iterator it = dateMap.entrySet().iterator();
@@ -4783,7 +4785,12 @@ public class FitxaPacient extends javax.swing.JDialog {
 	OutputStream output = null;
 
 	try {
-                File file = new File(idPacient+"Fitxa.dat");
+            
+            File f = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator);
+                if (!f.exists()){
+                    f.mkdir();
+                }
+                File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Fitxa.dat");
                 
 		output = new FileOutputStream(file);
                 

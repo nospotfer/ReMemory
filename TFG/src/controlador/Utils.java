@@ -7,6 +7,7 @@ package controlador;
 
 import com.toedter.calendar.JDateChooser;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -30,7 +31,9 @@ import vista.NewUser;
  * @author USER
  */
 public class Utils {
-   
+    
+    public static final String PACIENT_DATA_PATH = "pacientData"+File.separator;
+    
     public static String getStringFile(String file) {
 	BufferedReader reader = null;
 	try {

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/swingx-all-1.6.4-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcalendar-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swingx-all-1.6.4-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.json-20120521.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swingx-all-1.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

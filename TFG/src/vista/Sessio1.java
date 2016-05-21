@@ -101,10 +101,12 @@ public class Sessio1 extends javax.swing.JFrame {
         initHashBNTB();
         initHashBNTC();
         
-        
         initCogstateButtons();
         
         anteriorBtn.setEnabled(false);
+
+        Utils.carregar(dataPanel,pacientActual.getId(), "Sessio1");
+
         this.toFront();
         this.repaint();
     
@@ -205,6 +207,14 @@ public class Sessio1 extends javax.swing.JFrame {
         puntuacioML1 = new javax.swing.JLabel();
         ML1Total = new javax.swing.JLabel();
         historiaBprimerTotal = new javax.swing.JLabel();
+        cogstateTab = new javax.swing.JPanel();
+        digitsDirecteScroll3 = new javax.swing.JScrollPane();
+        digitsDirectePanel3 = new javax.swing.JPanel();
+        jLabel165 = new javax.swing.JLabel();
+        obrePdfBtn = new javax.swing.JButton();
+        obreExcelBtn = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
         ML2Tab = new javax.swing.JPanel();
         ML2Scroll1 = new javax.swing.JScrollPane();
         ML2Panel2 = new javax.swing.JPanel();
@@ -520,14 +530,6 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel164 = new javax.swing.JLabel();
         jScrollPane19 = new javax.swing.JScrollPane();
         fluenciaVerbalTable = new org.jdesktop.swingx.JXTable();
-        cogstateTab = new javax.swing.JPanel();
-        digitsDirecteScroll3 = new javax.swing.JScrollPane();
-        digitsDirectePanel3 = new javax.swing.JPanel();
-        jLabel165 = new javax.swing.JLabel();
-        obrePdfBtn = new javax.swing.JButton();
-        obreExcelBtn = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
         buttonPanel = new javax.swing.JPanel();
         acceptaBtn = new javax.swing.JButton();
         cancelaBtn = new javax.swing.JButton();
@@ -1421,6 +1423,84 @@ public class Sessio1 extends javax.swing.JFrame {
         ML1Tab.add(ML1Scroll2, "card2");
 
         tabbedPanel.addTab("ML1", ML1Tab);
+
+        cogstateTab.setLayout(new java.awt.CardLayout());
+
+        digitsDirectePanel3.setEnabled(false);
+
+        jLabel165.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel165.setText("Cogstate");
+
+        obrePdfBtn.setText("Obre pdf");
+        obrePdfBtn.setEnabled(false);
+        obrePdfBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obrePdfBtnActionPerformed(evt);
+            }
+        });
+
+        obreExcelBtn.setText("Obre excel");
+        obreExcelBtn.setEnabled(false);
+        obreExcelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obreExcelBtnActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("Importar pdf");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setText("Importar excel");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout digitsDirectePanel3Layout = new javax.swing.GroupLayout(digitsDirectePanel3);
+        digitsDirectePanel3.setLayout(digitsDirectePanel3Layout);
+        digitsDirectePanel3Layout.setHorizontalGroup(
+            digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(digitsDirectePanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel165)
+                    .addGroup(digitsDirectePanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton18)
+                            .addComponent(obrePdfBtn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(obreExcelBtn)
+                            .addComponent(jButton19))))
+                .addContainerGap(1104, Short.MAX_VALUE))
+        );
+        digitsDirectePanel3Layout.setVerticalGroup(
+            digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, digitsDirectePanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel165)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(obrePdfBtn)
+                    .addComponent(obreExcelBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton18)
+                    .addComponent(jButton19))
+                .addContainerGap(644, Short.MAX_VALUE))
+        );
+
+        digitsDirecteScroll3.setViewportView(digitsDirectePanel3);
+
+        cogstateTab.add(digitsDirecteScroll3, "card1");
+
+        tabbedPanel.addTab("COGSTATE", cogstateTab);
 
         ML2Tab.setLayout(new java.awt.CardLayout());
 
@@ -4363,84 +4443,6 @@ public class Sessio1 extends javax.swing.JFrame {
 
         tabbedPanel.addTab("FLUÈNCIA VERBAL", colorTrailsTab1);
 
-        cogstateTab.setLayout(new java.awt.CardLayout());
-
-        digitsDirectePanel3.setEnabled(false);
-
-        jLabel165.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel165.setText("Cogstate");
-
-        obrePdfBtn.setText("Obre pdf");
-        obrePdfBtn.setEnabled(false);
-        obrePdfBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                obrePdfBtnActionPerformed(evt);
-            }
-        });
-
-        obreExcelBtn.setText("Obre excel");
-        obreExcelBtn.setEnabled(false);
-        obreExcelBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                obreExcelBtnActionPerformed(evt);
-            }
-        });
-
-        jButton18.setText("Importar pdf");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
-            }
-        });
-
-        jButton19.setText("Importar excel");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout digitsDirectePanel3Layout = new javax.swing.GroupLayout(digitsDirectePanel3);
-        digitsDirectePanel3.setLayout(digitsDirectePanel3Layout);
-        digitsDirectePanel3Layout.setHorizontalGroup(
-            digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(digitsDirectePanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel165)
-                    .addGroup(digitsDirectePanel3Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton18)
-                            .addComponent(obrePdfBtn))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(obreExcelBtn)
-                            .addComponent(jButton19))))
-                .addContainerGap(1104, Short.MAX_VALUE))
-        );
-        digitsDirectePanel3Layout.setVerticalGroup(
-            digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, digitsDirectePanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel165)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(obrePdfBtn)
-                    .addComponent(obreExcelBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton18)
-                    .addComponent(jButton19))
-                .addContainerGap(644, Short.MAX_VALUE))
-        );
-
-        digitsDirecteScroll3.setViewportView(digitsDirectePanel3);
-
-        cogstateTab.add(digitsDirecteScroll3, "card1");
-
-        tabbedPanel.addTab("COGSTATE", cogstateTab);
-
         dataPanel.add(tabbedPanel, java.awt.BorderLayout.PAGE_START);
 
         mainPanel.add(dataPanel, java.awt.BorderLayout.CENTER);
@@ -4527,7 +4529,7 @@ public class Sessio1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        //guardar();
+        Utils.guardar(dataPanel,pacientActual.getId(), "Sessio1");
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

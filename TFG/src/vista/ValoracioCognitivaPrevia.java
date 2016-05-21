@@ -37,18 +37,14 @@ import javax.swing.event.ChangeListener;
  */
 public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     
-    int textF = 0;
-    int combo = 0;
-    int textA = 0;
-    int check = 0;
-    int button = 0;
-    int total = 0;
+
+
     ArrayList<JCheckBox> llistaCheck;
     ArrayList<JCheckBox> llistaCheckMMSE;
     int pagina = 0;
     String idPacient = "";
     String [] llistaPagines = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10"};
-    private int radioButton = 0;
+
     /**
      * Creates new form testsTextuals
      */
@@ -62,7 +58,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         initTabs();
         initToggleButton();
         this.idPacient = idPacient;
-        carregar();
+        Utils.carregar(dataPanel,idPacient, "Test0");
         this.actualitzaPuntuacioCrc();
         this.actualitzaPuntuacioMMSE();
         this.actualitzaPuntuacioTAP();
@@ -5632,7 +5628,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        guardar();
+        Utils.guardar(dataPanel,idPacient, "Test0");
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 
@@ -6720,139 +6716,9 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         });
     }
 
-    private void guardar() {
-        Properties prop = new Properties();
-	OutputStream output = null;
-        
-	try {
-            
-                File f = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator);
-                if (!f.exists()){
-                f.mkdir();
-                }
-                File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Test0.dat");    
-                if(!file.exists()) {
-                        file.createNewFile();
-                }
-		output = new FileOutputStream(file);
-                
-                textF = combo = check = textA = button = radioButton = 0;
-                setComponents(prop, mainPanel);
-                prop.store(output, "VALORACIO COGNITIVA PREVIA");
-        }
-        catch(IOException e){
-            System.out.println(e.toString());
-            System.out.println("EEEEEERROR");
-        }finally {
-		if (output != null) {
-			try {
-				output.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-                                System.out.println("ERROR OUTPUT");
-			}
-		}
-	}
-    }
 
-    private void setComponents(Properties prop,Container c) {
-        Component[] components = c.getComponents();
-        for (Component com : components){
-            if (com instanceof JTextField){
-                Utils.setProperty(prop, "textField"+textF, (JTextField) com);
-                textF++;
-            }
-            else if (com instanceof JComboBox){
-                Utils.setProperty(prop, "comboBox"+combo, (JComboBox) com);
-                combo++;
-            }
-            else if (com instanceof JTextArea){
-                Utils.setProperty(prop, "textArea"+textA, (JTextArea) com);
-                textA++;
-            }
-            else if (com instanceof JToggleButton && !(com instanceof JCheckBox) && !(com instanceof JRadioButton)){
-                Utils.setProperty(prop, "toggleButton"+button, (JToggleButton) com);
-                button++;
-            }
-            else if (com instanceof JRadioButton){
-                Utils.setProperty(prop, "radioButton"+radioButton, (JRadioButton) com);
-                radioButton++;
-            }
-            else if (com instanceof JCheckBox ){
-                Utils.setProperty(prop, "checkBox"+check, (JCheckBox) com);
-                check++;
-            }
-            else if (com instanceof Container){
-                setComponents(prop, (Container) com);
-            }
-        }
-    }
     
-    private void carregar() {
-        Properties prop = new Properties();
-	InputStream input = null;
-        
-	try {
-                File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Test0.dat");    
-                if(!file.exists()) {
-                        file.createNewFile();
-                }
-                else{
-                    input = new FileInputStream(file);
-                    
-                    // load a properties file
-                    prop.load(input);
-                    
-                    textF = combo = check = textA = button = 0;
-                    getComponents(prop, this);
-                }
-        }
-        catch(IOException e){
-            System.out.println("EERRRROOOOOOR");
-        }finally {
-		if (input != null) {
-			try {
-				input.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-                                System.out.println("ERROR INPUT");
-			}
-		}
-	}
-    }
-    
-    private void getComponents(Properties prop,Container c) {
-        Component[] components = c.getComponents();
-        for (Component com : components){
-            if (com instanceof JTextField){
-                Utils.getProperty(prop, "textField"+textF, (JTextField) com);
-                textF++;
-            }
-            else if (com instanceof JComboBox){
-                Utils.getProperty(prop, "comboBox"+combo, (JComboBox) com);
-                combo++;
-            }
-            else if (com instanceof JTextArea){
-                Utils.getProperty(prop, "textArea"+textA, (JTextArea) com);
-                textA++;
-            }
-            else if (com instanceof JToggleButton && !(com instanceof JCheckBox) && !(com instanceof JRadioButton)){
-                Utils.getProperty(prop, "toggleButton"+button, (JToggleButton) com);
-                button++;
-            }
-            else if (com instanceof JRadioButton){
-                Utils.getProperty(prop, "radioButton"+radioButton, (JRadioButton) com);
-                radioButton++;
-            }
-            else if (com instanceof JCheckBox ){
-                Utils.getProperty(prop, "checkBox"+check, (JCheckBox) com);
-                check++;
-            }
-            else if (com instanceof Container){
-                getComponents(prop, (Container) com);
-            }
-        }
-    }
+
     
     private void actualitzaPuntuacioCDR(){
         double tot = 0;

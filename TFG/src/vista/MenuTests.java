@@ -45,7 +45,7 @@ public class MenuTests extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         valoracioCognitivaPreviaBtn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        valoracioCuidadorBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -131,10 +131,10 @@ public class MenuTests extends javax.swing.JDialog {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Valoració cuidador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        jButton4.setText("Valoració cuidador");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        valoracioCuidadorBtn.setText("Valoració cuidador");
+        valoracioCuidadorBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                valoracioCuidadorBtnActionPerformed(evt);
             }
         });
 
@@ -144,14 +144,14 @@ public class MenuTests extends javax.swing.JDialog {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4)
+                .addComponent(valoracioCuidadorBtn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4)
+                .addComponent(valoracioCuidadorBtn)
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -215,14 +215,14 @@ public class MenuTests extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_sessio2BtnActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        ValoracioCuidador vC = new ValoracioCuidador();
+    private void valoracioCuidadorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valoracioCuidadorBtnActionPerformed
+        ValoracioCuidador vC = new ValoracioCuidador(pacientActual);
         vC.pack();
         vC.setExtendedState(JFrame.MAXIMIZED_BOTH);
         vC.setVisible(true);
         vC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_valoracioCuidadorBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,12 +268,12 @@ public class MenuTests extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton sessio1Btn;
     private javax.swing.JButton sessio2Btn;
     private javax.swing.JButton valoracioCognitivaPreviaBtn;
+    private javax.swing.JButton valoracioCuidadorBtn;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,6 +6,7 @@
 package vista;
 
 import controlador.Pacient;
+import controlador.Utils;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -23,6 +24,7 @@ public class MenuTests extends javax.swing.JDialog {
      */
     public MenuTests(java.awt.Frame parent, boolean modal, String idPacient, Pacient pacientActual) {
         super(parent, modal);
+        Utils.setIcon((JFrame)this.getOwner());
         initComponents();
         this.setLocationRelativeTo(null);
         this.idPacient = idPacient;
@@ -48,6 +50,7 @@ public class MenuTests extends javax.swing.JDialog {
         valoracioCuidadorBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Menú tests");
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Protocol neuropsicològic", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N

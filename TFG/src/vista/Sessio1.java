@@ -24,8 +24,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
@@ -57,15 +60,21 @@ public class Sessio1 extends javax.swing.JFrame {
     private HashMap<String, HashMap<Integer, List<Object>>> taulaBNTB;
     private HashMap<String, HashMap<Integer, List<Object>>> taulaBNTC;
     private Timer timer;
+    private Timer timerColor;
+    private Timer timerColor2;
     private long startTime;
     DecimalFormat timeFormatter;
     JButton[] llistaBtn5digits;
     String edatPacient;
+    long secondsColor1 = 0;
+    long secondsColor2 = 0;
     
     /**
      * Creates new form Sessio1
      */
     public Sessio1(Pacient pacientActual) {
+        Utils.setIcon(this);
+        
         initComponents();
         
         this.pacientActual = pacientActual;
@@ -146,6 +155,7 @@ public class Sessio1 extends javax.swing.JFrame {
         spanDD = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         resetDD = new javax.swing.JButton();
+        dataDD = new javax.swing.JLabel();
         digitsInversScroll = new javax.swing.JScrollPane();
         digitsInversPanel = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
@@ -165,6 +175,7 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel92 = new javax.swing.JLabel();
         nssaDI = new javax.swing.JLabel();
         resetDI = new javax.swing.JButton();
+        dataDI = new javax.swing.JLabel();
         ML1Tab = new javax.swing.JPanel();
         ML1Scroll = new javax.swing.JScrollPane();
         ML1Panel = new javax.swing.JPanel();
@@ -207,6 +218,7 @@ public class Sessio1 extends javax.swing.JFrame {
         puntuacioML1 = new javax.swing.JLabel();
         ML1Total = new javax.swing.JLabel();
         historiaBprimerTotal = new javax.swing.JLabel();
+        dataMl1 = new javax.swing.JLabel();
         cogstateTab = new javax.swing.JPanel();
         digitsDirecteScroll3 = new javax.swing.JScrollPane();
         digitsDirectePanel3 = new javax.swing.JPanel();
@@ -252,6 +264,7 @@ public class Sessio1 extends javax.swing.JFrame {
         puntuacioML2 = new javax.swing.JLabel();
         ML2Total = new javax.swing.JLabel();
         historiaBprimerTotal2 = new javax.swing.JLabel();
+        dataMl2 = new javax.swing.JLabel();
         ML2Scroll4 = new javax.swing.JScrollPane();
         ML2Panel4 = new javax.swing.JPanel();
         jLabel113 = new javax.swing.JLabel();
@@ -291,6 +304,7 @@ public class Sessio1 extends javax.swing.JFrame {
         percentilBNTA = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         nssaBNTA = new javax.swing.JLabel();
+        dataBnt1 = new javax.swing.JLabel();
         BNTScroll6 = new javax.swing.JScrollPane();
         MLPanel5 = new javax.swing.JPanel();
         jLabel112 = new javax.swing.JLabel();
@@ -311,6 +325,7 @@ public class Sessio1 extends javax.swing.JFrame {
         correctesBntB = new javax.swing.JLabel();
         jLabel74 = new javax.swing.JLabel();
         totalBntB = new javax.swing.JLabel();
+        dataBnt2 = new javax.swing.JLabel();
         BNTScroll7 = new javax.swing.JScrollPane();
         MLPanel6 = new javax.swing.JPanel();
         jLabel114 = new javax.swing.JLabel();
@@ -331,6 +346,7 @@ public class Sessio1 extends javax.swing.JFrame {
         percentilBNTC = new javax.swing.JLabel();
         jLabel84 = new javax.swing.JLabel();
         nssaBNTC = new javax.swing.JLabel();
+        dataBnt3 = new javax.swing.JLabel();
         colorTrailsTab = new javax.swing.JPanel();
         digitsDirecteScroll1 = new javax.swing.JScrollPane();
         digitsDirectePanel1 = new javax.swing.JPanel();
@@ -342,6 +358,12 @@ public class Sessio1 extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        colorTrailsCronoBtn = new javax.swing.JButton();
+        colorTrailsCronoLabel = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        dataColor = new javax.swing.JLabel();
+        colorTrailsCronoBtn1 = new javax.swing.JButton();
+        colorTrailsCronoLabel1 = new javax.swing.JLabel();
         fiveDigitsTab = new javax.swing.JPanel();
         fiveDigitsScroll = new javax.swing.JScrollPane();
         Panel = new javax.swing.JPanel();
@@ -467,7 +489,6 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel162 = new javax.swing.JLabel();
         jLabel163 = new javax.swing.JLabel();
         lecturaTemps = new javax.swing.JLabel();
-        lecturaErrors = new javax.swing.JLabel();
         jLabel166 = new javax.swing.JLabel();
         jLabel167 = new javax.swing.JLabel();
         lecturaTempsPC = new javax.swing.JLabel();
@@ -480,7 +501,6 @@ public class Sessio1 extends javax.swing.JFrame {
         compteigErrorsPC = new javax.swing.JLabel();
         jLabel176 = new javax.swing.JLabel();
         jLabel177 = new javax.swing.JLabel();
-        compteigErrors = new javax.swing.JLabel();
         jLabel179 = new javax.swing.JLabel();
         jLabel180 = new javax.swing.JLabel();
         jLabel181 = new javax.swing.JLabel();
@@ -489,7 +509,6 @@ public class Sessio1 extends javax.swing.JFrame {
         eleccioErrorsPC = new javax.swing.JLabel();
         jLabel185 = new javax.swing.JLabel();
         jLabel186 = new javax.swing.JLabel();
-        eleccioErrors = new javax.swing.JLabel();
         jLabel188 = new javax.swing.JLabel();
         jLabel189 = new javax.swing.JLabel();
         jLabel190 = new javax.swing.JLabel();
@@ -498,7 +517,18 @@ public class Sessio1 extends javax.swing.JFrame {
         alternErrorsPC = new javax.swing.JLabel();
         jLabel194 = new javax.swing.JLabel();
         jLabel195 = new javax.swing.JLabel();
-        alternErrors = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jTextField17 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
+        jTextField19 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
+        jTextField21 = new javax.swing.JTextField();
         jPanel16 = new javax.swing.JPanel();
         jLabel198 = new javax.swing.JLabel();
         jLabel199 = new javax.swing.JLabel();
@@ -511,6 +541,10 @@ public class Sessio1 extends javax.swing.JFrame {
         inhibicioPC = new javax.swing.JLabel();
         jLabel205 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
+        jTextField22 = new javax.swing.JTextField();
+        jTextField23 = new javax.swing.JTextField();
+        jTextField24 = new javax.swing.JTextField();
+        jTextField25 = new javax.swing.JTextField();
         jPanel17 = new javax.swing.JPanel();
         jLabel206 = new javax.swing.JLabel();
         alternanTemps2 = new javax.swing.JLabel();
@@ -523,13 +557,20 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel213 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel207 = new javax.swing.JLabel();
+        jTextField26 = new javax.swing.JTextField();
+        jTextField27 = new javax.swing.JTextField();
+        jTextField28 = new javax.swing.JTextField();
+        jTextField29 = new javax.swing.JTextField();
         calculPercentilsFiveDigit = new javax.swing.JButton();
+        dataFive = new javax.swing.JLabel();
         colorTrailsTab1 = new javax.swing.JPanel();
         digitsDirecteScroll2 = new javax.swing.JScrollPane();
         digitsDirectePanel2 = new javax.swing.JPanel();
         jLabel164 = new javax.swing.JLabel();
         jScrollPane19 = new javax.swing.JScrollPane();
         fluenciaVerbalTable = new org.jdesktop.swingx.JXTable();
+        jButton17 = new javax.swing.JButton();
+        dataFluencia = new javax.swing.JLabel();
         buttonPanel = new javax.swing.JPanel();
         acceptaBtn = new javax.swing.JButton();
         cancelaBtn = new javax.swing.JButton();
@@ -755,7 +796,8 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGroup(digitsDirectePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(resetDD))))
+                            .addComponent(resetDD)
+                            .addComponent(dataDD))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         digitsDirectePanelLayout.setVerticalGroup(
@@ -770,7 +812,9 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(13, 13, 13)
                         .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(resetDD))
+                        .addComponent(resetDD)
+                        .addGap(18, 18, 18)
+                        .addComponent(dataDD))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -980,8 +1024,9 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGroup(digitsInversPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(resetDI))))
-                .addContainerGap(588, Short.MAX_VALUE))
+                            .addComponent(resetDI)
+                            .addComponent(dataDI))))
+                .addContainerGap(684, Short.MAX_VALUE))
         );
         digitsInversPanelLayout.setVerticalGroup(
             digitsInversPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -996,8 +1041,10 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(13, 13, 13)
                         .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(resetDI)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(resetDI)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(dataDI)))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
 
         digitsInversScroll.setViewportView(digitsInversPanel);
@@ -1130,6 +1177,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(ML1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2)
+                                    .addComponent(jScrollPane3)
                                     .addGroup(ML1PanelLayout.createSequentialGroup()
                                         .addGroup(ML1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel5)
@@ -1143,8 +1191,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(jLabel36)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(historiaAsegonTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(0, 673, Short.MAX_VALUE))
-                                    .addComponent(jScrollPane3)))
+                                        .addGap(0, 769, Short.MAX_VALUE))))
                             .addGroup(ML1PanelLayout.createSequentialGroup()
                                 .addComponent(jLabel34)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1185,7 +1232,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(resetHistoriaA))
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(264, Short.MAX_VALUE))
         );
 
         ML1Scroll.setViewportView(ML1Panel);
@@ -1373,8 +1420,9 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addGap(10, 10, 10)
                                                 .addComponent(jLabel45))
                                             .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
+                                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dataMl1))
+                                        .addGap(0, 628, Short.MAX_VALUE))))
                             .addGroup(ML1Panel1Layout.createSequentialGroup()
                                 .addComponent(jLabel38)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1412,10 +1460,11 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 613, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dataMl1)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         ML1Scroll2.setViewportView(ML1Panel1);
@@ -1478,7 +1527,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(obreExcelBtn)
                             .addComponent(jButton19))))
-                .addContainerGap(1104, Short.MAX_VALUE))
+                .addContainerGap(1180, Short.MAX_VALUE))
         );
         digitsDirectePanel3Layout.setVerticalGroup(
             digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1493,7 +1542,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton18)
                     .addComponent(jButton19))
-                .addContainerGap(644, Short.MAX_VALUE))
+                .addContainerGap(718, Short.MAX_VALUE))
         );
 
         digitsDirecteScroll3.setViewportView(digitsDirectePanel3);
@@ -1618,7 +1667,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(historiaAprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(resetHistoriaA1)
                                             .addComponent(jLabel7))
-                                        .addGap(0, 702, Short.MAX_VALUE))))
+                                        .addGap(0, 798, Short.MAX_VALUE))))
                             .addGroup(ML2Panel2Layout.createSequentialGroup()
                                 .addComponent(jLabel41)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1841,8 +1890,9 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(historiaBprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(10, 10, 10)
                                                 .addComponent(jLabel55))
-                                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 586, Short.MAX_VALUE))))
+                                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dataMl2))
+                                        .addGap(0, 682, Short.MAX_VALUE))))
                             .addGroup(MLPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel51)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1878,8 +1928,10 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addComponent(resetHistoriaB1)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 262, Short.MAX_VALUE))
-                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 613, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(dataMl2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2098,7 +2150,7 @@ public class Sessio1 extends javax.swing.JFrame {
                             .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel61)
                                 .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(528, Short.MAX_VALUE))
+                .addContainerGap(624, Short.MAX_VALUE))
         );
         ML2Panel4Layout.setVerticalGroup(
             ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2124,7 +2176,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
                     .addComponent(totalRecB, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
         ML2Scroll4.setViewportView(ML2Panel4);
@@ -2330,7 +2382,8 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addComponent(jLabel71)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(totalBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dataBnt1)))
                     .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2359,8 +2412,10 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addComponent(resetHistoriaB2)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 418, Short.MAX_VALUE))
-                    .addComponent(jScrollPane16))
+                        .addGap(18, 18, 18)
+                        .addComponent(dataBnt1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2563,7 +2618,8 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addComponent(jLabel74)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(totalBntB, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dataBnt2)))
                     .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2592,8 +2648,10 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addComponent(resetHistoriaB3)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dataBnt2)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane17))
+                    .addComponent(jScrollPane17, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2796,7 +2854,8 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addComponent(jLabel79)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(totalBntC, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dataBnt3)))
                     .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2825,8 +2884,10 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addComponent(resetHistoriaB4)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dataBnt3)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane18))
+                    .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2903,6 +2964,35 @@ public class Sessio1 extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        colorTrailsCronoBtn.setText("<html><center>Comença Crono Color Trails 1");
+        colorTrailsCronoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorTrailsCronoBtnActionPerformed(evt);
+            }
+        });
+
+        colorTrailsCronoLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        colorTrailsCronoLabel.setText("00:00:00");
+
+        jButton3.setText("Marcar data");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        dataColor.setText("Data: \"encara no s'ha fet el test\"");
+
+        colorTrailsCronoBtn1.setText("<html><center>Comença Crono Color Trails 2");
+        colorTrailsCronoBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorTrailsCronoBtn1ActionPerformed(evt);
+            }
+        });
+
+        colorTrailsCronoLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        colorTrailsCronoLabel1.setText("00:00:00");
+
         javax.swing.GroupLayout digitsDirectePanel1Layout = new javax.swing.GroupLayout(digitsDirectePanel1);
         digitsDirectePanel1.setLayout(digitsDirectePanel1Layout);
         digitsDirectePanel1Layout.setHorizontalGroup(
@@ -2921,9 +3011,21 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addGap(10, 10, 10)
                                 .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
+                                        .addComponent(colorTrailsCronoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(colorTrailsCronoLabel))
+                                    .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(dataColor))
+                                    .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
+                                        .addComponent(colorTrailsCronoBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(colorTrailsCronoLabel1))))))
                     .addComponent(jLabel30))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(456, Short.MAX_VALUE))
         );
         digitsDirectePanel1Layout.setVerticalGroup(
             digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2937,11 +3039,24 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel17)
+                        .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(colorTrailsCronoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(colorTrailsCronoLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(colorTrailsCronoBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(colorTrailsCronoLabel1))
+                        .addGap(18, 18, 18)
+                        .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton3)
+                            .addComponent(dataColor)))
                     .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(404, Short.MAX_VALUE))
         );
 
         digitsDirecteScroll1.setViewportView(digitsDirectePanel1);
@@ -3173,7 +3288,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel33)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(569, Short.MAX_VALUE))
+                .addContainerGap(665, Short.MAX_VALUE))
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3182,7 +3297,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(444, Short.MAX_VALUE))
+                .addContainerGap(518, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll.setViewportView(Panel);
@@ -3206,7 +3321,7 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel99.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel99.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        fiveDigitStart2.setText("<html><center>Comença Crono<br>Lectura");
+        fiveDigitStart2.setText("<html><center>Comença Crono<br>Compteig");
         fiveDigitStart2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fiveDigitStart2ActionPerformed(evt);
@@ -3410,7 +3525,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel93)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(569, Short.MAX_VALUE))
+                .addContainerGap(665, Short.MAX_VALUE))
         );
         Panel1Layout.setVerticalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3419,7 +3534,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel93)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(444, Short.MAX_VALUE))
+                .addContainerGap(518, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll1.setViewportView(Panel1);
@@ -3443,7 +3558,7 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel126.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel126.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        fiveDigitStart3.setText("<html><center>Comença Crono<br>Lectura");
+        fiveDigitStart3.setText("<html><center>Comença Crono<br>Elecció");
         fiveDigitStart3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fiveDigitStart3ActionPerformed(evt);
@@ -3647,7 +3762,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel122)
                     .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(569, Short.MAX_VALUE))
+                .addContainerGap(665, Short.MAX_VALUE))
         );
         Panel2Layout.setVerticalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3656,7 +3771,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel122)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(430, Short.MAX_VALUE))
+                .addContainerGap(504, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll2.setViewportView(Panel2);
@@ -3680,7 +3795,7 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel145.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel145.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        fiveDigitStart4.setText("<html><center>Comença Crono<br>Lectura");
+        fiveDigitStart4.setText("<html><center>Comença Crono<br>Alternança");
         fiveDigitStart4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fiveDigitStart4ActionPerformed(evt);
@@ -3884,7 +3999,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel141)
                     .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(569, Short.MAX_VALUE))
+                .addContainerGap(665, Short.MAX_VALUE))
         );
         Panel3Layout.setVerticalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3893,7 +4008,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel141)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(430, Short.MAX_VALUE))
+                .addContainerGap(504, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll3.setViewportView(Panel3);
@@ -3912,9 +4027,7 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jLabel163.setText("Errors:");
 
-        lecturaTemps.setText("0");
-
-        lecturaErrors.setText("0");
+        lecturaTemps.setText("00:00:00");
 
         jLabel166.setText("PC:");
 
@@ -3933,7 +4046,7 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jLabel172.setText("PC:");
 
-        compteigTemps.setText("0");
+        compteigTemps.setText("00:00:00");
 
         compteigTempsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         compteigTempsPC.setText("0");
@@ -3945,8 +4058,6 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jLabel177.setText("Errors:");
 
-        compteigErrors.setText("0");
-
         jLabel179.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel179.setText("Elecció:");
 
@@ -3954,7 +4065,7 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jLabel181.setText("PC:");
 
-        eleccioTemps.setText("0");
+        eleccioTemps.setText("00:00:00");
 
         eleccioTempsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         eleccioTempsPC.setText("0");
@@ -3966,8 +4077,6 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jLabel186.setText("Errors:");
 
-        eleccioErrors.setText("0");
-
         jLabel188.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel188.setText("Alternança:");
 
@@ -3975,7 +4084,7 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jLabel190.setText("PC:");
 
-        alternTemps.setText("0");
+        alternTemps.setText("00:00:00");
 
         alternTempsPC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         alternTempsPC.setText("0");
@@ -3987,8 +4096,6 @@ public class Sessio1 extends javax.swing.JFrame {
 
         jLabel195.setText("Errors:");
 
-        alternErrors.setText("0");
-
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
@@ -3996,69 +4103,25 @@ public class Sessio1 extends javax.swing.JFrame {
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel161)
-                    .addComponent(jLabel170)
-                    .addComponent(jLabel179)
-                    .addComponent(jLabel188)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel161)
+                            .addComponent(jLabel170)
+                            .addComponent(jLabel179)
+                            .addComponent(jLabel188))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel163)
-                                    .addComponent(jLabel162))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lecturaTemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lecturaErrors, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel166)
-                                    .addComponent(jLabel167))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lecturaTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lecturaErrorsPC)))
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel177)
-                                    .addComponent(jLabel171))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(compteigTemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(compteigErrors))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel176)
-                                    .addComponent(jLabel172))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(compteigTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(compteigErrorsPC)))
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel186)
-                                    .addComponent(jLabel180))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(eleccioTemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(eleccioErrors))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel185)
-                                    .addComponent(jLabel181))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(eleccioTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(eleccioErrorsPC)))
-                            .addGroup(jPanel15Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel195)
                                     .addComponent(jLabel189))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(alternTemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(alternErrors))
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(alternTemps)
+                                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel194)
@@ -4066,8 +4129,77 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(alternTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(alternErrorsPC))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(alternErrorsPC))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                                    .addComponent(jTextField17)))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel186)
+                                    .addComponent(jLabel180))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(eleccioTemps)
+                                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addComponent(jLabel185)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(eleccioErrorsPC))
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addComponent(jLabel181)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(eleccioTempsPC)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                                    .addComponent(jTextField15))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel163)
+                                    .addComponent(jLabel162))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addComponent(lecturaTemps)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel167)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lecturaTempsPC))
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel166)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lecturaErrorsPC)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField11)
+                                    .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel177)
+                                    .addComponent(jLabel171))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(compteigTemps)
+                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel176)
+                                    .addComponent(jLabel172))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(compteigTempsPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(compteigErrorsPC))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField12)
+                                    .addComponent(jTextField13))))))
+                .addGap(4, 4, 4))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4076,74 +4208,80 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel161)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel162)
+                        .addComponent(lecturaTemps))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel162)
-                            .addComponent(lecturaTemps)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lecturaTempsPC)
                             .addComponent(jLabel167))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lecturaErrorsPC)
+                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel166)
                             .addComponent(jLabel163)
-                            .addComponent(lecturaErrors)
-                            .addComponent(jLabel166)))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(lecturaTempsPC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lecturaErrorsPC)))
+                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel170)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel171)
+                        .addComponent(compteigTemps)
+                        .addComponent(jLabel172))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel171)
-                            .addComponent(compteigTemps)
-                            .addComponent(jLabel172))
+                            .addComponent(compteigTempsPC)
+                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel177)
-                            .addComponent(compteigErrors)
-                            .addComponent(jLabel176)))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(compteigTempsPC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(compteigErrorsPC)))
+                            .addComponent(compteigErrorsPC)
+                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel176)
+                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel177))))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel179)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel180)
-                            .addComponent(eleccioTemps)
-                            .addComponent(jLabel181))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel186)
-                            .addComponent(eleccioErrors)
-                            .addComponent(jLabel185)))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(eleccioTempsPC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(eleccioErrorsPC)))
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eleccioTempsPC)
+                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel181)
+                    .addComponent(eleccioTemps)
+                    .addComponent(jLabel180))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eleccioErrorsPC)
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel185)
+                    .addComponent(jLabel186)
+                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel188)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel189)
-                            .addComponent(alternTemps)
-                            .addComponent(jLabel190))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel195)
-                            .addComponent(alternErrors)
-                            .addComponent(jLabel194)))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(alternTempsPC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(alternErrorsPC)))
+                    .addComponent(jLabel190)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel189)
+                                .addComponent(alternTemps))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel195)
+                                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel15Layout.createSequentialGroup()
+                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(alternTempsPC)
+                                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(alternErrorsPC)
+                                .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel194)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -4180,6 +4318,12 @@ public class Sessio1 extends javax.swing.JFrame {
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addComponent(jLabel205)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(inhibicioPC)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel16Layout.createSequentialGroup()
                                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel199)
                                     .addComponent(jLabel198)
@@ -4193,11 +4337,12 @@ public class Sessio1 extends javax.swing.JFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                             .addComponent(lecturaTemps2))
                                         .addComponent(eleccioTemps2))
-                                    .addComponent(inhibicioPD)))
-                            .addGroup(jPanel16Layout.createSequentialGroup()
-                                .addComponent(jLabel205)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inhibicioPC)))
+                                    .addComponent(inhibicioPD))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -4207,24 +4352,28 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel198)
-                    .addComponent(eleccioTemps2))
+                    .addComponent(eleccioTemps2)
+                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel199)
                     .addComponent(lecturaTemps2)
-                    .addComponent(jLabel233))
+                    .addComponent(jLabel233)
+                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel202)
-                    .addComponent(inhibicioPD))
+                    .addComponent(inhibicioPD)
+                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel205)
-                    .addComponent(inhibicioPC))
+                    .addComponent(inhibicioPC)
+                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -4261,6 +4410,12 @@ public class Sessio1 extends javax.swing.JFrame {
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(jLabel213)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(flexibilitatPC)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel17Layout.createSequentialGroup()
                                         .addGap(1, 1, 1)
@@ -4277,12 +4432,13 @@ public class Sessio1 extends javax.swing.JFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                             .addComponent(compteigTemps2))
                                         .addComponent(alternanTemps2))
-                                    .addComponent(flexibilitatPD)))
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addComponent(jLabel213)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(flexibilitatPC)))
-                        .addGap(0, 49, Short.MAX_VALUE)))
+                                    .addComponent(flexibilitatPD))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 16, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
@@ -4291,28 +4447,37 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(alternanTemps2)
-                    .addComponent(jLabel207))
+                    .addComponent(jLabel207)
+                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(compteigTemps2)
                     .addComponent(jLabel234)
-                    .addComponent(jLabel206))
+                    .addComponent(jLabel206)
+                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel210)
-                    .addComponent(flexibilitatPD))
+                    .addComponent(flexibilitatPD)
+                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel213)
-                    .addComponent(flexibilitatPC))
+                    .addComponent(flexibilitatPC)
+                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        calculPercentilsFiveDigit.setText("Calcular percentils");
+        calculPercentilsFiveDigit.setText("Marcar data");
+        calculPercentilsFiveDigit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculPercentilsFiveDigitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Panel4Layout = new javax.swing.GroupLayout(Panel4);
         Panel4.setLayout(Panel4Layout);
@@ -4321,18 +4486,21 @@ public class Sessio1 extends javax.swing.JFrame {
             .addGroup(Panel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel160)
                     .addGroup(Panel4Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Panel4Layout.createSequentialGroup()
+                                .addComponent(calculPercentilsFiveDigit)
+                                .addGap(18, 18, 18)
+                                .addComponent(dataFive))
                             .addGroup(Panel4Layout.createSequentialGroup()
                                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(calculPercentilsFiveDigit)))
-                    .addComponent(jLabel160))
-                .addContainerGap(930, Short.MAX_VALUE))
+                                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(966, Short.MAX_VALUE))
         );
         Panel4Layout.setVerticalGroup(
             Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4340,15 +4508,17 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel160)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel4Layout.createSequentialGroup()
-                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(calculPercentilsFiveDigit)
-                .addContainerGap(344, Short.MAX_VALUE))
+                    .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(calculPercentilsFiveDigit)
+                    .addComponent(dataFive))
+                .addContainerGap(377, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll4.setViewportView(Panel4);
@@ -4414,6 +4584,15 @@ public class Sessio1 extends javax.swing.JFrame {
             fluenciaVerbalTable.getColumnModel().getColumn(4).setResizable(false);
         }
 
+        jButton17.setText("Marcar data");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        dataFluencia.setText("Data: Encara no s'ha realitzat el test");
+
         javax.swing.GroupLayout digitsDirectePanel2Layout = new javax.swing.GroupLayout(digitsDirectePanel2);
         digitsDirectePanel2.setLayout(digitsDirectePanel2Layout);
         digitsDirectePanel2Layout.setHorizontalGroup(
@@ -4423,9 +4602,13 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton17)
+                            .addComponent(dataFluencia)))
                     .addComponent(jLabel164))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(824, Short.MAX_VALUE))
         );
         digitsDirectePanel2Layout.setVerticalGroup(
             digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4433,7 +4616,13 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel164)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)
+                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+                    .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
+                        .addComponent(jButton17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(dataFluencia)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -4497,7 +4686,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(paginaLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(sepBottom, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 904, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1000, Short.MAX_VALUE)
                 .addComponent(acceptaBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelaBtn)
@@ -4615,25 +4804,49 @@ public class Sessio1 extends javax.swing.JFrame {
             BNTATable.setValueAt("0", i, 2);
             BNTATable.setValueAt("0", i, 3);
         }
+        percentilBNTA.setText("0");
+        nssaBNTA.setText("0");
         this.correctesBntA.setText("0");
         this.semanticaBntA.setText("0");
         this.totalBntA.setText("0");
     }//GEN-LAST:event_resetHistoriaB2ActionPerformed
 
     private void resetHistoriaB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetHistoriaB3ActionPerformed
-        // TODO add your handling code here:
+        for (int i = 0; i<this.BNTBTable.getRowCount(); i++){
+            BNTBTable.setValueAt("0", i, 2);
+            BNTBTable.setValueAt("0", i, 3);
+        }
+        percentilBNTB.setText("0");
+        nssaBNTB.setText("0");
+        this.correctesBntB.setText("0");
+        this.semanticaBntB.setText("0");
+        this.totalBntB.setText("0");
     }//GEN-LAST:event_resetHistoriaB3ActionPerformed
 
     private void resetHistoriaB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetHistoriaB4ActionPerformed
-        // TODO add your handling code here:
+        for (int i = 0; i<this.BNTCTable.getRowCount(); i++){
+            BNTCTable.setValueAt("0", i, 2);
+            BNTCTable.setValueAt("0", i, 3);
+        }
+        percentilBNTC.setText("0");
+        nssaBNTC.setText("0");
+        this.correctesBntC.setText("0");
+        this.semanticaBntC.setText("0");
+        this.totalBntC.setText("0");
     }//GEN-LAST:event_resetHistoriaB4ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
           calcularDigits(true);
+          DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataDD.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         calcularDigits(false);
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataDI.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -4647,6 +4860,7 @@ public class Sessio1 extends javax.swing.JFrame {
             temps2.setText(this.fiveDigitStart1.getText());
             timer.stop();
             fiveDigitStart1.setText("<html><center>Comença Crono<br>Lectura");
+            lecturaTemps.setText(this.temps2.getText());
             fiveDigitStart1.setEnabled(true);
         }else {
             fiveDigitStart1.setText("<html><center>Comença Crono<br>Lectura");
@@ -4681,6 +4895,7 @@ public class Sessio1 extends javax.swing.JFrame {
             temps4.setText(this.fiveDigitStart2.getText());
             timer.stop();
             fiveDigitStart2.setText("<html><center>Comença Crono<br>Lectura");
+            compteigTemps.setText(this.temps4.getText());
             fiveDigitStart2.setEnabled(true);
         }else {
             fiveDigitStart2.setText("<html><center>Comença Crono<br>Lectura");
@@ -4707,6 +4922,7 @@ public class Sessio1 extends javax.swing.JFrame {
             temps6.setText(this.fiveDigitStart3.getText());
             timer.stop();
             fiveDigitStart3.setText("<html><center>Comença Crono<br>Lectura");
+            eleccioTemps.setText(this.temps6.getText());
             fiveDigitStart3.setEnabled(true);
         }else {
             fiveDigitStart3.setText("<html><center>Comença Crono<br>Lectura");
@@ -4733,6 +4949,7 @@ public class Sessio1 extends javax.swing.JFrame {
             temps8.setText(this.fiveDigitStart4.getText());
             timer.stop();
             fiveDigitStart4.setText("<html><center>Comença Crono<br>Lectura");
+            this.alternTemps.setText(this.temps8.getText());
             fiveDigitStart4.setEnabled(true);
         }else {
             fiveDigitStart4.setText("<html><center>Comença Crono<br>Lectura");
@@ -4746,24 +4963,39 @@ public class Sessio1 extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         calcularBNTC();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataBnt3.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         calcularBNTB();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataBnt2.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         calcularBNTA();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataBnt1.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int MLI = calculaMLI(Integer.parseInt(ML1Total.getText()));
         puntuacioML1.setText(MLI+"");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataMl1.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int MLII = calculaMLII(Integer.parseInt(ML2Total.getText()));
         puntuacioML2.setText(MLII+"");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataMl2.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
@@ -4828,6 +5060,52 @@ public class Sessio1 extends javax.swing.JFrame {
             Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_obreExcelBtnActionPerformed
+
+    private void colorTrailsCronoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorTrailsCronoBtnActionPerformed
+        if (timerColor.isRunning()){
+            timerColor.stop();
+            colorTrailsCronoBtn.setText("Comença crono Color Trails 1");
+            this.colorTrailsTable.setValueAt(secondsColor1+"", 0, 1);
+            colorTrailsCronoLabel.setText("");
+        } else {
+            this.secondsColor1 = 0;
+            startTime = System.currentTimeMillis();
+            this.timerColor.start();
+            colorTrailsCronoBtn.setText("Marcar crono");
+        }
+    }//GEN-LAST:event_colorTrailsCronoBtnActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataColor.setText("Data del test: "+dateFormat.format(date));
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void calculPercentilsFiveDigitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculPercentilsFiveDigitActionPerformed
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataFive.setText("Data del test: "+dateFormat.format(date));
+    }//GEN-LAST:event_calculPercentilsFiveDigitActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataFluencia.setText("Data del test: "+dateFormat.format(date));
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void colorTrailsCronoBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorTrailsCronoBtn1ActionPerformed
+        if (timerColor2.isRunning()){
+            timerColor2.stop();
+            colorTrailsCronoBtn1.setText("Comença crono Color Trails 2");
+            this.colorTrailsTable.setValueAt(secondsColor2+"", 4, 1);
+            colorTrailsCronoLabel1.setText("");
+        } else {
+            this.secondsColor2 = 0;
+            startTime = System.currentTimeMillis();
+            this.timerColor2.start();
+            colorTrailsCronoBtn1.setText("Marcar crono");
+        }
+    }//GEN-LAST:event_colorTrailsCronoBtn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -4902,7 +5180,6 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JPanel Panel3;
     private javax.swing.JPanel Panel4;
     private javax.swing.JButton acceptaBtn;
-    private javax.swing.JLabel alternErrors;
     private javax.swing.JLabel alternErrorsPC;
     private javax.swing.JLabel alternTemps;
     private javax.swing.JLabel alternTempsPC;
@@ -4912,10 +5189,13 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JButton calculPercentilsFiveDigit;
     private javax.swing.JButton cancelaBtn;
     private javax.swing.JPanel cogstateTab;
+    private javax.swing.JButton colorTrailsCronoBtn;
+    private javax.swing.JButton colorTrailsCronoBtn1;
+    private javax.swing.JLabel colorTrailsCronoLabel;
+    private javax.swing.JLabel colorTrailsCronoLabel1;
     private javax.swing.JPanel colorTrailsTab;
     private javax.swing.JPanel colorTrailsTab1;
     private org.jdesktop.swingx.JXTable colorTrailsTable;
-    private javax.swing.JLabel compteigErrors;
     private javax.swing.JLabel compteigErrorsPC;
     private javax.swing.JLabel compteigTemps;
     private javax.swing.JLabel compteigTemps2;
@@ -4923,6 +5203,16 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel correctesBntA;
     private javax.swing.JLabel correctesBntB;
     private javax.swing.JLabel correctesBntC;
+    private javax.swing.JLabel dataBnt1;
+    private javax.swing.JLabel dataBnt2;
+    private javax.swing.JLabel dataBnt3;
+    private javax.swing.JLabel dataColor;
+    private javax.swing.JLabel dataDD;
+    private javax.swing.JLabel dataDI;
+    private javax.swing.JLabel dataFive;
+    private javax.swing.JLabel dataFluencia;
+    private javax.swing.JLabel dataMl1;
+    private javax.swing.JLabel dataMl2;
     private javax.swing.JPanel dataPanel;
     private javax.swing.JPanel digitsDirectePanel;
     private javax.swing.JPanel digitsDirectePanel1;
@@ -4937,7 +5227,6 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JScrollPane digitsInversScroll;
     private org.jdesktop.swingx.JXTable digitsInversTable;
     private javax.swing.JPanel digitsTab;
-    private javax.swing.JLabel eleccioErrors;
     private javax.swing.JLabel eleccioErrorsPC;
     private javax.swing.JLabel eleccioTemps;
     private javax.swing.JLabel eleccioTemps2;
@@ -4970,9 +5259,11 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -5213,7 +5504,27 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField25;
+    private javax.swing.JTextField jTextField26;
+    private javax.swing.JTextField jTextField27;
+    private javax.swing.JTextField jTextField28;
+    private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
@@ -5221,7 +5532,6 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JLabel lecturaErrors;
     private javax.swing.JLabel lecturaErrorsPC;
     private javax.swing.JLabel lecturaTemps;
     private javax.swing.JLabel lecturaTemps2;
@@ -5350,14 +5660,35 @@ public class Sessio1 extends javax.swing.JFrame {
             {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
-                int val = Integer.parseInt((String)table.getValueAt(row, 3));
-                    if (val == 0){
-                        table.setValueAt("1",row, 3);
-                        table.setValueAt(table.getValueAt(row,1),row, 2);
-                    } else{
-                        table.setValueAt("0",row, 3);
-                        table.setValueAt("",row, 2);
+                int num0 = 0;
+                int num1 = 0;
+                
+                int sumaAnteriors = 1;
+                
+                if (row > 1){
+                    sumaAnteriors = 0;
+                    sumaAnteriors+=Integer.parseInt((String)table.getValueAt(row-1,3));
+                    sumaAnteriors+=Integer.parseInt((String)table.getValueAt(row-2,3));
+                }
+                
+                if (row != 0){
+                    for (int i = 0; i < row; i++){
+                        if (table.getValueAt(i,3).equals("0")) num0++;
                     }
+                }
+                for (int j = row+1; j < table.getRowCount(); j++){
+                    if (table.getValueAt(j,3).equals("1")) num1++;
+                }
+                int val = Integer.parseInt((String)table.getValueAt(row, 3));
+                if (sumaAnteriors > 0 && num1 < 1) {
+                    if (val == 0) {
+                        table.setValueAt("1", row, 3);
+                        table.setValueAt(table.getValueAt(row, 1), row, 2);
+                    } else {
+                        table.setValueAt("0", row, 3);
+                        table.setValueAt("", row, 2);
+                    }
+                }
                 
                 
                 
@@ -5374,9 +5705,12 @@ public class Sessio1 extends javax.swing.JFrame {
                     }
                 }
                 model.setEditable(4,false);
-                span = sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1;
-                spanDD.setText(span+"");
-                puntuacioDirectaDD.setText(sumaTotal+"");
+                if (sumaAnteriors > 0 && num1 < 1){
+                    puntuacioDirectaDD.setText(sumaTotal+"");
+                    sumaTotal+=num0;
+                    span = sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1;
+                    spanDD.setText(span+"");
+                }
             }
         };
         
@@ -5475,15 +5809,36 @@ public class Sessio1 extends javax.swing.JFrame {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
                 int val = Integer.parseInt((String)table.getValueAt(row, 4));
+
+                int sumaAnteriors = 1;
                 
-                if (val == 0){
-                        table.setValueAt("1",row, 4);
-                        table.setValueAt(table.getValueAt(row,2),row, 3);
-                    } else{
-                        table.setValueAt("0",row, 4);
-                        table.setValueAt("",row, 3);
+                if (row > 1){
+                    sumaAnteriors = 0;
+                    sumaAnteriors+=Integer.parseInt((String)table.getValueAt(row-1,4));
+                    sumaAnteriors+=Integer.parseInt((String)table.getValueAt(row-2,4));
+                }
+                
+                int num0 = 0;
+                int num1 = 0;
+                if (row != 0){
+                    for (int i = 0; i < row; i++){
+                        if (table.getValueAt(i,4).equals("0")) num0++;
                     }
-                
+                }
+                for (int j = row+1; j < table.getRowCount(); j++){
+                    if (table.getValueAt(j,4).equals("1")) num1++;
+                }
+
+                if (sumaAnteriors > 0 && num1 < 1) {
+                    if (val == 0) {
+                        table.setValueAt("1", row, 4);
+                        table.setValueAt(table.getValueAt(row, 2), row, 3);
+                    } else {
+                        table.setValueAt("0", row, 4);
+                        table.setValueAt("", row, 3);
+                    }
+                }
+
                 int sumaTotal = 0;
                 int suma = 0;
                 int span = 0;
@@ -5497,9 +5852,13 @@ public class Sessio1 extends javax.swing.JFrame {
                     }
                 }
                 model.setEditable(5,false);
-                span = sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1;
-                spanDI.setText(span+"");
-                puntuacioDirectaDI.setText(sumaTotal+"");
+                if (sumaAnteriors > 0 && num1 < 1){
+                    sumaTotal+=num0;
+                    puntuacioDirectaDI.setText(sumaTotal+"");
+                    span = sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1;
+                    spanDI.setText(span+"");
+                    puntuacioDirectaDI.setText(sumaTotal+"");
+                }
             }
         };
         
@@ -6066,32 +6425,32 @@ public class Sessio1 extends javax.swing.JFrame {
     private void initBNTATable() {
         customModel model = new customModel(
             new Object [][] {
-                {"1", "Llit(un moble)","0","0"},
-                {"2", "Escombra (serveix per netejar),","0","0"},
-                {"3", "Banc (serveix per seure)","0","0"},
-                {"4", "Pop (animal marí)","0","0"},
-                {"5", "Bolet (quelcom per menjar)","0","0"},
-                {"6", "Helicòpter (serveix per viatjar per l'aire)","0","0"},
-                {"7", "Corona de flors", "0","0"},
-                {"8", "Pinces (utensili)","0","0"},
-                {"9", "Compàs (serveix per dibuixar)","0","0"},
-                {"10", "Magdalena (quelcom per menjar)","0","0"},
-                {"11", "Balda (part d'una porta)","0","0"},
-                {"12", "Canoa (s'utlititza a l'aigua)","0","0"},
-                {"13", "Pelicà (una au)","0","0"},
-                {"14", "Unicorn (animal mític)","0","0"},
-                {"15", "Transportador (serveix per mesurar angles)","0","0"}
+                {"1", "Llit(un moble)","","0","0"},
+                {"2", "Escombra (serveix per netejar),","","0","0"},
+                {"3", "Banc (serveix per seure)","","0","0"},
+                {"4", "Pop (animal marí)","","0","0"},
+                {"5", "Bolet (quelcom per menjar)","","0","0"},
+                {"6", "Helicòpter (serveix per viatjar per l'aire)","","0","0"},
+                {"7", "Corona de flors","", "0","0"},
+                {"8", "Pinces (utensili)","","0","0"},
+                {"9", "Compàs (serveix per dibuixar)","","0","0"},
+                {"10", "Magdalena (quelcom per menjar)","","0","0"},
+                {"11", "Balda (part d'una porta)","","0","0"},
+                {"12", "Canoa (s'utlititza a l'aigua)","","0","0"},
+                {"13", "Pelicà (una au)","","0","0"},
+                {"14", "Unicorn (animal mític)","","0","0"},
+                {"15", "Transportador (serveix per mesurar angles)","","0","0"}
             },
             new String [] {
-                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version A", " Correctes", " Ajuda semàntica"
+                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version A","Resposta pacient", " Correctes", " Ajuda semàntica"
             }
         );
         
         Class[] types = new Class [] {
-            java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
         };
         boolean[] canEdit = new boolean [] {
-            false, false, true, true
+            false, false, true ,true, true
         };
         
         model.setTypes(types);
@@ -6105,7 +6464,7 @@ public class Sessio1 extends javax.swing.JFrame {
         BNTATable.getColumn(1).setHeaderRenderer(centerRenderer);
         
         TableCellRenderer headerRenderer = new VerticalTableHeaderCellRenderer();
-        for (int i=2; i<BNTATable.getColumnModel().getColumnCount(); i++){
+        for (int i=3; i<BNTATable.getColumnModel().getColumnCount(); i++){
             BNTATable.getColumn(i).setHeaderRenderer(headerRenderer);
         }
         
@@ -6114,6 +6473,7 @@ public class Sessio1 extends javax.swing.JFrame {
             BNTATable.getColumnModel().getColumn(1).setResizable(false);
             BNTATable.getColumnModel().getColumn(2).setResizable(false);
             BNTATable.getColumnModel().getColumn(3).setResizable(false);
+            BNTATable.getColumnModel().getColumn(4).setResizable(false);
         }
         BNTATable.getTableHeader().setReorderingAllowed(false);
         
@@ -6130,12 +6490,12 @@ public class Sessio1 extends javax.swing.JFrame {
             {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
-                int val = Integer.parseInt((String)table.getValueAt(row, 2));
-                table.setValueAt(val == 0 ? "1" : "0", row, 2);
+                int val = Integer.parseInt((String)table.getValueAt(row, 3));
+                table.setValueAt(val == 0 ? "1" : "0", row, 3);
                 
                 int sumaTotal = 0;
                 for (int i = 0; i<table.getRowCount(); i++){
-                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 2));
+                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 3));
                 }
                 correctesBntA.setText(sumaTotal+"");
                 totalBntA.setText(""+(sumaTotal+Integer.parseInt(semanticaBntA.getText())));
@@ -6149,20 +6509,20 @@ public class Sessio1 extends javax.swing.JFrame {
             {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
-                int val = Integer.parseInt((String)table.getValueAt(row, 3));
-                table.setValueAt(val == 0 ? "1" : "0", row, 3);
+                int val = Integer.parseInt((String)table.getValueAt(row, 4));
+                table.setValueAt(val == 0 ? "1" : "0", row, 4);
                 
                 int sumaTotal = 0;
                 for (int i = 0; i<table.getRowCount(); i++){
-                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 3));
+                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 4));
                 }
                 semanticaBntA.setText(sumaTotal+"");
                 totalBntA.setText(""+(sumaTotal+Integer.parseInt(correctesBntA.getText())));
             }
         };
         
-        ButtonColumn buttonColumn = new ButtonColumn(BNTATable, action1, 2);
-        ButtonColumn buttonColumn2 = new ButtonColumn(BNTATable, action2, 3);
+        ButtonColumn buttonColumn = new ButtonColumn(BNTATable, action1, 3);
+        ButtonColumn buttonColumn2 = new ButtonColumn(BNTATable, action2, 4);
         BNTATable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         BNTATable.packAll();
     }
@@ -6170,32 +6530,32 @@ public class Sessio1 extends javax.swing.JFrame {
     private void initBNTBTable() {
         customModel model = new customModel(
             new Object [][] {
-                {"1", "Arbre (creix al camp)","0","0"},
-                {"2", "Flor (creix al jardí)","0","0"},
-                {"3", "Xiulet (serveix per bufar)","0","0"},
-                {"4", "Escales mecàniques (serveix per pujar)","0","0"},
-                {"5", "Penjador (es troba en un armari)","0","0"},
-                {"6", "Morrió (s'utilitza pels gossos)","0","0"},
-                {"7", "Volcà (un tipus de muntanya)", "0","0"},
-                {"8", "Gla (prové d'un arbre) ","0","0"},
-                {"9", "Cactus (quelcom que creix)","0","0"},
-                {"10", "Arpa (intrument musical)","0","0"},
-                {"11", "Dard (serveix per llançar)","0","0"},
-                {"12", "Soga (per penjar)","0","0"},
-                {"13", "Xanques (s'usen per caminar més alt)","0","0"},
-                {"14", "Esfinx (es troba a Egipte)","0","0"},
-                {"15", "Pèrgola (s'usa al jardí)","0","0"}
+                {"1", "Arbre (creix al camp)","","0","0"},
+                {"2", "Flor (creix al jardí)","","0","0"},
+                {"3", "Xiulet (serveix per bufar)","","0","0"},
+                {"4", "Escales mecàniques (serveix per pujar)","","0","0"},
+                {"5", "Penjador (es troba en un armari)","","0","0"},
+                {"6", "Morrió (s'utilitza pels gossos)","","0","0"},
+                {"7", "Volcà (un tipus de muntanya)","", "0","0"},
+                {"8", "Gla (prové d'un arbre)","","0","0"},
+                {"9", "Cactus (quelcom que creix)","","0","0"},
+                {"10", "Arpa (intrument musical)","","0","0"},
+                {"11", "Dard (serveix per llançar)","","0","0"},
+                {"12", "Soga (per penjar)","","0","0"},
+                {"13", "Xanques (s'usen per caminar més alt)","","0","0"},
+                {"14", "Esfinx (es troba a Egipte)","","0","0"},
+                {"15", "Pèrgola (s'usa al jardí)","","0","0"}
             },
             new String [] {
-                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version B", " Correctes", " Ajuda semàntica"
+                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version B", "Resposta pacient" ," Correctes", " Ajuda semàntica"
             }
         );
         
         Class[] types = new Class [] {
-            java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
         };
         boolean[] canEdit = new boolean [] {
-            false, false, true, true
+            false, false, true, true, true
         };
         
         model.setTypes(types);
@@ -6209,7 +6569,7 @@ public class Sessio1 extends javax.swing.JFrame {
         BNTBTable.getColumn(1).setHeaderRenderer(centerRenderer);
         
         TableCellRenderer headerRenderer = new VerticalTableHeaderCellRenderer();
-        for (int i=2; i<BNTBTable.getColumnModel().getColumnCount(); i++){
+        for (int i=3; i<BNTBTable.getColumnModel().getColumnCount(); i++){
             BNTBTable.getColumn(i).setHeaderRenderer(headerRenderer);
         }
         
@@ -6218,6 +6578,7 @@ public class Sessio1 extends javax.swing.JFrame {
             BNTBTable.getColumnModel().getColumn(1).setResizable(false);
             BNTBTable.getColumnModel().getColumn(2).setResizable(false);
             BNTBTable.getColumnModel().getColumn(3).setResizable(false);
+            BNTBTable.getColumnModel().getColumn(4).setResizable(false);
         }
         BNTBTable.getTableHeader().setReorderingAllowed(false);
         BNTBTable.setHighlighters(HighlighterFactory.createSimpleStriping());
@@ -6233,12 +6594,12 @@ public class Sessio1 extends javax.swing.JFrame {
             {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
-                int val = Integer.parseInt((String)table.getValueAt(row, 2));
-                table.setValueAt(val == 0 ? "1" : "0", row, 2);
+                int val = Integer.parseInt((String)table.getValueAt(row, 3));
+                table.setValueAt(val == 0 ? "1" : "0", row, 3);
                 
                 int sumaTotal = 0;
                 for (int i = 0; i<table.getRowCount(); i++){
-                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 2));
+                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 3));
                 }
                 correctesBntB.setText(sumaTotal+"");
                 totalBntB.setText(""+(sumaTotal+Integer.parseInt(semanticaBntB.getText())));
@@ -6252,20 +6613,20 @@ public class Sessio1 extends javax.swing.JFrame {
             {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
-                int val = Integer.parseInt((String)table.getValueAt(row, 3));
-                table.setValueAt(val == 0 ? "1" : "0", row, 3);
+                int val = Integer.parseInt((String)table.getValueAt(row, 4));
+                table.setValueAt(val == 0 ? "1" : "0", row, 4);
                 
                 int sumaTotal = 0;
                 for (int i = 0; i<table.getRowCount(); i++){
-                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 3));
+                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 4));
                 }
                 semanticaBntB.setText(sumaTotal+"");
                 totalBntB.setText(""+(sumaTotal+Integer.parseInt(correctesBntB.getText())));
             }
         };
         
-        ButtonColumn buttonColumn = new ButtonColumn(BNTBTable, action1, 2);
-        ButtonColumn buttonColumn2 = new ButtonColumn(BNTBTable, action2, 3);
+        ButtonColumn buttonColumn = new ButtonColumn(BNTBTable, action1, 3);
+        ButtonColumn buttonColumn2 = new ButtonColumn(BNTBTable, action2, 4);
         BNTBTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         BNTBTable.packAll();
     }
@@ -6273,32 +6634,32 @@ public class Sessio1 extends javax.swing.JFrame {
     private void initBNTCTable() {
         customModel model = new customModel(
             new Object [][] {
-                {"1", "Casa (tipus d'edifici)","0","0"},
-                {"2", "Respall de dents (s'usa a la boca)","0","0"},
-                {"3", "Cargol (un animal)","0","0"},
-                {"4", "Cadira de rodes (es troba a l'hospital)","0","0"},
-                {"5", "Llapis (serveix per escriure)","0","0"},
-                {"6", "Màscara (part d'una disfressa)","0","0"},
-                {"7", "Acordió (instrument musical)", "0","0"},
-                {"8", "Piràmide (es troba a Egipte)","0","0"},
-                {"9", "Armònica (instrument musical)","0","0"},
-                {"10", "Globus terraqui (un tipus de mapa)","0","0"},
-                {"11", "Trípode (el fan servir els fotògrafs)","0","0"},
-                {"12", "Pergamí (un document)","0","0"},
-                {"13", "Jou (s'utilitza per a animals de tir)","0","0"},
-                {"14", "Estetoscopi (el fan servir els metges)","0","0"},
-                {"15", "Àbac (serveix per comptar)","0","0"}
+                {"1", "Casa (tipus d'edifici)","","0","0"},
+                {"2", "Respall de dents (s'usa a la boca)","","0","0"},
+                {"3", "Cargol (un animal)","","0","0"},
+                {"4", "Cadira de rodes (es troba a l'hospital)","","0","0"},
+                {"5", "Llapis (serveix per escriure)","","0","0"},
+                {"6", "Màscara (part d'una disfressa)","","0","0"},
+                {"7", "Acordió (instrument musical)","", "0","0"},
+                {"8", "Piràmide (es troba a Egipte)","","0","0"},
+                {"9", "Armònica (instrument musical)","","0","0"},
+                {"10", "Globus terraqui (un tipus de mapa)","","0","0"},
+                {"11", "Trípode (el fan servir els fotògrafs)","","0","0"},
+                {"12", "Pergamí (un document)","","0","0"},
+                {"13", "Jou (s'utilitza per a animals de tir)","","0","0"},
+                {"14", "Estetoscopi (el fan servir els metges)","","0","0"},
+                {"15", "Àbac (serveix per comptar)","","0","0"}
             },
             new String [] {
-                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version C", " Correctes", " Ajuda semàntica"
+                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version C","Resposta pacient", " Correctes", " Ajuda semàntica"
             }
         );
         
         Class[] types = new Class [] {
-            java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
         };
         boolean[] canEdit = new boolean [] {
-            false, false, true, true
+            false, false, true, true, true
         };
         
         model.setTypes(types);
@@ -6312,7 +6673,7 @@ public class Sessio1 extends javax.swing.JFrame {
         BNTCTable.getColumn(1).setHeaderRenderer(centerRenderer);
         
         TableCellRenderer headerRenderer = new VerticalTableHeaderCellRenderer();
-        for (int i=2; i<BNTCTable.getColumnModel().getColumnCount(); i++){
+        for (int i=3; i<BNTCTable.getColumnModel().getColumnCount(); i++){
             BNTCTable.getColumn(i).setHeaderRenderer(headerRenderer);
         }
         
@@ -6321,6 +6682,7 @@ public class Sessio1 extends javax.swing.JFrame {
             BNTCTable.getColumnModel().getColumn(1).setResizable(false);
             BNTCTable.getColumnModel().getColumn(2).setResizable(false);
             BNTCTable.getColumnModel().getColumn(3).setResizable(false);
+            BNTCTable.getColumnModel().getColumn(4).setResizable(false);
         }
         BNTCTable.getTableHeader().setReorderingAllowed(false);
         BNTCTable.setHighlighters(HighlighterFactory.createSimpleStriping());
@@ -6336,12 +6698,12 @@ public class Sessio1 extends javax.swing.JFrame {
             {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
-                int val = Integer.parseInt((String)table.getValueAt(row, 2));
-                table.setValueAt(val == 0 ? "1" : "0", row, 2);
+                int val = Integer.parseInt((String)table.getValueAt(row, 3));
+                table.setValueAt(val == 0 ? "1" : "0", row, 3);
                 
                 int sumaTotal = 0;
                 for (int i = 0; i<table.getRowCount(); i++){
-                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 2));
+                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 3));
                 }
                 correctesBntC.setText(sumaTotal+"");
                 totalBntC.setText(""+(sumaTotal+Integer.parseInt(semanticaBntC.getText())));
@@ -6355,20 +6717,20 @@ public class Sessio1 extends javax.swing.JFrame {
             {
                 JTable table = (JTable)e.getSource();
                 int row = Integer.parseInt(e.getActionCommand());
-                int val = Integer.parseInt((String)table.getValueAt(row, 3));
-                table.setValueAt(val == 0 ? "1" : "0", row, 3);
+                int val = Integer.parseInt((String)table.getValueAt(row, 4));
+                table.setValueAt(val == 0 ? "1" : "0", row, 4);
                 
                 int sumaTotal = 0;
                 for (int i = 0; i<table.getRowCount(); i++){
-                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 3));
+                    sumaTotal += Integer.parseInt((String)table.getValueAt(i, 4));
                 }
                 semanticaBntC.setText(sumaTotal+"");
                 totalBntC.setText(""+(sumaTotal+Integer.parseInt(correctesBntC.getText())));
             }
         };
         
-        ButtonColumn buttonColumn = new ButtonColumn(BNTCTable, action1, 2);
-        ButtonColumn buttonColumn2 = new ButtonColumn(BNTCTable, action2, 3);
+        ButtonColumn buttonColumn = new ButtonColumn(BNTCTable, action1, 3);
+        ButtonColumn buttonColumn2 = new ButtonColumn(BNTCTable, action2, 4);
         BNTCTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         BNTCTable.packAll();
     }
@@ -6603,9 +6965,9 @@ public class Sessio1 extends javax.swing.JFrame {
                 {"<html><b>Color Trails 1 - Near-Misses",null, null, "X", "X", "X"},
                 {"<html><b>Color Trails 1 - Prompts",null, null, "X", "X", "X"},
                 {"<html><b>Color Trails 2 - Time in seconds",null, "X", null, null, null},
-                {"<html><b>Color Trails 1 - Errors",null, null, "X", "X", "X"},
-                {"<html><b>Color Trails 1 - Near-Misses",null, null, "X", "X", "X"},
-                {"<html><b>Color Trails 1 - Prompts",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 2 - Errors",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 2 - Near-Misses",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 2 - Prompts",null, null, "X", "X", "X"},
                 {"<html><b>Interference Index</b><br>(Color Trails 2 times raw score<br>minus Color Trails 1 time raw score)<br>/Color Trails 1 time raw score",null, null, "X", "X", "X"}
             },
             new String [] {
@@ -6701,6 +7063,47 @@ public class Sessio1 extends javax.swing.JFrame {
                         + timeFormatter.format(centiseconds));
             }
         });
+        
+        timerColor = new Timer(10, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                long now = System.currentTimeMillis();
+                long dif = now - startTime;
+                
+                secondsColor1 = dif / 1000;
+                
+                long minutes = dif / (60 * 1000);
+                dif = Math.round(dif % (60 * 1000));
+                long seconds = dif / 1000;
+                dif = Math.round(dif % 1000);
+                long centiseconds = dif / 10;
+                colorTrailsCronoLabel.setText(timeFormatter.format(minutes) + ":"
+                        + timeFormatter.format(seconds) + "."
+                        + timeFormatter.format(centiseconds));
+            }
+            
+        });
+        
+        timerColor2 = new Timer(10, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                long now = System.currentTimeMillis();
+                long dif = now - startTime;
+                
+                secondsColor2 = dif / 1000;
+                
+                long minutes = dif / (60 * 1000);
+                dif = Math.round(dif % (60 * 1000));
+                long seconds = dif / 1000;
+                dif = Math.round(dif % 1000);
+                long centiseconds = dif / 10;
+                colorTrailsCronoLabel1.setText(timeFormatter.format(minutes) + ":"
+                        + timeFormatter.format(seconds) + "."
+                        + timeFormatter.format(centiseconds));
+            }
+            
+        });
+        
     }
 
     private void initFluenciaVerbalTable() {

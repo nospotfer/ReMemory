@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +36,7 @@ public class NewUser extends javax.swing.JDialog {
     public NewUser(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        Utils.setIcon((JFrame)this.getOwner());
         this.setLocationRelativeTo(null);
         this.modificaBtn.setVisible(false);
         this.eliminaBtn.setVisible(false);
@@ -78,6 +80,7 @@ public class NewUser extends javax.swing.JDialog {
         modificaBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Edita evaluador");
         setResizable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nou Usuari"));
@@ -218,7 +221,7 @@ public class NewUser extends javax.swing.JDialog {
 
         JSONObject obj = null;
         try {
-            obj = new JSONObject(getStringFile("res/users.json"));
+            obj = new JSONObject(getStringFile(Utils.USERS_PATH));
             JSONArray users = obj.getJSONArray("Users");
             int i = 0;
             boolean trobat = false;
@@ -250,7 +253,7 @@ public class NewUser extends javax.swing.JDialog {
                 usr.put(o);
                 
                 obj.put("Users", usr);
-                PrintWriter out = new PrintWriter("res/users.json");
+                PrintWriter out = new PrintWriter(Utils.USERS_PATH);
                 out.write(obj.toString());
                 out.close();
                 this.dispose();
@@ -405,7 +408,7 @@ public class NewUser extends javax.swing.JDialog {
         }
         PrintWriter out = null;
         try {
-            out = new PrintWriter("res/users.json");
+            out = new PrintWriter(Utils.USERS_PATH);
             out.write(obj.toString());
         } catch (FileNotFoundException ex) {
             Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
@@ -417,7 +420,7 @@ public class NewUser extends javax.swing.JDialog {
     private void getUsers(JSONArray u) {
         JSONObject obj;
         try {
-            obj = new JSONObject(Utils.getStringFile("res/users.json"));
+            obj = new JSONObject(Utils.getStringFile(Utils.USERS_PATH));
             JSONArray users = obj.getJSONArray("Users");
             for (int i=0; i<users.length();i++){
                 if (!users.getJSONObject(i).getString("role").equals("evaluador")){

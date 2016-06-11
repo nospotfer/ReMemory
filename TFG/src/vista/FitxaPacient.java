@@ -25,6 +25,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JRootPane;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
@@ -45,6 +46,7 @@ public class FitxaPacient extends javax.swing.JDialog {
     public FitxaPacient(java.awt.Frame parent, boolean modal, String idPacient) {
         super(parent, modal);
         initComponents();
+        Utils.setIcon((JFrame)this.getOwner());
         //this.setLocationRelativeTo(null);
         this.setLocation(0,0);
         this.idPacient = idPacient;

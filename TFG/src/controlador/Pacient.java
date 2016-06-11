@@ -5,6 +5,9 @@
  */
 package controlador;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  *
  * @author USER
@@ -47,5 +50,12 @@ public class Pacient extends Persona{
     public void setAnysEscola(int anysEscola) {
         this.anysEscola = anysEscola;
     }
-    
+
+    public JSONObject toJSON() throws JSONException {
+        JSONObject o = new JSONObject();
+        o.put("id",id);
+        o.put("name", nom.toLowerCase());
+        o.put("role","pacient");
+        return o;
+    }
 }

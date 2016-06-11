@@ -38,6 +38,7 @@ public class MenuAdmin extends javax.swing.JFrame {
      */
     public MenuAdmin(String pacient){
         initComponents();
+        Utils.setIcon(this);
         this.pacient = pacient;
         pacientLabel.setText(pacient.toUpperCase());
         this.setLocationRelativeTo(null);
@@ -200,7 +201,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     private void initUsers() throws JSONException {
         llistaEvaluadors.clear();
         JSONObject obj;
-        obj = new JSONObject(Utils.getStringFile("res/users.json"));
+        obj = new JSONObject(Utils.getStringFile(Utils.USERS_PATH));
         org.json.JSONArray users = obj.getJSONArray("Users");
         for (int i=0; i<users.length();i++){
             if (users.getJSONObject(i).getString("role").equals("evaluador")){
@@ -221,6 +222,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     }
     
     private void initButtons() {
+        jPanel1.repaint();
         jPanel1.removeAll();
         jPanel1.revalidate();
         jPanel1.repaint();

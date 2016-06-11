@@ -37,6 +37,8 @@ public class Sessio2 extends javax.swing.JFrame {
     }
     
     public Sessio2(Pacient pacient) {
+        Utils.setIcon(this);
+        
         initComponents();
         
         this.pacientActual = pacient;
@@ -321,7 +323,15 @@ public class Sessio2 extends javax.swing.JFrame {
         puntTotalMoca1 = new javax.swing.JLabel();
         jLabel325 = new javax.swing.JLabel();
         jLabel231 = new javax.swing.JLabel();
-        mocaScroll1 = new javax.swing.JScrollPane();
+        jPanel36 = new javax.swing.JPanel();
+        checkAbstraccio1 = new javax.swing.JCheckBox();
+        checkAbstraccio2 = new javax.swing.JCheckBox();
+        jLabel273 = new javax.swing.JLabel();
+        puntAbstraccio = new javax.swing.JLabel();
+        jLabel300 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        upsaTab = new javax.swing.JPanel();
+        upsaScroll1 = new javax.swing.JScrollPane();
         mocaPanel1 = new javax.swing.JPanel();
         jLabel276 = new javax.swing.JLabel();
         jPanel37 = new javax.swing.JPanel();
@@ -388,7 +398,7 @@ public class Sessio2 extends javax.swing.JFrame {
         jLabel298 = new javax.swing.JLabel();
         jLabel299 = new javax.swing.JLabel();
         mocaPunts2 = new javax.swing.JLabel();
-        mocaScroll2 = new javax.swing.JScrollPane();
+        upsaScroll2 = new javax.swing.JScrollPane();
         mocaPanel2 = new javax.swing.JPanel();
         jLabel285 = new javax.swing.JLabel();
         jPanel38 = new javax.swing.JPanel();
@@ -440,8 +450,7 @@ public class Sessio2 extends javax.swing.JFrame {
         jLabel320 = new javax.swing.JLabel();
         jLabel321 = new javax.swing.JLabel();
         mocaPunts3 = new javax.swing.JLabel();
-        upsaTab = new javax.swing.JPanel();
-        upsa2Scroll = new javax.swing.JScrollPane();
+        upsaScroll3 = new javax.swing.JScrollPane();
         upsa2Panel = new javax.swing.JPanel();
         jLabel106 = new javax.swing.JLabel();
         comunicacioPanel = new javax.swing.JPanel();
@@ -554,12 +563,6 @@ public class Sessio2 extends javax.swing.JFrame {
         comunicacioSub = new javax.swing.JLabel();
         comprensioSub = new javax.swing.JLabel();
         upsaTotal = new javax.swing.JLabel();
-        upsa3Scroll = new javax.swing.JScrollPane();
-        upsa3Panel = new javax.swing.JPanel();
-        jLabel107 = new javax.swing.JLabel();
-        upsaRScroll = new javax.swing.JScrollPane();
-        upsaRPanel = new javax.swing.JPanel();
-        jLabel165 = new javax.swing.JLabel();
         mfeTab = new javax.swing.JPanel();
         mfeScroll1 = new javax.swing.JScrollPane();
         mfePanel2 = new javax.swing.JPanel();
@@ -1083,6 +1086,7 @@ public class Sessio2 extends javax.swing.JFrame {
         });
 
         seguentBtn.setText("Següent");
+        seguentBtn.setEnabled(false);
         seguentBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 seguentBtnActionPerformed(evt);
@@ -1991,6 +1995,63 @@ public class Sessio2 extends javax.swing.JFrame {
 
         jLabel231.setText("(1 punt més si te < 11 anys d'estudi)");
 
+        jPanel36.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ABSTRACCIÓ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        checkAbstraccio1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        checkAbstraccio1.setText("<html>tren-bicicleta");
+
+        checkAbstraccio2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        checkAbstraccio2.setText("rellotge-regle");
+
+        jLabel273.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel273.setText("Punts:");
+
+        puntAbstraccio.setText("0");
+
+        jLabel300.setText("/ 2");
+
+        jLabel74.setText("Similitud entre p. ex. poma-taronja = fruita");
+
+        javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
+        jPanel36.setLayout(jPanel36Layout);
+        jPanel36Layout.setHorizontalGroup(
+            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel36Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel36Layout.createSequentialGroup()
+                        .addComponent(jLabel74)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel36Layout.createSequentialGroup()
+                        .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel36Layout.createSequentialGroup()
+                                .addComponent(jLabel273)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(puntAbstraccio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel300))
+                            .addGroup(jPanel36Layout.createSequentialGroup()
+                                .addComponent(checkAbstraccio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(checkAbstraccio2)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jPanel36Layout.setVerticalGroup(
+            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel36Layout.createSequentialGroup()
+                .addComponent(jLabel74)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(checkAbstraccio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(checkAbstraccio2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel273)
+                    .addComponent(puntAbstraccio)
+                    .addComponent(jLabel300))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout mocaPanelLayout = new javax.swing.GroupLayout(mocaPanel);
         mocaPanel.setLayout(mocaPanelLayout);
         mocaPanelLayout.setHorizontalGroup(
@@ -2003,7 +2064,6 @@ public class Sessio2 extends javax.swing.JFrame {
                     .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(mocaPanelLayout.createSequentialGroup()
@@ -2013,8 +2073,11 @@ public class Sessio2 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel325)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel231)))
-                .addGap(69, 69, 69))
+                        .addComponent(jLabel231))
+                    .addGroup(mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel36, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel31, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         mocaPanelLayout.setVerticalGroup(
             mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2031,7 +2094,9 @@ public class Sessio2 extends javax.swing.JFrame {
                 .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2047,6 +2112,10 @@ public class Sessio2 extends javax.swing.JFrame {
         mocaScroll.setViewportView(mocaPanel);
 
         mocaTab.add(mocaScroll, "card1");
+
+        tabbedPanel.addTab("MOCA", mocaTab);
+
+        upsaTab.setLayout(new java.awt.CardLayout());
 
         jLabel276.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel276.setText("2. HABILITATS DE COMUNICACIÓ: Telèfon i carta");
@@ -2517,7 +2586,7 @@ public class Sessio2 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(mocaPunts2))
                             .addComponent(jLabel298, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(5951, Short.MAX_VALUE))
+                .addContainerGap())
         );
         mocaPanel1Layout.setVerticalGroup(
             mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2559,9 +2628,9 @@ public class Sessio2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        mocaScroll1.setViewportView(mocaPanel1);
+        upsaScroll1.setViewportView(mocaPanel1);
 
-        mocaTab.add(mocaScroll1, "card2");
+        upsaTab.add(upsaScroll1, "card1");
 
         jLabel285.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel285.setText("3. COMPRENSIÓ I PLANIFICACIÓ: La platja");
@@ -2923,13 +2992,9 @@ public class Sessio2 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        mocaScroll2.setViewportView(mocaPanel2);
+        upsaScroll2.setViewportView(mocaPanel2);
 
-        mocaTab.add(mocaScroll2, "card3");
-
-        tabbedPanel.addTab("MOCA", mocaTab);
-
-        upsaTab.setLayout(new java.awt.CardLayout());
+        upsaTab.add(upsaScroll2, "card2");
 
         jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel106.setText("<html><center><b>HABILITATS DE COMUNICACIÓ: Telèfon i carta</b>");
@@ -3763,57 +3828,9 @@ public class Sessio2 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        upsa2Scroll.setViewportView(upsa2Panel);
+        upsaScroll3.setViewportView(upsa2Panel);
 
-        upsaTab.add(upsa2Scroll, "card1");
-
-        jLabel107.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel107.setText("<html><center><b>COMPRENSIÓ I PLANIFICACIÓ: La platja</b>");
-
-        javax.swing.GroupLayout upsa3PanelLayout = new javax.swing.GroupLayout(upsa3Panel);
-        upsa3Panel.setLayout(upsa3PanelLayout);
-        upsa3PanelLayout.setHorizontalGroup(
-            upsa3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsa3PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(6503, Short.MAX_VALUE))
-        );
-        upsa3PanelLayout.setVerticalGroup(
-            upsa3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsa3PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1787, Short.MAX_VALUE))
-        );
-
-        upsa3Scroll.setViewportView(upsa3Panel);
-
-        upsaTab.add(upsa3Scroll, "card2");
-
-        jLabel165.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel165.setText("<html><center><b>COMPRENSIÓ I PLANIFICACIÓ: La platja</b>");
-
-        javax.swing.GroupLayout upsaRPanelLayout = new javax.swing.GroupLayout(upsaRPanel);
-        upsaRPanel.setLayout(upsaRPanelLayout);
-        upsaRPanelLayout.setHorizontalGroup(
-            upsaRPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsaRPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel165, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(6503, Short.MAX_VALUE))
-        );
-        upsaRPanelLayout.setVerticalGroup(
-            upsaRPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upsaRPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel165, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1787, Short.MAX_VALUE))
-        );
-
-        upsaRScroll.setViewportView(upsaRPanel);
-
-        upsaTab.add(upsaRScroll, "card2");
+        upsaTab.add(upsaScroll3, "card3");
 
         tabbedPanel.addTab("UPSA", upsaTab);
 
@@ -7889,6 +7906,8 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JButton anteriorBtn;
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton cancelaBtn;
+    private javax.swing.JCheckBox checkAbstraccio1;
+    private javax.swing.JCheckBox checkAbstraccio2;
     private javax.swing.JCheckBox checkAtencio1;
     private javax.swing.JCheckBox checkAtencio2;
     private javax.swing.JCheckBox checkAtencio3;
@@ -8010,7 +8029,6 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
@@ -8074,7 +8092,6 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel164;
-    private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel166;
     private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel168;
@@ -8188,6 +8205,7 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel270;
     private javax.swing.JLabel jLabel271;
     private javax.swing.JLabel jLabel272;
+    private javax.swing.JLabel jLabel273;
     private javax.swing.JLabel jLabel274;
     private javax.swing.JLabel jLabel275;
     private javax.swing.JLabel jLabel276;
@@ -8218,6 +8236,7 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel299;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel300;
     private javax.swing.JLabel jLabel301;
     private javax.swing.JLabel jLabel302;
     private javax.swing.JLabel jLabel303;
@@ -8303,6 +8322,7 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
@@ -8350,6 +8370,7 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
     private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel4;
@@ -8714,8 +8735,6 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JLabel mocaPunts2;
     private javax.swing.JLabel mocaPunts3;
     private javax.swing.JScrollPane mocaScroll;
-    private javax.swing.JScrollPane mocaScroll1;
-    private javax.swing.JScrollPane mocaScroll2;
     private javax.swing.JPanel mocaTab;
     private javax.swing.JToggleButton orientacioBtn10;
     private javax.swing.JToggleButton orientacioBtn11;
@@ -8735,6 +8754,7 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JToggleButton orientacioBtn6;
     private javax.swing.JLabel paginaLabel;
     private javax.swing.JLabel paginaLabel2;
+    private javax.swing.JLabel puntAbstraccio;
     private javax.swing.JLabel puntAtencio1;
     private javax.swing.JLabel puntAtencio2;
     private javax.swing.JLabel puntAtencio3;
@@ -8801,16 +8821,14 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JSeparator sepBottom;
     private javax.swing.JTabbedPane tabbedPanel;
     private javax.swing.JPanel upsa2Panel;
-    private javax.swing.JScrollPane upsa2Scroll;
-    private javax.swing.JPanel upsa3Panel;
-    private javax.swing.JScrollPane upsa3Scroll;
     private javax.swing.ButtonGroup upsaButtonGrup1;
     private javax.swing.ButtonGroup upsaButtonGrup2;
     private javax.swing.ButtonGroup upsaButtonGrup3;
     private javax.swing.ButtonGroup upsaButtonGrup4;
     private javax.swing.ButtonGroup upsaButtonGrup5;
-    private javax.swing.JPanel upsaRPanel;
-    private javax.swing.JScrollPane upsaRScroll;
+    private javax.swing.JScrollPane upsaScroll1;
+    private javax.swing.JScrollPane upsaScroll2;
+    private javax.swing.JScrollPane upsaScroll3;
     private javax.swing.JPanel upsaTab;
     private javax.swing.JLabel upsaTotal;
     // End of variables declaration//GEN-END:variables
@@ -8883,6 +8901,9 @@ public class Sessio2 extends javax.swing.JFrame {
         this.checkLlenguatge2.addActionListener(createMocaActionListener(puntLlenguatge1));
         
         this.checkLlenguatge3.addActionListener(createMocaActionListener(puntLlenguatge2));
+        
+        this.checkAbstraccio1.addActionListener(createMocaActionListener(puntAbstraccio));
+        this.checkAbstraccio2.addActionListener(createMocaActionListener(puntAbstraccio));
         
         this.checkRecord1.addActionListener(createMocaActionListener(puntRecord));
         this.checkRecord2.addActionListener(createMocaActionListener(puntRecord));

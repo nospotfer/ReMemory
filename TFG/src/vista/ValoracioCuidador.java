@@ -33,6 +33,8 @@ public class ValoracioCuidador extends javax.swing.JFrame {
      * Creates new form ValoracioCuidador
      */
     public ValoracioCuidador(Pacient pacient) {
+        Utils.setIcon(this);
+        
         initComponents();
 
         pacientActual = pacient;
@@ -47,6 +49,7 @@ public class ValoracioCuidador extends javax.swing.JFrame {
         Utils.carregar(tabbedPanel,pacientActual.getId(), "ValCuid");
 
         Utils.setActionCommands(dataPanel);
+        Utils.setActionCommands(npiPanel);
     }
 
     private void initFAQ() {
@@ -977,6 +980,7 @@ public class ValoracioCuidador extends javax.swing.JFrame {
         faqTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Valoració cuidador");
 
         mainPanel.setLayout(new java.awt.BorderLayout());
 

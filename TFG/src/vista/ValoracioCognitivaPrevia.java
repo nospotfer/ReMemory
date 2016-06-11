@@ -49,6 +49,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
      * Creates new form testsTextuals
      */
     public ValoracioCognitivaPrevia(String idPacient) {
+        Utils.setIcon(this);
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
@@ -806,6 +807,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         sepBottom = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Valoració cognitiva prèvia");
 
         mainPanel.setLayout(new java.awt.BorderLayout());
 

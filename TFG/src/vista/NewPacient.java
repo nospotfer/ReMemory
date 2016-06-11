@@ -5,13 +5,13 @@
  */
 package vista;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import controlador.Utils;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,6 +27,7 @@ public class NewPacient extends javax.swing.JDialog {
      */
     public NewPacient(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        Utils.setIcon((JFrame)this.getOwner());
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -145,22 +146,30 @@ public class NewPacient extends javax.swing.JDialog {
 
         JSONObject obj = null;
         try {
-            obj = new JSONObject(getStringFile("res/users.json"));
+            obj = new JSONObject(getStringFile(Utils.USERS_PATH));
             JSONArray users = obj.getJSONArray("Users");
             int i = 0;
-            boolean trobat = false;
-            while ( i < users.length() && !trobat){
+            boolean trobatNom = false;
+            boolean trobatId = false;
+            while ( i < users.length() && !trobatNom && !trobatId){
                 if (users.getJSONObject(i).getString("name").equals(nameTextBox.getText())){
-                    trobat = true;
+                    trobatNom = true;
+                }
+                if (users.getJSONObject(i).getString("id").equals(idTextBox.getText())){
+                    trobatId = true;
                 }
                 i++;
             }
             boolean buits;
             buits = "".equals(idTextBox.getText()) || "".equals(nameTextBox.getText());
             
-            if (trobat || buits){
-                if (buits) System.out.println("Has d'omplir tots els buits");
-                else if(trobat) System.out.println("Nom ja utilitzat");
+            if (trobatNom || trobatId || buits){
+                if (buits) JOptionPane.showMessageDialog(this, "Has d'omplir tots els buits",
+                        "Avís", JOptionPane.WARNING_MESSAGE);
+                else if(trobatNom) JOptionPane.showMessageDialog(this, "Nom ja utilitzat",
+                        "Avís", JOptionPane.WARNING_MESSAGE);
+                else if(trobatId) JOptionPane.showMessageDialog(this, "Id ja utilitzada",
+                        "Avís", JOptionPane.WARNING_MESSAGE);
             } else{
                 JSONArray usr = new JSONArray();
                 for (i = 0; i < users.length(); i++){
@@ -175,9 +184,15 @@ public class NewPacient extends javax.swing.JDialog {
                 usr.put(o);
                 
                 obj.put("Users", usr);
-                PrintWriter out = new PrintWriter("res/users.json");
+                PrintWriter out = new PrintWriter(Utils.USERS_PATH);
                 out.write(obj.toString());
                 out.close();
+
+                File dataDir = new File(Utils.PACIENT_DATA_PATH+idTextBox.getText().toLowerCase());
+                if (!dataDir.exists()){
+                    dataDir.mkdir();
+                }
+
                 this.dispose();
             }
 

@@ -5,6 +5,8 @@
  */
 package vista;
 
+import controlador.Utils;
+
 /**
  *
  * @author USER
@@ -17,6 +19,7 @@ public class MenuPacient extends javax.swing.JFrame {
      * Creates new form pacientMenu
      */
     public MenuPacient(String pacient) {
+        Utils.setIcon(this);
         initComponents();
         this.pacient = pacient;
         pacientLabel.setText("Benvingut "+pacient.toUpperCase()+"!");

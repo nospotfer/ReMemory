@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,7 +20,9 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
+import org.jdesktop.swingx.JXTable;
 import vista.NewUser;
 
 /**
@@ -32,12 +35,15 @@ public class Utils {
     private static int combo = 0;
     private static int textA = 0;
     private static int check = 0;
+    private static int table = 0;
     private static int tButton = 0;
     private static int button = 0;
     private static int label = 0;
     private static int radioButton = 0;
 
-    public static final String PACIENT_DATA_PATH = "pacientData"+File.separator;
+    public static final String SEP = File.separator;
+    public static final String PACIENT_DATA_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"pacientData"+SEP;
+    public static final String USERS_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP+"users.json";
     
     public static String getStringFile(String file) {
 	BufferedReader reader = null;
@@ -192,6 +198,7 @@ public class Utils {
 
     public static int getPunctuationFromButtonGroup(ButtonGroup buttonGroup){
         if (buttonGroup.getSelection() != null){
+            System.out.println(buttonGroup.getSelection().getActionCommand());
             return Integer.parseInt(buttonGroup.getSelection().getActionCommand());
         } else {
             return 0;
@@ -251,7 +258,7 @@ public class Utils {
             }
             output = new FileOutputStream(file);
 
-            label = textF = combo = check = textA = tButton = button = radioButton = 0;
+            table = label = textF = combo = check = textA = tButton = button = radioButton = 0;
             setComponents(prop, panel);
             prop.store(output, "VALORACIO COGNITIVA PREVIA");
         }
@@ -307,6 +314,10 @@ public class Utils {
                 Utils.setProperty(prop, "label"+label, (JLabel) com);
                 label++;
             }
+            else if (com instanceof JXTable){
+                setProperty(prop, "table"+table ,(JXTable)com);
+                table++;
+            }
             else if (com instanceof Container){
                 setComponents(prop, (Container) com);
             }
@@ -328,7 +339,7 @@ public class Utils {
                 // load a properties file
                 prop.load(input);
 
-                label = textF = combo = check = textA = tButton = button = 0;
+                table = label = textF = combo = check = textA = tButton = button = radioButton = 0;
                 getComponents(prop, panel);
             }
         }
@@ -379,14 +390,60 @@ public class Utils {
                 Utils.getProperty(prop, "checkBox"+check, (JCheckBox) com);
                 check++;
             }
-            if (com instanceof JLabel){
+            else if (com instanceof JLabel){
                 getProperty(prop, "label"+label, (JLabel) com);
                 label++;
+            }
+            else if (com instanceof JXTable){
+                getProperty(prop, "table"+table, (JXTable)com);
+                table++;
             }
             else if (com instanceof Container){
                 getComponents(prop, (Container) com);
             }
         }
+    }
+
+    private static void getProperty(Properties prop, String nom, JXTable com) {
+
+        DefaultTableModel dtm = (DefaultTableModel) com.getModel();
+        int nRow = dtm.getRowCount(), nCol = dtm.getColumnCount();
+        Object[][] tableData = new Object[nRow][nCol];
+        for (int i = 0 ; i < nRow ; i++)
+            for (int j = 0 ; j < nCol ; j++)
+                if (prop.getProperty(nom+"_"+i+"_"+j) != null) {
+                    dtm.setValueAt(prop.getProperty(nom + "_" + i + "_" + j), i, j);
+                }
+    }
+
+    private static void setProperty(Properties prop,String nom, JXTable com) {
+        Object[][] objects = getTableData(com);
+        for(int i=0; i<objects.length; i++) {
+            for(int j=0; j<objects[i].length; j++) {
+                Object obj = objects[i][j];
+                if (obj != null) {
+                    prop.setProperty(nom + "_" + i + "_" + j, obj + "");
+                }
+            }
+        }
+    }
+
+    public static Object[][] getTableData (JXTable table) {
+        DefaultTableModel dtm = (DefaultTableModel) table.getModel();
+        int nRow = dtm.getRowCount(), nCol = dtm.getColumnCount();
+        Object[][] tableData = new Object[nRow][nCol];
+        for (int i = 0 ; i < nRow ; i++)
+            for (int j = 0 ; j < nCol ; j++)
+                tableData[i][j] = dtm.getValueAt(i,j);
+        return tableData;
+    }
+    
+    public static void setIcon(JFrame frame){
+        URL url = ClassLoader.getSystemResource("resources/ReMemory.ico");
+        URL iconURL = frame.getClass().getResource("/resources/ReMemory.png");
+// iconURL is null when not found
+        ImageIcon icon = new ImageIcon(iconURL);
+        frame.setIconImage(icon.getImage());
     }
 
 }

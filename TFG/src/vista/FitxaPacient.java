@@ -5063,15 +5063,14 @@ public class FitxaPacient extends javax.swing.JDialog {
 
 	} catch (IOException io) {
 		io.printStackTrace();
-	} finally {
-		if (output != null) {
-			try {
-				output.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
+        } finally {
+            if (output != null) {
+		try {
+                    output.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 	}
     }
 

@@ -6164,7 +6164,7 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="puntuacioLabel" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="crcTotal" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                               </Group>
@@ -6203,7 +6203,7 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="puntuacioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="crcTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -6864,7 +6864,7 @@
                                 <Property name="text" type="java.lang.String" value="Puntuaci&#xf3; total:"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="puntuacioLabel">
+                            <Component class="javax.swing.JLabel" name="crcTotal">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="0"/>
                               </Properties>
@@ -6974,7 +6974,7 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="totalMMSELabel" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="totalMMSE" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
                                                   </Group>
@@ -7009,7 +7009,7 @@
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="totalMMSELabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="totalMMSE" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -7842,7 +7842,7 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Component class="javax.swing.JLabel" name="totalMMSELabel">
+                            <Component class="javax.swing.JLabel" name="totalMMSE">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="14" style="1"/>
@@ -7935,12 +7935,12 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="label1" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="tapTotalLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tapTotal" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="ciLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tapCi" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel111" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -7960,12 +7960,12 @@
                                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="label1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="tapTotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tapTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ciLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tapCi" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="jLabel112" min="-2" max="-2" attributes="0"/>
@@ -8405,12 +8405,12 @@
                                 <Property name="text" type="java.lang.String" value="CI estimat:"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="tapTotalLabel">
+                            <Component class="javax.swing.JLabel" name="tapTotal">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="0"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="ciLabel">
+                            <Component class="javax.swing.JLabel" name="tapCi">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="0"/>
                               </Properties>

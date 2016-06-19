@@ -5,8 +5,7 @@
  */
 package vista;
 
-import controlador.Evaluador;
-import controlador.Persona;
+import model.Evaluador;
 import controlador.Utils;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

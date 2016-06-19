@@ -5,12 +5,17 @@
  */
 package vista;
 
-import controlador.Pacient;
+import model.Pacient;
 import controlador.Utils;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Properties;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -20,7 +25,8 @@ import javax.swing.event.ChangeListener;
  * @author USER
  */
 public class ValoracioCuidador extends javax.swing.JFrame {
-    
+
+    private String valoracio;
     int pagina = 0;
     int numPaginesTotal = 1;
     Pacient pacientActual;
@@ -32,12 +38,16 @@ public class ValoracioCuidador extends javax.swing.JFrame {
     /**
      * Creates new form ValoracioCuidador
      */
-    public ValoracioCuidador(Pacient pacient) {
+    public ValoracioCuidador(Pacient pacient, String valoracio) {
         Utils.setIcon(this);
         
         initComponents();
 
         pacientActual = pacient;
+
+        this.valoracio = valoracio;
+
+        this.setTitle(this.getTitle()+" | T"+valoracio);
 
         initNPI();
         initSF12();
@@ -46,10 +56,53 @@ public class ValoracioCuidador extends javax.swing.JFrame {
         iniZARIT();
         initFAQ();
 
-        Utils.carregar(tabbedPanel,pacientActual.getId(), "ValCuid");
+        Utils.carregar(tabbedPanel,pacientActual.getId(), "ValCuid"+valoracio);
 
         Utils.setActionCommands(dataPanel);
         Utils.setActionCommands(npiPanel);
+    }
+    
+    private void guardarResultats(){
+        Properties prop = new Properties();
+	OutputStream output = null;
+
+	try {
+            
+            File f = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator);
+                if (!f.exists()){
+                    f.mkdir();
+                }
+                File file = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator+"resultsValCuid_T"+valoracio+".dat");
+                
+		output = new FileOutputStream(file);
+                
+                // NPI
+                Utils.setProperty(prop,"npiTotal",npiTotal);
+                // UPSA
+                Utils.setProperty(prop,"zaritTotal",zaritTotal);
+                // SF12
+                Utils.setProperty(prop,"sf12Total",sf12Total);
+                // HAD
+                Utils.setProperty(prop,"hadTotalA",hadTotalA);
+                Utils.setProperty(prop,"hadTotalD",hadTotalD);
+                // QOL-AD
+                Utils.setProperty(prop,"faqTotal",faqTotal);
+                // DUKE
+                Utils.setProperty(prop,"dukeTotal",dukeTotal);
+
+                prop.store(output, "NEUROIMATGE");
+
+	} catch (IOException io) {
+		io.printStackTrace();
+        } finally {
+            if (output != null) {
+		try {
+                    output.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+	}
     }
 
     private void initFAQ() {
@@ -6041,7 +6094,9 @@ public class ValoracioCuidador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        Utils.guardar(tabbedPanel,pacientActual.getId(), "ValCuid");
+        Utils.guardar(tabbedPanel,pacientActual.getId(), "ValCuid_T"+valoracio);
+        guardarResultats();
+        Utils.generaResultatsCSV(pacientActual.getId());
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

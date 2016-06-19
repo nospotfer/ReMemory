@@ -5,10 +5,11 @@
  */
 package vista;
 
-import controlador.Pacient;
+import model.Pacient;
 import controlador.Utils;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import java.awt.*;
 
 /**
  *
@@ -18,17 +19,20 @@ public class MenuTests extends javax.swing.JDialog {
 
     String idPacient = "";
     Pacient pacientActual = null;
+    String valoracio = "";
     
     /**
      * Creates new form menuTests
      */
-    public MenuTests(java.awt.Frame parent, boolean modal, String idPacient, Pacient pacientActual) {
+    public MenuTests(Frame parent, boolean modal, Pacient pacientActual, String valoracio) {
         super(parent, modal);
         Utils.setIcon((JFrame)this.getOwner());
         initComponents();
+        this.setTitle(this.getTitle()+" | T"+valoracio);
         this.setLocationRelativeTo(null);
-        this.idPacient = idPacient;
+        this.idPacient = pacientActual.getId();
         this.pacientActual = pacientActual;
+        this.valoracio = valoracio;
     }
 
     /**
@@ -41,19 +45,19 @@ public class MenuTests extends javax.swing.JDialog {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel1 = new javax.swing.JPanel();
+        panel2 = new javax.swing.JPanel();
         sessio1Btn = new javax.swing.JButton();
         sessio2Btn = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        valoracioCognitivaPreviaBtn = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        panel3 = new javax.swing.JPanel();
         valoracioCuidadorBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Menú tests");
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Protocol neuropsicològic", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        panel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Protocol neuropsicològic", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        panel2.setPreferredSize(new java.awt.Dimension(158, 102));
+        panel2.setLayout(new java.awt.GridBagLayout());
 
         sessio1Btn.setText("Primera sessió");
         sessio1Btn.addActionListener(new java.awt.event.ActionListener() {
@@ -61,6 +65,11 @@ public class MenuTests extends javax.swing.JDialog {
                 sessio1BtnActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        panel2.add(sessio1Btn, gridBagConstraints);
 
         sessio2Btn.setText("Segona sessió");
         sessio2Btn.addActionListener(new java.awt.event.ActionListener() {
@@ -68,71 +77,22 @@ public class MenuTests extends javax.swing.JDialog {
                 sessio2BtnActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sessio1Btn)
-                    .addComponent(sessio2Btn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(sessio1Btn)
-                .addGap(11, 11, 11)
-                .addComponent(sessio2Btn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        panel2.add(sessio2Btn, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        gridBagConstraints.insets = new java.awt.Insets(18, 10, 0, 0);
-        getContentPane().add(jPanel1, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        getContentPane().add(panel2, gridBagConstraints);
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Valoració cognitiva prèvia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-
-        valoracioCognitivaPreviaBtn.setText("Valoració cognitiva prèvia");
-        valoracioCognitivaPreviaBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valoracioCognitivaPreviaBtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(valoracioCognitivaPreviaBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(valoracioCognitivaPreviaBtn)
-                .addContainerGap(52, Short.MAX_VALUE))
-        );
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 10);
-        getContentPane().add(jPanel2, gridBagConstraints);
-
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Valoració cuidador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        panel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Valoració cuidador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        panel3.setLayout(new java.awt.GridBagLayout());
 
         valoracioCuidadorBtn.setText("Valoració cuidador");
         valoracioCuidadorBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -140,42 +100,22 @@ public class MenuTests extends javax.swing.JDialog {
                 valoracioCuidadorBtnActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(valoracioCuidadorBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(valoracioCuidadorBtn)
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        panel3.add(valoracioCuidadorBtn, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        gridBagConstraints.insets = new java.awt.Insets(18, 10, 11, 10);
-        getContentPane().add(jPanel3, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        getContentPane().add(panel3, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void valoracioCognitivaPreviaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valoracioCognitivaPreviaBtnActionPerformed
-        ValoracioCognitivaPrevia tT = new ValoracioCognitivaPrevia(idPacient);
-        tT.pack();
-        tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        tT.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_valoracioCognitivaPreviaBtnActionPerformed
 
     private void sessio1BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessio1BtnActionPerformed
         if (pacientActual.getEdat() == -1){
@@ -189,7 +129,7 @@ public class MenuTests extends javax.swing.JDialog {
             "Falten dades",
             JOptionPane.WARNING_MESSAGE);
         }else{
-            Sessio1 tT = new Sessio1(this.pacientActual);
+            Sessio1 tT = new Sessio1(this.pacientActual, valoracio);
             tT.pack();
             tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
             tT.setVisible(true);
@@ -209,7 +149,7 @@ public class MenuTests extends javax.swing.JDialog {
             "Falten dades",
             JOptionPane.WARNING_MESSAGE);
         }else{
-            Sessio2 tT = new Sessio2(this.pacientActual);
+            Sessio2 tT = new Sessio2(this.pacientActual, valoracio);
             tT.pack();
             tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
             tT.setVisible(true);
@@ -219,7 +159,7 @@ public class MenuTests extends javax.swing.JDialog {
     }//GEN-LAST:event_sessio2BtnActionPerformed
 
     private void valoracioCuidadorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valoracioCuidadorBtnActionPerformed
-        ValoracioCuidador vC = new ValoracioCuidador(pacientActual);
+        ValoracioCuidador vC = new ValoracioCuidador(pacientActual, valoracio);
         vC.pack();
         vC.setExtendedState(JFrame.MAXIMIZED_BOTH);
         vC.setVisible(true);
@@ -258,7 +198,7 @@ public class MenuTests extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                MenuTests dialog = new MenuTests(new javax.swing.JFrame(), true,"",null);
+                MenuTests dialog = new MenuTests(new javax.swing.JFrame(), true,null, "");
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -271,12 +211,10 @@ public class MenuTests extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel panel2;
+    private javax.swing.JPanel panel3;
     private javax.swing.JButton sessio1Btn;
     private javax.swing.JButton sessio2Btn;
-    private javax.swing.JButton valoracioCognitivaPreviaBtn;
     private javax.swing.JButton valoracioCuidadorBtn;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,7 +5,7 @@
  */
 package vista;
 
-import controlador.Pacient;
+import model.Pacient;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -403,7 +403,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (idPacient != ""){
-            MenuTests mT = new MenuTests(this,true,idPacient,pacientActual);
+            MenuValoracions mV = new MenuValoracions(this,true,pacientActual);
 //            mT.addWindowListener(new WindowAdapter()
 //            {
 //                public void windowClosed(WindowEvent e)
@@ -411,8 +411,8 @@ public class MenuEvaluador extends javax.swing.JFrame {
 //                  back();
 //                }
 //            });
-            mT.pack();
-            mT.setVisible(true);
+            mV.pack();
+            mV.setVisible(true);
             this.toBack();
         } else {
             JOptionPane.showMessageDialog(this,

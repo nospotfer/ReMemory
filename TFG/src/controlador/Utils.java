@@ -16,11 +16,17 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import org.apache.poi.POIDocument;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import org.jdesktop.swingx.JXTable;
 import vista.NewUser;
@@ -44,6 +50,7 @@ public class Utils {
     public static final String SEP = File.separator;
     public static final String PACIENT_DATA_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"pacientData"+SEP;
     public static final String USERS_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP+"users.json";
+    public static final String RES_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP;
     
     public static String getStringFile(String file) {
 	BufferedReader reader = null;
@@ -252,7 +259,7 @@ public class Utils {
             if (!f.exists()){
                 f.mkdir();
             }
-            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+test+".dat");
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+test+".dat");
             if(!file.exists()) {
                 file.createNewFile();
             }
@@ -444,6 +451,377 @@ public class Utils {
 // iconURL is null when not found
         ImageIcon icon = new ImageIcon(iconURL);
         frame.setIconImage(icon.getImage());
+    }
+
+    public static void generaResultatsCSV(String idPacient){
+        File outFile = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        try {
+            if (!outFile.exists()){
+                outFile.createNewFile();
+            }
+	        Writer writer = new OutputStreamWriter(
+                    new FileOutputStream(outFile), "UTF-8");
+            writeHeader(writer, idPacient);
+            writer.append('\n');
+            for (int i=1; i<=3; i++){
+                writer.append(';');
+                writeValoracioCognitivaPrevia(idPacient,writer);
+                writer.append(';');
+                writeSessio1(idPacient, i, writer);
+                writer.append(';');
+                writeSessio2(idPacient, i, writer);
+                writer.append(';');
+                writeValoracioCuidador(idPacient, i, writer);
+                writer.append('\n');
+            }
+            writer.flush();
+	        writer.close();
+
+            csvToXLSX(idPacient);
+
+        }
+        catch(IOException e)
+        {
+             e.printStackTrace();
+        }
+    }
+
+    private static void writeHeader(Writer writer, String idPacient) throws IOException {
+        writeLineCSV(writer,"Pacient: "+idPacient);
+        //Valoracio cognitiva previa
+        writeLineCSV(writer,"CDR");
+        writeLineCSV(writer,"CRC total");
+        writeLineCSV(writer,"TAP total");
+        writeLineCSV(writer,"TAP CI estimat");
+        writeLineCSV(writer,"MMSE total");
+
+        writeLineCSV(writer,"");
+
+        //Sessio1
+        // Digits directe
+        writeLineCSV(writer,"SpanDD");
+        writeLineCSV(writer,"Puntuacio directa DD");
+        writeLineCSV(writer,"Percentil DD");
+        writeLineCSV(writer,"NSSA DD");
+        // Digits invers
+        writeLineCSV(writer,"SpanDI");
+        writeLineCSV(writer,"Puntuacio directa DI");
+        writeLineCSV(writer,"Percentil DI");
+        writeLineCSV(writer,"NSSA DI");
+        // MLI
+        writeLineCSV(writer,"MLI directa");
+        writeLineCSV(writer,"MLI escalar");
+        // TODO COGSTSTATE Header
+        // MLII
+        writeLineCSV(writer,"MLII directa");
+        writeLineCSV(writer,"MLII escalar");
+        // MLII Reco
+        writeLineCSV(writer,"ML Reconeixement");
+        //BNT
+        writeLineCSV(writer,"BNT correctes");
+        writeLineCSV(writer,"BNT ajuda semantica");
+        writeLineCSV(writer,"BNT percentil");
+        writeLineCSV(writer,"BNT NSSA");
+        // Color trails 1
+        writeLineCSV(writer,"Color trails 1 - Time Raw");
+        writeLineCSV(writer,"CT 1 - Time Standard");
+        writeLineCSV(writer,"CT 1 - Time Tscore");
+        writeLineCSV(writer,"CT 1 - Time Percentile");
+        writeLineCSV(writer,"CT 1 - Errors Raw");
+        writeLineCSV(writer,"CT 1 - Errors Percentile");
+        writeLineCSV(writer,"CT 1 - Near-Misses Raw");
+        writeLineCSV(writer,"CT 1 - Near-Misses Percentile");
+        writeLineCSV(writer,"CT 1 - Prompts Raw");
+        writeLineCSV(writer,"CT 1 - Prompts Percentile");
+        // Color trails 2
+        writeLineCSV(writer,"Color trails 2 - Time Raw");
+        writeLineCSV(writer,"CT 2 - Time Standard");
+        writeLineCSV(writer,"CT 2 - Time Tscore");
+        writeLineCSV(writer,"CT 2 - Time Percentile");
+        writeLineCSV(writer,"CT 2 - Errors Raw");
+        writeLineCSV(writer,"CT 2 - Errors Percentile");
+        writeLineCSV(writer,"CT 2 - Near-Misses Raw");
+        writeLineCSV(writer,"CT 2 - Near-Misses Percentile");
+        writeLineCSV(writer,"CT 2 - Prompts Raw");
+        writeLineCSV(writer,"CT 2 - Prompts Percentile");
+        // Color trails interference Index
+        writeLineCSV(writer,"Color trails - Interference index Raw");
+        writeLineCSV(writer,"CT - Interference index Percentile");
+        // Five digits
+        writeLineCSV(writer,"Five Digits - Lectura Temps");
+        writeLineCSV(writer,"FD - Lectura Temps PC");
+        writeLineCSV(writer,"FD - Lectura Errors");
+        writeLineCSV(writer,"FD - Lectura Errors PC");
+        writeLineCSV(writer,"Five Digits - Compteig Temps");
+        writeLineCSV(writer,"FD - Compteig Temps PC");
+        writeLineCSV(writer,"FD - Compteig Errors");
+        writeLineCSV(writer,"FD - Compteig Errors PC");
+        writeLineCSV(writer,"Five Digits - Eleccio Temps");
+        writeLineCSV(writer,"FD - Eleccio Temps PC");
+        writeLineCSV(writer,"FD - Eleccio Errors");
+        writeLineCSV(writer,"FD - Eleccio Errors PC");
+        writeLineCSV(writer,"Five Digits - Alternança Temps");
+        writeLineCSV(writer,"FD - Alternança Temps PC");
+        writeLineCSV(writer,"FD - Alternança Errors");
+        writeLineCSV(writer,"FD - Alternança Errors PC");
+        writeLineCSV(writer,"Five Digits - Inhibició PC");
+        writeLineCSV(writer,"Five Digits - Flexibilitat PC");
+        // Fluencia verbal
+        writeLineCSV(writer,"Fluencia verbal - P");
+        writeLineCSV(writer,"FV - M");
+        writeLineCSV(writer,"FV - R");
+        writeLineCSV(writer,"FV - Animals");
+
+        writeLineCSV(writer,"");
+
+        //Sessio 2
+        writeLineCSV(writer,"MoCA");
+        writeLineCSV(writer,"UPSA Comunicacio");
+        writeLineCSV(writer,"UPSA Comprensió");
+        writeLineCSV(writer,"UPSA total");
+        writeLineCSV(writer,"MFE");
+        writeLineCSV(writer,"HAD");
+        writeLineCSV(writer,"QoL-AD");
+        writeLineCSV(writer,"Duke");
+        writeLineCSV(writer,"Rosemberg");
+
+        writeLineCSV(writer,"");
+
+        //Valoracio cuidador
+        writeLineCSV(writer,"FAQ");
+        writeLineCSV(writer,"NPI");
+        writeLineCSV(writer,"HAD");
+        writeLineCSV(writer,"ZARIT");
+        writeLineCSV(writer,"SF-12");
+        writeLineCSV(writer,"Duke");
+
+    }
+
+    private static void writeLineCSV(Writer writer, String s) throws IOException {
+        writer.append(s);
+        writer.append(';');
+    }
+
+    private static void writeSessio1(String idPacient, int i, Writer writer) {
+        Properties prop = new Properties();
+        InputStream input = null;
+        try {
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsSessio1_T"+i+".dat");
+            if(!file.exists()) {
+
+            }
+            else{
+                input = new FileInputStream(file);
+
+                    // load a properties file
+                prop.load(input);
+
+                // Digits directe
+                propertyToCSV(writer,prop,"spanDD");
+                propertyToCSV(writer,prop,"puntuacioDirectaDD");
+                propertyToCSV(writer,prop,"percentilDD");
+                propertyToCSV(writer,prop,"nssaDD");
+                // Digits invers
+                propertyToCSV(writer,prop,"spanDI");
+                propertyToCSV(writer,prop,"puntuacioDirectaDI");
+                propertyToCSV(writer,prop,"percentilDI");
+                propertyToCSV(writer,prop,"nssaDI");
+                // Memoria logica I
+                propertyToCSV(writer,prop,"ML1Total");
+                propertyToCSV(writer,prop,"puntuacioML1");
+
+                // TODO COGSTATE
+
+                // Memoria logica II
+                propertyToCSV(writer,prop,"ML2Total");
+                propertyToCSV(writer,prop,"puntuacioML2");
+                // MLII Rec
+                propertyToCSV(writer,prop,"totalRec");
+                // BNT
+                propertyToCSV(writer,prop,"totalBnt"+i);
+                propertyToCSV(writer,prop,"semanticaBnt"+i);
+                propertyToCSV(writer,prop,"percentilBNT"+i);
+                propertyToCSV(writer,prop,"nssaBNT"+i);
+
+            }
+
+        } catch (IOException ex) {
+                ex.printStackTrace();
+        } finally {
+                if (input != null) {
+                        try {
+                                input.close();
+                        } catch (IOException e) {
+                                e.printStackTrace();
+                        }
+                }
+        }
+    }
+
+    private static void writeSessio2(String idPacient, int i, Writer writer) {
+        Properties prop = new Properties();
+        InputStream input = null;
+        try {
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsSessio2_T"+i+".dat");
+            if(!file.exists()) {
+
+            }
+            else{
+                input = new FileInputStream(file);
+
+                // load a properties file
+                prop.load(input);
+
+                // MOCA
+                propertyToCSV(writer,prop,"puntTotalMoca1");
+                // UPSA
+                propertyToCSV(writer,prop,"comunicacioSub");
+                propertyToCSV(writer,prop,"comprensioSub");
+                propertyToCSV(writer,prop,"upsaTotal");
+                // MFE
+                propertyToCSV(writer,prop,"mfeTotal");
+                // HAD
+                propertyToCSV(writer,prop,"hadTotalA");
+                propertyToCSV(writer,prop,"hadTotalD");
+                // QOL-AD
+                propertyToCSV(writer,prop,"qolTotal");
+                // DUKE
+                propertyToCSV(writer,prop,"dukeTotal");
+                // RSE
+                propertyToCSV(writer,prop,"rseTotal");
+
+            }
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private static void writeValoracioCuidador(String idPacient, int i, Writer writer) {
+        Properties prop = new Properties();
+        InputStream input = null;
+        try {
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsValCuid_T"+i+".dat");
+            if(!file.exists()) {
+
+            }
+            else{
+                input = new FileInputStream(file);
+
+                // load a properties file
+                prop.load(input);
+
+                // NPI
+                propertyToCSV(writer,prop,"npiTotal");
+                // UPSA
+                propertyToCSV(writer,prop,"zaritTotal");
+                // SF12
+                propertyToCSV(writer,prop,"sf12Total");
+                // HAD
+                propertyToCSV(writer,prop,"hadTotalA");
+                propertyToCSV(writer,prop,"hadTotalD");
+                // QOL-AD
+                propertyToCSV(writer,prop,"faqTotal");
+                // DUKE
+                propertyToCSV(writer,prop,"dukeTotal");
+
+            }
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private static void writeValoracioCognitivaPrevia(String idPacient, Writer writer) {
+        Properties prop = new Properties();
+        InputStream input = null;
+        try {
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsValCogPrev"+".dat");
+            if(!file.exists()) {
+                for (int i=0; i<5; i++){
+                    writeLineCSV(writer,"");
+                }
+            }
+            else{
+                input = new FileInputStream(file);
+
+                // load a properties file
+                prop.load(input);
+
+                // CDR
+                propertyToCSV(writer,prop,"cdr");
+                // CRC
+                propertyToCSV(writer,prop,"crcTotal");
+                // TAP
+                propertyToCSV(writer,prop,"tapTotal");
+                propertyToCSV(writer,prop,"tapCi");
+                // MMSE
+                propertyToCSV(writer,prop,"totalMMSE");
+
+            }
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private static void propertyToCSV(Writer writer, Properties prop, String string) throws IOException {
+        String str = prop.getProperty(string,"");
+        System.out.println("Propietat: "+string);
+        System.out.println("Valor: "+str+".");
+        writer.append(str);
+        writer.append(';');
+    }
+
+    public static void csvToXLSX(String idPacient) {
+        try {
+            String csvFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Resultats.csv"; //csv file address
+            String xlsxFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Resultats.xls"; //xlsx file address
+            HSSFWorkbook workBook = new HSSFWorkbook();
+            HSSFSheet sheet = workBook.createSheet("sheet1");
+            String currentLine=null;
+            int RowNum=0;
+            BufferedReader br = new BufferedReader(new FileReader(csvFileAddress));
+            while ((currentLine = br.readLine()) != null) {
+                String str[] = currentLine.split(";");
+                RowNum++;
+                HSSFRow currentRow=sheet.createRow(RowNum);
+                for(int i=0;i<str.length;i++){
+                    currentRow.createCell(i).setCellValue(str[i]);
+                }
+            }
+
+            FileOutputStream fileOutputStream =  new FileOutputStream(xlsxFileAddress);
+            workBook.write(fileOutputStream);
+            fileOutputStream.close();
+            System.out.println("Done");
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage()+"Exception in try");
+        }
     }
 
 }

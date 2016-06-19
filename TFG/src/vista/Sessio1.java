@@ -11,7 +11,7 @@ import javax.swing.Action;
 import javax.swing.JTable;
 import javax.swing.UIManager;
 import controlador.ButtonColumn;
-import controlador.Pacient;
+import model.Pacient;
 import controlador.Utils;
 import controlador.VerticalTableHeaderCellRenderer;
 import java.awt.CardLayout;
@@ -20,7 +20,9 @@ import java.awt.Desktop;
 import java.awt.FileDialog;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -31,6 +33,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
@@ -51,6 +54,7 @@ import org.jdesktop.swingx.decorator.HighlighterFactory;
  */
 public class Sessio1 extends javax.swing.JFrame {
 
+    private final String valoracio;
     int pagina = 0;
     int numPaginesTotal = 2;
     Pacient pacientActual;
@@ -72,12 +76,16 @@ public class Sessio1 extends javax.swing.JFrame {
     /**
      * Creates new form Sessio1
      */
-    public Sessio1(Pacient pacientActual) {
+    public Sessio1(Pacient pacientActual, String valoracio) {
         Utils.setIcon(this);
         
         initComponents();
+
+        this.setTitle(this.getTitle()+" | T"+valoracio);
         
         this.pacientActual = pacientActual;
+
+        this.valoracio = valoracio;
         
         convertEdat();
         
@@ -114,7 +122,7 @@ public class Sessio1 extends javax.swing.JFrame {
         
         anteriorBtn.setEnabled(false);
 
-        Utils.carregar(dataPanel,pacientActual.getId(), "Sessio1");
+        Utils.carregar(dataPanel,pacientActual.getId(), "Sessio1"+valoracio);
 
         this.toFront();
         this.repaint();
@@ -364,6 +372,7 @@ public class Sessio1 extends javax.swing.JFrame {
         dataColor = new javax.swing.JLabel();
         colorTrailsCronoBtn1 = new javax.swing.JButton();
         colorTrailsCronoLabel1 = new javax.swing.JLabel();
+        jButton20 = new javax.swing.JButton();
         fiveDigitsTab = new javax.swing.JPanel();
         fiveDigitsScroll = new javax.swing.JScrollPane();
         Panel = new javax.swing.JPanel();
@@ -517,18 +526,18 @@ public class Sessio1 extends javax.swing.JFrame {
         alternErrorsPC = new javax.swing.JLabel();
         jLabel194 = new javax.swing.JLabel();
         jLabel195 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
+        lecturaTempsPCField = new javax.swing.JTextField();
+        lecturaErrorsPCField = new javax.swing.JTextField();
+        compteigTempsPCField = new javax.swing.JTextField();
+        compteigErrorsPCField = new javax.swing.JTextField();
+        eleccioTempsPCField = new javax.swing.JTextField();
+        eleccioErrorsPCField = new javax.swing.JTextField();
+        alternTempsPCField = new javax.swing.JTextField();
+        alternErrorsPCField = new javax.swing.JTextField();
+        lecturaErrors = new javax.swing.JTextField();
+        compteigErrors = new javax.swing.JTextField();
+        eleccioErrors = new javax.swing.JTextField();
+        alternErrors = new javax.swing.JTextField();
         jPanel16 = new javax.swing.JPanel();
         jLabel198 = new javax.swing.JLabel();
         jLabel199 = new javax.swing.JLabel();
@@ -541,10 +550,10 @@ public class Sessio1 extends javax.swing.JFrame {
         inhibicioPC = new javax.swing.JLabel();
         jLabel205 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jTextField22 = new javax.swing.JTextField();
-        jTextField23 = new javax.swing.JTextField();
-        jTextField24 = new javax.swing.JTextField();
-        jTextField25 = new javax.swing.JTextField();
+        eleccioTemps2Field = new javax.swing.JTextField();
+        lecturaTemps2Field = new javax.swing.JTextField();
+        inhibicioPDField = new javax.swing.JTextField();
+        inhibicioPCField = new javax.swing.JTextField();
         jPanel17 = new javax.swing.JPanel();
         jLabel206 = new javax.swing.JLabel();
         alternanTemps2 = new javax.swing.JLabel();
@@ -557,10 +566,10 @@ public class Sessio1 extends javax.swing.JFrame {
         jLabel213 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel207 = new javax.swing.JLabel();
-        jTextField26 = new javax.swing.JTextField();
-        jTextField27 = new javax.swing.JTextField();
-        jTextField28 = new javax.swing.JTextField();
-        jTextField29 = new javax.swing.JTextField();
+        alternanTemps2Field = new javax.swing.JTextField();
+        compteigTemps2Field = new javax.swing.JTextField();
+        flexibilitatPDField = new javax.swing.JTextField();
+        flexibilitatPCField = new javax.swing.JTextField();
         calculPercentilsFiveDigit = new javax.swing.JButton();
         dataFive = new javax.swing.JLabel();
         colorTrailsTab1 = new javax.swing.JPanel();
@@ -571,6 +580,7 @@ public class Sessio1 extends javax.swing.JFrame {
         fluenciaVerbalTable = new org.jdesktop.swingx.JXTable();
         jButton17 = new javax.swing.JButton();
         dataFluencia = new javax.swing.JLabel();
+        jButton21 = new javax.swing.JButton();
         buttonPanel = new javax.swing.JPanel();
         acceptaBtn = new javax.swing.JButton();
         cancelaBtn = new javax.swing.JButton();
@@ -715,7 +725,7 @@ public class Sessio1 extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(220, 218, 195));
 
         jLabel87.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel87.setText("<html>Puntuación directa<br>orden directo (DD)");
+        jLabel87.setText("<html>Puntuació directa<br>ordre directe (DD)");
 
         puntuacioDirectaDD.setBackground(new java.awt.Color(255, 255, 255));
         puntuacioDirectaDD.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -881,7 +891,7 @@ public class Sessio1 extends javax.swing.JFrame {
         jPanel11.setBackground(new java.awt.Color(220, 218, 195));
 
         jLabel89.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel89.setText("<html>Puntuación directa<br>orden directo (DI)");
+        jLabel89.setText("<html>Puntuació directe<br>ordre invers (DI)");
 
         puntuacioDirectaDI.setBackground(new java.awt.Color(255, 255, 255));
         puntuacioDirectaDI.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -1026,7 +1036,7 @@ public class Sessio1 extends javax.swing.JFrame {
                             .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(resetDI)
                             .addComponent(dataDI))))
-                .addContainerGap(684, Short.MAX_VALUE))
+                .addContainerGap(697, Short.MAX_VALUE))
         );
         digitsInversPanelLayout.setVerticalGroup(
             digitsInversPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1044,7 +1054,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addComponent(resetDI)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(dataDI)))
-                .addContainerGap(245, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
 
         digitsInversScroll.setViewportView(digitsInversPanel);
@@ -1191,7 +1201,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(jLabel36)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(historiaAsegonTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(0, 769, Short.MAX_VALUE))))
+                                        .addGap(0, 775, Short.MAX_VALUE))))
                             .addGroup(ML1PanelLayout.createSequentialGroup()
                                 .addComponent(jLabel34)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1232,7 +1242,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(resetHistoriaA))
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
 
         ML1Scroll.setViewportView(ML1Panel);
@@ -1422,7 +1432,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                             .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(dataMl1))
-                                        .addGap(0, 628, Short.MAX_VALUE))))
+                                        .addGap(0, 634, Short.MAX_VALUE))))
                             .addGroup(ML1Panel1Layout.createSequentialGroup()
                                 .addComponent(jLabel38)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1464,7 +1474,7 @@ public class Sessio1 extends javax.swing.JFrame {
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(dataMl1)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
 
         ML1Scroll2.setViewportView(ML1Panel1);
@@ -1527,7 +1537,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(obreExcelBtn)
                             .addComponent(jButton19))))
-                .addContainerGap(1180, Short.MAX_VALUE))
+                .addContainerGap(1186, Short.MAX_VALUE))
         );
         digitsDirectePanel3Layout.setVerticalGroup(
             digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1542,7 +1552,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(digitsDirectePanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton18)
                     .addComponent(jButton19))
-                .addContainerGap(718, Short.MAX_VALUE))
+                .addContainerGap(727, Short.MAX_VALUE))
         );
 
         digitsDirecteScroll3.setViewportView(digitsDirectePanel3);
@@ -1667,7 +1677,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(historiaAprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(resetHistoriaA1)
                                             .addComponent(jLabel7))
-                                        .addGap(0, 798, Short.MAX_VALUE))))
+                                        .addGap(0, 804, Short.MAX_VALUE))))
                             .addGroup(ML2Panel2Layout.createSequentialGroup()
                                 .addComponent(jLabel41)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1892,7 +1902,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                                 .addComponent(jLabel55))
                                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(dataMl2))
-                                        .addGap(0, 682, Short.MAX_VALUE))))
+                                        .addGap(0, 688, Short.MAX_VALUE))))
                             .addGroup(MLPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel51)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1931,7 +1941,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(dataMl2)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE))
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 696, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2150,7 +2160,7 @@ public class Sessio1 extends javax.swing.JFrame {
                             .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel61)
                                 .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(624, Short.MAX_VALUE))
+                .addContainerGap(630, Short.MAX_VALUE))
         );
         ML2Panel4Layout.setVerticalGroup(
             ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2176,7 +2186,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
                     .addComponent(totalRecB, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
         ML2Scroll4.setViewportView(ML2Panel4);
@@ -2185,6 +2195,7 @@ public class Sessio1 extends javax.swing.JFrame {
 
         tabbedPanel.addTab("ML2", ML2Tab);
 
+        BNTTab.setName("BNT"); // NOI18N
         BNTTab.setLayout(new java.awt.CardLayout());
 
         jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -2415,7 +2426,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(dataBnt1)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE))
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2651,7 +2662,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(dataBnt2)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane17, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE))
+                    .addComponent(jScrollPane17, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2887,7 +2898,7 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(dataBnt3)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE))
+                    .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2993,6 +3004,13 @@ public class Sessio1 extends javax.swing.JFrame {
         colorTrailsCronoLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         colorTrailsCronoLabel1.setText("00:00:00");
 
+        jButton20.setText("Veure Taula");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout digitsDirectePanel1Layout = new javax.swing.GroupLayout(digitsDirectePanel1);
         digitsDirectePanel1.setLayout(digitsDirectePanel1Layout);
         digitsDirectePanel1Layout.setHorizontalGroup(
@@ -3023,9 +3041,10 @@ public class Sessio1 extends javax.swing.JFrame {
                                     .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
                                         .addComponent(colorTrailsCronoBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(colorTrailsCronoLabel1))))))
+                                        .addComponent(colorTrailsCronoLabel1))
+                                    .addComponent(jButton20)))))
                     .addComponent(jLabel30))
-                .addContainerGap(456, Short.MAX_VALUE))
+                .addContainerGap(462, Short.MAX_VALUE))
         );
         digitsDirectePanel1Layout.setVerticalGroup(
             digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3054,9 +3073,11 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton3)
-                            .addComponent(dataColor)))
+                            .addComponent(dataColor))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton20))
                     .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(413, Short.MAX_VALUE))
         );
 
         digitsDirecteScroll1.setViewportView(digitsDirectePanel1);
@@ -3288,7 +3309,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel33)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(665, Short.MAX_VALUE))
+                .addContainerGap(671, Short.MAX_VALUE))
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3297,7 +3318,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(518, Short.MAX_VALUE))
+                .addContainerGap(527, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll.setViewportView(Panel);
@@ -3525,7 +3546,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel93)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(665, Short.MAX_VALUE))
+                .addContainerGap(671, Short.MAX_VALUE))
         );
         Panel1Layout.setVerticalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3534,7 +3555,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel93)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(518, Short.MAX_VALUE))
+                .addContainerGap(527, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll1.setViewportView(Panel1);
@@ -3762,7 +3783,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel122)
                     .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(665, Short.MAX_VALUE))
+                .addContainerGap(671, Short.MAX_VALUE))
         );
         Panel2Layout.setVerticalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3771,7 +3792,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel122)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(504, Short.MAX_VALUE))
+                .addContainerGap(513, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll2.setViewportView(Panel2);
@@ -3999,7 +4020,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel141)
                     .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(665, Short.MAX_VALUE))
+                .addContainerGap(671, Short.MAX_VALUE))
         );
         Panel3Layout.setVerticalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4008,7 +4029,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel141)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(504, Short.MAX_VALUE))
+                .addContainerGap(513, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll3.setViewportView(Panel3);
@@ -4121,7 +4142,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(alternTemps)
-                                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(alternErrors, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel194)
@@ -4132,8 +4153,8 @@ public class Sessio1 extends javax.swing.JFrame {
                                     .addComponent(alternErrorsPC))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
-                                    .addComponent(jTextField17)))
+                                    .addComponent(alternTempsPCField, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                                    .addComponent(alternErrorsPCField)))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel186)
@@ -4141,7 +4162,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(eleccioTemps)
-                                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(eleccioErrors, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel15Layout.createSequentialGroup()
@@ -4154,8 +4175,8 @@ public class Sessio1 extends javax.swing.JFrame {
                                         .addComponent(eleccioTempsPC)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-                                    .addComponent(jTextField15))
+                                    .addComponent(eleccioTempsPCField, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                                    .addComponent(eleccioErrorsPCField))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -4170,15 +4191,15 @@ public class Sessio1 extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lecturaTempsPC))
                                     .addGroup(jPanel15Layout.createSequentialGroup()
-                                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lecturaErrors, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel166)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lecturaErrorsPC)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField11)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)))
+                                    .addComponent(lecturaErrorsPCField)
+                                    .addComponent(lecturaTempsPCField, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel177)
@@ -4186,7 +4207,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(compteigTemps)
-                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(compteigErrors, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel176)
@@ -4197,8 +4218,8 @@ public class Sessio1 extends javax.swing.JFrame {
                                     .addComponent(compteigErrorsPC))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField12)
-                                    .addComponent(jTextField13))))))
+                                    .addComponent(compteigTempsPCField)
+                                    .addComponent(compteigErrorsPCField))))))
                 .addGap(4, 4, 4))
         );
         jPanel15Layout.setVerticalGroup(
@@ -4213,16 +4234,16 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addComponent(lecturaTemps))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lecturaTempsPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lecturaTempsPC)
                             .addComponent(jLabel167))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lecturaErrorsPC)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lecturaErrorsPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel166)
                             .addComponent(jLabel163)
-                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lecturaErrors, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel170)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4234,30 +4255,30 @@ public class Sessio1 extends javax.swing.JFrame {
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(compteigTempsPC)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(compteigTempsPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(compteigErrorsPC)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(compteigErrorsPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel176)
-                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(compteigErrors, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel177))))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel179)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(eleccioTempsPC)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eleccioTempsPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel181)
                     .addComponent(eleccioTemps)
                     .addComponent(jLabel180))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(eleccioErrorsPC)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eleccioErrorsPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel185)
                     .addComponent(jLabel186)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(eleccioErrors, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel188)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4272,15 +4293,15 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addGap(26, 26, 26)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel195)
-                                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(alternErrors, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(jPanel15Layout.createSequentialGroup()
                             .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(alternTempsPC)
-                                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(alternTempsPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(alternErrorsPC)
-                                .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(alternErrorsPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel194)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -4322,7 +4343,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(inhibicioPC)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(inhibicioPCField, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel16Layout.createSequentialGroup()
                                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel199)
@@ -4340,9 +4361,9 @@ public class Sessio1 extends javax.swing.JFrame {
                                     .addComponent(inhibicioPD))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(eleccioTemps2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lecturaTemps2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(inhibicioPDField, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -4353,27 +4374,27 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel198)
                     .addComponent(eleccioTemps2)
-                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(eleccioTemps2Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel199)
                     .addComponent(lecturaTemps2)
                     .addComponent(jLabel233)
-                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lecturaTemps2Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel202)
                     .addComponent(inhibicioPD)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inhibicioPDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel205)
                     .addComponent(inhibicioPC)
-                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inhibicioPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -4414,7 +4435,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(flexibilitatPC)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(flexibilitatPCField, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel17Layout.createSequentialGroup()
@@ -4435,9 +4456,9 @@ public class Sessio1 extends javax.swing.JFrame {
                                     .addComponent(flexibilitatPD))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(alternanTemps2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(compteigTemps2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(flexibilitatPDField, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 16, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -4448,27 +4469,27 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(alternanTemps2)
                     .addComponent(jLabel207)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(alternanTemps2Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(compteigTemps2)
                     .addComponent(jLabel234)
                     .addComponent(jLabel206)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(compteigTemps2Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel210)
                     .addComponent(flexibilitatPD)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(flexibilitatPDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel213)
                     .addComponent(flexibilitatPC)
-                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(flexibilitatPCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -4500,7 +4521,7 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(966, Short.MAX_VALUE))
+                .addContainerGap(972, Short.MAX_VALUE))
         );
         Panel4Layout.setVerticalGroup(
             Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4518,7 +4539,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(calculPercentilsFiveDigit)
                     .addComponent(dataFive))
-                .addContainerGap(377, Short.MAX_VALUE))
+                .addContainerGap(386, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll4.setViewportView(Panel4);
@@ -4593,6 +4614,13 @@ public class Sessio1 extends javax.swing.JFrame {
 
         dataFluencia.setText("Data: Encara no s'ha realitzat el test");
 
+        jButton21.setText("Veure Taula");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout digitsDirectePanel2Layout = new javax.swing.GroupLayout(digitsDirectePanel2);
         digitsDirectePanel2.setLayout(digitsDirectePanel2Layout);
         digitsDirectePanel2Layout.setHorizontalGroup(
@@ -4606,9 +4634,10 @@ public class Sessio1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton17)
-                            .addComponent(dataFluencia)))
+                            .addComponent(dataFluencia)
+                            .addComponent(jButton21)))
                     .addComponent(jLabel164))
-                .addContainerGap(824, Short.MAX_VALUE))
+                .addContainerGap(830, Short.MAX_VALUE))
         );
         digitsDirectePanel2Layout.setVerticalGroup(
             digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4617,11 +4646,13 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(jLabel164)
                 .addGap(18, 18, 18)
                 .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+                    .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 766, Short.MAX_VALUE)
                     .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
                         .addComponent(jButton17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(dataFluencia)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton21)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -4686,7 +4717,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addComponent(paginaLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(sepBottom, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1000, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1006, Short.MAX_VALUE)
                 .addComponent(acceptaBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelaBtn)
@@ -4718,7 +4749,9 @@ public class Sessio1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        Utils.guardar(dataPanel,pacientActual.getId(), "Sessio1");
+        Utils.guardar(dataPanel,pacientActual.getId(), "Sessio1_T"+valoracio );
+        this.guardarResultats();
+        Utils.generaResultatsCSV(pacientActual.getId());
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 
@@ -5107,6 +5140,28 @@ public class Sessio1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_colorTrailsCronoBtn1ActionPerformed
 
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        File file = new File(Utils.RES_PATH+"ColorTrails.pdf");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        File file = new File(Utils.RES_PATH+"FluenciaVerbal.pdf");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton21ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -5138,7 +5193,7 @@ public class Sessio1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sessio1(null).setVisible(true);
+                new Sessio1(null, "").setVisible(true);
             }
         });
     }
@@ -5180,10 +5235,14 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JPanel Panel3;
     private javax.swing.JPanel Panel4;
     private javax.swing.JButton acceptaBtn;
+    private javax.swing.JTextField alternErrors;
     private javax.swing.JLabel alternErrorsPC;
+    private javax.swing.JTextField alternErrorsPCField;
     private javax.swing.JLabel alternTemps;
     private javax.swing.JLabel alternTempsPC;
+    private javax.swing.JTextField alternTempsPCField;
     private javax.swing.JLabel alternanTemps2;
+    private javax.swing.JTextField alternanTemps2Field;
     private javax.swing.JButton anteriorBtn;
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton calculPercentilsFiveDigit;
@@ -5196,10 +5255,14 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JPanel colorTrailsTab;
     private javax.swing.JPanel colorTrailsTab1;
     private org.jdesktop.swingx.JXTable colorTrailsTable;
+    private javax.swing.JTextField compteigErrors;
     private javax.swing.JLabel compteigErrorsPC;
+    private javax.swing.JTextField compteigErrorsPCField;
     private javax.swing.JLabel compteigTemps;
     private javax.swing.JLabel compteigTemps2;
+    private javax.swing.JTextField compteigTemps2Field;
     private javax.swing.JLabel compteigTempsPC;
+    private javax.swing.JTextField compteigTempsPCField;
     private javax.swing.JLabel correctesBntA;
     private javax.swing.JLabel correctesBntB;
     private javax.swing.JLabel correctesBntC;
@@ -5227,10 +5290,14 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JScrollPane digitsInversScroll;
     private org.jdesktop.swingx.JXTable digitsInversTable;
     private javax.swing.JPanel digitsTab;
+    private javax.swing.JTextField eleccioErrors;
     private javax.swing.JLabel eleccioErrorsPC;
+    private javax.swing.JTextField eleccioErrorsPCField;
     private javax.swing.JLabel eleccioTemps;
     private javax.swing.JLabel eleccioTemps2;
+    private javax.swing.JTextField eleccioTemps2Field;
     private javax.swing.JLabel eleccioTempsPC;
+    private javax.swing.JTextField eleccioTempsPCField;
     private javax.swing.JButton fiveDigitStart1;
     private javax.swing.JButton fiveDigitStart2;
     private javax.swing.JButton fiveDigitStart3;
@@ -5242,7 +5309,9 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JScrollPane fiveDigitsScroll4;
     private javax.swing.JPanel fiveDigitsTab;
     private javax.swing.JLabel flexibilitatPC;
+    private javax.swing.JTextField flexibilitatPCField;
     private javax.swing.JLabel flexibilitatPD;
+    private javax.swing.JTextField flexibilitatPDField;
     private org.jdesktop.swingx.JXTable fluenciaVerbalTable;
     private javax.swing.JLabel historiaAprimerTotal;
     private javax.swing.JLabel historiaAprimerTotal2;
@@ -5250,7 +5319,9 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JLabel historiaBprimerTotal;
     private javax.swing.JLabel historiaBprimerTotal2;
     private javax.swing.JLabel inhibicioPC;
+    private javax.swing.JTextField inhibicioPCField;
     private javax.swing.JLabel inhibicioPD;
+    private javax.swing.JTextField inhibicioPDField;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -5263,6 +5334,8 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -5504,27 +5577,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
@@ -5532,10 +5585,14 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField lecturaErrors;
     private javax.swing.JLabel lecturaErrorsPC;
+    private javax.swing.JTextField lecturaErrorsPCField;
     private javax.swing.JLabel lecturaTemps;
     private javax.swing.JLabel lecturaTemps2;
+    private javax.swing.JTextField lecturaTemps2Field;
     private javax.swing.JLabel lecturaTempsPC;
+    private javax.swing.JTextField lecturaTempsPCField;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel nssaBNTA;
     private javax.swing.JLabel nssaBNTB;
@@ -6162,7 +6219,19 @@ public class Sessio1 extends javax.swing.JFrame {
                 if (timer.isRunning())
                     timer.stop();
                 
-                numPaginesTotal = ((JPanel)tabbedPanel.getSelectedComponent()).getComponentCount();
+                if (((JPanel)tabbedPanel.getSelectedComponent()).getName() != null){
+                    if (((JPanel)tabbedPanel.getSelectedComponent()).getName().equals("BNT")){
+                        numPaginesTotal = 1;
+                        CardLayout card = (CardLayout)((JPanel)tabbedPanel.getSelectedComponent()).getLayout();
+                        card.show(((JPanel)tabbedPanel.getSelectedComponent()), "card"+(valoracio));
+                    } else {
+                        numPaginesTotal = ((JPanel)tabbedPanel.getSelectedComponent()).getComponentCount();
+                    }
+                }
+                else {
+                    numPaginesTotal = ((JPanel)tabbedPanel.getSelectedComponent()).getComponentCount();
+                }
+                
                 if (numPaginesTotal > 1){
                     CardLayout card = (CardLayout)((JPanel)tabbedPanel.getSelectedComponent()).getLayout();
                     card.show(((JPanel)tabbedPanel.getSelectedComponent()), "card"+(pagina+1));
@@ -8098,7 +8167,156 @@ public class Sessio1 extends javax.swing.JFrame {
             obreExcelBtn.setEnabled(true);
         }
     }
+    
+    private void guardarResultats(){
+        Properties prop = new Properties();
+	OutputStream output = null;
 
+	try {
+            
+        File f = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator);
+            if (!f.exists()){
+                f.mkdir();
+            }
+            File file = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator+"resultsSessio1_T"+valoracio+".dat");
+                
+		output = new FileOutputStream(file);
+                
+        // Digits directe
+        Utils.setProperty(prop,"puntuacioDirectaDD",puntuacioDirectaDD);
+        Utils.setProperty(prop,"spanDD",spanDD);
+        Utils.setProperty(prop,"nssaDD",nssaDD);
+        Utils.setProperty(prop,"percentilDD",percentilDD);
+        // Digits invers
+        Utils.setProperty(prop,"puntuacioDirectaDI",puntuacioDirectaDI);
+        Utils.setProperty(prop,"spanDI",spanDI);
+        Utils.setProperty(prop,"nssaDI",nssaDI);
+        Utils.setProperty(prop,"percentilDI",percentilDI);
+        // Memoria logica I
+        Utils.setProperty(prop,"historiaAprimerTotal",historiaAprimerTotal);
+        Utils.setProperty(prop,"textHistoriaAprimer",textHistoriaAprimer);
+        Utils.setProperty(prop,"historiaAsegonTotal",historiaAsegonTotal);
+        Utils.setProperty(prop,"textHistoriaAsegon",textHistoriaAsegon);
+        Utils.setProperty(prop,"historiaBprimerTotal",historiaBprimerTotal);
+        Utils.setProperty(prop,"textHistoriaBprimer",textHistoriaBprimer);
+        Utils.setProperty(prop,"ML1Total",ML1Total);
+        Utils.setProperty(prop,"puntuacioML1",puntuacioML1);
+        // Memoria logica II
+        Utils.setProperty(prop,"historiaAprimerTotal2",historiaAprimerTotal2);
+        Utils.setProperty(prop,"textHistoriaAprimer2",textHistoriaAprimer2);
+        Utils.setProperty(prop,"historiaBprimerTotal2",historiaBprimerTotal2);
+        Utils.setProperty(prop,"textHistoriaBprimer2",textHistoriaBprimer2);
+        Utils.setProperty(prop,"ML2Total",ML2Total);
+        Utils.setProperty(prop,"puntuacioML2",puntuacioML2);
+        Utils.setProperty(prop,"totalRecA",totalRecA);
+        Utils.setProperty(prop,"totalRecB",totalRecB);
+        Utils.setProperty(prop,"totalRec",totalRec);
+        
+        if (valoracio.equals("1")){
+            // BNT A
+            Utils.setProperty(prop,"totalBnt"+valoracio,totalBntA);
+            Utils.setProperty(prop,"semanticaBnt"+valoracio,semanticaBntA);
+            Utils.setProperty(prop,"percentilBNT"+valoracio,percentilBNTA);
+            Utils.setProperty(prop,"nssaBNT"+valoracio,nssaBNTA);
+        } else if (valoracio.equals("2")){
+            // BNT B
+            Utils.setProperty(prop,"totalBnt"+valoracio,totalBntB);
+            Utils.setProperty(prop,"semanticaBnt"+valoracio,semanticaBntB);
+            Utils.setProperty(prop,"percentilBNT"+valoracio,percentilBNTB);
+            Utils.setProperty(prop,"nssaBNT"+valoracio,nssaBNTB);
+        } else if (valoracio.equals("3")){
+            // BNT C
+            Utils.setProperty(prop,"totalBnt"+valoracio,totalBntC);
+            Utils.setProperty(prop,"semanticaBnt"+valoracio,semanticaBntC);
+            Utils.setProperty(prop,"percentilBNT"+valoracio,percentilBNTC);
+            Utils.setProperty(prop,"nssaBNT"+valoracio,nssaBNTC);
+        }
+        
+        // Color trails 1 time in seconds
+            System.out.println((String)colorTrailsTable.getValueAt(0,1));
+        prop.setProperty("color1timeRaw",getStringFromTable((String)colorTrailsTable.getValueAt(0,1)));
+        prop.setProperty("color1timeStandard",getStringFromTable((String)colorTrailsTable.getValueAt(0,3)));
+        prop.setProperty("color1timeTscore",getStringFromTable((String)colorTrailsTable.getValueAt(0,4)));
+        prop.setProperty("color1timePercentile",getStringFromTable((String)colorTrailsTable.getValueAt(0,5)));
+        // Color trails 1 errors
+        prop.setProperty("color1errorRaw",getStringFromTable((String)colorTrailsTable.getValueAt(1,1)));
+        prop.setProperty("color1errorPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(1,2)));
+        // Color trails 1 Near misses
+        prop.setProperty("color1nearRaw",getStringFromTable((String)colorTrailsTable.getValueAt(2,1)));
+        prop.setProperty("color1nearPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(2,2)));
+        // Color trails 1 prompts
+        prop.setProperty("color1promptsRaw",getStringFromTable((String)colorTrailsTable.getValueAt(3,1)));
+        prop.setProperty("color1promptsPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(3,2)));
+        // Color trails 2 time in seconds
+        prop.setProperty("color2timeRaw",getStringFromTable((String)colorTrailsTable.getValueAt(4,1)));
+        prop.setProperty("color2timeStandard",getStringFromTable((String)colorTrailsTable.getValueAt(4,3)));
+        prop.setProperty("color2timeTscore",getStringFromTable((String)colorTrailsTable.getValueAt(4,4)));
+        prop.setProperty("color2timePercentile",getStringFromTable((String)colorTrailsTable.getValueAt(4,5)));
+        // Color trails 2 errors
+        prop.setProperty("color2errorRaw",getStringFromTable((String)colorTrailsTable.getValueAt(5,1)));
+        prop.setProperty("color2errorPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(5,2)));
+        // Color trails 2 Near misses
+        prop.setProperty("color2nearRaw",getStringFromTable((String)colorTrailsTable.getValueAt(6,1)));
+        prop.setProperty("color2nearPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(6,2)));
+        // Color trails 2 prompts
+        prop.setProperty("color2promptsRaw",getStringFromTable((String)colorTrailsTable.getValueAt(7,1)));
+        prop.setProperty("color2promptsPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(7,2)));
+        // Color trails interference index
+        prop.setProperty("colorInterferenceRaw",getStringFromTable((String)colorTrailsTable.getValueAt(8,1)));
+        prop.setProperty("colorInterferencePercentile",getStringFromTable((String)colorTrailsTable.getValueAt(8,2)));
+        // Five digit
+        Utils.setProperty(prop,"lecturaTemps",lecturaTemps);
+        Utils.setProperty(prop,"lecturaTempsPCField",lecturaTempsPCField);
+        Utils.setProperty(prop,"lecturaErrorsField",lecturaErrors);
+        Utils.setProperty(prop,"lecturaErrorsPCField",lecturaErrorsPCField);
+        // Five digit
+        Utils.setProperty(prop,"compteigTemps",compteigTemps);
+        Utils.setProperty(prop,"compteigTempsPCField",compteigTempsPCField);
+        Utils.setProperty(prop,"compteigErrors",compteigErrors);
+        Utils.setProperty(prop,"compteigErrorsPCField",compteigErrorsPCField);
+        // Five digit
+        Utils.setProperty(prop,"lecturaTemps",eleccioTemps);
+        Utils.setProperty(prop,"lecturaTempsPCField",eleccioTempsPCField);
+        Utils.setProperty(prop,"lecturaErrorsField",eleccioErrors);
+        Utils.setProperty(prop,"lecturaErrorsPCField",eleccioErrorsPCField);
+        // Five digit
+        Utils.setProperty(prop,"alternTemps",alternTemps);
+        Utils.setProperty(prop,"alternTempsPCField",alternTempsPCField);
+        Utils.setProperty(prop,"alternErrors",alternErrors);
+        Utils.setProperty(prop,"alternErrorsPCField",alternErrorsPCField);
+        // Five digit
+        Utils.setProperty(prop,"inhibicioPCField",inhibicioPCField);
+        Utils.setProperty(prop,"flexibilitatPCField",flexibilitatPCField);
+        // Fluencia verbal
+        prop.setProperty("fluenciaP",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,1)));
+        prop.setProperty("fluenciaM",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,3)));
+        prop.setProperty("fluenciaR",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,5)));
+        prop.setProperty("fluenciaAnimals",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,7)));
+
+        prop.store(output, "Sessio1");
+                
+
+	} catch (IOException io) {
+		io.printStackTrace();
+        } finally {
+            if (output != null) {
+		try {
+                    output.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+	}
+    }
+
+    private String getStringFromTable(String string) {
+        if (string != null){
+            return string;
+        }
+        else {
+            return "";
+        }
+    }
 }
 
 class customRenderer extends javax.swing.table.DefaultTableCellRenderer {

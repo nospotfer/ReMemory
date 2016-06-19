@@ -5,15 +5,19 @@
  */
 package vista;
 
-import controlador.Pacient;
+import model.Pacient;
 import controlador.Utils;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Collections;
-import javafx.scene.control.ToggleButton;
+import java.util.Properties;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -28,20 +32,24 @@ public class Sessio2 extends javax.swing.JFrame {
     int pagina = 0;
     int numPaginesTotal = 1;
     Pacient pacientActual;
+    String valoracio;
     
     /**
      * Creates new form Sessio2
+     * @param pacientActual
+     * @param valoracio
      */
-    public Sessio2() {
-        initComponents();
-    }
     
-    public Sessio2(Pacient pacient) {
+    public Sessio2(Pacient pacientActual, String valoracio) {
         Utils.setIcon(this);
         
         initComponents();
+
+        this.setTitle(this.getTitle()+" | T"+valoracio);
         
-        this.pacientActual = pacient;
+        this.pacientActual = pacientActual;
+
+        this.valoracio = valoracio;
         
         Utils.setActionCommands(tabbedPanel);
         
@@ -56,7 +64,7 @@ public class Sessio2 extends javax.swing.JFrame {
         initDUKE();
         initRSE();
 
-        Utils.carregar(tabbedPanel,pacientActual.getId(), "Sessio2");
+        Utils.carregar(tabbedPanel,pacientActual.getId(), "Sessio2"+valoracio);
 
         this.toFront();
         this.repaint();
@@ -7718,7 +7726,9 @@ public class Sessio2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        Utils.guardar(tabbedPanel,pacientActual.getId(), "Sessio2");
+        Utils.guardar(tabbedPanel,pacientActual.getId(), "Sessio2_T"+valoracio);
+        this.guardarResultats();
+        Utils.generaResultatsCSV(pacientActual.getId());
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 
@@ -7835,7 +7845,7 @@ public class Sessio2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sessio2().setVisible(true);
+                new Sessio2(null,"").setVisible(true);
             }
         });
     }
@@ -9240,5 +9250,51 @@ public class Sessio2 extends javax.swing.JFrame {
 
         return count;
     }
+    
+    private void guardarResultats(){
+        Properties prop = new Properties();
+	OutputStream output = null;
 
+	try {
+            
+            File f = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator);
+                if (!f.exists()){
+                    f.mkdir();
+                }
+                File file = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator+"resultsSessio2_T"+valoracio+".dat");
+                
+		output = new FileOutputStream(file);
+                
+        // MOCA
+        Utils.setProperty(prop,"puntTotalMoca1",puntTotalMoca1);
+        // UPSA
+        Utils.setProperty(prop,"upsaTotal",upsaTotal);
+        Utils.setProperty(prop,"comunicacioSub",comunicacioSub);
+        Utils.setProperty(prop,"comprensioSub",comprensioSub);
+        // MFE
+        Utils.setProperty(prop,"mfeTotal",mfeTotal);
+        // HAD
+        Utils.setProperty(prop,"hadTotalA",hadTotalA);
+        Utils.setProperty(prop,"hadTotalD",hadTotalD);
+        // QOL-AD
+        Utils.setProperty(prop,"qolTotal",qolTotal);
+        // DUKE
+        Utils.setProperty(prop,"dukeTotal",dukeTotal);
+        // RSE
+        Utils.setProperty(prop,"rseTotal",rseTotal);
+
+        prop.store(output, "NEUROIMATGE");
+
+	} catch (IOException io) {
+		io.printStackTrace();
+        } finally {
+            if (output != null) {
+		try {
+                    output.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+	}
+    }
 }

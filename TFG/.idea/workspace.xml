@@ -4,7 +4,172 @@
     <bookmark url="file://$PROJECT_DIR$/src/vista/MenuEvaluador.java" line="554" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8d339e9-fc50-4593-9783-a634fd38d6f8" name="Default" comment="" />
+    <list default="true" id="b8d339e9-fc50-4593-9783-a634fd38d6f8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/controlador/Evaluador.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/controlador/Pacient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/controlador/Persona.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$5$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$5.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controlador/Evaluador.java" afterPath="$PROJECT_DIR$/src/model/Evaluador.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controlador/Pacient.java" afterPath="$PROJECT_DIR$/src/model/Pacient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controlador/Persona.java" afterPath="$PROJECT_DIR$/src/model/Persona.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/controlador/Utils.class" afterPath="$PROJECT_DIR$/build/classes/controlador/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/MenuTests$1.class" afterPath="$PROJECT_DIR$/build/classes/vista/MenuTests$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/MenuTests$2.class" afterPath="$PROJECT_DIR$/build/classes/vista/MenuTests$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/MenuTests$3.class" afterPath="$PROJECT_DIR$/build/classes/vista/MenuTests$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/MenuTests$4.class" afterPath="$PROJECT_DIR$/build/classes/vista/MenuTests$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/MenuTests$5$1.class" afterPath="$PROJECT_DIR$/build/classes/vista/MenuTests$5$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/MenuTests$5.class" afterPath="$PROJECT_DIR$/build/classes/vista/MenuTests$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/MenuTests.class" afterPath="$PROJECT_DIR$/build/classes/vista/MenuTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/customModel.class" afterPath="$PROJECT_DIR$/build/classes/vista/customModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/vista/customRenderer.class" afterPath="$PROJECT_DIR$/build/classes/vista/customRenderer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/controlador/Utils$1.class" afterPath="$PROJECT_DIR$/out/production/TFG/controlador/Utils$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/controlador/Utils.class" afterPath="$PROJECT_DIR$/out/production/TFG/controlador/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/FitxaPacient$9.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/FitxaPacient$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/FitxaPacient.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/FitxaPacient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuEvaluador$8.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/MenuEvaluador$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuEvaluador.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/MenuEvaluador.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$1.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$2.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$3.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$4.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/MenuTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient$1.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient$2.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient$3$1.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient$3.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/NewPacient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$1.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$10.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$11.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$12.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$13.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$14.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$15.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$16.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$17.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$18.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$19.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$2.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$20.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$21.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$22.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$23.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$24.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$25.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$26.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$27.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$28.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$29.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$3.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$30.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$30.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$31.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$32.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$32.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$33.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$33.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$34.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$34.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$35.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$35.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$36.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$36.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$37.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$37.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$38.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$38.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$39.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$39.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$4.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$40.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$40.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$41.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$41.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$42.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$42.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$43.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$43.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$44.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$44.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$45.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$45.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$46.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$46.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$47.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$47.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$48.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$48.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$49.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$49.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$5.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$50.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$50.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$51.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$51.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$52.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$52.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$53.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$53.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$54.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$54.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$55.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$55.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$56.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$56.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$57.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$57.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$58.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$58.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$59.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$59.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$6.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$60.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$60.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$61.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$61.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$62.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$62.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$63.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$63.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$64.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$64.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$65.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$65.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$66.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$66.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$67.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$67.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$68.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$68.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$69.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$69.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$7.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$70.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$70.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$71.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$71.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$72.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$72.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$73.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$73.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$74.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$74.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$75.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$75.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$8.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$9.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$1.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$10.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$11.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$12.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$13.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$14.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$15.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$16.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$17.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$18.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$19.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$2.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$20.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$21.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$22.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$23.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$24.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$25.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$26.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$27.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$3.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$4.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$5.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$6.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$7.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$8.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$9.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/Sessio2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$1.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$2.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$3.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$4.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$5.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$6.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$7.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/ValoracioCuidador.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/customModel.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/customModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TFG/vista/customRenderer.class" afterPath="$PROJECT_DIR$/out/production/TFG/vista/customRenderer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.xml" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controlador/Utils.java" afterPath="$PROJECT_DIR$/src/controlador/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/FitxaPacient.java" afterPath="$PROJECT_DIR$/src/vista/FitxaPacient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/MenuAdmin.java" afterPath="$PROJECT_DIR$/src/vista/MenuAdmin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/MenuEvaluador.java" afterPath="$PROJECT_DIR$/src/vista/MenuEvaluador.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/MenuTests.form" afterPath="$PROJECT_DIR$/src/vista/MenuTests.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/MenuTests.java" afterPath="$PROJECT_DIR$/src/vista/MenuTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/NewUser.java" afterPath="$PROJECT_DIR$/src/vista/NewUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Sessio1.form" afterPath="$PROJECT_DIR$/src/vista/Sessio1.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Sessio1.java" afterPath="$PROJECT_DIR$/src/vista/Sessio1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Sessio2.java" afterPath="$PROJECT_DIR$/src/vista/Sessio2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.form" afterPath="$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.java" afterPath="$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/ValoracioCuidador.java" afterPath="$PROJECT_DIR$/src/vista/ValoracioCuidador.java" />
+    </list>
     <ignored path="TFG.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,108 +190,345 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="users.json" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/ReMemory/res/users.json">
+      <file leaf-file-name="MenuValoracions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vista/MenuValoracions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="129" selection-start-line="0" selection-start-column="129" selection-end-line="0" selection-end-column="129" />
+            <state relative-caret-position="281">
+              <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuEvaluador.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/vista/MenuEvaluador.java">
+      <file leaf-file-name="Sessio1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vista/Sessio1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="390" column="17" selection-start-line="390" selection-start-column="17" selection-end-line="390" selection-end-column="17" />
+            <state relative-caret-position="573">
+              <caret line="8293" column="104" selection-start-line="8293" selection-start-column="104" selection-end-line="8293" selection-end-column="104" />
               <folding>
-                <element signature="e#29916#30003#0" expanded="true" />
+                <element signature="e#27991#27992#0" expanded="true" />
+                <element signature="e#28049#28050#0" expanded="true" />
+                <element signature="e#28125#28126#0" expanded="true" />
+                <element signature="e#28185#28186#0" expanded="true" />
+                <element signature="e#29397#29398#0" expanded="true" />
+                <element signature="e#29457#29458#0" expanded="true" />
+                <element signature="e#37482#37483#0" expanded="true" />
+                <element signature="e#37541#37542#0" expanded="true" />
+                <element signature="e#42446#42447#0" expanded="true" />
+                <element signature="e#42504#42505#0" expanded="true" />
+                <element signature="e#42580#42581#0" expanded="true" />
+                <element signature="e#42640#42641#0" expanded="true" />
+                <element signature="e#47894#47895#0" expanded="true" />
+                <element signature="e#47954#47955#0" expanded="true" />
+                <element signature="e#56957#56958#0" expanded="true" />
+                <element signature="e#57015#57016#0" expanded="true" />
+                <element signature="e#57091#57092#0" expanded="true" />
+                <element signature="e#57151#57152#0" expanded="true" />
+                <element signature="e#60367#60368#0" expanded="true" />
+                <element signature="e#60433#60434#0" expanded="true" />
+                <element signature="e#68453#68454#0" expanded="true" />
+                <element signature="e#68511#68512#0" expanded="true" />
+                <element signature="e#68587#68588#0" expanded="true" />
+                <element signature="e#68647#68648#0" expanded="true" />
+                <element signature="e#70913#70914#0" expanded="true" />
+                <element signature="e#70979#70980#0" expanded="true" />
+                <element signature="e#71572#71573#0" expanded="true" />
+                <element signature="e#71632#71633#0" expanded="true" />
+                <element signature="e#82151#82152#0" expanded="true" />
+                <element signature="e#82213#82214#0" expanded="true" />
+                <element signature="e#82461#82462#0" expanded="true" />
+                <element signature="e#82525#82526#0" expanded="true" />
+                <element signature="e#82729#82730#0" expanded="true" />
+                <element signature="e#82790#82791#0" expanded="true" />
+                <element signature="e#82996#82997#0" expanded="true" />
+                <element signature="e#83057#83058#0" expanded="true" />
+                <element signature="e#87515#87516#0" expanded="true" />
+                <element signature="e#87573#87574#0" expanded="true" />
+                <element signature="e#87649#87650#0" expanded="true" />
+                <element signature="e#87709#87710#0" expanded="true" />
+                <element signature="e#89952#89953#0" expanded="true" />
+                <element signature="e#90019#90020#0" expanded="true" />
+                <element signature="e#97487#97488#0" expanded="true" />
+                <element signature="e#97545#97546#0" expanded="true" />
+                <element signature="e#97621#97622#0" expanded="true" />
+                <element signature="e#97681#97682#0" expanded="true" />
+                <element signature="e#99940#99941#0" expanded="true" />
+                <element signature="e#100007#100008#0" expanded="true" />
+                <element signature="e#100422#100423#0" expanded="true" />
+                <element signature="e#100482#100483#0" expanded="true" />
+                <element signature="e#111938#111939#0" expanded="true" />
+                <element signature="e#111996#111997#0" expanded="true" />
+                <element signature="e#112072#112073#0" expanded="true" />
+                <element signature="e#112132#112133#0" expanded="true" />
+                <element signature="e#115436#115437#0" expanded="true" />
+                <element signature="e#115494#115495#0" expanded="true" />
+                <element signature="e#115570#115571#0" expanded="true" />
+                <element signature="e#115630#115631#0" expanded="true" />
+                <element signature="e#127010#127011#0" expanded="true" />
+                <element signature="e#127068#127069#0" expanded="true" />
+                <element signature="e#127144#127145#0" expanded="true" />
+                <element signature="e#127204#127205#0" expanded="true" />
+                <element signature="e#128546#128547#0" expanded="true" />
+                <element signature="e#128613#128614#0" expanded="true" />
+                <element signature="e#130673#130674#0" expanded="true" />
+                <element signature="e#130733#130734#0" expanded="true" />
+                <element signature="e#141913#141914#0" expanded="true" />
+                <element signature="e#141971#141972#0" expanded="true" />
+                <element signature="e#142047#142048#0" expanded="true" />
+                <element signature="e#142107#142108#0" expanded="true" />
+                <element signature="e#143449#143450#0" expanded="true" />
+                <element signature="e#143516#143517#0" expanded="true" />
+                <element signature="e#143932#143933#0" expanded="true" />
+                <element signature="e#143992#143993#0" expanded="true" />
+                <element signature="e#156816#156817#0" expanded="true" />
+                <element signature="e#156874#156875#0" expanded="true" />
+                <element signature="e#156950#156951#0" expanded="true" />
+                <element signature="e#157010#157011#0" expanded="true" />
+                <element signature="e#158352#158353#0" expanded="true" />
+                <element signature="e#158419#158420#0" expanded="true" />
+                <element signature="e#160479#160480#0" expanded="true" />
+                <element signature="e#160539#160540#0" expanded="true" />
+                <element signature="e#171796#171797#0" expanded="true" />
+                <element signature="e#171854#171855#0" expanded="true" />
+                <element signature="e#171930#171931#0" expanded="true" />
+                <element signature="e#171990#171991#0" expanded="true" />
+                <element signature="e#173441#173442#0" expanded="true" />
+                <element signature="e#173512#173513#0" expanded="true" />
+                <element signature="e#173850#173851#0" expanded="true" />
+                <element signature="e#173910#173911#0" expanded="true" />
+                <element signature="e#174234#174235#0" expanded="true" />
+                <element signature="e#174306#174307#0" expanded="true" />
+                <element signature="e#174648#174649#0" expanded="true" />
+                <element signature="e#174709#174710#0" expanded="true" />
+                <element signature="e#182072#182073#0" expanded="true" />
+                <element signature="e#182139#182140#0" expanded="true" />
+                <element signature="e#182341#182342#0" expanded="true" />
+                <element signature="e#182401#182402#0" expanded="true" />
+                <element signature="e#182604#182605#0" expanded="true" />
+                <element signature="e#182665#182666#0" expanded="true" />
+                <element signature="e#197916#197917#0" expanded="true" />
+                <element signature="e#197983#197984#0" expanded="true" />
+                <element signature="e#198187#198188#0" expanded="true" />
+                <element signature="e#198248#198249#0" expanded="true" />
+                <element signature="e#198451#198452#0" expanded="true" />
+                <element signature="e#198512#198513#0" expanded="true" />
+                <element signature="e#213953#213954#0" expanded="true" />
+                <element signature="e#214020#214021#0" expanded="true" />
+                <element signature="e#214224#214225#0" expanded="true" />
+                <element signature="e#214285#214286#0" expanded="true" />
+                <element signature="e#214488#214489#0" expanded="true" />
+                <element signature="e#214549#214550#0" expanded="true" />
+                <element signature="e#230309#230310#0" expanded="true" />
+                <element signature="e#230376#230377#0" expanded="true" />
+                <element signature="e#230580#230581#0" expanded="true" />
+                <element signature="e#230641#230642#0" expanded="true" />
+                <element signature="e#230844#230845#0" expanded="true" />
+                <element signature="e#230905#230906#0" expanded="true" />
+                <element signature="e#283503#283504#0" expanded="true" />
+                <element signature="e#283561#283562#0" expanded="true" />
+                <element signature="e#283637#283638#0" expanded="true" />
+                <element signature="e#283697#283698#0" expanded="true" />
+                <element signature="e#284789#284790#0" expanded="true" />
+                <element signature="e#284850#284851#0" expanded="true" />
+                <element signature="e#285126#285127#0" expanded="true" />
+                <element signature="e#285187#285188#0" expanded="true" />
+                <element signature="e#288140#288141#0" expanded="true" />
+                <element signature="e#288202#288203#0" expanded="true" />
+                <element signature="e#288405#288406#0" expanded="true" />
+                <element signature="e#288467#288468#0" expanded="true" />
+                <element signature="e#288710#288711#0" expanded="true" />
+                <element signature="e#288773#288774#0" expanded="true" />
+                <element signature="e#288974#288975#0" expanded="true" />
+                <element signature="e#289036#289037#0" expanded="true" />
+                <element signature="e#311752#311839#0" expanded="true" />
+                <element signature="e#313327#313328#0" expanded="true" />
+                <element signature="e#313397#313398#0" expanded="true" />
+                <marker date="1466372034176" expanded="false" signature="449272:449282" ph=" { " />
+                <marker date="1466372034176" expanded="false" signature="449306:449312" ph=" }" />
+                <marker date="1466372034176" expanded="false" signature="449620:449631" ph=" { " />
+                <marker date="1466372034176" expanded="false" signature="449658:449664" ph=" }" />
+                <marker date="1466372034176" expanded="false" signature="449922:449932" ph=" { " />
+                <marker date="1466372034176" expanded="false" signature="449956:449962" ph=" }" />
+                <marker date="1466372034176" expanded="false" signature="450031:450041" ph=" { " />
+                <marker date="1466372034176" expanded="false" signature="450074:450080" ph=" }" />
+                <marker date="1466372034176" expanded="false" signature="450121:450131" ph=" { " />
+                <marker date="1466372034176" expanded="false" signature="450150:450156" ph=" }" />
+                <marker date="1466372034176" expanded="false" signature="450196:450207" ph=" { " />
+                <marker date="1466372034176" expanded="false" signature="450230:450236" ph=" }" />
+                <marker date="1466372034176" expanded="false" signature="450291:450302" ph=" { " />
+                <marker date="1466372034176" expanded="false" signature="450331:450337" ph=" }" />
+                <marker date="1466372034176" expanded="false" signature="450375:450385" ph=" { " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FitxaPacient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vista/FitxaPacient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="5058" column="16" selection-start-line="5058" selection-start-column="16" selection-end-line="5058" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#352174#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1731#1732#0" expanded="false" />
+                <element signature="e#1775#1776#0" expanded="false" />
+                <element signature="e#1854#1855#0" expanded="false" />
+                <element signature="e#1898#1899#0" expanded="false" />
+                <element signature="e#1978#1979#0" expanded="false" />
+                <element signature="e#2018#2019#0" expanded="false" />
+                <element signature="e#2463#2464#0" expanded="false" />
+                <element signature="e#2507#2508#0" expanded="false" />
+                <element signature="e#2586#2587#0" expanded="false" />
+                <element signature="e#2630#2631#0" expanded="false" />
+                <element signature="e#2710#2711#0" expanded="false" />
+                <element signature="e#2750#2751#0" expanded="false" />
+                <element signature="e#3190#3191#0" expanded="false" />
+                <element signature="e#3234#3235#0" expanded="false" />
+                <element signature="e#3313#3314#0" expanded="false" />
+                <element signature="e#3357#3358#0" expanded="false" />
+                <element signature="e#3437#3438#0" expanded="false" />
+                <element signature="e#3477#3478#0" expanded="false" />
+                <element signature="e#3916#3917#0" expanded="false" />
+                <element signature="e#3960#3961#0" expanded="false" />
+                <element signature="e#4039#4040#0" expanded="false" />
+                <element signature="e#4083#4084#0" expanded="false" />
+                <element signature="e#4163#4164#0" expanded="false" />
+                <element signature="e#4203#4204#0" expanded="false" />
+                <element signature="e#4784#4873#0" expanded="false" />
+                <element signature="e#43281#43282#0" expanded="false" />
+                <element signature="e#43349#43350#0" expanded="false" />
+                <element signature="e#285793#285794#0" expanded="false" />
+                <element signature="e#285855#285856#0" expanded="false" />
+                <element signature="e#286058#286059#0" expanded="false" />
+                <element signature="e#286120#286121#0" expanded="false" />
+                <element signature="e#288259#288346#0" expanded="false" />
+                <element signature="e#290054#290055#0" expanded="false" />
+                <element signature="e#290116#290117#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controlador/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+              <folding>
+                <element signature="e#5967#5968#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Persona.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Persona.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#827#0" expanded="false" />
+                <element signature="e#482#483#0" expanded="false" />
+                <element signature="e#508#509#0" expanded="false" />
+                <element signature="e#546#547#0" expanded="false" />
+                <element signature="e#576#577#0" expanded="false" />
+                <element signature="e#605#606#0" expanded="false" />
+                <element signature="e#630#631#0" expanded="false" />
+                <element signature="e#666#667#0" expanded="false" />
+                <element signature="e#694#695#0" expanded="false" />
+                <element signature="e#724#725#0" expanded="false" />
+                <element signature="e#750#751#0" expanded="false" />
+                <element signature="e#788#789#0" expanded="false" />
+                <element signature="e#818#819#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pacient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Pacient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#1266#0" expanded="false" />
+                <element signature="e#627#628#0" expanded="false" />
+                <element signature="e#654#655#0" expanded="false" />
+                <element signature="e#742#743#0" expanded="false" />
+                <element signature="e#774#775#0" expanded="false" />
+                <element signature="e#854#855#0" expanded="false" />
+                <element signature="e#887#888#0" expanded="false" />
+                <element signature="e#999#1000#0" expanded="false" />
+                <element signature="e#1043#1044#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Evaluador.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controlador/Evaluador.java">
+        <entry file="file://$PROJECT_DIR$/src/model/Evaluador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pacient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controlador/Pacient.java">
+      <file leaf-file-name="ValoracioCognitivaPrevia.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state relative-caret-position="225">
+              <caret line="6858" column="16" selection-start-line="6858" selection-start-column="16" selection-end-line="6866" selection-end-column="62" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2218#2307#0" expanded="true" />
+                <element signature="e#86443#86444#0" expanded="true" />
+                <element signature="e#86503#86504#0" expanded="true" />
+                <element signature="e#106622#106623#0" expanded="true" />
+                <element signature="e#106683#106684#0" expanded="true" />
+                <element signature="e#349169#349170#0" expanded="true" />
+                <element signature="e#349231#349232#0" expanded="true" />
+                <element signature="e#349434#349435#0" expanded="true" />
+                <element signature="e#349496#349497#0" expanded="true" />
+                <element signature="e#349739#349740#0" expanded="true" />
+                <element signature="e#349802#349803#0" expanded="true" />
+                <element signature="e#350003#350004#0" expanded="true" />
+                <element signature="e#350065#350066#0" expanded="true" />
+                <element signature="e#355302#355389#0" expanded="true" />
+                <element signature="e#356865#356866#0" expanded="true" />
+                <element signature="e#356946#356947#0" expanded="true" />
+                <element signature="e#393728#393729#0" expanded="true" />
+                <element signature="e#393784#393785#0" expanded="true" />
+                <element signature="e#396330#396331#0" expanded="true" />
+                <element signature="e#396386#396387#0" expanded="true" />
+                <element signature="e#399399#399400#0" expanded="true" />
+                <element signature="e#399456#399457#0" expanded="true" />
+                <element signature="e#403410#403411#0" expanded="true" />
+                <element signature="e#403466#403467#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuAdmin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vista/MenuAdmin.java">
+      <file leaf-file-name="Sessio2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vista/Sessio2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+            <state relative-caret-position="333">
+              <caret line="9273" column="14" selection-start-line="9273" selection-start-column="14" selection-end-line="9273" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValoracioCuidador.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vista/ValoracioCuidador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
               <folding>
-                <element signature="e#2077#2166#0" expanded="true" />
+                <element signature="e#315934#316021#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.json" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Roaming/ReMemory/res/users.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vista/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="257" column="0" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/users.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="273" selection-start-line="0" selection-start-column="273" selection-end-line="0" selection-end-column="273" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vista/NewUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3910">
-              <caret line="419" column="0" selection-start-line="419" selection-start-column="0" selection-end-line="419" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -139,23 +541,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/vista/MenuTests.java" />
         <option value="$PROJECT_DIR$/pacientData/prova/provaSessio1.dat" />
-        <option value="$PROJECT_DIR$/src/vista/Sessio2.java" />
-        <option value="$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.java" />
         <option value="$PROJECT_DIR$/src/controlador/ZipDirectory.java" />
         <option value="$PROJECT_DIR$/res/users.json" />
-        <option value="$PROJECT_DIR$/src/vista/Sessio1.java" />
-        <option value="$PROJECT_DIR$/src/vista/ValoracioCuidador.java" />
         <option value="$PROJECT_DIR$/src/vista/NewPacient.java" />
         <option value="$PROJECT_DIR$/src/vista/NewUser.java" />
-        <option value="$PROJECT_DIR$/src/controlador/Utils.java" />
         <option value="$USER_HOME$/AppData/Roaming/ReMemory/res/users.json" />
         <option value="$PROJECT_DIR$/src/controlador/Pacient.java" />
         <option value="$USER_HOME$/Desktop/ReMemory/res/users.json" />
         <option value="$PROJECT_DIR$/src/vista/Login.java" />
         <option value="$PROJECT_DIR$/src/vista/MenuAdmin.java" />
         <option value="$PROJECT_DIR$/src/vista/MenuEvaluador.java" />
+        <option value="$PROJECT_DIR$/src/vista/MenuValoracions.java" />
+        <option value="$PROJECT_DIR$/src/vista/MenuTests.java" />
+        <option value="$PROJECT_DIR$/src/vista/ValoracioCuidador.java" />
+        <option value="$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.java" />
+        <option value="$PROJECT_DIR$/src/vista/Sessio2.java" />
+        <option value="$PROJECT_DIR$/src/model/Evaluador.java" />
+        <option value="$PROJECT_DIR$/src/vista/Sessio1.java" />
+        <option value="$PROJECT_DIR$/src/controlador/Utils.java" />
       </list>
     </option>
   </component>
@@ -276,20 +680,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TFG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TFG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controlador" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="settings&#9;ACTION&#9;WelcomeScreen.Settings&#10;show line nu&#9;ACTION&#9;EditorToggleShowLineNumbers&#10;line nu&#9;ACTION&#9;EditorToggleShowLineNumbers&#10;line n &#9;null&#9;null" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -531,29 +953,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20717423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289256" sideWeight="0.49121523" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5087848" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31388012" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.274758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.4941435" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49121523" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31388012" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.4941435" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -569,57 +991,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controlador/Utils.java</url>
-          <line>421</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Roaming/ReMemory/res/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="282" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="282" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/NewUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3910">
-          <caret line="419" column="0" selection-start-line="419" selection-start-column="0" selection-end-line="419" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/ValoracioCuidador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="79" column="0" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/Sessio1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40409">
@@ -631,7 +1007,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#5967#5968#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -639,7 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -647,7 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="182" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="182" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +1075,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6222">
           <caret line="395" column="13" selection-start-line="395" selection-start-column="13" selection-end-line="395" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#5967#5968#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -707,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +1115,28 @@
         <state relative-caret-position="2074">
           <caret line="390" column="17" selection-start-line="390" selection-start-column="17" selection-end-line="390" selection-end-column="17" />
           <folding>
-            <element signature="e#29916#30003#0" expanded="true" />
+            <element signature="e#0#32580#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1929#2018#0" expanded="false" />
+            <element signature="e#3561#3562#0" expanded="false" />
+            <element signature="e#3626#3627#0" expanded="false" />
+            <element signature="e#3865#3866#0" expanded="false" />
+            <element signature="e#3927#3928#0" expanded="false" />
+            <element signature="e#4137#4138#0" expanded="false" />
+            <element signature="e#4202#4203#0" expanded="false" />
+            <element signature="e#4433#4434#0" expanded="false" />
+            <element signature="e#4493#4494#0" expanded="false" />
+            <element signature="e#4702#4703#0" expanded="false" />
+            <element signature="e#4764#4765#0" expanded="false" />
+            <element signature="e#8438#8439#0" expanded="false" />
+            <element signature="e#8498#8499#0" expanded="false" />
+            <element signature="e#12569#12570#0" expanded="false" />
+            <element signature="e#12628#12629#0" expanded="false" />
+            <element signature="e#26878#26879#0" expanded="false" />
+            <element signature="e#26907#26908#0" expanded="false" />
+            <element signature="e#29912#29999#0" expanded="false" />
+            <element signature="e#31481#31482#0" expanded="false" />
+            <element signature="e#31551#31552#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -761,6 +1159,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="1925" column="42" selection-start-line="1925" selection-start-column="42" selection-end-line="1925" selection-end-column="42" />
+          <folding>
+            <element signature="e#68197#68198#0" expanded="false" />
+            <element signature="e#68254#68255#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -786,7 +1188,28 @@
         <state relative-caret-position="132">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
-            <element signature="e#29916#30003#0" expanded="true" />
+            <element signature="e#0#32580#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1929#2018#0" expanded="false" />
+            <element signature="e#3561#3562#0" expanded="false" />
+            <element signature="e#3626#3627#0" expanded="false" />
+            <element signature="e#3865#3866#0" expanded="false" />
+            <element signature="e#3927#3928#0" expanded="false" />
+            <element signature="e#4137#4138#0" expanded="false" />
+            <element signature="e#4202#4203#0" expanded="false" />
+            <element signature="e#4433#4434#0" expanded="false" />
+            <element signature="e#4493#4494#0" expanded="false" />
+            <element signature="e#4702#4703#0" expanded="false" />
+            <element signature="e#4764#4765#0" expanded="false" />
+            <element signature="e#8438#8439#0" expanded="false" />
+            <element signature="e#8498#8499#0" expanded="false" />
+            <element signature="e#12569#12570#0" expanded="false" />
+            <element signature="e#12628#12629#0" expanded="false" />
+            <element signature="e#26878#26879#0" expanded="false" />
+            <element signature="e#26907#26908#0" expanded="false" />
+            <element signature="e#29912#29999#0" expanded="false" />
+            <element signature="e#31481#31482#0" expanded="false" />
+            <element signature="e#31551#31552#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -806,13 +1229,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pacientData/prova/provaSessio1.dat" />
-    <entry file="file://$PROJECT_DIR$/src/vista/FitxaPacient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/MenuPacient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -820,53 +1236,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/MenuTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/NewPacient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="175" column="66" selection-start-line="175" selection-start-column="66" selection-end-line="175" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/Sessio1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119578">
-          <caret line="7096" column="25" selection-start-line="7096" selection-start-column="25" selection-end-line="7096" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/Sessio2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="7785" column="17" selection-start-line="7785" selection-start-column="17" selection-end-line="7785" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="79" column="0" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/ValoracioCuidador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlador/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,29 +1260,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlador/Evaluador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlador/Pacient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/ReMemory/res/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="129" selection-start-line="0" selection-start-column="129" selection-end-line="0" selection-end-column="129" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -917,7 +1271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,7 +1278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="273" selection-start-line="0" selection-start-column="273" selection-end-line="0" selection-end-column="273" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,26 +1285,418 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
           <caret line="257" column="0" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/MenuAdmin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
+        <state relative-caret-position="0">
           <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
           <folding>
-            <element signature="e#2077#2166#0" expanded="true" />
+            <element signature="e#0#11466#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2042#2131#0" expanded="false" />
+            <element signature="e#2723#2724#0" expanded="false" />
+            <element signature="e#2782#2783#0" expanded="false" />
+            <element signature="e#3103#3104#0" expanded="false" />
+            <element signature="e#3163#3164#0" expanded="false" />
+            <element signature="e#5883#5970#0" expanded="false" />
+            <element signature="e#7536#7537#0" expanded="false" />
+            <element signature="e#7602#7603#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/MenuValoracions.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/MenuEvaluador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="390" column="17" selection-start-line="390" selection-start-column="17" selection-end-line="390" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="357" column="28" selection-start-line="357" selection-start-column="28" selection-end-line="357" selection-end-column="28" />
           <folding>
-            <element signature="e#29916#30003#0" expanded="true" />
+            <element signature="e#0#32580#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1929#2018#0" expanded="false" />
+            <element signature="e#3561#3562#0" expanded="false" />
+            <element signature="e#3626#3627#0" expanded="false" />
+            <element signature="e#3865#3866#0" expanded="false" />
+            <element signature="e#3927#3928#0" expanded="false" />
+            <element signature="e#4137#4138#0" expanded="false" />
+            <element signature="e#4202#4203#0" expanded="false" />
+            <element signature="e#4433#4434#0" expanded="false" />
+            <element signature="e#4493#4494#0" expanded="false" />
+            <element signature="e#4702#4703#0" expanded="false" />
+            <element signature="e#4764#4765#0" expanded="false" />
+            <element signature="e#8438#8439#0" expanded="false" />
+            <element signature="e#8498#8499#0" expanded="false" />
+            <element signature="e#12569#12570#0" expanded="false" />
+            <element signature="e#12628#12629#0" expanded="false" />
+            <element signature="e#26878#26879#0" expanded="false" />
+            <element signature="e#26907#26908#0" expanded="false" />
+            <element signature="e#29912#29999#0" expanded="false" />
+            <element signature="e#31481#31482#0" expanded="false" />
+            <element signature="e#31551#31552#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/MenuTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#10030#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1236#1325#0" expanded="false" />
+            <element signature="e#2413#2414#0" expanded="false" />
+            <element signature="e#2475#2476#0" expanded="false" />
+            <element signature="e#2949#2950#0" expanded="false" />
+            <element signature="e#3011#3012#0" expanded="false" />
+            <element signature="e#4236#4237#0" expanded="false" />
+            <element signature="e#4308#4309#0" expanded="false" />
+            <element signature="e#7747#7834#0" expanded="false" />
+            <element signature="e#9529#9530#0" expanded="false" />
+            <element signature="e#9591#9592#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ReMemory/pacientData/prova/provaFitxa.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3230">
+          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ReMemory/pacientData/prova/provaTest0.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="229" column="14" selection-start-line="229" selection-start-column="14" selection-end-line="229" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/FitxaPacient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5058" column="16" selection-start-line="5058" selection-start-column="16" selection-end-line="5058" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#352174#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1731#1732#0" expanded="false" />
+            <element signature="e#1775#1776#0" expanded="false" />
+            <element signature="e#1854#1855#0" expanded="false" />
+            <element signature="e#1898#1899#0" expanded="false" />
+            <element signature="e#1978#1979#0" expanded="false" />
+            <element signature="e#2018#2019#0" expanded="false" />
+            <element signature="e#2463#2464#0" expanded="false" />
+            <element signature="e#2507#2508#0" expanded="false" />
+            <element signature="e#2586#2587#0" expanded="false" />
+            <element signature="e#2630#2631#0" expanded="false" />
+            <element signature="e#2710#2711#0" expanded="false" />
+            <element signature="e#2750#2751#0" expanded="false" />
+            <element signature="e#3190#3191#0" expanded="false" />
+            <element signature="e#3234#3235#0" expanded="false" />
+            <element signature="e#3313#3314#0" expanded="false" />
+            <element signature="e#3357#3358#0" expanded="false" />
+            <element signature="e#3437#3438#0" expanded="false" />
+            <element signature="e#3477#3478#0" expanded="false" />
+            <element signature="e#3916#3917#0" expanded="false" />
+            <element signature="e#3960#3961#0" expanded="false" />
+            <element signature="e#4039#4040#0" expanded="false" />
+            <element signature="e#4083#4084#0" expanded="false" />
+            <element signature="e#4163#4164#0" expanded="false" />
+            <element signature="e#4203#4204#0" expanded="false" />
+            <element signature="e#4784#4873#0" expanded="false" />
+            <element signature="e#43281#43282#0" expanded="false" />
+            <element signature="e#43349#43350#0" expanded="false" />
+            <element signature="e#285793#285794#0" expanded="false" />
+            <element signature="e#285855#285856#0" expanded="false" />
+            <element signature="e#286058#286059#0" expanded="false" />
+            <element signature="e#286120#286121#0" expanded="false" />
+            <element signature="e#288259#288346#0" expanded="false" />
+            <element signature="e#290054#290055#0" expanded="false" />
+            <element signature="e#290116#290117#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/MenuValoracions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/ValoracioCognitivaPrevia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="6858" column="16" selection-start-line="6858" selection-start-column="16" selection-end-line="6866" selection-end-column="62" />
+          <folding>
+            <element signature="e#2218#2307#0" expanded="true" />
+            <element signature="e#86443#86444#0" expanded="true" />
+            <element signature="e#86503#86504#0" expanded="true" />
+            <element signature="e#106622#106623#0" expanded="true" />
+            <element signature="e#106683#106684#0" expanded="true" />
+            <element signature="e#349169#349170#0" expanded="true" />
+            <element signature="e#349231#349232#0" expanded="true" />
+            <element signature="e#349434#349435#0" expanded="true" />
+            <element signature="e#349496#349497#0" expanded="true" />
+            <element signature="e#349739#349740#0" expanded="true" />
+            <element signature="e#349802#349803#0" expanded="true" />
+            <element signature="e#350003#350004#0" expanded="true" />
+            <element signature="e#350065#350066#0" expanded="true" />
+            <element signature="e#355302#355389#0" expanded="true" />
+            <element signature="e#356865#356866#0" expanded="true" />
+            <element signature="e#356946#356947#0" expanded="true" />
+            <element signature="e#393728#393729#0" expanded="true" />
+            <element signature="e#393784#393785#0" expanded="true" />
+            <element signature="e#396330#396331#0" expanded="true" />
+            <element signature="e#396386#396387#0" expanded="true" />
+            <element signature="e#399399#399400#0" expanded="true" />
+            <element signature="e#399456#399457#0" expanded="true" />
+            <element signature="e#403410#403411#0" expanded="true" />
+            <element signature="e#403466#403467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/Sessio2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="9273" column="14" selection-start-line="9273" selection-start-column="14" selection-end-line="9273" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Persona.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#827#0" expanded="false" />
+            <element signature="e#482#483#0" expanded="false" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#630#631#0" expanded="false" />
+            <element signature="e#666#667#0" expanded="false" />
+            <element signature="e#694#695#0" expanded="false" />
+            <element signature="e#724#725#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#818#819#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Pacient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#1266#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+            <element signature="e#742#743#0" expanded="false" />
+            <element signature="e#774#775#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#887#888#0" expanded="false" />
+            <element signature="e#999#1000#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Evaluador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/ValoracioCuidador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+          <folding>
+            <element signature="e#315934#316021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/Sessio1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="8293" column="104" selection-start-line="8293" selection-start-column="104" selection-end-line="8293" selection-end-column="104" />
+          <folding>
+            <element signature="e#27991#27992#0" expanded="true" />
+            <element signature="e#28049#28050#0" expanded="true" />
+            <element signature="e#28125#28126#0" expanded="true" />
+            <element signature="e#28185#28186#0" expanded="true" />
+            <element signature="e#29397#29398#0" expanded="true" />
+            <element signature="e#29457#29458#0" expanded="true" />
+            <element signature="e#37482#37483#0" expanded="true" />
+            <element signature="e#37541#37542#0" expanded="true" />
+            <element signature="e#42446#42447#0" expanded="true" />
+            <element signature="e#42504#42505#0" expanded="true" />
+            <element signature="e#42580#42581#0" expanded="true" />
+            <element signature="e#42640#42641#0" expanded="true" />
+            <element signature="e#47894#47895#0" expanded="true" />
+            <element signature="e#47954#47955#0" expanded="true" />
+            <element signature="e#56957#56958#0" expanded="true" />
+            <element signature="e#57015#57016#0" expanded="true" />
+            <element signature="e#57091#57092#0" expanded="true" />
+            <element signature="e#57151#57152#0" expanded="true" />
+            <element signature="e#60367#60368#0" expanded="true" />
+            <element signature="e#60433#60434#0" expanded="true" />
+            <element signature="e#68453#68454#0" expanded="true" />
+            <element signature="e#68511#68512#0" expanded="true" />
+            <element signature="e#68587#68588#0" expanded="true" />
+            <element signature="e#68647#68648#0" expanded="true" />
+            <element signature="e#70913#70914#0" expanded="true" />
+            <element signature="e#70979#70980#0" expanded="true" />
+            <element signature="e#71572#71573#0" expanded="true" />
+            <element signature="e#71632#71633#0" expanded="true" />
+            <element signature="e#82151#82152#0" expanded="true" />
+            <element signature="e#82213#82214#0" expanded="true" />
+            <element signature="e#82461#82462#0" expanded="true" />
+            <element signature="e#82525#82526#0" expanded="true" />
+            <element signature="e#82729#82730#0" expanded="true" />
+            <element signature="e#82790#82791#0" expanded="true" />
+            <element signature="e#82996#82997#0" expanded="true" />
+            <element signature="e#83057#83058#0" expanded="true" />
+            <element signature="e#87515#87516#0" expanded="true" />
+            <element signature="e#87573#87574#0" expanded="true" />
+            <element signature="e#87649#87650#0" expanded="true" />
+            <element signature="e#87709#87710#0" expanded="true" />
+            <element signature="e#89952#89953#0" expanded="true" />
+            <element signature="e#90019#90020#0" expanded="true" />
+            <element signature="e#97487#97488#0" expanded="true" />
+            <element signature="e#97545#97546#0" expanded="true" />
+            <element signature="e#97621#97622#0" expanded="true" />
+            <element signature="e#97681#97682#0" expanded="true" />
+            <element signature="e#99940#99941#0" expanded="true" />
+            <element signature="e#100007#100008#0" expanded="true" />
+            <element signature="e#100422#100423#0" expanded="true" />
+            <element signature="e#100482#100483#0" expanded="true" />
+            <element signature="e#111938#111939#0" expanded="true" />
+            <element signature="e#111996#111997#0" expanded="true" />
+            <element signature="e#112072#112073#0" expanded="true" />
+            <element signature="e#112132#112133#0" expanded="true" />
+            <element signature="e#115436#115437#0" expanded="true" />
+            <element signature="e#115494#115495#0" expanded="true" />
+            <element signature="e#115570#115571#0" expanded="true" />
+            <element signature="e#115630#115631#0" expanded="true" />
+            <element signature="e#127010#127011#0" expanded="true" />
+            <element signature="e#127068#127069#0" expanded="true" />
+            <element signature="e#127144#127145#0" expanded="true" />
+            <element signature="e#127204#127205#0" expanded="true" />
+            <element signature="e#128546#128547#0" expanded="true" />
+            <element signature="e#128613#128614#0" expanded="true" />
+            <element signature="e#130673#130674#0" expanded="true" />
+            <element signature="e#130733#130734#0" expanded="true" />
+            <element signature="e#141913#141914#0" expanded="true" />
+            <element signature="e#141971#141972#0" expanded="true" />
+            <element signature="e#142047#142048#0" expanded="true" />
+            <element signature="e#142107#142108#0" expanded="true" />
+            <element signature="e#143449#143450#0" expanded="true" />
+            <element signature="e#143516#143517#0" expanded="true" />
+            <element signature="e#143932#143933#0" expanded="true" />
+            <element signature="e#143992#143993#0" expanded="true" />
+            <element signature="e#156816#156817#0" expanded="true" />
+            <element signature="e#156874#156875#0" expanded="true" />
+            <element signature="e#156950#156951#0" expanded="true" />
+            <element signature="e#157010#157011#0" expanded="true" />
+            <element signature="e#158352#158353#0" expanded="true" />
+            <element signature="e#158419#158420#0" expanded="true" />
+            <element signature="e#160479#160480#0" expanded="true" />
+            <element signature="e#160539#160540#0" expanded="true" />
+            <element signature="e#171796#171797#0" expanded="true" />
+            <element signature="e#171854#171855#0" expanded="true" />
+            <element signature="e#171930#171931#0" expanded="true" />
+            <element signature="e#171990#171991#0" expanded="true" />
+            <element signature="e#173441#173442#0" expanded="true" />
+            <element signature="e#173512#173513#0" expanded="true" />
+            <element signature="e#173850#173851#0" expanded="true" />
+            <element signature="e#173910#173911#0" expanded="true" />
+            <element signature="e#174234#174235#0" expanded="true" />
+            <element signature="e#174306#174307#0" expanded="true" />
+            <element signature="e#174648#174649#0" expanded="true" />
+            <element signature="e#174709#174710#0" expanded="true" />
+            <element signature="e#182072#182073#0" expanded="true" />
+            <element signature="e#182139#182140#0" expanded="true" />
+            <element signature="e#182341#182342#0" expanded="true" />
+            <element signature="e#182401#182402#0" expanded="true" />
+            <element signature="e#182604#182605#0" expanded="true" />
+            <element signature="e#182665#182666#0" expanded="true" />
+            <element signature="e#197916#197917#0" expanded="true" />
+            <element signature="e#197983#197984#0" expanded="true" />
+            <element signature="e#198187#198188#0" expanded="true" />
+            <element signature="e#198248#198249#0" expanded="true" />
+            <element signature="e#198451#198452#0" expanded="true" />
+            <element signature="e#198512#198513#0" expanded="true" />
+            <element signature="e#213953#213954#0" expanded="true" />
+            <element signature="e#214020#214021#0" expanded="true" />
+            <element signature="e#214224#214225#0" expanded="true" />
+            <element signature="e#214285#214286#0" expanded="true" />
+            <element signature="e#214488#214489#0" expanded="true" />
+            <element signature="e#214549#214550#0" expanded="true" />
+            <element signature="e#230309#230310#0" expanded="true" />
+            <element signature="e#230376#230377#0" expanded="true" />
+            <element signature="e#230580#230581#0" expanded="true" />
+            <element signature="e#230641#230642#0" expanded="true" />
+            <element signature="e#230844#230845#0" expanded="true" />
+            <element signature="e#230905#230906#0" expanded="true" />
+            <element signature="e#283503#283504#0" expanded="true" />
+            <element signature="e#283561#283562#0" expanded="true" />
+            <element signature="e#283637#283638#0" expanded="true" />
+            <element signature="e#283697#283698#0" expanded="true" />
+            <element signature="e#284789#284790#0" expanded="true" />
+            <element signature="e#284850#284851#0" expanded="true" />
+            <element signature="e#285126#285127#0" expanded="true" />
+            <element signature="e#285187#285188#0" expanded="true" />
+            <element signature="e#288140#288141#0" expanded="true" />
+            <element signature="e#288202#288203#0" expanded="true" />
+            <element signature="e#288405#288406#0" expanded="true" />
+            <element signature="e#288467#288468#0" expanded="true" />
+            <element signature="e#288710#288711#0" expanded="true" />
+            <element signature="e#288773#288774#0" expanded="true" />
+            <element signature="e#288974#288975#0" expanded="true" />
+            <element signature="e#289036#289037#0" expanded="true" />
+            <element signature="e#311752#311839#0" expanded="true" />
+            <element signature="e#313327#313328#0" expanded="true" />
+            <element signature="e#313397#313398#0" expanded="true" />
+            <marker date="1466372034176" expanded="false" signature="449272:449282" ph=" { " />
+            <marker date="1466372034176" expanded="false" signature="449306:449312" ph=" }" />
+            <marker date="1466372034176" expanded="false" signature="449620:449631" ph=" { " />
+            <marker date="1466372034176" expanded="false" signature="449658:449664" ph=" }" />
+            <marker date="1466372034176" expanded="false" signature="449922:449932" ph=" { " />
+            <marker date="1466372034176" expanded="false" signature="449956:449962" ph=" }" />
+            <marker date="1466372034176" expanded="false" signature="450031:450041" ph=" { " />
+            <marker date="1466372034176" expanded="false" signature="450074:450080" ph=" }" />
+            <marker date="1466372034176" expanded="false" signature="450121:450131" ph=" { " />
+            <marker date="1466372034176" expanded="false" signature="450150:450156" ph=" }" />
+            <marker date="1466372034176" expanded="false" signature="450196:450207" ph=" { " />
+            <marker date="1466372034176" expanded="false" signature="450230:450236" ph=" }" />
+            <marker date="1466372034176" expanded="false" signature="450291:450302" ph=" { " />
+            <marker date="1466372034176" expanded="false" signature="450331:450337" ph=" }" />
+            <marker date="1466372034176" expanded="false" signature="450375:450385" ph=" { " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlador/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="e#5967#5968#0" expanded="false" />
           </folding>
         </state>
       </provider>

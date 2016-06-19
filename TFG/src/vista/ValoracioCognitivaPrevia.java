@@ -671,7 +671,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jocsRadio2 = new javax.swing.JRadioButton();
         jocsRadio3 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        puntuacioLabel = new javax.swing.JLabel();
+        crcTotal = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         rangLabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -749,7 +749,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         llenguatgeCheck9 = new javax.swing.JCheckBox();
         jLabel25 = new javax.swing.JLabel();
-        totalMMSELabel = new javax.swing.JLabel();
+        totalMMSE = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
@@ -792,8 +792,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jCheckBox30 = new javax.swing.JCheckBox();
         label1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        tapTotalLabel = new javax.swing.JLabel();
-        ciLabel = new javax.swing.JLabel();
+        tapTotal = new javax.swing.JLabel();
+        tapCi = new javax.swing.JLabel();
         jLabel111 = new javax.swing.JLabel();
         jLabel112 = new javax.swing.JLabel();
         buttonPanel = new javax.swing.JPanel();
@@ -4545,7 +4545,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("Puntuació total:");
 
-        puntuacioLabel.setText("0");
+        crcTotal.setText("0");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("RANG:");
@@ -4586,7 +4586,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                         .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
                             .addComponent(jLabel1)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(puntuacioLabel)
+                            .addComponent(crcTotal)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jLabel5))
                         .addGroup(dadesMediquesPanelLayout.createSequentialGroup()
@@ -4617,7 +4617,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(puntuacioLabel)
+                    .addComponent(crcTotal)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5131,8 +5131,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        totalMMSELabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        totalMMSELabel.setText("0");
+        totalMMSE.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        totalMMSE.setText("0");
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel27.setText("PUNTUACIÓ TOTAL:");
@@ -5178,7 +5178,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                             .addGroup(MMSEPanelLayout.createSequentialGroup()
                                 .addComponent(jLabel27)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(totalMMSELabel)
+                                .addComponent(totalMMSE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel26)))
                         .addGap(18, 18, 18)
@@ -5205,7 +5205,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel27)
-                            .addComponent(totalMMSELabel)
+                            .addComponent(totalMMSE)
                             .addComponent(jLabel26))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5475,9 +5475,9 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setText("CI estimat:");
 
-        tapTotalLabel.setText("0");
+        tapTotal.setText("0");
 
-        ciLabel.setText("0");
+        tapCi.setText("0");
 
         jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel111.setText("<html><center><b>TAP.");
@@ -5494,11 +5494,11 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                     .addGroup(TAPPanelLayout.createSequentialGroup()
                         .addComponent(label1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tapTotalLabel))
+                        .addComponent(tapTotal))
                     .addGroup(TAPPanelLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ciLabel))
+                        .addComponent(tapCi))
                     .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -5514,11 +5514,11 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TAPPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label1)
-                    .addComponent(tapTotalLabel))
+                    .addComponent(tapTotal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TAPPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(ciLabel))
+                    .addComponent(tapCi))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -5764,7 +5764,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         if (jocsRadio2.isSelected()) total++;
         if (jocsRadio3.isSelected()) total += 2;
         
-        puntuacioLabel.setText(total+"");
+        crcTotal.setText(total+"");
         
         if (total<=6) rangLabel.setText("Rang inferior");
         if (total>6 && total<10) rangLabel.setText("Rang mig-baix");
@@ -5874,8 +5874,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.ButtonGroup cdrTasquesDomestiquesBtnGroup;
     private javax.swing.ButtonGroup cdrTemporalBtnGroup;
     private javax.swing.ButtonGroup cdrVestirBtnGroup;
-    private javax.swing.JLabel ciLabel;
     private javax.swing.JLabel copyLabel;
+    private javax.swing.JLabel crcTotal;
     private javax.swing.JToggleButton cuidatBtn1;
     private javax.swing.JToggleButton cuidatBtn2;
     private javax.swing.JToggleButton cuidatBtn3;
@@ -6455,7 +6455,6 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JLabel paginaLabel;
     private javax.swing.JLabel paginaLabel2;
     private javax.swing.JLabel professioLabel;
-    private javax.swing.JLabel puntuacioLabel;
     private javax.swing.JLabel rangLabel;
     private javax.swing.JToggleButton raoBtn1;
     private javax.swing.JToggleButton raoBtn2;
@@ -6490,7 +6489,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JLabel sexeLabel;
     private javax.swing.JLabel situacioLaboralLabel;
     private javax.swing.JTabbedPane tabbedPanel;
-    private javax.swing.JLabel tapTotalLabel;
+    private javax.swing.JLabel tapCi;
+    private javax.swing.JLabel tapTotal;
     private javax.swing.ButtonGroup temporalBtnGroup;
     private javax.swing.JCheckBox temporalCheck1;
     private javax.swing.JCheckBox temporalCheck2;
@@ -6498,7 +6498,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     private javax.swing.JCheckBox temporalCheck4;
     private javax.swing.JCheckBox temporalCheck5;
     private javax.swing.JLabel temporalLabel;
-    private javax.swing.JLabel totalMMSELabel;
+    private javax.swing.JLabel totalMMSE;
     private javax.swing.JLabel valoracioCDRLabel;
     // End of variables declaration//GEN-END:variables
 
@@ -6614,8 +6614,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         
         CI = (total-1)*2+60-modificador;
         
-        this.tapTotalLabel.setText(total+"");
-        this.ciLabel.setText(CI+"");
+        this.tapTotal.setText(total+"");
+        this.tapCi.setText(CI+"");
     }
     private void actualitzaPuntuacioMMSE() {
         int total = 0;
@@ -6649,7 +6649,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
             count++;
         }
         llenguatgeLabel.setText(parcial+"");
-        totalMMSELabel.setText(total+"");
+        totalMMSE.setText(total+"");
         
         if (total>26){
             referenciaMMSELabel.setText("Normal");
@@ -6840,6 +6840,46 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
                 ((JToggleButton)c).addActionListener(action);
             }
         }
+    }
+    
+    private void guardarResultats(){
+        Properties prop = new Properties();
+	OutputStream output = null;
+
+	try {
+            
+            File f = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator);
+                if (!f.exists()){
+                    f.mkdir();
+                }
+                File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsValCogPrev"+".dat");
+                
+		output = new FileOutputStream(file);
+                
+                // CDR
+                prop.setProperty("cdr",valoracioCDRLabel.getText().replace("Valoració clínica de demència (CDR): ",""));
+                // CRC
+                Utils.setProperty(prop,"crcTotal",crcTotal);
+                // TAP
+                Utils.setProperty(prop,"tapTotal",tapTotal);
+                Utils.setProperty(prop,"tapCi",tapCi);
+                // MMSE
+                Utils.setProperty(prop,"totalMMSE",totalMMSE);
+
+
+                prop.store(output, "Valoracio cognitiva previa");
+
+	} catch (IOException io) {
+		io.printStackTrace();
+        } finally {
+            if (output != null) {
+		try {
+                    output.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+	}
     }
 
 }

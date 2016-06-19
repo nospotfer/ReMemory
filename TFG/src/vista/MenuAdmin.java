@@ -5,7 +5,7 @@
  */
 package vista;
 
-import controlador.Evaluador;
+import model.Evaluador;
 import controlador.Utils;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 

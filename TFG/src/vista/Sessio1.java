@@ -572,6 +572,7 @@ public class Sessio1 extends javax.swing.JFrame {
         flexibilitatPCField = new javax.swing.JTextField();
         calculPercentilsFiveDigit = new javax.swing.JButton();
         dataFive = new javax.swing.JLabel();
+        jButton22 = new javax.swing.JButton();
         colorTrailsTab1 = new javax.swing.JPanel();
         digitsDirecteScroll2 = new javax.swing.JScrollPane();
         digitsDirectePanel2 = new javax.swing.JPanel();
@@ -4500,6 +4501,13 @@ public class Sessio1 extends javax.swing.JFrame {
             }
         });
 
+        jButton22.setText("Veure taula");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout Panel4Layout = new javax.swing.GroupLayout(Panel4);
         Panel4.setLayout(Panel4Layout);
         Panel4Layout.setHorizontalGroup(
@@ -4520,7 +4528,8 @@ public class Sessio1 extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton22))))
                 .addContainerGap(972, Short.MAX_VALUE))
         );
         Panel4Layout.setVerticalGroup(
@@ -4539,7 +4548,9 @@ public class Sessio1 extends javax.swing.JFrame {
                 .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(calculPercentilsFiveDigit)
                     .addComponent(dataFive))
-                .addContainerGap(386, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton22)
+                .addContainerGap(352, Short.MAX_VALUE))
         );
 
         fiveDigitsScroll4.setViewportView(Panel4);
@@ -5162,6 +5173,17 @@ public class Sessio1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton21ActionPerformed
 
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        File file = new File(Utils.RES_PATH+"FiveDigit.pdf");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton22ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -5336,6 +5358,7 @@ public class Sessio1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;

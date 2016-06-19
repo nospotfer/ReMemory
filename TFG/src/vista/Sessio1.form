@@ -6468,6 +6468,7 @@
                                                           <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
+                                                  <Component id="jButton22" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -6494,7 +6495,9 @@
                                           <Component id="calculPercentilsFiveDigit" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="dataFive" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="386" max="32767" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jButton22" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="352" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -7325,6 +7328,14 @@
                               </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="dataFive">
+                            </Component>
+                            <Component class="javax.swing.JButton" name="jButton22">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Veure taula"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton22ActionPerformed"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>

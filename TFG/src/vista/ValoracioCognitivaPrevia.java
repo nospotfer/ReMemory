@@ -5631,6 +5631,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
         Utils.guardar(dataPanel,idPacient, "Test0");
+        guardarResultats();
+        Utils.generaResultatsCSV(idPacient);
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 
@@ -6857,7 +6859,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
 		output = new FileOutputStream(file);
                 
                 // CDR
-                prop.setProperty("cdr",valoracioCDRLabel.getText().replace("Valoració clínica de demència (CDR): ",""));
+                String cdr = valoracioCDRLabel.getText().replace("Valoració clínica de demència (CDR): ","");
+                prop.setProperty("cdr",cdr.replace("\n","").replace("\r",""));
                 // CRC
                 Utils.setProperty(prop,"crcTotal",crcTotal);
                 // TAP

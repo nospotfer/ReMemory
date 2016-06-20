@@ -18,6 +18,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import controlador.Utils;
+import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.text.DateFormat;
@@ -85,7 +86,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        csvButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -238,8 +239,13 @@ public class MenuEvaluador extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Evaluació"));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/evaluacio.png"))); // NOI18N
-        jButton2.setEnabled(false);
+        csvButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/evaluacio.png"))); // NOI18N
+        csvButton.setEnabled(false);
+        csvButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                csvButtonActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Full de càlcul");
 
@@ -251,7 +257,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(csvButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -260,7 +266,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(csvButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -354,6 +360,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
                         if ((s != null) && (s.length() > 0)) {
                             idText.setText(s);
                             checkPacient();
+                            checkCsv();
                         }
                     } else {
                         JOptionPane.showMessageDialog(this, "No s'ha introduït cap pacient a la base de dades");
@@ -375,6 +382,16 @@ public class MenuEvaluador extends javax.swing.JFrame {
             idPacient = "";
         }
     }//GEN-LAST:event_seleccionaBtnActionPerformed
+
+    public void checkCsv() {
+        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        if (file.exists()){
+            csvButton.setEnabled(true);
+        }
+        else {
+            csvButton.setEnabled(false);
+        }
+    }
 
     private void fitxaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitxaBtnActionPerformed
         FitxaPacient nF = new FitxaPacient(this,true,idPacient);
@@ -498,6 +515,17 @@ public class MenuEvaluador extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_eliminaBtnActionPerformed
+
+    private void csvButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csvButtonActionPerformed
+        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(MenuEvaluador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_csvButtonActionPerformed
 
     private void guardarJSON() {
         JSONArray usr = new JSONArray();
@@ -715,13 +743,13 @@ public class MenuEvaluador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
+    private javax.swing.JButton csvButton;
     private javax.swing.JButton eliminaBtn;
     private javax.swing.JLabel evaluadorLabel;
     private javax.swing.JButton fitxaBtn;
     private javax.swing.JTextField idText;
     private javax.swing.JButton importaBtn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

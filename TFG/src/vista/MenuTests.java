@@ -20,12 +20,14 @@ public class MenuTests extends javax.swing.JDialog {
     String idPacient = "";
     Pacient pacientActual = null;
     String valoracio = "";
+    Frame parent;
     
     /**
      * Creates new form menuTests
      */
     public MenuTests(Frame parent, boolean modal, Pacient pacientActual, String valoracio) {
         super(parent, modal);
+        this.parent = parent;
         Utils.setIcon((JFrame)this.getOwner());
         initComponents();
         this.setTitle(this.getTitle()+" | T"+valoracio);
@@ -129,7 +131,7 @@ public class MenuTests extends javax.swing.JDialog {
             "Falten dades",
             JOptionPane.WARNING_MESSAGE);
         }else{
-            Sessio1 tT = new Sessio1(this.pacientActual, valoracio);
+            Sessio1 tT = new Sessio1(parent, this.pacientActual, valoracio);
             tT.pack();
             tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
             tT.setVisible(true);

@@ -5,6 +5,7 @@
  */
 package vista;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -14,10 +15,7 @@ import controlador.ButtonColumn;
 import model.Pacient;
 import controlador.Utils;
 import controlador.VerticalTableHeaderCellRenderer;
-import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.Desktop;
-import java.awt.FileDialog;
+
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -72,12 +70,15 @@ public class Sessio1 extends javax.swing.JFrame {
     String edatPacient;
     long secondsColor1 = 0;
     long secondsColor2 = 0;
+    Frame parent;
     
     /**
      * Creates new form Sessio1
      */
-    public Sessio1(Pacient pacientActual, String valoracio) {
+    public Sessio1(Frame parent, Pacient pacientActual, String valoracio) {
         Utils.setIcon(this);
+
+        this.parent = parent;
         
         initComponents();
 
@@ -4763,6 +4764,7 @@ public class Sessio1 extends javax.swing.JFrame {
         Utils.guardar(dataPanel,pacientActual.getId(), "Sessio1_T"+valoracio );
         this.guardarResultats();
         Utils.generaResultatsCSV(pacientActual.getId());
+        ((MenuEvaluador)parent).checkCsv();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 
@@ -5066,7 +5068,7 @@ public class Sessio1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void obrePdfBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obrePdfBtnActionPerformed
-        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.pdf");
+        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE_T"+valoracio+".pdf");
         try {
             Desktop.getDesktop().open(file);
         } catch (IOException ex) {
@@ -5087,7 +5089,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 if (!f.exists()){
                     f.mkdir();
                 }
-                Files.copy(Paths.get(dir+filename), Paths.get(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.xlsx"), StandardCopyOption.REPLACE_EXISTING);
+                Files.copy(Paths.get(dir+filename), Paths.get(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE_T"+valoracio+".xlsx"), StandardCopyOption.REPLACE_EXISTING);
             } catch (IOException ex) {
                 Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
             } finally{
@@ -5097,7 +5099,7 @@ public class Sessio1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void obreExcelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obreExcelBtnActionPerformed
-        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.xlsx");
+        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE_T"+valoracio+".xlsx");
         try {
             Desktop.getDesktop().open(file);
         } catch (IOException ex) {
@@ -5215,7 +5217,7 @@ public class Sessio1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sessio1(null, "").setVisible(true);
+                new Sessio1(null,null, "").setVisible(true);
             }
         });
     }
@@ -8181,11 +8183,11 @@ public class Sessio1 extends javax.swing.JFrame {
     }
 
     private void initCogstateButtons() {
-        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.pdf");
+        File file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE_T"+valoracio+".pdf");
         if (file.exists()){
             obrePdfBtn.setEnabled(true);
         }
-        file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE.xlsx");
+        file = new File(Utils.PACIENT_DATA_PATH+this.pacientActual.getId()+File.separator+this.pacientActual.getId()+"COGSTATE_T"+valoracio+".xlsx");
         if (file.exists()){
             obreExcelBtn.setEnabled(true);
         }

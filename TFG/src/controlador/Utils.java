@@ -27,6 +27,11 @@ import org.apache.poi.POIDocument;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.CellReference;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import org.jdesktop.swingx.JXTable;
 import vista.NewUser;
@@ -463,16 +468,16 @@ public class Utils {
                     new FileOutputStream(outFile), "UTF-8");
             writeHeader(writer, idPacient);
             writer.append('\n');
+            writer.append(';');
+            writeValoracioCognitivaPrevia(idPacient,writer);
             for (int i=1; i<=3; i++){
-                writer.append(';');
-                writeValoracioCognitivaPrevia(idPacient,writer);
                 writer.append(';');
                 writeSessio1(idPacient, i, writer);
                 writer.append(';');
                 writeSessio2(idPacient, i, writer);
                 writer.append(';');
                 writeValoracioCuidador(idPacient, i, writer);
-                writer.append('\n');
+                //writer.append('\n');
             }
             writer.flush();
 	        writer.close();
@@ -495,105 +500,155 @@ public class Utils {
         writeLineCSV(writer,"TAP CI estimat");
         writeLineCSV(writer,"MMSE total");
 
-        writeLineCSV(writer,"");
+        writer.append(";");
 
-        //Sessio1
-        // Digits directe
-        writeLineCSV(writer,"SpanDD");
-        writeLineCSV(writer,"Puntuacio directa DD");
-        writeLineCSV(writer,"Percentil DD");
-        writeLineCSV(writer,"NSSA DD");
-        // Digits invers
-        writeLineCSV(writer,"SpanDI");
-        writeLineCSV(writer,"Puntuacio directa DI");
-        writeLineCSV(writer,"Percentil DI");
-        writeLineCSV(writer,"NSSA DI");
-        // MLI
-        writeLineCSV(writer,"MLI directa");
-        writeLineCSV(writer,"MLI escalar");
-        // TODO COGSTSTATE Header
-        // MLII
-        writeLineCSV(writer,"MLII directa");
-        writeLineCSV(writer,"MLII escalar");
-        // MLII Reco
-        writeLineCSV(writer,"ML Reconeixement");
-        //BNT
-        writeLineCSV(writer,"BNT correctes");
-        writeLineCSV(writer,"BNT ajuda semantica");
-        writeLineCSV(writer,"BNT percentil");
-        writeLineCSV(writer,"BNT NSSA");
-        // Color trails 1
-        writeLineCSV(writer,"Color trails 1 - Time Raw");
-        writeLineCSV(writer,"CT 1 - Time Standard");
-        writeLineCSV(writer,"CT 1 - Time Tscore");
-        writeLineCSV(writer,"CT 1 - Time Percentile");
-        writeLineCSV(writer,"CT 1 - Errors Raw");
-        writeLineCSV(writer,"CT 1 - Errors Percentile");
-        writeLineCSV(writer,"CT 1 - Near-Misses Raw");
-        writeLineCSV(writer,"CT 1 - Near-Misses Percentile");
-        writeLineCSV(writer,"CT 1 - Prompts Raw");
-        writeLineCSV(writer,"CT 1 - Prompts Percentile");
-        // Color trails 2
-        writeLineCSV(writer,"Color trails 2 - Time Raw");
-        writeLineCSV(writer,"CT 2 - Time Standard");
-        writeLineCSV(writer,"CT 2 - Time Tscore");
-        writeLineCSV(writer,"CT 2 - Time Percentile");
-        writeLineCSV(writer,"CT 2 - Errors Raw");
-        writeLineCSV(writer,"CT 2 - Errors Percentile");
-        writeLineCSV(writer,"CT 2 - Near-Misses Raw");
-        writeLineCSV(writer,"CT 2 - Near-Misses Percentile");
-        writeLineCSV(writer,"CT 2 - Prompts Raw");
-        writeLineCSV(writer,"CT 2 - Prompts Percentile");
-        // Color trails interference Index
-        writeLineCSV(writer,"Color trails - Interference index Raw");
-        writeLineCSV(writer,"CT - Interference index Percentile");
-        // Five digits
-        writeLineCSV(writer,"Five Digits - Lectura Temps");
-        writeLineCSV(writer,"FD - Lectura Temps PC");
-        writeLineCSV(writer,"FD - Lectura Errors");
-        writeLineCSV(writer,"FD - Lectura Errors PC");
-        writeLineCSV(writer,"Five Digits - Compteig Temps");
-        writeLineCSV(writer,"FD - Compteig Temps PC");
-        writeLineCSV(writer,"FD - Compteig Errors");
-        writeLineCSV(writer,"FD - Compteig Errors PC");
-        writeLineCSV(writer,"Five Digits - Eleccio Temps");
-        writeLineCSV(writer,"FD - Eleccio Temps PC");
-        writeLineCSV(writer,"FD - Eleccio Errors");
-        writeLineCSV(writer,"FD - Eleccio Errors PC");
-        writeLineCSV(writer,"Five Digits - Alternança Temps");
-        writeLineCSV(writer,"FD - Alternança Temps PC");
-        writeLineCSV(writer,"FD - Alternança Errors");
-        writeLineCSV(writer,"FD - Alternança Errors PC");
-        writeLineCSV(writer,"Five Digits - Inhibició PC");
-        writeLineCSV(writer,"Five Digits - Flexibilitat PC");
-        // Fluencia verbal
-        writeLineCSV(writer,"Fluencia verbal - P");
-        writeLineCSV(writer,"FV - M");
-        writeLineCSV(writer,"FV - R");
-        writeLineCSV(writer,"FV - Animals");
+        for (int i=1; i<4; i++) {
+            //Sessio1
+            // Digits directe
+            writeLineCSV(writer, "SpanDD_T"+i);
+            writeLineCSV(writer, "Puntuacio directa DD_T"+i);
+            writeLineCSV(writer, "Percentil DD_T"+i);
+            writeLineCSV(writer, "NSSA DD_T"+i);
+            // Digits invers
+            writeLineCSV(writer, "SpanDI_T"+i);
+            writeLineCSV(writer, "Puntuacio directa DI_T"+i);
+            writeLineCSV(writer, "Percentil DI_T"+i);
+            writeLineCSV(writer, "NSSA DI_T"+i);
+            // MLI
+            writeLineCSV(writer, "MLI directa_T"+i);
+            writeLineCSV(writer, "MLI escalar_T"+i);
+            // COGSTSTATE
+            writeLineCSV(writer, "ISL1.DUR_T"+i);
+            writeLineCSV(writer, "ISL1.ACC_T"+i);
+            writeLineCSV(writer, "ISL1.CORR_T"+i);
+            writeLineCSV(writer, "ISL1.ERR_T"+i);
+            writeLineCSV(writer, "ISL1.STI_T"+i);
+            writeLineCSV(writer, "ISL2.DUR_T"+i);
+            writeLineCSV(writer, "ISL2.ACC_T"+i);
+            writeLineCSV(writer, "ISL2.CORR_T"+i);
+            writeLineCSV(writer, "ISL2.ERR_T"+i);
+            writeLineCSV(writer, "ISL2.STI_T"+i);
+            writeLineCSV(writer, "ISL3.DUR_T"+i);
+            writeLineCSV(writer, "ISL3.ACC_T"+i);
+            writeLineCSV(writer, "ISL3.CORR_T"+i);
+            writeLineCSV(writer, "ISL3.ERR_T"+i);
+            writeLineCSV(writer, "ISL3.STI_T"+i);
+            writeLineCSV(writer, "DET.COR_T"+i);
+            writeLineCSV(writer, "DET.ERR_T"+i);
+            writeLineCSV(writer, "DET.LMN_T"+i);
+            writeLineCSV(writer, "DET.LSD_T"+i);
+            writeLineCSV(writer, "DET.ACC_T"+i);
+            writeLineCSV(writer, "IDN.COR_T"+i);
+            writeLineCSV(writer, "IDN.ERR_T"+i);
+            writeLineCSV(writer, "IDN.LMN_T"+i);
+            writeLineCSV(writer, "IDN.LSD_T"+i);
+            writeLineCSV(writer, "IDN.ACC_T"+i);
+            writeLineCSV(writer, "OCL.COR_T"+i);
+            writeLineCSV(writer, "OCL.ERR_T"+i);
+            writeLineCSV(writer, "OCL.LMN_T"+i);
+            writeLineCSV(writer, "OCL.LSD_T"+i);
+            writeLineCSV(writer, "OCL.ACC_T"+i);
+            writeLineCSV(writer, "ONB.COR_T"+i);
+            writeLineCSV(writer, "ONB.ERR_T"+i);
+            writeLineCSV(writer, "ONB.LMN_T"+i);
+            writeLineCSV(writer, "ONB.LSD_T"+i);
+            writeLineCSV(writer, "ONB.ACC_T"+i);
+            writeLineCSV(writer, "SECT.COR_T"+i);
+            writeLineCSV(writer, "SECT.ERR_T"+i);
+            writeLineCSV(writer, "SECT.LMN_T"+i);
+            writeLineCSV(writer, "SECT.LSD_T"+i);
+            writeLineCSV(writer, "SECT.ACC_T"+i);
+            writeLineCSV(writer, "ISRL.CORR_T"+i);
+            writeLineCSV(writer, "ISRL.ERR_T"+i);
+            writeLineCSV(writer, "ISRL.ACC_T"+i);
+            writeLineCSV(writer, "ISRL.DUR_T"+i);
+            // MLII
+            writeLineCSV(writer, "MLII directa_T"+i);
+            writeLineCSV(writer, "MLII escalar_T"+i);
+            // MLII Reco
+            writeLineCSV(writer, "ML Reconeixement_T"+i);
+            //BNT
+            writeLineCSV(writer, "BNT correctes_T"+i);
+            writeLineCSV(writer, "BNT ajuda semantica_T"+i);
+            writeLineCSV(writer, "BNT percentil_T"+i);
+            writeLineCSV(writer, "BNT NSSA_T"+i);
+            // Color trails 1
+            writeLineCSV(writer, "Color trails 1 - Time Raw_T"+i);
+            writeLineCSV(writer, "CT 1 - Time Standard_T"+i);
+            writeLineCSV(writer, "CT 1 - Time Tscore_T"+i);
+            writeLineCSV(writer, "CT 1 - Time Percentile_T"+i);
+            writeLineCSV(writer, "CT 1 - Errors Raw_T"+i);
+            writeLineCSV(writer, "CT 1 - Errors Percentile_T"+i);
+            writeLineCSV(writer, "CT 1 - Near-Misses Raw_T"+i);
+            writeLineCSV(writer, "CT 1 - Near-Misses Percentile_T"+i);
+            writeLineCSV(writer, "CT 1 - Prompts Raw_T"+i);
+            writeLineCSV(writer, "CT 1 - Prompts Percentile_T"+i);
+            // Color trails 2
+            writeLineCSV(writer, "Color trails 2 - Time Raw_T"+i);
+            writeLineCSV(writer, "CT 2 - Time Standard_T"+i);
+            writeLineCSV(writer, "CT 2 - Time Tscore_T"+i);
+            writeLineCSV(writer, "CT 2 - Time Percentile_T"+i);
+            writeLineCSV(writer, "CT 2 - Errors Raw_T"+i);
+            writeLineCSV(writer, "CT 2 - Errors Percentile_T"+i);
+            writeLineCSV(writer, "CT 2 - Near-Misses Raw_T"+i);
+            writeLineCSV(writer, "CT 2 - Near-Misses Percentile_T"+i);
+            writeLineCSV(writer, "CT 2 - Prompts Raw_T"+i);
+            writeLineCSV(writer, "CT 2 - Prompts Percentile_T"+i);
+            // Color trails interference Index
+            writeLineCSV(writer, "Color trails - Interference index Raw_T"+i);
+            writeLineCSV(writer, "CT - Interference index Percentile_T"+i);
+            // Five digits
+            writeLineCSV(writer, "Five Digits - Lectura Temps_T"+i);
+            writeLineCSV(writer, "FD - Lectura Temps PC_T"+i);
+            writeLineCSV(writer, "FD - Lectura Errors_T"+i);
+            writeLineCSV(writer, "FD - Lectura Errors PC_T"+i);
+            writeLineCSV(writer, "Five Digits - Compteig Temps_T"+i);
+            writeLineCSV(writer, "FD - Compteig Temps PC_T"+i);
+            writeLineCSV(writer, "FD - Compteig Errors_T"+i);
+            writeLineCSV(writer, "FD - Compteig Errors PC_T"+i);
+            writeLineCSV(writer, "Five Digits - Eleccio Temps_T"+i);
+            writeLineCSV(writer, "FD - Eleccio Temps PC_T"+i);
+            writeLineCSV(writer, "FD - Eleccio Errors_T"+i);
+            writeLineCSV(writer, "FD - Eleccio Errors PC_T"+i);
+            writeLineCSV(writer, "Five Digits - Alternança Temps_T"+i);
+            writeLineCSV(writer, "FD - Alternança Temps PC_T"+i);
+            writeLineCSV(writer, "FD - Alternança Errors_T"+i);
+            writeLineCSV(writer, "FD - Alternança Errors PC_T"+i);
+            writeLineCSV(writer, "Five Digits - Inhibició PC_T"+i);
+            writeLineCSV(writer, "Five Digits - Flexibilitat PC_T"+i);
+            // Fluencia verbal
+            writeLineCSV(writer, "Fluencia verbal - P_T"+i);
+            writeLineCSV(writer, "FV - M_T"+i);
+            writeLineCSV(writer, "FV - R_T"+i);
+            writeLineCSV(writer, "FV - Animals_T"+i);
 
-        writeLineCSV(writer,"");
+            writer.append(";");
 
-        //Sessio 2
-        writeLineCSV(writer,"MoCA");
-        writeLineCSV(writer,"UPSA Comunicacio");
-        writeLineCSV(writer,"UPSA Comprensió");
-        writeLineCSV(writer,"UPSA total");
-        writeLineCSV(writer,"MFE");
-        writeLineCSV(writer,"HAD");
-        writeLineCSV(writer,"QoL-AD");
-        writeLineCSV(writer,"Duke");
-        writeLineCSV(writer,"Rosemberg");
+            //Sessio 2
+            writeLineCSV(writer, "MoCA_T"+i);
+            writeLineCSV(writer, "UPSA Comunicacio_T"+i);
+            writeLineCSV(writer, "UPSA Comprensió_T"+i);
+            writeLineCSV(writer, "UPSA total_T"+i);
+            writeLineCSV(writer, "MFE_T"+i);
+            writeLineCSV(writer, "HAD-A_T"+i);
+            writeLineCSV(writer, "HAD-D_T"+i);
+            writeLineCSV(writer, "QoL-AD_T"+i);
+            writeLineCSV(writer, "Duke_T"+i);
+            writeLineCSV(writer, "Rosemberg_T"+i);
 
-        writeLineCSV(writer,"");
+            writer.append(";");
 
-        //Valoracio cuidador
-        writeLineCSV(writer,"FAQ");
-        writeLineCSV(writer,"NPI");
-        writeLineCSV(writer,"HAD");
-        writeLineCSV(writer,"ZARIT");
-        writeLineCSV(writer,"SF-12");
-        writeLineCSV(writer,"Duke");
+            //Valoracio cuidador
+            writeLineCSV(writer, "FAQ_T"+i);
+            writeLineCSV(writer, "NPI_T"+i);
+            writeLineCSV(writer, "HAD-A_T"+i);
+            writeLineCSV(writer, "HAD-D_T"+i);
+            writeLineCSV(writer, "ZARIT_T"+i);
+            writeLineCSV(writer, "SF-12_T"+i);
+            writeLineCSV(writer, "Duke_T"+i);
+
+            writer.append(";");
+        }
 
     }
 
@@ -608,7 +663,7 @@ public class Utils {
         try {
             File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsSessio1_T"+i+".dat");
             if(!file.exists()) {
-
+                writeBlank(writer,61);
             }
             else{
                 input = new FileInputStream(file);
@@ -630,7 +685,8 @@ public class Utils {
                 propertyToCSV(writer,prop,"ML1Total");
                 propertyToCSV(writer,prop,"puntuacioML1");
 
-                // TODO COGSTATE
+                // COGSTATE
+                writeCogstate(idPacient, i, writer);
 
                 // Memoria logica II
                 propertyToCSV(writer,prop,"ML2Total");
@@ -642,6 +698,65 @@ public class Utils {
                 propertyToCSV(writer,prop,"semanticaBnt"+i);
                 propertyToCSV(writer,prop,"percentilBNT"+i);
                 propertyToCSV(writer,prop,"nssaBNT"+i);
+                // Color trails 1 time
+                propertyToCSV(writer,prop,"color1timeRaw");
+                propertyToCSV(writer,prop,"color1timeStandard");
+                propertyToCSV(writer,prop,"color1timeTscore");
+                propertyToCSV(writer,prop,"color1timePercentile");
+                // Color trails 1 errors
+                propertyToCSV(writer,prop,"color1errorRaw");
+                propertyToCSV(writer,prop,"color1errorPercentile");
+                // Color trails 1 Near misses
+                propertyToCSV(writer,prop,"color1nearRaw");
+                propertyToCSV(writer,prop,"color1nearPercentile");
+                // Color trails 1 prompts
+                propertyToCSV(writer,prop,"color1promptsRaw");
+                propertyToCSV(writer,prop,"color1promptsPercentile");
+                // Color trails 2 time in seconds
+                propertyToCSV(writer,prop,"color2timeRaw");
+                propertyToCSV(writer,prop,"color2timeStandard");
+                propertyToCSV(writer,prop,"color2timeTscore");
+                propertyToCSV(writer,prop,"color2timePercentile");
+                // Color trails 2 errors
+                propertyToCSV(writer,prop,"color2errorRaw");
+                propertyToCSV(writer,prop,"color2errorPercentile");
+                // Color trails 2 Near misses
+                propertyToCSV(writer,prop,"color2nearRaw");
+                propertyToCSV(writer,prop,"color2nearPercentile");
+                // Color trails 2 prompts
+                propertyToCSV(writer,prop,"color2promptsRaw");
+                propertyToCSV(writer,prop,"color2promptsPercentile");
+                // Color trails interference index
+                propertyToCSV(writer,prop,"colorInterferenceRaw");
+                propertyToCSV(writer,prop,"colorInterferencePercentile");
+                // Five digit
+                propertyToCSV(writer,prop,"lecturaTemps");
+                propertyToCSV(writer,prop,"lecturaTempsPCField");
+                propertyToCSV(writer,prop,"lecturaErrorsField");
+                propertyToCSV(writer,prop,"lecturaErrorsPCField");
+                // Five digit
+                propertyToCSV(writer,prop,"compteigTemps");
+                propertyToCSV(writer,prop,"compteigTempsPCField");
+                propertyToCSV(writer,prop,"compteigErrors");
+                propertyToCSV(writer,prop,"compteigErrorsPCField");
+                // Five digit
+                propertyToCSV(writer,prop,"lecturaTemps");
+                propertyToCSV(writer,prop,"lecturaTempsPCField");
+                propertyToCSV(writer,prop,"lecturaErrorsField");
+                propertyToCSV(writer,prop,"lecturaErrorsPCField");
+                // Five digit
+                propertyToCSV(writer,prop,"alternTemps");
+                propertyToCSV(writer,prop,"alternTempsPCField");
+                propertyToCSV(writer,prop,"alternErrors");
+                propertyToCSV(writer,prop,"alternErrorsPCField");
+                // Five digit
+                propertyToCSV(writer,prop,"inhibicioPCField");
+                propertyToCSV(writer,prop,"flexibilitatPCField");
+                // Fluencia verbal
+                propertyToCSV(writer,prop,"fluenciaP");
+                propertyToCSV(writer,prop,"fluenciaM");
+                propertyToCSV(writer,prop,"fluenciaR");
+                propertyToCSV(writer,prop,"fluenciaAnimals");
 
             }
 
@@ -658,13 +773,92 @@ public class Utils {
         }
     }
 
+    private static void writeCogstate(String idPacient, int i, Writer writer) throws IOException {
+        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"COGSTATE_T"+i+".xlsx");
+        if (file.exists()){
+            FileInputStream fis = new FileInputStream(file);
+            XSSFWorkbook workbook = new XSSFWorkbook (fis);
+            XSSFSheet sheet = workbook.getSheetAt(0);
+            // ISL1
+            writeCell(writer,sheet,"L5");
+            writeCell(writer,sheet,"S5");
+            writeCell(writer,sheet,"T5");
+            writeCell(writer,sheet,"U5");
+            writeCell(writer,sheet,"Y5");
+            // ISL2
+            writeCell(writer,sheet,"L6");
+            writeCell(writer,sheet,"S6");
+            writeCell(writer,sheet,"T6");
+            writeCell(writer,sheet,"U6");
+            writeCell(writer,sheet,"Y6");
+            //ISL3
+            writeCell(writer,sheet,"L7");
+            writeCell(writer,sheet,"S7");
+            writeCell(writer,sheet,"T7");
+            writeCell(writer,sheet,"U7");
+            writeCell(writer,sheet,"Y7");
+            // DET
+            writeCell(writer,sheet,"T3");
+            writeCell(writer,sheet,"U3");
+            writeCell(writer,sheet,"Q3");
+            writeCell(writer,sheet,"R3");
+            writeCell(writer,sheet,"S3");
+            // IDN
+            writeCell(writer,sheet,"T2");
+            writeCell(writer,sheet,"U2");
+            writeCell(writer,sheet,"Q2");
+            writeCell(writer,sheet,"R2");
+            writeCell(writer,sheet,"S2");
+            // OCL
+            writeCell(writer,sheet,"T9");
+            writeCell(writer,sheet,"U9");
+            writeCell(writer,sheet,"Q9");
+            writeCell(writer,sheet,"R9");
+            writeCell(writer,sheet,"S9");
+            // ONB
+            writeCell(writer,sheet,"T10");
+            writeCell(writer,sheet,"U10");
+            writeCell(writer,sheet,"Q10");
+            writeCell(writer,sheet,"R10");
+            writeCell(writer,sheet,"S10");
+            // SECT
+            writeCell(writer,sheet,"T11");
+            writeCell(writer,sheet,"U11");
+            writeCell(writer,sheet,"Q11");
+            writeCell(writer,sheet,"R11");
+            writeCell(writer,sheet,"S11");
+            // ISRL
+            writeCell(writer,sheet,"T8");
+            writeCell(writer,sheet,"U8");
+            writeCell(writer,sheet,"S8");
+            writeCell(writer,sheet,"L8");
+        } else {
+            writeBlank(writer,44);
+        }
+    }
+
+    private static void writeCell(Writer writer, XSSFSheet sheet, String cell) throws IOException {
+        String line = getStringFromCell(sheet, cell);
+        writer.append(line);
+        writer.append(";");
+    }
+
+    private static String getStringFromCell(XSSFSheet sheet, String cell) {
+        System.out.println(cell);
+        CellReference cellReference = new CellReference(cell);
+        XSSFRow row = sheet.getRow(cellReference.getRow());
+        XSSFCell c = row.getCell(cellReference.getCol());
+        c.setCellType(XSSFCell.CELL_TYPE_STRING);
+        return c.getStringCellValue();
+    }
+
     private static void writeSessio2(String idPacient, int i, Writer writer) {
         Properties prop = new Properties();
         InputStream input = null;
         try {
             File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsSessio2_T"+i+".dat");
             if(!file.exists()) {
-
+                writeBlank(writer,9);
             }
             else{
                 input = new FileInputStream(file);
@@ -711,7 +905,7 @@ public class Utils {
         try {
             File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsValCuid_T"+i+".dat");
             if(!file.exists()) {
-
+                writeBlank(writer, 6);
             }
             else{
                 input = new FileInputStream(file);
@@ -719,17 +913,17 @@ public class Utils {
                 // load a properties file
                 prop.load(input);
 
+                // FAQ
+                propertyToCSV(writer,prop,"faqTotal");
                 // NPI
                 propertyToCSV(writer,prop,"npiTotal");
-                // UPSA
-                propertyToCSV(writer,prop,"zaritTotal");
-                // SF12
-                propertyToCSV(writer,prop,"sf12Total");
                 // HAD
                 propertyToCSV(writer,prop,"hadTotalA");
                 propertyToCSV(writer,prop,"hadTotalD");
-                // QOL-AD
-                propertyToCSV(writer,prop,"faqTotal");
+                // Zarit
+                propertyToCSV(writer,prop,"zaritTotal");
+                // SF12
+                propertyToCSV(writer,prop,"sf12Total");
                 // DUKE
                 propertyToCSV(writer,prop,"dukeTotal");
 
@@ -754,9 +948,7 @@ public class Utils {
         try {
             File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsValCogPrev"+".dat");
             if(!file.exists()) {
-                for (int i=0; i<5; i++){
-                    writeLineCSV(writer,"");
-                }
+                writeBlank(writer, 5);
             }
             else{
                 input = new FileInputStream(file);
@@ -786,6 +978,12 @@ public class Utils {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+    private static void writeBlank(Writer writer, int n) throws IOException {
+        for (int i=0; i<n; i++){
+            writer.append(";");
         }
     }
 

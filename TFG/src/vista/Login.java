@@ -239,7 +239,7 @@ public class Login extends javax.swing.JFrame {
             switch(rol){
                 case "evaluador":
                     if (users.getJSONObject(i).getString("password").equals(passTxt.getText())){
-                        MenuEvaluador mE = new MenuEvaluador(users.getJSONObject(i).getString("name"));
+                        MenuAvaluador mE = new MenuAvaluador(users.getJSONObject(i).getString("name"));
                         mE.pack();
                         mE.setVisible(true);
                         this.dispose();

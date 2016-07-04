@@ -12,11 +12,11 @@ import org.json.JSONObject;
  *
  * @author USER
  */
-public class Evaluador extends Persona{
+public class Avaluador extends Persona{
 
     private String password;
     
-    public Evaluador(String nom, String id, String password) {
+    public Avaluador(String nom, String id, String password) {
         super(nom, id, "evaluador");
         this.password = password;
     }

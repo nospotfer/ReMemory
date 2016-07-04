@@ -4764,7 +4764,7 @@ public class Sessio1 extends javax.swing.JFrame {
         Utils.guardar(dataPanel,pacientActual.getId(), "Sessio1_T"+valoracio );
         this.guardarResultats();
         Utils.generaResultatsCSV(pacientActual.getId());
-        ((MenuEvaluador)parent).checkCsv();
+        ((MenuAvaluador)parent).checkCsv();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

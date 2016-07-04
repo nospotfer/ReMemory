@@ -5,7 +5,7 @@
  */
 package vista;
 
-import model.Evaluador;
+import model.Avaluador;
 import controlador.Utils;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -26,8 +26,8 @@ import org.json.JSONObject;
  */
 public class NewUser extends javax.swing.JDialog {
 
-    ArrayList<Evaluador> llistaEvaluadors;
-    Evaluador eva;
+    ArrayList<Avaluador> llistaEvaluadors;
+    Avaluador eva;
     
     /**
      * Creates new form newUser
@@ -41,7 +41,7 @@ public class NewUser extends javax.swing.JDialog {
         this.eliminaBtn.setVisible(false);
     }
     
-    public NewUser(java.awt.Frame parent, boolean modal, ArrayList<Evaluador> llistaEvaluadors, Evaluador eva) {
+    public NewUser(java.awt.Frame parent, boolean modal, ArrayList<Avaluador> llistaEvaluadors, Avaluador eva) {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
@@ -269,7 +269,7 @@ public class NewUser extends javax.swing.JDialog {
 
     private void modificaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificaBtnActionPerformed
         boolean idTrobat = false, nomTrobat = false;
-        for (Evaluador e : llistaEvaluadors){
+        for (Avaluador e : llistaEvaluadors){
             if (e.getNom().equals(nameTextBox.getText()) && !e.getNom().equals(eva.getNom())){
                 nomTrobat = true;
             }
@@ -393,7 +393,7 @@ public class NewUser extends javax.swing.JDialog {
         
         getUsers(usr);
         
-        for (Evaluador e : llistaEvaluadors){
+        for (Avaluador e : llistaEvaluadors){
             try {
                     usr.put(e.toJSON());
             } catch (JSONException ex) {

@@ -5,7 +5,7 @@
  */
 package vista;
 
-import model.Evaluador;
+import model.Avaluador;
 import controlador.Utils;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -28,7 +28,7 @@ import org.json.JSONObject;
 public class MenuAdmin extends javax.swing.JFrame {
 
     private String pacient;
-    private ArrayList<Evaluador> llistaEvaluadors = new ArrayList<>();
+    private ArrayList<Avaluador> llistaEvaluadors = new ArrayList<>();
     private GridBagConstraints constraint;
     WindowListener winListe;
     private ArrayList<JButton> llistaButtons = new ArrayList<>();
@@ -90,7 +90,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         pacientLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         pacientLabel.setText("jLabel1");
 
-        jButton1.setText("Nou evaluador");
+        jButton1.setText("Nou avaluador");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -209,13 +209,13 @@ public class MenuAdmin extends javax.swing.JFrame {
                 String id = users.getJSONObject(i).getString("id");
                 String password = users.getJSONObject(i).getString("password");
                 
-                Evaluador eva = new Evaluador(nom,id,password);
+                Avaluador eva = new Avaluador(nom,id,password);
                 llistaEvaluadors.add(eva);
             }
         }
     }
 
-    private void editaUsuari(Evaluador eva){
+    private void editaUsuari(Avaluador eva){
         NewUser nU = new NewUser(this,true,llistaEvaluadors,eva);
         nU.addWindowListener(winListe);
         nU.setVisible(true);
@@ -231,12 +231,12 @@ public class MenuAdmin extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JButton jb = (JButton) e.getSource();
-                Evaluador eva = null;
+                Avaluador eva = null;
                 String comp = "";
                 if (!"EVALUADOR SENSE NOM".equals(jb.getText())){
                     comp = jb.getText();
                 }
-                for (Evaluador ev : llistaEvaluadors){
+                for (Avaluador ev : llistaEvaluadors){
                     if (ev.getNom().equals(comp)){
                         eva = ev;
                     }
@@ -245,9 +245,9 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
          };
         int i = 0;
-        for (Evaluador e : llistaEvaluadors){
+        for (Avaluador e : llistaEvaluadors){
             JButton button = new JButton();
-            String nom = "EVALUADOR SENSE NOM";
+            String nom = "AVALUADOR SENSE NOM";
             if (!"".equals(e.getNom())){
                 nom = e.getNom();
             }

@@ -37,7 +37,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author USER
  */
-public class MenuEvaluador extends javax.swing.JFrame {
+public class MenuAvaluador extends javax.swing.JFrame {
 
     private boolean pacient = false;
     private Pacient pacientActual;
@@ -49,7 +49,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
     /**
      * Creates new form mainMenu
      */
-    public MenuEvaluador(String evaluador) {
+    public MenuAvaluador(String evaluador) {
         Utils.setIcon(this);
         initComponents();
         this.evaluador = evaluador;
@@ -81,7 +81,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
         fitxaBtn = new javax.swing.JButton();
         importaBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        testsTextualsBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -194,10 +194,11 @@ public class MenuEvaluador extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Tests"));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/test.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        testsTextualsBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/test.png"))); // NOI18N
+        testsTextualsBtn.setEnabled(false);
+        testsTextualsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                testsTextualsBtnActionPerformed(evt);
             }
         });
 
@@ -215,7 +216,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(testsTextualsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,11 +234,11 @@ public class MenuEvaluador extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(testsTextualsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Evaluació"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Avaluació"));
 
         csvButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/evaluacio.png"))); // NOI18N
         csvButton.setEnabled(false);
@@ -277,7 +278,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Evaluador:");
+        jLabel6.setText("Avaluador:");
 
         evaluadorLabel.setText("jLabel7");
 
@@ -366,10 +367,10 @@ public class MenuEvaluador extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(this, "No s'ha introduït cap pacient a la base de dades");
                     }
                 } catch (JSONException ex) {
-                    Logger.getLogger(MenuEvaluador.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
                 }
             } catch (IOException ex) {
-                Logger.getLogger(MenuEvaluador.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else {
             idText.setText("");
@@ -380,6 +381,8 @@ public class MenuEvaluador extends javax.swing.JFrame {
             eliminaBtn.setEnabled(false);
             fitxaBtn.setEnabled(false);
             idPacient = "";
+            csvButton.setEnabled(false);
+            testsTextualsBtn.setEnabled(false);
         }
     }//GEN-LAST:event_seleccionaBtnActionPerformed
 
@@ -418,7 +421,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_backBtnActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void testsTextualsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testsTextualsBtnActionPerformed
         if (idPacient != ""){
             MenuValoracions mV = new MenuValoracions(this,true,pacientActual);
 //            mT.addWindowListener(new WindowAdapter()
@@ -437,7 +440,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
             "Alerta",
             JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_testsTextualsBtnActionPerformed
 
     private void importaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importaBtnActionPerformed
         JFileChooser c = new JFileChooser();
@@ -522,7 +525,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
             try {
                 Desktop.getDesktop().open(file);
             } catch (IOException ex) {
-                Logger.getLogger(MenuEvaluador.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_csvButtonActionPerformed
@@ -654,6 +657,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
             pacient = true;
             eliminaBtn.setEnabled(true);
             fitxaBtn.setEnabled(true);
+            testsTextualsBtn.setEnabled(true);
         } else{
 //            System.out.println(trobat);
         }
@@ -720,14 +724,18 @@ public class MenuEvaluador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuEvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuAvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuEvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuAvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuEvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuAvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuEvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuAvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -736,7 +744,7 @@ public class MenuEvaluador extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuEvaluador("").setVisible(true);
+                new MenuAvaluador("").setVisible(true);
             }
         });
     }
@@ -749,7 +757,6 @@ public class MenuEvaluador extends javax.swing.JFrame {
     private javax.swing.JButton fitxaBtn;
     private javax.swing.JTextField idText;
     private javax.swing.JButton importaBtn;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -763,5 +770,6 @@ public class MenuEvaluador extends javax.swing.JFrame {
     private javax.swing.JTextField nomText;
     private javax.swing.JButton nouPacientBtn;
     private javax.swing.JButton seleccionaBtn;
+    private javax.swing.JButton testsTextualsBtn;
     // End of variables declaration//GEN-END:variables
 }

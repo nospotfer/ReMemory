@@ -469,6 +469,7 @@ public class Utils {
                     new FileOutputStream(outFile), "UTF-8");
             writeHeader(writer, idPacient);
             writer.append('\n');
+            writer.append(idPacient);
             writer.append(';');
             writeValoracioCognitivaPrevia(idPacient,writer);
             for (int i=1; i<=3; i++){
@@ -493,7 +494,7 @@ public class Utils {
     }
 
     private static void writeHeader(Writer writer, String idPacient) throws IOException {
-        writeLineCSV(writer,"Pacient: "+idPacient);
+        writeLineCSV(writer,"Pacient");
         //Valoracio cognitiva previa
         writeLineCSV(writer,"CDR");
         writeLineCSV(writer,"CRC total");

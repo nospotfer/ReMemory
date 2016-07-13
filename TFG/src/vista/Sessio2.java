@@ -64,7 +64,7 @@ public class Sessio2 extends javax.swing.JFrame {
         initDUKE();
         initRSE();
 
-        Utils.carregar(tabbedPanel,pacientActual.getId(), "Sessio2"+valoracio);
+        Utils.carregar(tabbedPanel,pacientActual.getId(), "Sessio2_T"+valoracio);
 
         this.toFront();
         this.repaint();

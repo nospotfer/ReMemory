@@ -341,7 +341,8 @@ public class Utils {
         InputStream input = null;
 
         try {
-            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+test+".dat");
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+test+".dat");
+            
             if(!file.exists()) {
                 file.createNewFile();
             }

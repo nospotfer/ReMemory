@@ -56,7 +56,7 @@ public class ValoracioCuidador extends javax.swing.JFrame {
         iniZARIT();
         initFAQ();
 
-        Utils.carregar(tabbedPanel,pacientActual.getId(), "ValCuid"+valoracio);
+        Utils.carregar(tabbedPanel,pacientActual.getId(), "ValCuid_T"+valoracio);
 
         Utils.setActionCommands(dataPanel);
         Utils.setActionCommands(npiPanel);

@@ -123,7 +123,7 @@ public class Sessio1 extends javax.swing.JFrame {
         
         anteriorBtn.setEnabled(false);
 
-        Utils.carregar(dataPanel,pacientActual.getId(), "Sessio1"+valoracio);
+        Utils.carregar(dataPanel,pacientActual.getId(), "Sessio1_T"+valoracio);
 
         this.toFront();
         this.repaint();

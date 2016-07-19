@@ -6,9 +6,8 @@
 package vista;
 
 import controlador.Utils;
-import java.awt.CardLayout;
-import java.awt.Component;
-import java.awt.Container;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -44,12 +43,20 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     int pagina = 0;
     String idPacient = "";
     String [] llistaPagines = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10"};
+    Frame parent;
+
+    public ValoracioCognitivaPrevia(String idPacient){
+
+    }
 
     /**
      * Creates new form testsTextuals
      */
-    public ValoracioCognitivaPrevia(String idPacient) {
+    public ValoracioCognitivaPrevia(Frame parent, String idPacient) {
         Utils.setIcon(this);
+
+        this.parent = parent;
+
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
@@ -5633,6 +5640,8 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         Utils.guardar(dataPanel,idPacient, "Test0");
         guardarResultats();
         Utils.generaResultatsCSV(idPacient);
+        ((MenuAvaluador)parent).checkCsv();
+        ((MenuAvaluador)parent).checkCsvTotal();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

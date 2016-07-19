@@ -30,6 +30,7 @@ public class ValoracioCuidador extends javax.swing.JFrame {
     int pagina = 0;
     int numPaginesTotal = 1;
     Pacient pacientActual;
+    Frame parent;
 
     public ValoracioCuidador(){
         initComponents();
@@ -38,8 +39,10 @@ public class ValoracioCuidador extends javax.swing.JFrame {
     /**
      * Creates new form ValoracioCuidador
      */
-    public ValoracioCuidador(Pacient pacient, String valoracio) {
+    public ValoracioCuidador(Frame parent, Pacient pacient, String valoracio) {
         Utils.setIcon(this);
+
+        this.parent = parent;
         
         initComponents();
 
@@ -6097,6 +6100,8 @@ public class ValoracioCuidador extends javax.swing.JFrame {
         Utils.guardar(tabbedPanel,pacientActual.getId(), "ValCuid_T"+valoracio);
         guardarResultats();
         Utils.generaResultatsCSV(pacientActual.getId());
+        ((MenuAvaluador)parent).checkCsv();
+        ((MenuAvaluador)parent).checkCsvTotal();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

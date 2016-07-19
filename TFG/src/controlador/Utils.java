@@ -12,18 +12,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import org.apache.poi.POIDocument;
+
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -460,29 +458,28 @@ public class Utils {
     }
 
     public static void generaResultatsCSV(String idPacient){
-        File outFile = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        File outFilePacient = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        File outFileGeneral = new File(Utils.RES_PATH+"Resultats.csv");
         try {
-            if (!outFile.exists()){
-                outFile.createNewFile();
+            if (!outFilePacient.exists()){
+                outFilePacient.createNewFile();
             }
+            if (!outFileGeneral.exists()){
+                outFileGeneral.createNewFile();
+                Writer w = new OutputStreamWriter(
+                        new FileOutputStream(outFileGeneral), "UTF-8");
+                writeHeader(w, idPacient);
+                w.flush();
+                w.close();
+            }
+
 	        Writer writer = new OutputStreamWriter(
-                    new FileOutputStream(outFile), "UTF-8");
+                    new FileOutputStream(outFilePacient), "UTF-8");
             writeHeader(writer, idPacient);
-            writer.append('\n');
-            writer.append(idPacient);
-            writer.append(';');
-            writeValoracioCognitivaPrevia(idPacient,writer);
-            for (int i=1; i<=3; i++){
-                writer.append(';');
-                writeSessio1(idPacient, i, writer);
-                writer.append(';');
-                writeSessio2(idPacient, i, writer);
-                writer.append(';');
-                writeValoracioCuidador(idPacient, i, writer);
-                //writer.append('\n');
-            }
-            writer.flush();
-	        writer.close();
+
+            escriuResultatsPacient(idPacient, writer);
+
+            escriuResultatsTotal(idPacient,outFileGeneral);
 
             csvToXLSX(idPacient);
 
@@ -491,6 +488,101 @@ public class Utils {
         {
              e.printStackTrace();
         }
+    }
+
+    private static void escriuResultatsTotal(String idPacient, File outFileGeneral) throws IOException {
+
+        String data = getPacientDataFromCSV(idPacient);
+
+        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(outFileGeneral), StandardCharsets.UTF_8));
+        String  line = "";
+        ArrayList<String> lines = new ArrayList<>();
+        while ((line = in.readLine()) != null){
+            lines.add(line);
+        }
+
+        int index = getIndexPacient(idPacient,lines);
+
+        escriuData(outFileGeneral, data, lines, index);
+
+
+    }
+
+    private static void escriuData(File outFileGeneral, String data, ArrayList<String> lines, int index) throws IOException {
+        if (index == -1){
+            Writer writer = new OutputStreamWriter(
+                    new FileOutputStream(outFileGeneral,true), "UTF-8");
+            writer.append("\n");
+            writer.append(data);
+            writer.flush();
+            writer.close();
+
+        } else {
+            lines.set(index, data);
+
+            Writer writer = new OutputStreamWriter(
+                    new FileOutputStream(outFileGeneral), "UTF-8");
+
+            for (int i = 0; i<lines.size(); i++) {
+                if (i == 0) {
+                    writer.append(lines.get(i));
+                } else {
+                    writer.append("\n");
+                    writer.append(lines.get(i));
+                }
+
+            }
+
+            writer.flush();
+            writer.close();
+        }
+    }
+
+    private static int getIndexPacient(String idPacient, ArrayList<String> lines) {
+        int index = -1;
+        int i = 0;
+        for (String line : lines) {
+            if (line.split(";")[0].equals(idPacient)){
+                index = i;
+            }
+            i++;
+        }
+        return index;
+    }
+
+    private static String getPacientDataFromCSV(String idPacient) throws IOException {
+        String data = "";
+        File outFilePacient = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(outFilePacient), StandardCharsets.UTF_8));
+        String  line;
+        ArrayList<String> lines = new ArrayList<>();
+
+        while ((line = in.readLine()) != null){
+            lines.add(line);
+        }
+
+        if (lines.size() > 1){
+            data = lines.get(1);
+        }
+
+        return data;
+    }
+
+    private static void escriuResultatsPacient(String idPacient, Writer writer) throws IOException {
+        writer.append('\n');
+        writer.append(idPacient);
+        writer.append(';');
+        writeValoracioCognitivaPrevia(idPacient,writer);
+        for (int i=1; i<=3; i++){
+            writer.append(';');
+            writeSessio1(idPacient, i, writer);
+            writer.append(';');
+            writeSessio2(idPacient, i, writer);
+            writer.append(';');
+            writeValoracioCuidador(idPacient, i, writer);
+        }
+        writer.flush();
+        writer.close();
     }
 
     private static void writeHeader(Writer writer, String idPacient) throws IOException {
@@ -991,16 +1083,16 @@ public class Utils {
 
     private static void propertyToCSV(Writer writer, Properties prop, String string) throws IOException {
         String str = prop.getProperty(string,"");
-        System.out.println("Propietat: "+string);
-        System.out.println("Valor: "+str+".");
+//        System.out.println("Propietat: "+string);
+//        System.out.println("Valor: "+str+".");
         writer.append(str);
         writer.append(';');
     }
 
     public static void csvToXLSX(String idPacient) {
         try {
-            String csvFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Resultats.csv"; //csv file address
-            String xlsxFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Resultats.xls"; //xlsx file address
+            String csvFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv"; //csv file address
+            String xlsxFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.xls"; //xlsx file address
             HSSFWorkbook workBook = new HSSFWorkbook();
             HSSFSheet sheet = workBook.createSheet("sheet1");
             String currentLine=null;

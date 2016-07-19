@@ -7,9 +7,8 @@ package vista;
 
 import model.Pacient;
 import controlador.Utils;
-import java.awt.CardLayout;
-import java.awt.Component;
-import java.awt.Container;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -33,16 +32,23 @@ public class Sessio2 extends javax.swing.JFrame {
     int numPaginesTotal = 1;
     Pacient pacientActual;
     String valoracio;
-    
+    Frame parent;
+
+    public Sessio2(Pacient pacientActual, String valoracio){
+
+    }
+
     /**
      * Creates new form Sessio2
      * @param pacientActual
      * @param valoracio
      */
     
-    public Sessio2(Pacient pacientActual, String valoracio) {
+    public Sessio2(Frame parent, Pacient pacientActual, String valoracio) {
         Utils.setIcon(this);
-        
+
+        this.parent = parent;
+
         initComponents();
 
         this.setTitle(this.getTitle()+" | T"+valoracio);
@@ -7729,6 +7735,8 @@ public class Sessio2 extends javax.swing.JFrame {
         Utils.guardar(tabbedPanel,pacientActual.getId(), "Sessio2_T"+valoracio);
         this.guardarResultats();
         Utils.generaResultatsCSV(pacientActual.getId());
+        ((MenuAvaluador)parent).checkCsv();
+        ((MenuAvaluador)parent).checkCsvTotal();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

@@ -59,6 +59,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         pacientActual = null;
         idText.requestFocusInWindow();
         this.getRootPane().setDefaultButton(seleccionaBtn);
+        checkCsvTotal();
     }
 
     /**
@@ -88,6 +89,8 @@ public class MenuAvaluador extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         csvButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        csvTotalButton = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         evaluadorLabel = new javax.swing.JLabel();
@@ -218,7 +221,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(testsTextualsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addGap(50, 50, 50)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -248,7 +251,17 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Full de càlcul");
+        jLabel3.setText("Pacient actual");
+
+        csvTotalButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/evaluacio.png"))); // NOI18N
+        csvTotalButton.setEnabled(false);
+        csvTotalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                csvTotalButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Tots els pacients");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -259,15 +272,25 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(csvButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(csvTotalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(csvButton)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(csvTotalButton))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(csvButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -393,6 +416,16 @@ public class MenuAvaluador extends javax.swing.JFrame {
         }
         else {
             csvButton.setEnabled(false);
+        }
+    }
+    
+    public void checkCsvTotal() {
+        File file = new File(Utils.RES_PATH+"Resultats.csv");
+        if (file.exists()){
+            csvTotalButton.setEnabled(true);
+        }
+        else {
+            csvTotalButton.setEnabled(false);
         }
     }
 
@@ -529,6 +562,17 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_csvButtonActionPerformed
+
+    private void csvTotalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csvTotalButtonActionPerformed
+        File file = new File(Utils.RES_PATH+"Resultats.csv");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_csvTotalButtonActionPerformed
 
     private void guardarJSON() {
         JSONArray usr = new JSONArray();
@@ -752,6 +796,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
     private javax.swing.JButton csvButton;
+    private javax.swing.JButton csvTotalButton;
     private javax.swing.JButton eliminaBtn;
     private javax.swing.JLabel evaluadorLabel;
     private javax.swing.JButton fitxaBtn;
@@ -764,6 +809,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

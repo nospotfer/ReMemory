@@ -151,7 +151,7 @@ public class MenuTests extends javax.swing.JDialog {
             "Falten dades",
             JOptionPane.WARNING_MESSAGE);
         }else{
-            Sessio2 tT = new Sessio2(this.pacientActual, valoracio);
+            Sessio2 tT = new Sessio2(parent,this.pacientActual, valoracio);
             tT.pack();
             tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
             tT.setVisible(true);
@@ -161,7 +161,7 @@ public class MenuTests extends javax.swing.JDialog {
     }//GEN-LAST:event_sessio2BtnActionPerformed
 
     private void valoracioCuidadorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valoracioCuidadorBtnActionPerformed
-        ValoracioCuidador vC = new ValoracioCuidador(pacientActual, valoracio);
+        ValoracioCuidador vC = new ValoracioCuidador(parent,pacientActual, valoracio);
         vC.pack();
         vC.setExtendedState(JFrame.MAXIMIZED_BOTH);
         vC.setVisible(true);

@@ -7,6 +7,7 @@ package vista;
 
 import model.Pacient;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -18,12 +19,16 @@ import javax.swing.JFrame;
 public class MenuValoracions extends javax.swing.JDialog {
 
     Pacient pacientActual;
+    Frame parent;
     
     /**
      * Creates new form MenuValoracions
      */
     public MenuValoracions(java.awt.Frame parent, boolean modal, Pacient pacientActual) {
         super(parent, modal);
+
+        this.parent = parent;
+
         initComponents();
         this.setLocationRelativeTo(null);
         this.pacientActual = pacientActual;
@@ -105,7 +110,7 @@ public class MenuValoracions extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ValoracioCognitivaPrevia tT = new ValoracioCognitivaPrevia(pacientActual.getId());
+        ValoracioCognitivaPrevia tT = new ValoracioCognitivaPrevia(parent,pacientActual.getId());
         tT.pack();
         tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
         tT.setVisible(true);

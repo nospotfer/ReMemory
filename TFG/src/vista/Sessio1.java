@@ -4765,6 +4765,7 @@ public class Sessio1 extends javax.swing.JFrame {
         this.guardarResultats();
         Utils.generaResultatsCSV(pacientActual.getId());
         ((MenuAvaluador)parent).checkCsv();
+        ((MenuAvaluador)parent).checkCsvTotal();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 
@@ -6536,7 +6537,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 {"15", "Transportador (serveix per mesurar angles)","","0","0"}
             },
             new String [] {
-                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version A","Resposta pacient", " Correctes", " Ajuda semàntica"
+                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version A","Resposta pacient", " Correctes espontàniament", " Correctes amb ajuda semàntica"
             }
         );
         
@@ -6641,7 +6642,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 {"15", "Pèrgola (s'usa al jardí)","","0","0"}
             },
             new String [] {
-                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version B", "Resposta pacient" ," Correctes", " Ajuda semàntica"
+                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version B", "Resposta pacient" ," Correctes espontàniament", " Correctes amb ajuda semàntica"
             }
         );
         
@@ -6745,7 +6746,7 @@ public class Sessio1 extends javax.swing.JFrame {
                 {"15", "Àbac (serveix per comptar)","","0","0"}
             },
             new String [] {
-                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version C","Resposta pacient", " Correctes", " Ajuda semàntica"
+                "", "<html><b><p style=\"font-size:14px;\"><font color=\"rgb(65,110,160)\">Short Form - Version C","Resposta pacient", " Correctes espontàniament", " Correctes amb ajuda semàntica"
             }
         );
         

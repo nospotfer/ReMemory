@@ -458,7 +458,7 @@ public class Utils {
     }
 
     public static void generaResultatsCSV(String idPacient){
-        File outFilePacient = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        File outFilePacient = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv");
         File outFileGeneral = new File(Utils.RES_PATH+"Resultats.csv");
         try {
             if (!outFilePacient.exists()){
@@ -552,7 +552,7 @@ public class Utils {
 
     private static String getPacientDataFromCSV(String idPacient) throws IOException {
         String data = "";
-        File outFilePacient = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        File outFilePacient = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv");
         BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(outFilePacient), StandardCharsets.UTF_8));
         String  line;
         ArrayList<String> lines = new ArrayList<>();
@@ -572,6 +572,7 @@ public class Utils {
         writer.append('\n');
         writer.append(idPacient);
         writer.append(';');
+        writeFitxa(idPacient,writer);
         writeValoracioCognitivaPrevia(idPacient,writer);
         for (int i=1; i<=3; i++){
             writer.append(';');
@@ -580,6 +581,7 @@ public class Utils {
             writeSessio2(idPacient, i, writer);
             writer.append(';');
             writeValoracioCuidador(idPacient, i, writer);
+            writer.append(';');
         }
         writer.flush();
         writer.close();
@@ -587,6 +589,243 @@ public class Utils {
 
     private static void writeHeader(Writer writer, String idPacient) throws IOException {
         writeLineCSV(writer,"Pacient");
+
+        //Fitxa
+
+        writeLineCSV(writer, "Codi subjecte");
+        // Dades sociodemogràfiques
+        writeLineCSV(writer, "Sexe");
+        writeLineCSV(writer, "Idioma");
+        writeLineCSV(writer, "Data naixement");
+        writeLineCSV(writer, "Nivell escolaritat");
+        writeLineCSV(writer, "Anys escolaritat");
+        writeLineCSV(writer, "Estat civil");
+        writeLineCSV(writer, "Professió");
+        writeLineCSV(writer, "Categoria professional");
+        writeLineCSV(writer, "Situació laboral");
+        writeLineCSV(writer, "Nivell socioeconòmic");
+        // Dades clíniques
+        writeLineCSV(writer, "Fumador/a actualment");
+        writeLineCSV(writer, "Cigarrets / dia");
+        writeLineCSV(writer, "Anys que ha fumat");
+        writeLineCSV(writer, "Edat inici fumar");
+        writeLineCSV(writer, "Consum d'alcohol actual");
+        writeLineCSV(writer, "Núm. i tipus de begudes alcohòliques/dia");
+        writeLineCSV(writer, "UBE/dia");
+        writeLineCSV(writer, "Anys consum alcohol");
+        writeLineCSV(writer, "Edat inici alcohol");
+        writeLineCSV(writer, "Malalties cròniqus concomitants");
+        // Teràpia no farmacològica
+        writeLineCSV(writer, "Temps en tractament no farmacològic");
+
+        // Dades mèdiques
+        writeLineCSV(writer, "Malaltia d'Alzheimer");
+        writeLineCSV(writer, "Malaltia de Parkinson");
+        writeLineCSV(writer, "Sindrome de Down");
+        writeLineCSV(writer, "Altres demències");
+        writeLineCSV(writer, "Antecedents del pare");
+        writeLineCSV(writer, "Antecedents de la mare");
+        writeLineCSV(writer, "Altres familiars");
+        // Dades clíniques
+        writeLineCSV(writer, "Cafè i te");
+        writeLineCSV(writer, "Tabac");
+        writeLineCSV(writer, "Alcohol");
+        writeLineCSV(writer, "Cannabis");
+        writeLineCSV(writer, "Feina i tòxics laborals");
+        writeLineCSV(writer, "Altres antecedents personals");
+        // Antecedents patològics personals
+        //  Cardiovascular
+        writeLineCSV(writer, "Hipertensió");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Insuficiència cardíaca");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Infart de miocardi");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Cardiopatia isquèmica");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Arritmia");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Malaltia vascular perifèrica arterial");
+        writeLineCSV(writer, "Data");
+        // Endocrino/Metabòlic
+        writeLineCSV(writer, "Diabètis");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Obesitat");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Dislipemia");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Patologia de tiroides");
+        writeLineCSV(writer, "Data");
+        //  Digestiu
+        writeLineCSV(writer, "Ulcus");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Gastritis");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Colelitiasis/colecistectomia");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Hepatopatia");
+        writeLineCSV(writer, "Data");
+        //  Psiquiàtric/Abús
+        writeLineCSV(writer, "Depressió");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Ansietat");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Psicosis");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Abús d'alcohol");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Abús de drogues");
+        writeLineCSV(writer, "Data");
+        //  Neurològic
+        writeLineCSV(writer, "AVC establert");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "AVC transitori");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Epilèpsia");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Trauma craneal greu");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Malaltia de Parkinson");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Esclerosis múltiple");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Cefalea");
+        writeLineCSV(writer, "Data");
+        //  Respiratori
+        writeLineCSV(writer, "Asma");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "EPOC");
+        writeLineCSV(writer, "Data");
+        //  Hematològic
+        writeLineCSV(writer, "Anèmia");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Leucosis");
+        writeLineCSV(writer, "Data");
+        //  Immunològic
+        writeLineCSV(writer, "Al·lèrgia");
+        writeLineCSV(writer, "Data");
+        //  Oftalmològic
+        writeLineCSV(writer, "Glaucoma");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Cataractes");
+        writeLineCSV(writer, "Data");
+        //  Genito-urinari
+        writeLineCSV(writer, "Insuficiencia renal");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Incontinencia urinaria");
+        writeLineCSV(writer, "Data");
+        //  Musculo-esqueletic
+        writeLineCSV(writer, "Artosi");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Artitis");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Fibromialgia");
+        writeLineCSV(writer, "Data");
+        //  Neoplassic general
+        writeLineCSV(writer, "Benigne");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Maligne");
+        writeLineCSV(writer, "Data");
+        //  Tractament farmacològic actual
+        //   Farmacs sistema nervios
+        writeLineCSV(writer, "Ansiolítics i sedants");
+        writeLineCSV(writer, "Hipnòtics");
+        writeLineCSV(writer, "Antidepresius");
+        writeLineCSV(writer, "Animaniacs");
+        writeLineCSV(writer, "Anipsicòtics/Neurolèptics");
+        writeLineCSV(writer, "Animigranyosos");
+        writeLineCSV(writer, "Opioides");
+        writeLineCSV(writer, "Antiepilèptics/Anticonvulsivants");
+        writeLineCSV(writer, "Antiparkinsonians");
+        writeLineCSV(writer, "Fàrmacs i múscul estriat");
+        writeLineCSV(writer, "Vasodilatadors cerebrals i nootròpics");
+        writeLineCSV(writer, "Alzheimer: inhibidors de la Ac-esterasa");
+        writeLineCSV(writer, "Alzheimer: memantina");
+        writeLineCSV(writer, "Psicoestimulants");
+        writeLineCSV(writer, "Substàncies d'abús");
+        writeLineCSV(writer, "Deshabituació de substàncies d'abús");
+        //    Altres farmacs
+        writeLineCSV(writer, "Antiàcids/protectors gàstrics");
+        writeLineCSV(writer, "Antidiabètics");
+        writeLineCSV(writer, "Antitrombòtics/Anticoagulants");
+        writeLineCSV(writer, "Antiagregants");
+        writeLineCSV(writer, "Cardiotònics/Antiarritmics");
+        writeLineCSV(writer, "Antihipertenius");
+        writeLineCSV(writer, "Diurètics");
+        writeLineCSV(writer, "Hipolipemiants");
+        writeLineCSV(writer, "Dermatològics");
+        writeLineCSV(writer, "Hormones sexuals");
+        writeLineCSV(writer, "Urològics");
+        writeLineCSV(writer, "Corticosteroides sintètics");
+        writeLineCSV(writer, "Terapia tiroidea");
+        writeLineCSV(writer, "Antineapàstics/Immunomoduladors");
+        writeLineCSV(writer, "Antiinflamatoris/Antirreumàtics");
+        writeLineCSV(writer, "Analgèsics/Antipirètics");
+        writeLineCSV(writer, "Broncodilatadors");
+        writeLineCSV(writer, "Oftalmològics");
+
+        // Proves complementaries
+        writeLineCSV(writer, "ECG: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Analítica de sang: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Analítica d'orina: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Analítica de LCR: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Genètica: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "RX de tòrax: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "EEG: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Potencials evocats: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "EMG: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "N-TMS: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "Anatomia patològica: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+
+        // Neuroimatge
+        writeLineCSV(writer, "TC: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "RM: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "RM funcional: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "RM tractografia: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "SPECT: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "SISCOM: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "DaT-Scan: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+        writeLineCSV(writer, "PET: codi resultat");
+        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Data");
+
+
         //Valoracio cognitiva previa
         writeLineCSV(writer,"CDR");
         writeLineCSV(writer,"CRC total");
@@ -946,6 +1185,288 @@ public class Utils {
         return c.getStringCellValue();
     }
 
+    private static void writeFitxa(String idPacient, Writer writer){
+
+        Properties prop = new Properties();
+        InputStream input = null;
+        try {
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+idPacient+"Fitxa"+".dat");
+            if(!file.exists()) {
+                writeBlank(writer,206);
+            }
+            else{
+                input = new FileInputStream(file);
+
+                // load a properties file
+                prop.load(input);
+
+                // Carrega el codi del subjecte
+                propertyToCSV(writer,prop,"codiSubjecte");
+
+                // Carrega les dades basiques
+                propertyToCSV(writer,prop,"sexe");
+                propertyToCSV(writer,prop,"idioma");
+                propertyToCSV(writer,prop,"dataNaixement");
+                propertyToCSV(writer,prop,"nivellEscolaritat");
+                propertyToCSV(writer,prop,"anysEscolaritat");
+                propertyToCSV(writer,prop,"estatCivil");
+                propertyToCSV(writer,prop,"professio");
+                propertyToCSV(writer,prop,"categoriaPro");
+                propertyToCSV(writer,prop,"situacioLaboral");
+                propertyToCSV(writer,prop,"nivellSocioeconomic");
+
+                propertyToCSV(writer,prop,"fumador");
+                propertyToCSV(writer,prop,"numCigarrets");
+                propertyToCSV(writer,prop,"anysFumar");
+                propertyToCSV(writer,prop,"edatFumar");
+                propertyToCSV(writer,prop,"consumAlcohol");
+                propertyToCSV(writer,prop,"numBegudes");
+                propertyToCSV(writer,prop,"ubeDia");
+                propertyToCSV(writer,prop,"anysAlcohol");
+                propertyToCSV(writer,prop,"edatAlcohol");
+                propertyToCSV(writer,prop,"malaltiesCroniques");
+
+                propertyToCSV(writer,prop,"tempsTractament");
+
+                // Carrega les dades mediques
+                propertyToCSV(writer,prop,"alzheimer");
+                propertyToCSV(writer,prop,"parkinson");
+                propertyToCSV(writer,prop,"sindromeDown");
+                propertyToCSV(writer,prop,"altresDemencies");
+                propertyToCSV(writer,prop,"antecedentsPare");
+                propertyToCSV(writer,prop,"antecedentsMare");
+                propertyToCSV(writer,prop,"altresFamiliars");
+
+                propertyToCSV(writer,prop,"cafe");
+                propertyToCSV(writer,prop,"tabac");
+                propertyToCSV(writer,prop,"alcohol");
+                propertyToCSV(writer,prop,"cannabis");
+                propertyToCSV(writer,prop,"toxicsLaborals");
+                propertyToCSV(writer,prop,"antecedentsPersonals");
+
+                propertyToCSV(writer,prop,"hipertensio");
+                propertyToCSV(writer,prop,"hipertensioData");
+                propertyToCSV(writer,prop,"insuficienciaCardiaca");
+                propertyToCSV(writer,prop,"insuficienciaCardiacaData");
+                propertyToCSV(writer,prop,"infart");
+                propertyToCSV(writer,prop,"infartData");
+                propertyToCSV(writer,prop,"cardiopatia");
+                propertyToCSV(writer,prop,"cardiopatiaData");
+                propertyToCSV(writer,prop,"arritmia");
+                propertyToCSV(writer,prop,"arritmiaData");
+                propertyToCSV(writer,prop,"malaltiaVascularPeriferica");
+                propertyToCSV(writer,prop,"malaltiaVascularData");
+
+                propertyToCSV(writer,prop,"diabetis");
+                propertyToCSV(writer,prop,"diabetisData");
+                propertyToCSV(writer,prop,"obesitat");
+                propertyToCSV(writer,prop,"obesitatData");
+                propertyToCSV(writer,prop,"dislipemia");
+                propertyToCSV(writer,prop,"dislipemiaData");
+                propertyToCSV(writer,prop,"patologiaTiroides");
+                propertyToCSV(writer,prop,"patologiaTiroidesData");
+
+                propertyToCSV(writer,prop,"ulcus");
+                propertyToCSV(writer,prop,"ulcusData");
+                propertyToCSV(writer,prop,"gastritis");
+                propertyToCSV(writer,prop,"gastritisData");
+                propertyToCSV(writer,prop,"colelitiasis");
+                propertyToCSV(writer,prop,"colelitiasisData");
+                propertyToCSV(writer,prop,"hepatopatia");
+                propertyToCSV(writer,prop,"hepatopatiaData");
+
+                propertyToCSV(writer,prop,"depresio");
+                propertyToCSV(writer,prop,"depresioData");
+                propertyToCSV(writer,prop,"ansietat");
+                propertyToCSV(writer,prop,"ansietatData");
+                propertyToCSV(writer,prop,"psicosis");
+                propertyToCSV(writer,prop,"psicosisData");
+                propertyToCSV(writer,prop,"abusAlcohol");
+                propertyToCSV(writer,prop,"abusAlcoholData");
+                propertyToCSV(writer,prop,"abusDrogues");
+                propertyToCSV(writer,prop,"abusDroguesData");
+
+                propertyToCSV(writer,prop,"avcEstablert");
+                propertyToCSV(writer,prop,"avcEstablertData");
+                propertyToCSV(writer,prop,"avcTransitori");
+                propertyToCSV(writer,prop,"avcTransitoriData");
+                propertyToCSV(writer,prop,"epilepsia");
+                propertyToCSV(writer,prop,"epilepsiaData");
+                propertyToCSV(writer,prop,"traumaCraneal");
+                propertyToCSV(writer,prop,"traumaCranealData");
+                propertyToCSV(writer,prop,"malaltiaParkinson");
+                propertyToCSV(writer,prop,"malaltiaParkinsonData");
+                propertyToCSV(writer,prop,"esclerosis");
+                propertyToCSV(writer,prop,"esclerosisData");
+                propertyToCSV(writer,prop,"cefalea");
+                propertyToCSV(writer,prop,"cefaleaData");
+
+                propertyToCSV(writer,prop,"asma");
+                propertyToCSV(writer,prop,"asmaData");
+                propertyToCSV(writer,prop,"epoc");
+                propertyToCSV(writer,prop,"epocData");
+
+                propertyToCSV(writer,prop,"anemia");
+                propertyToCSV(writer,prop,"anemiaData");
+                propertyToCSV(writer,prop,"leucosis");
+                propertyToCSV(writer,prop,"leucosisData");
+
+                propertyToCSV(writer,prop,"alergia");
+                propertyToCSV(writer,prop,"alergiaData");
+
+                propertyToCSV(writer,prop,"glaucoma");
+                propertyToCSV(writer,prop,"glaucomaData");
+                propertyToCSV(writer,prop,"cataractes");
+                propertyToCSV(writer,prop,"cataractesData");
+
+                propertyToCSV(writer,prop,"insuficienciaRenal");
+                propertyToCSV(writer,prop,"insuficienciaRenalData");
+                propertyToCSV(writer,prop,"incontinencia");
+                propertyToCSV(writer,prop,"incontinenciaData");
+
+                propertyToCSV(writer,prop,"artrosi");
+                propertyToCSV(writer,prop,"artrosiData");
+                propertyToCSV(writer,prop,"artritis");
+                propertyToCSV(writer,prop,"artritisData");
+                propertyToCSV(writer,prop,"fibromialgia");
+                propertyToCSV(writer,prop,"fibromialgiaData");
+
+                propertyToCSV(writer,prop,"benigne");
+                propertyToCSV(writer,prop,"benigneData");
+                propertyToCSV(writer,prop,"maligne");
+                propertyToCSV(writer,prop,"maligneData");
+
+                propertyToCSV(writer,prop,"ansiolitics");
+                propertyToCSV(writer,prop,"hipnotics");
+                propertyToCSV(writer,prop,"antidepresius");
+                propertyToCSV(writer,prop,"antimaniacs");
+                propertyToCSV(writer,prop,"antipsicotics");
+                propertyToCSV(writer,prop,"antimigranyosos");
+                propertyToCSV(writer,prop,"opioides");
+                propertyToCSV(writer,prop,"antiepileptics");
+                propertyToCSV(writer,prop,"antiparkinsonians");
+                propertyToCSV(writer,prop,"musculEstriat");
+                propertyToCSV(writer,prop,"vasodilatadors");
+                propertyToCSV(writer,prop,"ACEsterasa");
+                propertyToCSV(writer,prop,"memantina");
+                propertyToCSV(writer,prop,"psicoestimulants");
+                propertyToCSV(writer,prop,"substanciesAbus");
+                propertyToCSV(writer,prop,"deshabituacio");
+
+                propertyToCSV(writer,prop,"antiacids");
+                propertyToCSV(writer,prop,"antidiabetics");
+                propertyToCSV(writer,prop,"antitrombotics");
+                propertyToCSV(writer,prop,"antiagregants");
+                propertyToCSV(writer,prop,"cardiotonics");
+                propertyToCSV(writer,prop,"antihipertensius");
+                propertyToCSV(writer,prop,"diuretics");
+                propertyToCSV(writer,prop,"hipolipemiants");
+                propertyToCSV(writer,prop,"dermatologics");
+                propertyToCSV(writer,prop,"hormones");
+                propertyToCSV(writer,prop,"urologics");
+                propertyToCSV(writer,prop,"corticosteroides");
+                propertyToCSV(writer,prop,"terapiaTiroidea");
+                propertyToCSV(writer,prop,"antineopasics");
+                propertyToCSV(writer,prop,"antiinflamatoris");
+                propertyToCSV(writer,prop,"analgesics");
+                propertyToCSV(writer,prop,"broncodilatadors");
+                propertyToCSV(writer,prop,"oftalmologics");
+
+                // Carrega les proves complementaries
+                propertyToCSV(writer,prop,"ecgCodi");
+                propertyToCSV(writer,prop,"ecgDescripcio");
+                propertyToCSV(writer,prop,"ecgData");
+
+                propertyToCSV(writer,prop,"analiticaSangCodi");
+                propertyToCSV(writer,prop,"analiticaSangDescripcio");
+                propertyToCSV(writer,prop,"analiticaSangData");
+
+                propertyToCSV(writer,prop,"analiticaOrina");
+                propertyToCSV(writer,prop,"analiticaOrinaDescripcio");
+                propertyToCSV(writer,prop,"analiticaOrinaData");
+
+                propertyToCSV(writer,prop,"analiticaLcrCodi");
+                propertyToCSV(writer,prop,"analiticaLcrDescripcio");
+                propertyToCSV(writer,prop,"analiticaLcrData");
+
+                propertyToCSV(writer,prop,"geneticaCodi");
+                propertyToCSV(writer,prop,"geneticaDescripcio");
+                propertyToCSV(writer,prop,"geneticaData");
+
+                propertyToCSV(writer,prop,"toraxCodi");
+                propertyToCSV(writer,prop,"toraxDescripcio");
+                propertyToCSV(writer,prop,"toraxData");
+
+                propertyToCSV(writer,prop,"eegCodi");
+                propertyToCSV(writer,prop,"eegDescripcio");
+                propertyToCSV(writer,prop,"eegData");
+
+                propertyToCSV(writer,prop,"potencialsCodi");
+                propertyToCSV(writer,prop,"potencialsDescripcio");
+                propertyToCSV(writer,prop,"potencialsData");
+
+                propertyToCSV(writer,prop,"emgCodi");
+                propertyToCSV(writer,prop,"emgDescripcio");
+                propertyToCSV(writer,prop,"emgData");
+
+                propertyToCSV(writer,prop,"ntmsCodi");
+                propertyToCSV(writer,prop,"ntmsDescripcio");
+                propertyToCSV(writer,prop,"ntmsData");
+
+                propertyToCSV(writer,prop,"anatomiaCodi");
+                propertyToCSV(writer,prop,"anatomiaDescripcio");
+                propertyToCSV(writer,prop,"anatomiaData");
+
+                // Carrega la neuroimatge
+
+                propertyToCSV(writer,prop,"tcCodi");
+                propertyToCSV(writer,prop,"tcDescripcio");
+                propertyToCSV(writer,prop,"tcData");
+
+                propertyToCSV(writer,prop,"rmCodi");
+                propertyToCSV(writer,prop,"rmDescripcio");
+                propertyToCSV(writer,prop,"rmData");
+
+                propertyToCSV(writer,prop,"rmFuncionalCodi");
+                propertyToCSV(writer,prop,"rmFuncionalDescripcio");
+                propertyToCSV(writer,prop,"rmFuncionalData");
+
+                propertyToCSV(writer,prop,"rmTractografiaCodi");
+                propertyToCSV(writer,prop,"rmTractografiaDescripcio");
+                propertyToCSV(writer,prop,"rmTractografiaData");
+
+                propertyToCSV(writer,prop,"spectCodi");
+                propertyToCSV(writer,prop,"spectDescripcio");
+                propertyToCSV(writer,prop,"spectData");
+
+                propertyToCSV(writer,prop,"siscomCodi");
+                propertyToCSV(writer,prop,"siscomDescripcio");
+                propertyToCSV(writer,prop,"siscomData");
+
+                propertyToCSV(writer,prop,"datScanCodi");
+                propertyToCSV(writer,prop,"datScanDescripcio");
+                propertyToCSV(writer,prop,"datScanData");
+
+                propertyToCSV(writer,prop,"petCodi");
+                propertyToCSV(writer,prop,"petDescripcio");
+                propertyToCSV(writer,prop,"petData");
+
+
+            }
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
     private static void writeSessio2(String idPacient, int i, Writer writer) {
         Properties prop = new Properties();
         InputStream input = null;
@@ -1091,7 +1612,7 @@ public class Utils {
 
     public static void csvToXLSX(String idPacient) {
         try {
-            String csvFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv"; //csv file address
+            String csvFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv"; //csv file address
             String xlsxFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.xls"; //xlsx file address
             HSSFWorkbook workBook = new HSSFWorkbook();
             HSSFSheet sheet = workBook.createSheet("sheet1");

@@ -385,6 +385,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                             idText.setText(s);
                             checkPacient();
                             checkCsv();
+                            this.testsTextualsBtn.requestFocus();
                         }
                     } else {
                         JOptionPane.showMessageDialog(this, "No s'ha introduït cap pacient a la base de dades");
@@ -410,7 +411,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     }//GEN-LAST:event_seleccionaBtnActionPerformed
 
     public void checkCsv() {
-        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv");
         if (file.exists()){
             csvButton.setEnabled(true);
         }
@@ -553,7 +554,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     }//GEN-LAST:event_eliminaBtnActionPerformed
 
     private void csvButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csvButtonActionPerformed
-        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.csv");
+        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv");
         if (file.exists()){
             try {
                 Desktop.getDesktop().open(file);

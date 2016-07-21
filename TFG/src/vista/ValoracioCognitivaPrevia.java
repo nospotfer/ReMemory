@@ -3789,7 +3789,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         memoriaPanel8Layout.setVerticalGroup(
             memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memoriaPanel8Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel122)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(memoriaPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)

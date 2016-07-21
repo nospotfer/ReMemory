@@ -932,7 +932,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                         .addComponent(subjecteText, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(dadesSociodemografiquesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terapiaNoFarmatologicaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         dadesBasiquesPanelLayout.setVerticalGroup(
             dadesBasiquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -947,7 +947,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 .addComponent(dadesCliniquesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addComponent(terapiaNoFarmatologicaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1496, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         dadesBasiquesScroll.setViewportView(dadesBasiquesPanel);
@@ -956,17 +956,11 @@ public class FitxaPacient extends javax.swing.JDialog {
         dadesBasiquesTab.setLayout(dadesBasiquesTabLayout);
         dadesBasiquesTabLayout.setHorizontalGroup(
             dadesBasiquesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dadesBasiquesTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(dadesBasiquesScroll)
-                .addContainerGap())
+            .addComponent(dadesBasiquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
         );
         dadesBasiquesTabLayout.setVerticalGroup(
             dadesBasiquesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dadesBasiquesTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(dadesBasiquesScroll)
-                .addContainerGap())
+            .addComponent(dadesBasiquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("Dades bàsiques", dadesBasiquesTab);
@@ -2597,7 +2591,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                     .addComponent(dadesCliniquesPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(antecedentsPatologicsPersonalsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tractamentActualPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(1537, Short.MAX_VALUE))
+                .addContainerGap())
         );
         dadesMediquesPanelLayout.setVerticalGroup(
             dadesMediquesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2610,7 +2604,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 .addComponent(antecedentsPatologicsPersonalsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tractamentActualPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         dadesMediquesScroll.setViewportView(dadesMediquesPanel);
@@ -2619,17 +2613,11 @@ public class FitxaPacient extends javax.swing.JDialog {
         dadesMediquesTab.setLayout(dadesMediquesTabLayout);
         dadesMediquesTabLayout.setHorizontalGroup(
             dadesMediquesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dadesMediquesTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1046, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
         );
         dadesMediquesTabLayout.setVerticalGroup(
             dadesMediquesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dadesMediquesTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 2204, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("Dades mèdiques", dadesMediquesTab);
@@ -3260,7 +3248,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                     .addComponent(anatomiaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ecgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(analiticaOrinaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(1458, Short.MAX_VALUE))
+                .addContainerGap())
         );
         provesComplementariesPanelLayout.setVerticalGroup(
             provesComplementariesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3289,7 +3277,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 .addComponent(ntmsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(anatomiaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(763, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         provesComplementariesScroll.setViewportView(provesComplementariesPanel);
@@ -3298,17 +3286,11 @@ public class FitxaPacient extends javax.swing.JDialog {
         provesComplementariesTab.setLayout(provesComplementariesTabLayout);
         provesComplementariesTabLayout.setHorizontalGroup(
             provesComplementariesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(provesComplementariesTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(provesComplementariesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1046, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(provesComplementariesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
         );
         provesComplementariesTabLayout.setVerticalGroup(
             provesComplementariesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(provesComplementariesTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(provesComplementariesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 2204, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(provesComplementariesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("Proves complementàries", provesComplementariesTab);
@@ -3770,7 +3752,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                     .addComponent(siscomPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(datScanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(petPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(1458, Short.MAX_VALUE))
+                .addContainerGap())
         );
         neuroimatgePanelLayout.setVerticalGroup(
             neuroimatgePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3793,7 +3775,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 .addComponent(datScanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(petPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1147, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         neuroimatgeScroll.setViewportView(neuroimatgePanel);
@@ -3802,17 +3784,11 @@ public class FitxaPacient extends javax.swing.JDialog {
         neuroimatgeTab.setLayout(neuroimatgeTabLayout);
         neuroimatgeTabLayout.setHorizontalGroup(
             neuroimatgeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(neuroimatgeTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(neuroimatgeScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1046, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(neuroimatgeScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
         );
         neuroimatgeTabLayout.setVerticalGroup(
             neuroimatgeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(neuroimatgeTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(neuroimatgeScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 2204, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(neuroimatgeScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("Neuroimatge", neuroimatgeTab);
@@ -3826,14 +3802,14 @@ public class FitxaPacient extends javax.swing.JDialog {
             .addGroup(indexClasseSocialPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(indexClasseSocialFoto)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         indexClasseSocialPanelLayout.setVerticalGroup(
             indexClasseSocialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(indexClasseSocialPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(indexClasseSocialFoto)
-                .addContainerGap(1632, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         indexClasseSocialScroll.setViewportView(indexClasseSocialPanel);
@@ -3842,17 +3818,11 @@ public class FitxaPacient extends javax.swing.JDialog {
         indexClasseSocialTab.setLayout(indexClasseSocialTabLayout);
         indexClasseSocialTabLayout.setHorizontalGroup(
             indexClasseSocialTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(indexClasseSocialTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(indexClasseSocialScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1046, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(indexClasseSocialScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
         );
         indexClasseSocialTabLayout.setVerticalGroup(
             indexClasseSocialTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(indexClasseSocialTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(indexClasseSocialScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 2204, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(indexClasseSocialScroll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("Índex classe social", indexClasseSocialTab);
@@ -3866,14 +3836,14 @@ public class FitxaPacient extends javax.swing.JDialog {
             .addGroup(indexSocioeconomicPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(indexSocioeconomicFoto)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         indexSocioeconomicPanelLayout.setVerticalGroup(
             indexSocioeconomicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(indexSocioeconomicPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(indexSocioeconomicFoto)
-                .addContainerGap(1656, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         indexSocioeconomicScroll.setViewportView(indexSocioeconomicPanel);
@@ -3882,17 +3852,11 @@ public class FitxaPacient extends javax.swing.JDialog {
         indexSocioeconomicTab.setLayout(indexSocioeconomicTabLayout);
         indexSocioeconomicTabLayout.setHorizontalGroup(
             indexSocioeconomicTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(indexSocioeconomicTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(indexSocioeconomicScroll)
-                .addContainerGap())
+            .addComponent(indexSocioeconomicScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
         );
         indexSocioeconomicTabLayout.setVerticalGroup(
             indexSocioeconomicTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(indexSocioeconomicTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(indexSocioeconomicScroll)
-                .addContainerGap())
+            .addComponent(indexSocioeconomicScroll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("Índex socioeconòmic", indexSocioeconomicTab);
@@ -3906,14 +3870,14 @@ public class FitxaPacient extends javax.swing.JDialog {
             .addGroup(ubePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(ubeFoto)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         ubePanelLayout.setVerticalGroup(
             ubePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ubePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(ubeFoto)
-                .addContainerGap(1549, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         ubeScroll.setViewportView(ubePanel);
@@ -3922,17 +3886,11 @@ public class FitxaPacient extends javax.swing.JDialog {
         ubeTab.setLayout(ubeTabLayout);
         ubeTabLayout.setHorizontalGroup(
             ubeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ubeTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(ubeScroll)
-                .addContainerGap())
+            .addComponent(ubeScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
         );
         ubeTabLayout.setVerticalGroup(
             ubeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ubeTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(ubeScroll)
-                .addContainerGap())
+            .addComponent(ubeScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
 
         tabbedPanel.addTab("UBE", ubeTab);
@@ -3965,7 +3923,7 @@ public class FitxaPacient extends javax.swing.JDialog {
                 .addComponent(acceptaBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelaBtn)
-                .addContainerGap(903, Short.MAX_VALUE))
+                .addContainerGap(610, Short.MAX_VALUE))
         );
         buttonPanelLayout.setVerticalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4526,7 +4484,6 @@ public class FitxaPacient extends javax.swing.JDialog {
                 Utils.getProperty(prop,"categoriaPro",categoriaProCombo);
                 Utils.getProperty(prop,"situacioLaboral",situacioLaboralCombo);
                 Utils.getProperty(prop,"nivellSocioeconomic",nivellSocioecomomicCombo);
-                Utils.getProperty(prop,"professio",professioText);
 
                 Utils.getProperty(prop,"fumador",fumadorCombo);
                 Utils.getProperty(prop,"numCigarrets",numCigarretsText);

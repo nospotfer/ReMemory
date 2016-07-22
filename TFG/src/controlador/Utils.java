@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.lang.reflect.Field;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
@@ -95,11 +96,15 @@ public class Utils {
     }
     
     public static void getProperty(Properties prop, String nom, JComboBox cb){
-        cb.setSelectedItem(prop.getProperty(nom));
+        if (prop.getProperty(nom)!= null) {
+            cb.setSelectedItem(prop.getProperty(nom));
+        }
     }
     
     public static void getProperty(Properties prop, String nom, JTextField tf){
-        tf.setText(prop.getProperty(nom));
+        if (prop.getProperty(nom)!=null) {
+            tf.setText(prop.getProperty(nom));
+        }
     }
     
     public static void getProperty(Properties prop, String nom, JDateChooser dc){
@@ -189,7 +194,9 @@ public class Utils {
     }
 
     public static void getProperty(Properties prop, String nom, JTextArea tf){
-        tf.setText(prop.getProperty(nom));
+        if (prop.getProperty(nom) != null) {
+            tf.setText(prop.getProperty(nom));
+        }
     }
     public static void setProperty(Properties prop, String nom, JTextArea tf){
         prop.setProperty(nom, tf.getText());
@@ -252,7 +259,7 @@ public class Utils {
         }
     }
 
-    public static void guardar(Container panel, String idPacient, String test) {
+    public static void guardar(Object obj, String idPacient, String test) {
         Properties prop = new Properties();
         OutputStream output = null;
 
@@ -269,7 +276,7 @@ public class Utils {
             output = new FileOutputStream(file);
 
             table = label = textF = combo = check = textA = tButton = button = radioButton = 0;
-            setComponents(prop, panel);
+            setComponents(prop, obj);
             prop.store(output, "VALORACIO COGNITIVA PREVIA");
         }
         catch(IOException e){
@@ -287,52 +294,52 @@ public class Utils {
         }
     }
 
-    public static void setComponents(Properties prop,Container c) {
-        Component[] components = c.getComponents();
-        for (Component com : components){
+    public static void setComponents(Properties prop, Object obj) {
 
-            if (com instanceof JTextField){
-                Utils.setProperty(prop, "textField"+textF, (JTextField) com);
-                textF++;
+        Class aClass = obj.getClass();
+        try {
+            Field[] fields = aClass.getDeclaredFields();
+            for (Field field : fields){
+                field.setAccessible(true);
+                if(JTextField.class == field.getType()){
+                    Utils.setProperty(prop, field.getName(),(JTextField)field.get(obj));
+                }
+                else if (JComboBox.class == field.getType()){
+                    Utils.setProperty(prop, field.getName(), (JComboBox) field.get(obj));
+                }
+                else if (JTextArea.class == field.getType()){
+                    Utils.setProperty(prop, field.getName(), (JTextArea) field.get(obj));
+                }
+                else if (JToggleButton.class == field.getType() && !(JCheckBox.class == field.getType()) && !(JRadioButton.class == field.getType()) && !(JButton.class == field.getType())){
+                    Utils.setProperty(prop, field.getName(), (JToggleButton) field.get(obj));
+                    setPropertyText(prop, field.getName()+"text",(JToggleButton) field.get(obj));
+                }
+                else if (JButton.class == field.getType()){
+                    setPropertyText(prop, field.getName(),(JButton) field.get(obj));
+                }
+                else if (JRadioButton.class == field.getType()){
+                    Utils.setProperty(prop, field.getName(), (JRadioButton) field.get(obj));
+                }
+                else if (JCheckBox.class == field.getType()){
+                    Utils.setProperty(prop, field.getName(), (JCheckBox) field.get(obj));
+                }
+                else if (JLabel.class == field.getType()){
+                    Utils.setProperty(prop, field.getName(), (JLabel) field.get(obj));
+                }
+                else if (JXTable.class == field.getType()){
+                    setProperty(prop, field.getName() ,(JXTable)field.get(obj));
+                }
             }
-            else if (com instanceof JComboBox){
-                Utils.setProperty(prop, "comboBox"+combo, (JComboBox) com);
-                combo++;
-            }
-            else if (com instanceof JTextArea){
-                Utils.setProperty(prop, "textArea"+textA, (JTextArea) com);
-                textA++;
-            }
-            else if (com instanceof JToggleButton && !(com instanceof JCheckBox) && !(com instanceof JRadioButton) && !(com instanceof JButton)){
-                Utils.setProperty(prop, "toggleButton"+tButton, (JToggleButton) com);
-                setPropertyText(prop, "toggleButtonText"+tButton,(JToggleButton) com);
-                tButton++;
-            }
-            else if (com instanceof JButton){
-                setPropertyText(prop, "buttonText"+button,(JButton) com);
-                button++;
-            }
-            else if (com instanceof JRadioButton){
-                Utils.setProperty(prop, "radioButton"+radioButton, (JRadioButton) com);
-                radioButton++;
-            }
-            else if (com instanceof JCheckBox ){
-                Utils.setProperty(prop, "checkBox"+check, (JCheckBox) com);
-                check++;
-            }
-            else if (com instanceof JLabel){
-                Utils.setProperty(prop, "label"+label, (JLabel) com);
-                label++;
-            }
-            else if (com instanceof JXTable){
-                setProperty(prop, "table"+table ,(JXTable)com);
-                table++;
-            }
-            else if (com instanceof Container){
-                setComponents(prop, (Container) com);
-            }
+        } catch (SecurityException ex) {
+            Logger.getLogger(aClass.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalArgumentException ex) {
+            Logger.getLogger(aClass.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(aClass.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+
 
     public static void carregar(Container panel, String idPacient, String test) {
         Properties prop = new Properties();
@@ -368,55 +375,51 @@ public class Utils {
         }
     }
 
-    public static void getComponents(Properties prop,Container c) {
-        Component[] components = c.getComponents();
-        for (Component com : components){
-
-            if (com instanceof JTextField){
-                Utils.getProperty(prop, "textField"+textF, (JTextField) com);
-                textF++;
+    public static void getComponents(Properties prop,Object obj) {
+        Class aClass = obj.getClass();
+        try {
+            Field[] fields = aClass.getDeclaredFields();
+            for (Field field : fields){
+                field.setAccessible(true);
+                if(JTextField.class == field.getType()){
+                    Utils.getProperty(prop, field.getName(), (JTextField)field.get(obj));
+                }
+                else if (JComboBox.class == field.getType()){
+                    Utils.getProperty(prop, field.getName(), (JComboBox) field.get(obj));
+                }
+                else if (JTextArea.class == field.getType()){
+                    Utils.getProperty(prop, field.getName(), (JTextArea) field.get(obj));
+                }
+                else if (JToggleButton.class == field.getType() && !(JCheckBox.class == field.getType()) && !(JRadioButton.class == field.getType()) && !(JButton.class == field.getType())){
+                    Utils.getProperty(prop, field.getName(), (JToggleButton) field.get(obj));
+                    getPropertyText(prop, field.getName()+"text", (JToggleButton) field.get(obj));
+                }
+                else if (JButton.class == field.getType()){
+                    getPropertyText(prop, field.getName(),(JButton) field.get(obj));
+                }
+                else if (JRadioButton.class == field.getType()){
+                    Utils.getProperty(prop, field.getName(), (JRadioButton) field.get(obj));
+                }
+                else if (JCheckBox.class == field.getType()){
+                    Utils.getProperty(prop, field.getName(), (JCheckBox) field.get(obj));
+                }
+                else if (JLabel.class == field.getType()){
+                    getProperty(prop, field.getName(), (JLabel) field.get(obj));
+                }
+                else if (JXTable.class == field.getType()){
+                    getProperty(prop, field.getName(), (JXTable)field.get(obj));
+                }
             }
-            else if (com instanceof JComboBox){
-                Utils.getProperty(prop, "comboBox"+combo, (JComboBox) com);
-                combo++;
-            }
-            else if (com instanceof JTextArea){
-                Utils.getProperty(prop, "textArea"+textA, (JTextArea) com);
-                textA++;
-            }
-            else if (com instanceof JToggleButton && !(com instanceof JCheckBox) && !(com instanceof JRadioButton) && !(com instanceof JButton)){
-                Utils.getProperty(prop, "toggleButton"+tButton, (JToggleButton) com);
-                getPropertyText(prop, "toggleButtonText"+tButton, (JToggleButton) com);
-                tButton++;
-            }
-            else if (com instanceof JButton){
-                getPropertyText(prop, "buttonText"+button,(JButton) com);
-                button++;
-            }
-            else if (com instanceof JRadioButton){
-                Utils.getProperty(prop, "radioButton"+radioButton, (JRadioButton) com);
-                radioButton++;
-            }
-            else if (com instanceof JCheckBox ){
-                Utils.getProperty(prop, "checkBox"+check, (JCheckBox) com);
-                check++;
-            }
-            else if (com instanceof JLabel){
-                getProperty(prop, "label"+label, (JLabel) com);
-                label++;
-            }
-            else if (com instanceof JXTable){
-                getProperty(prop, "table"+table, (JXTable)com);
-                table++;
-            }
-            else if (com instanceof Container){
-                getComponents(prop, (Container) com);
-            }
+        } catch (SecurityException ex) {
+            Logger.getLogger(aClass.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalArgumentException ex) {
+            Logger.getLogger(aClass.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(aClass.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     private static void getProperty(Properties prop, String nom, JXTable com) {
-
         DefaultTableModel dtm = (DefaultTableModel) com.getModel();
         int nRow = dtm.getRowCount(), nCol = dtm.getColumnCount();
         Object[][] tableData = new Object[nRow][nCol];

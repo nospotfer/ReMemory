@@ -66,7 +66,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
         initTabs();
         initToggleButton();
         this.idPacient = idPacient;
-        Utils.carregar(dataPanel,idPacient, "Test0");
+        Utils.carregar(this,idPacient, "Test0");
         this.actualitzaPuntuacioCrc();
         this.actualitzaPuntuacioMMSE();
         this.actualitzaPuntuacioTAP();
@@ -5637,7 +5637,7 @@ public class ValoracioCognitivaPrevia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        Utils.guardar(dataPanel,idPacient, "Test0");
+        Utils.guardar(this,idPacient, "Test0");
         guardarResultats();
         Utils.generaResultatsCSV(idPacient);
         ((MenuAvaluador)parent).checkCsv();

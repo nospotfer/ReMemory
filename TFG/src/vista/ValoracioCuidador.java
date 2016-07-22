@@ -59,7 +59,7 @@ public class ValoracioCuidador extends javax.swing.JFrame {
         iniZARIT();
         initFAQ();
 
-        Utils.carregar(tabbedPanel,pacientActual.getId(), "ValCuid_T"+valoracio);
+        Utils.carregar(this,pacientActual.getId(), "ValCuid_T"+valoracio);
 
         Utils.setActionCommands(dataPanel);
         Utils.setActionCommands(npiPanel);
@@ -6094,7 +6094,7 @@ public class ValoracioCuidador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        Utils.guardar(tabbedPanel,pacientActual.getId(), "ValCuid_T"+valoracio);
+        Utils.guardar(this,pacientActual.getId(), "ValCuid_T"+valoracio);
         guardarResultats();
         Utils.generaResultatsCSV(pacientActual.getId());
         ((MenuAvaluador)parent).checkCsv();

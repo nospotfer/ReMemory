@@ -7,7 +7,8 @@ package vista;
 
 import com.toedter.calendar.JDateChooser;
 import controlador.Utils;
-import java.awt.GraphicsEnvironment;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -39,12 +40,15 @@ public class FitxaPacient extends javax.swing.JDialog {
 
     String idPacient;
     Map<JComboBox, JDateChooser> dateMap;
+
+    Frame parent;
     
     /**
      * Creates new form newFitxaPacient
      */
     public FitxaPacient(java.awt.Frame parent, boolean modal, String idPacient) {
         super(parent, modal);
+        this.parent = parent;
         initComponents();
         Utils.setIcon((JFrame)this.getOwner());
         //this.setLocationRelativeTo(null);
@@ -3948,6 +3952,9 @@ public class FitxaPacient extends javax.swing.JDialog {
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
         guardarFitxa();
+        Utils.generaResultatsCSV(idPacient);
+        ((MenuAvaluador)parent).checkCsv();
+        ((MenuAvaluador)parent).checkCsvTotal();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

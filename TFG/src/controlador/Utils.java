@@ -1616,16 +1616,16 @@ public class Utils {
     public static void csvToXLSX(String idPacient) {
         try {
             String csvFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv"; //csv file address
-            String xlsxFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.xls"; //xlsx file address
-            HSSFWorkbook workBook = new HSSFWorkbook();
-            HSSFSheet sheet = workBook.createSheet("sheet1");
+            String xlsxFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.xlsx"; //xlsx file address
+            XSSFWorkbook workBook = new XSSFWorkbook();
+            XSSFSheet sheet = workBook.createSheet("sheet1");
             String currentLine=null;
             int RowNum=0;
             BufferedReader br = new BufferedReader(new FileReader(csvFileAddress));
             while ((currentLine = br.readLine()) != null) {
                 String str[] = currentLine.split(";");
+                XSSFRow currentRow=sheet.createRow(RowNum);
                 RowNum++;
-                HSSFRow currentRow=sheet.createRow(RowNum);
                 for(int i=0;i<str.length;i++){
                     currentRow.createCell(i).setCellValue(str[i]);
                 }
@@ -1636,6 +1636,7 @@ public class Utils {
             fileOutputStream.close();
             System.out.println("Done");
         } catch (Exception ex) {
+            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println(ex.getMessage()+"Exception in try");
         }
     }

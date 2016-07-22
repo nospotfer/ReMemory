@@ -16,6 +16,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Collections;
+import java.util.Enumeration;
 import java.util.Properties;
 
 import javax.swing.*;
@@ -494,18 +495,18 @@ public class Sessio2 extends javax.swing.JFrame {
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
-        comuniBtn2 = new javax.swing.JToggleButton();
-        comuniBtn3 = new javax.swing.JToggleButton();
-        comuniBtn1 = new javax.swing.JToggleButton();
-        comuniBtn4 = new javax.swing.JToggleButton();
-        comuniBtn5 = new javax.swing.JToggleButton();
-        comuniBtn6 = new javax.swing.JToggleButton();
-        comuniBtn7 = new javax.swing.JToggleButton();
-        comuniBtn8 = new javax.swing.JToggleButton();
-        comuniBtn9 = new javax.swing.JToggleButton();
-        comuniBtn10 = new javax.swing.JToggleButton();
-        comuniBtn11 = new javax.swing.JToggleButton();
-        comuniBtn12 = new javax.swing.JToggleButton();
+        comuBtn6 = new javax.swing.JToggleButton();
+        comuBtn5 = new javax.swing.JToggleButton();
+        comuBtn4 = new javax.swing.JToggleButton();
+        comuBtn7 = new javax.swing.JToggleButton();
+        comuBtn8 = new javax.swing.JToggleButton();
+        comuBtn9 = new javax.swing.JToggleButton();
+        comuBtn10 = new javax.swing.JToggleButton();
+        comuBtn11 = new javax.swing.JToggleButton();
+        comuBtn12 = new javax.swing.JToggleButton();
+        comuBtn1 = new javax.swing.JToggleButton();
+        comuBtn2 = new javax.swing.JToggleButton();
+        comuBtn3 = new javax.swing.JToggleButton();
         comprensioPanel = new javax.swing.JPanel();
         comprensioBtn1 = new javax.swing.JToggleButton();
         comprensioBtn2 = new javax.swing.JToggleButton();
@@ -3176,10 +3177,10 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         comunicacioPanel.add(jTextField12, gridBagConstraints);
 
-        comuniBtn2.setText("0");
-        comuniBtn2.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn6.setText("0");
+        comuBtn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn2ActionPerformed(evt);
+                comuBtn6ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3187,12 +3188,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn2, gridBagConstraints);
+        comunicacioPanel.add(comuBtn6, gridBagConstraints);
 
-        comuniBtn3.setText("0");
-        comuniBtn3.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn5.setText("0");
+        comuBtn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn3ActionPerformed(evt);
+                comuBtn5ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3200,12 +3201,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn3, gridBagConstraints);
+        comunicacioPanel.add(comuBtn5, gridBagConstraints);
 
-        comuniBtn1.setText("0");
-        comuniBtn1.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn4.setText("0");
+        comuBtn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn1ActionPerformed(evt);
+                comuBtn4ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3213,12 +3214,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn1, gridBagConstraints);
+        comunicacioPanel.add(comuBtn4, gridBagConstraints);
 
-        comuniBtn4.setText("0");
-        comuniBtn4.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn7.setText("0");
+        comuBtn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn4ActionPerformed(evt);
+                comuBtn7ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3226,12 +3227,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn4, gridBagConstraints);
+        comunicacioPanel.add(comuBtn7, gridBagConstraints);
 
-        comuniBtn5.setText("0");
-        comuniBtn5.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn8.setText("0");
+        comuBtn8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn5ActionPerformed(evt);
+                comuBtn8ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3239,12 +3240,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn5, gridBagConstraints);
+        comunicacioPanel.add(comuBtn8, gridBagConstraints);
 
-        comuniBtn6.setText("0");
-        comuniBtn6.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn9.setText("0");
+        comuBtn9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn6ActionPerformed(evt);
+                comuBtn9ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3252,12 +3253,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn6, gridBagConstraints);
+        comunicacioPanel.add(comuBtn9, gridBagConstraints);
 
-        comuniBtn7.setText("0");
-        comuniBtn7.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn10.setText("0");
+        comuBtn10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn7ActionPerformed(evt);
+                comuBtn10ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3265,12 +3266,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn7, gridBagConstraints);
+        comunicacioPanel.add(comuBtn10, gridBagConstraints);
 
-        comuniBtn8.setText("0");
-        comuniBtn8.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn11.setText("0");
+        comuBtn11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn8ActionPerformed(evt);
+                comuBtn11ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3278,12 +3279,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn8, gridBagConstraints);
+        comunicacioPanel.add(comuBtn11, gridBagConstraints);
 
-        comuniBtn9.setText("0");
-        comuniBtn9.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn12.setText("0");
+        comuBtn12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn9ActionPerformed(evt);
+                comuBtn12ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3291,12 +3292,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn9, gridBagConstraints);
+        comunicacioPanel.add(comuBtn12, gridBagConstraints);
 
-        comuniBtn10.setText("0");
-        comuniBtn10.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn1.setText("0");
+        comuBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn10ActionPerformed(evt);
+                comuBtn1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3304,12 +3305,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn10, gridBagConstraints);
+        comunicacioPanel.add(comuBtn1, gridBagConstraints);
 
-        comuniBtn11.setText("0");
-        comuniBtn11.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn2.setText("0");
+        comuBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn11ActionPerformed(evt);
+                comuBtn2ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3317,12 +3318,12 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn11, gridBagConstraints);
+        comunicacioPanel.add(comuBtn2, gridBagConstraints);
 
-        comuniBtn12.setText("0");
-        comuniBtn12.addActionListener(new java.awt.event.ActionListener() {
+        comuBtn3.setText("0");
+        comuBtn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comuniBtn12ActionPerformed(evt);
+                comuBtn3ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3330,7 +3331,7 @@ public class Sessio2 extends javax.swing.JFrame {
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
-        comunicacioPanel.add(comuniBtn12, gridBagConstraints);
+        comunicacioPanel.add(comuBtn3, gridBagConstraints);
 
         comprensioPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "3. COMPRENSÓ / PLANIFICACIÓ Viatge a la platja", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         comprensioPanel.setLayout(new java.awt.GridBagLayout());
@@ -7775,53 +7776,53 @@ public class Sessio2 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_seguentBtnActionPerformed
 
-    private void comuniBtn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn9ActionPerformed
+    private void comuBtn12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn12ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn9ActionPerformed
+    }//GEN-LAST:event_comuBtn12ActionPerformed
 
-    private void comuniBtn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn8ActionPerformed
+    private void comuBtn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn11ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn8ActionPerformed
+    }//GEN-LAST:event_comuBtn11ActionPerformed
 
-    private void comuniBtn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn7ActionPerformed
+    private void comuBtn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn7ActionPerformed
+    }//GEN-LAST:event_comuBtn10ActionPerformed
 
-    private void comuniBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn6ActionPerformed
+    private void comuBtn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn6ActionPerformed
+    }//GEN-LAST:event_comuBtn9ActionPerformed
 
-    private void comuniBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn5ActionPerformed
+    private void comuBtn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn5ActionPerformed
+    }//GEN-LAST:event_comuBtn8ActionPerformed
 
-    private void comuniBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn4ActionPerformed
+    private void comuBtn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn4ActionPerformed
+    }//GEN-LAST:event_comuBtn7ActionPerformed
 
-    private void comuniBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn2ActionPerformed
+    private void comuBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn2ActionPerformed
+    }//GEN-LAST:event_comuBtn6ActionPerformed
 
-    private void comuniBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn3ActionPerformed
+    private void comuBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn3ActionPerformed
+    }//GEN-LAST:event_comuBtn5ActionPerformed
 
-    private void comuniBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn1ActionPerformed
+    private void comuBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn1ActionPerformed
+    }//GEN-LAST:event_comuBtn4ActionPerformed
 
-    private void comuniBtn12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn12ActionPerformed
+    private void comuBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn12ActionPerformed
+    }//GEN-LAST:event_comuBtn3ActionPerformed
 
-    private void comuniBtn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn11ActionPerformed
+    private void comuBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn11ActionPerformed
+    }//GEN-LAST:event_comuBtn2ActionPerformed
 
-    private void comuniBtn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuniBtn10ActionPerformed
+    private void comuBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comuBtn1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comuniBtn10ActionPerformed
+    }//GEN-LAST:event_comuBtn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -7963,18 +7964,18 @@ public class Sessio2 extends javax.swing.JFrame {
     private javax.swing.JLabel comprensioPercent;
     private javax.swing.JLabel comprensioSub;
     private javax.swing.JLabel comprensioTotal;
-    private javax.swing.JToggleButton comuniBtn1;
-    private javax.swing.JToggleButton comuniBtn10;
-    private javax.swing.JToggleButton comuniBtn11;
-    private javax.swing.JToggleButton comuniBtn12;
-    private javax.swing.JToggleButton comuniBtn2;
-    private javax.swing.JToggleButton comuniBtn3;
-    private javax.swing.JToggleButton comuniBtn4;
-    private javax.swing.JToggleButton comuniBtn5;
-    private javax.swing.JToggleButton comuniBtn6;
-    private javax.swing.JToggleButton comuniBtn7;
-    private javax.swing.JToggleButton comuniBtn8;
-    private javax.swing.JToggleButton comuniBtn9;
+    private javax.swing.JToggleButton comuBtn1;
+    private javax.swing.JToggleButton comuBtn10;
+    private javax.swing.JToggleButton comuBtn11;
+    private javax.swing.JToggleButton comuBtn12;
+    private javax.swing.JToggleButton comuBtn2;
+    private javax.swing.JToggleButton comuBtn3;
+    private javax.swing.JToggleButton comuBtn4;
+    private javax.swing.JToggleButton comuBtn5;
+    private javax.swing.JToggleButton comuBtn6;
+    private javax.swing.JToggleButton comuBtn7;
+    private javax.swing.JToggleButton comuBtn8;
+    private javax.swing.JToggleButton comuBtn9;
     private javax.swing.JPanel comunicacioPanel;
     private javax.swing.JLabel comunicacioPercent;
     private javax.swing.JLabel comunicacioSub;
@@ -8961,42 +8962,93 @@ public class Sessio2 extends javax.swing.JFrame {
                 mocaPunts2.setText(sumPuntsMoca2()+"");
             }
         };
+
+
+
         Collections.list(mocaButtonGroup1.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn1));
         });
         Collections.list(mocaButtonGroup2.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn2));
         });
         Collections.list(mocaButtonGroup3.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn3));
         });
         Collections.list(mocaButtonGroup4.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn4));
         });
         Collections.list(mocaButtonGroup5.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn5));
         });
         Collections.list(mocaButtonGroup6.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn6));
         });
         Collections.list(mocaButtonGroup7.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn7));
         });
         Collections.list(mocaButtonGroup8.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn8));
         });
         Collections.list(mocaButtonGroup9.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn9));
         });
         Collections.list(mocaButtonGroup10.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn10));
         });
         Collections.list(mocaButtonGroup11.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn11));
         });
         Collections.list(mocaButtonGroup12.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comuBtn12));
         });
+    }
+
+    private ActionListener upsaGetActionListener(JToggleButton toggle){
+        ActionListener actionListener2 = new ActionListener() {
+            public void actionPerformed(ActionEvent actionEvent) {
+                String text = actionEvent.getActionCommand();
+                toggle.setText(text);
+                if (text == "1"){
+                    toggle.setSelected(true);
+                } else {
+                    toggle.setSelected(false);
+                }
+                actualitzaPuntsComprensio();
+                actualitzaPuntsComuniacio();
+            }
+        };
+        return actionListener2;
+    }
+
+    private ActionListener upsaGetActionListener(ButtonGroup bG){
+        ActionListener actionListener2 = new ActionListener() {
+            public void actionPerformed(ActionEvent actionEvent) {
+                Enumeration<AbstractButton> e = bG.getElements();
+                while(e.hasMoreElements()){
+                    JToggleButton jT = (JToggleButton)e.nextElement();
+                    if (actionEvent.getActionCommand() == jT.getActionCommand()){
+                        jT.setSelected(true);
+                    } else {
+                        jT.setSelected(false);
+                    }
+                }
+                actualitzaPuntsComprensio();
+                actualitzaPuntsComuniacio();
+            }
+        };
+        return actionListener2;
     }
     
     private int sumPuntsMoca2(){
@@ -9022,30 +9074,37 @@ public class Sessio2 extends javax.swing.JFrame {
                 mocaPunts3.setText(sumPuntsMoca3()+"");
             }
         };
-        
         Collections.list(mocaButtonGroup13.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comprensioBtn1));
         });
         Collections.list(mocaButtonGroup14.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comprensioBtn2));
         });
         Collections.list(mocaButtonGroup15.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(comprensioBtn3));
         });
         Collections.list(mocaButtonGroup16.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(upsaButtonGrup1));
         });
         Collections.list(mocaButtonGroup17.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(upsaButtonGrup2));
         });
         Collections.list(mocaButtonGroup18.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(upsaButtonGrup3));
         });
         Collections.list(mocaButtonGroup19.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(upsaButtonGrup4));
         });
         Collections.list(mocaButtonGroup20.getElements()).stream().forEach((rb) -> {
             rb.addActionListener(actionListener);
+            rb.addActionListener(upsaGetActionListener(upsaButtonGrup5));
         });
     }
     
@@ -9071,19 +9130,7 @@ public class Sessio2 extends javax.swing.JFrame {
                 } else {
                     ((JToggleButton)e.getSource()).setText("0");
                 }
-                int comuTotal = sumPuntsUPSAParcials(comunicacioPanel);
-                comunicacioTotal.setText(comuTotal+"");
-                double comuPercent = (new Double(comuTotal))/12;
-                comunicacioPercent.setText(String.format("%.2f",comuPercent).replace(',', '.'));
-                double comuSub = comuPercent*25;
-                String comuSubString;
-                if ((comuSub*10)%10 > 0){
-                    comuSubString = String.format("%.2f",comuSub).replace(',', '.');
-                } else {
-                    comuSubString = (int)comuSub+"";
-                }
-                comunicacioSub.setText(comuSubString+"");
-                upsaTotal.setText(calculaTotalUpsa()+"");
+                actualitzaPuntsComuniacio();
             }
         };
         for (Component com : comunicacioPanel.getComponents()){
@@ -9132,6 +9179,22 @@ public class Sessio2 extends javax.swing.JFrame {
 
     }
 
+    private void actualitzaPuntsComuniacio() {
+        int comuTotal = sumPuntsUPSAParcials(comunicacioPanel);
+        comunicacioTotal.setText(comuTotal+"");
+        double comuPercent = (new Double(comuTotal))/12;
+        comunicacioPercent.setText(String.format("%.2f",comuPercent).replace(',', '.'));
+        double comuSub = comuPercent*25;
+        String comuSubString;
+        if ((comuSub*10)%10 > 0){
+            comuSubString = String.format("%.2f",comuSub).replace(',', '.');
+        } else {
+            comuSubString = (int)comuSub+"";
+        }
+        comunicacioSub.setText(comuSubString+"");
+        calculaTotalUpsa();
+    }
+
     private void actualitzaPuntsComprensio() {
         int compTotal = sumPuntsUPSAParcials(comprensioPanel);
         System.out.println(compTotal);
@@ -9146,10 +9209,10 @@ public class Sessio2 extends javax.swing.JFrame {
             compSubString = (int)compSub+"";
         }
         comprensioSub.setText(compSubString+"");
-        upsaTotal.setText(calculaTotalUpsa()+"");
+        calculaTotalUpsa();
     }
 
-    private String calculaTotalUpsa() {
+    private void calculaTotalUpsa() {
 
         Double totalComunicacio = Double.parseDouble(comunicacioSub.getText());
         Double totalComprensio = Double.parseDouble(comprensioSub.getText());
@@ -9164,7 +9227,7 @@ public class Sessio2 extends javax.swing.JFrame {
             totalUpsa = (int)total.doubleValue()+"";
         }
 
-        return totalUpsa;
+        upsaTotal.setText(totalUpsa+"");
     }
 
     private int sumPuntsUPSAParcials(JPanel panel){

@@ -253,7 +253,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
 
         jLabel3.setText("Pacient actual");
 
-        csvTotalButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/evaluacio.png"))); // NOI18N
+        csvTotalButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/avaluacioTots.png"))); // NOI18N
         csvTotalButton.setEnabled(false);
         csvTotalButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

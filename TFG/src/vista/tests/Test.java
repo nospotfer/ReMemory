@@ -7,6 +7,7 @@ package vista.tests;
 
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.util.Properties;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableModel;
 import model.Pacient;
@@ -21,7 +22,7 @@ public class Test extends javax.swing.JPanel {
     int pagina = 1;
     String label = "";
     Pacient pacientActual;
-    
+
     /**
      * Creates new form Test
      * @param pacientActual
@@ -31,124 +32,128 @@ public class Test extends javax.swing.JPanel {
         numPaginesTotal = this.getComponentCount();
         this.pacientActual = pacientActual;
     }
-    
+
     public int getNumPaginesTotal(){
         return numPaginesTotal;
     }
-    
+
     public int getPagina(){
         return pagina;
     }
-    
+
     public void paginaSeguent(){
         CardLayout card = (CardLayout)this.getLayout();
         pagina++;
         card.show(this, "card"+(pagina));
     }
-    
+
     public void paginaAnterior(){
         CardLayout card = (CardLayout)this.getLayout();
         pagina--;
         card.show(this, "card"+(pagina));
     }
-    
+
     public String getLabel(){
         return label;
     }
-    
+
+    public void guardarResultats(Properties prop) {
+
+    }
+
     class CustomRenderer extends javax.swing.table.DefaultTableCellRenderer {
-    Color color = java.awt.Color.WHITE;
-    boolean cust = false;
-    boolean[][] customColors;
-    
-    public CustomRenderer (Color color, boolean center){
-        this.color = color;
-        if (center){
-            this.setHorizontalAlignment( JLabel.CENTER );
-        }
-    }
-    
-    public CustomRenderer (Color color, boolean[][] customColors,boolean center){
-        setOpaque(true);
-        this.customColors = customColors;
-        this.cust = true;
-        this.color = color;
-        if (center){
-            this.setHorizontalAlignment( JLabel.CENTER );
-        }
-    }
-    
-    public CustomRenderer (boolean center){
-        if (center){
-            this.setHorizontalAlignment( JLabel.CENTER );
-        }
-    }
-        
-    public java.awt.Component getTableCellRendererComponent(javax.swing.JTable table, java.lang.Object value, boolean isSelected, boolean hasFocus, int row, int column) {
-        java.awt.Component cellComponent = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-        if(cust){
-            if (row == 0 && column == 1 || row == 3 && column == 4){//customColors[row][column]){
-                cellComponent.setBackground(java.awt.Color.ORANGE);
+        Color color = java.awt.Color.WHITE;
+        boolean cust = false;
+        boolean[][] customColors;
+
+        public CustomRenderer (Color color, boolean center){
+            this.color = color;
+            if (center){
+                this.setHorizontalAlignment( JLabel.CENTER );
             }
-            else {
-                cellComponent.setBackground(java.awt.Color.WHITE);
-            }
-        }else {
-            cellComponent.setBackground(color);
         }
-        return cellComponent;
-    }
+
+        public CustomRenderer (Color color, boolean[][] customColors,boolean center){
+            setOpaque(true);
+            this.customColors = customColors;
+            this.cust = true;
+            this.color = color;
+            if (center){
+                this.setHorizontalAlignment( JLabel.CENTER );
+            }
+        }
+
+        public CustomRenderer (boolean center){
+            if (center){
+                this.setHorizontalAlignment( JLabel.CENTER );
+            }
+        }
+
+        public java.awt.Component getTableCellRendererComponent(javax.swing.JTable table, java.lang.Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+            java.awt.Component cellComponent = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+            if(cust){
+                if (row == 0 && column == 1 || row == 3 && column == 4){//customColors[row][column]){
+                    cellComponent.setBackground(java.awt.Color.ORANGE);
+                }
+                else {
+                    cellComponent.setBackground(java.awt.Color.WHITE);
+                }
+            }else {
+                cellComponent.setBackground(color);
+            }
+            return cellComponent;
+        }
     }
 
-class CustomModel extends DefaultTableModel{
-    
-    boolean[][] customEdit;
-    boolean cust = false;
-            
-    public CustomModel(Object[][] data, Object[] columnNames){
-        super(data,columnNames);
-    }
-    Class[] types = new Class [] {
-        java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
-    };
-    boolean[] canEdit = new boolean [] {
-        false, false, true, true, false
-    };
+    class CustomModel extends DefaultTableModel{
 
-    public Class getColumnClass(int columnIndex) {
-        return types [columnIndex];
-    }
+        boolean[][] customEdit;
+        boolean cust = false;
 
-    public boolean isCellEditable(int rowIndex, int columnIndex) {
-        if (cust)
-            return customEdit [columnIndex][rowIndex];
-        else
-            return canEdit [columnIndex];
-    }
+        public CustomModel(Object[][] data, Object[] columnNames){
+            super(data,columnNames);
+        }
+        Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+        };
+        boolean[] canEdit = new boolean [] {
+                false, false, true, true, false
+        };
 
-    public void setEditable(int column, boolean value){
-        canEdit[column] = value;
-    }
-    
-    public void setEditable(int column, int row, boolean value){
-        customEdit[column] [row] = value;
-    }
+        public Class getColumnClass(int columnIndex) {
+            return types [columnIndex];
+        }
 
-    public void setTypes(Class[] types){
-        this.types = types;
-    }
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            if (cust)
+                return customEdit [columnIndex][rowIndex];
+            else
+                return canEdit [columnIndex];
+        }
 
-    void setCanEdit(boolean[] canEdit) {
-        this.canEdit = canEdit;
-    }
-    
-    void setCanEditMatrix(boolean[][] customEdit) {
-        this.customEdit = customEdit;
-    }
-    
-    void setCustom(boolean cust){
-        this.cust = cust;
-    }
+        public void setEditable(int column, boolean value){
+            canEdit[column] = value;
+        }
+
+        public void setEditable(int column, int row, boolean value){
+            customEdit[column] [row] = value;
+        }
+
+        public void setTypes(Class[] types){
+            this.types = types;
+        }
+
+        void setCanEdit(boolean[] canEdit) {
+            this.canEdit = canEdit;
+        }
+
+        void setCanEditMatrix(boolean[][] customEdit) {
+            this.customEdit = customEdit;
+        }
+
+        void setCustom(boolean cust){
+            this.cust = cust;
+        }
     }
 
     /**
@@ -163,12 +168,12 @@ class CustomModel extends DefaultTableModel{
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

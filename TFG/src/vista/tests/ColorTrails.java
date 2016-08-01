@@ -6,6 +6,7 @@
 package vista.tests;
 
 import controlador.Utils;
+import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,10 +15,12 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JButton;
+import javax.swing.JTable;
 import javax.swing.Timer;
 import model.Pacient;
 import vista.Sessio1;
@@ -45,9 +48,59 @@ public class ColorTrails extends Test {
         super(pacientActual);
         initComponents();
         
+        label = "COLOR TRAILS";
+        numPaginesTotal = this.getComponentCount();
+        
+        initColorTrails();
+        
         initTimer();
     }
-    
+
+    @Override
+    public void guardarResultats(Properties prop) {
+        // Color trails 1 time in seconds
+        System.out.println((String)colorTrailsTable.getValueAt(0,1));
+        prop.setProperty("color1timeRaw",getStringFromTable((String)colorTrailsTable.getValueAt(0,1)));
+        prop.setProperty("color1timeStandard",getStringFromTable((String)colorTrailsTable.getValueAt(0,3)));
+        prop.setProperty("color1timeTscore",getStringFromTable((String)colorTrailsTable.getValueAt(0,4)));
+        prop.setProperty("color1timePercentile",getStringFromTable((String)colorTrailsTable.getValueAt(0,5)));
+        // Color trails 1 errors
+        prop.setProperty("color1errorRaw",getStringFromTable((String)colorTrailsTable.getValueAt(1,1)));
+        prop.setProperty("color1errorPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(1,2)));
+        // Color trails 1 Near misses
+        prop.setProperty("color1nearRaw",getStringFromTable((String)colorTrailsTable.getValueAt(2,1)));
+        prop.setProperty("color1nearPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(2,2)));
+        // Color trails 1 prompts
+        prop.setProperty("color1promptsRaw",getStringFromTable((String)colorTrailsTable.getValueAt(3,1)));
+        prop.setProperty("color1promptsPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(3,2)));
+        // Color trails 2 time in seconds
+        prop.setProperty("color2timeRaw",getStringFromTable((String)colorTrailsTable.getValueAt(4,1)));
+        prop.setProperty("color2timeStandard",getStringFromTable((String)colorTrailsTable.getValueAt(4,3)));
+        prop.setProperty("color2timeTscore",getStringFromTable((String)colorTrailsTable.getValueAt(4,4)));
+        prop.setProperty("color2timePercentile",getStringFromTable((String)colorTrailsTable.getValueAt(4,5)));
+        // Color trails 2 errors
+        prop.setProperty("color2errorRaw",getStringFromTable((String)colorTrailsTable.getValueAt(5,1)));
+        prop.setProperty("color2errorPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(5,2)));
+        // Color trails 2 Near misses
+        prop.setProperty("color2nearRaw",getStringFromTable((String)colorTrailsTable.getValueAt(6,1)));
+        prop.setProperty("color2nearPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(6,2)));
+        // Color trails 2 prompts
+        prop.setProperty("color2promptsRaw",getStringFromTable((String)colorTrailsTable.getValueAt(7,1)));
+        prop.setProperty("color2promptsPercentile",getStringFromTable((String)colorTrailsTable.getValueAt(7,2)));
+        // Color trails interference index
+        prop.setProperty("colorInterferenceRaw",getStringFromTable((String)colorTrailsTable.getValueAt(8,1)));
+        prop.setProperty("colorInterferencePercentile",getStringFromTable((String)colorTrailsTable.getValueAt(8,2)));
+    }
+
+    private String getStringFromTable(String string) {
+        if (string != null){
+            return string;
+        }
+        else {
+            return "";
+        }
+    }
+
     private void calculaIndexColor() {
         try {
             if (colorTrailsTable.getValueAt(4,1) != null && colorTrailsTable.getValueAt(0,1) != null) {
@@ -60,6 +113,90 @@ public class ColorTrails extends Test {
         } catch (Exception ex){
             Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    private void initColorTrails() {
+        String header = "<html><center><font color=\"rgb(255,255,255)\">";
+        CustomModel model = new CustomModel(
+            new Object [][] {
+                {"<html><b>Color Trails 1 - Time in seconds",null, "X", null, null, null},
+                {"<html><b>Color Trails 1 - Errors",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 1 - Near-Misses",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 1 - Prompts",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 2 - Time in seconds",null, "X", null, null, null},
+                {"<html><b>Color Trails 2 - Errors",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 2 - Near-Misses",null, null, "X", "X", "X"},
+                {"<html><b>Color Trails 2 - Prompts",null, null, "X", "X", "X"},
+                {"<html><b>Interference Index</b><br>(Color Trails 2 times raw score<br>minus Color Trails 1 time raw score)<br>/Color Trails 1 time raw score",null, null, "X", "X", "X"}
+            },
+            new String [] {
+                "",header+"Raw<br>score", header+"Percentile<br>range", header+"Standard<br>score", header+"T<br>score", header+"Percentile<br>score"
+            }
+        );
+        
+        
+        Class[] types = new Class [] {
+            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class,java.lang.String.class
+        };
+        boolean[] canEdit = new boolean [] {
+            false, true, true, false, false, false
+        };
+        
+        System.out.println(model.getColumnCount());
+        System.out.println(model.getRowCount());
+        boolean edit[][] = new boolean[model.getColumnCount()][model.getRowCount()];
+        for (boolean[] r: edit)
+            Arrays.fill(r, false);
+        
+        Arrays.fill(edit[1],true);
+        Arrays.fill(edit[2],true);
+        
+        model.setCanEditMatrix(edit);
+        
+        model.setCustom(true);
+        model.setEditable(2, 0, false);
+        model.setEditable(2, 4, false);
+        model.setEditable(3, 0, true);
+        model.setEditable(3, 4, true);
+        model.setEditable(4, 0, true);
+        model.setEditable(4, 4, true);
+        model.setEditable(5, 0, true);
+        model.setEditable(5, 4, true);
+        
+        model.setTypes(types);
+        model.setCanEdit(canEdit);
+
+
+        
+        colorTrailsTable.setModel(model);
+        
+        //digitsDirecteTable.getColumnModel().getColumn(4).setCellRenderer( new customRenderer(true) );
+        //digitsDirecteTable.getColumnModel().getColumn(0).setCellRenderer( new customRenderer(true) );
+        
+        
+        for (int i=1; i<colorTrailsTable.getColumnModel().getColumnCount();i++){
+            colorTrailsTable.getColumnModel().getColumn(i).setResizable(false);
+            colorTrailsTable.getColumn(i).setHeaderRenderer(new CustomRenderer(new Color(190,80,80),true));
+            colorTrailsTable.getColumnModel().getColumn(i).setPreferredWidth(120);
+            colorTrailsTable.getColumnModel().getColumn(i).setCellRenderer( new CustomRenderer(true) );
+        }
+        
+        colorTrailsTable.getColumnModel().getColumn(0).setResizable(false);
+        
+        //digitsDirecteTable.setHighlighters(HighlighterFactory.createSimpleStriping());
+        
+        colorTrailsTable.getTableHeader().setReorderingAllowed(false);
+        
+        //colorTrailsTable.setHighlighters(HighlighterFactory.createSimpleStriping());
+        
+        for (int i = 0; i<colorTrailsTable.getRowCount()-1; i++){
+            colorTrailsTable.setRowHeight(i, 30);
+        }
+        colorTrailsTable.setRowHeight(8, 80);
+        colorTrailsTable.getColumn(3).setPreferredWidth(120);
+        colorTrailsTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        colorTrailsTable.packAll();
+        
     }
     
     private void initTimer() {

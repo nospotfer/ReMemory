@@ -6,15 +6,13 @@
 package vista.tests;
 
 import controlador.ButtonColumn;
+import controlador.Utils;
 import controlador.VerticalTableHeaderCellRenderer;
 import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JLabel;
@@ -35,9 +33,13 @@ public class BNT extends Test {
     private HashMap<String, HashMap<Integer, List<Object>>> taulaBNTA;
     private HashMap<String, HashMap<Integer, List<Object>>> taulaBNTB;
     private HashMap<String, HashMap<Integer, List<Object>>> taulaBNTC;
+
+    String valoracio;
     
     /**
      * Creates new form BNT
+     * @param pacientActual
+     * @param valoracio
      */
     public BNT(Pacient pacientActual, String valoracio) {
         super(pacientActual);
@@ -45,6 +47,10 @@ public class BNT extends Test {
         
         label = "BNT";
         
+        numPaginesTotal = this.getComponentCount();
+
+        this.valoracio = valoracio;
+
         CardLayout card = (CardLayout)this.getLayout();
         card.show(this, "card"+(valoracio));
         numPaginesTotal = 1;
@@ -59,7 +65,30 @@ public class BNT extends Test {
         initHashBNTB();
         initHashBNTC();
     }
-    
+
+    @Override
+    public void guardarResultats(Properties prop) {
+        if (valoracio.equals("1")){
+            // BNT A
+            Utils.setProperty(prop,"totalBnt"+valoracio,totalBntA);
+            Utils.setProperty(prop,"semanticaBnt"+valoracio,semanticaBntA);
+            Utils.setProperty(prop,"percentilBNT"+valoracio,percentilBNTA);
+            Utils.setProperty(prop,"nssaBNT"+valoracio,nssaBNTA);
+        } else if (valoracio.equals("2")){
+            // BNT B
+            Utils.setProperty(prop,"totalBnt"+valoracio,totalBntB);
+            Utils.setProperty(prop,"semanticaBnt"+valoracio,semanticaBntB);
+            Utils.setProperty(prop,"percentilBNT"+valoracio,percentilBNTB);
+            Utils.setProperty(prop,"nssaBNT"+valoracio,nssaBNTB);
+        } else if (valoracio.equals("3")){
+            // BNT C
+            Utils.setProperty(prop,"totalBnt"+valoracio,totalBntC);
+            Utils.setProperty(prop,"semanticaBnt"+valoracio,semanticaBntC);
+            Utils.setProperty(prop,"percentilBNT"+valoracio,percentilBNTC);
+            Utils.setProperty(prop,"nssaBNT"+valoracio,nssaBNTC);
+        }
+    }
+
     private void initBNTATable() {
         CustomModel model = new CustomModel(
             new Object [][] {

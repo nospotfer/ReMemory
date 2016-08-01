@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
@@ -34,87 +35,107 @@ public class FluenciaVerbal extends Test {
     public FluenciaVerbal(Pacient pacientActual) {
         super(pacientActual);
         initComponents();
-        
+
         label = "FLUÈNCIA VERBAL";
-        
+
+        numPaginesTotal = this.getComponentCount();
+
         initFluenciaVerbalTable();
     }
-    
+
+    @Override
+    public void guardarResultats(Properties prop) {
+        // Fluencia verbal
+        prop.setProperty("fluenciaP",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,1)));
+        prop.setProperty("fluenciaM",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,3)));
+        prop.setProperty("fluenciaR",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,5)));
+        prop.setProperty("fluenciaAnimals",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,7)));
+    }
+
+    private String getStringFromTable(String string) {
+        if (string != null){
+            return string;
+        }
+        else {
+            return "";
+        }
+    }
+
     private void initFluenciaVerbalTable() {
         String header = "<html><font color=\"rgb(255,255,255)\">";
         CustomModel model = new CustomModel(
-            new Object [][] {
-                {"1.", null,"1.",null,"1.",null,"1.",null},
-                {"2.", null,"2.",null,"2.",null,"2.",null},
-                {"3.", null,"3.",null,"3.",null,"3.",null},
-                {"4.", null,"4.",null,"4.",null,"4.",null},
-                {"5.", null,"5.",null,"5.",null,"5.",null},
-                {"6.", null,"6.",null,"6.",null,"6.",null},
-                {"7.", null,"7.",null,"7.",null,"7.",null},
-                {"8.", null,"8.",null,"8.",null,"8.",null},
-                {"9.", null,"9.",null,"9.",null,"9.",null},
-                {"10.", null,"10.",null,"10.",null,"10.",null},
-                {"11.", null,"11.",null,"11.",null,"11.",null},
-                {"12.", null,"12.",null,"12.",null,"12.",null},
-                {"13.", null,"13.",null,"13.",null,"13.",null},
-                {"14.", null,"14.",null,"14.",null,"14.",null},
-                {"15.", null,"15.",null,"15.",null,"15.",null},
-                {"16.", null,"16.",null,"16.",null,"16.",null},
-                {"17.", null,"17.",null,"17.",null,"17.",null},
-                {"18.", null,"18.",null,"18.",null,"18.",null},
-                {"19.", null,"19.",null,"19.",null,"19.",null},
-                {"20.", null,"20.",null,"20.",null,"20.",null},
-                {"21.", null,"21.",null,"21.",null,"21.",null},
-                {"22.", null,"22.",null,"22.",null,"22.",null},
-                {"23.", null,"23.",null,"23.",null,"23.",null},
-                {"24.", null,"24.",null,"24.",null,"24.",null},
-                {"25.", null,"25.",null,"25.",null,"25.",null},
-                {"<html><b>Total", null,"<html><b>Total",null,"<html><b>Total",null,"<html><b>Total",null},
-                    {"<html><b>Percentil", null,"<html><b>Percentil",null,"<html><b>Percentil",null,"<html><b>Percentil",null},
-                    {"<html><b>NSSA", null,"<html><b>NSSA",null,"<html><b>NSSA",null,"<html><b>NSSA",null}
-            },
-            new String [] {
-                "", header+"P", "", header+"M","", header+"R","", header+"ANIMALS"
-            }
+                new Object [][] {
+                        {"1.", null,"1.",null,"1.",null,"1.",null},
+                        {"2.", null,"2.",null,"2.",null,"2.",null},
+                        {"3.", null,"3.",null,"3.",null,"3.",null},
+                        {"4.", null,"4.",null,"4.",null,"4.",null},
+                        {"5.", null,"5.",null,"5.",null,"5.",null},
+                        {"6.", null,"6.",null,"6.",null,"6.",null},
+                        {"7.", null,"7.",null,"7.",null,"7.",null},
+                        {"8.", null,"8.",null,"8.",null,"8.",null},
+                        {"9.", null,"9.",null,"9.",null,"9.",null},
+                        {"10.", null,"10.",null,"10.",null,"10.",null},
+                        {"11.", null,"11.",null,"11.",null,"11.",null},
+                        {"12.", null,"12.",null,"12.",null,"12.",null},
+                        {"13.", null,"13.",null,"13.",null,"13.",null},
+                        {"14.", null,"14.",null,"14.",null,"14.",null},
+                        {"15.", null,"15.",null,"15.",null,"15.",null},
+                        {"16.", null,"16.",null,"16.",null,"16.",null},
+                        {"17.", null,"17.",null,"17.",null,"17.",null},
+                        {"18.", null,"18.",null,"18.",null,"18.",null},
+                        {"19.", null,"19.",null,"19.",null,"19.",null},
+                        {"20.", null,"20.",null,"20.",null,"20.",null},
+                        {"21.", null,"21.",null,"21.",null,"21.",null},
+                        {"22.", null,"22.",null,"22.",null,"22.",null},
+                        {"23.", null,"23.",null,"23.",null,"23.",null},
+                        {"24.", null,"24.",null,"24.",null,"24.",null},
+                        {"25.", null,"25.",null,"25.",null,"25.",null},
+                        {"<html><b>Total", null,"<html><b>Total",null,"<html><b>Total",null,"<html><b>Total",null},
+                        {"<html><b>Percentil", null,"<html><b>Percentil",null,"<html><b>Percentil",null,"<html><b>Percentil",null},
+                        {"<html><b>NSSA", null,"<html><b>NSSA",null,"<html><b>NSSA",null,"<html><b>NSSA",null}
+                },
+                new String [] {
+                        "", header+"P", "", header+"M","", header+"R","", header+"ANIMALS"
+                }
         );
-        
+
         Class[] types = new Class [] {
-            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class,java.lang.String.class,java.lang.String.class,java.lang.String.class,java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class,java.lang.String.class,java.lang.String.class,java.lang.String.class,java.lang.String.class
         };
         boolean[] canEdit = new boolean [] {
-            false, true, false, true,false, true,false, true
+                false, true, false, true,false, true,false, true
         };
-        
+
         model.setTypes(types);
         model.setCanEdit(canEdit);
-        
+
         fluenciaVerbalTable.setModel(model);
-        
+
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment( JLabel.CENTER );
         fluenciaVerbalTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         fluenciaVerbalTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         fluenciaVerbalTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
         fluenciaVerbalTable.getColumnModel().getColumn(7).setCellRenderer( centerRenderer );
-        
+
         for (int i=0; i<fluenciaVerbalTable.getColumnModel().getColumnCount();i++){
             fluenciaVerbalTable.getColumnModel().getColumn(i).setResizable(false);
             fluenciaVerbalTable.getColumn(i).setHeaderRenderer(new CustomRenderer(new Color(190,80,80),true));
         }
-        
-        
+
+
         fluenciaVerbalTable.getTableHeader().setReorderingAllowed(false);
         fluenciaVerbalTable.setHighlighters(HighlighterFactory.createSimpleStriping());
-        
+
         for (int i = 0; i<fluenciaVerbalTable.getRowCount(); i++){
             fluenciaVerbalTable.setRowHeight(i, 20);
         }
-        
+
         fluenciaVerbalTable.setRowHeight(25, 35);
         fluenciaVerbalTable.setRowHeight(26, 35);
         fluenciaVerbalTable.setRowHeight(27, 35);
-        
-        
+
+
         fluenciaVerbalTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         fluenciaVerbalTable.packAll();
         fluenciaVerbalTable.getColumn(1).setPreferredWidth(150);
@@ -147,33 +168,33 @@ public class FluenciaVerbal extends Test {
         jLabel164.setText("Fluència verbal");
 
         fluenciaVerbalTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"1", "9 - 7			 ", null, "0", null},
-                {null, "6 - 3", null, "0", null},
-                {"2", "5 - 8 - 2			 ", null, "0", null},
-                {null, "6 - 9 - 4			 ", null, "0", null},
-                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
-                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
-                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
-                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
-                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
-                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
-                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
-                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
-                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
-                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
-                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
-                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
-            },
-            new String [] {
-                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
-            }
+                new Object [][] {
+                        {"1", "9 - 7			 ", null, "0", null},
+                        {null, "6 - 3", null, "0", null},
+                        {"2", "5 - 8 - 2			 ", null, "0", null},
+                        {null, "6 - 9 - 4			 ", null, "0", null},
+                        {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                        {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                        {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                        {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                        {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                        {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                        {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                        {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                        {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                        {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                        {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                        {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+                },
+                new String [] {
+                        "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+                }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                true, false, true, true, false
+                    true, false, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -211,37 +232,37 @@ public class FluenciaVerbal extends Test {
         javax.swing.GroupLayout digitsDirectePanel2Layout = new javax.swing.GroupLayout(digitsDirectePanel2);
         digitsDirectePanel2.setLayout(digitsDirectePanel2Layout);
         digitsDirectePanel2Layout.setHorizontalGroup(
-            digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton17)
-                            .addComponent(dataFluencia)
-                            .addComponent(jButton21)))
-                    .addComponent(jLabel164))
-                .addContainerGap())
+                digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jButton17)
+                                                        .addComponent(dataFluencia)
+                                                        .addComponent(jButton21)))
+                                        .addComponent(jLabel164))
+                                .addContainerGap())
         );
         digitsDirectePanel2Layout.setVerticalGroup(
-            digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, digitsDirectePanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel164)
-                .addGap(18, 18, 18)
-                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 766, Short.MAX_VALUE)
-                    .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
-                        .addComponent(jButton17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(dataFluencia)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton21)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, digitsDirectePanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel164)
+                                .addGap(18, 18, 18)
+                                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 766, Short.MAX_VALUE)
+                                        .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
+                                                .addComponent(jButton17)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(dataFluencia)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton21)
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addContainerGap())
         );
 
         digitsDirecteScroll2.setViewportView(digitsDirectePanel2);

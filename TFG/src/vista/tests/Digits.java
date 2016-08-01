@@ -11,15 +11,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
+
+import controlador.Utils;
 import model.Pacient;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 
@@ -43,11 +42,27 @@ public class Digits extends Test {
         
         this.label = "DIGITS";
         
+        numPaginesTotal = this.getComponentCount();
+        
         initDigitsDirecteTable();
         initDigitsInversTable();
         
         initHashDD();
         initHashDI();
+    }
+
+    @Override
+    public void guardarResultats(Properties prop){
+        // Digits directe
+        Utils.setProperty(prop,"puntuacioDirectaDD",puntuacioDirectaDD);
+        Utils.setProperty(prop,"spanDD",spanDD);
+        Utils.setProperty(prop,"nssaDD",nssaDD);
+        Utils.setProperty(prop,"percentilDD",percentilDD);
+        // Digits invers
+        Utils.setProperty(prop,"puntuacioDirectaDI",puntuacioDirectaDI);
+        Utils.setProperty(prop,"spanDI",spanDI);
+        Utils.setProperty(prop,"nssaDI",nssaDI);
+        Utils.setProperty(prop,"percentilDI",percentilDI);
     }
     
     private void initDigitsDirecteTable() {

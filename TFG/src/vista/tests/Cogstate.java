@@ -40,6 +40,8 @@ public class Cogstate extends Test {
         
         label = "COGSTATE";
         
+        numPaginesTotal = this.getComponentCount();
+        
         this.parent = parent;
         this.valoracio = valoracio;
         

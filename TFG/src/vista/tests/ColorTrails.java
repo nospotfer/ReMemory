@@ -35,11 +35,11 @@ public class ColorTrails extends Test {
     private Timer timerColor;
     private Timer timerColor2;
     
-    long secondsColor1 = 0;
-    long secondsColor2 = 0;
+    private long secondsColor1 = 0;
+    private long secondsColor2 = 0;
     
     private long startTime;
-    DecimalFormat timeFormatter;
+    private DecimalFormat timeFormatter;
     
     /**
      * Creates new form ColorTrails
@@ -200,45 +200,39 @@ public class ColorTrails extends Test {
     }
     
     private void initTimer() {
+
+        timeFormatter = new DecimalFormat("00");
         
-        timerColor = new Timer(10, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                long now = System.currentTimeMillis();
-                long dif = now - startTime;
-                
-                secondsColor1 = dif / 1000;
-                
-                long minutes = dif / (60 * 1000);
-                dif = Math.round(dif % (60 * 1000));
-                long seconds = dif / 1000;
-                dif = Math.round(dif % 1000);
-                long centiseconds = dif / 10;
-                colorTrailsCronoLabel.setText(timeFormatter.format(minutes) + ":"
-                        + timeFormatter.format(seconds) + "."
-                        + timeFormatter.format(centiseconds));
-            }
-            
+        timerColor = new Timer(10, e -> {
+            long now = System.currentTimeMillis();
+            long dif = now - startTime;
+
+            secondsColor1 = dif / 1000;
+
+            long minutes = dif / (60 * 1000);
+            dif = Math.round(dif % (60 * 1000));
+            long seconds = dif / 1000;
+            dif = Math.round(dif % 1000);
+            long centiseconds = dif / 10;
+            colorTrailsCronoLabel.setText(timeFormatter.format(minutes) + ":"
+                    + timeFormatter.format(seconds) + "."
+                    + timeFormatter.format(centiseconds));
         });
         
-        timerColor2 = new Timer(10, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                long now = System.currentTimeMillis();
-                long dif = now - startTime;
-                
-                secondsColor2 = dif / 1000;
-                
-                long minutes = dif / (60 * 1000);
-                dif = Math.round(dif % (60 * 1000));
-                long seconds = dif / 1000;
-                dif = Math.round(dif % 1000);
-                long centiseconds = dif / 10;
-                colorTrailsCronoLabel1.setText(timeFormatter.format(minutes) + ":"
-                        + timeFormatter.format(seconds) + "."
-                        + timeFormatter.format(centiseconds));
-            }
-            
+        timerColor2 = new Timer(10, e -> {
+            long now = System.currentTimeMillis();
+            long dif = now - startTime;
+
+            secondsColor2 = dif / 1000;
+
+            long minutes = dif / (60 * 1000);
+            dif = Math.round(dif % (60 * 1000));
+            long seconds = dif / 1000;
+            dif = Math.round(dif % 1000);
+            long centiseconds = dif / 10;
+            colorTrailsCronoLabel1.setText(timeFormatter.format(minutes) + ":"
+                    + timeFormatter.format(seconds) + "."
+                    + timeFormatter.format(centiseconds));
         });
         
     }
@@ -332,40 +326,24 @@ public class ColorTrails extends Test {
         jScrollPane1.setViewportView(jTextArea1);
 
         colorTrailsCronoBtn.setText("<html><center>Comença Crono Color Trails 1");
-        colorTrailsCronoBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                colorTrailsCronoBtnActionPerformed(evt);
-            }
-        });
+        colorTrailsCronoBtn.addActionListener(this::colorTrailsCronoBtnActionPerformed);
 
         colorTrailsCronoLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         colorTrailsCronoLabel.setText("00:00:00");
 
         jButton3.setText("Marcar data");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        jButton3.addActionListener(this::jButton3ActionPerformed);
 
         dataColor.setText("Data: \"encara no s'ha fet el test\"");
 
         colorTrailsCronoBtn1.setText("<html><center>Comença Crono Color Trails 2");
-        colorTrailsCronoBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                colorTrailsCronoBtn1ActionPerformed(evt);
-            }
-        });
+        colorTrailsCronoBtn1.addActionListener(this::colorTrailsCronoBtn1ActionPerformed);
 
         colorTrailsCronoLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         colorTrailsCronoLabel1.setText("00:00:00");
 
         jButton20.setText("Veure Taula");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
-            }
-        });
+        jButton20.addActionListener(this::jButton20ActionPerformed);
 
         javax.swing.GroupLayout digitsDirectePanel1Layout = new javax.swing.GroupLayout(digitsDirectePanel1);
         digitsDirectePanel1.setLayout(digitsDirectePanel1Layout);

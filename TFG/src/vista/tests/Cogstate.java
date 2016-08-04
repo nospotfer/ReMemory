@@ -25,8 +25,8 @@ import vista.Sessio1;
  */
 public class Cogstate extends Test {
 
-    Frame parent;
-    String valoracio;
+    private Frame parent;
+    private String valoracio;
     
     /**
      * Creates new form Cogstate
@@ -89,33 +89,17 @@ public class Cogstate extends Test {
 
         obrePdfBtn.setText("Obre pdf");
         obrePdfBtn.setEnabled(false);
-        obrePdfBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                obrePdfBtnActionPerformed(evt);
-            }
-        });
+        obrePdfBtn.addActionListener(this::obrePdfBtnActionPerformed);
 
         obreExcelBtn.setText("Obre excel");
         obreExcelBtn.setEnabled(false);
-        obreExcelBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                obreExcelBtnActionPerformed(evt);
-            }
-        });
+        obreExcelBtn.addActionListener(this::obreExcelBtnActionPerformed);
 
         jButton18.setText("Importar pdf");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
-            }
-        });
+        jButton18.addActionListener(this::jButton18ActionPerformed);
 
         jButton19.setText("Importar excel");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
-            }
-        });
+        jButton19.addActionListener(this::jButton19ActionPerformed);
 
         javax.swing.GroupLayout digitsDirectePanel3Layout = new javax.swing.GroupLayout(digitsDirectePanel3);
         digitsDirectePanel3.setLayout(digitsDirectePanel3Layout);

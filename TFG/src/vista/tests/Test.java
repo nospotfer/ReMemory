@@ -58,8 +58,9 @@ public class Test extends javax.swing.JPanel {
     }
 
     public void guardarResultats(Properties prop) {
-
     }
+    
+    public void carregar(Properties prop){}
 
     class CustomRenderer extends javax.swing.table.DefaultTableCellRenderer {
         Color color = java.awt.Color.WHITE;

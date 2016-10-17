@@ -18,8 +18,8 @@ import javax.swing.JFrame;
  */
 public class MenuValoracions extends javax.swing.JDialog {
 
-    Pacient pacientActual;
-    Frame parent;
+    private Pacient pacientActual;
+    private Frame parent;
     
     /**
      * Creates new form MenuValoracions
@@ -110,7 +110,7 @@ public class MenuValoracions extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ValoracioCognitivaPrevia tT = new ValoracioCognitivaPrevia(parent,pacientActual.getId());
+        ValoracioCognitivaPrevia tT = new ValoracioCognitivaPrevia(parent,pacientActual);
         tT.pack();
         tT.setExtendedState(JFrame.MAXIMIZED_BOTH);
         tT.setVisible(true);

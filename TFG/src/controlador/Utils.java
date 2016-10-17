@@ -276,7 +276,12 @@ public class Utils {
             output = new FileOutputStream(file);
 
             table = label = textF = combo = check = textA = tButton = button = radioButton = 0;
-            setComponents(prop, obj);
+
+            for (Component component : ((JTabbedPane) obj).getComponents()) {
+                setComponents(prop, component);
+            }
+
+            //setComponents(prop, obj);
             prop.store(output, "VALORACIO COGNITIVA PREVIA");
         }
         catch(IOException e){
@@ -359,6 +364,11 @@ public class Utils {
 
                 table = label = textF = combo = check = textA = tButton = button = radioButton = 0;
                 getComponents(prop, panel);
+                
+                for (Component component : ((JTabbedPane) panel).getComponents()) {
+                    getComponents(prop, component);
+                }
+                
             }
         }
         catch(IOException e){

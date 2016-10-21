@@ -209,6 +209,11 @@ public class MenuAvaluador extends javax.swing.JFrame {
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pictureTest.png"))); // NOI18N
         jButton3.setEnabled(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Tests visuals");
 
@@ -407,6 +412,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             idPacient = "";
             csvButton.setEnabled(false);
             testsTextualsBtn.setEnabled(false);
+            jButton3.setEnabled(false);
         }
     }//GEN-LAST:event_seleccionaBtnActionPerformed
 
@@ -575,6 +581,20 @@ public class MenuAvaluador extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_csvTotalButtonActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if (idPacient != ""){
+            EscullSessio eS = new EscullSessio(this,true,pacientActual);
+            eS.pack();
+            eS.setVisible(true);
+            this.toBack();
+        } else {
+            JOptionPane.showMessageDialog(this,
+            "Introdueix un pacient",
+            "Alerta",
+            JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     private void guardarJSON() {
         JSONArray usr = new JSONArray();
         JSONObject obj = new JSONObject();
@@ -703,6 +723,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             eliminaBtn.setEnabled(true);
             fitxaBtn.setEnabled(true);
             testsTextualsBtn.setEnabled(true);
+            jButton3.setEnabled(true);
         } else{
 //            System.out.println(trobat);
         }

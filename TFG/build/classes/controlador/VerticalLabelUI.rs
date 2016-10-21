@@ -1,0 +1,1 @@
+darrylbu.plaf.vertical.VerticalLabelUI

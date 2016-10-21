@@ -10,6 +10,9 @@ import com.toedter.calendar.JDateChooser;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.net.URL;
@@ -31,8 +34,9 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
+ 
 import org.jdesktop.swingx.JXTable;
+import vista.BigPhoto;
 import vista.NewUser;
 
 /**
@@ -53,7 +57,8 @@ public class Utils {
 
     public static final String SEP = File.separator;
     public static final String PACIENT_DATA_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"pacientData"+SEP;
-    public static final String USERS_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP+"users.json";
+    //public static final String USERS_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP+"users.json";
+    public static final String USERS_PATH = "res"+SEP+"users.json";
     public static final String RES_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP;
     
     public static String getStringFile(String file) {
@@ -246,7 +251,7 @@ public class Utils {
         label.setText(count+"");
     }
 
-    public static void initTaula(JPanel panel, JLabel label){
+    public static void initTaula(final JPanel panel, final JLabel label){
         for (Component com : panel.getComponents()){
             if (com instanceof JToggleButton){
                 ((JToggleButton)com).addActionListener(new ActionListener() {
@@ -1641,4 +1646,29 @@ public class Utils {
         }
     }
 
+        //Retorna una imatge escalada de la imatge que se li passa
+    public Image getScaledImage(Image srcImg, int w, int h){
+        BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = resizedImg.createGraphics();
+
+        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        g2.drawImage(srcImg, 0, 0, w, h, null);
+        g2.dispose();
+
+        return resizedImg;
+    }
+    
+        
+    public void bigPhotoOnclick(JLabel label, String path){
+        label.addMouseListener(new MouseAdapter(){
+            public void mouseClicked(MouseEvent me){
+                ImageIcon photo; 
+                photo = new ImageIcon("C:\\Users\\user\\Desktop\\Pedro2"+"/"+path);
+                Image scaledImage = getScaledImage(photo.getImage(),600,800);
+                photo = new ImageIcon(scaledImage);
+                BigPhoto bg = new BigPhoto(photo);
+                bg.setVisible(true);
+            }
+        });
+    }
 }

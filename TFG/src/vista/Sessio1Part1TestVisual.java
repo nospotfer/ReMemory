@@ -5,176 +5,53 @@
  */
 package vista;
 
+import controlador.Utils;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
+import java.awt.Frame;
+import java.awt.Image;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
-import javax.swing.JTextField;
+import javax.swing.JTextArea;
+
 
 /**
  *
  * @author Sergi
  */
-public class Sessio1Part1TestVisual extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Sessio1Part1TestVisual
-     */
-    
-    private int questionPosition=210;
+
+public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
+
+    private final Utils utils;
     private String idPacient;
-    private JLabel label1;
-    private JTextField question;
-    private JButton button;
-    private int rowCounter=6;
-    private GridBagConstraints c;
-    private JButton acceptButton;
-    private JLabel dummyText;
+    private int datePosition=10;
+    private int imagePositionX=15;
+    private int imagePositionY=50;
+//    private final int textPositionY=110;
     
-    public Sessio1Part1TestVisual(String idPacient) {
-        this.idPacient=idPacient;
-        this.setTitle("Preguntes");
+    /**
+     * Creates new form Sessio1TestVisual
+     * @param idPacient
+     */
+    public Sessio1Part0TestVisual(String idPacient) {
+        this.idPacient = idPacient;
+        utils= new Utils();
+        this.setTitle("Sessio 1");
+        
         initComponents();
-        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        initComponentsWithBagGrid();
-        
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setLocationRelativeTo(null);;
+        readAndShowImages();
+        jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);       
     }
-       
-    public void afegirPregunta(){
-        jPanel1.remove(dummyText);
-        JTextField textArea = new JTextField(question.getText());
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 25;      //make this component tall
-	c.weightx = 0.0;
-	c.gridwidth = 10;
-	c.gridx = 1;
-	c.gridy = rowCounter;
-        Color color = new Color(240,240,240);
-        textArea.setBackground(color);
-        textArea.setEnabled(false);
-        textArea.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        Font font = new Font("Tahoma", Font.BOLD,12);
-        textArea.setFont(font);
-        jPanel1.add(textArea, c);
-        question.setText("");
-        
-        textArea = new JTextField();
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 30;      //make this component tall
-	c.weightx = 0.0;
-	c.gridwidth = 10;
-	c.gridx = 1;
-        c.insets = new Insets(10,20,10,20);
-	c.gridy = rowCounter+1;
-        jPanel1.add(textArea, c);                      
-        
-        acceptButton.setEnabled(true);
-        c.gridx = 3;
-	c.gridy = rowCounter+2;
-        jPanel1.add(acceptButton,c);
-        
-        rowCounter+=3;
-        
-        jPanel1.invalidate();
-        jPanel1.validate();
-        jPanel1.repaint();
-        
-        jScrollPane2.invalidate();
-        jScrollPane2.validate();
-        jScrollPane2.repaint();
 
-        this.invalidate();
-        this.validate();
-        this.repaint();
-    }
-    
-    private void initComponentsWithBagGrid(){
-    jScrollPane2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        jScrollPane2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);      
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);                
-
-        jPanel1.setLayout(new GridBagLayout());
-        c = new GridBagConstraints();
-        
-        label1 = new JLabel("Introdueix aqui les noves preguntes");
-	c.fill = GridBagConstraints.HORIZONTAL;
-	c.insets = new Insets(15,10,0,0);  //top padding
-	c.gridx = 1;       //aligned with button 2
-	c.gridwidth = 2;   //2 columns wide
-	c.gridy = 0;       //third row
-        Font font = new Font("Tahoma", Font.BOLD,12);
-        label1.setFont(font);
-        c.anchor = GridBagConstraints.PAGE_START;
-	jPanel1.add(label1, c);
-        
-        question = new JTextField();
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.insets = new Insets(20,20,10,20); 
-        c.ipady = 30;      //make this component tall
-	c.weightx = 0.0;
-	c.gridwidth = 20;
-	c.gridx = 1;
-	c.gridy = 1;
-        jPanel1.add(question, c);
-        
-        button = new JButton("Afegir nova pregunta");
-	c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 8; 
-	c.weightx = 0.0;
-	c.gridwidth = 3;
-	c.gridx = 4;
-	c.gridy = 2;
-        
-        button.addActionListener(new ActionListener()
-        {
-          public void actionPerformed(ActionEvent e)
-          {
-            if(!question.getText().equalsIgnoreCase("")){
-                afegirPregunta();
-            }
-          }
-        }); 
-	jPanel1.add(button, c);
-        
-        label1 = new JLabel("Preguntes");
-	c.fill = GridBagConstraints.HORIZONTAL;
-	c.insets = new Insets(10,10,0,0);  //top padding
-	c.gridx = 1;       //aligned with button 2
-	c.gridwidth = 2;   //2 columns wide
-	c.gridy = 3;       //third row
-        font = new Font("Tahoma", Font.BOLD,14);
-        label1.setFont(font);
-	jPanel1.add(label1, c);
-        
-        
-        acceptButton = new JButton("Acceptar");
-        c.fill = GridBagConstraints.HORIZONTAL;      
-        //c.anchor = GridBagConstraints.PAGE_END; //bottom of space
-        c.gridx = 4;       //aligned with button 2
-        c.gridy = 7;
-        c.gridheight=1;
-        c.insets = new Insets(0,0,0,20);
-        acceptButton.setEnabled(false);
-        jPanel1.add(acceptButton, c);
-        
-        dummyText = new JLabel("No hi ha preguntes.");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.gridx = 1;       //aligned with button 2
-        c.gridy = 7;
-        font = new Font("Tahoma", Font.PLAIN,14);
-        c.insets = new Insets(10,10,0,20);
-        label1.setFont(font);
-        jPanel1.add(dummyText, c);
-    
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -184,11 +61,8 @@ public class Sessio1Part1TestVisual extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-
-        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -196,14 +70,14 @@ public class Sessio1Part1TestVisual extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 705, Short.MAX_VALUE)
+            .addGap(0, 674, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 496, Short.MAX_VALUE)
+            .addGap(0, 499, Short.MAX_VALUE)
         );
 
-        jScrollPane2.setViewportView(jPanel1);
+        jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -211,20 +85,84 @@ public class Sessio1Part1TestVisual extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    public void readAndShowImages(){
+        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\user\\Desktop"+"/"+"fragments.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                final String[] data = line.split(",");
+                JLabel date = new JLabel();
+                date.setLocation(10, datePosition);
+                if(!"ERROR".equals(data[1])){
+                    if(data[1].length()>6){
+                        String anyMesDia[] = data[1].split("_");
+                        date.setText(anyMesDia[0].substring(0, 4)+" de "+anyMesDia[0].substring(4,6)+" del "+anyMesDia[0].substring(6,8));                   
+                    }
+                    else{
+                        date.setText(data[1].substring(0, 4)+" de "+data[1].substring(4,6)+" del "+data[1].substring(6,8));
+                    }
 
+                    date.setSize(200, 50);
+                    Font font = new Font("Tahoma", Font.BOLD,11);
+                    date.setFont(font);
+                    jPanel1.add(date);
+                    for(int i=1;i<data.length;i++){
+                        JLabel label = new JLabel();                  
+                        utils.bigPhotoOnclick(label,data[i]+".jpg");                                 
+                        ImageIcon photo = new ImageIcon("C:\\Users\\user\\Desktop\\Pedro2"+"/"+data[i]+".jpg"); 
+                        Image scaledImage = utils.getScaledImage(photo.getImage(),60,60);
+                        photo = new ImageIcon(scaledImage);
+                        label.setLocation(imagePositionX, imagePositionY);
+                        label.setIcon(photo);
+                        label.setSize(60, 60);
+                        jPanel1.add(label);
+                        imagePositionX+=65;                 
+                    }
+                    JLabel textContainer = new JLabel();
+                    textContainer.setSize(502,77);
+                    textContainer.setLocation(15, imagePositionY+70);
+                    textContainer.setBackground(Color.black);
+                    textContainer.setOpaque(true);
+
+                    JTextArea textArea= new JTextArea();
+                    textArea.setSize(500, 75);
+                    textArea.setLocation(1, 1);
+                    textArea.setLineWrap(true);
+                    textArea.setWrapStyleWord(true);
+                    textArea.setText("Que recordes?");
+                    textContainer.add(textArea);
+
+                    jPanel1.add(textContainer);
+                    imagePositionX=15;
+                    datePosition+=210;
+                    imagePositionY+=210;
+                }
+            }   
+        }       
+        catch (IOException ex) {
+            System.out.println("No s'ha pogut llegir el fitxer dels fragments");
+        }
+        
+        jPanel1.invalidate();
+        jPanel1.validate();
+        jPanel1.repaint();
+           
+    }
+
+    
     /**
      * @param args the command line arguments
      */
@@ -242,27 +180,25 @@ public class Sessio1Part1TestVisual extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Sessio1Part1TestVisual("").setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Sessio1Part0TestVisual("").setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

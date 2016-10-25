@@ -22,7 +22,7 @@ import javax.swing.JTextField;
  *
  * @author Sergi
  */
-public class Sessio1Part1TestVisual extends javax.swing.JFrame {
+public class Sessio1Part3TestVisual extends javax.swing.JFrame {
 
     /**
      * Creates new form Sessio1Part1TestVisual
@@ -38,9 +38,9 @@ public class Sessio1Part1TestVisual extends javax.swing.JFrame {
     private JButton acceptButton;
     private JLabel dummyText;
     
-    public Sessio1Part1TestVisual(String idPacient) {
+    public Sessio1Part3TestVisual(String idPacient) {
         this.idPacient=idPacient;
-        this.setTitle("Preguntes");
+        this.setTitle("Sessió 1 - part 3");
         initComponents();
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         initComponentsWithBagGrid();
@@ -242,20 +242,21 @@ public class Sessio1Part1TestVisual extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part3TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part3TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part3TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part3TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sessio1Part1TestVisual("").setVisible(true);
+                new Sessio1Part3TestVisual("").setVisible(true);
             }
         });
     }

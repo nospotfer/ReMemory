@@ -46,7 +46,7 @@ public class Sessio0TestVisual extends javax.swing.JFrame {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
         
-         File[] files = new File("C:\\Users\\user\\Desktop\\Pedro2").listFiles();
+         File[] files = new File("src\\resources\\Pedro2").listFiles();
         try {
             showFiles(files);
         } catch (IOException ex) {
@@ -152,7 +152,7 @@ public class Sessio0TestVisual extends javax.swing.JFrame {
                 showFiles(file.listFiles()); // Calls same method again.
             } else { 
                 imageName = file.getName();
-                String path = "C:\\Users\\user\\Desktop\\Pedro2"+"/"+file.getName();
+                String path = "src\\resources\\Pedro2"+"\\"+file.getName();
                 if(numImages>=9){
                     xLocation=10;
                     yLocation+=55;  

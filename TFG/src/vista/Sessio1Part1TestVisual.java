@@ -26,7 +26,7 @@ import javax.swing.JTextArea;
  */
 
 
-public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
+public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
 
     private final Utils utils;
     private String idPacient;
@@ -39,10 +39,10 @@ public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
      * Creates new form Sessio1TestVisual
      * @param idPacient
      */
-    public Sessio1Part0TestVisual(String idPacient) {
+    public Sessio1Part1TestVisual(String idPacient) {
         this.idPacient = idPacient;
         utils= new Utils();
-        this.setTitle("Sessio 1");
+        this.setTitle("Sessió 1 - Part 1");
         
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -100,7 +100,7 @@ public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     public void readAndShowImages(){
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\user\\Desktop"+"/"+"fragments.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src\\resources"+"/"+"fragments.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 final String[] data = line.split(",");
@@ -122,7 +122,7 @@ public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
                     for(int i=1;i<data.length;i++){
                         JLabel label = new JLabel();                  
                         utils.bigPhotoOnclick(label,data[i]+".jpg");                                 
-                        ImageIcon photo = new ImageIcon("C:\\Users\\user\\Desktop\\Pedro2"+"/"+data[i]+".jpg"); 
+                        ImageIcon photo = new ImageIcon("src\\resources\\Pedro2"+"/"+data[i]+".jpg"); 
                         Image scaledImage = utils.getScaledImage(photo.getImage(),60,60);
                         photo = new ImageIcon(scaledImage);
                         label.setLocation(imagePositionX, imagePositionY);
@@ -180,20 +180,22 @@ public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Sessio1Part0TestVisual("").setVisible(true);
+            new Sessio1Part1TestVisual("").setVisible(true);
         });
     }
 

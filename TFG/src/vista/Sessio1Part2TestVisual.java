@@ -5,15 +5,11 @@
  */
 package vista;
 
-import controlador.Utils;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Frame;
-import java.awt.Image;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -26,23 +22,19 @@ import javax.swing.JTextArea;
  */
 
 
-public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
+public final class Sessio1Part2TestVisual extends javax.swing.JFrame {
 
-    private final Utils utils;
     private String idPacient;
     private int datePosition=10;
-    private int imagePositionX=15;
     private int imagePositionY=50;
-//    private final int textPositionY=110;
-    
+
     /**
      * Creates new form Sessio1TestVisual
      * @param idPacient
      */
-    public Sessio1Part0TestVisual(String idPacient) {
+    public Sessio1Part2TestVisual(String idPacient) {
         this.idPacient = idPacient;
-        utils= new Utils();
-        this.setTitle("Sessio 1");
+        this.setTitle("Sessió 1 - Part 2");
         
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -100,7 +92,7 @@ public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     public void readAndShowImages(){
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\user\\Desktop"+"/"+"fragments.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src\\resources"+"/"+"fragments.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 final String[] data = line.split(",");
@@ -119,26 +111,15 @@ public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
                     Font font = new Font("Tahoma", Font.BOLD,11);
                     date.setFont(font);
                     jPanel1.add(date);
-                    for(int i=1;i<data.length;i++){
-                        JLabel label = new JLabel();                  
-                        utils.bigPhotoOnclick(label,data[i]+".jpg");                                 
-                        ImageIcon photo = new ImageIcon("C:\\Users\\user\\Desktop\\Pedro2"+"/"+data[i]+".jpg"); 
-                        Image scaledImage = utils.getScaledImage(photo.getImage(),60,60);
-                        photo = new ImageIcon(scaledImage);
-                        label.setLocation(imagePositionX, imagePositionY);
-                        label.setIcon(photo);
-                        label.setSize(60, 60);
-                        jPanel1.add(label);
-                        imagePositionX+=65;                 
-                    }
+                   
                     JLabel textContainer = new JLabel();
-                    textContainer.setSize(502,77);
-                    textContainer.setLocation(15, imagePositionY+70);
+                    textContainer.setSize(602,77);
+                    textContainer.setLocation(15, imagePositionY);
                     textContainer.setBackground(Color.black);
                     textContainer.setOpaque(true);
 
                     JTextArea textArea= new JTextArea();
-                    textArea.setSize(500, 75);
+                    textArea.setSize(600, 75);
                     textArea.setLocation(1, 1);
                     textArea.setLineWrap(true);
                     textArea.setWrapStyleWord(true);
@@ -146,9 +127,9 @@ public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
                     textContainer.add(textArea);
 
                     jPanel1.add(textContainer);
-                    imagePositionX=15;
-                    datePosition+=210;
-                    imagePositionY+=210;
+                    //imagePositionX=15;
+                    datePosition+=125;
+                    imagePositionY+=125;
                 }
             }   
         }       
@@ -180,20 +161,22 @@ public final class Sessio1Part0TestVisual extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Part0TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sessio1Part1TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Sessio1Part0TestVisual("").setVisible(true);
+            new Sessio1Part1TestVisual("").setVisible(true);
         });
     }
 

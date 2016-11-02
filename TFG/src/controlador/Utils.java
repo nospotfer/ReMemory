@@ -56,10 +56,12 @@ public class Utils {
     private static int radioButton = 0;
 
     public static final String SEP = File.separator;
-    public static final String PACIENT_DATA_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"pacientData"+SEP;
+    //public static final String PACIENT_DATA_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"pacientData"+SEP;
     //public static final String USERS_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP+"users.json";
+    public static final String PACIENT_DATA_PATH = "res"+SEP+"pacientData"+SEP;
     public static final String USERS_PATH = "res"+SEP+"users.json";
-    public static final String RES_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP;
+     public static final String RES_PATH ="res"+SEP;
+    //public static final String RES_PATH = System.getenv("APPDATA")+SEP+"ReMemory"+SEP+"res"+SEP;
     
     public static String getStringFile(String file) {
 	BufferedReader reader = null;

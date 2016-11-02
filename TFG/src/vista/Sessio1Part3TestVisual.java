@@ -6,6 +6,7 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -37,6 +38,7 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
     private GridBagConstraints c;
     private JButton acceptButton;
     private JLabel dummyText;
+    private GridBagLayout gbl;
     
     public Sessio1Part3TestVisual(String idPacient) {
         this.idPacient=idPacient;
@@ -46,10 +48,14 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
         initComponentsWithBagGrid();
         
     }
+      
+    public void modificarPreguunta(int posx, int posy){
        
+    }
+    
     public void afegirPregunta(){
         jPanel1.remove(dummyText);
-        JTextField textArea = new JTextField(question.getText());
+        JTextField askedQuestion = new JTextField(question.getText());
         c.fill = GridBagConstraints.HORIZONTAL;
         c.ipady = 25;      //make this component tall
 	c.weightx = 0.0;
@@ -57,30 +63,58 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
 	c.gridx = 1;
 	c.gridy = rowCounter;
         Color color = new Color(240,240,240);
-        textArea.setBackground(color);
-        textArea.setEnabled(false);
-        textArea.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        askedQuestion.setBackground(color);
+        askedQuestion.setEnabled(false);
+        askedQuestion.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         Font font = new Font("Tahoma", Font.BOLD,12);
-        textArea.setFont(font);
-        jPanel1.add(textArea, c);
+        askedQuestion.setFont(font);
+        jPanel1.add(askedQuestion, c);
         question.setText("");
         
-        textArea = new JTextField();
+        JTextField answer = new JTextField();
         c.fill = GridBagConstraints.HORIZONTAL;
         c.ipady = 30;      //make this component tall
 	c.weightx = 0.0;
-	c.gridwidth = 10;
+	c.gridwidth = 6;
 	c.gridx = 1;
         c.insets = new Insets(10,20,10,20);
 	c.gridy = rowCounter+1;
-        jPanel1.add(textArea, c);                      
+        jPanel1.add(answer, c);                      
         
         acceptButton.setEnabled(true);
-        c.gridx = 3;
-	c.gridy = rowCounter+2;
+        c.gridx = 7;
+	c.gridy = rowCounter+3;
+         c.insets = new Insets(10,20,10,20);
+        c.gridwidth=1;
         jPanel1.add(acceptButton,c);
         
-        rowCounter+=3;
+        JButton modifyButton = new JButton("Eliminar");
+        c.gridx = 7;
+        c.gridwidth=1;
+        c.gridy=rowCounter+1;
+        modifyButton.addActionListener(new ActionListener()
+        {
+          public void actionPerformed(ActionEvent e)
+          {
+            
+                jPanel1.remove(askedQuestion);
+                jPanel1.remove(answer);
+                jPanel1.remove(modifyButton);
+                
+                jPanel1.invalidate();
+                jPanel1.validate();
+                jPanel1.repaint();
+
+                jScrollPane2.invalidate();
+                jScrollPane2.validate();
+                jScrollPane2.repaint();
+
+            
+          }
+        }); 
+        jPanel1.add(modifyButton, c);
+        
+        rowCounter+=4;
         
         jPanel1.invalidate();
         jPanel1.validate();
@@ -96,12 +130,13 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
     }
     
     private void initComponentsWithBagGrid(){
-    jScrollPane2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        jScrollPane2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         jScrollPane2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);      
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);                
 
-        jPanel1.setLayout(new GridBagLayout());
+        gbl = new GridBagLayout();
+        jPanel1.setLayout(gbl);
         c = new GridBagConstraints();
         
         label1 = new JLabel("Introdueix aqui les noves preguntes");
@@ -120,7 +155,7 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
         c.insets = new Insets(20,20,10,20); 
         c.ipady = 30;      //make this component tall
 	c.weightx = 0.0;
-	c.gridwidth = 20;
+	c.gridwidth = 10;
 	c.gridx = 1;
 	c.gridy = 1;
         jPanel1.add(question, c);
@@ -144,14 +179,15 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
         }); 
 	jPanel1.add(button, c);
         
-        label1 = new JLabel("Preguntes");
+        label1 = new JLabel();
 	c.fill = GridBagConstraints.HORIZONTAL;
 	c.insets = new Insets(10,10,0,0);  //top padding
 	c.gridx = 1;       //aligned with button 2
 	c.gridwidth = 2;   //2 columns wide
 	c.gridy = 3;       //third row
-        font = new Font("Tahoma", Font.BOLD,14);
+        font = new Font("Tahoma", font.BOLD, 14);
         label1.setFont(font);
+        label1.setText("Preguntes");
 	jPanel1.add(label1, c);
         
         

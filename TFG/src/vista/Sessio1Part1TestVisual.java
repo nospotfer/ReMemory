@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.ImageIcon;
@@ -99,7 +100,7 @@ public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     public void readAndShowImages(){
-        try (BufferedReader br = new BufferedReader(new FileReader("src\\resources"+"/"+"fragments.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src"+ File.separator+"resources"+ File.separator+"fragments.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 final String[] data = line.split(",");
@@ -121,7 +122,7 @@ public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
                     for(int i=1;i<data.length;i++){
                         JLabel label = new JLabel();                  
                         utils.bigPhotoOnclick(label,data[i]+".jpg");                                 
-                        ImageIcon photo = new ImageIcon("src\\resources\\Pedro2"+"/"+data[i]+".jpg"); 
+                        ImageIcon photo = new ImageIcon("src"+ File.separator+"resources"+ File.separator+"Pedro2"+File.separator+data[i]+".jpg"); 
                         Image scaledImage = utils.getScaledImage(photo.getImage(),60,60);
                         photo = new ImageIcon(scaledImage);
                         label.setLocation(imagePositionX, imagePositionY);

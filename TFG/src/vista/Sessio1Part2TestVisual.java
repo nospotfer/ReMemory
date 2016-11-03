@@ -8,6 +8,7 @@ package vista;
 import java.awt.Color;
 import java.awt.Font;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.JFrame;
@@ -92,7 +93,7 @@ public final class Sessio1Part2TestVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     public void readAndShowImages(){
-        try (BufferedReader br = new BufferedReader(new FileReader("src\\resources"+"/"+"fragments.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src"+ File.separator+"resources"+ File.separator+"fragments.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 final String[] data = line.split(",");

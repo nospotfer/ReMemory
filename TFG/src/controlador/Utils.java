@@ -1665,7 +1665,7 @@ public class Utils {
         label.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent me){
                 ImageIcon photo; 
-                photo = new ImageIcon("src\\resources\\Pedro2"+"\\"+path);
+                photo = new ImageIcon("src"+ File.separator+"resources"+ File.separator+"Pedro2"+ File.separator+path);
                 Image scaledImage = getScaledImage(photo.getImage(),600,800);
                 photo = new ImageIcon(scaledImage);
                 BigPhoto bg = new BigPhoto(photo);

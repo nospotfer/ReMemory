@@ -27,15 +27,17 @@ public class Sessio0TestVisual extends javax.swing.JFrame {
     /**
      * Creates new form Sessio0TestVisual
      */
-    private String idPacient;
+    private String nomPacient;
+    private String dia;
     private String directory="";
     private int numImages=-1;
     private Utils utils;
     
            
         
-    public Sessio0TestVisual(String idPacient) {          
-        this.idPacient = idPacient;
+    public Sessio0TestVisual(String nomPacient, String dia) {          
+        this.nomPacient = nomPacient;
+        this.dia = dia;
         utils = new Utils();
         this.setTitle("Sessió 0");
         
@@ -223,7 +225,7 @@ public class Sessio0TestVisual extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sessio0TestVisual("").setVisible(true);
+                new Sessio0TestVisual(null,null).setVisible(true);
             }
         });
     }

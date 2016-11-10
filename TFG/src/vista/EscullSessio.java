@@ -6,6 +6,7 @@
 package vista;
 
 import java.awt.*;
+import java.io.File;
 import model.Pacient;
 
 /**
@@ -20,15 +21,28 @@ public class EscullSessio extends javax.swing.JDialog {
     Pacient pacientActual;
     Frame parent;
     
-    public EscullSessio(final java.awt.Frame parent, boolean modal, final Pacient pacientActual) {
-        super(parent, modal);
+    public EscullSessio(final String nomPacient) {
+        //super(parent, modal);
         this.parent = parent;
         this.setTitle("Escull sessió");
         initComponents();
         Font font = new Font("Tahoma", Font.BOLD,12);
         jLabel1.setFont(font);
         this.setLocationRelativeTo(null);
-        this.pacientActual = pacientActual;
+        
+        seleccioDia.removeAllItems();
+        File file = new File("src"+ File.separator+"resources"+ File.separator+nomPacient);
+        String[] names = file.list();
+        for(String name : names)
+        {
+            System.out.println("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + name);
+            if (new File("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + name).isDirectory())
+            {
+                seleccioDia.addItem(name);
+            }
+        }
+        seleccioDia.validate();
+        seleccioDia.repaint();
     }
 
     /**
@@ -46,6 +60,7 @@ public class EscullSessio extends javax.swing.JDialog {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        seleccioDia = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -110,34 +125,48 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        seleccioDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        seleccioDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seleccioDiaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(36, 36, 36)
                 .addComponent(jButton0)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(70, 70, 70))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)
+                        .addGap(29, 29, 29)))
+                .addGap(30, 30, 30))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(seleccioDia, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(seleccioDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jButton0))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton0)
+                        .addGap(58, 58, 58))))
         );
 
         pack();
@@ -151,7 +180,7 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
-        Sessio0TestVisual stv = new Sessio0TestVisual(pacientActual.getId());
+        Sessio0TestVisual stv = new Sessio0TestVisual("","");
         stv.pack();
         stv.setVisible(true);
         this.dispose();
@@ -170,6 +199,10 @@ public class EscullSessio extends javax.swing.JDialog {
         stv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void seleccioDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccioDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seleccioDiaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,7 +234,7 @@ public class EscullSessio extends javax.swing.JDialog {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EscullSessio dialog = new EscullSessio(new javax.swing.JFrame(), true, null);
+                EscullSessio dialog = new EscullSessio(null);
                 //new EscullSessio().setVisible(true);
             }
         });
@@ -214,5 +247,6 @@ public class EscullSessio extends javax.swing.JDialog {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JComboBox<String> seleccioDia;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,16 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/EscullSessio.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/NewPacient.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/controlador/Utils.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/MenuAdmin.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/BigPhoto.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Sessio1Part3TestVisual.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Login.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Sessio1Part2TestVisual.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Sessio1Part1TestVisual.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Sessio0TestVisual.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Dia.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/DescripcioSegment.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/PacientDatabase.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Segment.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Dia.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/PacientDatabase.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/controlador/Conector.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/DescripcioSegment.java</file>
         </group>
     </open-files>
 </project-private>

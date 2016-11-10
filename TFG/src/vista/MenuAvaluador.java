@@ -5,6 +5,8 @@
  */
 package vista;
 
+import controlador.Conector;
+import controlador.ControladorHibernate;
 import model.Pacient;
 
 import java.io.*;
@@ -28,10 +30,14 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import model.PacientDatabase;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 /**
  *
@@ -45,6 +51,8 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private String idPacient = "";
     private String evaluador;
     private ArrayList<Pacient> llistaPacients = new ArrayList<>();
+    private ControladorHibernate controlador = new ControladorHibernate();
+    private Integer s;
     
     /**
      * Creates new form mainMenu
@@ -71,6 +79,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         idText = new javax.swing.JTextField();
@@ -81,6 +90,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         seleccionaBtn = new javax.swing.JButton();
         fitxaBtn = new javax.swing.JButton();
         importaBtn = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         testsTextualsBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -94,6 +104,8 @@ public class MenuAvaluador extends javax.swing.JFrame {
         backBtn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         evaluadorLabel = new javax.swing.JLabel();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menú evaluador");
@@ -145,6 +157,13 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Selecciona D.B");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -172,6 +191,8 @@ public class MenuAvaluador extends javax.swing.JFrame {
                         .addComponent(idText, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(seleccionaBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -181,7 +202,8 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(idText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seleccionaBtn))
+                    .addComponent(seleccionaBtn)
+                    .addComponent(jButton2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -583,7 +605,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         if (idPacient != ""){
-            EscullSessio eS = new EscullSessio(this,true,pacientActual);
+            EscullSessio eS = new EscullSessio(nomText.getText());
             eS.pack();
             eS.setVisible(true);
             this.toBack();
@@ -594,6 +616,48 @@ public class MenuAvaluador extends javax.swing.JFrame {
             JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Conector con = new Conector();
+        Session session = con.getSession();
+        List<PacientDatabase> llista = new ArrayList<>();
+        Query q = session.createQuery("from PacientDatabase");
+	llista = q.list();
+	     
+        //Object[] ids = new Object[llista.size()];
+	/*for (PacientDatabase pacients : llista) {
+            System.out.println("Nom: "+pacients.getNom());
+            System.out.println("Estrelles: "+pacients.getId());
+        }*/
+        
+        Object[] ids = new Object[llista.size()];
+        for (int i = 0; i < llista.size(); i++) {
+            ids[i] = llista.get(i).getId();
+        }
+        
+        session.close();
+        try{
+        s = (int) JOptionPane.showInputDialog(
+                this,
+                "Pacients: ",
+                "Llistat de pacients",
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                ids,
+                ids[0]);
+        }catch(NullPointerException ex){
+            System.out.println("No s'ha seleccionat res");
+        }
+        
+        if(s != null) {    
+            idText.setText(Integer.toString(s));
+            nomText.setText(controlador.getPacient(s).getNom());
+            idPacient=Integer.toString(s);
+            this.testsTextualsBtn.requestFocus();
+            jButton3.setEnabled(true);
+        }
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void guardarJSON() {
         JSONArray usr = new JSONArray();
@@ -824,6 +888,8 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JButton fitxaBtn;
     private javax.swing.JTextField idText;
     private javax.swing.JButton importaBtn;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

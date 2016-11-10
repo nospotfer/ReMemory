@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Dia" table="Dia">
+        <id name="anymesdia" column="anymesdia">
+            <generator class="native"/>
+        </id>
+        <property name="any" column="any"/>
+        <property name="mes" column="mes" />
+        <property name="dia" column="dia" />
+        
+       <many-to-one name="pacient" class="model.PacientDatabase" fetch="select">
+           <column name="idPacient" />   
+        </many-to-one>
+        
+        <set name="segments" table="Segment" lazy="true" cascade="all">
+           <key>
+               <column name="anymesdia" /> 
+           </key>
+            <one-to-many class="model.Segment" /> 
+       </set>
+    </class>
+</hibernate-mapping>

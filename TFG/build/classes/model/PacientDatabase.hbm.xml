@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.PacientDatabase" table="Pacient">
+        <id name="id" column="idPacient">
+
+        </id>
+        <property name="nom" column="nomPacient" />
+        <property name="edat" column="edat" />
+        <property name="anysEscola" column="anysEscola" />
+        <set name="dies" table="Dia" lazy="true" cascade="all">
+            <key column="idPacient" />
+            <one-to-many class="model.Dia" /> 
+       </set>
+    </class>
+</hibernate-mapping>

@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,11 +26,13 @@ public class NewPacient extends javax.swing.JDialog {
     /**
      * Creates new form newUser
      */
+    ControladorHibernate controlador;
     public NewPacient(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         Utils.setIcon((JFrame)this.getOwner());
         initComponents();
         this.setLocationRelativeTo(null);
+        controlador = new ControladorHibernate();
     }
 
     /**
@@ -143,7 +146,9 @@ public class NewPacient extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelBtnActionPerformed
 
     private void newBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newBtnActionPerformed
-
+        System.out.println(nameTextBox.getText());
+        System.out.println(Integer.parseInt(idTextBox.getText()));
+        controlador.crearPacient(nameTextBox.getText(), Integer.parseInt(idTextBox.getText()) , 0, 0);
         JSONObject obj = null;
         try {
             obj = new JSONObject(getStringFile(Utils.USERS_PATH));

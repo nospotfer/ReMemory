@@ -25,7 +25,7 @@ import javax.swing.JTextArea;
 
 public final class Sessio1Part2TestVisual extends javax.swing.JFrame {
 
-    private String idPacient;
+    private String nomPacient,dia;
     private int datePosition=10;
     private int imagePositionY=50;
 
@@ -33,8 +33,9 @@ public final class Sessio1Part2TestVisual extends javax.swing.JFrame {
      * Creates new form Sessio1TestVisual
      * @param idPacient
      */
-    public Sessio1Part2TestVisual(String idPacient) {
-        this.idPacient = idPacient;
+    public Sessio1Part2TestVisual(String nomPacient,String dia) {
+        this.nomPacient = nomPacient;
+        this.dia=dia;
         this.setTitle("Sessió 1 - Part 2");
         
         initComponents();
@@ -177,7 +178,7 @@ public final class Sessio1Part2TestVisual extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Sessio1Part1TestVisual("").setVisible(true);
+            new Sessio1Part1TestVisual(null,null).setVisible(true);
         });
     }
 

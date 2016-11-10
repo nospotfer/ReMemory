@@ -5,10 +5,7 @@
  */
 package controlador;
 
-import java.util.ArrayList;
-import java.util.List;
 import model.PacientDatabase;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -30,21 +27,28 @@ public class ControladorHibernate {
         
         session.saveOrUpdate(pacient);
         tx.commit();
-        System.out.println("He creat el pacient correctament");
         session.close();
         
     }
     
     public PacientDatabase getPacient(int id){
-        System.out.println("AH!");
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
         PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, id);
         session.close();
-        System.out.println("id:"+pacient.getId());
-        System.out.println("nom:"+pacient.getNom());
+        
         return pacient;
+    }
     
+    public void borrarPacient(int id) {
+        Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+        
+        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, id);
+        session.delete(pacient);
+        
+        tx.commit();
+        session.close();
     }
     
         

@@ -90,7 +90,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         seleccionaBtn = new javax.swing.JButton();
         fitxaBtn = new javax.swing.JButton();
         importaBtn = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        seleccionaDb = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         testsTextualsBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -157,10 +157,10 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Selecciona D.B");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        seleccionaDb.setText("Selecciona D.B");
+        seleccionaDb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                seleccionaDbActionPerformed(evt);
             }
         });
 
@@ -192,7 +192,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(seleccionaBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
+                        .addComponent(seleccionaDb)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -203,7 +203,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(idText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(seleccionaBtn)
-                    .addComponent(jButton2))
+                    .addComponent(seleccionaDb))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -567,6 +567,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         int reply = JOptionPane.showConfirmDialog(null, "Segur que vols eliminar el pacient?", "Eliminar?",  JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION)
         {
+            controlador.borrarPacient(Integer.parseInt(idText.getText()));
             Iterator<Pacient> iter = llistaPacients.iterator();
 
             while (iter.hasNext()) {
@@ -617,18 +618,12 @@ public class MenuAvaluador extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void seleccionaDbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaDbActionPerformed
         Conector con = new Conector();
         Session session = con.getSession();
         List<PacientDatabase> llista = new ArrayList<>();
         Query q = session.createQuery("from PacientDatabase");
-	llista = q.list();
-	     
-        //Object[] ids = new Object[llista.size()];
-	/*for (PacientDatabase pacients : llista) {
-            System.out.println("Nom: "+pacients.getNom());
-            System.out.println("Estrelles: "+pacients.getId());
-        }*/
+	llista = q.list();	           
         
         Object[] ids = new Object[llista.size()];
         for (int i = 0; i < llista.size(); i++) {
@@ -654,10 +649,11 @@ public class MenuAvaluador extends javax.swing.JFrame {
             nomText.setText(controlador.getPacient(s).getNom());
             idPacient=Integer.toString(s);
             this.testsTextualsBtn.requestFocus();
+            eliminaBtn.setEnabled(true);
             jButton3.setEnabled(true);
         }
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_seleccionaDbActionPerformed
 
     private void guardarJSON() {
         JSONArray usr = new JSONArray();
@@ -889,7 +885,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JTextField idText;
     private javax.swing.JButton importaBtn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -904,6 +899,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JTextField nomText;
     private javax.swing.JButton nouPacientBtn;
     private javax.swing.JButton seleccionaBtn;
+    private javax.swing.JButton seleccionaDb;
     private javax.swing.JButton testsTextualsBtn;
     // End of variables declaration//GEN-END:variables
 }

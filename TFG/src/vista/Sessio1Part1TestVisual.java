@@ -29,7 +29,8 @@ import javax.swing.JTextArea;
 public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
 
     private final Utils utils;
-    private String idPacient;
+    private String nomPacient;
+    private String dia;
     private int datePosition=10;
     private int imagePositionX=15;
     private int imagePositionY=50;
@@ -37,16 +38,18 @@ public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
     
     /**
      * Creates new form Sessio1TestVisual
-     * @param idPacient
+     * @param nomPacient
      */
-    public Sessio1Part1TestVisual(String idPacient) {
-        this.idPacient = idPacient;
+    public Sessio1Part1TestVisual(String nomPacient,String dia) {
+        this.nomPacient = nomPacient;
+        this.dia = dia;
+        
         utils= new Utils();
         this.setTitle("Sessió 1 - Part 1");
         
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setLocationRelativeTo(null);;
+        this.setLocationRelativeTo(null);
         readAndShowImages();
         jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);       
@@ -100,7 +103,7 @@ public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     public void readAndShowImages(){
-        try (BufferedReader br = new BufferedReader(new FileReader("src"+ File.separator+"resources"+ File.separator+"fragments.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src"+ File.separator+"resources" + File.separator+nomPacient+File.separator+dia+File.separator+"segmentation.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 final String[] data = line.split(",");
@@ -109,10 +112,10 @@ public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
                 if(!"ERROR".equals(data[1])){
                     if(data[1].length()>6){
                         String anyMesDia[] = data[1].split("_");
-                        date.setText(anyMesDia[0].substring(0, 4)+" de "+anyMesDia[0].substring(4,6)+" del "+anyMesDia[0].substring(6,8));                   
+                        date.setText(anyMesDia[0].substring(6, 8)+" de "+anyMesDia[0].substring(4,6)+" del "+anyMesDia[0].substring(0,4));                   
                     }
                     else{
-                        date.setText(data[1].substring(0, 4)+" de "+data[1].substring(4,6)+" del "+data[1].substring(6,8));
+                        date.setText(data[1].substring(6, 8)+" de "+data[1].substring(4,6)+" del "+data[1].substring(0,4));
                     }
 
                     date.setSize(200, 50);
@@ -121,7 +124,8 @@ public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
                     jPanel1.add(date);
                     for(int i=1;i<data.length;i++){
                         JLabel label = new JLabel();                  
-                        utils.bigPhotoOnclick(label,data[i]+".jpg");                                 
+                        utils.bigPhotoOnclick(label,data[i]+".jpg"); 
+                        /*S'ha de canviar*/
                         ImageIcon photo = new ImageIcon("src"+ File.separator+"resources"+ File.separator+"Pedro2"+File.separator+data[i]+".jpg"); 
                         Image scaledImage = utils.getScaledImage(photo.getImage(),60,60);
                         photo = new ImageIcon(scaledImage);
@@ -195,7 +199,7 @@ public final class Sessio1Part1TestVisual extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Sessio1Part1TestVisual("").setVisible(true);
+            new Sessio1Part1TestVisual(null,null).setVisible(true);
         });
     }
 

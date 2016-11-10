@@ -7,7 +7,6 @@ package vista;
 
 import java.awt.*;
 import java.io.File;
-import model.Pacient;
 
 /**
  *
@@ -18,12 +17,13 @@ public class EscullSessio extends javax.swing.JDialog {
     /**
      * Creates new form EscullSessio
      */
-    Pacient pacientActual;
+    String nomPacient;
     Frame parent;
     
     public EscullSessio(final String nomPacient) {
-        //super(parent, modal);
-        this.parent = parent;
+
+        this.nomPacient=nomPacient;
+        
         this.setTitle("Escull sessió");
         initComponents();
         Font font = new Font("Tahoma", Font.BOLD,12);
@@ -173,28 +173,29 @@ public class EscullSessio extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Sessio1Part1TestVisual stv = new Sessio1Part1TestVisual(pacientActual.getId());
+        System.out.println((String)seleccioDia.getSelectedItem());
+        Sessio1Part1TestVisual stv = new Sessio1Part1TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
         stv.pack();
         stv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
-        Sessio0TestVisual stv = new Sessio0TestVisual("","");
+        Sessio0TestVisual stv = new Sessio0TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
         stv.pack();
         stv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton0ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Sessio1Part2TestVisual stv = new Sessio1Part2TestVisual(pacientActual.getId());
+        Sessio1Part2TestVisual stv = new Sessio1Part2TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
         stv.pack();
         stv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Sessio1Part3TestVisual stv = new Sessio1Part3TestVisual(pacientActual.getId());
+        Sessio1Part3TestVisual stv = new Sessio1Part3TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
         stv.pack();
         stv.setVisible(true);
         this.dispose();

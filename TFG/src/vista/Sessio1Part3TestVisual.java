@@ -6,7 +6,6 @@
 package vista;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -30,7 +29,7 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
      */
     
     private int questionPosition=210;
-    private String idPacient;
+    private String nomPacient,dia;
     private JLabel label1;
     private JTextField question;
     private JButton button;
@@ -40,8 +39,9 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
     private JLabel dummyText;
     private GridBagLayout gbl;
     
-    public Sessio1Part3TestVisual(String idPacient) {
-        this.idPacient=idPacient;
+    public Sessio1Part3TestVisual(String nomPacient,String dia) {
+        this.nomPacient=nomPacient;
+        this.dia=dia;
         this.setTitle("Sessió 1 - part 3");
         initComponents();
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -292,7 +292,7 @@ public class Sessio1Part3TestVisual extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sessio1Part3TestVisual("").setVisible(true);
+                new Sessio1Part3TestVisual(null,null).setVisible(true);
             }
         });
     }

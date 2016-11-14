@@ -24,7 +24,7 @@ public class Dia {
     }
     
     public Dia(int any, int mes, int dia, PacientDatabase pacient){
-        anymesdia = String.valueOf(any)+String.valueOf(mes)+String.valueOf(dia);
+        //anymesdia = String.valueOf(any)+String.valueOf(mes)+String.valueOf(dia);
         this.any =any;
         this.mes = mes;
         this.dia = dia;

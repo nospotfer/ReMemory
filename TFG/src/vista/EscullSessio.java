@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import java.awt.*;
 import java.io.File;
 
@@ -19,11 +20,13 @@ public class EscullSessio extends javax.swing.JDialog {
      */
     String nomPacient;
     Frame parent;
+    boolean dies=false;
+    private ControladorHibernate controlador;
     
-    public EscullSessio(final String nomPacient) {
+    public EscullSessio(final String nomPacient, int idPacient) {
 
         this.nomPacient=nomPacient;
-        
+        controlador = new ControladorHibernate();
         this.setTitle("Escull sessió");
         initComponents();
         Font font = new Font("Tahoma", Font.BOLD,12);
@@ -32,14 +35,33 @@ public class EscullSessio extends javax.swing.JDialog {
         
         seleccioDia.removeAllItems();
         File file = new File("src"+ File.separator+"resources"+ File.separator+nomPacient);
-        String[] names = file.list();
-        for(String name : names)
-        {
-            System.out.println("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + name);
-            if (new File("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + name).isDirectory())
-            {
-                seleccioDia.addItem(name);
+        String[] days = file.list();
+        for(String day : days) {
+            System.out.println("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + day);
+            if (new File("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + day).isDirectory()) {
+                seleccioDia.addItem(day); 
+                controlador.crearDia(Integer.parseInt(day), Integer.parseInt(day), Integer.parseInt(day), idPacient);
+                dies=true;
+                file = new File("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + day);
+                String[] images = file.list();
+                /*for(String image:images){
+                    System.out.println(image);
+                    if(!image.equalsIgnoreCase("segmentation")){
+                        String nomImatge, String path, int hora, int minut, int segon, Segment segment)
+                        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + day;
+                        controlador.crearImatge(image, path, Integer.parseInt(day), Integer.parseInt(day), Integer.parseInt(day), idPacient);
+                    }
+                }*/
+                
+                
             }
+        }
+        if(dies == false){
+            seleccioDia.addItem("Aquest pacient no té cap dia.");
+            jButton0.setEnabled(false);
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
         }
         seleccioDia.validate();
         seleccioDia.repaint();
@@ -82,14 +104,14 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
-        jButton2.setText("Part 2");
+        jButton2.setText("Nivell 3");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Part 3");
+        jButton3.setText("Nivell 2");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -107,7 +129,7 @@ public class EscullSessio extends javax.swing.JDialog {
                         .addComponent(jButton2)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                         .addGap(21, 21, 21))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton3)
@@ -139,7 +161,7 @@ public class EscullSessio extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jButton0)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -149,7 +171,7 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addGap(30, 30, 30))
             .addGroup(layout.createSequentialGroup()
                 .addGap(92, 92, 92)
-                .addComponent(seleccioDia, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(seleccioDia, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -174,7 +196,7 @@ public class EscullSessio extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.out.println((String)seleccioDia.getSelectedItem());
-        Sessio1Part1TestVisual stv = new Sessio1Part1TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
+        Sessio1Nivell1TestVisual stv = new Sessio1Nivell1TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
         stv.pack();
         stv.setVisible(true);
         this.dispose();
@@ -188,14 +210,14 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton0ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Sessio1Part2TestVisual stv = new Sessio1Part2TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
+        Sessio1Nivell3TestVisual stv = new Sessio1Nivell3TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
         stv.pack();
         stv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Sessio1Part3TestVisual stv = new Sessio1Part3TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
+        Sessio1Nivell2TestVisual stv = new Sessio1Nivell2TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
         stv.pack();
         stv.setVisible(true);
         this.dispose();
@@ -235,7 +257,7 @@ public class EscullSessio extends javax.swing.JDialog {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EscullSessio dialog = new EscullSessio(null);
+                EscullSessio dialog = new EscullSessio(null,0);
                 //new EscullSessio().setVisible(true);
             }
         });

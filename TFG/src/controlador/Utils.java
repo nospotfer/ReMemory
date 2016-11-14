@@ -25,16 +25,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import java.io.File;
+import static org.apache.poi.hssf.usermodel.HeaderFooter.file;
 import org.apache.poi.hssf.util.CellReference;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
- 
 import org.jdesktop.swingx.JXTable;
 import vista.BigPhoto;
 import vista.NewUser;
@@ -1672,5 +1669,16 @@ public class Utils {
                 bg.setVisible(true);
             }
         });
+    }
+    
+    
+    public void crearCarpeta(String path){
+        
+        File carpeta = new File(path);
+        if (carpeta.mkdir()) {
+            System.out.println("Directory is created!");
+        } else {
+            System.out.println("Failed to create directory!");
+        }  
     }
 }

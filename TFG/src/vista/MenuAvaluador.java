@@ -53,6 +53,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private ArrayList<Pacient> llistaPacients = new ArrayList<>();
     private ControladorHibernate controlador = new ControladorHibernate();
     private Integer s;
+    private boolean trobat = false;
     
     /**
      * Creates new form mainMenu
@@ -94,7 +95,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         testsTextualsBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        testsVisualsBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         csvButton = new javax.swing.JButton();
@@ -229,11 +230,11 @@ public class MenuAvaluador extends javax.swing.JFrame {
 
         jLabel1.setText("Tests textuals");
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pictureTest.png"))); // NOI18N
-        jButton3.setEnabled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        testsVisualsBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pictureTest.png"))); // NOI18N
+        testsVisualsBtn.setEnabled(false);
+        testsVisualsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                testsVisualsBtnActionPerformed(evt);
             }
         });
 
@@ -251,7 +252,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(testsVisualsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -263,7 +264,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(testsVisualsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(testsTextualsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18))
         );
@@ -434,7 +435,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             idPacient = "";
             csvButton.setEnabled(false);
             testsTextualsBtn.setEnabled(false);
-            jButton3.setEnabled(false);
+            testsVisualsBtn.setEnabled(false);
         }
     }//GEN-LAST:event_seleccionaBtnActionPerformed
 
@@ -568,6 +569,8 @@ public class MenuAvaluador extends javax.swing.JFrame {
         if (reply == JOptionPane.YES_OPTION)
         {
             controlador.borrarPacient(Integer.parseInt(idText.getText()));
+            idText.setText("");
+            nomText.setText("");
             Iterator<Pacient> iter = llistaPacients.iterator();
 
             while (iter.hasNext()) {
@@ -604,9 +607,17 @@ public class MenuAvaluador extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_csvTotalButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void testsVisualsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testsVisualsBtnActionPerformed
         if (idPacient != ""){
-            EscullSessio eS = new EscullSessio(nomText.getText());
+            File file = new File("src"+ File.separator+"resources");
+            String[] names = file.list();
+            for(String name : names) {            
+                if (!new File("src"+ File.separator+"resources"+ File.separator + nomText.getText()).isDirectory()) {
+                    utils.crearCarpeta("src"+ File.separator+"resources" + File.separator + nomText.getText());                    
+                }            
+            }//for
+                  
+            EscullSessio eS = new EscullSessio(nomText.getText(),Integer.parseInt(idPacient));
             eS.pack();
             eS.setVisible(true);
             this.toBack();
@@ -616,7 +627,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             "Alerta",
             JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_testsVisualsBtnActionPerformed
 
     private void seleccionaDbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaDbActionPerformed
         Conector con = new Conector();
@@ -650,7 +661,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             idPacient=Integer.toString(s);
             this.testsTextualsBtn.requestFocus();
             eliminaBtn.setEnabled(true);
-            jButton3.setEnabled(true);
+            testsVisualsBtn.setEnabled(true);
         }
         
     }//GEN-LAST:event_seleccionaDbActionPerformed
@@ -783,7 +794,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             eliminaBtn.setEnabled(true);
             fitxaBtn.setEnabled(true);
             testsTextualsBtn.setEnabled(true);
-            jButton3.setEnabled(true);
+            testsVisualsBtn.setEnabled(true);
         } else{
 //            System.out.println(trobat);
         }
@@ -885,7 +896,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JTextField idText;
     private javax.swing.JButton importaBtn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -901,5 +911,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JButton seleccionaBtn;
     private javax.swing.JButton seleccionaDb;
     private javax.swing.JButton testsTextualsBtn;
+    private javax.swing.JButton testsVisualsBtn;
     // End of variables declaration//GEN-END:variables
 }

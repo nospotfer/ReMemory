@@ -29,10 +29,9 @@ public class ControladorHibernate {
         pacient.setEdat(edat);
         pacient.setAnysEscola(anysEscola);
         
-        session.saveOrUpdate(pacient);
+        session.save(pacient);
         tx.commit();
         session.close();
-        
     }
     
     public PacientDatabase getPacient(int id){
@@ -58,14 +57,20 @@ public class ControladorHibernate {
     public void crearDia(int any, int mes, int numDia, int idPacient){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
-        PacientDatabase pacient = getPacient(idPacient);
+        //PacientDatabase pacient = getPacient(idPacient);
+        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
         Dia dia = new Dia(any, mes, numDia, pacient);
         dia.setAny(any);
         dia.setMes(mes);
         dia.setDia(numDia);
         dia.setPacient(pacient);
+        System.out.println("Dins de crearDia:");
+        System.out.println(any);
+        System.out.println(mes);
+        System.out.println(numDia);
+        dia.setAnymesdia(Integer.toString(any)+Integer.toString(mes)+Integer.toString(numDia));
        
-        session.saveOrUpdate(dia);
+        session.save(dia);
         tx.commit();
         session.close();   
     }
@@ -122,10 +127,6 @@ public class ControladorHibernate {
         tx.commit();
         session.close();                 
     
-    }
-        
-    
-    
-    
+    }   
 
 }

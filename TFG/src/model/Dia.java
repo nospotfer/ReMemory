@@ -16,14 +16,14 @@ public class Dia {
     private int mes;
     private int dia;
     private String anymesdia;
-    private Pacient pacient;
+    private PacientDatabase pacient;
     private Set<Segment> segments;
     
     
     public Dia(){
     }
     
-    public Dia(int any, int mes, int dia, Pacient pacient){
+    public Dia(int any, int mes, int dia, PacientDatabase pacient){
         anymesdia = String.valueOf(any)+String.valueOf(mes)+String.valueOf(dia);
         this.any =any;
         this.mes = mes;
@@ -90,14 +90,14 @@ public class Dia {
     /**
      * @return the pacient
      */
-    public Pacient getPacient() {
+    public PacientDatabase getPacient() {
         return pacient;
     }
 
     /**
      * @param pacient the pacient to set
      */
-    public void setPacient(Pacient pacient) {
+    public void setPacient(PacientDatabase pacient) {
         this.pacient = pacient;
     }
 

@@ -27,7 +27,7 @@ public class Segment {
     public Segment(){
     }
     
-    public Segment(int idSegment, int horaInici,int minutInici, int segonInici, int horaFinal, int minutFinal, Dia dia){
+    public Segment(int idSegment, int horaInici,int minutInici, int segonInici, int horaFinal, int minutFinal, int segonFinal, Dia dia){
         this.idSegment = idSegment;
         this.horaInici = horaInici;
         this.minutInici = minutInici;

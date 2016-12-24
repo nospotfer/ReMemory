@@ -8,9 +8,9 @@
         <property name="nom" column="nomPacient" />
         <property name="edat" column="edat" />
         <property name="anysEscola" column="anysEscola" />
-        <set name="dies" table="Dia" lazy="true" cascade="all">
+        <set name="sessions" table="Sessio" lazy="true" cascade="all">
             <key column="idPacient" />
-            <one-to-many class="model.Dia" /> 
+            <one-to-many class="model.Sessio" /> 
        </set>
     </class>
 </hibernate-mapping>

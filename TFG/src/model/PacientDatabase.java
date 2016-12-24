@@ -18,7 +18,7 @@ public class PacientDatabase {
     private String nom;
     private int edat;
     private int anysEscola;
-    private Set<Dia> dies;
+    private Set<Sessio> sessions;
     
     public PacientDatabase(){
     }
@@ -62,15 +62,15 @@ public class PacientDatabase {
     /**
      * @return the dies
      */
-    public Set<Dia> getDies() {
-        return dies;
+    public Set<Sessio> getDies() {
+        return getSessions();
     }
 
     /**
-     * @param dies the dies to set
+     * @param sessions the dies to set
      */
-    public void setDies(Set<Dia> dies) {
-        this.dies = dies;
+    public void setDies(Set<Sessio> sessions) {
+        this.setSessions(sessions);
     }
 
     /**
@@ -99,5 +99,19 @@ public class PacientDatabase {
      */
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    /**
+     * @return the sessions
+     */
+    public Set<Sessio> getSessions() {
+        return sessions;
+    }
+
+    /**
+     * @param sessions the sessions to set
+     */
+    public void setSessions(Set<Sessio> sessions) {
+        this.sessions = sessions;
     }
 }

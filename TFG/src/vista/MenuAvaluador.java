@@ -8,13 +8,11 @@ package vista;
 import controlador.Conector;
 import controlador.ControladorHibernate;
 import model.Pacient;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import controlador.ZipDirectory;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -634,16 +632,15 @@ public class MenuAvaluador extends javax.swing.JFrame {
         Session session = con.getSession();
         List<PacientDatabase> llista = new ArrayList<>();
         Query q = session.createQuery("from PacientDatabase");
-	llista = q.list();	           
+	llista = q.list();
         
         Object[] ids = new Object[llista.size()];
-        for (int i = 0; i < llista.size(); i++) {
-            ids[i] = llista.get(i).getId();
-        }
-        
-        session.close();
-        try{
-        s = (int) JOptionPane.showInputDialog(
+        if(llista.size()>0){
+            for (int i = 0; i < llista.size(); i++) {
+                ids[i] = llista.get(i).getId();
+            }
+            try{
+                s = (int) JOptionPane.showInputDialog(
                 this,
                 "Pacients: ",
                 "Llistat de pacients",
@@ -651,9 +648,16 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 null,
                 ids,
                 ids[0]);
-        }catch(NullPointerException ex){
-            System.out.println("No s'ha seleccionat res");
+            }catch(NullPointerException ex){
+                System.out.println("No s'ha seleccionat res");
+            }
+        }  
+        else{
+           JOptionPane.showMessageDialog(this, "No hi ha cap pacient a la llista", "Llistapacients", JOptionPane.ERROR_MESSAGE);
         }
+        
+        session.close();
+        
         
         if(s != null) {    
             idText.setText(Integer.toString(s));

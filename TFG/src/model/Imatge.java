@@ -15,18 +15,18 @@ public class Imatge {
     private int hora;
     private int minut;
     private int segon;
-    private Segment segment;
+    private Sessio sessio;
     
     public Imatge(){
     }
     
-    public Imatge(String nomImatge, String path, int hora, int minut, int segon, Segment segment){
+    public Imatge(String nomImatge, String path, int hora, int minut, int segon, Sessio sessio){
         this.nomImatge = nomImatge;
         this.path = path;
         this.hora = hora;
         this.minut = minut;
         this.segon = segon;
-        this.segment = segment;
+        this.sessio = sessio;
     }
 
     /**
@@ -102,15 +102,15 @@ public class Imatge {
     /**
      * @return the segment
      */
-    public Segment getSegment() {
-        return segment;
+    public Sessio getSessio() {
+        return sessio;
     }
 
     /**
-     * @param segment the segment to set
+     * @param sessio
      */
-    public void setSegment(Segment segment) {
-        this.segment = segment;
+    public void setSessio(Sessio sessio) {
+        this.sessio = sessio;
     }
     
 }

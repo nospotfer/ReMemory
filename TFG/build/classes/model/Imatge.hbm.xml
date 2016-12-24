@@ -10,8 +10,8 @@
         <property name="minut" column="minut" />
         <property name="segon" column="segon" />
         
-       <many-to-one name="segment" class="model.Segment" fetch="select">
-           <column name="idSegment" />   
+       <many-to-one name="sessio" class="model.Sessio" fetch="select">
+           <column name="idSessio" />   
         </many-to-one>     
     </class>
 </hibernate-mapping>

@@ -13,10 +13,9 @@
     <property name="hibernate.hbm2ddl.auto">none</property>
     <!-- Declaramos los archivos de mapping-->
     <mapping resource="model/PacientDatabase.hbm.xml"/>
-    <mapping resource="model/Dia.hbm.xml"/>
-    <mapping resource="model/Segment.hbm.xml"/>
-    <mapping resource="model/Pregunta.hbm.xml"/>
+    <mapping resource="model/Sessio.hbm.xml"/>
+    <mapping resource="model/Descripcio.hbm.xml"/>
+    <mapping resource="model/TimeStamp.hbm.xml"/>
     <mapping resource="model/Imatge.hbm.xml"/>
-    <mapping resource="model/DescripcioSegment.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

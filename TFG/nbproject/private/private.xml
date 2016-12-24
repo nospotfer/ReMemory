@@ -3,17 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Dia.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/DescripcionsSessio.java</file>
             <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/EscullSessio.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/NewPacient.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Sessio1Nivell2TestVisual.java</file>
             <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/MenuAvaluador.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Dia.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Sessio1Part1TestVisual.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/controlador/ControladorHibernate.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Imatge.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Sessio0TestVisual.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Segment.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/hibernate.cfg.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Login.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Visor.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Timestamp.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Timestamp.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Sessio.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Descripcio.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Sessio.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Descripcio.hbm.xml</file>
         </group>
     </open-files>
 </project-private>

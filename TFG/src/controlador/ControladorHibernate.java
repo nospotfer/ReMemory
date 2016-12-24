@@ -5,11 +5,14 @@
  */
 package controlador;
 
-import model.Dia;
+import java.util.ArrayList;
+import java.util.List;
+import model.Sessio;
 import model.Imatge;
 import model.PacientDatabase;
-import model.Pregunta;
-import model.Segment;
+import model.Descripcio;
+import model.Timestamp;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -19,7 +22,7 @@ import org.hibernate.Transaction;
  */
 public class ControladorHibernate {
     Conector con = new Conector();
-    
+
     public void crearPacient(String nom, int idPacient, int edat, int anysEscola){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
@@ -54,79 +57,138 @@ public class ControladorHibernate {
         session.close();
     }
     
-    public void crearDia(int any, int mes, int numDia, int idPacient){
+    public void crearSessio(int numSessio,int any, int mes, int numDia, int idPacient){
         Session session = con.getSession();
-        Transaction tx = session.beginTransaction();
-        //PacientDatabase pacient = getPacient(idPacient);
-        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
-        Dia dia = new Dia(any, mes, numDia, pacient);
-        dia.setAny(any);
-        dia.setMes(mes);
-        dia.setDia(numDia);
-        dia.setPacient(pacient);
-        System.out.println("Dins de crearDia:");
-        System.out.println(any);
-        System.out.println(mes);
-        System.out.println(numDia);
-        dia.setAnymesdia(Integer.toString(any)+Integer.toString(mes)+Integer.toString(numDia));
-       
-        session.save(dia);
-        tx.commit();
-        session.close();   
-    }
-    
-    public void crearSegment(int idSegment, int horaInici, int minutInici, int segonInici, int horaFinal, int minutFinal, int segonFinal, String anymesdia){
-        Session session = con.getSession();
-        Transaction tx = session.beginTransaction();
-        Dia dia = (Dia) session.get(Dia.class, anymesdia);
-        Segment segment = new Segment(idSegment, horaInici,minutInici, segonInici, horaFinal, minutFinal, segonFinal, dia);
-        segment.setIdSegment(idSegment);
-        segment.setHoraInici(horaInici);
-        segment.setMinutInici(minutInici);
-        segment.setSegonInici(segonInici);
-        segment.setHoraFinal(horaFinal);
-        segment.setMinutFinal(minutFinal);
-        segment.setSegonFinal(segonFinal);
-        segment.setDia(dia);
+        Transaction tx = session.beginTransaction(); 
+        Query query = session.createQuery("from Sessio where idPacient = :idPacient AND numSessio =:numSessio");
+        query.setParameter("idPacient", idPacient);
+        query.setParameter("numSessio", numSessio);
+        List list = query.list();
+        if(list.isEmpty()){
+            Sessio sessio = (Sessio)list.get(0);
+            Sessio sessioPacient = (Sessio) session.get(Sessio.class, sessio.getIdSessio());
+            
+            PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
+            //Sessio sessio = new Sessio(idSessio, numSessio, any, mes, numDia, pacient);
+            //sessio.setIdSessio(idSessio);
+            sessio.setAny(any);
+            sessio.setMes(mes);
+            sessio.setDia(numDia);
+            sessio.setPacient(pacient);       
+
+            session.save(sessio);
+            tx.commit();
+        }
         
-        session.saveOrUpdate(dia);
-        tx.commit();
         session.close(); 
     }
+
     
-    public void crearImatge(String nomImatge, String path, int hora, int minut, int segon, int idSegment){
+    public void crearImatge(String nomImatge, String path, int hora, int minut, int segon, int idSessio){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
-        Segment segment = (Segment) session.get(Segment.class, idSegment);
+        Sessio sessio = (Sessio) session.get(Sessio.class, idSessio);
         
-        Imatge imatge = new Imatge(nomImatge, path, hora, minut, segon, segment);
+        Imatge imatge = new Imatge(nomImatge, path, hora, minut, segon, sessio);
         imatge.setNomImatge(nomImatge);
         imatge.setPath(path);
         imatge.setHora(hora);
         imatge.setMinut(minut);
         imatge.setSegon(segon);
-        imatge.setSegment(segment);
+        imatge.setSessio(sessio);
         
         session.saveOrUpdate(imatge);
         tx.commit();
         session.close();         
     }
     
-    public void crearPregunta(int idPregunta,String textPregunta, String resposta, int idSegment){
+    
+        public void crearDescripcio(String textDescripcio, int numSessio, int idPacient){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
-        Segment segment = (Segment) session.get(Segment.class, idSegment);
+       // Sessio sessio = (Sessio) session.get(Sessio.class, idSessio);
         
-        Pregunta pregunta = new Pregunta(idPregunta, textPregunta, resposta, segment);
-        pregunta.setIdPregunta(idPregunta);
-        pregunta.setPregunta(textPregunta);
-        pregunta.setResposta(resposta);
-        pregunta.setSegment(segment);
+        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
+        Query query = session.createQuery("from Sessio where idPacient = :idPacient AND numSessio =:numSessio");
+        query.setParameter("idPacient", idPacient);
+        query.setParameter("numSessio", numSessio);
         
-        session.saveOrUpdate(pregunta);
+        List list = query.list();
+        Sessio sessio = (Sessio) list.get(0);
+        int id = sessio.getIdSessio();
+        
+        Sessio sessioDescripcio = (Sessio) session.get(Sessio.class, id);
+        
+        Descripcio descripcio = new Descripcio(textDescripcio, sessioDescripcio); 
+        descripcio.setDescripcio(textDescripcio);
+        descripcio.setSessio(sessio);
+   
+        session.saveOrUpdate(descripcio);
         tx.commit();
-        session.close();                 
+        session.close();          
+    }
+        
+    public void crearTimestamp(float temps, int idPacient, int numSessio){
+        Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+        
+        Query query = session.createQuery("from Sessio where idPacient = :idPacient AND numSessio =:numSessio");
+        query.setParameter("idPacient", idPacient);
+        query.setParameter("numSessio", numSessio);
+        
+        List list = query.list();
+        Sessio sessio = (Sessio) list.get(0);
+        int id = sessio.getIdSessio();
+             
+        Timestamp timestamp = new Timestamp(temps,sessio);
+        timestamp.setTemps(temps);
+        timestamp.setSessio(sessio);
+        session.saveOrUpdate(timestamp);
+        tx.commit();
+        session.close();  
+    }
     
-    }   
+    
+    public List getDescripcions(int idPacient, int numSessio){
+        Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+        
+        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
+        Query query = session.createQuery("from Sessio where idPacient =:idPacient AND numSessio =:numSessio");
+        query.setParameter("idPacient", idPacient);
+        query.setParameter("numSessio", numSessio);
+        
+        List list = query.list();
+        List finalList = new ArrayList();
+        List tempList = new ArrayList();
+        //Sessio sessio =(Sessio)list.get(0);
+        Sessio sessio;
+        
+        for(int i=0; i< list.size();i++){
+            sessio =(Sessio)list.get(i);
+            query = session.createQuery("from Descripcio where idSessio =:idSessio");
+            query.setParameter("idSessio",sessio.getIdSessio());
+            tempList = query.list();
+            finalList.addAll(tempList);
+        }
+        
+        
+        
+       /* query = session.createQuery("from Descripcio where idSessio =:idSessio");
+        query.setParameter("idSessio",sessio.getIdSessio());
+        list = query.list();*/
+        if(finalList.isEmpty()){
+            System.out.println("No hi havia cap descripcio");
+        }
+        else{
+            System.out.println("Hi havien descripcions");
+        }
+        session.close();
+        return finalList;
+    }
+    
+    /*public List getSessionsOfDescripcions(){
+    }*/
+    
 
 }

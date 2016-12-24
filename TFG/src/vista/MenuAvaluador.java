@@ -458,10 +458,11 @@ public class MenuAvaluador extends javax.swing.JFrame {
     }
 
     private void fitxaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitxaBtnActionPerformed
-        FitxaPacient nF = new FitxaPacient(this,true,idPacient);
+        FitxaPacient nF = new FitxaPacient(this,pacientActual);
         nF.pack();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        nF.setSize(screenSize.width, screenSize.height-30);
+        //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        //nF.setSize(screenSize.width, screenSize.height-30);
+        nF.setExtendedState(JFrame.MAXIMIZED_BOTH);
         nF.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosed(java.awt.event.WindowEvent e) {

@@ -5,16 +5,9 @@
         <group>
             <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/DescripcionsSessio.java</file>
             <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/EscullSessio.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Sessio1Nivell2TestVisual.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/MenuAvaluador.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Login.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Visor.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Timestamp.hbm.xml</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Timestamp.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Sessio.hbm.xml</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Descripcio.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Sessio.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Descripcio.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/TestVisor.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/FitxaPacient.java</file>
+            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/MoviePlayer.java</file>
         </group>
     </open-files>
 </project-private>

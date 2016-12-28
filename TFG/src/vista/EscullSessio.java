@@ -10,11 +10,21 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -583,7 +593,8 @@ public class EscullSessio extends javax.swing.JDialog {
 
     private void VideoSessio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio2ActionPerformed
         String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
-        obrirVisor(path,2);
+        //obrirVisor(path,2);
+        
     }//GEN-LAST:event_VideoSessio2ActionPerformed
 
     private void seleccioDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccioDiaActionPerformed
@@ -619,8 +630,17 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1";
-            obrirVisor(path,1);
+            /*new JFXPanel();
+            Platform.setImplicitExit(true);
+            javafx.application.Application.launch(MoviePlayer.class);*/
+            TestVisor test = new TestVisor();
+            test.prova();
+            
+            
         }
+           
+                               
+        
     }//GEN-LAST:event_VideoSessio1ActionPerformed
 
     private void DescripcioSessio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio1ActionPerformed

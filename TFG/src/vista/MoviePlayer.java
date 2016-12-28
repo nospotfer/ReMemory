@@ -5,14 +5,22 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import java.io.File;
+import java.io.IOException;
 import java.net.URI;
+import java.text.DecimalFormat;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
 import javafx.scene.Group;
@@ -28,27 +36,46 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.WindowEvent;
 import javafx.util.Duration;
+import javax.sound.sampled.AudioFileFormat;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.TargetDataLine;
 /**
  *
  * @author Sergi
  */
 public class MoviePlayer extends Application{
 
-    public static void main(String[] args){
+   /* public static void main(String[] args){
         launch(args);
     }
-    public MoviePlayer(){
-        
+    */
+    ControladorHibernate controlador;
+    TargetDataLine line;
+    File wavFile;
+    AudioFileFormat.Type fileType = AudioFileFormat.Type.WAVE;
+    Thread one;
+    float start;
+    
+   
+    
+    public void test() throws Exception{
+        launch();
+        //start(new Stage());
     }
     
     
     @Override
     public void start(Stage primaryStage) throws Exception {
+        controlador = new ControladorHibernate();
         primaryStage.setTitle("Movie Player");
         Group root = new Group();
         String path = "src"+ File.separator+"resources"+ File.separator+"video.mp4";
-        //String path = "C:\\Users\\user\\Desktop\\Rememory\\TFG\\src\\resources\\video.mp4";
         File f = new File(path);
         URI u = f.toURI();
         Media media = new Media(u.toString());
@@ -72,27 +99,80 @@ public class MoviePlayer extends Application{
         final VBox vbox = new VBox();
         final HBox hbox = new HBox();
         final Button playButton = new Button("Play");
+        playButton.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+                player.play();
+            }
+        
+        });
+          
+        final Button stopButton = new Button("Stop");
+        stopButton.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+                player.stop();
+            }
+        
+        });
+        final Button timestampButton = new Button("Timestamp");
+        timestampButton.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+                int idPacient =0;
+                int numSessio=0;
+                
+                Duration segons = player.currentTimeProperty().get();
+
+                System.out.println("Timestamp: "+(float)segons.toSeconds());
+                //controlador.crearTimestamp((float)segons.toSeconds(), idPacient, numSessio);
+                //System.out.println("Temps: "+player.currentTimeProperty());
+            }
+        
+        });
+        
+        final Button recordButton = new Button("Start Recording");
+        recordButton.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+                wavFile = new File("src"+ File.separator+"resources"+File.separator+"test.wav");
+                one = new Thread(){
+                @Override
+                public void run(){
+                    startRecording();
+                }
+            };
+            one.start();
+            }
+        });
+        
+       final Button stopRecording = new Button("stop Recording");
+        timestampButton.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+               line.stop();
+               line.close();
+               one.interrupt();
+            }
+        
+        });
         hbox.getChildren().add(playButton);
+        hbox.getChildren().add(stopButton);
+        hbox.getChildren().add(timestampButton);
+        hbox.getChildren().add(recordButton);
+        hbox.getChildren().add(stopRecording);
+        
         final Slider slider = new Slider();
         vbox.getChildren().add(slider);
         
-        /*final HBox hbox = new HBox(2);
-        final int bands = player.getAudioSpectrumNumBands();
-        final Rectangle[] rects = new Rectangle[bands];
-        for(int i=0;i<rects.length;i++){
-            rects[i] = new Rectangle();
-            rects[i].setFill(Color.GREENYELLOW);
-            hbox.getChildren().add(rects[i]);
-        }
         
-        vbox.getChildren().add(hbox);*/
         root.getChildren().add(view);
         root.getChildren().add(vbox);
         root.getChildren().add(hbox);
         Scene scene = new Scene(root,400,400, Color.BLACK);
         primaryStage.setScene(scene);
         primaryStage.show();
-        player.play();
+       // player.play();
         
         player.setOnReady(new Runnable(){
             @Override
@@ -100,19 +180,14 @@ public class MoviePlayer extends Application{
                 int w = player.getMedia().getWidth();
                 int h = player.getMedia().getHeight();
                 
-                /*hbox.setMinWidth(w);
-                int bandWidth = w/rects.length;
-                for(Rectangle r:rects){
-                    r.setWidth(bandWidth);
-                    r.setHeight(2);
-                }*/
-                //hbox.setMinHeight(bands);
+               
                 primaryStage.setMinWidth(w);
                 primaryStage.setMinHeight(h);
                 
                 
                 vbox.setMinSize(w, 100);
-                vbox.setTranslateY(h-50);
+                vbox.setTranslateY(h-20);
+                hbox.setTranslateY(h-8);
                 
                 slider.setMin(0.0);
                 slider.setValue(0.0);
@@ -121,10 +196,10 @@ public class MoviePlayer extends Application{
                 slideIn.getKeyFrames().addAll(
                         new KeyFrame(new Duration(0),
                         new KeyValue(vbox.translateYProperty(),h),
-                        new KeyValue(vbox.opacityProperty(),0.0)
+                        new KeyValue(vbox.opacityProperty(),0.0)                       
                         ),
                         new KeyFrame(new Duration(300),
-                        new KeyValue(vbox.translateYProperty(),h-50),
+                        new KeyValue(vbox.translateYProperty(),h-20),
                         new KeyValue(vbox.opacityProperty(),0.9)
                         )
                 );
@@ -132,7 +207,7 @@ public class MoviePlayer extends Application{
                                 
                 slideOut.getKeyFrames().addAll(
                         new KeyFrame(new Duration(0),
-                        new KeyValue(vbox.translateYProperty(),h-50),
+                        new KeyValue(vbox.translateYProperty(),h-20),
                         new KeyValue(vbox.opacityProperty(),0.9)
                         ),
                         new KeyFrame(new Duration(300),
@@ -155,14 +230,58 @@ public class MoviePlayer extends Application{
                 player.seek(Duration.seconds(slider.getValue()));
             }
         });
-        /*player.setAudioSpectrumListener(new AudioSpectrumListener(){
-            @Override
-            public void spectrumDataUpdate(double timestamp, double duration, float[] magnitudes, float[] phases) {
-                for(int i=0;i<rects.length;i++){
-                   //double h = mags[i]+60;
-                   rects[i].setHeight(player.getMedia().getHeight());
-                }
-            }       
-        });*/
+        
+       primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+        @Override
+        public void handle(WindowEvent event) {
+            
+        }
+});
     }
+    
+    
+    AudioFormat getAudioFormat() { 
+        float sampleRate = 6000;
+        int sampleSizeInBits = 8;
+        int channels = 2;
+        boolean signed = true;
+        boolean bigEndian = true;
+        AudioFormat format = new AudioFormat(sampleRate, sampleSizeInBits, channels, signed, bigEndian);
+        return format;
+    }
+    
+    
+    public void startRecording(){
+            AudioFormat format = getAudioFormat();
+                DataLine.Info info = new DataLine.Info(TargetDataLine.class, getAudioFormat());
+                // checks if system supports the data line
+               if (!AudioSystem.isLineSupported(info)) {
+                   System.out.println("Line not supported");
+                   System.exit(0);
+               }
+                try {
+                    line = (TargetDataLine) AudioSystem.getLine(info);
+                } catch (LineUnavailableException ex) {
+                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                try {
+                    line.open(format);
+                } catch (LineUnavailableException ex) {
+                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
+                }
+               line.start();   // start capturing
+
+               System.out.println("Start capturing...");
+               AudioInputStream ais = new AudioInputStream(line);
+               System.out.println("Start recording...");
+                try {
+                    // start recording
+                    AudioSystem.write(ais, fileType, wavFile);
+                } catch (IOException ex) {
+                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }
+    
+    
+    
 }

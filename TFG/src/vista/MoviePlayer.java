@@ -97,70 +97,6 @@ public class MoviePlayer extends Application{
             }      
         });
         final VBox vbox = new VBox();
-        final HBox hbox = new HBox();
-        final Button playButton = new Button("Play");
-        playButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player.play();
-            }
-        
-        });
-          
-        final Button stopButton = new Button("Stop");
-        stopButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player.stop();
-            }
-        
-        });
-        final Button timestampButton = new Button("Timestamp");
-        timestampButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                int idPacient =0;
-                int numSessio=0;
-                
-                Duration segons = player.currentTimeProperty().get();
-
-                System.out.println("Timestamp: "+(float)segons.toSeconds());
-                //controlador.crearTimestamp((float)segons.toSeconds(), idPacient, numSessio);
-                //System.out.println("Temps: "+player.currentTimeProperty());
-            }
-        
-        });
-        
-        final Button recordButton = new Button("Start Recording");
-        recordButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                wavFile = new File("src"+ File.separator+"resources"+File.separator+"test.wav");
-                one = new Thread(){
-                @Override
-                public void run(){
-                    startRecording();
-                }
-            };
-            one.start();
-            }
-        });
-        
-       final Button stopRecording = new Button("stop Recording");
-        timestampButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-               line.stop();
-               line.close();
-               one.interrupt();
-            }
-        
-        });
-        hbox.getChildren().add(playButton);
-        hbox.getChildren().add(stopButton);
-        hbox.getChildren().add(timestampButton);
-        hbox.getChildren().add(recordButton);
-        hbox.getChildren().add(stopRecording);
         
         final Slider slider = new Slider();
         vbox.getChildren().add(slider);
@@ -168,7 +104,6 @@ public class MoviePlayer extends Application{
         
         root.getChildren().add(view);
         root.getChildren().add(vbox);
-        root.getChildren().add(hbox);
         Scene scene = new Scene(root,400,400, Color.BLACK);
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -187,7 +122,7 @@ public class MoviePlayer extends Application{
                 
                 vbox.setMinSize(w, 100);
                 vbox.setTranslateY(h-20);
-                hbox.setTranslateY(h-8);
+                
                 
                 slider.setMin(0.0);
                 slider.setValue(0.0);

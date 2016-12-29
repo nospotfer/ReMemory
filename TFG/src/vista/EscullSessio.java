@@ -633,8 +633,10 @@ public class EscullSessio extends javax.swing.JDialog {
             /*new JFXPanel();
             Platform.setImplicitExit(true);
             javafx.application.Application.launch(MoviePlayer.class);*/
-            TestVisor test = new TestVisor();
+            
+           TestVisor test = new TestVisor();
             test.prova();
+            
             
             
         }

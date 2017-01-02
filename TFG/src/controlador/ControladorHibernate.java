@@ -106,6 +106,8 @@ public class ControladorHibernate {
         public void crearDescripcio(String textDescripcio, int numSessio, int idPacient){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
+        System.out.println("numSessio: "+numSessio);
+        System.out.println("idPacient: "+idPacient);
        // Sessio sessio = (Sessio) session.get(Sessio.class, idSessio);
         
         PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
@@ -146,8 +148,7 @@ public class ControladorHibernate {
         session.saveOrUpdate(timestamp);
         tx.commit();
         session.close();  
-    }
-    
+    }  
     
     public List getDescripcions(int idPacient, int numSessio){
         Session session = con.getSession();
@@ -167,6 +168,44 @@ public class ControladorHibernate {
         for(int i=0; i< list.size();i++){
             sessio =(Sessio)list.get(i);
             query = session.createQuery("from Descripcio where idSessio =:idSessio");
+            query.setParameter("idSessio",sessio.getIdSessio());
+            tempList = query.list();
+            finalList.addAll(tempList);
+        }
+        
+        
+       /* query = session.createQuery("from Descripcio where idSessio =:idSessio");
+        query.setParameter("idSessio",sessio.getIdSessio());
+        list = query.list();*/
+        if(finalList.isEmpty()){
+            System.out.println("No hi havia cap descripcio");
+        }
+        else{
+            System.out.println("Hi havien descripcions");
+        }
+        session.close();
+        return finalList;
+    }
+ 
+    
+    public List getTimestamps(int idPacient, int numSessio){
+         Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+        
+        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
+        Query query = session.createQuery("from Sessio where idPacient =:idPacient AND numSessio =:numSessio");
+        query.setParameter("idPacient", idPacient);
+        query.setParameter("numSessio", numSessio);
+        
+        List list = query.list();
+        List finalList = new ArrayList();
+        List tempList = new ArrayList();
+        //Sessio sessio =(Sessio)list.get(0);
+        Sessio sessio;
+        
+        for(int i=0; i< list.size();i++){
+            sessio =(Sessio)list.get(i);
+            query = session.createQuery("from Timestamp where idSessio =:idSessio");
             query.setParameter("idSessio",sessio.getIdSessio());
             tempList = query.list();
             finalList.addAll(tempList);

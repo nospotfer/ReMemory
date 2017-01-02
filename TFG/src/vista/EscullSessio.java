@@ -6,12 +6,14 @@
 package vista;
 
 import controlador.ControladorHibernate;
-import java.awt.*;
+import java.awt.Font;
+import java.awt.Frame;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -29,6 +31,7 @@ import javax.imageio.ImageIO;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JOptionPane;
+import model.Timestamp;
 
 /**
  *
@@ -59,7 +62,7 @@ public class EscullSessio extends javax.swing.JDialog {
         jLabel1.setFont(font);
         this.setLocationRelativeTo(null);
         
-        seleccioDia.removeAllItems();
+       
         //File file = new File("src"+ File.separator+"resources"+ File.separator+nomPacient);
         //String[] days = file.list();
         for(int i=0;i<8;i++){
@@ -96,8 +99,7 @@ public class EscullSessio extends javax.swing.JDialog {
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
         }*/
-        seleccioDia.validate();
-        seleccioDia.repaint();
+        
     }
 
     public void getImages(String path) throws IOException{
@@ -126,7 +128,6 @@ public class EscullSessio extends javax.swing.JDialog {
         panel2 = new javax.swing.JPanel();
         VideoSessio2 = new javax.swing.JButton();
         DescripcioSessio2 = new javax.swing.JButton();
-        seleccioDia = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         panel3 = new javax.swing.JPanel();
         VideoSessio3 = new javax.swing.JButton();
@@ -155,6 +156,7 @@ public class EscullSessio extends javax.swing.JDialog {
         VideoSessio7 = new javax.swing.JButton();
         DescripcioSessio7 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        descripcions = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -196,13 +198,6 @@ public class EscullSessio extends javax.swing.JDialog {
                     .addComponent(DescripcioSessio2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        seleccioDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        seleccioDia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seleccioDiaActionPerformed(evt);
-            }
-        });
 
         jLabel2.setText("Sessió 2");
 
@@ -268,7 +263,7 @@ public class EscullSessio extends javax.swing.JDialog {
             .addGroup(panel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(VideoSessio4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(DescripcioSessio4)
                 .addGap(8, 8, 8))
         );
@@ -477,151 +472,187 @@ public class EscullSessio extends javax.swing.JDialog {
 
         jLabel8.setText("Sessió 7");
 
+        descripcions.setText("Veure descripcions");
+        descripcions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                descripcionsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(seleccioDia, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(label5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(label5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(39, 39, 39))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(178, 178, 178)
+                .addComponent(descripcions, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addContainerGap(34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addComponent(jLabel1)
-                                .addGap(47, 47, 47)
-                                .addComponent(jLabel2))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(jLabel3)))
-                        .addGap(18, 18, 18)
+                                .addGap(17, 17, 17)
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
+                                .addGap(39, 39, 39)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(36, 36, 36)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(panel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel4))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addComponent(label5)
-                                .addGap(47, 47, 47)
-                                .addComponent(jLabel7))
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(jLabel8)))
-                        .addGap(18, 18, 18)
+                                .addGap(19, 19, 19)
+                                .addComponent(label5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel7)
+                                .addGap(39, 39, 39)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(panel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(37, 37, 37)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(panel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel6)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(seleccioDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(29, 29, 29)
+                .addComponent(descripcions)
+                .addGap(46, 46, 46))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void DescripcioSessio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio2ActionPerformed
-        Sessio1Nivell3TestVisual stv = new Sessio1Nivell3TestVisual(nomPacient,(String)seleccioDia.getSelectedItem());
-        stv.pack();
-        stv.setVisible(true);
-        this.dispose();
+        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió2 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
+            Descripcions descripcions = new Descripcions();
+            descripcions.prova(path,idPacient, 2);                
+        }               
     }//GEN-LAST:event_DescripcioSessio2ActionPerformed
 
     private void VideoSessio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio2ActionPerformed
-        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
-        //obrirVisor(path,2);
-        
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió2 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
+           TestVisor test = new TestVisor();
+           test.prova(path, idPacient, 2);                
+        }       
     }//GEN-LAST:event_VideoSessio2ActionPerformed
 
-    private void seleccioDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccioDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_seleccioDiaActionPerformed
-
     private void VideoSessio3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio3ActionPerformed
-        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3";
-        obrirVisor(path,3);
+        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió3 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3";
+           TestVisor test = new TestVisor();
+           test.prova(path, idPacient, 3);                
+        }       
     }//GEN-LAST:event_VideoSessio3ActionPerformed
 
     private void DescripcioSessio3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio3ActionPerformed
-        // TODO add your handling code here:
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió3 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3";
+            Descripcions descripcions = new Descripcions();
+            descripcions.prova(path,idPacient, 3);                
+        }                       
     }//GEN-LAST:event_DescripcioSessio3ActionPerformed
 
     private void VideoSessio4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio4ActionPerformed
-        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió4 de l'usuari: "+nomPacient+" no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió4 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4";
-            obrirVisor(path,4);
-        }
+           TestVisor test = new TestVisor();
+           test.prova(path, idPacient, 4);                
+        }       
     }//GEN-LAST:event_VideoSessio4ActionPerformed
 
     private void DescripcioSessio4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio4ActionPerformed
-        // TODO add your handling code here:
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió4 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4";
+            Descripcions descripcions = new Descripcions();
+            descripcions.prova(path,idPacient, 4);                
+        }                
     }//GEN-LAST:event_DescripcioSessio4ActionPerformed
 
     private void VideoSessio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio1ActionPerformed
@@ -630,65 +661,110 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1";
-            /*new JFXPanel();
-            Platform.setImplicitExit(true);
-            javafx.application.Application.launch(MoviePlayer.class);*/
-            
            TestVisor test = new TestVisor();
-            test.prova();
-            
-            
-            
-        }
-           
-                               
-        
+           test.prova(path, idPacient, 1);                
+        }                                                
     }//GEN-LAST:event_VideoSessio1ActionPerformed
 
     private void DescripcioSessio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio1ActionPerformed
-        // TODO add your handling code here:
-        DescripcionsSessio desc = null;
-        desc = new DescripcionsSessio(nomPacient, idPacient, 1);
-        desc.pack();
-        desc.setVisible(true);
-        this.dispose();
+        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1";
+        Descripcions descripcions = new Descripcions();
+        descripcions.prova(path,idPacient, 1);
     }//GEN-LAST:event_DescripcioSessio1ActionPerformed
 
     private void VideoSessio8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio8ActionPerformed
-        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8";
-        obrirVisor(path,8);        
+        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió8 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8";
+           TestVisor test = new TestVisor();
+           test.prova(path, idPacient, 8);                
+        }       
     }//GEN-LAST:event_VideoSessio8ActionPerformed
 
     private void DescripcioSessio8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio8ActionPerformed
-        
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió8 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8";
+            Descripcions descripcions = new Descripcions();
+            descripcions.prova(path,idPacient, 8);                
+        }               
     }//GEN-LAST:event_DescripcioSessio8ActionPerformed
 
     private void VideoSessio6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio6ActionPerformed
-        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6";
-        obrirVisor(path,6);        
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió6 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6";
+           TestVisor test = new TestVisor();
+           test.prova(path, idPacient, 6);                
+        }        
     }//GEN-LAST:event_VideoSessio6ActionPerformed
 
     private void DescripcioSessio6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio6ActionPerformed
-        // TODO add your handling code here:
+        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió6 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6";
+            Descripcions descripcions = new Descripcions();
+            descripcions.prova(path,idPacient, 6);                
+        }               
     }//GEN-LAST:event_DescripcioSessio6ActionPerformed
 
     private void VideoSessio5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio5ActionPerformed
-        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5";
-        obrirVisor(path,5);       
+        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió5 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5";
+           TestVisor test = new TestVisor();
+           test.prova(path, idPacient, 5);                
+        }           
     }//GEN-LAST:event_VideoSessio5ActionPerformed
 
     private void DescripcioSessio5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio5ActionPerformed
-        // TODO add your handling code here:
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió5 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5";
+            Descripcions descripcions = new Descripcions();
+            descripcions.prova(path,idPacient, 5);                
+        }               
     }//GEN-LAST:event_DescripcioSessio5ActionPerformed
 
     private void VideoSessio7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio7ActionPerformed
-        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7";
-        obrirVisor(path,7);     
+        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió7 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7";
+           TestVisor test = new TestVisor();
+           test.prova(path, idPacient, 1);                
+        }       
     }//GEN-LAST:event_VideoSessio7ActionPerformed
 
     private void DescripcioSessio7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio7ActionPerformed
-        // TODO add your handling code here:
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió7 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7";
+            Descripcions descripcions = new Descripcions();
+            descripcions.prova(path,idPacient, 7);                
+        }                
     }//GEN-LAST:event_DescripcioSessio7ActionPerformed
+
+    private void descripcionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descripcionsActionPerformed
+        DescripcionsSessio ds = new DescripcionsSessio(idPacient);        // TODO add your handling code here:
+        ds.pack();
+        ds.setVisible(true);
+    }//GEN-LAST:event_descripcionsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -780,6 +856,7 @@ public class EscullSessio extends javax.swing.JDialog {
     private javax.swing.JButton VideoSessio6;
     private javax.swing.JButton VideoSessio7;
     private javax.swing.JButton VideoSessio8;
+    private javax.swing.JButton descripcions;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -796,6 +873,5 @@ public class EscullSessio extends javax.swing.JDialog {
     private javax.swing.JPanel panel6;
     private javax.swing.JPanel panel7;
     private javax.swing.JPanel panel8;
-    private javax.swing.JComboBox<String> seleccioDia;
     // End of variables declaration//GEN-END:variables
 }

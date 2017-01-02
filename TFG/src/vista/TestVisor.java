@@ -5,11 +5,17 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Platform;
@@ -30,8 +36,6 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.util.Duration;
 import javax.sound.sampled.AudioFileFormat;
@@ -43,8 +47,10 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.TargetDataLine;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import static vista.Descripcions.frame;
 
 /**
  *
@@ -63,85 +69,72 @@ public class TestVisor {
     static Button stopRecordButton;
     static Slider slider ;
     static JFrame frame;
+    static String folderPath;
+    static ControladorHibernate controlador;
     
-     private static void initAndShowGUI() {
+    static double tempsInici;
+    static double timeEnd;
+    static long timeStart;
+    
+    static Button stopRecord;
+    static Button timestampButton;
+    
+     private static void initAndShowGUI(String path, int idPacient, int numSessio) {
         // This method is invoked on the EDT thread
-        frame = new JFrame("Swing and JavaFX");
+        controlador = new ControladorHibernate();
+        frame = new JFrame("VideoX");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);        
         final JFXPanel fxPanel = new JFXPanel();
-        JButton record = new JButton("Start recording");
-        
-        
-        record.addActionListener(new ActionListener(){
+        Platform.setImplicitExit(false);    
+      
+        JButton acceptButton = new JButton("Acceptar");
+        acceptButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(java.awt.event.ActionEvent ae) {
-                wavFile = new File("src"+ File.separator+"resources"+File.separator+"test.wav");
-                one = new Thread(){
-                @Override
-                public void run(){
-                     stopRecordButton.setDisable(true);
-                    StartRecording();                 
-                }
-            };
-            one.start();
+               frame.dispose();
             }
         });
         
-        JButton stopRecord = new JButton("Stop recording");
-        
-         stopRecord.addActionListener(new ActionListener(){
+        JButton closeButton = new JButton("Sortir");
+         closeButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(java.awt.event.ActionEvent ae) {
-               line.stop();
-               line.close();
-               one.interrupt();
+              int reply = JOptionPane.showConfirmDialog(null, "Segur que vols sortir?", "Exit", JOptionPane.YES_NO_OPTION);
+                if (reply == JOptionPane.YES_OPTION) {
+                    player.stop();
+                    frame.dispose();
+                }    
             }
-        });
-         
-         JButton timestampButton = new JButton("Stop recording");
-        
-         timestampButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent ae) {
-                Duration segons = player.currentTimeProperty().get();
-                System.out.println("Timestamp: "+(float)segons.toSeconds());
-            }
-        });
-        
+        });      
         
         JPanel panel =  new JPanel();
-        panel.add(record);
-        panel.add(stopRecord);
-        panel.add(timestampButton);
+        panel.add(acceptButton);
+        panel.add(closeButton);
+        //panel.add(timestampButton);
         frame.add(fxPanel,BorderLayout.CENTER);
         frame.add(panel, BorderLayout.PAGE_END);
-        //frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                initFX(fxPanel);   
+                initFX(fxPanel, path, idPacient, numSessio);   
             }
        });
     }
      
      
-       private static void initFX(JFXPanel fxPanel) {
+       private static void initFX(JFXPanel fxPanel, String path, int idPacient, int numSessio) {
         // This method is invoked on the JavaFX thread
-        Scene scene = createScene();
+        Scene scene = createScene(path,idPacient, numSessio);
         fxPanel.setScene(scene);
     }
     
-        private static Scene createScene() {
-        Group  root  =  new  Group();
-        //Scene scene = new Scene(root,400,400, Color.BLACK);
-        Screen screen = Screen.getPrimary();
-        Rectangle2D bounds = screen.getVisualBounds();
-
-        String path = "src"+ File.separator+"resources"+ File.separator+"video.mp4";
-        File f = new File(path);
-        
+    private static Scene createScene(String path, int idPacient, int numSessio) {
+        Group root = new Group();
+        String pathVideo = path + File.separator+"video.mp4";
+        File f = new File(pathVideo);
         URI u = f.toURI();
         Media media = new Media(u.toString());
         media.getWidth();
@@ -159,6 +152,16 @@ public class TestVisor {
             }
         });
         
+         final Button pauseButton = new Button("Pause");
+        pauseButton.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+                player.pause();
+                //playButton.setText("Stop");
+            }
+        });
+        
+        
         
         final Button stopButton = new Button("Stop");
         stopButton.setOnAction(new EventHandler<ActionEvent>(){
@@ -170,27 +173,93 @@ public class TestVisor {
         });
         
         hbox.getChildren().add(playButton);
+        hbox.getChildren().add(pauseButton);
         hbox.getChildren().add(stopButton);
         
         final VBox vbox = new VBox();
         slider = new Slider();   
         vbox.getChildren().add(slider);
         vbox.setMinWidth(600);
-        Scene  scene  =  new  Scene(root, media.getWidth() ,media.getHeight(),Color.ALICEBLUE);
+        Scene  scene  =  new  Scene(root, media.getWidth() ,media.getHeight(),Color.ALICEBLUE);            
+     
         //scene.getWidth();
         //vbox.setTranslateY(350);
         //hbox.setTranslateY(370);
+        
+          final HBox hbox2 = new HBox();
+        
+        Button record = new Button("Start recording");
+        record.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+           public void handle(ActionEvent event) {
+                wavFile = new File(path+File.separator+"gravacio.wav");
+                one = new Thread(){
+                @Override
+                public void run(){      
+                    stopRecord.setDisable(false);
+                    timestampButton.setDisable(false);
+                    //stopRecord.setEnabled(true);
+                    //timestampButton.setEnabled(true);
+                    timeStart =  System.currentTimeMillis();
+                    //Counter.countPrimes(1000000);
+                    StartRecording();           
+                    
+                }
+            };
+            one.start();
+            }
+        });
+        
+        stopRecord = new Button("Stop recording");
+        stopRecord.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+               line.stop();
+               line.close();
+               one.interrupt();
+               
+                stopRecord.setDisable(true);
+                timestampButton.setDisable(true);
+            }
+        });
+        stopRecord.setDisable(false);
+
+        timestampButton = new Button("Timestamp");       
+        timestampButton.setOnAction(new EventHandler<ActionEvent>(){
+           @Override
+           public void handle(ActionEvent event) {
+               /*Duration segons = player.currentTimeProperty().get();
+               segons.toSeconds();
+                System.out.println("Timestamp: "+(float)segons.toSeconds());             
+                controlador.crearTimestamp((float)segons.toSeconds(), idPacient, numSessio);*/
+                timeEnd = (System.currentTimeMillis() - timeStart)-1000;
+                System.out.println( timeEnd);
+                controlador.crearTimestamp((float)timeEnd, idPacient, numSessio);
+            }
+        });
+        timestampButton.setDisable(true);
+        
+        hbox2.getChildren().add(record);
+        hbox2.getChildren().add(timestampButton);
+        hbox2.getChildren().add(stopRecord);
+       
+
+        
         root.getChildren().add(view);
         root.getChildren().add(hbox);
         root.getChildren().add(vbox);
+        root.getChildren().add(hbox2);
+        
         player.setOnReady(new Runnable(){
             @Override
             public void run() {
                 int w = player.getMedia().getWidth();
                 int h = player.getMedia().getHeight();
-                frame.setSize(w, h+100);
+                frame.setSize(w, h+150);
                 vbox.setTranslateY(h-10);
                 hbox.setTranslateY(h);
+                hbox2.setTranslateY(h+50);
+                hbox2.setTranslateX((w/2)-125);
                 
                slider.setMin(0.0);
                slider.setValue(0.0);
@@ -211,16 +280,18 @@ public class TestVisor {
                 player.seek(Duration.seconds(slider.getValue()));
             }
         });
-        
-        
+          Platform.setImplicitExit(false);
         return (scene);
     }
         
-       public void prova() {
+       public void prova(String path, int idPacient, int numSessio) {
+           
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                initAndShowGUI();
+                  Platform.setImplicitExit(false);
+                initAndShowGUI(path, idPacient, numSessio);
+                Platform.setImplicitExit(false);
 
             }
         });
@@ -234,9 +305,7 @@ public class TestVisor {
         boolean bigEndian = true;
         AudioFormat format = new AudioFormat(sampleRate, sampleSizeInBits, channels, signed, bigEndian);
         return format;
-    }
-    
-    
+    }  
     public static void  StartRecording(){
                 AudioFormat format = getAudioFormat();
                 DataLine.Info info = new DataLine.Info(TargetDataLine.class, getAudioFormat());

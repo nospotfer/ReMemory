@@ -45,38 +45,42 @@ public class DescripcionsSessio extends javax.swing.JFrame {
      * Creates new form DescripcionsSessio
      */
     private ControladorHibernate controlador;
-    private String nomPacient;
     private int idPacient;
-    private int numSessio;
     
     private File soundFile;
     private AudioInputStream audioStream;
     private AudioFormat audioFormat;
     private SourceDataLine sourceLine;
     
-    public DescripcionsSessio(final String nomPacient, int idPacient, int numSessio){
+    public DescripcionsSessio(int idPacient){
+        this.setTitle("Veure descripcions");
         controlador = new ControladorHibernate();
-        this.nomPacient= nomPacient;
         this.idPacient = idPacient;
-        this.numSessio = numSessio;
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);               
-        jTextPane2.setEditable(false);
+        jTextArea1.setEditable(false);
         Color color = new Color(240,240,240);
-        jTextPane2.setBackground(color);
+        jTextArea1.setBackground(color);
         Font font = new Font("Tahoma", Font.BOLD,13);
-        jTextPane2.setFont(font);
+        jTextArea1.setFont(font);
+        String descripcions ="";
+        
+        
        
-        List list = controlador.getDescripcions(idPacient, numSessio);
-        for(int i=0;i<list.size();i++){
-            Descripcio desc = (Descripcio)list.get(i);
-            jTextPane2.setText(jTextPane2.getText()+desc.getDescripcio()+"\n\n");
-        }
+        for(int i=0;i<8;i++){
+            List list = controlador.getDescripcions(idPacient, i+1);
+            if(list!= null){
+                for(int j=0;j<list.size();j++){
+                    Descripcio desc = (Descripcio)list.get(j);
+                    int numeroDeSessio = i+1;
+                     descripcions += "Sessió "+ numeroDeSessio +":  "+desc.getDescripcio()+"\n";
+                }
+            } 
+        }       
         
-        
-        
-        jTextPane2.revalidate();
-        jTextPane2.repaint();
+        jTextArea1.setText(descripcions);
+        jTextArea1.revalidate();
+        jTextArea1.repaint();
     }
 
     /**
@@ -89,30 +93,19 @@ public class DescripcionsSessio extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jSlider1 = new javax.swing.JSlider();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jScrollPane1.setViewportView(jTextPane2);
-
-        jScrollPane2.setViewportView(jTextPane1);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Acceptar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("jButton2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -126,28 +119,15 @@ public class DescripcionsSessio extends javax.swing.JFrame {
                 .addGap(28, 28, 28))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jScrollPane2)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSlider1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(12, 12, 12)))
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -156,87 +136,9 @@ public class DescripcionsSessio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            // TODO add your handling code here:
-            if(!"".equalsIgnoreCase(jTextPane1.getText())){
-                controlador.crearDescripcio(jTextPane1.getText(),numSessio,idPacient);
-                List list = controlador.getDescripcions(idPacient, numSessio);
-                jTextPane2.setText("");
-                for(int i=0;i<list.size();i++){
-                    Descripcio desc = (Descripcio)list.get(i);
-                    jTextPane2.setText(jTextPane2.getText()+desc.getDescripcio()+"\n\n");
-                }
-                jTextPane2.revalidate();
-                jTextPane2.repaint();
-            }
+            
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
-    soundFile = new File("src"+ File.separator+"resources"+File.separator+nomPacient+File.separator+nomPacient+"-sessio"+String.valueOf(numSessio)+".wav");
-    InputStream in = null;
-     try {
-         in = new FileInputStream(soundFile);
-     } catch (FileNotFoundException ex) {
-         Logger.getLogger(DescripcionsSessio.class.getName()).log(Level.SEVERE, null, ex);
-     }
-    AudioStream as = null;         
-     try {
-         as = new AudioStream(in);
-     } catch (IOException ex) {
-         Logger.getLogger(DescripcionsSessio.class.getName()).log(Level.SEVERE, null, ex);
-     }
-    AudioPlayer.player.start(as);  
-    
-    
-    AudioInputStream audioInputStream = null;
-        try {
-            audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(DescripcionsSessio.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(DescripcionsSessio.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    AudioFormat format = audioInputStream.getFormat();
-    long frames = audioInputStream.getFrameLength();
-    jSlider1.setMaximum((int) frames);
-    
-    //jProgressBar1.setValue(25);
-
-    
-    // AudioPlayer.player.stop(as); 
-    
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    void SliderTimer(){
-        int temps = 0;
-        Timer timer = new Timer (temps, new ActionListener () { 
-        public void actionPerformed(ActionEvent e) 
-        { 
-           // tempsActual - tempsIncial 
-         } 
-    }); 
-        
-    }
-    
-           
-    
-    
-        /*class FrameRateTask extends TimerTask {
-        @Override
-        public void run() {
-            if(visor.pause==false){
-                int counter = images.indexOf(img) + 1;
-                if (counter >= images.size()) {
-                    counter = 0;
-                }
-                img = images.get(counter);
-                visor.ChangeImatge(img);
-            }
-            
-            //visor.setSize(img.getWidth()/2, img.getHeight()/2);   
-        }
-    }*/
     
     /**
      * @param args the command line arguments
@@ -268,18 +170,14 @@ public class DescripcionsSessio extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                    new DescripcionsSessio(null,0,0).setVisible(true);
+                    new DescripcionsSessio(0).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

@@ -189,7 +189,7 @@ public class ControladorHibernate {
  
     
     public List getTimestamps(int idPacient, int numSessio){
-         Session session = con.getSession();
+        Session session = con.getSession();
         Transaction tx = session.beginTransaction();
         
         PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
@@ -226,8 +226,16 @@ public class ControladorHibernate {
         return finalList;
     }
     
-    /*public List getSessionsOfDescripcions(){
-    }*/
+    public void borrarDescripcio(int idDescripcio){
+         Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+        
+        Descripcio descripcio = (Descripcio) session.get(Descripcio.class, idDescripcio);
+        session.delete(descripcio);
+        
+        tx.commit();
+        session.close();
+    }
     
 
 }

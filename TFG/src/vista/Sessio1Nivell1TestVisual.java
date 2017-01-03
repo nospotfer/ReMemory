@@ -124,7 +124,7 @@ public final class Sessio1Nivell1TestVisual extends javax.swing.JFrame {
                     jPanel1.add(date);
                     for(int i=1;i<data.length;i++){
                         JLabel label = new JLabel();                  
-                        utils.bigPhotoOnclick(label,data[i]+".jpg"); 
+                        //utils.bigPhotoOnclick(label,data[i]+".jpg"); 
                         /*S'ha de canviar*/
                         ImageIcon photo = new ImageIcon("src"+ File.separator+"resources"+ File.separator+"Pedro2"+File.separator+data[i]+".jpg"); 
                         Image scaledImage = utils.getScaledImage(photo.getImage(),60,60);

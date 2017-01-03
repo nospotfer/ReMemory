@@ -8,30 +8,9 @@ package vista;
 import controlador.ControladorHibernate;
 import java.awt.Font;
 import java.awt.Frame;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.embed.swing.JFXPanel;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
-import javafx.stage.Stage;
-import javax.imageio.ImageIO;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JOptionPane;
-import model.Timestamp;
+
 
 /**
  *
@@ -46,11 +25,8 @@ public class EscullSessio extends javax.swing.JDialog {
     int idPacient;
     Frame parent;
     boolean dies=false;
-    private ControladorHibernate controlador;
-    
-    private BufferedImage img;
-    ArrayList<BufferedImage> images = new ArrayList<>();
-    Visor visor ;
+    final private ControladorHibernate controlador;
+
     
     public EscullSessio(final String nomPacient, int idPacient) {
         this.idPacient = idPacient;
@@ -100,20 +76,6 @@ public class EscullSessio extends javax.swing.JDialog {
             jButton3.setEnabled(false);
         }*/
         
-    }
-
-    public void getImages(String path) throws IOException{
-        
-     File folder = new File(path);
-        if(folder.exists()){
-            for (final File fileEntry : folder.listFiles()) {    
-                System.out.println("He afegit les imatges a la llista");
-                images.add(ImageIO.read(fileEntry));
-            }
-        }
-        else{
-            System.out.println("La carpeta corresponent no existeix");
-        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -605,8 +567,8 @@ public class EscullSessio extends javax.swing.JDialog {
              JOptionPane.showMessageDialog(null, "La carpeta sessió2 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
-           TestVisor test = new TestVisor();
+           String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
+           VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 2);                
         }       
     }//GEN-LAST:event_VideoSessio2ActionPerformed
@@ -616,8 +578,8 @@ public class EscullSessio extends javax.swing.JDialog {
              JOptionPane.showMessageDialog(null, "La carpeta sessió3 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3";
-           TestVisor test = new TestVisor();
+           String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3";
+           VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 3);                
         }       
     }//GEN-LAST:event_VideoSessio3ActionPerformed
@@ -639,7 +601,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4";
-           TestVisor test = new TestVisor();
+           VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 4);                
         }       
     }//GEN-LAST:event_VideoSessio4ActionPerformed
@@ -661,7 +623,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1";
-           TestVisor test = new TestVisor();
+           VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 1);                
         }                                                
     }//GEN-LAST:event_VideoSessio1ActionPerformed
@@ -678,7 +640,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8";
-           TestVisor test = new TestVisor();
+           VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 8);                
         }       
     }//GEN-LAST:event_VideoSessio8ActionPerformed
@@ -700,7 +662,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6";
-           TestVisor test = new TestVisor();
+           VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 6);                
         }        
     }//GEN-LAST:event_VideoSessio6ActionPerformed
@@ -722,7 +684,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5";
-           TestVisor test = new TestVisor();
+           VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 5);                
         }           
     }//GEN-LAST:event_VideoSessio5ActionPerformed
@@ -744,7 +706,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7";
-           TestVisor test = new TestVisor();
+           VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 1);                
         }       
     }//GEN-LAST:event_VideoSessio7ActionPerformed
@@ -797,46 +759,9 @@ public class EscullSessio extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 EscullSessio dialog = new EscullSessio(null,0);
-                //new EscullSessio().setVisible(true);
             }
         });
     }
-    
-    
-    class FrameRateTask extends TimerTask {
-
-        @Override
-        public void run() {
-            if(visor.pause==false){
-                int counter = images.indexOf(img) + 1;
-                if (counter >= images.size()) {
-                    counter = 0;
-                }
-                img = images.get(counter);
-                visor.ChangeImatge(img);
-            }
-            
-            //visor.setSize(img.getWidth()/2, img.getHeight()/2);   
-        }
-    }
-    
-    
-    public void obrirVisor(String path,int numSessio){
-            BufferedImage image = null;
-            Timer timer = new Timer();
-            try {
-                getImages(path);
-            } catch (IOException ex) {
-                Logger.getLogger(EscullSessio.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            image = images.get(0);
-            visor = new Visor(image,nomPacient, numSessio, idPacient);
-            visor.setVisible(true);
-            timer = new Timer();
-            timer.scheduleAtFixedRate(new FrameRateTask(), 0, (long) (1000 / 2));
-            this.dispose();
-    }
-    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

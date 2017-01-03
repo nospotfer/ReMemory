@@ -28,7 +28,9 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import javax.swing.border.Border;
 import model.Descripcio;
@@ -63,24 +65,10 @@ public class DescripcionsSessio extends javax.swing.JFrame {
         jTextArea1.setBackground(color);
         Font font = new Font("Tahoma", Font.BOLD,13);
         jTextArea1.setFont(font);
-        String descripcions ="";
+        
+       showDescripctions();
         
         
-       
-        for(int i=0;i<8;i++){
-            List list = controlador.getDescripcions(idPacient, i+1);
-            if(list!= null){
-                for(int j=0;j<list.size();j++){
-                    Descripcio desc = (Descripcio)list.get(j);
-                    int numeroDeSessio = i+1;
-                     descripcions += "Sessió "+ numeroDeSessio +":  "+desc.getDescripcio()+"\n";
-                }
-            } 
-        }       
-        
-        jTextArea1.setText(descripcions);
-        jTextArea1.revalidate();
-        jTextArea1.repaint();
     }
 
     /**
@@ -95,6 +83,8 @@ public class DescripcionsSessio extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,18 +99,33 @@ public class DescripcionsSessio extends javax.swing.JFrame {
             }
         });
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButton2.setText("Eliminar descripció");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(539, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(28, 28, 28))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(28, 28, 28))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +133,10 @@ public class DescripcionsSessio extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -136,9 +144,37 @@ public class DescripcionsSessio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       //System.out.println(jComboBox1.getSelectedItem().toString());
+       int reply = JOptionPane.showConfirmDialog(null, "Segur que vols eliminar la descripció " + Integer.parseInt(jComboBox1.getSelectedItem().toString())+" ?", "Confirma", JOptionPane.YES_NO_OPTION);
+       controlador.borrarDescripcio( Integer.parseInt(jComboBox1.getSelectedItem().toString()));
+       showDescripctions();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    
+    public void showDescripctions(){
+        String descripcions ="";
+        jTextArea1.setText("");
+        jComboBox1.removeAllItems();
+        for(int i=0;i<8;i++){
+            List list = controlador.getDescripcions(idPacient, i+1);
+            if(list!= null){
+                for(int j=0;j<list.size();j++){
+                    Descripcio desc = (Descripcio)list.get(j);
+                    int numeroDeSessio = i+1;
+                     descripcions += desc.getIdDescripcio()+"-  "+"Sessió "+ numeroDeSessio +":  "+desc.getDescripcio()+"\n";
+                     jComboBox1.addItem(String.valueOf(desc.getIdDescripcio()));
+                }
+            } 
+        }    
+        jTextArea1.setText(descripcions);
+        jTextArea1.revalidate();
+        jTextArea1.repaint();
+    
+    }
     
     /**
      * @param args the command line arguments
@@ -177,6 +213,8 @@ public class DescripcionsSessio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

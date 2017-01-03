@@ -161,7 +161,7 @@ public class Sessio0TestVisual extends javax.swing.JFrame {
                     numImages=-1;
                 }              
                 JLabel label = new JLabel();
-                utils.bigPhotoOnclick(label, file.getName());
+                //utils.bigPhotoOnclick(label, file.getName());
                 
                 ImageIcon photo = new ImageIcon(path); 
                 Image scaledImage = utils.getScaledImage(photo.getImage(),50,50);

@@ -7,13 +7,9 @@ package vista;
 
 import controlador.ControladorHibernate;
 import java.awt.BorderLayout;
-import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
 import java.net.URI;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -35,20 +31,12 @@ import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import javax.sound.sampled.AudioFileFormat;
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.AudioInputStream;;
 import javax.sound.sampled.TargetDataLine;
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import model.Timestamp;
-import static vista.TestVisor.wavFile;
 
 /**
  *
@@ -114,7 +102,6 @@ public class Descripcions {
             @Override
             public void handle(ActionEvent event) {
                 player.play();
-                //playButton.setText("Stop");
             }
         });
         
@@ -124,7 +111,6 @@ public class Descripcions {
             @Override
             public void handle(ActionEvent event) {
                 player.pause();
-                //playButton.setText("Stop");
             }
         });
         
@@ -134,7 +120,6 @@ public class Descripcions {
             @Override
             public void handle(ActionEvent event) {
                 player.stop();
-                //playButton.setText("Stop");
             }
         });
         
@@ -191,12 +176,7 @@ public class Descripcions {
                 player2.seek(Duration.seconds(slider2.getValue()));
             }
         });
-        
-        final HBox hbox4 = new HBox();
-        final Label label =  new Label();
-     
          
-        
         player2.setOnReady(new Runnable(){
             @Override
             public void run() {
@@ -211,9 +191,7 @@ public class Descripcions {
                slider2.setMax(player2.getTotalDuration().toSeconds());
             }
         
-        });
-        
-        
+        });   
         
         slider = new Slider();   
         vbox.getChildren().add(slider);
@@ -236,15 +214,18 @@ public class Descripcions {
         hbox6.getChildren().add(textarea);
         
         HBox hbox7 = new HBox();
-        Button acceptButton = new Button("Acceptar");
+        Button acceptButton = new Button("Afegir descripcio");
          acceptButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
-            public void handle(ActionEvent event) {              
-                controlador.crearDescripcio(textarea.getText(), numSessio, idPacient);
-                textarea.setText("");
-               
+            public void handle(ActionEvent event) { 
+                String data=textarea.getText().trim();//read contents of text area into 'data'
+                if(!data.equals("")){
+                    controlador.crearDescripcio(textarea.getText(), numSessio, idPacient);
+                    textarea.setText("");
+                }
             }
         });
+         
          Button closeButton = new Button("Tancar");
          closeButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
@@ -267,7 +248,6 @@ public class Descripcions {
         root.getChildren().add(vbox);
         root.getChildren().add(view2);
         root.getChildren().add(hbox3);
-        root.getChildren().add(hbox4);
         root.getChildren().add(hbox5);
         root.getChildren().add(hbox6);
         root.getChildren().add(hbox7);
@@ -277,22 +257,28 @@ public class Descripcions {
             public void run() {
                 int w = player.getMedia().getWidth();
                 int h = player.getMedia().getHeight();
-                frame.setSize(w+30, h+300);
+                
+                frame.setSize(w+40, h+300);
+                
                 vbox.setTranslateY(h-10);
+
                 hbox.setTranslateY(h);
+
                 hbox5.setTranslateY(h+35);
-                //timestampLabel.setMinWidth(w);
+
                 timestampLabel.setPrefWidth(w);
-                //textarea.setMinHeight(20);
+
                 textarea.setPrefColumnCount(55);
                 textarea.setPrefRowCount(5);
-                //textarea.setMinWidth(w);
+
                 hbox6.setTranslateY(h+105);
+
                 hbox7.setTranslateY(h+225);
-                hbox7.setTranslateX(w-25);
-               slider.setMin(0.0);
-               slider.setValue(0.0);
-               slider.setMax(player.getTotalDuration().toSeconds());
+                hbox7.setTranslateX(w-120);
+                
+                slider.setMin(0.0);
+                slider.setValue(0.0);
+                slider.setMax(player.getTotalDuration().toSeconds());
             }
         
         });
@@ -320,50 +306,8 @@ public class Descripcions {
             public void run() {
                 
                 initAndShowGUI(path, idPacient, numSessio);
-
             }
         });
     }
-       
-     private static AudioFormat getAudioFormat() { 
-        float sampleRate = 6000;
-        int sampleSizeInBits = 8;
-        int channels = 2;
-        boolean signed = true;
-        boolean bigEndian = true;
-        AudioFormat format = new AudioFormat(sampleRate, sampleSizeInBits, channels, signed, bigEndian);
-        return format;
-    }
-    
-    
-    public static void  StartRecording(){
-                AudioFormat format = getAudioFormat();
-                DataLine.Info info = new DataLine.Info(TargetDataLine.class, getAudioFormat());
-                // checks if system supports the data line
-               if (!AudioSystem.isLineSupported(info)) {
-                   System.out.println("No hi ha cap microfon connectat");
-                   System.exit(0);
-               }
-                try {
-                    line = (TargetDataLine) AudioSystem.getLine(info);
-                } catch (LineUnavailableException ex) {
-                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                try {
-                    line.open(format);
-                } catch (LineUnavailableException ex) {
-                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
-                }
-               line.start();   // start capturing
-
-               System.out.println("Start capturing...");
-               AudioInputStream ais = new AudioInputStream(line);
-               System.out.println("Start recording...");
-                try {
-                    // start recording
-                    AudioSystem.write(ais, fileType, wavFile);
-                } catch (IOException ex) {
-                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
-                }
-    }
+   
 }

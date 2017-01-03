@@ -8,14 +8,9 @@ package vista;
 import controlador.ControladorHibernate;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Platform;
@@ -24,7 +19,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -36,7 +30,6 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
-import javafx.stage.Screen;
 import javafx.util.Duration;
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
@@ -50,13 +43,12 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-import static vista.Descripcions.frame;
 
 /**
  *
  * @author Sergi
  */
-public class TestVisor {
+public class VideoPlayer {
     
     static MediaPlayer player;
     static final HBox hbox = new HBox();
@@ -82,8 +74,7 @@ public class TestVisor {
      private static void initAndShowGUI(String path, int idPacient, int numSessio) {
         // This method is invoked on the EDT thread
         controlador = new ControladorHibernate();
-        frame = new JFrame("VideoX");
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);        
+        frame = new JFrame("Video");       
         final JFXPanel fxPanel = new JFXPanel();
         Platform.setImplicitExit(false);    
       
@@ -110,7 +101,6 @@ public class TestVisor {
         JPanel panel =  new JPanel();
         panel.add(acceptButton);
         panel.add(closeButton);
-        //panel.add(timestampButton);
         frame.add(fxPanel,BorderLayout.CENTER);
         frame.add(panel, BorderLayout.PAGE_END);
         frame.setVisible(true);
@@ -126,7 +116,6 @@ public class TestVisor {
      
      
        private static void initFX(JFXPanel fxPanel, String path, int idPacient, int numSessio) {
-        // This method is invoked on the JavaFX thread
         Scene scene = createScene(path,idPacient, numSessio);
         fxPanel.setScene(scene);
     }
@@ -148,7 +137,6 @@ public class TestVisor {
             @Override
             public void handle(ActionEvent event) {
                 player.play();
-                //playButton.setText("Stop");
             }
         });
         
@@ -157,7 +145,6 @@ public class TestVisor {
             @Override
             public void handle(ActionEvent event) {
                 player.pause();
-                //playButton.setText("Stop");
             }
         });
         
@@ -168,7 +155,6 @@ public class TestVisor {
             @Override
             public void handle(ActionEvent event) {
                 player.stop();
-                //playButton.setText("Stop");
             }
         });
         
@@ -181,10 +167,6 @@ public class TestVisor {
         vbox.getChildren().add(slider);
         vbox.setMinWidth(600);
         Scene  scene  =  new  Scene(root, media.getWidth() ,media.getHeight(),Color.ALICEBLUE);            
-     
-        //scene.getWidth();
-        //vbox.setTranslateY(350);
-        //hbox.setTranslateY(370);
         
           final HBox hbox2 = new HBox();
         
@@ -196,12 +178,7 @@ public class TestVisor {
                 one = new Thread(){
                 @Override
                 public void run(){      
-                    stopRecord.setDisable(false);
-                    timestampButton.setDisable(false);
-                    //stopRecord.setEnabled(true);
-                    //timestampButton.setEnabled(true);
                     timeStart =  System.currentTimeMillis();
-                    //Counter.countPrimes(1000000);
                     StartRecording();           
                     
                 }
@@ -228,10 +205,6 @@ public class TestVisor {
         timestampButton.setOnAction(new EventHandler<ActionEvent>(){
            @Override
            public void handle(ActionEvent event) {
-               /*Duration segons = player.currentTimeProperty().get();
-               segons.toSeconds();
-                System.out.println("Timestamp: "+(float)segons.toSeconds());             
-                controlador.crearTimestamp((float)segons.toSeconds(), idPacient, numSessio);*/
                 timeEnd = (System.currentTimeMillis() - timeStart)-1000;
                 System.out.println( timeEnd);
                 controlador.crearTimestamp((float)timeEnd, idPacient, numSessio);
@@ -307,33 +280,39 @@ public class TestVisor {
         return format;
     }  
     public static void  StartRecording(){
-                AudioFormat format = getAudioFormat();
-                DataLine.Info info = new DataLine.Info(TargetDataLine.class, getAudioFormat());
-                // checks if system supports the data line
-               if (!AudioSystem.isLineSupported(info)) {
-                   System.out.println("Line not supported");
-                   System.exit(0);
-               }
-                try {
-                    line = (TargetDataLine) AudioSystem.getLine(info);
-                } catch (LineUnavailableException ex) {
-                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                try {
-                    line.open(format);
-                } catch (LineUnavailableException ex) {
-                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
-                }
-               line.start();   // start capturing
+        boolean micro = true;
+        AudioFormat format = getAudioFormat();
+        DataLine.Info info = new DataLine.Info(TargetDataLine.class, getAudioFormat());
+        // checks if system supports the data line
+       if (!AudioSystem.isLineSupported(info)) {
+           System.out.println("Line not supported");
+           JOptionPane.showConfirmDialog(null, "El microfon no s'ha detectat", "Error", JOptionPane.DEFAULT_OPTION);
+            micro= false;
+       }
+       if(micro){
+            stopRecord.setDisable(false);
+            timestampButton.setDisable(false);
+            try {
+                line = (TargetDataLine) AudioSystem.getLine(info);
+            } catch (LineUnavailableException ex) {
+                Logger.getLogger(VideoPlayer.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                line.open(format);
+            } catch (LineUnavailableException ex) {
+                Logger.getLogger(VideoPlayer.class.getName()).log(Level.SEVERE, null, ex);
+            }
+           line.start();   // start capturing
 
-               System.out.println("Start capturing...");
-               AudioInputStream ais = new AudioInputStream(line);
-               System.out.println("Start recording...");
-                try {
-                    // start recording
-                    AudioSystem.write(ais, fileType, wavFile);
-                } catch (IOException ex) {
-                    Logger.getLogger(MoviePlayer.class.getName()).log(Level.SEVERE, null, ex);
-                }
+           System.out.println("Start capturing...");
+           AudioInputStream ais = new AudioInputStream(line);
+           System.out.println("Start recording...");
+            try {
+                // start recording
+                AudioSystem.write(ais, fileType, wavFile);
+            } catch (IOException ex) {
+                Logger.getLogger(VideoPlayer.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 }

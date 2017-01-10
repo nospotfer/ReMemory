@@ -11,6 +11,7 @@ import model.Sessio;
 import model.Imatge;
 import model.PacientDatabase;
 import model.Descripcio;
+import model.Resposta;
 import model.Timestamp;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -65,11 +66,11 @@ public class ControladorHibernate {
         query.setParameter("numSessio", numSessio);
         List list = query.list();
         if(list.isEmpty()){
-            Sessio sessio = (Sessio)list.get(0);
-            Sessio sessioPacient = (Sessio) session.get(Sessio.class, sessio.getIdSessio());
+            //Sessio sessio = (Sessio)list.get(0);
+            //Sessio sessioPacient = (Sessio) session.get(Sessio.class, sessio.getIdSessio());
             
             PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
-            //Sessio sessio = new Sessio(idSessio, numSessio, any, mes, numDia, pacient);
+            Sessio sessio = new Sessio(numSessio, any, mes, numDia, pacient);
             //sessio.setIdSessio(idSessio);
             sessio.setAny(any);
             sessio.setMes(mes);
@@ -82,6 +83,21 @@ public class ControladorHibernate {
         
         session.close(); 
     }
+    
+    public void crearResposta(String answer, String pregunta, int idPacient){
+        Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
+        
+        Resposta resposta = new Resposta(answer, pregunta, pacient);
+        resposta.setResposta(answer);
+        resposta.setPacient(pacient);
+        
+        session.saveOrUpdate(resposta);
+        tx.commit();
+        session.close();         
+    }
+    
 
     
     public void crearImatge(String nomImatge, String path, int hora, int minut, int segon, int idSessio){
@@ -235,6 +251,31 @@ public class ControladorHibernate {
         
         tx.commit();
         session.close();
+    }
+    
+    
+    public String getRespostes(int idPacient){
+        Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+        
+        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
+        Query query = session.createQuery("from Resposta where idPacient =:idPacient");
+        query.setParameter("idPacient", idPacient);
+      
+        
+        List list = query.list();
+        Resposta resposta;
+        String total = "";
+        
+        for(int i=0; i< list.size();i++){
+            resposta =(Resposta)list.get(i);
+            total += resposta.getPregunta()+"\n"+resposta.getResposta()+"\n\n";
+        }
+ 
+        session.close();
+        System.out.println(total);
+        return total;
+    
     }
     
 

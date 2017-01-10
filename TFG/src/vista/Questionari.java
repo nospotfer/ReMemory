@@ -5,11 +5,14 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -22,13 +25,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
  *
  * @author Sergi
  */
-public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
+public class Questionari extends javax.swing.JFrame {
 
     /**
      * Creates new form Sessio1Part1TestVisual
@@ -44,11 +48,18 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
     private JButton acceptButton;
     private JLabel dummyText;
     private GridBagLayout gbl;
+    private ControladorHibernate controlador;
+    private int idPacient;
+    private   JFrame frame;
     
-    public Sessio1Nivell2TestVisual(String nomPacient) throws IOException {
+    public Questionari(String nomPacient, int idPacient) throws IOException {
+        frame = this;
         this.nomPacient=nomPacient;
+        this.idPacient = idPacient;
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setTitle("Sessió 1 - part 3");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setTitle("Qüestionari");
+        controlador = new ControladorHibernate();
         initComponents();
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         initComponentsWithBagGrid();
@@ -83,7 +94,7 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         askedQuestion.setFont(font);
         jPanel1.add(askedQuestion, c);
         
-        JTextField answer = new JTextField();
+        JTextArea answer = new JTextArea();
         c.fill = GridBagConstraints.HORIZONTAL;
         c.ipady = 30;      //make this component tall
 	c.weightx = 0.0;
@@ -102,22 +113,17 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         jPanel1.add(acceptButton,c);
         
           c = new GridBagConstraints();
-        JButton modifyButton = new JButton("Borrar resposta");
+        JButton modifyButton = new JButton("Afegir resposta");
         c.gridx = 7;
         c.gridwidth=1;
         c.gridy=rowCounter+1;
         modifyButton.addActionListener(new ActionListener()
         {
           public void actionPerformed(ActionEvent e)
-          {
-
-            answer.setText("");
-
-             answer.invalidate();
-             answer.validate();
-             answer.repaint();
-
-            
+          {           
+              System.out.println(answer.getText());
+              System.out.println(idPacient);
+            //controlador.crearResposta(answer.getText() , idPacient);
           }
         }); 
         jPanel1.add(modifyButton, c);
@@ -168,6 +174,40 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         c.gridy = 7;
         c.gridheight=1;
         c.insets = new Insets(0,0,0,20);
+        List a = new List();
+        acceptButton.addActionListener(new ActionListener()
+        {
+          public void actionPerformed(ActionEvent e)
+          {           
+              boolean b;
+               String resposta="Pregunta no contestada";
+               String pregunta="";
+              for (Component c : jPanel1.getComponents()) {
+                if (c instanceof JTextField) {
+                    pregunta = ((JTextField)c).getText();
+                    if(a.getItemCount()%2!=0){
+                        a.add("Resposta no contestada");
+                    }
+                    else{
+                        a.add(pregunta);
+                    }
+                }
+                 if (c instanceof JTextArea) {
+                     resposta = ((JTextArea)c).getText();
+                     if(resposta == null || resposta.isEmpty())
+                         resposta = "Resposta no contestada";
+                     a.add(resposta);                
+                 }
+                  
+              }
+             
+              
+              for(int i=0;i<a.getItemCount();i=i+2){
+                  controlador.crearResposta(a.getItem(i+1),a.getItem(i),idPacient);
+              }
+            frame.dispose();
+          }
+        }); 
         acceptButton.setEnabled(false);
         jPanel1.add(acceptButton, c);
         
@@ -248,14 +288,18 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Nivell2TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Questionari.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Nivell2TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Questionari.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Nivell2TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Questionari.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Sessio1Nivell2TestVisual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Questionari.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -265,9 +309,9 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new Sessio1Nivell2TestVisual(null).setVisible(true);
+                    new Questionari(null,0).setVisible(true);
                 } catch (IOException ex) {
-                    Logger.getLogger(Sessio1Nivell2TestVisual.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Questionari.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

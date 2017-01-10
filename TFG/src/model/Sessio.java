@@ -24,7 +24,7 @@ public class Sessio {
     
     public Sessio(){}
     
-    public Sessio(int idSessio, int numSessio, int any, int mes, int dia, PacientDatabase pacient){
+    public Sessio(int numSessio, int any, int mes, int dia, PacientDatabase pacient){
         //this.idSessio = idSessio;
         this.numSessio = numSessio;
         this.any = any;

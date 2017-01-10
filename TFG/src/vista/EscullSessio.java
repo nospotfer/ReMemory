@@ -9,6 +9,9 @@ import controlador.ControladorHibernate;
 import java.awt.Font;
 import java.awt.Frame;
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 
@@ -128,6 +131,7 @@ public class EscullSessio extends javax.swing.JDialog {
         jLabel8 = new javax.swing.JLabel();
         descripcions = new javax.swing.JButton();
         descripcions1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -457,11 +461,18 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
+        jButton1.setText("Respostes");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(descripcions, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -501,7 +512,9 @@ public class EscullSessio extends javax.swing.JDialog {
                             .addComponent(jLabel8)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(panel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(descripcions1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(descripcions1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)))
                 .addGap(39, 39, 39))
         );
         layout.setVerticalGroup(
@@ -563,7 +576,9 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(descripcions)
                     .addComponent(descripcions1))
-                .addGap(57, 57, 57))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(23, 23, 23))
         );
 
         pack();
@@ -748,10 +763,21 @@ public class EscullSessio extends javax.swing.JDialog {
 
     private void descripcions1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descripcions1ActionPerformed
         
-        Sessio1Nivell2TestVisual test = new Sessio1Nivell2TestVisual(nomPacient);
+        Questionari test = null;
+        try {
+            test = new Questionari(nomPacient,idPacient);
+        } catch (IOException ex) {
+            Logger.getLogger(EscullSessio.class.getName()).log(Level.SEVERE, null, ex);
+        }
         test.pack();
         test.setVisible(true);
     }//GEN-LAST:event_descripcions1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Respostes respostes = new Respostes(idPacient);
+        respostes.pack();
+        respostes.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -808,6 +834,7 @@ public class EscullSessio extends javax.swing.JDialog {
     private javax.swing.JButton VideoSessio8;
     private javax.swing.JButton descripcions;
     private javax.swing.JButton descripcions1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

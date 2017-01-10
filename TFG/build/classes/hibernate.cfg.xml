@@ -17,5 +17,6 @@
     <mapping resource="model/Descripcio.hbm.xml"/>
     <mapping resource="model/TimeStamp.hbm.xml"/>
     <mapping resource="model/Imatge.hbm.xml"/>
+    <mapping resource="model/Resposta.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

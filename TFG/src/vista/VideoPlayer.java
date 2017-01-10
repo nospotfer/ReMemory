@@ -23,6 +23,8 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -38,6 +40,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.TargetDataLine;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -129,10 +132,10 @@ public class VideoPlayer {
         media.getWidth();
         player = new MediaPlayer(media);
 
-        MediaView view = new MediaView(player);
-        stopRecordButton = new Button("Stop Recording");
-         
-        final Button playButton = new Button("Play");
+        MediaView view = new MediaView(player);      
+       
+      
+        final Button playButton = new Button("Play"); 
         playButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
@@ -175,6 +178,7 @@ public class VideoPlayer {
             @Override
            public void handle(ActionEvent event) {
                 wavFile = new File(path+File.separator+"gravacio.wav");
+                record.setText("Recording...");
                 one = new Thread(){
                 @Override
                 public void run(){      
@@ -194,12 +198,12 @@ public class VideoPlayer {
                line.stop();
                line.close();
                one.interrupt();
-               
+               record.setText("Start recording");
                 stopRecord.setDisable(true);
                 timestampButton.setDisable(true);
             }
         });
-        stopRecord.setDisable(false);
+        stopRecord.setDisable(true);
 
         timestampButton = new Button("Timestamp");       
         timestampButton.setOnAction(new EventHandler<ActionEvent>(){

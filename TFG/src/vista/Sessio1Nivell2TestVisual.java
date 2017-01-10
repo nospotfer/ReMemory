@@ -12,6 +12,12 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -39,25 +45,32 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
     private JLabel dummyText;
     private GridBagLayout gbl;
     
-    public Sessio1Nivell2TestVisual(String nomPacient,String dia) {
+    public Sessio1Nivell2TestVisual(String nomPacient) throws IOException {
         this.nomPacient=nomPacient;
-        this.dia=dia;
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setTitle("Sessió 1 - part 3");
         initComponents();
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         initComponentsWithBagGrid();
-        
+        String path = "src"+ File.separator+"resources"+ File.separator+"questionari"+File.separator+"preguntes.txt";
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+               afegirPregunta(line);
+            }
+        }     
     }
       
     public void modificarPreguunta(int posx, int posy){
        
     }
     
-    public void afegirPregunta(){
+    public void afegirPregunta(String question){
         jPanel1.remove(dummyText);
-        JTextField askedQuestion = new JTextField(question.getText());
+        JTextField askedQuestion = new JTextField(question);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.ipady = 25;      //make this component tall
+        c.ipadx = 400;
 	c.weightx = 0.0;
 	c.gridwidth = 10;
 	c.gridx = 1;
@@ -69,7 +82,6 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         Font font = new Font("Tahoma", Font.BOLD,12);
         askedQuestion.setFont(font);
         jPanel1.add(askedQuestion, c);
-        question.setText("");
         
         JTextField answer = new JTextField();
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -81,6 +93,7 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
 	c.gridy = rowCounter+1;
         jPanel1.add(answer, c);                      
         
+          c = new GridBagConstraints();
         acceptButton.setEnabled(true);
         c.gridx = 7;
 	c.gridy = rowCounter+3;
@@ -88,7 +101,8 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         c.gridwidth=1;
         jPanel1.add(acceptButton,c);
         
-        JButton modifyButton = new JButton("Eliminar");
+          c = new GridBagConstraints();
+        JButton modifyButton = new JButton("Borrar resposta");
         c.gridx = 7;
         c.gridwidth=1;
         c.gridy=rowCounter+1;
@@ -96,18 +110,12 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         {
           public void actionPerformed(ActionEvent e)
           {
-            
-                jPanel1.remove(askedQuestion);
-                jPanel1.remove(answer);
-                jPanel1.remove(modifyButton);
-                
-                jPanel1.invalidate();
-                jPanel1.validate();
-                jPanel1.repaint();
 
-                jScrollPane2.invalidate();
-                jScrollPane2.validate();
-                jScrollPane2.repaint();
+            answer.setText("");
+
+             answer.invalidate();
+             answer.validate();
+             answer.repaint();
 
             
           }
@@ -139,45 +147,7 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         jPanel1.setLayout(gbl);
         c = new GridBagConstraints();
         
-        label1 = new JLabel("Introdueix aqui les noves preguntes");
-	c.fill = GridBagConstraints.HORIZONTAL;
-	c.insets = new Insets(15,10,0,0);  //top padding
-	c.gridx = 1;       //aligned with button 2
-	c.gridwidth = 2;   //2 columns wide
-	c.gridy = 0;       //third row
-        Font font = new Font("Tahoma", Font.BOLD,12);
-        label1.setFont(font);
-        c.anchor = GridBagConstraints.PAGE_START;
-	jPanel1.add(label1, c);
-        
-        question = new JTextField();
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.insets = new Insets(20,20,10,20); 
-        c.ipady = 30;      //make this component tall
-	c.weightx = 0.0;
-	c.gridwidth = 10;
-	c.gridx = 1;
-	c.gridy = 1;
-        jPanel1.add(question, c);
-        
-        button = new JButton("Afegir nova pregunta");
-	c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 8; 
-	c.weightx = 0.0;
-	c.gridwidth = 3;
-	c.gridx = 4;
-	c.gridy = 2;
-        
-        button.addActionListener(new ActionListener()
-        {
-          public void actionPerformed(ActionEvent e)
-          {
-            if(!question.getText().equalsIgnoreCase("")){
-                afegirPregunta();
-            }
-          }
-        }); 
-	jPanel1.add(button, c);
+       
         
         label1 = new JLabel();
 	c.fill = GridBagConstraints.HORIZONTAL;
@@ -185,7 +155,7 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
 	c.gridx = 1;       //aligned with button 2
 	c.gridwidth = 2;   //2 columns wide
 	c.gridy = 3;       //third row
-        font = new Font("Tahoma", font.BOLD, 14);
+        Font font = new Font("Tahoma", Font.BOLD, 14);
         label1.setFont(font);
         label1.setText("Preguntes");
 	jPanel1.add(label1, c);
@@ -294,7 +264,11 @@ public class Sessio1Nivell2TestVisual extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sessio1Nivell2TestVisual(null,null).setVisible(true);
+                try {
+                    new Sessio1Nivell2TestVisual(null).setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Sessio1Nivell2TestVisual.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

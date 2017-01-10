@@ -9,6 +9,7 @@ import controlador.ControladorHibernate;
 import java.awt.BorderLayout;
 import java.io.File;
 import java.net.URI;
+import java.text.DecimalFormat;
 import java.util.List;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -48,6 +49,7 @@ public class Descripcions {
     static MediaPlayer player;
     static MediaPlayer player2;
     static final HBox hbox = new HBox();
+    static Label time;
     static int h,w;
     static TargetDataLine line;
     static File wavFile;
@@ -62,7 +64,7 @@ public class Descripcions {
     
      private static void initAndShowGUI(String path, int idPacient, int numSessio) {
         // This method is invoked on the EDT thread
-        frame = new JFrame("Descipricio");
+        frame = new JFrame("Transcripció");
         final JFXPanel fxPanel = new JFXPanel();
         controlador = new ControladorHibernate();
        
@@ -97,25 +99,26 @@ public class Descripcions {
         MediaView view = new MediaView(player);
         stopRecordButton = new Button("Stop Recording");
          
-        final Button playButton = new Button("Play");
+        final Button playButton = new Button("Play"); 
         playButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
+                System.out.println("He clickat");
                 player.play();
             }
         });
         
         
-        final Button pauseButton = new Button("Pausa");
+        /*Button pauseButton = new Button("Pausa");
         playButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
                 player.pause();
             }
-        });
+        });*/
         
         
-        final Button stopButton = new Button("Stop");
+        Button stopButton = new Button("Stop");
         stopButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
@@ -131,7 +134,7 @@ public class Descripcions {
         
         
         
-        final VBox vbox2 = new VBox();
+        VBox vbox2 = new VBox();
         wavFile = new File(path+File.separator+"gravacio.wav");         
         u = wavFile.toURI();
         Media media2 = new Media(u.toString());
@@ -140,8 +143,8 @@ public class Descripcions {
         vbox2.getChildren().add(view2);
         
          
-        final HBox hbox3 = new HBox();
-        final Button playMusicButton = new Button("Play gravació");
+        HBox hbox3 = new HBox();
+        Button playMusicButton = new Button("Play gravació");
         playMusicButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
@@ -150,7 +153,7 @@ public class Descripcions {
             }
         });
         
-        final Button stopMusicButton = new Button("Stop gravacio");
+        Button stopMusicButton = new Button("Stop gravacio");
         stopMusicButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
@@ -168,12 +171,19 @@ public class Descripcions {
             @Override
             public void changed(ObservableValue<? extends Duration> observable, Duration duration, Duration current) {
                 slider2.setValue(current.toSeconds());
+                DecimalFormat df = new DecimalFormat("####0.00");
+                //df.format(player2.totalDurationProperty().getValue().toSeconds());
+                time.setText(String.valueOf(df.format(current.toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
             }
         });   
         slider2.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
                 player2.seek(Duration.seconds(slider2.getValue()));
+                 DecimalFormat df = new DecimalFormat("####0.00");
+                df.format(Duration.seconds(slider2.getValue()).toSeconds());
+                
+                time.setText(String.valueOf(df.format(Duration.seconds(slider2.getValue()).toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
             }
         });
          
@@ -189,6 +199,8 @@ public class Descripcions {
                slider2.setValue(0.0);
                slider2.setPrefWidth(w-150);
                slider2.setMax(player2.getTotalDuration().toSeconds());
+               DecimalFormat df = new DecimalFormat("####0.00");
+               time.setText("0.00"+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
             }
         
         });   
@@ -241,6 +253,10 @@ public class Descripcions {
         hbox7.getChildren().add(acceptButton);
         hbox7.getChildren().add(closeButton);
         
+        HBox hbox8 = new HBox();
+        time = new Label();
+        hbox8.getChildren().add(time);
+        
         
         Scene  scene  =  new  Scene(root, media.getWidth() ,media.getHeight(),Color.ALICEBLUE);
         root.getChildren().add(view);
@@ -251,6 +267,7 @@ public class Descripcions {
         root.getChildren().add(hbox5);
         root.getChildren().add(hbox6);
         root.getChildren().add(hbox7);
+        root.getChildren().add(hbox8);
         
         player.setOnReady(new Runnable(){
             @Override
@@ -258,7 +275,7 @@ public class Descripcions {
                 int w = player.getMedia().getWidth();
                 int h = player.getMedia().getHeight();
                 
-                frame.setSize(w+40, h+300);
+                frame.setSize(w+40, h+350);
                 
                 vbox.setTranslateY(h-10);
 
@@ -268,13 +285,17 @@ public class Descripcions {
 
                 timestampLabel.setPrefWidth(w);
 
+                
                 textarea.setPrefColumnCount(55);
                 textarea.setPrefRowCount(5);
 
-                hbox6.setTranslateY(h+105);
+                hbox6.setTranslateY(h+155);
 
-                hbox7.setTranslateY(h+225);
-                hbox7.setTranslateX(w-120);
+                hbox7.setTranslateY(h+275);
+                hbox7.setTranslateX(w-150);
+                
+                hbox8.setTranslateY(h+105);
+                
                 
                 slider.setMin(0.0);
                 slider.setValue(0.0);

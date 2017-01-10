@@ -1,0 +1,8 @@
+1-Com et dius?
+2-Que recordes?
+3-Que vas fer ahir?
+4-Aixo es una pregunta?
+5-Preguntes test
+6-Venga una mes
+7-Que mes?
+8-Pregunta?

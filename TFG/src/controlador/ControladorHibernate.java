@@ -13,6 +13,7 @@ import model.PacientDatabase;
 import model.Descripcio;
 import model.Resposta;
 import model.Timestamp;
+import model.Usuari;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -122,8 +123,6 @@ public class ControladorHibernate {
         public void crearDescripcio(String textDescripcio, int numSessio, int idPacient){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
-        System.out.println("numSessio: "+numSessio);
-        System.out.println("idPacient: "+idPacient);
        // Sessio sessio = (Sessio) session.get(Sessio.class, idSessio);
         
         PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
@@ -188,17 +187,6 @@ public class ControladorHibernate {
             tempList = query.list();
             finalList.addAll(tempList);
         }
-        
-        
-       /* query = session.createQuery("from Descripcio where idSessio =:idSessio");
-        query.setParameter("idSessio",sessio.getIdSessio());
-        list = query.list();*/
-        if(finalList.isEmpty()){
-            System.out.println("No hi havia cap descripcio");
-        }
-        else{
-            System.out.println("Hi havien descripcions");
-        }
         session.close();
         return finalList;
     }
@@ -225,18 +213,6 @@ public class ControladorHibernate {
             query.setParameter("idSessio",sessio.getIdSessio());
             tempList = query.list();
             finalList.addAll(tempList);
-        }
-        
-        
-        
-       /* query = session.createQuery("from Descripcio where idSessio =:idSessio");
-        query.setParameter("idSessio",sessio.getIdSessio());
-        list = query.list();*/
-        if(finalList.isEmpty()){
-            System.out.println("No hi havia cap descripcio");
-        }
-        else{
-            System.out.println("Hi havien descripcions");
         }
         session.close();
         return finalList;
@@ -273,9 +249,103 @@ public class ControladorHibernate {
         }
  
         session.close();
-        System.out.println(total);
         return total;
     
+    }
+    
+    public int login(String nomUsuari, String password){
+    
+        Session session = con.getSession();
+        Query query = session.createQuery("from Usuari where nomUsuari =:nomUsuari");
+        query.setParameter("nomUsuari", nomUsuari);
+           
+        if(query.list().size() >0){           
+            Usuari usuari =((Usuari)query.list().get(0));
+            if(usuari.getContrasenya().equals(password)){
+                int rol = usuari.getRol();
+                session.close();
+                return rol;
+            }
+            else{
+                session.close();
+                return -1;
+            }
+        }
+        else{
+            session.close();
+            return -1;
+        }
+        
+    }
+    
+    
+    public List getUsuaris(){
+        Session session = con.getSession();
+        Query query = session.createQuery("from Usuari");
+        
+        List list = query.list();
+        session.close();
+        return list;
+    
+    }
+    
+    public boolean checkUsuariExists(String nomUsuari){
+        Session session = con.getSession();
+        Query query = session.createQuery("from Usuari where nomUsuari =:nomUsuari");
+        query.setParameter("nomUsuari", nomUsuari);     
+        if(query.list().size() >0){ 
+            session.close();
+            System.out.println(nomUsuari);
+            return true;
+        }
+        else{       
+            session.close(); 
+            return false;
+        }
+    }
+    
+    public void crearUsuari(String nom, String contrasenya, int rol){
+        
+        Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+        Usuari usuari = new Usuari(nom, contrasenya, rol);
+        usuari.setNom(nom);
+        usuari.setContrasenya(contrasenya);
+        usuari.setRol(rol);
+        
+        session.save(usuari);
+        tx.commit();
+        session.close();
+    }
+    
+        public void ModificarUsuari(int id, String nomUsuari, String contrasenya, int rol){
+        
+        Session session = con.getSession();
+        Transaction tx = session.beginTransaction();
+
+        Usuari usuari = (Usuari) session.get(Usuari.class, id);
+        
+        usuari.setNom(nomUsuari);
+        usuari.setContrasenya(contrasenya);
+        usuari.setRol(rol);
+        
+        session.update(usuari);
+        tx.commit();
+        session.close();
+    }
+        
+        public void borrarUsuari(String nomUsuari) {
+            Session session = con.getSession();
+            Transaction tx = session.beginTransaction();
+            
+            Query query = session.createQuery("from Usuari where nomUsuari =:nomUsuari");
+            query.setParameter("nomUsuari", nomUsuari);   
+            
+            Usuari usuari = (Usuari) query.list().get(0);
+            session.delete(usuari);
+
+            tx.commit();
+            session.close();
     }
     
 

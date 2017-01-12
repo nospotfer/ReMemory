@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,6 +15,7 @@ import org.json.JSONObject;
 import controlador.Utils;
 import java.net.URL;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,6 +24,7 @@ import javax.swing.ImageIcon;
 public class Login extends javax.swing.JFrame {
 
     Utils utils;
+    ControladorHibernate controlador;
     /**
      * Creates new form login
      */
@@ -31,6 +34,7 @@ public class Login extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.getRootPane().setDefaultButton(loginBtn);
         this.utils = new Utils();
+        controlador = new ControladorHibernate();
     }
 
     /**
@@ -169,13 +173,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-        try {
-            loginCheck();
-        } catch (IOException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (JSONException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
+           loginCheck();
     }//GEN-LAST:event_loginBtnActionPerformed
 
     /**
@@ -212,57 +210,34 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Login().setVisible(true);
-                System.out.println(Utils.PACIENT_DATA_PATH);
             }
         });
     }
     
     // Funció per gestionar el login
-    private void loginCheck() throws IOException, JSONException{
-      
-        JSONObject obj;
-        obj = new JSONObject(utils.getStringFile(Utils.USERS_PATH));
-        org.json.JSONArray users = obj.getJSONArray("Users");
-        int i = 0;
-        boolean trobat = false;
-        String rol = "";
-        while ( i < users.length() && !trobat){
-            if (users.getJSONObject(i).getString("name").equals(userTxt.getText().toLowerCase())){
-                rol = users.getJSONObject(i).getString("role");
-                trobat = true;
-            }
-            else{
-                i++;
-            }
-        }
-        if (trobat){
-            switch(rol){
-                case "evaluador":
-                    if (users.getJSONObject(i).getString("password").equals(passTxt.getText())){
-                        MenuAvaluador mE = new MenuAvaluador(users.getJSONObject(i).getString("name"));
-                        mE.pack();
-                        mE.setVisible(true);
-                        this.dispose();
-                    }
-                    break;
-                    
-                case "pacient":
-                    MenuPacient mP = new MenuPacient(users.getJSONObject(i).getString("name"));
-                    mP.pack();
-                    mP.setVisible(true);
-                    this.dispose();
-                    break;
-                    
-                case "admin":
-                    System.out.println(users.getJSONObject(i).getString("name"));
-                    MenuAdmin mA = new MenuAdmin(users.getJSONObject(i).getString("name"));
-                    mA.pack();
-                    mA.setVisible(true);
-                    this.dispose();
-                    break;
-            }
-        }
+    private void loginCheck(){
+        String nom = userTxt.getText();
+        String password =passTxt.getText(); 
         
+        int rol = controlador.login(nom, password );
+        System.out.println(rol);
+        switch(rol){
+            case -1:
+                JOptionPane.showConfirmDialog(null, "L'usuari o contrasenya eren incorrectes", "Error de entrada", JOptionPane.DEFAULT_OPTION);
+                break;
+            case 1:
+                MenuAdmin mA = new MenuAdmin(nom);
+                mA.pack();
+                mA.setVisible(true);
+                this.dispose();
+                break;
+            case 2: 
+                MenuAvaluador mE = new MenuAvaluador(nom);
+                mE.pack();
+                mE.setVisible(true);
+                this.dispose();      
+                break;
+        }       
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

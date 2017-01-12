@@ -89,7 +89,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
         seleccionaBtn = new javax.swing.JButton();
         fitxaBtn = new javax.swing.JButton();
         importaBtn = new javax.swing.JButton();
-        seleccionaDb = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         testsTextualsBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -156,13 +155,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        seleccionaDb.setText("Selecciona D.B");
-        seleccionaDb.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seleccionaDbActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -190,8 +182,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
                         .addComponent(idText, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(seleccionaBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(seleccionaDb)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -201,8 +191,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(idText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seleccionaBtn)
-                    .addComponent(seleccionaDb))
+                    .addComponent(seleccionaBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -376,67 +365,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
         nP.setVisible(true);
     }//GEN-LAST:event_nouPacientBtnActionPerformed
 
-    private void seleccionaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaBtnActionPerformed
-        if (!pacient){
-            try {
-                try {
-                    llistaPacients.clear();
-                    JSONObject obj;
-                    obj = new JSONObject(Utils.getStringFile(Utils.USERS_PATH));
-                    org.json.JSONArray users = obj.getJSONArray("Users");
-                    for (int i=0; i<users.length();i++){
-                        if (users.getJSONObject(i).getString("role").equals("pacient")){
-                            String nom = users.getJSONObject(i).getString("name");
-                            String id = users.getJSONObject(i).getString("id");
-                            Pacient pacient = new Pacient(nom, id, 0, 0);
-                            llistaPacients.add(pacient);
-                        }
-                    }
-                    if (llistaPacients.size() > 0) {
-                        Object[] ids = new Object[llistaPacients.size()];
-                        for (int i = 0; i < llistaPacients.size(); i++) {
-                            ids[i] = llistaPacients.get(i).getId();
-                        }
-                        String s = (String) JOptionPane.showInputDialog(
-                                this,
-                                "Pacients: ",
-                                "Llistat de pacients",
-                                JOptionPane.PLAIN_MESSAGE,
-                                null,
-                                ids,
-                                ids[0]);
-
-                        //If a string was returned, say so.
-                        if ((s != null) && (s.length() > 0)) {
-                            idText.setText(s);
-                            checkPacient();
-                            checkCsv();
-                            this.testsTextualsBtn.requestFocus();
-                        }
-                    } else {
-                        JOptionPane.showMessageDialog(this, "No s'ha introduït cap pacient a la base de dades");
-                    }
-                } catch (JSONException ex) {
-                    Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            } catch (IOException ex) {
-                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }else {
-            idText.setText("");
-            nomText.setText("");
-            seleccionaBtn.setText("Selecciona");
-            importaBtn.setText("Importa pacient");
-            pacient = false;
-            eliminaBtn.setEnabled(false);
-            fitxaBtn.setEnabled(false);
-            idPacient = "";
-            csvButton.setEnabled(false);
-            testsTextualsBtn.setEnabled(false);
-            testsVisualsBtn.setEnabled(false);
-        }
-    }//GEN-LAST:event_seleccionaBtnActionPerformed
-
     public void checkCsv() {
         File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv");
         if (file.exists()){
@@ -569,17 +497,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         {
             controlador.borrarPacient(Integer.parseInt(idText.getText()));
             idText.setText("");
-            nomText.setText("");
-            Iterator<Pacient> iter = llistaPacients.iterator();
-
-            while (iter.hasNext()) {
-                Pacient pacient = iter.next();
-
-                if (pacient.getId().equals(pacientActual.getId()))
-                    iter.remove();
-            }
-            guardarJSON();
-            seleccionaBtn.doClick();
+            nomText.setText("");       
         }
 
     }//GEN-LAST:event_eliminaBtnActionPerformed
@@ -628,7 +546,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_testsVisualsBtnActionPerformed
 
-    private void seleccionaDbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaDbActionPerformed
+    private void seleccionaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaBtnActionPerformed
         Conector con = new Conector();
         Session session = con.getSession();
         List<PacientDatabase> llista = new ArrayList<>();
@@ -666,10 +584,20 @@ public class MenuAvaluador extends javax.swing.JFrame {
             idPacient=Integer.toString(s);
             this.testsTextualsBtn.requestFocus();
             eliminaBtn.setEnabled(true);
+            
+            try {
+                checkPacient();
+            } catch (JSONException ex) {
+                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            checkCsv();
+            
+            testsTextualsBtn.setEnabled(true);
             testsVisualsBtn.setEnabled(true);
         }
-        
-    }//GEN-LAST:event_seleccionaDbActionPerformed
+    }//GEN-LAST:event_seleccionaBtnActionPerformed
 
     private void guardarJSON() {
         JSONArray usr = new JSONArray();
@@ -789,10 +717,10 @@ public class MenuAvaluador extends javax.swing.JFrame {
         if (trobat){
             idText.setEditable(false);
             idPacient = pacients.getJSONObject(i).getString("id");
-            seleccionaBtn.setText("Canvia pacient");
+            //seleccionaBtn.setText("Canvia pacient");
             importaBtn.setText("Exporta pacient");
             String nom = pacients.getJSONObject(i).getString("name");
-            nomText.setText(nom.toUpperCase());
+            //nomText.setText(nom.toUpperCase());
 
             guardarDadesPacient();
             pacient = true;
@@ -914,7 +842,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JTextField nomText;
     private javax.swing.JButton nouPacientBtn;
     private javax.swing.JButton seleccionaBtn;
-    private javax.swing.JButton seleccionaDb;
     private javax.swing.JButton testsTextualsBtn;
     private javax.swing.JButton testsVisualsBtn;
     // End of variables declaration//GEN-END:variables

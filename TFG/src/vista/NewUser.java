@@ -5,20 +5,12 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import model.Avaluador;
 import controlador.Utils;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 /**
  *
@@ -28,7 +20,8 @@ public class NewUser extends javax.swing.JDialog {
 
     ArrayList<Avaluador> llistaEvaluadors;
     Avaluador eva;
-    
+    ControladorHibernate controlador;
+    String nomOriginal ="";
     /**
      * Creates new form newUser
      */
@@ -36,23 +29,28 @@ public class NewUser extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         Utils.setIcon((JFrame)this.getOwner());
+        controlador = new ControladorHibernate();
         this.setLocationRelativeTo(null);
         this.modificaBtn.setVisible(false);
         this.eliminaBtn.setVisible(false);
+        idTextBox.setEditable(false);
     }
     
     public NewUser(java.awt.Frame parent, boolean modal, ArrayList<Avaluador> llistaEvaluadors, Avaluador eva) {
         super(parent, modal);
         initComponents();
+        
         this.setLocationRelativeTo(null);
         this.eva = eva;
         this.llistaEvaluadors = llistaEvaluadors;
         this.newBtn.setVisible(false);
-        
+        controlador = new ControladorHibernate();
         this.idTextBox.setText(eva.getId());
         this.nameTextBox.setText(eva.getNom());
         this.passTextBox.setText(eva.getPassword());
         this.pass2TextBox.setText(eva.getPassword());
+        idTextBox.setEditable(false);
+        nomOriginal = eva.getNom();
     }
 
     /**
@@ -218,86 +216,55 @@ public class NewUser extends javax.swing.JDialog {
 
     private void newBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newBtnActionPerformed
 
-        JSONObject obj = null;
-        try {
-            obj = new JSONObject(getStringFile(Utils.USERS_PATH));
-            JSONArray users = obj.getJSONArray("Users");
-            int i = 0;
-            boolean trobat = false;
-            while ( i < users.length() && !trobat){
-                if (users.getJSONObject(i).getString("name").equals(nameTextBox.getText())){
-                    trobat = true;
-                }
-                i++;
-            }
-            boolean buits, pass;
-            buits = "".equals(idTextBox.getText()) || "".equals(nameTextBox.getText()) || "".equals(passTextBox.getText()) || "".equals(pass2TextBox.getText());
-            pass = !passTextBox.getText().equals(pass2TextBox.getText());
-            if (trobat || buits || pass){
-                if (buits) System.out.println("Has d'omplir tots els buits");
-                else if(trobat) System.out.println("Nom ja utilitzat");
-                else if(pass)System.out.println("Les contrasenyes no coincideixen");
-            } else{
-                JSONArray usr = new JSONArray();
-                for (i = 0; i < users.length(); i++){
-                    usr.put(users.getJSONObject(i));
-                }
-                
-                JSONObject o = new JSONObject();
-                o.put("id",idTextBox.getText());
-                o.put("name", nameTextBox.getText().toLowerCase());
-                o.put("password", passTextBox.getText());
-                o.put("role","evaluador");
-                
-                usr.put(o);
-                
-                obj.put("Users", usr);
-                PrintWriter out = new PrintWriter(Utils.USERS_PATH);
-                out.write(obj.toString());
-                out.close();
-                this.dispose();
-            }
+        /*Botó de creació de l'usuari*/
+        String nomUsuari = nameTextBox.getText();
+        String password1 = passTextBox.getText();
+        String password2 = pass2TextBox.getText();
+        boolean usuariExists = controlador.checkUsuariExists(nomUsuari);
 
-            
-        } catch (JSONException ex) {
-            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
+        boolean buits, pass;
+        buits = "".equals(nameTextBox.getText()) || "".equals(passTextBox.getText()) || "".equals(pass2TextBox.getText());
+        pass = !passTextBox.getText().equals(pass2TextBox.getText());
+
+        if (usuariExists || buits || pass){
+            if (buits) System.out.println("Has d'omplir tots els buits");
+            else if(usuariExists) System.out.println("Nom ja utilitzat");
+            else if(pass)System.out.println("Les contrasenyes no coincideixen");
+        } else{
+            System.out.println("Creo l'usuari");
+            controlador.crearUsuari(nomUsuari, password1, 2);
+            this.dispose();
         }
   
     }//GEN-LAST:event_newBtnActionPerformed
 
     private void modificaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificaBtnActionPerformed
-        boolean idTrobat = false, nomTrobat = false;
-        for (Avaluador e : llistaEvaluadors){
-            if (e.getNom().equals(nameTextBox.getText()) && !e.getNom().equals(eva.getNom())){
-                nomTrobat = true;
-            }
-            if (e.getId().equals(idTextBox.getText()) && !e.getId().equals(eva.getId()) ){
-                idTrobat = true;
-            }
-        }
+        String nomUsuari = nameTextBox.getText();
+        String password1 = passTextBox.getText();
+        String password2 = pass2TextBox.getText();
+        System.out.println(nomUsuari);
+        boolean usuariExists = false;
+        
+        if(!nomOriginal.equals(nomUsuari))
+            usuariExists = controlador.checkUsuariExists(nomUsuari);
+        
         boolean buits, pass;
-        buits = "".equals(idTextBox.getText()) || "".equals(nameTextBox.getText()) || "".equals(passTextBox.getText()) || "".equals(pass2TextBox.getText());
+        buits = "".equals(nameTextBox.getText()) || "".equals(passTextBox.getText()) || "".equals(pass2TextBox.getText());
         pass = !passTextBox.getText().equals(pass2TextBox.getText());
-        if (nomTrobat || idTrobat || buits || pass){
+        if (usuariExists || buits || pass){
             if (buits) System.out.println("Has d'omplir tots els buits");
-            else if(nomTrobat) System.out.println("Nom ja utilitzat");
-            else if(idTrobat) System.out.println("ID ja utilitzat");
+            else if(usuariExists) System.out.println("Nom ja utilitzat");
             else if(pass)System.out.println("Les contrasenyes no coincideixen");
         } 
         else{
-            eva.setId(idTextBox.getText());
-            eva.setNom(nameTextBox.getText());
-            eva.setPassword(passTextBox.getText());
-            guardarJSON();
+            controlador.ModificarUsuari(Integer.parseInt(idTextBox.getText()),nomUsuari, password1, 2);           
             this.dispose();
         }
     }//GEN-LAST:event_modificaBtnActionPerformed
 
     private void eliminaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminaBtnActionPerformed
-        llistaEvaluadors.remove(eva);
-        guardarJSON();
+        //llistaEvaluadors.remove(nameTextBox.getText(););
+        controlador.borrarUsuari(nameTextBox.getText());
         this.dispose();
     }//GEN-LAST:event_eliminaBtnActionPerformed
 
@@ -344,32 +311,6 @@ public class NewUser extends javax.swing.JDialog {
         });
     }
 
-    private static String getStringFile(String file) {
-	BufferedReader reader = null;
-	try {
-	    reader = new BufferedReader( new FileReader (file));
-	    String line;
-	    StringBuilder stringBuilder = new StringBuilder();
-	    String ls = System.getProperty("line.separator");
-	    while( ( line = reader.readLine() ) != null ) {
-		stringBuilder.append( line );
-		stringBuilder.append( ls );
-	    }
-	    return stringBuilder.toString();
-	} catch (FileNotFoundException ex) {
-	    Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
-	} catch (IOException ex) {
-	    Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
-	} finally {
-	    try {
-		if(reader != null)
-		    reader.close();
-	    } catch (IOException ex) {
-		Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
-	    }
-	}
-	return null;
-    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelBtn;
@@ -387,47 +328,4 @@ public class NewUser extends javax.swing.JDialog {
     private javax.swing.JPasswordField passTextBox;
     // End of variables declaration//GEN-END:variables
 
-    private void guardarJSON() {
-        JSONArray usr = new JSONArray();
-        JSONObject obj = new JSONObject();
-        
-        getUsers(usr);
-        
-        for (Avaluador e : llistaEvaluadors){
-            try {
-                    usr.put(e.toJSON());
-            } catch (JSONException ex) {
-                Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        try {
-            obj.put("Users", usr);
-        } catch (JSONException ex) {
-            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        PrintWriter out = null;
-        try {
-            out = new PrintWriter(Utils.USERS_PATH);
-            out.write(obj.toString());
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            out.close();
-        }
-    }
-
-    private void getUsers(JSONArray u) {
-        JSONObject obj;
-        try {
-            obj = new JSONObject(Utils.getStringFile(Utils.USERS_PATH));
-            JSONArray users = obj.getJSONArray("Users");
-            for (int i=0; i<users.length();i++){
-                if (!users.getJSONObject(i).getString("role").equals("evaluador")){
-                    u.put(users.getJSONObject(i));
-                }
-            }
-        } catch (JSONException ex) {
-            Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
 }

@@ -57,7 +57,7 @@ public class Questionari extends javax.swing.JFrame {
         this.nomPacient=nomPacient;
         this.idPacient = idPacient;
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Qüestionari");
         controlador = new ControladorHibernate();
         initComponents();
@@ -95,6 +95,8 @@ public class Questionari extends javax.swing.JFrame {
         jPanel1.add(askedQuestion, c);
         
         JTextArea answer = new JTextArea();
+        //answer.setLineWrap(true);
+//answer.setWrapStyleWord(true);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.ipady = 30;      //make this component tall
 	c.weightx = 0.0;
@@ -102,9 +104,9 @@ public class Questionari extends javax.swing.JFrame {
 	c.gridx = 1;
         c.insets = new Insets(10,20,10,20);
 	c.gridy = rowCounter+1;
-        jPanel1.add(answer, c);                      
+        jPanel1.add(new JScrollPane(answer), c);                      
         
-          c = new GridBagConstraints();
+         c = new GridBagConstraints();
         acceptButton.setEnabled(true);
         c.gridx = 7;
 	c.gridy = rowCounter+3;
@@ -112,8 +114,8 @@ public class Questionari extends javax.swing.JFrame {
         c.gridwidth=1;
         jPanel1.add(acceptButton,c);
         
-          c = new GridBagConstraints();
-        JButton modifyButton = new JButton("Afegir resposta");
+        c = new GridBagConstraints();
+        JButton modifyButton = new JButton("Borrar resposta");
         c.gridx = 7;
         c.gridwidth=1;
         c.gridy=rowCounter+1;
@@ -121,8 +123,7 @@ public class Questionari extends javax.swing.JFrame {
         {
           public void actionPerformed(ActionEvent e)
           {           
-              System.out.println(answer.getText());
-              System.out.println(idPacient);
+              answer.setText("");
             //controlador.crearResposta(answer.getText() , idPacient);
           }
         }); 

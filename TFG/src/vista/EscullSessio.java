@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 
@@ -36,6 +37,7 @@ public class EscullSessio extends javax.swing.JDialog {
         this.nomPacient=nomPacient;
         controlador = new ControladorHibernate();
         this.setTitle("Escull sessió");
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         initComponents();
         Font font = new Font("Tahoma", Font.BOLD,12);
         jLabel1.setFont(font);
@@ -590,7 +592,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
-            Descripcions descripcions = new Descripcions();
+            Transcripcio descripcions = new Transcripcio();
             descripcions.prova(path,idPacient, 2);                
         }               
     }//GEN-LAST:event_DescripcioSessio2ActionPerformed
@@ -623,7 +625,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3";
-            Descripcions descripcions = new Descripcions();
+            Transcripcio descripcions = new Transcripcio();
             descripcions.prova(path,idPacient, 3);                
         }                       
     }//GEN-LAST:event_DescripcioSessio3ActionPerformed
@@ -645,7 +647,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4";
-            Descripcions descripcions = new Descripcions();
+            Transcripcio descripcions = new Transcripcio();
             descripcions.prova(path,idPacient, 4);                
         }                
     }//GEN-LAST:event_DescripcioSessio4ActionPerformed
@@ -663,7 +665,7 @@ public class EscullSessio extends javax.swing.JDialog {
 
     private void DescripcioSessio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio1ActionPerformed
         String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1";
-        Descripcions descripcions = new Descripcions();
+        Transcripcio descripcions = new Transcripcio();
         descripcions.prova(path,idPacient, 1);
     }//GEN-LAST:event_DescripcioSessio1ActionPerformed
 
@@ -684,7 +686,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8";
-            Descripcions descripcions = new Descripcions();
+            Transcripcio descripcions = new Transcripcio();
             descripcions.prova(path,idPacient, 8);                
         }               
     }//GEN-LAST:event_DescripcioSessio8ActionPerformed
@@ -706,7 +708,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6";
-            Descripcions descripcions = new Descripcions();
+            Transcripcio descripcions = new Transcripcio();
             descripcions.prova(path,idPacient, 6);                
         }               
     }//GEN-LAST:event_DescripcioSessio6ActionPerformed
@@ -728,7 +730,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5";
-            Descripcions descripcions = new Descripcions();
+            Transcripcio descripcions = new Transcripcio();
             descripcions.prova(path,idPacient, 5);                
         }               
     }//GEN-LAST:event_DescripcioSessio5ActionPerformed
@@ -750,7 +752,7 @@ public class EscullSessio extends javax.swing.JDialog {
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7";
-            Descripcions descripcions = new Descripcions();
+            Transcripcio descripcions = new Transcripcio();
             descripcions.prova(path,idPacient, 7);                
         }                
     }//GEN-LAST:event_DescripcioSessio7ActionPerformed

@@ -5,21 +5,18 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import model.Avaluador;
 import controlador.Utils;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.List;
 import javax.swing.JButton;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import model.Usuari;
 
 /**
  *
@@ -32,13 +29,14 @@ public class MenuAdmin extends javax.swing.JFrame {
     private GridBagConstraints constraint;
     WindowListener winListe;
     private ArrayList<JButton> llistaButtons = new ArrayList<>();
-    
+    private ControladorHibernate controlador;
     /**
      * Creates new form pacientMenu
      */
     public MenuAdmin(String pacient){
         initComponents();
         Utils.setIcon(this);
+        controlador = new ControladorHibernate();
         this.pacient = pacient;
         pacientLabel.setText(pacient.toUpperCase());
         this.setLocationRelativeTo(null);
@@ -53,12 +51,9 @@ public class MenuAdmin extends javax.swing.JFrame {
 
 
 
-        try {
-            initUsers();
-        } catch (JSONException ex) {
-            Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        initListener();
+       
+        initUsers();
+        //initListener();
         initButtons();
     }
 
@@ -198,18 +193,14 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel pacientLabel;
     // End of variables declaration//GEN-END:variables
 
-    private void initUsers() throws JSONException {
+    private void initUsers(){
         llistaEvaluadors.clear();
-        JSONObject obj;
-        obj = new JSONObject(Utils.getStringFile(Utils.USERS_PATH));
-        org.json.JSONArray users = obj.getJSONArray("Users");
-        for (int i=0; i<users.length();i++){
-            if (users.getJSONObject(i).getString("role").equals("evaluador")){
-                String nom = users.getJSONObject(i).getString("name");
-                String id = users.getJSONObject(i).getString("id");
-                String password = users.getJSONObject(i).getString("password");
-                
-                Avaluador eva = new Avaluador(nom,id,password);
+        
+        List usuaris = controlador.getUsuaris();
+        for(int i=0; i<usuaris.size();i++){
+            Usuari usuari = (Usuari)usuaris.get(i);
+            if(usuari.getRol()==2){
+                Avaluador eva = new Avaluador(usuari.getNom(), String.valueOf(usuari.getId()), usuari.getContrasenya());
                 llistaEvaluadors.add(eva);
             }
         }
@@ -266,7 +257,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         jPanel1.repaint();
     }
 
-    private void initListener() {
+    /*private void initListener() {
         winListe = new WindowListener(){
             @Override
             public void windowOpened(WindowEvent e) {
@@ -280,11 +271,9 @@ public class MenuAdmin extends javax.swing.JFrame {
 
             @Override
             public void windowClosed(WindowEvent e) {
-                try {
+                
                     initUsers();
-                } catch (JSONException ex) {
-                    Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                
                 initButtons();
             }
 
@@ -309,5 +298,5 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
             
         };
-    }
+    }*/
 }

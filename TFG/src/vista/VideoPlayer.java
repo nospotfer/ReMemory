@@ -23,8 +23,6 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -40,12 +38,13 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.TargetDataLine;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import static vista.Transcripcio.frame;
 
 /**
  *
@@ -54,7 +53,7 @@ import javax.swing.SwingUtilities;
 public class VideoPlayer {
     
     static MediaPlayer player;
-    static final HBox hbox = new HBox();
+    static HBox hbox = new HBox();
     static int h,w;
     static TargetDataLine line;
     static File wavFile;
@@ -66,6 +65,8 @@ public class VideoPlayer {
     static JFrame frame;
     static String folderPath;
     static ControladorHibernate controlador;
+    static boolean soSonant = false;
+    static boolean videoEnPlay = false;
     
     static double tempsInici;
     static double timeEnd;
@@ -78,14 +79,38 @@ public class VideoPlayer {
         // This method is invoked on the EDT thread
         controlador = new ControladorHibernate();
         frame = new JFrame("Video");       
-        final JFXPanel fxPanel = new JFXPanel();
-        Platform.setImplicitExit(false);    
-      
+        final JFXPanel fxPanel = new JFXPanel();  
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                if(soSonant){
+                    line.stop();
+                    line.close();
+                    one.interrupt();
+                }                
+               if(videoEnPlay){
+                        player.stop();
+                    }    
+                frame.setVisible(false);
+            }
+        });
+        
+        
+        
         JButton acceptButton = new JButton("Acceptar");
         acceptButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(java.awt.event.ActionEvent ae) {
-               frame.dispose();
+               if(soSonant){
+                    line.stop();
+                    line.close();
+                    one.interrupt();
+                }                
+               if(videoEnPlay){
+                        player.stop();
+                    }    
+                frame.setVisible(false);
             }
         });
         
@@ -96,7 +121,16 @@ public class VideoPlayer {
               int reply = JOptionPane.showConfirmDialog(null, "Segur que vols sortir?", "Exit", JOptionPane.YES_NO_OPTION);
                 if (reply == JOptionPane.YES_OPTION) {
                     player.stop();
-                    frame.dispose();
+                    if(soSonant){
+                        line.stop();
+                        line.close();
+                        one.interrupt();
+                    }  
+                    if(videoEnPlay){
+                        player.stop();
+                    }    
+                   frame.setVisible(false);
+;
                 }    
             }
         });      
@@ -104,10 +138,21 @@ public class VideoPlayer {
         JPanel panel =  new JPanel();
         panel.add(acceptButton);
         panel.add(closeButton);
-        frame.add(fxPanel,BorderLayout.CENTER);
+     
+        JLabel label = new JLabel("              ");
+        label.setBackground( new java.awt.Color(240,248,255));
+        label.setOpaque(true);
+        frame.add(label,BorderLayout.WEST); 
+       
+        JLabel label2 = new JLabel("             ");
+        label2.setBackground( new java.awt.Color(240,248,255));
+        label2.setOpaque(true);
+        frame.add(label2,BorderLayout.PAGE_START);
+       
+        frame.add(fxPanel,BorderLayout.CENTER); 
         frame.add(panel, BorderLayout.PAGE_END);
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Platform.runLater(new Runnable() {
             @Override
@@ -134,12 +179,13 @@ public class VideoPlayer {
 
         MediaView view = new MediaView(player);      
        
-      
+        hbox = new HBox();
         final Button playButton = new Button("Play"); 
         playButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
                 player.play();
+                videoEnPlay= true;
             }
         });
         
@@ -148,6 +194,7 @@ public class VideoPlayer {
             @Override
             public void handle(ActionEvent event) {
                 player.pause();
+                videoEnPlay=false;
             }
         });
         
@@ -158,6 +205,7 @@ public class VideoPlayer {
             @Override
             public void handle(ActionEvent event) {
                 player.stop();
+                videoEnPlay = false;
             }
         });
         
@@ -174,10 +222,11 @@ public class VideoPlayer {
           final HBox hbox2 = new HBox();
         
         Button record = new Button("Start recording");
-        record.setOnAction(new EventHandler<ActionEvent>(){
+        record.setOnAction(new EventHandler<ActionEvent>(){           
             @Override
            public void handle(ActionEvent event) {
                 wavFile = new File(path+File.separator+"gravacio.wav");
+                soSonant = true;
                 record.setText("Recording...");
                 one = new Thread(){
                 @Override
@@ -198,6 +247,7 @@ public class VideoPlayer {
                line.stop();
                line.close();
                one.interrupt();
+               soSonant = false;
                record.setText("Start recording");
                 stopRecord.setDisable(true);
                 timestampButton.setDisable(true);
@@ -209,8 +259,9 @@ public class VideoPlayer {
         timestampButton.setOnAction(new EventHandler<ActionEvent>(){
            @Override
            public void handle(ActionEvent event) {
-                timeEnd = (System.currentTimeMillis() - timeStart)-1000;
-                System.out.println( timeEnd);
+                timeEnd = (System.currentTimeMillis() - timeStart)/1000.0f;
+                System.out.println( System.currentTimeMillis());
+                System.out.println( timeStart);
                 controlador.crearTimestamp((float)timeEnd, idPacient, numSessio);
             }
         });
@@ -232,7 +283,7 @@ public class VideoPlayer {
             public void run() {
                 int w = player.getMedia().getWidth();
                 int h = player.getMedia().getHeight();
-                frame.setSize(w, h+150);
+                frame.setSize(w+125, h+200);
                 vbox.setTranslateY(h-10);
                 hbox.setTranslateY(h);
                 hbox2.setTranslateY(h+50);
@@ -256,8 +307,7 @@ public class VideoPlayer {
             public void handle(MouseEvent event) {
                 player.seek(Duration.seconds(slider.getValue()));
             }
-        });
-          Platform.setImplicitExit(false);
+        });;
         return (scene);
     }
         
@@ -266,10 +316,7 @@ public class VideoPlayer {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                  Platform.setImplicitExit(false);
                 initAndShowGUI(path, idPacient, numSessio);
-                Platform.setImplicitExit(false);
-
             }
         });
     }

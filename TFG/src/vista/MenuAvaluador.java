@@ -526,13 +526,13 @@ public class MenuAvaluador extends javax.swing.JFrame {
 
     private void testsVisualsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testsVisualsBtnActionPerformed
         if (idPacient != ""){
-            File file = new File("src"+ File.separator+"resources");
+           /* File file = new File("src"+ File.separator+"resources");
             String[] names = file.list();
             for(String name : names) {            
                 if (!new File("src"+ File.separator+"resources"+ File.separator + nomText.getText()).isDirectory()) {
                     utils.crearCarpeta("src"+ File.separator+"resources" + File.separator + nomText.getText());                    
                 }            
-            }//for
+            }*///for
                   
             EscullSessio eS = new EscullSessio(nomText.getText(),Integer.parseInt(idPacient));
             eS.pack();

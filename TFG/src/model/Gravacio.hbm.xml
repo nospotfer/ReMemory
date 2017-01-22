@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Gravacio" table="Gravacio">
+        <id name="idGravacio" column="idGravacio">
+            <generator class="increment"/>
+        </id>
+        <property name="nom" column="nom" />
+        <property name="data" column="data" />
+        <many-to-one name="sessio" class="model.Sessio" fetch="select">
+           <column name="idSessio" />   
+        </many-to-one>   
+        <set name="timestamps" table="Timestamp" lazy="true" cascade="all">
+            <key column="idGravacio" />
+            <one-to-many class="model.Timestamp" /> 
+       </set>
+        
+    </class>
+</hibernate-mapping>

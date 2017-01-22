@@ -7,14 +7,14 @@ package vista;
 
 import controlador.ControladorHibernate;
 import java.awt.BorderLayout;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
@@ -44,7 +44,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-import static vista.Transcripcio.frame;
 
 /**
  *
@@ -75,6 +74,9 @@ public class VideoPlayer {
     static Button stopRecord;
     static Button timestampButton;
     
+    static Date date;
+    static String nomGravacio;
+    
      private static void initAndShowGUI(String path, int idPacient, int numSessio) {
         // This method is invoked on the EDT thread
         controlador = new ControladorHibernate();
@@ -94,45 +96,36 @@ public class VideoPlayer {
                     }    
                 frame.setVisible(false);
             }
+        });         
+              
+        JButton acceptButton = new JButton("Aceptar");
+        acceptButton.addActionListener((java.awt.event.ActionEvent ae) -> {
+            if(soSonant){
+                line.stop();
+                line.close();
+                one.interrupt();
+            }
+            if(videoEnPlay){
+                player.stop();
+            }
+            frame.setVisible(false);
         });
         
-        
-        
-        JButton acceptButton = new JButton("Acceptar");
-        acceptButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent ae) {
-               if(soSonant){
-                    line.stop();
-                    line.close();
-                    one.interrupt();
-                }                
-               if(videoEnPlay){
-                        player.stop();
-                    }    
-                frame.setVisible(false);
-            }
-        });
-        
-        JButton closeButton = new JButton("Sortir");
-         closeButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent ae) {
-              int reply = JOptionPane.showConfirmDialog(null, "Segur que vols sortir?", "Exit", JOptionPane.YES_NO_OPTION);
-                if (reply == JOptionPane.YES_OPTION) {
-                    player.stop();
-                    if(soSonant){
-                        line.stop();
-                        line.close();
-                        one.interrupt();
-                    }  
-                    if(videoEnPlay){
-                        player.stop();
-                    }    
-                   frame.setVisible(false);
-;
-                }    
-            }
+        JButton closeButton = new JButton("Salir");
+         closeButton.addActionListener((java.awt.event.ActionEvent ae) -> {
+             int reply = JOptionPane.showConfirmDialog(null, "Seguro que quieres salir?", "Salir", JOptionPane.YES_NO_OPTION);
+             if (reply == JOptionPane.YES_OPTION) {
+                 player.stop();
+                 if(soSonant){
+                     line.stop();
+                     line.close();
+                     one.interrupt();
+                 }
+                 if(videoEnPlay){
+                     player.stop();
+                 }
+                 frame.setVisible(false);
+             }
         });      
         
         JPanel panel =  new JPanel();
@@ -154,12 +147,9 @@ public class VideoPlayer {
         frame.setVisible(true);
         //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                initFX(fxPanel, path, idPacient, numSessio);   
-            }
-       });
+        Platform.runLater(() -> {
+            initFX(fxPanel, path, idPacient, numSessio);
+        });
     }
      
      
@@ -181,32 +171,23 @@ public class VideoPlayer {
        
         hbox = new HBox();
         final Button playButton = new Button("Play"); 
-        playButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player.play();
-                videoEnPlay= true;
-            }
+        playButton.setOnAction((ActionEvent event) -> {
+            player.play();
+            videoEnPlay= true;
         });
         
-         final Button pauseButton = new Button("Pause");
-        pauseButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player.pause();
-                videoEnPlay=false;
-            }
+         final Button pauseButton = new Button("Pausa");
+        pauseButton.setOnAction((ActionEvent event) -> {
+            player.pause();
+            videoEnPlay=false;
         });
         
         
         
-        final Button stopButton = new Button("Stop");
-        stopButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player.stop();
-                videoEnPlay = false;
-            }
+        final Button stopButton = new Button("Parar");
+        stopButton.setOnAction((ActionEvent event) -> {
+            player.stop();
+            videoEnPlay = false;
         });
         
         hbox.getChildren().add(playButton);
@@ -219,28 +200,35 @@ public class VideoPlayer {
         vbox.setMinWidth(600);
         Scene  scene  =  new  Scene(root, media.getWidth() ,media.getHeight(),Color.ALICEBLUE);            
         
-          final HBox hbox2 = new HBox();
+        final HBox hbox2 = new HBox();
         
-        Button record = new Button("Start recording");
-        record.setOnAction(new EventHandler<ActionEvent>(){           
-            @Override
-           public void handle(ActionEvent event) {
-                wavFile = new File(path+File.separator+"gravacio.wav");
-                soSonant = true;
-                record.setText("Recording...");
-                one = new Thread(){
+        Button record = new Button("Grabar");
+        record.setOnAction((ActionEvent event) -> {
+            Calendar cal = Calendar.getInstance();
+            int year = cal.get(Calendar.YEAR);
+            int month  = cal.get(Calendar.MONTH)+1;
+            int day = cal.get(Calendar.DAY_OF_MONTH);
+            int hour = cal.get(Calendar.HOUR);
+            int min = cal.get(Calendar.MINUTE);
+            int sec = cal.get(Calendar.SECOND);
+            
+            wavFile = new File(path+File.separator+day+month+year+"_"+hour+min+sec+".wav");
+            nomGravacio = day+""+month+""+year+"_"+hour+""+min+""+sec+".wav";
+            soSonant = true;
+            record.setText("Grabando...");
+            record.setDisable(true);
+            one = new Thread(){
                 @Override
                 public void run(){      
                     timeStart =  System.currentTimeMillis();
+                    controlador.crearGravacio(nomGravacio, day+"/"+month+"/"+year, numSessio, idPacient);
                     StartRecording();           
-                    
                 }
             };
             one.start();
-            }
         });
         
-        stopRecord = new Button("Stop recording");
+        stopRecord = new Button("Parar grabación");
         stopRecord.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event) {
@@ -248,22 +236,18 @@ public class VideoPlayer {
                line.close();
                one.interrupt();
                soSonant = false;
-               record.setText("Start recording");
-                stopRecord.setDisable(true);
-                timestampButton.setDisable(true);
+               record.setText("Grabar");
+               stopRecord.setDisable(true);
+               timestampButton.setDisable(true);
+                record.setDisable(false);
             }
         });
         stopRecord.setDisable(true);
 
         timestampButton = new Button("Timestamp");       
-        timestampButton.setOnAction(new EventHandler<ActionEvent>(){
-           @Override
-           public void handle(ActionEvent event) {
-                timeEnd = (System.currentTimeMillis() - timeStart)/1000.0f;
-                System.out.println( System.currentTimeMillis());
-                System.out.println( timeStart);
-                controlador.crearTimestamp((float)timeEnd, idPacient, numSessio);
-            }
+        timestampButton.setOnAction((ActionEvent event) -> {
+            timeEnd = (System.currentTimeMillis() - timeStart)/1000.0f;
+            controlador.crearTimestamp((float)timeEnd, nomGravacio);
         });
         timestampButton.setDisable(true);
         
@@ -278,46 +262,32 @@ public class VideoPlayer {
         root.getChildren().add(vbox);
         root.getChildren().add(hbox2);
         
-        player.setOnReady(new Runnable(){
-            @Override
-            public void run() {
-                int w = player.getMedia().getWidth();
-                int h = player.getMedia().getHeight();
-                frame.setSize(w+125, h+200);
-                vbox.setTranslateY(h-10);
-                hbox.setTranslateY(h);
-                hbox2.setTranslateY(h+50);
-                hbox2.setTranslateX((w/2)-125);
-                
-               slider.setMin(0.0);
-               slider.setValue(0.0);
-               slider.setMax(player.getTotalDuration().toSeconds());
-            }
-        
+        player.setOnReady(() -> {
+            int w1 = player.getMedia().getWidth();
+            int h1 = player.getMedia().getHeight();
+            frame.setSize(w1 + 125, h1 + 200);
+            vbox.setTranslateY(h1 - 10);
+            hbox.setTranslateY(h1);
+            hbox2.setTranslateY(h1 + 50);
+            hbox2.setTranslateX((w1 / 2) - 125);
+            slider.setMin(0.0);
+            slider.setValue(0.0);
+            slider.setMax(player.getTotalDuration().toSeconds());
         });
         
-         player.currentTimeProperty().addListener(new ChangeListener<Duration>() {
-            @Override
-            public void changed(ObservableValue<? extends Duration> observable, Duration duration, Duration current) {
-                slider.setValue(current.toSeconds());
-            }
+         player.currentTimeProperty().addListener((ObservableValue<? extends Duration> observable, Duration duration, Duration current) -> {
+             slider.setValue(current.toSeconds());
         });   
-        slider.setOnMousePressed(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                player.seek(Duration.seconds(slider.getValue()));
-            }
-        });;
+        slider.setOnMousePressed((MouseEvent event) -> {
+            player.seek(Duration.seconds(slider.getValue()));
+        });
         return (scene);
     }
         
        public void prova(String path, int idPacient, int numSessio) {
            
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                initAndShowGUI(path, idPacient, numSessio);
-            }
+        SwingUtilities.invokeLater(() -> {
+            initAndShowGUI(path, idPacient, numSessio);
         });
     }
        
@@ -337,7 +307,7 @@ public class VideoPlayer {
         // checks if system supports the data line
        if (!AudioSystem.isLineSupported(info)) {
            System.out.println("Line not supported");
-           JOptionPane.showConfirmDialog(null, "El microfon no s'ha detectat", "Error", JOptionPane.DEFAULT_OPTION);
+           JOptionPane.showConfirmDialog(null, "Microfono no detectado", "Error", JOptionPane.DEFAULT_OPTION);
             micro= false;
        }
        if(micro){

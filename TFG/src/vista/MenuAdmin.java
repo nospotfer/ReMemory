@@ -75,7 +75,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menú administració");
 
-        backBtn.setText("Tornar al menú principal");
+        backBtn.setText("Volver al menú principal");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
@@ -85,7 +85,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         pacientLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         pacientLabel.setText("jLabel1");
 
-        jButton1.setText("Nou avaluador");
+        jButton1.setText("Crear evaluador");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -110,7 +110,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                                 .addComponent(jButton1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(backBtn)))
-                        .addGap(0, 163, Short.MAX_VALUE)))
+                        .addGap(0, 157, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

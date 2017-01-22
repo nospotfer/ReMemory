@@ -7,8 +7,8 @@
         </id>
         <property name="temps" column="temps" />
         
-        <many-to-one name="sessio" class="model.Sessio" fetch="select">
-           <column name="idSessio" />   
+        <many-to-one name="gravacio" class="model.Gravacio" fetch="select">
+           <column name="idGravacio" />   
         </many-to-one>  
           
     </class>

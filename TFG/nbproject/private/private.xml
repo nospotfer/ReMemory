@@ -3,24 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Persona.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Usuari.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/NewUser.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/MenuAvaluador.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/PacientDatabase.hbm.xml</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Usuari.hbm.xml</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/MenuValoracions.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/VideoPlayer.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/controlador/ControladorHibernate.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/PacientDatabase.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Resposta.hbm.xml</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Resposta.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/MenuAdmin.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/model/Avaluador.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Login.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Questionari.java</file>
-            <file>file:/C:/Users/user/Desktop/Rememory/TFG/src/vista/Transcripcio.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/Questionari.java</file>
         </group>
     </open-files>
 </project-private>

@@ -76,7 +76,7 @@
                       <Component id="acceptaBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="cancelaBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="610" max="32767" attributes="0"/>
+                      <EmptySpace pref="612" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -96,7 +96,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="acceptaBtn">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Accepta"/>
+                <Property name="text" type="java.lang.String" value="Aceptar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="acceptaBtnActionPerformed"/>
@@ -104,7 +104,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="cancelaBtn">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Cancel&#xb7;la"/>
+                <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelaBtnActionPerformed"/>

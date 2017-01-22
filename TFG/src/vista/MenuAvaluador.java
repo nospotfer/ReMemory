@@ -114,11 +114,11 @@ public class MenuAvaluador extends javax.swing.JFrame {
 
         idText.setEditable(false);
 
-        jLabel5.setText("Nom:");
+        jLabel5.setText("Nombre:");
 
         nomText.setEditable(false);
 
-        nouPacientBtn.setText("Nou pacient");
+        nouPacientBtn.setText("Paciente nuevo");
         nouPacientBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nouPacientBtnActionPerformed(evt);
@@ -148,7 +148,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        importaBtn.setText("Importa pacient");
+        importaBtn.setText("Importar paciente");
         importaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 importaBtnActionPerformed(evt);
@@ -175,7 +175,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                         .addComponent(nouPacientBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(importaBtn)
-                        .addGap(0, 10, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
@@ -215,7 +215,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Tests textuals");
+        jLabel1.setText("Evaluación");
 
         testsVisualsBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pictureTest.png"))); // NOI18N
         testsVisualsBtn.setEnabled(false);
@@ -225,7 +225,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Tests visuals");
+        jLabel2.setText("Tratamiento");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -235,7 +235,9 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(testsTextualsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel1)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
@@ -309,7 +311,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        backBtn.setText("Surt al menú principal");
+        backBtn.setText("Salir al menu principal");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
@@ -356,6 +358,8 @@ public class MenuAvaluador extends javax.swing.JFrame {
                     .addComponent(evaluadorLabel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel3.getAccessibleContext().setAccessibleName("Evaluación");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

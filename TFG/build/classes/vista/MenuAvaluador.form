@@ -103,7 +103,7 @@
                           <Component id="nouPacientBtn" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="importaBtn" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
@@ -156,7 +156,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nom:"/>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nomText">
@@ -166,7 +166,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="nouPacientBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nou pacient"/>
+            <Property name="text" type="java.lang.String" value="Paciente nuevo"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nouPacientBtnActionPerformed"/>
@@ -200,7 +200,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="importaBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Importa pacient"/>
+            <Property name="text" type="java.lang.String" value="Importar paciente"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="importaBtnActionPerformed"/>
@@ -223,8 +223,11 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="testsTextualsBtn" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="testsTextualsBtn" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -267,7 +270,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tests textuals"/>
+            <Property name="text" type="java.lang.String" value="Evaluaci&#xf3;n"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="testsVisualsBtn">
@@ -283,7 +286,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tests visuals"/>
+            <Property name="text" type="java.lang.String" value="Tratamiento"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -296,6 +299,9 @@
           </Border>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Evaluaci&#xf3;n"/>
+      </AccessibilityProperties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -373,7 +379,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="backBtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Surt al men&#xfa; principal"/>
+        <Property name="text" type="java.lang.String" value="Salir al menu principal"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBtnActionPerformed"/>

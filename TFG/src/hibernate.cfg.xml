@@ -16,8 +16,8 @@
     <mapping resource="model/Sessio.hbm.xml"/>
     <mapping resource="model/Descripcio.hbm.xml"/>
     <mapping resource="model/Timestamp.hbm.xml"/>
-    <mapping resource="model/Imatge.hbm.xml"/>
     <mapping resource="model/Resposta.hbm.xml"/>
     <mapping resource="model/Usuari.hbm.xml"/>
+    <mapping resource="model/Gravacio.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

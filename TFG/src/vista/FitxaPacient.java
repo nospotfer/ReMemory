@@ -195,14 +195,14 @@ public class FitxaPacient extends JFrame {
 
         mainPanel.add(dataPanel, java.awt.BorderLayout.CENTER);
 
-        acceptaBtn.setText("Accepta");
+        acceptaBtn.setText("Aceptar");
         acceptaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 acceptaBtnActionPerformed(evt);
             }
         });
 
-        cancelaBtn.setText("Cancel·la");
+        cancelaBtn.setText("Cancelar");
         cancelaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelaBtnActionPerformed(evt);
@@ -218,7 +218,7 @@ public class FitxaPacient extends JFrame {
                 .addComponent(acceptaBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelaBtn)
-                .addContainerGap(610, Short.MAX_VALUE))
+                .addContainerGap(612, Short.MAX_VALUE))
         );
         buttonPanelLayout.setVerticalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

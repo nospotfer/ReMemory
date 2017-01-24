@@ -27,10 +27,14 @@ public class NewPacient extends javax.swing.JDialog {
      * Creates new form newUser
      */
     ControladorHibernate controlador;
-    public NewPacient(java.awt.Frame parent, boolean modal) {
+    String nomEvaluador;
+    
+    public NewPacient(java.awt.Frame parent, boolean modal, String nomEvaluador) {
         super(parent, modal);
         Utils.setIcon((JFrame)this.getOwner());
+        this.nomEvaluador = nomEvaluador;
         initComponents();
+        this.setTitle("Crear paciente");
         this.setLocationRelativeTo(null);
         controlador = new ControladorHibernate();
     }
@@ -148,7 +152,7 @@ public class NewPacient extends javax.swing.JDialog {
     private void newBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newBtnActionPerformed
         System.out.println(nameTextBox.getText());
         System.out.println(Integer.parseInt(idTextBox.getText()));
-        controlador.crearPacient(nameTextBox.getText(), Integer.parseInt(idTextBox.getText()) , 0, 0);
+        controlador.crearPacient(nameTextBox.getText(), Integer.parseInt(idTextBox.getText()) , 0, 0, nomEvaluador);
         JSONObject obj = null;
         try {
             obj = new JSONObject(getStringFile(Utils.USERS_PATH));
@@ -243,7 +247,7 @@ public class NewPacient extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                NewPacient dialog = new NewPacient(new javax.swing.JFrame(), true);
+                NewPacient dialog = new NewPacient(new javax.swing.JFrame(), true,"");
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

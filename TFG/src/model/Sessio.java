@@ -19,8 +19,7 @@ public class Sessio {
     private int numSessio;
     private PacientDatabase pacient;
     private Set<Descripcio> descripcions;
-    private Set<Timestamp> timestamps;
-    //private String path 
+    private Set<Resposta> respostes;
     
     public Sessio(){}
     
@@ -117,19 +116,6 @@ public class Sessio {
         this.descripcions = descripcions;
     }
 
-    /**
-     * @return the timestamps
-     */
-    public Set<Timestamp> getTimestamps() {
-        return timestamps;
-    }
-
-    /**
-     * @param timestamps the timestamps to set
-     */
-    public void setTimestamps(Set<Timestamp> timestamps) {
-        this.timestamps = timestamps;
-    }
 
     /**
      * @return the numSessio
@@ -143,5 +129,19 @@ public class Sessio {
      */
     public void setNumSessio(int numSessio) {
         this.numSessio = numSessio;
+    }
+
+    /**
+     * @return the respostes
+     */
+    public Set<Resposta> getRespostes() {
+        return respostes;
+    }
+
+    /**
+     * @param respostes the respostes to set
+     */
+    public void setRespostes(Set<Resposta> respostes) {
+        this.respostes = respostes;
     }
 }

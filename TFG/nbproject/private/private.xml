@@ -3,7 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/PacientDatabase.java</file>
             <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/Questionari.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/controlador/ControladorHibernate.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Usuari.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/VideoPlayer.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Sessio.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/NewPacient.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Descripcio.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Resposta.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Sessio.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Resposta.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/Respostes.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/EscullSessio.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/Login.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/hibernate.cfg.xml</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/MenuAvaluador.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Descripcio.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Timestamp.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/vista/Transcripcio.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/PacientDatabase.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Usuari.java</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Gravacio.hbm.xml</file>
+            <file>file:/C:/Users/user/Desktop/prrr/TFG/src/model/Gravacio.java</file>
         </group>
     </open-files>
 </project-private>

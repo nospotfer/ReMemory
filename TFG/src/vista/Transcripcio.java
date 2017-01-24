@@ -143,7 +143,8 @@ public class Transcripcio {
         changeButton.setOnAction((ActionEvent event) -> {
             JFileChooser chooser = new JFileChooser();
             chooser.showSaveDialog(null);
-            if (chooser.getSelectedFile()!=null) {
+            boolean existeix = controlador.checkGravacio(idPacient, numSessio, chooser.getSelectedFile().getName());
+            if (chooser.getSelectedFile()!=null && existeix==true) {
                 String path1 = chooser.getSelectedFile().getAbsolutePath();
                 String filename=chooser.getSelectedFile().getName();
                 //System.out.println(filename);
@@ -153,6 +154,8 @@ public class Transcripcio {
                 player2 = new MediaPlayer(media2);
                 MediaView view2 = new MediaView(player2);
                 final DecimalFormat df = new DecimalFormat("####0.00");
+                
+                
                 player2.setOnReady(() -> {
                     slider2.setMin(0.0);
                     slider2.setValue(0.0);
@@ -194,14 +197,16 @@ public class Transcripcio {
         
         VBox vbox2 = new VBox();
         Gravacio gravacio = controlador.getFirstGravacio(idPacient, numSessio);
-        String nomGravacio = gravacio.getNom();
-        wavFile = new File(path+File.separator+nomGravacio);         
-        u = wavFile.toURI();
-        Media media2 = new Media(u.toString());
-        player2 = new MediaPlayer(media2);
-        MediaView view2 = new MediaView(player2);
-        vbox2.getChildren().add(view2);
-        
+        String nomGravacio="";
+        if(gravacio!= null){
+            nomGravacio = gravacio.getNom();
+            wavFile = new File(path+File.separator+nomGravacio);         
+            u = wavFile.toURI();
+            Media media2 = new Media(u.toString());
+            player2 = new MediaPlayer(media2);
+            MediaView view2 = new MediaView(player2);
+            vbox2.getChildren().add(view2);
+        }
          
         HBox hbox3 = new HBox();
         Button playMusicButton = new Button("Play");
@@ -259,23 +264,25 @@ public class Transcripcio {
         vbox.setMinWidth(600);
         hbox5 = new HBox();
         hbox5.getChildren().clear();
-        List timestamps = controlador.getTimestamps(idPacient, numSessio, nomGravacio);
-        for(int i=0;i<timestamps.size();i++){
-            
-            Timestamp timestamp = (Timestamp)timestamps.get(i);
-            Label timestampLabel = new Label();
+        if(nomGravacio!=""){
+            List timestamps = controlador.getTimestamps(idPacient, numSessio, nomGravacio);
+            for(int i=0;i<timestamps.size();i++){
 
-            DecimalFormat df = new DecimalFormat("####0.00");
-            timestampLabel.setText(String.valueOf(df.format(timestamp.getTemps())));
-            timestampLabel.setPadding(new Insets(0, 0, 0, 10));
-            
-            timestampLabel.setOnMouseClicked((MouseEvent mouseEvent) -> {
-                slider2.setValue(timestamp.getTemps());
-                player2.seek(Duration.seconds(slider2.getValue()));
-            });
-              
-              hbox5.getChildren().add(timestampLabel);
-        }      
+                Timestamp timestamp = (Timestamp)timestamps.get(i);
+                Label timestampLabel = new Label();
+
+                DecimalFormat df = new DecimalFormat("####0.00");
+                timestampLabel.setText(String.valueOf(df.format(timestamp.getTemps())));
+                timestampLabel.setPadding(new Insets(0, 0, 0, 10));
+
+                timestampLabel.setOnMouseClicked((MouseEvent mouseEvent) -> {
+                    slider2.setValue(timestamp.getTemps());
+                    player2.seek(Duration.seconds(slider2.getValue()));
+                });
+
+                  hbox5.getChildren().add(timestampLabel);
+            }   
+        }
         HBox hbox6 = new HBox();
         TextArea textarea = new TextArea();
         hbox6.getChildren().add(textarea);
@@ -312,7 +319,7 @@ public class Transcripcio {
         root.getChildren().add(view);
         root.getChildren().add(hbox);
         root.getChildren().add(vbox);
-        root.getChildren().add(view2);
+        root.getChildren().add(vbox2);
         root.getChildren().add(hbox3);
         root.getChildren().add(hbox5);
         root.getChildren().add(hbox6);

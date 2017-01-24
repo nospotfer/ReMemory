@@ -12,15 +12,15 @@ package model;
 public class Resposta {
     private int idResposta;
     private String resposta;
-    private PacientDatabase pacient;
+    private Sessio sessio;
     private String pregunta;
     
     public Resposta(){}
     
-    public Resposta(String resposta, String pregunta, PacientDatabase pacient){
+    public Resposta(String resposta, String pregunta, Sessio sessio){
         this.resposta = resposta;
         this.pregunta = pregunta;
-        this.pacient = pacient;
+        this.sessio = sessio;
     }
 
     /**
@@ -52,20 +52,6 @@ public class Resposta {
     }
 
     /**
-     * @return the pacient
-     */
-    public PacientDatabase getPacient() {
-        return pacient;
-    }
-
-    /**
-     * @param pacient the pacient to set
-     */
-    public void setPacient(PacientDatabase pacient) {
-        this.pacient = pacient;
-    }
-
-    /**
      * @return the pregunta
      */
     public String getPregunta() {
@@ -77,6 +63,20 @@ public class Resposta {
      */
     public void setPregunta(String pregunta) {
         this.pregunta = pregunta;
+    }
+
+    /**
+     * @return the sessio
+     */
+    public Sessio getSessio() {
+        return sessio;
+    }
+
+    /**
+     * @param sessio the sessio to set
+     */
+    public void setSessio(Sessio sessio) {
+        this.sessio = sessio;
     }
     
 }

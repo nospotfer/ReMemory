@@ -12,11 +12,10 @@ import java.net.URI;
 import java.text.DecimalFormat;
 import java.util.List;
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -34,11 +33,12 @@ import javafx.util.Duration;
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioInputStream;;
 import javax.sound.sampled.TargetDataLine;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import model.Descripcio;
+import model.Gravacio;
 import model.Timestamp;
 
 /**
@@ -51,6 +51,7 @@ public class Transcripcio {
     static MediaPlayer player;
     static MediaPlayer player2;
     static HBox hbox = new HBox();
+    static HBox hbox5;
     static Label time;
     static int h,w;
     static TargetDataLine line;
@@ -64,10 +65,11 @@ public class Transcripcio {
     static String folderPath;
     static ControladorHibernate controlador;
     static VBox nova;
+    static Slider slider2;
     
      private static void initAndShowGUI(String path, int idPacient, int numSessio) {
         // This method is invoked on the EDT thread
-        frame = new JFrame("Transcripció");
+        frame = new JFrame("Transcripción");
         nova = new VBox();
         final JFXPanel fxPanel = new JFXPanel();
         controlador = new ControladorHibernate();
@@ -75,7 +77,7 @@ public class Transcripcio {
        
         label.setBackground( new java.awt.Color(240,248,255));
         label.setOpaque(true);
-         frame.add(label,BorderLayout.WEST); 
+        frame.add(label,BorderLayout.WEST); 
        
         JLabel label2 = new JLabel("             ");
         label2.setBackground( new java.awt.Color(240,248,255));
@@ -94,19 +96,16 @@ public class Transcripcio {
                 frame.setVisible(false);
             }
         });
-        
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                initFX(fxPanel, path, idPacient, numSessio);   
-            }
-       });
+        time = new Label();
+        Platform.runLater(() -> {
+            initFX(fxPanel, path, idPacient, numSessio);
+        });
     }
      
      
        private static void initFX(JFXPanel fxPanel, String path , int idPacient, int numSessio) {
         // This method is invoked on the JavaFX thread
-        Scene scene = null;
+        Scene scene;
         scene = createScene(path, idPacient, numSessio);
         fxPanel.setScene(scene);
     }
@@ -124,256 +123,249 @@ public class Transcripcio {
         stopRecordButton = new Button("Stop Recording");
          
         final Button playButton = new Button("Play video"); 
-        playButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player.play();
-            }
+        playButton.setOnAction((ActionEvent event) -> {
+            player.play();
         });
         
         
-        Button pauseButton = new Button("Pausa video");
-        pauseButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player.pause();
-            }
+        Button pauseButton = new Button("Pausar video");
+        pauseButton.setOnAction((ActionEvent event) -> {
+            player.pause();
         });
         
         
-        Button stopButton = new Button("Stop video");
-        stopButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player.stop();
+        Button stopButton = new Button("Parar video");
+        stopButton.setOnAction((ActionEvent event) -> {
+            player.stop();
+        });
+        
+        Button changeButton = new Button("Cambiar gravación");
+        changeButton.setOnAction((ActionEvent event) -> {
+            JFileChooser chooser = new JFileChooser();
+            chooser.showSaveDialog(null);
+            boolean existeix = controlador.checkGravacio(idPacient, numSessio, chooser.getSelectedFile().getName());
+            if (chooser.getSelectedFile()!=null && existeix==true) {
+                String path1 = chooser.getSelectedFile().getAbsolutePath();
+                String filename=chooser.getSelectedFile().getName();
+                //System.out.println(filename);
+                wavFile = new File(path1);
+                URI uri = wavFile.toURI();
+                Media media2 = new Media(uri.toString());
+                player2 = new MediaPlayer(media2);
+                MediaView view2 = new MediaView(player2);
+                final DecimalFormat df = new DecimalFormat("####0.00");
+                
+                
+                player2.setOnReady(() -> {
+                    slider2.setMin(0.0);
+                    slider2.setValue(0.0);
+                    slider2.setMax(player2.getTotalDuration().toSeconds());
+                    time.setText("0.00"+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
+                });
+                player2.currentTimeProperty().addListener((ObservableValue<? extends Duration> observable, Duration duration, Duration current) -> {
+                    slider2.setValue(current.toSeconds());
+                    DecimalFormat df1 = new DecimalFormat("####0.00");
+                    time.setText(String.valueOf(df1.format(current.toSeconds())) + " : " + String.valueOf(df1.format(player2.totalDurationProperty().getValue().toSeconds())));
+                });
+                hbox5.getChildren().clear();
+                List timestamps = controlador.getTimestamps(idPacient, numSessio, filename);
+                for(int i=0;i<timestamps.size();i++){
+                    
+                    Timestamp timestamp = (Timestamp)timestamps.get(i);
+                    Label timestampLabel = new Label();
+  
+                    timestampLabel.setText(String.valueOf(df.format(timestamp.getTemps())));
+                    timestampLabel.setPadding(new Insets(0, 0, 0, 10));
+                    
+                    timestampLabel.setOnMouseClicked((MouseEvent mouseEvent) -> {
+                        slider2.setValue(timestamp.getTemps());
+                        player2.seek(Duration.seconds(slider2.getValue()));
+                    });
+                    
+                    hbox5.getChildren().add(timestampLabel);                      
+                }
             }
         });
+        
         
         hbox.getChildren().add(playButton);
         hbox.getChildren().add(pauseButton);
         hbox.getChildren().add(stopButton);
+        hbox.getChildren().add(changeButton);
         
-        final VBox vbox = new VBox();
-        
-        
-        
+        final VBox vbox = new VBox();      
         
         VBox vbox2 = new VBox();
-        wavFile = new File(path+File.separator+"gravacio.wav");         
-        u = wavFile.toURI();
-        Media media2 = new Media(u.toString());
-        player2 = new MediaPlayer(media2);
-        MediaView view2 = new MediaView(player2);
-        vbox2.getChildren().add(view2);
-        
+        Gravacio gravacio = controlador.getFirstGravacio(idPacient, numSessio);
+        String nomGravacio="";
+        if(gravacio!= null){
+            nomGravacio = gravacio.getNom();
+            wavFile = new File(path+File.separator+nomGravacio);         
+            u = wavFile.toURI();
+            Media media2 = new Media(u.toString());
+            player2 = new MediaPlayer(media2);
+            MediaView view2 = new MediaView(player2);
+            vbox2.getChildren().add(view2);
+        }
          
         HBox hbox3 = new HBox();
         Button playMusicButton = new Button("Play");
-        playMusicButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player2.play();
-                //playButton.setText("Stop");
-            }
+        playMusicButton.setOnAction((ActionEvent event) -> {
+            player2.play();
+            //playButton.setText("Stop");
         });
         
-        Button pauseMusicButton = new Button("Pause");
-        pauseMusicButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player2.pause();
-                //playButton.setText("Stop");
-            }
+        Button pauseMusicButton = new Button("Pausa");
+        pauseMusicButton.setOnAction((ActionEvent event) -> {
+            player2.pause();
+            //playButton.setText("Stop");
         });
         
         
         Button stopMusicButton = new Button("Stop");
-        stopMusicButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {
-                player2.stop();
-                //playButton.setText("Stop");
-            }
+        stopMusicButton.setOnAction((ActionEvent event) -> {
+            player2.stop();
+            //playButton.setText("Stop");
         });
         
-        Slider slider2 = new Slider();
+        slider2 = new Slider();
         hbox3.getChildren().add(playMusicButton);
         hbox3.getChildren().add(pauseMusicButton);
         hbox3.getChildren().add(stopMusicButton);
         hbox3.getChildren().add(slider2);
         
-        player2.currentTimeProperty().addListener(new ChangeListener<Duration>() {
-            @Override
-            public void changed(ObservableValue<? extends Duration> observable, Duration duration, Duration current) {
-                slider2.setValue(current.toSeconds());
-                DecimalFormat df = new DecimalFormat("####0.00");
-                //df.format(player2.totalDurationProperty().getValue().toSeconds());
-                time.setText(String.valueOf(df.format(current.toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
-            }
+        player2.currentTimeProperty().addListener((ObservableValue<? extends Duration> observable, Duration duration, Duration current) -> {
+            slider2.setValue(current.toSeconds());
+            DecimalFormat df = new DecimalFormat("####0.00");
+            time.setText(String.valueOf(df.format(current.toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
         });   
-        slider2.setOnMousePressed(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                player2.seek(Duration.seconds(slider2.getValue()));
-                 DecimalFormat df = new DecimalFormat("####0.00");
-                df.format(Duration.seconds(slider2.getValue()).toSeconds());
-                
-                time.setText(String.valueOf(df.format(Duration.seconds(slider2.getValue()).toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
-            }
+        slider2.setOnMousePressed((MouseEvent event) -> {
+            player2.seek(Duration.seconds(slider2.getValue()));
+            DecimalFormat df = new DecimalFormat("####0.00");
+            df.format(Duration.seconds(slider2.getValue()).toSeconds());        
+            time.setText(String.valueOf(df.format(Duration.seconds(slider2.getValue()).toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
         });
          
-        player2.setOnReady(new Runnable(){
-            @Override
-            public void run() {
-               int w = player.getMedia().getWidth();
-               int h = player.getMedia().getHeight();
-               
-               hbox3.setTranslateY(h+65);
-               hbox3.setPrefWidth(w);
-               slider2.setMin(0.0);
-               slider2.setValue(0.0);
-               slider2.setPrefWidth(w-150);
-               slider2.setMax(player2.getTotalDuration().toSeconds());
-               DecimalFormat df = new DecimalFormat("####0.00");
-               time.setText("0.00"+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
-            }
-        
+        player2.setOnReady(() -> {
+            int w1 = player.getMedia().getWidth();
+            int h1 = player.getMedia().getHeight();
+            hbox3.setTranslateY(h1 + 65);
+            hbox3.setPrefWidth(w1);
+            slider2.setMin(0.0);
+            slider2.setValue(0.0);
+            slider2.setPrefWidth(w1 - 150);
+            slider2.setMax(player2.getTotalDuration().toSeconds());
+            DecimalFormat df = new DecimalFormat("####0.00");
+            time.setText("0.00"+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
         });   
         
         slider = new Slider();   
         vbox.getChildren().add(slider);
         vbox.setMinWidth(600);
-        
-        HBox hbox5 = new HBox();
-        Label timestampLabel = new Label();
-        List timestamps = controlador.getTimestamps(idPacient, 1);
-        String tempTimestamps="";
-        for(int i=0;i<timestamps.size();i++){
-            Timestamp timestamp = (Timestamp) timestamps.get(i);
-            tempTimestamps += " " + timestamp.getTemps();
+        hbox5 = new HBox();
+        hbox5.getChildren().clear();
+        if(nomGravacio!=""){
+            List timestamps = controlador.getTimestamps(idPacient, numSessio, nomGravacio);
+            for(int i=0;i<timestamps.size();i++){
+
+                Timestamp timestamp = (Timestamp)timestamps.get(i);
+                Label timestampLabel = new Label();
+
+                DecimalFormat df = new DecimalFormat("####0.00");
+                timestampLabel.setText(String.valueOf(df.format(timestamp.getTemps())));
+                timestampLabel.setPadding(new Insets(0, 0, 0, 10));
+
+                timestampLabel.setOnMouseClicked((MouseEvent mouseEvent) -> {
+                    slider2.setValue(timestamp.getTemps());
+                    player2.seek(Duration.seconds(slider2.getValue()));
+                });
+
+                  hbox5.getChildren().add(timestampLabel);
+            }   
         }
-        timestampLabel.setText(tempTimestamps);
-        timestampLabel.setStyle("-fx-border-color: black;");
-        hbox5.getChildren().add(timestampLabel);
-        
         HBox hbox6 = new HBox();
         TextArea textarea = new TextArea();
         hbox6.getChildren().add(textarea);
         
         HBox hbox7 = new HBox();
-        Button acceptButton = new Button("Afegir descripcio");
-         acceptButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) { 
-                String data=textarea.getText().trim();
-                if(!data.equals("")){
-                    controlador.crearDescripcio(textarea.getText(), numSessio, idPacient);
-                    List descripcions = controlador.getDescripcions(idPacient, numSessio);
-                    Label descripcio = new Label();
-                    descripcio.setText(textarea.getText());;
-                    nova.getChildren().add(descripcio);
-                    textarea.setText("");
-                    int w = player.getMedia().getWidth();
-                    int h = player.getMedia().getHeight();
-                }
+        Button acceptButton = new Button("Añadir Descripción");
+         acceptButton.setOnAction((ActionEvent event) -> {
+             String data=textarea.getText().trim();
+            if (!data.equals("")) {
+                controlador.crearDescripcio(textarea.getText(), numSessio, idPacient);
+                List descripcions = controlador.getDescripcions(idPacient, numSessio);
+                Label descripcio = new Label();
+                descripcio.setText(textarea.getText());
+                nova.getChildren().add(descripcio);
+                textarea.setText("");
+                int w1 = player.getMedia().getWidth();
+                int h1 = player.getMedia().getHeight();
             }
         });
          
-         Button closeButton = new Button("Tancar");
-         closeButton.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent event) {              
-                int reply = JOptionPane.showConfirmDialog(null, "Segur que vols sortir?", "Exit", JOptionPane.YES_NO_OPTION);
-                if (reply == JOptionPane.YES_OPTION) {
-                    player.stop();
-                    player2.stop();
-                    frame.setVisible(false);
-                }                       
-            }
+         Button closeButton = new Button("Cerrar");
+         closeButton.setOnAction((ActionEvent event) -> {
+            player.stop();
+            player2.stop();
+            frame.setVisible(false);
         });
         hbox7.getChildren().add(acceptButton);
         hbox7.getChildren().add(closeButton);
         
         HBox hbox8 = new HBox();
-        time = new Label();
         hbox8.getChildren().add(time);
         
         Scene  scene  =  new  Scene(root, media.getWidth() ,media.getHeight(),Color.ALICEBLUE);
         root.getChildren().add(view);
         root.getChildren().add(hbox);
         root.getChildren().add(vbox);
-        root.getChildren().add(view2);
+        root.getChildren().add(vbox2);
         root.getChildren().add(hbox3);
         root.getChildren().add(hbox5);
         root.getChildren().add(hbox6);
         root.getChildren().add(hbox7);
         root.getChildren().add(hbox8);
         
-        player.setOnReady(new Runnable(){
-            @Override
-            public void run() {
-                int w = player.getMedia().getWidth();
-                int h = player.getMedia().getHeight();
+        player.setOnReady(() -> {
+            int w1 = player.getMedia().getWidth();
+            int h1 = player.getMedia().getHeight();
+            frame.setSize(w1 + 400, h1 + 400);
+            vbox.setTranslateY(h1 - 10);
+            hbox.setTranslateY(h1);
+            hbox5.setTranslateY(h1 + 35);
+            hbox5.setPrefWidth(w1);
+            textarea.setPrefColumnCount(55);
+            textarea.setPrefRowCount(5);
+            hbox6.setTranslateY(h1 + 155);
+            hbox7.setTranslateY(h1 + 275);
+            hbox7.setTranslateX(w1 - 150);
+            hbox8.setTranslateY(h1 + 105);
+            slider.setMin(0.0);
+            slider.setValue(0.0);
+            slider.setMax(player.getTotalDuration().toSeconds());
+            //VBox nova = new VBox();
+            /*Saber mida segons el numero de descripcions*/
+            List descripcions = controlador.getDescripcions(idPacient, numSessio);
+            //Label descripcio = new Label();
+            Label textInicial = new Label("Descripcions: ");
+            nova.getChildren().add(textInicial);
+            for(int i=0;i<descripcions.size();i++){
+                Label descripcio = new Label();
+                Descripcio desc = (Descripcio) descripcions.get(i);
+                descripcio.setText(desc.getDescripcio()+"\n");
+                nova.getChildren().add(descripcio);
                 
-                frame.setSize(w+400, h+400);
-                vbox.setTranslateY(h-10);
-
-                hbox.setTranslateY(h);
-
-                hbox5.setTranslateY(h+35);
-
-                timestampLabel.setPrefWidth(w);
-
-                
-                textarea.setPrefColumnCount(55);
-                textarea.setPrefRowCount(5);
-
-                hbox6.setTranslateY(h+155);
-
-                hbox7.setTranslateY(h+275);
-                hbox7.setTranslateX(w-150);
-                
-                hbox8.setTranslateY(h+105);
-                
-                
-                slider.setMin(0.0);
-                slider.setValue(0.0);
-                slider.setMax(player.getTotalDuration().toSeconds());
-                
-                //VBox nova = new VBox();
-                /*Saber mida segons el numero de descripcions*/
-                List descripcions = controlador.getDescripcions(idPacient, numSessio);
-                //Label descripcio = new Label();
-                Label textInicial = new Label("Descripcions: ");
-                nova.getChildren().add(textInicial);
-                for(int i=0;i<descripcions.size();i++){ 
-                    Label descripcio = new Label();
-                    Descripcio desc = (Descripcio) descripcions.get(i);
-                    descripcio.setText(desc.getDescripcio()+"\n");
-                    nova.getChildren().add(descripcio);                   
-                    
-                   // nova.setTranslateY(i*25);
-                }
-                nova.setTranslateX(player.getMedia().getWidth()+25);
-                root.getChildren().add(nova);
-                
-                
-                
+                // nova.setTranslateY(i*25);
             }
-        
+            nova.setTranslateX(player.getMedia().getWidth()+25);        
+            root.getChildren().add(nova);
         });
         
-         player.currentTimeProperty().addListener(new ChangeListener<Duration>() {
-            @Override
-            public void changed(ObservableValue<? extends Duration> observable, Duration duration, Duration current) {
-                slider.setValue(current.toSeconds());
-            }
+         player.currentTimeProperty().addListener((ObservableValue<? extends Duration> observable, Duration duration, Duration current) -> {
+             slider.setValue(current.toSeconds());
         });   
-        slider.setOnMousePressed(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                player.seek(Duration.seconds(slider.getValue()));
-            }
+        slider.setOnMousePressed((MouseEvent event) -> {
+            player.seek(Duration.seconds(slider.getValue()));
         });
         
         return (scene);
@@ -381,12 +373,8 @@ public class Transcripcio {
         
        public void prova(String path, int idPacient, int numSessio) {
            
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                
-                initAndShowGUI(path, idPacient, numSessio);
-            }
+        SwingUtilities.invokeLater(() -> {
+            initAndShowGUI(path, idPacient, numSessio);
         });
     }
    

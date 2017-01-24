@@ -25,10 +25,15 @@ import org.hibernate.Transaction;
 public class ControladorHibernate {
     Conector con = new Conector();
 
-    public void crearPacient(String nom, int idPacient, int edat, int anysEscola){
+    public void crearPacient(String nom, int idPacient, int edat, int anysEscola, String nomUsuari){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
-        PacientDatabase pacient = new PacientDatabase(nom, idPacient, edat, anysEscola);
+        
+        Query query = session.createQuery("from Usuari where nomUsuari = :nomUsuari");
+        query.setParameter("nomUsuari", nomUsuari);
+        Usuari usuari = (Usuari)query.list().get(0);
+        
+        PacientDatabase pacient = new PacientDatabase(nom, idPacient, edat, anysEscola, usuari);
         pacient.setNom(nom);
         pacient.setId(idPacient);
         pacient.setEdat(edat);
@@ -85,14 +90,19 @@ public class ControladorHibernate {
         session.close(); 
     }
     
-    public void crearResposta(String answer, String pregunta, int idPacient){
+    public void crearResposta(String answer, String pregunta, int idPacient, int numSessio){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
         PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
         
-        Resposta resposta = new Resposta(answer, pregunta, pacient);
+        Query query = session.createQuery("from Sessio where idPacient =:idPacient AND numSessio =:numSessio");
+        query.setParameter("idPacient", idPacient);
+        query.setParameter("numSessio", numSessio);
+        Sessio sessio = (Sessio) query.list().get(0);
+        
+        Resposta resposta = new Resposta(answer, pregunta, sessio);
         resposta.setResposta(answer);
-        resposta.setPacient(pacient);
+        resposta.setSessio(sessio);
         
         session.saveOrUpdate(resposta);
         tx.commit();
@@ -110,7 +120,8 @@ public class ControladorHibernate {
         
         List list = query.list();
         Sessio sessio = (Sessio) list.get(0);
-    
+        System.out.println(sessio.getIdSessio());
+        
         Gravacio gravacio = new Gravacio(nomGravacio, data, sessio);
         gravacio.setNom(nomGravacio);
         gravacio.setData(data);
@@ -231,14 +242,17 @@ public class ControladorHibernate {
     }
     
     
-    public String getRespostes(int idPacient){
+    public String getRespostes(int idPacient, int numSessio){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
         
-        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
-        Query query = session.createQuery("from Resposta where idPacient =:idPacient");
+        Query query = session.createQuery("from Sessio where idPacient =:idPacient AND numSessio =:numSessio");
         query.setParameter("idPacient", idPacient);
-      
+        query.setParameter("numSessio", numSessio);
+        Sessio sessio = (Sessio) query.list().get(0);
+        
+        query = session.createQuery("from Resposta where idSessio =:idSessio");
+        query.setParameter("idSessio", sessio.getIdSessio());
         
         List list = query.list();
         Resposta resposta;
@@ -251,7 +265,6 @@ public class ControladorHibernate {
  
         session.close();
         return total;
-    
     }
     
     public int login(String nomUsuari, String password){
@@ -351,7 +364,6 @@ public class ControladorHibernate {
     
     public Gravacio getFirstGravacio(int idPacient, int numSessio){
         Session session = con.getSession();
-        Transaction tx = session.beginTransaction();
         
         PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
         Query query = session.createQuery("from Sessio where idPacient =:idPacient AND numSessio =:numSessio");
@@ -363,9 +375,69 @@ public class ControladorHibernate {
         
         query = session.createQuery("from Gravacio where idSessio =:idSessio");
         query.setParameter("idSessio", sessio.getIdSessio());
-        Gravacio gravacio = (Gravacio)query.list().get(0);
+         Gravacio gravacio;
+        if(query.list().size()<=0){
+            gravacio = null;
+        }
+        else{
+            gravacio = (Gravacio)query.list().get(0);
+        }
         
         session.close();
         return gravacio;
+    }
+ public boolean checkGravacio(int idPacient, int numSessio, String nomGravacio){
+        Session session = con.getSession();
+        PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
+        Query query = session.createQuery("from Sessio where idPacient =:idPacient AND numSessio =:numSessio");
+        query.setParameter("idPacient", idPacient);
+        query.setParameter("numSessio", numSessio);
+        
+        List list = query.list();
+        Sessio sessio = (Sessio) list.get(0);
+        
+        query = session.createQuery("from Gravacio where nom =:nomGravacio AND idSessio =:idSessio");
+        query.setParameter("idSessio", sessio.getIdSessio());
+        query.setParameter("nomGravacio", nomGravacio);
+        System.out.println(sessio.getIdSessio());
+        System.out.println(nomGravacio);
+        if(query.list().size()<=0){
+            session.close();
+           return false;
+        }
+        else{
+            session.close();
+            return true;
+        }      
+ }
+ 
+    public Usuari getPacientsFromUsuari(String nomUsuari){
+        Session session = con.getSession();
+        Query query = session.createQuery("from Usuari where nomUsuari =:nomUsuari");
+        query.setParameter("nomUsuari", nomUsuari);
+        Usuari usuari = (Usuari) query.list().get(0);
+        session.close();
+        return usuari;
+    }
+    
+    
+    public List getPatients(String nomUsuari){
+    
+        Session session = con.getSession();
+        Query query = session.createQuery("from Usuari where nomUsuari =:nomUsuari");
+        query.setParameter("nomUsuari", nomUsuari);
+        Usuari usuari = (Usuari) query.list().get(0);
+        
+        System.out.println(usuari.getPacients().size());
+        List list = query.list();
+        list.clear();;
+        list.addAll(usuari.getPacients());
+        
+        /*query = session.createQuery("from Pacient where idUsuari =:idUsuari");
+        query.setParameter("idUsuari", usuari.getId());
+        List pacients = query.list();*/
+        session.close();
+        return list;
+        
     }
 }

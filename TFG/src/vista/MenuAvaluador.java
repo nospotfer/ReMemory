@@ -34,6 +34,7 @@ import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import model.PacientDatabase;
+import model.Usuari;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -365,7 +366,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nouPacientBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nouPacientBtnActionPerformed
-        NewPacient nP = new NewPacient(this,true);
+        NewPacient nP = new NewPacient(this,true, evaluador);
         nP.setVisible(true);
     }//GEN-LAST:event_nouPacientBtnActionPerformed
 
@@ -551,17 +552,17 @@ public class MenuAvaluador extends javax.swing.JFrame {
     }//GEN-LAST:event_testsVisualsBtnActionPerformed
 
     private void seleccionaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaBtnActionPerformed
-        Conector con = new Conector();
-        Session session = con.getSession();
-        List<PacientDatabase> llista = new ArrayList<>();
-        Query q = session.createQuery("from PacientDatabase");
-	llista = q.list();
+
+        List pacients = controlador.getPatients(evaluador);
+           
         
-        Object[] ids = new Object[llista.size()];
-        if(llista.size()>0){
-            for (int i = 0; i < llista.size(); i++) {
-                ids[i] = llista.get(i).getId();
+        if(pacients.size()>0){
+             Object[] ids = new Object[pacients.size()];
+            for(int i=0;i<pacients.size();i++){
+                PacientDatabase pacient = (PacientDatabase)pacients.get(i);
+                ids[i] = pacient.getId();
             }
+ 
             try{
                 s = (int) JOptionPane.showInputDialog(
                 this,
@@ -578,8 +579,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
         else{
            JOptionPane.showMessageDialog(this, "No hi ha cap pacient a la llista", "Llistapacients", JOptionPane.ERROR_MESSAGE);
         }
-        
-        session.close();
         
         
         if(s != null) {    

@@ -27,7 +27,7 @@ public class Respostes extends javax.swing.JFrame {
         controlador = new ControladorHibernate();
         initComponents();
         String respostes = "";
-        respostes = controlador.getRespostes(idPacient);
+        respostes = controlador.getRespostes(idPacient,1);
         jTextArea1.setText(respostes);
         jTextArea1.setBackground(color);
         jTextArea1.setEnabled(false);

@@ -44,6 +44,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import model.PacientDatabase;
 
 /**
  *
@@ -110,6 +111,13 @@ public class VideoPlayer {
             }
             frame.setVisible(false);
         });
+        JButton TranscriptButton = new JButton("Transcripción");
+        TranscriptButton.addActionListener((java.awt.event.ActionEvent ae) -> {
+            PacientDatabase pacient = controlador.getPacient(idPacient);
+            String session = "src"+ File.separator+"resources"+ File.separator+pacient.getNom()+File.separator+"sessio1";
+            Transcripcio descripcions = new Transcripcio();
+            descripcions.prova(path,idPacient, 1);
+        });
         
         JButton closeButton = new JButton("Salir");
          closeButton.addActionListener((java.awt.event.ActionEvent ae) -> {
@@ -130,6 +138,7 @@ public class VideoPlayer {
         
         JPanel panel =  new JPanel();
         panel.add(acceptButton);
+        panel.add(TranscriptButton);
         panel.add(closeButton);
      
         JLabel label = new JLabel("              ");
@@ -160,7 +169,17 @@ public class VideoPlayer {
     
     private static Scene createScene(String path, int idPacient, int numSessio) {
         Group root = new Group();
-        String pathVideo = path + File.separator+"video.mp4";
+        File dir = new File(path);
+        String nomVideo="";
+        System.out.println(path);
+        for (File file : dir.listFiles()) {
+             
+            if (file.getName().endsWith((".mp4"))) {
+                nomVideo = file.getName();
+                System.out.println(nomVideo);
+            }
+        }
+        String pathVideo = path + File.separator+nomVideo;
         File f = new File(pathVideo);
         URI u = f.toURI();
         Media media = new Media(u.toString());

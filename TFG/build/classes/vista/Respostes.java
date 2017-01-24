@@ -19,7 +19,7 @@ public class Respostes extends javax.swing.JFrame {
      * Creates new form Respostes
      */
     private ControladorHibernate controlador;
-    
+    JFrame finestra;
     public Respostes(int idPacient) {
         this.setTitle("Respostes");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -27,10 +27,11 @@ public class Respostes extends javax.swing.JFrame {
         controlador = new ControladorHibernate();
         initComponents();
         String respostes = "";
-        respostes = controlador.getRespostes(idPacient);
+        respostes = controlador.getRespostes(idPacient,1);
         jTextArea1.setText(respostes);
         jTextArea1.setBackground(color);
         jTextArea1.setEnabled(false);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**

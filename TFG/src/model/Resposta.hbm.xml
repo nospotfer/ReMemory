@@ -7,8 +7,8 @@
         </id>
         <property name="resposta" column="resposta" />
          <property name="pregunta" column="pregunta" />
-        <many-to-one name="pacient" class="model.PacientDatabase" fetch="select">
-           <column name="idPacient" />   
+        <many-to-one name="sessio" class="model.Sessio" fetch="select">
+           <column name="idSessio" />   
         </many-to-one>   
     </class>
 </hibernate-mapping>

@@ -35,7 +35,7 @@ public class DescripcionsSessio extends javax.swing.JFrame {
     private SourceDataLine sourceLine;
     
     public DescripcionsSessio(int idPacient){
-        this.setTitle("Veure descripcions");
+        this.setTitle("Ver descripcions");
         controlador = new ControladorHibernate();
         this.idPacient = idPacient;
         initComponents();

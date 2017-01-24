@@ -12,5 +12,9 @@
             <key column="idPacient" />
             <one-to-many class="model.Sessio" /> 
        </set>
+        <many-to-one name="usuari" class="model.Usuari" fetch="select">
+           <column name="idUsuari" />   
+        </many-to-one>   
+        
     </class>
 </hibernate-mapping>

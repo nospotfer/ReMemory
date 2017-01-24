@@ -195,7 +195,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 1"/>
+        <Property name="text" type="java.lang.String" value="Episodio 1"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="panel2">
@@ -286,7 +286,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 2"/>
+        <Property name="text" type="java.lang.String" value="Episodio 2"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="panel3">
@@ -377,7 +377,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 3"/>
+        <Property name="text" type="java.lang.String" value="Episodio 3"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="panel4">
@@ -468,7 +468,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 4"/>
+        <Property name="text" type="java.lang.String" value="Episodio 4"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="panel1">
@@ -642,12 +642,12 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 5"/>
+        <Property name="text" type="java.lang.String" value="Episodio 5"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 8"/>
+        <Property name="text" type="java.lang.String" value="Episodio 8"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="panel6">
@@ -738,7 +738,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 6"/>
+        <Property name="text" type="java.lang.String" value="Episodio 6"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="panel7">
@@ -829,7 +829,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 7"/>
+        <Property name="text" type="java.lang.String" value="Episodio 7"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="descripcions">
@@ -933,7 +933,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 9"/>
+        <Property name="text" type="java.lang.String" value="Episodio 9"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="panel10">
@@ -1024,7 +1024,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sessi&#xf3; 10"/>
+        <Property name="text" type="java.lang.String" value="Episodio 10"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="panel11">

@@ -16,10 +16,9 @@
             <key column="idSessio" />
             <one-to-many class="model.Descripcio" /> 
        </set>
-       
-       <set name="timestamps" table="TimeStamp" lazy="true" cascade="all">
+        <set name="respostes" table="Resposta" lazy="true" cascade="all">
             <key column="idSessio" />
-            <one-to-many class="model.Timestamp" /> 
+            <one-to-many class="model.Resposta" /> 
        </set>
         
     </class>

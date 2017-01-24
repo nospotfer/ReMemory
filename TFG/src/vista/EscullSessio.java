@@ -36,7 +36,7 @@ public class EscullSessio extends javax.swing.JDialog {
         this.idPacient = idPacient;
         this.nomPacient=nomPacient;
         controlador = new ControladorHibernate();
-        this.setTitle("Escull sessió");
+        this.setTitle("Escoger episodio");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         initComponents();
         Font font = new Font("Tahoma", Font.BOLD,12);
@@ -148,7 +148,7 @@ public class EscullSessio extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("Sessió 1");
+        jLabel1.setText("Episodio 1");
 
         panel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -217,7 +217,7 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel2.setText("Sessió 2");
+        jLabel2.setText("Episodio 2");
 
         panel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -286,7 +286,7 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel3.setText("Sessió 3");
+        jLabel3.setText("Episodio 3");
 
         panel4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -355,7 +355,7 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel4.setText("Sessió 4");
+        jLabel4.setText("Episodio 4");
 
         panel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -486,9 +486,9 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel5.setText("Sessió 5");
+        jLabel5.setText("Episodio 5");
 
-        jLabel6.setText("Sessió 8");
+        jLabel6.setText("Episodio 8");
 
         panel6.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -557,7 +557,7 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel7.setText("Sessió 6");
+        jLabel7.setText("Episodio 6");
 
         panel7.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -626,7 +626,7 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel8.setText("Sessió 7");
+        jLabel8.setText("Episodio 7");
 
         descripcions.setText("Ver descripciones");
         descripcions.addActionListener(new java.awt.event.ActionListener() {
@@ -704,7 +704,7 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel9.setText("Sessió 9");
+        jLabel9.setText("Episodio 9");
 
         panel10.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -773,7 +773,7 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel10.setText("Sessió 10");
+        jLabel10.setText("Episodio 10");
 
         panel11.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -1052,9 +1052,7 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_VideoSessio1ActionPerformed
 
     private void DescripcioSessio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio1ActionPerformed
-        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1";
-        Transcripcio descripcions = new Transcripcio();
-        descripcions.prova(path,idPacient, 1);
+
     }//GEN-LAST:event_DescripcioSessio1ActionPerformed
 
     private void VideoSessio8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio8ActionPerformed
@@ -1168,97 +1166,97 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_DescripcioSessio15ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,1);
         test.pack();
         test.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,1);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,2);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,2);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,3);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,3);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,4);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,4);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,5);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,5);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,6);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,6);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,7);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,7);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,8);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        Questionari test = new Questionari();
+        Questionari test = new Questionari(idPacient,8);
         test.pack();
         test.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton13ActionPerformed
@@ -1279,7 +1277,9 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_DescripcioSessio16ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
+        Questionari test = new Questionari(idPacient,9);
+        test.pack();
+        test.setVisible(true);   
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void DescripcioSessio17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio17ActionPerformed
@@ -1287,7 +1287,9 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_DescripcioSessio17ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        // TODO add your handling code here:
+    Questionari test = new Questionari(idPacient,9);
+        test.pack();
+        test.setVisible(true);   
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void VideoSessio11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio11ActionPerformed
@@ -1306,7 +1308,9 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_DescripcioSessio18ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        // TODO add your handling code here:
+        Questionari test = new Questionari(idPacient,10);
+        test.pack();
+        test.setVisible(true);           // TODO add your handling code here:
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void DescripcioSessio19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio19ActionPerformed
@@ -1314,7 +1318,9 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_DescripcioSessio19ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        // TODO add your handling code here:
+       Questionari test = new Questionari(idPacient,10);
+        test.pack();
+        test.setVisible(true);   
     }//GEN-LAST:event_jButton23ActionPerformed
 
     /**

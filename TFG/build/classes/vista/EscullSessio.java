@@ -36,7 +36,7 @@ public class EscullSessio extends javax.swing.JDialog {
         this.idPacient = idPacient;
         this.nomPacient=nomPacient;
         controlador = new ControladorHibernate();
-        this.setTitle("Escull sessió");
+        this.setTitle("Escoger episodio");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         initComponents();
         Font font = new Font("Tahoma", Font.BOLD,12);
@@ -48,46 +48,20 @@ public class EscullSessio extends javax.swing.JDialog {
         jLabel6.setFont(font);
         jLabel7.setFont(font);
         jLabel8.setFont(font);
+        jLabel9.setFont(font);
+        jLabel10.setFont(font);
         
         this.setLocationRelativeTo(null);
         
        
         //File file = new File("src"+ File.separator+"resources"+ File.separator+nomPacient);
         //String[] days = file.list();
-        for(int i=0;i<8;i++){
+        for(int i=0;i<10;i++){
             if (new File("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + "sessio"+String.valueOf(i+1)).isDirectory()) {
                 /*Falta posar any mes dia*/
                 controlador.crearSessio(i+1, 0, 0, 0, idPacient);
             }
         }
-        
-        
-        
-        /*for(String day : days) {
-            System.out.println("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + day);
-            if (new File("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + day).isDirectory()) {
-                seleccioDia.addItem(day); 
-                controlador.crearDia(Integer.parseInt(day), Integer.parseInt(day), Integer.parseInt(day), idPacient);
-                dies=true;
-                file = new File("src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + day);
-                String[] images = file.list();
-                /*for(String image:images){
-                    System.out.println(image);
-                    if(!image.equalsIgnoreCase("segmentation")){
-                        String nomImatge, String path, int hora, int minut, int segon, Segment segment)
-                        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient + File.separator + day;
-                        controlador.crearImatge(image, path, Integer.parseInt(day), Integer.parseInt(day), Integer.parseInt(day), idPacient);
-                    }
-                }*/                               
-          //  }
-        //}
-        /*if(dies == false){
-            seleccioDia.addItem("Aquest pacient no té cap dia.");
-            jButton0.setEnabled(false);
-            jButton1.setEnabled(false);
-            jButton2.setEnabled(false);
-            jButton3.setEnabled(false);
-        }*/
         
     }
     /**
@@ -103,41 +77,78 @@ public class EscullSessio extends javax.swing.JDialog {
         panel2 = new javax.swing.JPanel();
         VideoSessio2 = new javax.swing.JButton();
         DescripcioSessio2 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        DescripcioSessio13 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         panel3 = new javax.swing.JPanel();
         VideoSessio3 = new javax.swing.JButton();
         DescripcioSessio3 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        DescripcioSessio14 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         panel4 = new javax.swing.JPanel();
         VideoSessio4 = new javax.swing.JButton();
         DescripcioSessio4 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        DescripcioSessio15 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         panel1 = new javax.swing.JPanel();
         VideoSessio1 = new javax.swing.JButton();
         DescripcioSessio1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         panel8 = new javax.swing.JPanel();
         VideoSessio8 = new javax.swing.JButton();
         DescripcioSessio8 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        DescripcioSessio12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         panel6 = new javax.swing.JPanel();
         VideoSessio6 = new javax.swing.JButton();
         DescripcioSessio6 = new javax.swing.JButton();
-        panel5 = new javax.swing.JPanel();
-        VideoSessio5 = new javax.swing.JButton();
-        DescripcioSessio5 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        DescripcioSessio10 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         panel7 = new javax.swing.JPanel();
         VideoSessio7 = new javax.swing.JButton();
         DescripcioSessio7 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        DescripcioSessio11 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         descripcions = new javax.swing.JButton();
-        descripcions1 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        panel9 = new javax.swing.JPanel();
+        VideoSessio9 = new javax.swing.JButton();
+        DescripcioSessio9 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        panel10 = new javax.swing.JPanel();
+        VideoSessio10 = new javax.swing.JButton();
+        DescripcioSessio16 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        DescripcioSessio17 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        panel11 = new javax.swing.JPanel();
+        VideoSessio11 = new javax.swing.JButton();
+        DescripcioSessio18 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        DescripcioSessio19 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("Sessió 1");
+        jLabel1.setText("Episodio 1");
 
         panel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -148,10 +159,31 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
-        DescripcioSessio2.setText("Transcripció");
+        DescripcioSessio2.setText("Juegos visuales");
         DescripcioSessio2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DescripcioSessio2ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Q1");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio13.setText("Emociones");
+        DescripcioSessio13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio13ActionPerformed(evt);
+            }
+        });
+
+        jButton17.setText("Q2");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
             }
         });
 
@@ -160,11 +192,17 @@ public class EscullSessio extends javax.swing.JDialog {
         panel2Layout.setHorizontalGroup(
             panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(VideoSessio2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DescripcioSessio2)
-                .addGap(8, 8, 8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton17)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel2Layout.setVerticalGroup(
             panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,11 +210,14 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VideoSessio2)
-                    .addComponent(DescripcioSessio2))
+                    .addComponent(DescripcioSessio2)
+                    .addComponent(jButton14)
+                    .addComponent(DescripcioSessio13)
+                    .addComponent(jButton17))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel2.setText("Sessió 2");
+        jLabel2.setText("Episodio 2");
 
         panel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -187,10 +228,31 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
-        DescripcioSessio3.setText("Transcripció");
+        DescripcioSessio3.setText("Juegos visuales");
         DescripcioSessio3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DescripcioSessio3ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("Q1");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio14.setText("Emociones");
+        DescripcioSessio14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio14ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("Q2");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
             }
         });
 
@@ -199,11 +261,17 @@ public class EscullSessio extends javax.swing.JDialog {
         panel3Layout.setHorizontalGroup(
             panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(VideoSessio3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DescripcioSessio3)
-                .addGap(8, 8, 8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton18)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel3Layout.setVerticalGroup(
             panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,11 +279,14 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VideoSessio3)
-                    .addComponent(DescripcioSessio3))
+                    .addComponent(DescripcioSessio3)
+                    .addComponent(jButton15)
+                    .addComponent(DescripcioSessio14)
+                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel3.setText("Sessió 3");
+        jLabel3.setText("Episodio 3");
 
         panel4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -226,10 +297,31 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
-        DescripcioSessio4.setText("Transcripció");
+        DescripcioSessio4.setText("Juegos visuales");
         DescripcioSessio4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DescripcioSessio4ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("Q1");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio15.setText("Emociones");
+        DescripcioSessio15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio15ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setText("Q2");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
             }
         });
 
@@ -238,11 +330,17 @@ public class EscullSessio extends javax.swing.JDialog {
         panel4Layout.setHorizontalGroup(
             panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(VideoSessio4)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DescripcioSessio4)
-                .addGap(8, 8, 8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton19)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel4Layout.setVerticalGroup(
             panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,11 +348,14 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VideoSessio4)
-                    .addComponent(DescripcioSessio4))
+                    .addComponent(DescripcioSessio4)
+                    .addComponent(jButton16)
+                    .addComponent(DescripcioSessio15)
+                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel4.setText("Sessió 4");
+        jLabel4.setText("Episodio 4");
 
         panel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -265,10 +366,26 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
-        DescripcioSessio1.setText("Transcripció");
+        DescripcioSessio1.setText("Emociones");
         DescripcioSessio1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DescripcioSessio1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Q1");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Juegos visuales");
+
+        jButton4.setText("Q2");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -277,11 +394,17 @@ public class EscullSessio extends javax.swing.JDialog {
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(VideoSessio1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(DescripcioSessio1)
-                .addGap(8, 8, 8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton4)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,7 +412,10 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VideoSessio1)
-                    .addComponent(DescripcioSessio1))
+                    .addComponent(DescripcioSessio1)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -302,10 +428,31 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
-        DescripcioSessio8.setText("Transcripció");
+        DescripcioSessio8.setText("Juegos visuales");
         DescripcioSessio8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DescripcioSessio8ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Q1");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio12.setText("Emociones");
+        DescripcioSessio12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio12ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("Q2");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
             }
         });
 
@@ -314,11 +461,17 @@ public class EscullSessio extends javax.swing.JDialog {
         panel8Layout.setHorizontalGroup(
             panel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(9, 9, 9)
+                .addComponent(jButton12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(VideoSessio8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DescripcioSessio8)
-                .addGap(8, 8, 8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton13)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel8Layout.setVerticalGroup(
             panel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -326,13 +479,16 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VideoSessio8)
-                    .addComponent(DescripcioSessio8))
+                    .addComponent(DescripcioSessio8)
+                    .addComponent(jButton12)
+                    .addComponent(DescripcioSessio12)
+                    .addComponent(jButton13))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel5.setText("Sessió 5");
+        jLabel5.setText("Episodio 5");
 
-        jLabel6.setText("Sessió 8");
+        jLabel6.setText("Episodio 8");
 
         panel6.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -343,10 +499,31 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
-        DescripcioSessio6.setText("Transcripció");
+        DescripcioSessio6.setText("Juegos visuales");
         DescripcioSessio6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DescripcioSessio6ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("Q1");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio10.setText("Emociones");
+        DescripcioSessio10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio10ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("Q2");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
             }
         });
 
@@ -355,11 +532,17 @@ public class EscullSessio extends javax.swing.JDialog {
         panel6Layout.setHorizontalGroup(
             panel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton8)
+                .addGap(8, 8, 8)
                 .addComponent(VideoSessio6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DescripcioSessio6)
-                .addGap(8, 8, 8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel6Layout.setVerticalGroup(
             panel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,48 +550,14 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VideoSessio6)
-                    .addComponent(DescripcioSessio6))
+                    .addComponent(DescripcioSessio6)
+                    .addComponent(jButton8)
+                    .addComponent(DescripcioSessio10)
+                    .addComponent(jButton9))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        panel5.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        VideoSessio5.setText("Video");
-        VideoSessio5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VideoSessio5ActionPerformed(evt);
-            }
-        });
-
-        DescripcioSessio5.setText("Transcripció");
-        DescripcioSessio5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DescripcioSessio5ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel5Layout = new javax.swing.GroupLayout(panel5);
-        panel5.setLayout(panel5Layout);
-        panel5Layout.setHorizontalGroup(
-            panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(VideoSessio5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(DescripcioSessio5)
-                .addGap(8, 8, 8))
-        );
-        panel5Layout.setVerticalGroup(
-            panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(VideoSessio5)
-                    .addComponent(DescripcioSessio5))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jLabel7.setText("Sessió 6");
+        jLabel7.setText("Episodio 6");
 
         panel7.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -419,10 +568,31 @@ public class EscullSessio extends javax.swing.JDialog {
             }
         });
 
-        DescripcioSessio7.setText("Transcripció");
+        DescripcioSessio7.setText("Juegos visuales");
         DescripcioSessio7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DescripcioSessio7ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("Q1");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio11.setText("Emociones");
+        DescripcioSessio11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio11ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("Q2");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
             }
         });
 
@@ -431,11 +601,17 @@ public class EscullSessio extends javax.swing.JDialog {
         panel7Layout.setHorizontalGroup(
             panel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(VideoSessio7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DescripcioSessio7)
-                .addGap(8, 8, 8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel7Layout.setVerticalGroup(
             panel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -443,100 +619,303 @@ public class EscullSessio extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VideoSessio7)
-                    .addComponent(DescripcioSessio7))
+                    .addComponent(DescripcioSessio7)
+                    .addComponent(jButton10)
+                    .addComponent(DescripcioSessio11)
+                    .addComponent(jButton11))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel8.setText("Sessió 7");
+        jLabel8.setText("Episodio 7");
 
-        descripcions.setText("Veure descripcions");
+        descripcions.setText("Ver descripciones");
         descripcions.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 descripcionsActionPerformed(evt);
             }
         });
 
-        descripcions1.setText("Qüestionari");
-        descripcions1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                descripcions1ActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Respostes");
+        jButton1.setText("Respuestas");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        panel9.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        VideoSessio9.setText("Video");
+        VideoSessio9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VideoSessio9ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio9.setText("Emociones");
+        DescripcioSessio9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio9ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Q1");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Juegos visuales");
+
+        jButton7.setText("Q2");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel9Layout = new javax.swing.GroupLayout(panel9);
+        panel9.setLayout(panel9Layout);
+        panel9Layout.setHorizontalGroup(
+            panel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(VideoSessio9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(DescripcioSessio9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel9Layout.setVerticalGroup(
+            panel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(VideoSessio9)
+                    .addComponent(DescripcioSessio9)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6)
+                    .addComponent(jButton7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel9.setText("Episodio 9");
+
+        panel10.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        VideoSessio10.setText("Video");
+        VideoSessio10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VideoSessio10ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio16.setText("Juegos visuales");
+        DescripcioSessio16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio16ActionPerformed(evt);
+            }
+        });
+
+        jButton20.setText("Q1");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio17.setText("Emociones");
+        DescripcioSessio17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio17ActionPerformed(evt);
+            }
+        });
+
+        jButton21.setText("Q2");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel10Layout = new javax.swing.GroupLayout(panel10);
+        panel10.setLayout(panel10Layout);
+        panel10Layout.setHorizontalGroup(
+            panel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel10Layout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addComponent(jButton20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(VideoSessio10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton21)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel10Layout.setVerticalGroup(
+            panel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(VideoSessio10)
+                    .addComponent(DescripcioSessio16)
+                    .addComponent(jButton20)
+                    .addComponent(DescripcioSessio17)
+                    .addComponent(jButton21))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel10.setText("Episodio 10");
+
+        panel11.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        VideoSessio11.setText("Video");
+        VideoSessio11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VideoSessio11ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio18.setText("Juegos visuales");
+        DescripcioSessio18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio18ActionPerformed(evt);
+            }
+        });
+
+        jButton22.setText("Q1");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
+        DescripcioSessio19.setText("Emociones");
+        DescripcioSessio19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcioSessio19ActionPerformed(evt);
+            }
+        });
+
+        jButton23.setText("Q2");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel11Layout = new javax.swing.GroupLayout(panel11);
+        panel11.setLayout(panel11Layout);
+        panel11Layout.setHorizontalGroup(
+            panel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel11Layout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addComponent(jButton22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(VideoSessio11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DescripcioSessio18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton23)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel11Layout.setVerticalGroup(
+            panel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(VideoSessio11)
+                    .addComponent(DescripcioSessio18)
+                    .addComponent(jButton22)
+                    .addComponent(DescripcioSessio19)
+                    .addComponent(jButton23))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(descripcions, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel4)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(panel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(descripcions, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jLabel7)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel5)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel6)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(panel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(panel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(descripcions1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)))
-                .addGap(39, 39, 39))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(panel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(17, 17, 17)
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel2)
-                                .addGap(39, 39, 39)))
+                                .addGap(39, 39, 39))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -548,39 +927,48 @@ public class EscullSessio extends javax.swing.JDialog {
                             .addComponent(panel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel4))))
+                                .addComponent(jLabel4)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jLabel5))
+                            .addComponent(panel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(16, 16, 16)
                                 .addComponent(jLabel7)
-                                .addGap(39, 39, 39)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGap(58, 58, 58)
+                                .addComponent(jLabel8))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(panel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addGap(37, 37, 37)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel6)))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(descripcions)
-                    .addComponent(descripcions1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addGap(23, 23, 23))
+                                .addComponent(panel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(38, 38, 38)
+                                        .addComponent(jLabel6))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(panel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(jLabel9))
+                            .addComponent(panel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(jLabel10))
+                            .addComponent(panel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(descripcions))
+                .addContainerGap())
         );
 
         pack();
@@ -664,9 +1052,7 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_VideoSessio1ActionPerformed
 
     private void DescripcioSessio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio1ActionPerformed
-        String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1";
-        Transcripcio descripcions = new Transcripcio();
-        descripcions.prova(path,idPacient, 1);
+
     }//GEN-LAST:event_DescripcioSessio1ActionPerformed
 
     private void VideoSessio8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio8ActionPerformed
@@ -713,28 +1099,6 @@ public class EscullSessio extends javax.swing.JDialog {
         }               
     }//GEN-LAST:event_DescripcioSessio6ActionPerformed
 
-    private void VideoSessio5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio5ActionPerformed
-        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió5 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5";
-           VideoPlayer test = new VideoPlayer();
-           test.prova(path, idPacient, 5);                
-        }           
-    }//GEN-LAST:event_VideoSessio5ActionPerformed
-
-    private void DescripcioSessio5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio5ActionPerformed
-    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió5 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 5);                
-        }               
-    }//GEN-LAST:event_DescripcioSessio5ActionPerformed
-
     private void VideoSessio7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio7ActionPerformed
         if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7").isDirectory()){
              JOptionPane.showMessageDialog(null, "La carpeta sessió7 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
@@ -763,23 +1127,201 @@ public class EscullSessio extends javax.swing.JDialog {
         ds.setVisible(true);
     }//GEN-LAST:event_descripcionsActionPerformed
 
-    private void descripcions1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descripcions1ActionPerformed
-        
-        Questionari test = null;
-        try {
-            test = new Questionari(nomPacient,idPacient);
-        } catch (IOException ex) {
-            Logger.getLogger(EscullSessio.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        test.pack();
-        test.setVisible(true);
-    }//GEN-LAST:event_descripcions1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Respostes respostes = new Respostes(idPacient);
         respostes.pack();
         respostes.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void VideoSessio9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VideoSessio9ActionPerformed
+
+    private void DescripcioSessio9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio9ActionPerformed
+
+    private void DescripcioSessio10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio10ActionPerformed
+
+    private void DescripcioSessio11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio11ActionPerformed
+
+    private void DescripcioSessio12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio12ActionPerformed
+
+    private void DescripcioSessio13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio13ActionPerformed
+
+    private void DescripcioSessio14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio14ActionPerformed
+
+    private void DescripcioSessio15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio15ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Questionari test = new Questionari(idPacient,1);
+        test.pack();
+        test.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Questionari test = new Questionari(idPacient,1);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        Questionari test = new Questionari(idPacient,2);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        Questionari test = new Questionari(idPacient,2);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        Questionari test = new Questionari(idPacient,3);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        Questionari test = new Questionari(idPacient,3);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        Questionari test = new Questionari(idPacient,4);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        Questionari test = new Questionari(idPacient,4);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        Questionari test = new Questionari(idPacient,5);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        Questionari test = new Questionari(idPacient,5);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        Questionari test = new Questionari(idPacient,6);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        Questionari test = new Questionari(idPacient,6);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        Questionari test = new Questionari(idPacient,7);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        Questionari test = new Questionari(idPacient,7);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        Questionari test = new Questionari(idPacient,8);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        Questionari test = new Questionari(idPacient,8);
+        test.pack();
+        test.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void VideoSessio10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio10ActionPerformed
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio9").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió9 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio9";
+           VideoPlayer test = new VideoPlayer();
+           test.prova(path, idPacient, 9);                
+        }               // TODO add your handling code here:
+    }//GEN-LAST:event_VideoSessio10ActionPerformed
+
+    private void DescripcioSessio16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio16ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        Questionari test = new Questionari(idPacient,9);
+        test.pack();
+        test.setVisible(true);   
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void DescripcioSessio17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio17ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+    Questionari test = new Questionari(idPacient,9);
+        test.pack();
+        test.setVisible(true);   
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void VideoSessio11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio11ActionPerformed
+    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio10").isDirectory()){
+             JOptionPane.showMessageDialog(null, "La carpeta sessió10 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio10";
+           VideoPlayer test = new VideoPlayer();
+           test.prova(path, idPacient, 10);                
+        }               // TODO add your handling code here:
+    }//GEN-LAST:event_VideoSessio11ActionPerformed
+
+    private void DescripcioSessio18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio18ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        Questionari test = new Questionari(idPacient,10);
+        test.pack();
+        test.setVisible(true);           // TODO add your handling code here:
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void DescripcioSessio19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcioSessio19ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+       Questionari test = new Questionari(idPacient,10);
+        test.pack();
+        test.setVisible(true);   
+    }//GEN-LAST:event_jButton23ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -819,25 +1361,59 @@ public class EscullSessio extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DescripcioSessio1;
+    private javax.swing.JButton DescripcioSessio10;
+    private javax.swing.JButton DescripcioSessio11;
+    private javax.swing.JButton DescripcioSessio12;
+    private javax.swing.JButton DescripcioSessio13;
+    private javax.swing.JButton DescripcioSessio14;
+    private javax.swing.JButton DescripcioSessio15;
+    private javax.swing.JButton DescripcioSessio16;
+    private javax.swing.JButton DescripcioSessio17;
+    private javax.swing.JButton DescripcioSessio18;
+    private javax.swing.JButton DescripcioSessio19;
     private javax.swing.JButton DescripcioSessio2;
     private javax.swing.JButton DescripcioSessio3;
     private javax.swing.JButton DescripcioSessio4;
-    private javax.swing.JButton DescripcioSessio5;
     private javax.swing.JButton DescripcioSessio6;
     private javax.swing.JButton DescripcioSessio7;
     private javax.swing.JButton DescripcioSessio8;
+    private javax.swing.JButton DescripcioSessio9;
     private javax.swing.JButton VideoSessio1;
+    private javax.swing.JButton VideoSessio10;
+    private javax.swing.JButton VideoSessio11;
     private javax.swing.JButton VideoSessio2;
     private javax.swing.JButton VideoSessio3;
     private javax.swing.JButton VideoSessio4;
-    private javax.swing.JButton VideoSessio5;
     private javax.swing.JButton VideoSessio6;
     private javax.swing.JButton VideoSessio7;
     private javax.swing.JButton VideoSessio8;
+    private javax.swing.JButton VideoSessio9;
     private javax.swing.JButton descripcions;
-    private javax.swing.JButton descripcions1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -845,13 +1421,16 @@ public class EscullSessio extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel panel1;
+    private javax.swing.JPanel panel10;
+    private javax.swing.JPanel panel11;
     private javax.swing.JPanel panel2;
     private javax.swing.JPanel panel3;
     private javax.swing.JPanel panel4;
-    private javax.swing.JPanel panel5;
     private javax.swing.JPanel panel6;
     private javax.swing.JPanel panel7;
     private javax.swing.JPanel panel8;
+    private javax.swing.JPanel panel9;
     // End of variables declaration//GEN-END:variables
 }

@@ -34,6 +34,7 @@ import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import model.PacientDatabase;
+import model.Usuari;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -114,11 +115,11 @@ public class MenuAvaluador extends javax.swing.JFrame {
 
         idText.setEditable(false);
 
-        jLabel5.setText("Nom:");
+        jLabel5.setText("Nombre:");
 
         nomText.setEditable(false);
 
-        nouPacientBtn.setText("Nou pacient");
+        nouPacientBtn.setText("Paciente nuevo");
         nouPacientBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nouPacientBtnActionPerformed(evt);
@@ -148,7 +149,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        importaBtn.setText("Importa pacient");
+        importaBtn.setText("Importar paciente");
         importaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 importaBtnActionPerformed(evt);
@@ -175,7 +176,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                         .addComponent(nouPacientBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(importaBtn)
-                        .addGap(0, 10, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
@@ -215,7 +216,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Tests textuals");
+        jLabel1.setText("Evaluación");
 
         testsVisualsBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pictureTest.png"))); // NOI18N
         testsVisualsBtn.setEnabled(false);
@@ -225,7 +226,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Tests visuals");
+        jLabel2.setText("Tratamiento");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -235,7 +236,9 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(testsTextualsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel1)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
@@ -309,7 +312,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        backBtn.setText("Surt al menú principal");
+        backBtn.setText("Salir al menu principal");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
@@ -357,11 +360,13 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel3.getAccessibleContext().setAccessibleName("Evaluación");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void nouPacientBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nouPacientBtnActionPerformed
-        NewPacient nP = new NewPacient(this,true);
+        NewPacient nP = new NewPacient(this,true, evaluador);
         nP.setVisible(true);
     }//GEN-LAST:event_nouPacientBtnActionPerformed
 
@@ -547,17 +552,17 @@ public class MenuAvaluador extends javax.swing.JFrame {
     }//GEN-LAST:event_testsVisualsBtnActionPerformed
 
     private void seleccionaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaBtnActionPerformed
-        Conector con = new Conector();
-        Session session = con.getSession();
-        List<PacientDatabase> llista = new ArrayList<>();
-        Query q = session.createQuery("from PacientDatabase");
-	llista = q.list();
+
+        List pacients = controlador.getPatients(evaluador);
+           
         
-        Object[] ids = new Object[llista.size()];
-        if(llista.size()>0){
-            for (int i = 0; i < llista.size(); i++) {
-                ids[i] = llista.get(i).getId();
+        if(pacients.size()>0){
+             Object[] ids = new Object[pacients.size()];
+            for(int i=0;i<pacients.size();i++){
+                PacientDatabase pacient = (PacientDatabase)pacients.get(i);
+                ids[i] = pacient.getId();
             }
+ 
             try{
                 s = (int) JOptionPane.showInputDialog(
                 this,
@@ -574,8 +579,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
         else{
            JOptionPane.showMessageDialog(this, "No hi ha cap pacient a la llista", "Llistapacients", JOptionPane.ERROR_MESSAGE);
         }
-        
-        session.close();
         
         
         if(s != null) {    

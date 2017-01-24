@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Set;
+
 /**
  *
  * @author Sergi
@@ -15,7 +17,8 @@ public class Usuari {
     private String contrasenya;
     private int rol;
     private int id;
-    
+    private Set<PacientDatabase> pacients;
+     
     public Usuari(){}
     
     public Usuari(String nom, String contrasenya, int rol){
@@ -78,6 +81,20 @@ public class Usuari {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * @return the pacient
+     */
+    public Set<PacientDatabase> getPacients() {
+        return pacients;
+    }
+
+    /**
+     * @param pacients the pacient to set
+     */
+    public void setPacients(Set<PacientDatabase> pacients) {
+        this.pacients = pacients;
     }
     
 }

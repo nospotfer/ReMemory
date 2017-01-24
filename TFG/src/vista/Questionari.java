@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.ControladorHibernate;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -37,14 +38,22 @@ public class Questionari extends javax.swing.JFrame {
     JPanel question;
     JPanel title;
     JPanel button;
+    ControladorHibernate controlador;
     
     ArrayList<String> preguntes = new ArrayList<String>();
     ArrayList<RespostesTest> respostes = new ArrayList<RespostesTest>();
+    int idPacient;
+    int numSessio;
     
-    public Questionari() {
+    public Questionari(int idPacient, int numSessio) {
         initComponents();
         this.setTitle("Cuestionario");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
+        
+        controlador = new ControladorHibernate();
+        this.idPacient = idPacient;
+        this.numSessio = numSessio;
+        
         jPanel1.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         fillQuestions();
@@ -131,7 +140,10 @@ public class Questionari extends javax.swing.JFrame {
         button = new JPanel();
         JButton acceptButton = new JButton("Aceptar");
         acceptButton.addActionListener((ActionEvent e) -> {
-            
+            for(int i=0;i<10;i++){
+                controlador.crearResposta(String.valueOf(respostes.get(i).param), preguntes.get(i), idPacient, numSessio);
+            }
+            this.dispose();
         });
         button.add(acceptButton);
     }
@@ -218,7 +230,7 @@ public class Questionari extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Questionari().setVisible(true);
+                new Questionari(0,0).setVisible(true);
             }
         });
     }

@@ -12,13 +12,13 @@ package model;
 public class Timestamp {
     private int idTimestamp;
     private float temps;
-    private Sessio sessio;
+    private Gravacio gravacio;
 
     public Timestamp(){}
     
-    public Timestamp(float temps, Sessio sessio){
+    public Timestamp(float temps, Gravacio gravacio){
         this.temps=temps;
-        this.sessio = sessio;
+        this.gravacio = gravacio;
     }
     /**
      * @return the idTimestamp
@@ -49,17 +49,18 @@ public class Timestamp {
     }
 
     /**
-     * @return the sessio
+     * @return the gravacio
      */
-    public Sessio getSessio() {
-        return sessio;
+    public Gravacio getGravacio() {
+        return gravacio;
     }
 
     /**
-     * @param sessio the sessio to set
+     * @param gravacio the gravacio to set
      */
-    public void setSessio(Sessio sessio) {
-        this.sessio = sessio;
+    public void setGravacio(Gravacio gravacio) {
+        this.gravacio = gravacio;
     }
+
  
 }

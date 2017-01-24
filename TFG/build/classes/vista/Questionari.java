@@ -6,28 +6,24 @@
 package vista;
 
 import controlador.ControladorHibernate;
-import java.awt.Color;
-import java.awt.Component;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JScrollPane;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import static vista.Transcripcio.frame;
 
 /**
  *
@@ -36,187 +32,68 @@ import javax.swing.JTextField;
 public class Questionari extends javax.swing.JFrame {
 
     /**
-     * Creates new form Sessio1Part1TestVisual
+     * Creates new form Questionari
      */
+    JPanel buttons;
+    JPanel question;
+    JPanel title;
+    JPanel button;
+    ControladorHibernate controlador;
     
-    private int questionPosition=210;
-    private String nomPacient,dia;
-    private JLabel label1;
-    private JTextField question;
-    private JButton button;
-    private int rowCounter=6;
-    private GridBagConstraints c;
-    private JButton acceptButton;
-    private JLabel dummyText;
-    private GridBagLayout gbl;
-    private ControladorHibernate controlador;
-    private int idPacient;
-    private   JFrame frame;
-    private java.util.List<JTextArea> listAreas;
-    private java.util.List<JTextField> listField;
+    ArrayList<String> preguntes = new ArrayList<String>();
+    ArrayList<RespostesTest> respostes = new ArrayList<RespostesTest>();
+    int idPacient;
+    int numSessio;
     
-    public Questionari(String nomPacient, int idPacient) throws IOException {
-        frame = this;
-        listAreas = new ArrayList<JTextArea>();
-        listField = new ArrayList<JTextField>();
-        this.nomPacient=nomPacient;
-        this.idPacient = idPacient;
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setTitle("Qüestionari");
-        controlador = new ControladorHibernate();
+    public Questionari(int idPacient, int numSessio) {
         initComponents();
-        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        initComponentsWithBagGrid();
-        String path = "src"+ File.separator+"resources"+ File.separator+"questionari"+File.separator+"preguntes.txt";
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-               afegirPregunta(line);
-            }
-        }     
-    }
-      
-    public void modificarPreguunta(int posx, int posy){
-       
-    }
-    
-    public void afegirPregunta(String question){
-        jPanel1.remove(dummyText);
-        JTextField askedQuestion = new JTextField(question);
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 25;      //make this component tall
-        c.ipadx = 400;
-	c.weightx = 0.0;
-	c.gridwidth = 10;
-	c.gridx = 1;
-	c.gridy = rowCounter;
-        Color color = new Color(240,240,240);
-        askedQuestion.setBackground(color);
-        askedQuestion.setEnabled(false);
-        askedQuestion.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        Font font = new Font("Tahoma", Font.BOLD,12);
-        askedQuestion.setFont(font);
-        listField.add(askedQuestion);
-        jPanel1.add(askedQuestion, c);
+        this.setTitle("Cuestionario");
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
         
-        JTextArea answer = new JTextArea();
-        //answer.setLineWrap(true);
-//answer.setWrapStyleWord(true);
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 30;      //make this component tall
-	c.weightx = 0.0;
-	c.gridwidth = 6;
-	c.gridx = 1;
-        c.insets = new Insets(10,20,10,20);
-	c.gridy = rowCounter+1;
-        listAreas.add(answer);
-        jPanel1.add(new JScrollPane(answer), c);                      
+        controlador = new ControladorHibernate();
+        this.idPacient = idPacient;
+        this.numSessio = numSessio;
         
+        jPanel1.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        fillQuestions();
+        createTitle();
          c = new GridBagConstraints();
-        acceptButton.setEnabled(true);
-        c.gridx = 7;
-	c.gridy = rowCounter+3;
-         c.insets = new Insets(10,20,10,20);
-        c.gridwidth=1;
-        jPanel1.add(acceptButton,c);
-        
-        c = new GridBagConstraints();
-        JButton modifyButton = new JButton("Borrar resposta");
-        c.gridx = 7;
-        c.gridwidth=1;
-        c.gridy=rowCounter+1;
-        modifyButton.addActionListener(new ActionListener()
-        {
-          public void actionPerformed(ActionEvent e)
-          {           
-              answer.setText("");
-            //controlador.crearResposta(answer.getText() , idPacient);
-          }
-        }); 
-        jPanel1.add(modifyButton, c);
-        
-        rowCounter+=4;
-        
-        jPanel1.invalidate();
-        jPanel1.validate();
-        jPanel1.repaint();
-        
-        jScrollPane2.invalidate();
-        jScrollPane2.validate();
-        jScrollPane2.repaint();
-
-        this.invalidate();
-        this.validate();
-        this.repaint();
-    }
-    
-    private void initComponentsWithBagGrid(){
-        jScrollPane2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        jScrollPane2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);      
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);                
-
-        gbl = new GridBagLayout();
-        jPanel1.setLayout(gbl);
-        c = new GridBagConstraints();
-        
-       
-        
-        label1 = new JLabel();
-	c.fill = GridBagConstraints.HORIZONTAL;
-	c.insets = new Insets(10,10,0,0);  //top padding
-	c.gridx = 1;       //aligned with button 2
-	c.gridwidth = 2;   //2 columns wide
-	c.gridy = 3;       //third row
-        Font font = new Font("Tahoma", Font.BOLD, 14);
-        label1.setFont(font);
-        label1.setText("Preguntes");
-	jPanel1.add(label1, c);
-        
-        
-        acceptButton = new JButton("Acceptar");
-        c.fill = GridBagConstraints.HORIZONTAL;      
-        //c.anchor = GridBagConstraints.PAGE_END; //bottom of space
-        c.gridx = 4;       //aligned with button 2
-        c.gridy = 7;
-        c.gridheight=1;
-        c.insets = new Insets(0,0,0,20);
-        List a = new List();
-        acceptButton.addActionListener(new ActionListener()
-        {
-          public void actionPerformed(ActionEvent e)
-          {           
-              boolean b;
-               String resposta="Pregunta no contestada";
-               String pregunta="";
-                for(int i=0;i<listAreas.size();i++){
-                    a.add(listField.get(i).getText());
-                    a.add(listAreas.get(i).getText());
-                }
-
-                  
-              
-             
-              
-              for(int i=0;i<a.getItemCount();i=i+2){
-                  controlador.crearResposta(a.getItem(i+1),a.getItem(i),idPacient);
-              }
-            frame.dispose();
-          }
-        }); 
-        acceptButton.setEnabled(false);
-        jPanel1.add(acceptButton, c);
-        
-        dummyText = new JLabel("No hi ha preguntes.");
         c.fill = GridBagConstraints.HORIZONTAL;
-        c.gridx = 1;       //aligned with button 2
-        c.gridy = 7;
-        font = new Font("Tahoma", Font.PLAIN,14);
-        c.insets = new Insets(10,10,0,20);
-        label1.setFont(font);
-        jPanel1.add(dummyText, c);
-    
+        c.gridx = 0;
+        c.gridy = 0;
+        c.ipady = 30;
+        jPanel1.add(title,c);
+        for(int i=0;i<10;i++){
+            RespostesTest test = new RespostesTest();
+            respostes.add(test);
+        }
+       
+        for(int i=0;i<20;i=i+2){          
+            generateButtons(i/2);
+            createQuestion(i/2);
+            c = new GridBagConstraints();
+            c.fill = GridBagConstraints.HORIZONTAL;
+            c.gridx = 0;
+            c.gridy = i+2;
+            jPanel1.add(question,c);
+
+
+            c = new GridBagConstraints();
+            c.fill = GridBagConstraints.HORIZONTAL;
+            c.gridx = 0;
+            c.gridy = i+1+2;
+            c.insets = new Insets(5,0,15,0);
+            jPanel1.add(buttons,c);
+        }
+        createButton();
+         c = new GridBagConstraints();
+            c.fill = GridBagConstraints.HORIZONTAL;
+            c.gridx = 0;
+            c.gridy = 24;
+            jPanel1.add(button,c);
+        
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -227,11 +104,8 @@ public class Questionari extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-
-        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -239,35 +113,92 @@ public class Questionari extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 705, Short.MAX_VALUE)
+            .addGap(0, 777, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 496, Short.MAX_VALUE)
+            .addGap(0, 551, Short.MAX_VALUE)
         );
 
-        jScrollPane2.setViewportView(jPanel1);
+        jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2)
-                .addContainerGap())
+            .addComponent(jScrollPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2)
-                .addContainerGap())
+            .addComponent(jScrollPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void createButton(){
+        button = new JPanel();
+        JButton acceptButton = new JButton("Aceptar");
+        acceptButton.addActionListener((ActionEvent e) -> {
+            for(int i=0;i<10;i++){
+                controlador.crearResposta(String.valueOf(respostes.get(i).param), preguntes.get(i), idPacient, numSessio);
+            }
+            this.dispose();
+        });
+        button.add(acceptButton);
+    }
+    
+    public void createTitle(){
+        title = new JPanel();
+        Font font = new Font("Tahoma", Font.BOLD,12);
+        JLabel pregunta = new JLabel("Por favor, señale la opción que más se aproxime a cómo se siente usted ahora mismo");
+        pregunta.setFont(font);
+        title.add(pregunta);
+    }
+    
+    public void createQuestion(int i) {
+        question = new JPanel();
+        JLabel pregunta = new JLabel(preguntes.get(i));
+        //Font font = new Font("Tahoma", Font.BOLD,12);
+        //pregunta.setFont(font);
+        question.add(pregunta);
+    }
+    public void generateButtons(int i){
+        buttons = new JPanel();
+        FlowLayout experimentLayout = new FlowLayout();
+        buttons.setLayout(experimentLayout);
+         
+        ButtonGroup group = new ButtonGroup();
+        for(int j=0;j<10;j++){
+            int temp= j+1;
+            JRadioButton num1 = new JRadioButton(String.valueOf(temp));
+            num1.setActionCommand(String.valueOf(temp));
+            num1.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) 
+                {                 
+                    respostes.get(i).setParam(temp);
+                    System.out.println(temp);
+                }
+            });
+            group.add(num1);
+            buttons.add(num1);
+        }
+ 
+    }
+    
+    public void fillQuestions(){
+        preguntes.add("Me siento mentalmente despierto");
+        preguntes.add("Me siento capaz de recordar cosas importantes para mi");
+        preguntes.add("Me siento capaz de recordar cosas que hago durante el día");
+        preguntes.add("Me siento capaz de esforzarme para superar les dificultades");
+        preguntes.add("Me siento capaz de hacer las tareas que me propongo");
+        preguntes.add("Me siento capaz de encontrar soluciones a un problema");
+        preguntes.add("Me siento optimista sobre el futuro");
+        preguntes.add("Me siento satisfecho con mi vida");
+        preguntes.add("Siento que tengo control sobre mi vida");
+        preguntes.add("Me siento contento");   
+    }
     /**
      * @param args the command line arguments
      */
@@ -295,28 +226,31 @@ public class Questionari extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
-                    new Questionari(null,0).setVisible(true);
-                } catch (IOException ex) {
-                    Logger.getLogger(Questionari.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                new Questionari(0,0).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+}
+
+
+class RespostesTest{
+  int param;
+  
+  public void setParam(int i){
+      param=i;
+  }
+  
+  public int getParam(){
+      return param;
+  }
+  
 }

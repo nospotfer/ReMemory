@@ -18,16 +18,19 @@ public class PacientDatabase {
     private String nom;
     private int edat;
     private int anysEscola;
+    private Usuari usuari;
     private Set<Sessio> sessions;
+    
     
     public PacientDatabase(){
     }
     
-    public PacientDatabase(String nom, int id, int edat, int anysEscola) {
+    public PacientDatabase(String nom, int id, int edat, int anysEscola, Usuari usuari) {
         this.id=id;
         this.nom=nom;
         this.edat = edat;
         this.anysEscola = anysEscola;
+        this.usuari = usuari;
     }
 
     /**
@@ -113,5 +116,19 @@ public class PacientDatabase {
      */
     public void setSessions(Set<Sessio> sessions) {
         this.sessions = sessions;
+    }
+
+    /**
+     * @return the usuari
+     */
+    public Usuari getUsuari() {
+        return usuari;
+    }
+
+    /**
+     * @param usuari the usuari to set
+     */
+    public void setUsuari(Usuari usuari) {
+        this.usuari = usuari;
     }
 }

@@ -67,11 +67,11 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Login"));
         jPanel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        jLabel2.setText("Usuari:");
+        jLabel2.setText("Usuario:");
 
-        jLabel3.setText("Contrasenya:");
+        jLabel3.setText("Contraseña:");
 
-        loginBtn.setText("Entra");
+        loginBtn.setText("Entrar");
         loginBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginBtnActionPerformed(evt);
@@ -173,7 +173,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-           loginCheck();
+        loginCheck();
     }//GEN-LAST:event_loginBtnActionPerformed
 
     /**

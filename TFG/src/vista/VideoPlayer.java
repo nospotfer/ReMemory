@@ -121,7 +121,7 @@ public class VideoPlayer {
                 descripcions.prova(path,idPacient, 1);
             }
             else{
-             JOptionPane.showConfirmDialog(null, "No hay ningu gravacion para este episodio", "Salir", JOptionPane.OK_OPTION);
+                JOptionPane.showConfirmDialog(null, "No hay ninguna gravación para este episodio", "Salir", JOptionPane.OK_OPTION);
             }
         });
         
@@ -184,7 +184,6 @@ public class VideoPlayer {
             }
         }
         String pathVideo = path + File.separator+nomVideo;
-        System.out.println(pathVideo);
         File f = new File(pathVideo);
         URI u = f.toURI();
         Media media = new Media(u.toString());
@@ -332,7 +331,6 @@ public class VideoPlayer {
         DataLine.Info info = new DataLine.Info(TargetDataLine.class, getAudioFormat());
         // checks if system supports the data line
        if (!AudioSystem.isLineSupported(info)) {
-           System.out.println("Line not supported");
            JOptionPane.showConfirmDialog(null, "Microfono no detectado", "Error", JOptionPane.DEFAULT_OPTION);
             micro= false;
        }
@@ -351,7 +349,6 @@ public class VideoPlayer {
             }
            line.start();   // start capturing
 
-           System.out.println("Start capturing...");
            AudioInputStream ais = new AudioInputStream(line);
            System.out.println("Start recording...");
             try {

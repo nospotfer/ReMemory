@@ -115,8 +115,14 @@ public class VideoPlayer {
         TranscriptButton.addActionListener((java.awt.event.ActionEvent ae) -> {
             PacientDatabase pacient = controlador.getPacient(idPacient);
             String session = "src"+ File.separator+"resources"+ File.separator+pacient.getNom()+File.separator+"sessio1";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 1);
+            boolean gravacioExists = controlador.GravacioExisits(idPacient, numSessio);
+            if(gravacioExists){
+                Transcripcio descripcions = new Transcripcio();
+                descripcions.prova(path,idPacient, 1);
+            }
+            else{
+                JOptionPane.showConfirmDialog(null, "No hay ninguna gravación para este episodio", "Salir", JOptionPane.OK_OPTION);
+            }
         });
         
         JButton closeButton = new JButton("Salir");
@@ -171,12 +177,10 @@ public class VideoPlayer {
         Group root = new Group();
         File dir = new File(path);
         String nomVideo="";
-        System.out.println(path);
         for (File file : dir.listFiles()) {
              
             if (file.getName().endsWith((".mp4"))) {
                 nomVideo = file.getName();
-                System.out.println(nomVideo);
             }
         }
         String pathVideo = path + File.separator+nomVideo;
@@ -284,6 +288,7 @@ public class VideoPlayer {
         player.setOnReady(() -> {
             int w1 = player.getMedia().getWidth();
             int h1 = player.getMedia().getHeight();
+            //frame.setSize(w1 + 125, h1 + 200);
             frame.setSize(w1 + 125, h1 + 200);
             vbox.setTranslateY(h1 - 10);
             hbox.setTranslateY(h1);
@@ -291,6 +296,7 @@ public class VideoPlayer {
             hbox2.setTranslateX((w1 / 2) - 125);
             slider.setMin(0.0);
             slider.setValue(0.0);
+            slider.setMaxWidth(w1);
             slider.setMax(player.getTotalDuration().toSeconds());
         });
         
@@ -325,7 +331,6 @@ public class VideoPlayer {
         DataLine.Info info = new DataLine.Info(TargetDataLine.class, getAudioFormat());
         // checks if system supports the data line
        if (!AudioSystem.isLineSupported(info)) {
-           System.out.println("Line not supported");
            JOptionPane.showConfirmDialog(null, "Microfono no detectado", "Error", JOptionPane.DEFAULT_OPTION);
             micro= false;
        }
@@ -344,7 +349,6 @@ public class VideoPlayer {
             }
            line.start();   // start capturing
 
-           System.out.println("Start capturing...");
            AudioInputStream ais = new AudioInputStream(line);
            System.out.println("Start recording...");
             try {

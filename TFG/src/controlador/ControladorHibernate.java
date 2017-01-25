@@ -445,7 +445,7 @@ public class ControladorHibernate {
         
         query = session.createQuery("from Gravacio where idSessio =:idSessio");
         query.setParameter("idSessio", sessio.getIdSessio());
-      
+        
         if(query.list().size()<=0){
              session.close();
             return false;

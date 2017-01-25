@@ -114,8 +114,7 @@ public class Transcripcio {
         Group root = new Group();
         File dir = new File(path);
         String nomVideo="";
-        for (File file : dir.listFiles()) {
-             
+        for (File file : dir.listFiles()) {  
             if (file.getName().endsWith((".mp4"))) {
                 nomVideo = file.getName();
             }
@@ -195,11 +194,12 @@ public class Transcripcio {
             }
         });
         
-        
+        HBox hbox9 = new HBox();
+        hbox9.getChildren().add(changeButton);
         hbox.getChildren().add(playButton);
         hbox.getChildren().add(pauseButton);
         hbox.getChildren().add(stopButton);
-        hbox.getChildren().add(changeButton);
+        //hbox.getChildren().add(changeButton);
         
         final VBox vbox = new VBox();      
         
@@ -331,6 +331,7 @@ public class Transcripcio {
         root.getChildren().add(hbox6);
         root.getChildren().add(hbox7);
         root.getChildren().add(hbox8);
+        root.getChildren().add(hbox9);
         
         player.setOnReady(() -> {
             int w1 = player.getMedia().getWidth();
@@ -340,15 +341,17 @@ public class Transcripcio {
             hbox.setTranslateY(h1);
             hbox5.setTranslateY(h1 + 35);
             hbox5.setPrefWidth(w1);
-            textarea.setPrefColumnCount(55);
+            textarea.setPrefColumnCount(40);
             textarea.setPrefRowCount(5);
             hbox6.setTranslateY(h1 + 155);
             hbox7.setTranslateY(h1 + 275);
             hbox7.setTranslateX(w1 - 150);
             hbox8.setTranslateY(h1 + 105);
+            
+            hbox9.setTranslateY(h1 +40);
             slider.setMin(0.0);
             slider.setValue(0.0);
-            slider.setMaxWidth(h1);
+            slider.setMaxWidth(w1);
             slider.setMax(player.getTotalDuration().toSeconds());
             //VBox nova = new VBox();
             /*Saber mida segons el numero de descripcions*/

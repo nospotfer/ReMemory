@@ -112,7 +112,14 @@ public class Transcripcio {
     
     private static Scene createScene(String path, int idPacient, int numSessio) {
         Group root = new Group();
-        String pathVideo = path + File.separator+"video.mp4";
+        File dir = new File(path);
+        String nomVideo="";
+        for (File file : dir.listFiles()) {  
+            if (file.getName().endsWith((".mp4"))) {
+                nomVideo = file.getName();
+            }
+        }
+        String pathVideo = path + File.separator+nomVideo;
         File f = new File(pathVideo);
         URI u = f.toURI();
         Media media = new Media(u.toString());
@@ -187,11 +194,12 @@ public class Transcripcio {
             }
         });
         
-        
+        HBox hbox9 = new HBox();
+        hbox9.getChildren().add(changeButton);
         hbox.getChildren().add(playButton);
         hbox.getChildren().add(pauseButton);
         hbox.getChildren().add(stopButton);
-        hbox.getChildren().add(changeButton);
+        //hbox.getChildren().add(changeButton);
         
         final VBox vbox = new VBox();      
         
@@ -227,38 +235,36 @@ public class Transcripcio {
             player2.stop();
             //playButton.setText("Stop");
         });
-        
         slider2 = new Slider();
         hbox3.getChildren().add(playMusicButton);
         hbox3.getChildren().add(pauseMusicButton);
         hbox3.getChildren().add(stopMusicButton);
         hbox3.getChildren().add(slider2);
-        
-        player2.currentTimeProperty().addListener((ObservableValue<? extends Duration> observable, Duration duration, Duration current) -> {
-            slider2.setValue(current.toSeconds());
-            DecimalFormat df = new DecimalFormat("####0.00");
-            time.setText(String.valueOf(df.format(current.toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
-        });   
-        slider2.setOnMousePressed((MouseEvent event) -> {
-            player2.seek(Duration.seconds(slider2.getValue()));
-            DecimalFormat df = new DecimalFormat("####0.00");
-            df.format(Duration.seconds(slider2.getValue()).toSeconds());        
-            time.setText(String.valueOf(df.format(Duration.seconds(slider2.getValue()).toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
-        });
+
+            player2.currentTimeProperty().addListener((ObservableValue<? extends Duration> observable, Duration duration, Duration current) -> {
+                slider2.setValue(current.toSeconds());
+                DecimalFormat df = new DecimalFormat("####0.00");
+                time.setText(String.valueOf(df.format(current.toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
+            });   
+            slider2.setOnMousePressed((MouseEvent event) -> {
+                player2.seek(Duration.seconds(slider2.getValue()));
+                DecimalFormat df = new DecimalFormat("####0.00");
+                df.format(Duration.seconds(slider2.getValue()).toSeconds());        
+                time.setText(String.valueOf(df.format(Duration.seconds(slider2.getValue()).toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
+            });
          
-        player2.setOnReady(() -> {
-            int w1 = player.getMedia().getWidth();
-            int h1 = player.getMedia().getHeight();
-            hbox3.setTranslateY(h1 + 65);
-            hbox3.setPrefWidth(w1);
-            slider2.setMin(0.0);
-            slider2.setValue(0.0);
-            slider2.setPrefWidth(w1 - 150);
-            slider2.setMax(player2.getTotalDuration().toSeconds());
-            DecimalFormat df = new DecimalFormat("####0.00");
-            time.setText("0.00"+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
-        });   
-        
+            player2.setOnReady(() -> {
+                int w1 = player.getMedia().getWidth();
+                int h1 = player.getMedia().getHeight();
+                hbox3.setTranslateY(h1 + 65);
+                hbox3.setPrefWidth(w1);
+                slider2.setMin(0.0);
+                slider2.setValue(0.0);
+                slider2.setPrefWidth(w1 - 150);
+                slider2.setMax(player2.getTotalDuration().toSeconds());
+                DecimalFormat df = new DecimalFormat("####0.00");
+                time.setText("0.00"+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
+            });   
         slider = new Slider();   
         vbox.getChildren().add(slider);
         vbox.setMinWidth(600);
@@ -325,6 +331,7 @@ public class Transcripcio {
         root.getChildren().add(hbox6);
         root.getChildren().add(hbox7);
         root.getChildren().add(hbox8);
+        root.getChildren().add(hbox9);
         
         player.setOnReady(() -> {
             int w1 = player.getMedia().getWidth();
@@ -334,14 +341,17 @@ public class Transcripcio {
             hbox.setTranslateY(h1);
             hbox5.setTranslateY(h1 + 35);
             hbox5.setPrefWidth(w1);
-            textarea.setPrefColumnCount(55);
+            textarea.setPrefColumnCount(40);
             textarea.setPrefRowCount(5);
             hbox6.setTranslateY(h1 + 155);
             hbox7.setTranslateY(h1 + 275);
             hbox7.setTranslateX(w1 - 150);
             hbox8.setTranslateY(h1 + 105);
+            
+            hbox9.setTranslateY(h1 +40);
             slider.setMin(0.0);
             slider.setValue(0.0);
+            slider.setMaxWidth(w1);
             slider.setMax(player.getTotalDuration().toSeconds());
             //VBox nova = new VBox();
             /*Saber mida segons el numero de descripcions*/

@@ -120,7 +120,6 @@ public class ControladorHibernate {
         
         List list = query.list();
         Sessio sessio = (Sessio) list.get(0);
-        System.out.println(sessio.getIdSessio());
         
         Gravacio gravacio = new Gravacio(nomGravacio, data, sessio);
         gravacio.setNom(nomGravacio);
@@ -203,7 +202,6 @@ public class ControladorHibernate {
     public List getTimestamps(int idPacient, int numSessio, String nomGravacio){
         Session session = con.getSession();
         Transaction tx = session.beginTransaction();
-        System.out.println(nomGravacio);
         PacientDatabase pacient = (PacientDatabase) session.get(PacientDatabase.class, idPacient);
         Query query = session.createQuery("from Sessio where idPacient =:idPacient AND numSessio =:numSessio");
         query.setParameter("idPacient", idPacient);
@@ -309,7 +307,6 @@ public class ControladorHibernate {
         query.setParameter("nomUsuari", nomUsuari);     
         if(query.list().size() >0){ 
             session.close();
-            System.out.println(nomUsuari);
             return true;
         }
         else{       
@@ -399,8 +396,6 @@ public class ControladorHibernate {
         query = session.createQuery("from Gravacio where nom =:nomGravacio AND idSessio =:idSessio");
         query.setParameter("idSessio", sessio.getIdSessio());
         query.setParameter("nomGravacio", nomGravacio);
-        System.out.println(sessio.getIdSessio());
-        System.out.println(nomGravacio);
         if(query.list().size()<=0){
             session.close();
            return false;
@@ -428,7 +423,6 @@ public class ControladorHibernate {
         query.setParameter("nomUsuari", nomUsuari);
         Usuari usuari = (Usuari) query.list().get(0);
         
-        System.out.println(usuari.getPacients().size());
         List list = query.list();
         list.clear();;
         list.addAll(usuari.getPacients());
@@ -437,7 +431,27 @@ public class ControladorHibernate {
         query.setParameter("idUsuari", usuari.getId());
         List pacients = query.list();*/
         session.close();
-        return list;
+        return list;    
+    }
+    
+    public boolean GravacioExisits(int idPacient, int numSessio){
+        Session session = con.getSession();
+        Query query = session.createQuery("from Sessio where idPacient =:idPacient AND numSessio =:numSessio");
+        query.setParameter("idPacient", idPacient);
+        query.setParameter("numSessio", numSessio);
         
+        List list = query.list();
+        Sessio sessio = (Sessio) list.get(0);
+        
+        query = session.createQuery("from Gravacio where idSessio =:idSessio");
+        query.setParameter("idSessio", sessio.getIdSessio());
+        
+        if(query.list().size()<=0){
+             session.close();
+            return false;
+        }else{
+             session.close();
+            return true;
+        }
     }
 }

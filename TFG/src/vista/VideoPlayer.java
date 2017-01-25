@@ -115,8 +115,14 @@ public class VideoPlayer {
         TranscriptButton.addActionListener((java.awt.event.ActionEvent ae) -> {
             PacientDatabase pacient = controlador.getPacient(idPacient);
             String session = "src"+ File.separator+"resources"+ File.separator+pacient.getNom()+File.separator+"sessio1";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 1);
+            boolean gravacioExists = controlador.GravacioExisits(idPacient, numSessio);
+            if(gravacioExists){
+                Transcripcio descripcions = new Transcripcio();
+                descripcions.prova(path,idPacient, 1);
+            }
+            else{
+             JOptionPane.showConfirmDialog(null, "No hay ningu gravacion para este episodio", "Salir", JOptionPane.OK_OPTION);
+            }
         });
         
         JButton closeButton = new JButton("Salir");
@@ -171,15 +177,14 @@ public class VideoPlayer {
         Group root = new Group();
         File dir = new File(path);
         String nomVideo="";
-        System.out.println(path);
         for (File file : dir.listFiles()) {
              
             if (file.getName().endsWith((".mp4"))) {
                 nomVideo = file.getName();
-                System.out.println(nomVideo);
             }
         }
         String pathVideo = path + File.separator+nomVideo;
+        System.out.println(pathVideo);
         File f = new File(pathVideo);
         URI u = f.toURI();
         Media media = new Media(u.toString());
@@ -284,6 +289,7 @@ public class VideoPlayer {
         player.setOnReady(() -> {
             int w1 = player.getMedia().getWidth();
             int h1 = player.getMedia().getHeight();
+            //frame.setSize(w1 + 125, h1 + 200);
             frame.setSize(w1 + 125, h1 + 200);
             vbox.setTranslateY(h1 - 10);
             hbox.setTranslateY(h1);
@@ -291,6 +297,7 @@ public class VideoPlayer {
             hbox2.setTranslateX((w1 / 2) - 125);
             slider.setMin(0.0);
             slider.setValue(0.0);
+            slider.setMaxWidth(w1);
             slider.setMax(player.getTotalDuration().toSeconds());
         });
         

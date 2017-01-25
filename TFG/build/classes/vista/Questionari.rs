@@ -1,2 +1,0 @@
-vista.Questionari
-vista.RespostesTest

@@ -9,7 +9,6 @@
         <many-to-one name="sessio" class="model.Sessio" fetch="select">
            <column name="idSessio" />   
         </many-to-one>   
-        
-        
+               
     </class>
 </hibernate-mapping>

@@ -21,7 +21,7 @@ public class Respostes extends javax.swing.JFrame {
     private ControladorHibernate controlador;
     JFrame finestra;
     public Respostes(int idPacient) {
-        this.setTitle("Respostes");
+        this.setTitle("Respuestas");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         Color color = new Color(240,240,240);
         controlador = new ControladorHibernate();

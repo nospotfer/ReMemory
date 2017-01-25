@@ -5,12 +5,10 @@
  */
 package vista;
 
-import controlador.Conector;
 import controlador.ControladorHibernate;
 import model.Pacient;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import controlador.ZipDirectory;
@@ -19,8 +17,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import controlador.Utils;
 import java.awt.Desktop;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -34,9 +30,6 @@ import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import model.PacientDatabase;
-import model.Usuari;
-import org.hibernate.Query;
-import org.hibernate.Session;
 
 /**
  *
@@ -126,7 +119,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        eliminaBtn.setText("Elimina");
+        eliminaBtn.setText("Eliminar");
         eliminaBtn.setEnabled(false);
         eliminaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

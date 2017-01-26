@@ -150,18 +150,20 @@ public class VideoPlayer {
         JLabel label = new JLabel("              ");
         label.setBackground( new java.awt.Color(240,248,255));
         label.setOpaque(true);
+        frame.setLayout(new BorderLayout());
         frame.add(label,BorderLayout.WEST); 
        
         JLabel label2 = new JLabel("             ");
         label2.setBackground( new java.awt.Color(240,248,255));
         label2.setOpaque(true);
+       
         frame.add(label2,BorderLayout.PAGE_START);
        
         frame.add(fxPanel,BorderLayout.CENTER); 
         frame.add(panel, BorderLayout.PAGE_END);
         frame.setVisible(true);
         //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        
         Platform.runLater(() -> {
             initFX(fxPanel, path, idPacient, numSessio);
         });
@@ -169,7 +171,7 @@ public class VideoPlayer {
      
      
        private static void initFX(JFXPanel fxPanel, String path, int idPacient, int numSessio) {
-        Scene scene = createScene(path,idPacient, numSessio);
+        Scene scene = createScene(path,idPacient, numSessio);        
         fxPanel.setScene(scene);
     }
     
@@ -187,11 +189,10 @@ public class VideoPlayer {
         File f = new File(pathVideo);
         URI u = f.toURI();
         Media media = new Media(u.toString());
-        media.getWidth();
         player = new MediaPlayer(media);
 
         MediaView view = new MediaView(player);      
-       
+
         hbox = new HBox();
         final Button playButton = new Button("Play"); 
         playButton.setOnAction((ActionEvent event) -> {
@@ -267,7 +268,7 @@ public class VideoPlayer {
         });
         stopRecord.setDisable(true);
 
-        timestampButton = new Button("Timestamp");       
+        timestampButton = new Button("Marca de tiempo");       
         timestampButton.setOnAction((ActionEvent event) -> {
             timeEnd = (System.currentTimeMillis() - timeStart)/1000.0f;
             controlador.crearTimestamp((float)timeEnd, nomGravacio);
@@ -279,18 +280,21 @@ public class VideoPlayer {
         hbox2.getChildren().add(stopRecord);
        
 
-        
+        view.setScaleX(2.5);
+        view.setScaleY(2.5);
         root.getChildren().add(view);
         root.getChildren().add(hbox);
         root.getChildren().add(vbox);
         root.getChildren().add(hbox2);
-        
+   
         player.setOnReady(() -> {
-            int w1 = player.getMedia().getWidth();
-            int h1 = player.getMedia().getHeight();
+
+            float w1 = player.getMedia().getWidth()*1.5f+95;
+            float h1 = player.getMedia().getHeight()*1.5f+95;
             //frame.setSize(w1 + 125, h1 + 200);
-            frame.setSize(w1 + 125, h1 + 200);
-            vbox.setTranslateY(h1 - 10);
+            //frame.setSize(w1 + 125, h1 + 200);
+            frame.setSize(600,800);
+            vbox.setTranslateY(h1-10);
             hbox.setTranslateY(h1);
             hbox2.setTranslateY(h1 + 50);
             hbox2.setTranslateX((w1 / 2) - 125);

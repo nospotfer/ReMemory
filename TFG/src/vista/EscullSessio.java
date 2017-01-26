@@ -381,6 +381,11 @@ public class EscullSessio extends javax.swing.JDialog {
         });
 
         jButton3.setText("Juegos visuales");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Q2");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -975,19 +980,12 @@ public class EscullSessio extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DescripcioSessio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio2ActionPerformed
-        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió2 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 2);                
-        }               
+          
     }//GEN-LAST:event_DescripcioSessio2ActionPerformed
 
     private void VideoSessio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio2ActionPerformed
     if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió2 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "El directorio sessio2 del usuario: "+nomPacient+" no existe", "Archivo no encontrad0" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio2";
@@ -998,7 +996,7 @@ public class EscullSessio extends javax.swing.JDialog {
 
     private void VideoSessio3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio3ActionPerformed
         if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió3 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+             JOptionPane.showMessageDialog(null, "El directorio sessio3 del usuario: "+nomPacient+" no existe", "Archivo no encontrad0" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3";
@@ -1008,19 +1006,12 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_VideoSessio3ActionPerformed
 
     private void DescripcioSessio3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio3ActionPerformed
-    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió3 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio3";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 3);                
-        }                       
+          
     }//GEN-LAST:event_DescripcioSessio3ActionPerformed
 
     private void VideoSessio4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio4ActionPerformed
     if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió4 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+             JOptionPane.showMessageDialog(null, "El directorio sessio4 del usuario: "+nomPacient+" no existe", "Archivo no encontrad0" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4";
@@ -1030,19 +1021,12 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_VideoSessio4ActionPerformed
 
     private void DescripcioSessio4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio4ActionPerformed
-    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió4 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio4";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 4);                
-        }                
+          
     }//GEN-LAST:event_DescripcioSessio4ActionPerformed
 
     private void VideoSessio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio1ActionPerformed
         if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió1 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+             JOptionPane.showMessageDialog(null, "El directorio sessio1 del usuario: "+nomPacient+" no existe", "Archivo no encontrad0" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio1";
@@ -1057,7 +1041,7 @@ public class EscullSessio extends javax.swing.JDialog {
 
     private void VideoSessio8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio8ActionPerformed
         if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió8 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+             JOptionPane.showMessageDialog(null, "El directorio sessio8 del usuario: "+nomPacient+" no existe", "Archivo no encontrad0" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8";
@@ -1067,19 +1051,12 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_VideoSessio8ActionPerformed
 
     private void DescripcioSessio8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio8ActionPerformed
-    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió8 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio8";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 8);                
-        }               
+           
     }//GEN-LAST:event_DescripcioSessio8ActionPerformed
 
     private void VideoSessio6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio6ActionPerformed
     if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió6 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "El directorio sessio6 del usuario: "+nomPacient+" no existe", "Archivo no encontrad0" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6";
@@ -1089,36 +1066,22 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_VideoSessio6ActionPerformed
 
     private void DescripcioSessio6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio6ActionPerformed
-        if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió6 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio6";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 6);                
-        }               
+            
     }//GEN-LAST:event_DescripcioSessio6ActionPerformed
 
     private void VideoSessio7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio7ActionPerformed
         if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió7 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "El directorio sessio7 del usuario: "+nomPacient+" no existe", "Archivo no encontrad0" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7";
            VideoPlayer test = new VideoPlayer();
-           test.prova(path, idPacient, 1);                
-        }       
+           test.prova(path, idPacient, 7);                
+        }                
     }//GEN-LAST:event_VideoSessio7ActionPerformed
 
     private void DescripcioSessio7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio7ActionPerformed
-    if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió7 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio7";
-            Transcripcio descripcions = new Transcripcio();
-            descripcions.prova(path,idPacient, 7);                
-        }                
+              
     }//GEN-LAST:event_DescripcioSessio7ActionPerformed
 
     private void descripcionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descripcionsActionPerformed
@@ -1134,7 +1097,14 @@ public class EscullSessio extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void VideoSessio9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio9ActionPerformed
-        // TODO add your handling code here:
+         if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5").isDirectory()){
+             JOptionPane.showMessageDialog(null, "El directorio sessio5 del usuario: "+nomPacient+" no existe", "Archivo no encontrad0" , JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio5";
+           VideoPlayer test = new VideoPlayer();
+           test.prova(path, idPacient, 5);                
+        }            
     }//GEN-LAST:event_VideoSessio9ActionPerformed
 
     private void DescripcioSessio9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio9ActionPerformed
@@ -1263,13 +1233,13 @@ public class EscullSessio extends javax.swing.JDialog {
 
     private void VideoSessio10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio10ActionPerformed
     if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio9").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió9 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+             JOptionPane.showMessageDialog(null, "El directorio sessio9 del usuario: "+nomPacient+" no existe", "Archivo no encontrado" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio9";
            VideoPlayer test = new VideoPlayer();
            test.prova(path, idPacient, 9);                
-        }               // TODO add your handling code here:
+        }              
     }//GEN-LAST:event_VideoSessio10ActionPerformed
 
     private void DescripcioSessio16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcioSessio16ActionPerformed
@@ -1294,7 +1264,7 @@ public class EscullSessio extends javax.swing.JDialog {
 
     private void VideoSessio11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoSessio11ActionPerformed
     if(!new File("src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio10").isDirectory()){
-             JOptionPane.showMessageDialog(null, "La carpeta sessió10 de l'usuari: "+nomPacient+"no existeix", "Carpeta no trobada" , JOptionPane.INFORMATION_MESSAGE);
+             JOptionPane.showMessageDialog(null, "El directorio sessio11 del usuario: "+nomPacient+" no existe", "Archivo no encontrado" , JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             String path = "src"+ File.separator+"resources"+ File.separator+nomPacient+File.separator+"sessio10";
@@ -1322,6 +1292,10 @@ public class EscullSessio extends javax.swing.JDialog {
         test.pack();
         test.setVisible(true);   
     }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

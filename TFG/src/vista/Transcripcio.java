@@ -59,7 +59,6 @@ public class Transcripcio {
     static AudioInputStream ais;
     static AudioFileFormat.Type fileType = AudioFileFormat.Type.WAVE;
     static Thread one;
-    static Button stopRecordButton;
     static Slider slider ;
     static JFrame frame;
     static String folderPath;
@@ -71,6 +70,8 @@ public class Transcripcio {
         // This method is invoked on the EDT thread
         frame = new JFrame("Transcripción");
         nova = new VBox();
+        
+        /*Setting fram configurations*/
         final JFXPanel fxPanel = new JFXPanel();
         controlador = new ControladorHibernate();
         JLabel label = new JLabel("             ");
@@ -96,6 +97,7 @@ public class Transcripcio {
                 frame.setVisible(false);
             }
         });
+        
         time = new Label();
         Platform.runLater(() -> {
             initFX(fxPanel, path, idPacient, numSessio);
@@ -112,8 +114,10 @@ public class Transcripcio {
     
     private static Scene createScene(String path, int idPacient, int numSessio) {
         Group root = new Group();
+        
         File dir = new File(path);
         String nomVideo="";
+        /*We choose the video to play*/
         for (File file : dir.listFiles()) {  
             if (file.getName().endsWith((".mp4"))) {
                 nomVideo = file.getName();
@@ -127,8 +131,8 @@ public class Transcripcio {
         player = new MediaPlayer(media);
         hbox = new HBox();
         MediaView view = new MediaView(player);
-        stopRecordButton = new Button("Stop Recording");
-         
+        
+        /*Creation of Buttons*/
         final Button playButton = new Button("Play video"); 
         playButton.setOnAction((ActionEvent event) -> {
             player.play();
@@ -252,12 +256,12 @@ public class Transcripcio {
                 df.format(Duration.seconds(slider2.getValue()).toSeconds());        
                 time.setText(String.valueOf(df.format(Duration.seconds(slider2.getValue()).toSeconds()))+" : "+String.valueOf(df.format(player2.totalDurationProperty().getValue().toSeconds())));
             });
-         
+         /*Called when the recording is loaded*/
             player2.setOnReady(() -> {
-                int w1 = player.getMedia().getWidth();
-                int h1 = player.getMedia().getHeight();
-                hbox3.setTranslateY(h1 + 65);
-                hbox3.setPrefWidth(w1);
+                int w1 = player.getMedia().getWidth()+200;
+                int h1 = player.getMedia().getHeight()+275;
+                hbox3.setTranslateY(h1 + 100);
+                hbox3.setPrefWidth(w1+20);
                 slider2.setMin(0.0);
                 slider2.setValue(0.0);
                 slider2.setPrefWidth(w1 - 150);
@@ -321,7 +325,10 @@ public class Transcripcio {
         HBox hbox8 = new HBox();
         hbox8.getChildren().add(time);
         
+        /*All components are added to the frame*/
         Scene  scene  =  new  Scene(root, media.getWidth() ,media.getHeight(),Color.ALICEBLUE);
+        view.setScaleX(2.5);
+        view.setScaleY(2.5);
         root.getChildren().add(view);
         root.getChildren().add(hbox);
         root.getChildren().add(vbox);
@@ -334,24 +341,24 @@ public class Transcripcio {
         root.getChildren().add(hbox9);
         
         player.setOnReady(() -> {
-            int w1 = player.getMedia().getWidth();
-            int h1 = player.getMedia().getHeight();
+            int w1 = player.getMedia().getWidth()+200;
+            int h1 = player.getMedia().getHeight()+275;
             frame.setSize(w1 + 400, h1 + 400);
             vbox.setTranslateY(h1 - 10);
             hbox.setTranslateY(h1);
-            hbox5.setTranslateY(h1 + 35);
+            hbox5.setTranslateY(h1 + 80);
             hbox5.setPrefWidth(w1);
-            textarea.setPrefColumnCount(40);
+            textarea.setPrefColumnCount(45);
             textarea.setPrefRowCount(5);
-            hbox6.setTranslateY(h1 + 155);
+            hbox6.setTranslateY(h1 + 170);
             hbox7.setTranslateY(h1 + 275);
-            hbox7.setTranslateX(w1 - 150);
-            hbox8.setTranslateY(h1 + 105);
+            hbox7.setTranslateX(w1 - 125);
+            hbox8.setTranslateY(h1 + 138);
             
             hbox9.setTranslateY(h1 +40);
             slider.setMin(0.0);
             slider.setValue(0.0);
-            slider.setMaxWidth(w1);
+            slider.setMaxWidth(w1+10);
             slider.setMax(player.getTotalDuration().toSeconds());
             //VBox nova = new VBox();
             /*Saber mida segons el numero de descripcions*/
@@ -365,7 +372,6 @@ public class Transcripcio {
                 descripcio.setText(desc.getDescripcio()+"\n");
                 nova.getChildren().add(descripcio);
                 
-                // nova.setTranslateY(i*25);
             }
             nova.setTranslateX(player.getMedia().getWidth()+25);        
             root.getChildren().add(nova);

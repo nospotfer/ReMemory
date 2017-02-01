@@ -1246,7 +1246,7 @@ public class MOCA extends Test {
                     .addComponent(puntTotalMoca1)
                     .addComponent(jLabel325)
                     .addComponent(jLabel231))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         mocaScroll.setViewportView(mocaPanel);

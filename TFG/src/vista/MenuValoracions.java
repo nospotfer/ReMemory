@@ -66,7 +66,7 @@ public class MenuValoracions extends javax.swing.JDialog {
         setTitle("Menú valoracions");
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setText("T0 - Valoració cognitiva prèvia");
+        jButton1.setText("A0 - Valoració cognitiva prèvia");
         jButton1.setActionCommand("0");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +79,7 @@ public class MenuValoracions extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(15, 15, 6, 15);
         getContentPane().add(jButton1, gridBagConstraints);
 
-        jButton2.setText("T1 - Basal");
+        jButton2.setText("A1 - Basal");
         jButton2.setActionCommand("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -88,7 +88,7 @@ public class MenuValoracions extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(6, 15, 6, 15);
         getContentPane().add(jButton2, gridBagConstraints);
 
-        jButton3.setText("T2 - Fi de tractament");
+        jButton3.setText("A2 - Fi de tractament");
         jButton3.setActionCommand("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -97,7 +97,7 @@ public class MenuValoracions extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(6, 15, 6, 15);
         getContentPane().add(jButton3, gridBagConstraints);
 
-        jButton4.setText("T3 - Seguiment 3 mesos");
+        jButton4.setText("A3 - Seguiment 3 mesos");
         jButton4.setActionCommand("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;

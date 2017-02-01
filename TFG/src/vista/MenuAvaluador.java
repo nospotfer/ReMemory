@@ -102,7 +102,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menú evaluador");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Pacient"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Paciente"));
 
         jLabel4.setText("ID:");
 
@@ -134,7 +134,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        fitxaBtn.setText("Fitxa");
+        fitxaBtn.setText("Ficha");
         fitxaBtn.setEnabled(false);
         fitxaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +219,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Tratamiento");
+        jLabel2.setText("Tractamientos");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -252,7 +252,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Avaluació"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultados"));
 
         csvButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/evaluacio.png"))); // NOI18N
         csvButton.setEnabled(false);
@@ -313,7 +313,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Avaluador:");
+        jLabel6.setText("Evaluador:");
 
         evaluadorLabel.setText("jLabel7");
 

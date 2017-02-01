@@ -78,7 +78,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Pacient"/>
+            <TitledBorder title="Paciente"/>
           </Border>
         </Property>
       </Properties>
@@ -191,7 +191,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="fitxaBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Fitxa"/>
+            <Property name="text" type="java.lang.String" value="Ficha"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
@@ -286,7 +286,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tratamiento"/>
+            <Property name="text" type="java.lang.String" value="Tractamientos"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -295,7 +295,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Avaluaci&#xf3;"/>
+            <TitledBorder title="Resultados"/>
           </Border>
         </Property>
       </Properties>
@@ -389,7 +389,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Avaluador:"/>
+        <Property name="text" type="java.lang.String" value="Evaluador:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="evaluadorLabel">

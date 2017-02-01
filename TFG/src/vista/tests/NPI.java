@@ -263,7 +263,7 @@ public class NPI extends Test {
         setLayout(new java.awt.CardLayout());
 
         jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel106.setText("<html><center><b>HABILITATS DE COMUNICACIÓ: Telèfon i carta</b>");
+        jLabel106.setText("<html><center><b>INVENTARI NEUROPSIQUIÀTRIC DE CUMMINGS - NPI</b>");
 
         npiPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Trastorns neuropsiquiàtrics (màxima puntuació: 120)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         npiPanel.setLayout(new java.awt.GridBagLayout());

@@ -458,14 +458,14 @@ public class ZARIT extends Test {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
         zaritQPanel.add(jLabel88, gridBagConstraints);
 
-        jLabel89.setText("<Html> ¿Se sent aclaparat per intentar compatibilitzar la cura del seu familiar amb altres <br> responsabilitats (treball, família)?");
+        jLabel89.setText("<Html> Se sent aclaparat per intentar compatibilitzar la cura del seu familiar amb altres <br> responsabilitats (treball, família)?");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         zaritQPanel.add(jLabel89, gridBagConstraints);
 
-        jLabel90.setText("Se sent enfadat quan és a punt de familiar?");
+        jLabel90.setText("Se sent enfadat quan és a prop del seu familiar?");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
@@ -775,7 +775,7 @@ public class ZARIT extends Test {
         gridBagConstraints.gridy = 11;
         zaritQPanel.add(jLabel115, gridBagConstraints);
 
-        jLabel134.setText("Se sent tens quan és a punt de familiar?");
+        jLabel134.setText("Se sent tens quan és a prop del seu familiar?");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 11;
@@ -1470,7 +1470,7 @@ public class ZARIT extends Test {
         gridBagConstraints.gridy = 2;
         zaritQPanel.add(jLabel10, gridBagConstraints);
 
-        jLabel16.setText("<Html> <u> Instruccions per a la persona cuidadora: </u> <br> A continuació es presenta una llista d'afirmacions, en les quals es reflecteix com es senten, de vegades, les persones que tenen cura a una altra persona. <Br > Després de llegir cada afirmació, ha d'indicar amb quina freqüència se sent vostè així: mai, rarament, algunes vegades, força sovint i gairebé sempre. <br> a l'hora de respondre pensi que no hi ha respostes encertades o equivocades, sinó tan només la seva experiència.");
+        jLabel16.setText("<Html> <u> Instruccions per a la persona cuidadora: </u> <br> A continuació es presenta una llista d'afirmacions, en les quals es reflecteix com es senten, de vegades, les persones que tenen cura d'una altre persona. <Br > Després de llegir cada afirmació, ha d'indicar amb quina freqüència se sent vostè així: mai, rarament, algunes vegades, força sovint i gairebé sempre. <br> a l'hora de respondre pensi que no hi ha respostes encertades o equivocades, sinó tan només la seva experiència.");
 
         jLabel11.setText("<html>Població cuidadora de persones dependents. És un qüestionari<b> autoadministrat.");
 

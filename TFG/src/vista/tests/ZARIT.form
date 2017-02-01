@@ -468,7 +468,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel89">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;Html&gt; &#xbf;Se sent aclaparat per intentar compatibilitzar la cura del seu familiar amb altres &lt;br&gt; responsabilitats (treball, fam&#xed;lia)?"/>
+                    <Property name="text" type="java.lang.String" value="&lt;Html&gt; Se sent aclaparat per intentar compatibilitzar la cura del seu familiar amb altres &lt;br&gt; responsabilitats (treball, fam&#xed;lia)?"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -478,7 +478,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel90">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Se sent enfadat quan &#xe9;s a punt de familiar?"/>
+                    <Property name="text" type="java.lang.String" value="Se sent enfadat quan &#xe9;s a prop del seu familiar?"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -957,7 +957,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel134">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Se sent tens quan &#xe9;s a punt de familiar?"/>
+                    <Property name="text" type="java.lang.String" value="Se sent tens quan &#xe9;s a prop del seu familiar?"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -2062,7 +2062,7 @@
             </Container>
             <Component class="javax.swing.JLabel" name="jLabel16">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;Html&gt; &lt;u&gt; Instruccions per a la persona cuidadora: &lt;/u&gt; &lt;br&gt; A continuaci&#xf3; es presenta una llista d&apos;afirmacions, en les quals es reflecteix com es senten, de vegades, les persones que tenen cura a una altra persona. &lt;Br &gt; Despr&#xe9;s de llegir cada afirmaci&#xf3;, ha d&apos;indicar amb quina freq&#xfc;&#xe8;ncia se sent vost&#xe8; aix&#xed;: mai, rarament, algunes vegades, for&#xe7;a sovint i gaireb&#xe9; sempre. &lt;br&gt; a l&apos;hora de respondre pensi que no hi ha respostes encertades o equivocades, sin&#xf3; tan nom&#xe9;s la seva experi&#xe8;ncia."/>
+                <Property name="text" type="java.lang.String" value="&lt;Html&gt; &lt;u&gt; Instruccions per a la persona cuidadora: &lt;/u&gt; &lt;br&gt; A continuaci&#xf3; es presenta una llista d&apos;afirmacions, en les quals es reflecteix com es senten, de vegades, les persones que tenen cura d&apos;una altre persona. &lt;Br &gt; Despr&#xe9;s de llegir cada afirmaci&#xf3;, ha d&apos;indicar amb quina freq&#xfc;&#xe8;ncia se sent vost&#xe8; aix&#xed;: mai, rarament, algunes vegades, for&#xe7;a sovint i gaireb&#xe9; sempre. &lt;br&gt; a l&apos;hora de respondre pensi que no hi ha respostes encertades o equivocades, sin&#xf3; tan nom&#xe9;s la seva experi&#xe8;ncia."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">

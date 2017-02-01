@@ -189,7 +189,7 @@ public class DadesBasiques extends Test {
         nivellEscolaritatCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No sap llegir ni escriure", "Sense estudis; sap llegir i escriure", "Estudis primaris no finalitzats", "Estudis primaris complets", "Estudis mitjos; batxillerat", "Universitari grau mig", "Universitari grau superior" }));
         nivellEscolaritatCombo.setSelectedIndex(-1);
 
-        estatCivilCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solter", "Separat", "Divorciat", "Vidu" }));
+        estatCivilCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Casat", "Solter", "Separat", "Divorciat", "Vidu" }));
         estatCivilCombo.setSelectedIndex(-1);
 
         categoriaProCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Directiu/gerent", "Científic/intel·lectual", "Tècnic professional de nivell mig", "Personal suport administratiu", "Treballador de serveis o venedor de comerços o mercats", "Pagès, granger o pescador", "Oficial, operari o artesà", "Operari d'instal·lacions i màquines", "Ocupacions elementals", "Militar", "Altres" }));

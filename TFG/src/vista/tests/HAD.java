@@ -244,7 +244,7 @@ public class HAD extends Test{
         setLayout(new java.awt.CardLayout());
 
         jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel111.setText("<html><center><b>Escala Hospitalària d'Ansietat i Depressió</b>");
+        jLabel111.setText("<html><center><b>Escala Hospitalària d'Ansietat i Depressió - HAD</b>");
 
         jPanel3.setName("A"); // NOI18N
 
@@ -513,7 +513,7 @@ public class HAD extends Test{
 
         jPanel8.setName("A"); // NOI18N
 
-        jLabel23.setText("<html>7. Puc estar assegut tranquil·lament<br>i sentir-se relaxat (A)");
+        jLabel23.setText("<html>7. Puc estar assegut tranquil·lament<br>i sentir-me relaxat (A)");
 
         hadButtonGroup7.add(jRadioButton28);
         jRadioButton28.setText("Sempre");
@@ -1124,7 +1124,7 @@ public class HAD extends Test{
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel69.setText("<html>Aquesta prova està dirigida a determinar com t'has sentit en l'última setmana tot i que les preguntes estan formulades en present.<br>Has de triar entre una de quatre possibilitats pel que fa a la pregunta realitzada, envoltant amb un cercle la resposta triada.");
+        jLabel69.setText("<html>Aquesta prova està dirigida a determinar com t'has sentit en l'última setmana tot i que les preguntes estan formulades en present.<br>Has de triar entre una de quatre possibilitats pel que fa a la pregunta realitzada.");
 
         javax.swing.GroupLayout hadPanelLayout = new javax.swing.GroupLayout(hadPanel);
         hadPanel.setLayout(hadPanelLayout);

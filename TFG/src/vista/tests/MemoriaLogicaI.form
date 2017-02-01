@@ -573,7 +573,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel39">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;Elena P&#xe9;rez, del sud de Madrid, treballadora com a cuinera al menjador d&apos;una escola, va denunciar a la comissaria de &lt;br&gt; policia que havia estat assaltada la nit anterior al carrer Padilla, i que li havien robat 56 euros. Tenia quatre &lt;br&gt; nens petits, no havia pogut pagar el lloguer i portaven dos dies sense menjar. La policia, commoguda per la hist&#xf2;ria &lt;br&gt; de la dona, va realitzar una col&#xb7;lecta per ajudar-la."/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Elena P&#xe9;rez, del sud de Madrid, treballa com a cuinera al menjador d&apos;una escola, va denunciar a la comissaria de &lt;br&gt; policia que havia estat assaltada la nit anterior al carrer Padilla, i que li havien robat 56 euros. Tenia quatre &lt;br&gt; nens petits, no havia pogut pagar el lloguer i portaven dos dies sense menjar. La policia, commoguda per la hist&#xf2;ria &lt;br&gt; de la dona, va realitzar una col&#xb7;lecta per ajudar-la."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel42">

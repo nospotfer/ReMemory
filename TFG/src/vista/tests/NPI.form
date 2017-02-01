@@ -108,7 +108,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;&lt;b&gt;HABILITATS DE COMUNICACI&#xd3;: Tel&#xe8;fon i carta&lt;/b&gt;"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;&lt;b&gt;INVENTARI NEUROPSIQUI&#xc0;TRIC DE CUMMINGS - NPI&lt;/b&gt;"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="npiPanel">

@@ -2,27 +2,17 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup1">
+    <Component class="javax.swing.ButtonGroup" name="eptBtnGroup1">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup2">
+    <Component class="javax.swing.ButtonGroup" name="eptBtnGroup2">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup3">
+    <Component class="javax.swing.ButtonGroup" name="eptBtnGroup3">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup4">
+    <Component class="javax.swing.ButtonGroup" name="eptBtnGroup4">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup5">
+    <Component class="javax.swing.ButtonGroup" name="eptBtnGroup5">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup6">
-    </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup7">
-    </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup8">
-    </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup9">
-    </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup10">
-    </Component>
-    <Component class="javax.swing.ButtonGroup" name="dukeBtnGroup11">
+    <Component class="javax.swing.ButtonGroup" name="eptBtnGroup6">
     </Component>
   </NonVisualComponents>
   <AuxValues>
@@ -40,7 +30,7 @@
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
   <SubComponents>
-    <Container class="javax.swing.JScrollPane" name="dukeScroll">
+    <Container class="javax.swing.JScrollPane" name="eptScroll">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
           <CardConstraints cardName="card1"/>
@@ -49,7 +39,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="dukePanel">
+        <Container class="javax.swing.JPanel" name="eptPanel">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -126,7 +116,7 @@
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn14">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup2"/>
+                      <ComponentRef name="eptBtnGroup2"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
@@ -139,7 +129,7 @@
                 <Component class="javax.swing.JToggleButton" name="memoBtn14">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup1"/>
+                      <ComponentRef name="eptBtnGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
@@ -152,7 +142,7 @@
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn15">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup2"/>
+                      <ComponentRef name="eptBtnGroup2"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -165,7 +155,7 @@
                 <Component class="javax.swing.JToggleButton" name="memoBtn15">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup1"/>
+                      <ComponentRef name="eptBtnGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -178,7 +168,7 @@
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn16">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup2"/>
+                      <ComponentRef name="eptBtnGroup2"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -191,7 +181,7 @@
                 <Component class="javax.swing.JToggleButton" name="memoBtn16">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup1"/>
+                      <ComponentRef name="eptBtnGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -204,7 +194,7 @@
                 <Component class="javax.swing.JToggleButton" name="memoBtn17">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup1"/>
+                      <ComponentRef name="eptBtnGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -217,7 +207,7 @@
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn17">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup2"/>
+                      <ComponentRef name="eptBtnGroup2"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -230,7 +220,7 @@
                 <Component class="javax.swing.JToggleButton" name="raoBtn14">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup3"/>
+                      <ComponentRef name="eptBtnGroup3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
@@ -243,7 +233,7 @@
                 <Component class="javax.swing.JToggleButton" name="raoBtn15">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup3"/>
+                      <ComponentRef name="eptBtnGroup3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -256,7 +246,7 @@
                 <Component class="javax.swing.JToggleButton" name="raoBtn16">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup5"/>
+                      <ComponentRef name="eptBtnGroup5"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -269,7 +259,7 @@
                 <Component class="javax.swing.JToggleButton" name="raoBtn17">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup3"/>
+                      <ComponentRef name="eptBtnGroup3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -282,7 +272,7 @@
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn14">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup4"/>
+                      <ComponentRef name="eptBtnGroup4"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
@@ -295,7 +285,7 @@
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn15">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup4"/>
+                      <ComponentRef name="eptBtnGroup4"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -308,7 +298,7 @@
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn16">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup5"/>
+                      <ComponentRef name="eptBtnGroup5"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -321,7 +311,7 @@
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn17">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup5"/>
+                      <ComponentRef name="eptBtnGroup5"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -334,7 +324,7 @@
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn14">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup6"/>
+                      <ComponentRef name="eptBtnGroup6"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -347,7 +337,7 @@
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn15">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup6"/>
+                      <ComponentRef name="eptBtnGroup6"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -360,7 +350,7 @@
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn16">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup5"/>
+                      <ComponentRef name="eptBtnGroup5"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
@@ -543,7 +533,7 @@
                 <Component class="javax.swing.JToggleButton" name="jToggleButton37">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup3"/>
+                      <ComponentRef name="eptBtnGroup3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -556,7 +546,7 @@
                 <Component class="javax.swing.JToggleButton" name="jToggleButton38">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup4"/>
+                      <ComponentRef name="eptBtnGroup4"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -569,7 +559,7 @@
                 <Component class="javax.swing.JToggleButton" name="jToggleButton39">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup4"/>
+                      <ComponentRef name="eptBtnGroup4"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -582,7 +572,7 @@
                 <Component class="javax.swing.JToggleButton" name="jToggleButton40">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup6"/>
+                      <ComponentRef name="eptBtnGroup6"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -595,7 +585,7 @@
                 <Component class="javax.swing.JToggleButton" name="jToggleButton41">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="dukeBtnGroup6"/>
+                      <ComponentRef name="eptBtnGroup6"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>

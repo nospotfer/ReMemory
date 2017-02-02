@@ -60,6 +60,17 @@ public class IMAGE extends Test {
         qolButtonGroup11 = new javax.swing.ButtonGroup();
         qolButtonGroup12 = new javax.swing.ButtonGroup();
         qolButtonGroup13 = new javax.swing.ButtonGroup();
+        qolButtonGroup14 = new javax.swing.ButtonGroup();
+        qolButtonGroup15 = new javax.swing.ButtonGroup();
+        qolButtonGroup16 = new javax.swing.ButtonGroup();
+        qolButtonGroup17 = new javax.swing.ButtonGroup();
+        qolButtonGroup18 = new javax.swing.ButtonGroup();
+        qolButtonGroup19 = new javax.swing.ButtonGroup();
+        qolButtonGroup20 = new javax.swing.ButtonGroup();
+        qolButtonGroup21 = new javax.swing.ButtonGroup();
+        qolButtonGroup22 = new javax.swing.ButtonGroup();
+        qolButtonGroup23 = new javax.swing.ButtonGroup();
+        qolButtonGroup24 = new javax.swing.ButtonGroup();
         IMAGEScroll = new javax.swing.JScrollPane();
         IMAGESQPanel = new javax.swing.JPanel();
         rseQPanel = new javax.swing.JPanel();
@@ -252,6 +263,7 @@ public class IMAGE extends Test {
         rseQPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Identidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         rseQPanel.setLayout(new java.awt.GridBagLayout());
 
+        qolButtonGroup2.add(orientacioBtn2);
         orientacioBtn2.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -259,6 +271,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(orientacioBtn2, gridBagConstraints);
 
+        qolButtonGroup1.add(memoBtn2);
         memoBtn2.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -266,6 +279,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(memoBtn2, gridBagConstraints);
 
+        qolButtonGroup3.add(orientacioBtn3);
         orientacioBtn3.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -273,6 +287,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(orientacioBtn3, gridBagConstraints);
 
+        qolButtonGroup1.add(memoBtn3);
         memoBtn3.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -280,6 +295,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(memoBtn3, gridBagConstraints);
 
+        qolButtonGroup2.add(orientacioBtn4);
         orientacioBtn4.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -287,6 +303,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(orientacioBtn4, gridBagConstraints);
 
+        qolButtonGroup1.add(memoBtn4);
         memoBtn4.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -294,6 +311,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(memoBtn4, gridBagConstraints);
 
+        qolButtonGroup1.add(memoBtn5);
         memoBtn5.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -301,6 +319,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(memoBtn5, gridBagConstraints);
 
+        qolButtonGroup2.add(orientacioBtn5);
         orientacioBtn5.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -308,6 +327,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(orientacioBtn5, gridBagConstraints);
 
+        qolButtonGroup3.add(raoBtn2);
         raoBtn2.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -315,6 +335,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(raoBtn2, gridBagConstraints);
 
+        qolButtonGroup4.add(raoBtn5);
         raoBtn5.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -322,6 +343,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(raoBtn5, gridBagConstraints);
 
+        qolButtonGroup6.add(raoBtn3);
         raoBtn3.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -329,6 +351,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(raoBtn3, gridBagConstraints);
 
+        qolButtonGroup4.add(raoBtn4);
         raoBtn4.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -336,6 +359,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(raoBtn4, gridBagConstraints);
 
+        qolButtonGroup4.add(activitatsFBtn2);
         activitatsFBtn2.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -343,6 +367,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(activitatsFBtn2, gridBagConstraints);
 
+        qolButtonGroup4.add(activitatsFBtn3);
         activitatsFBtn3.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -350,6 +375,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(activitatsFBtn3, gridBagConstraints);
 
+        qolButtonGroup5.add(activitatsFBtn4);
         activitatsFBtn4.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -357,6 +383,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(activitatsFBtn4, gridBagConstraints);
 
+        qolButtonGroup5.add(activitatsFBtn5);
         activitatsFBtn5.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -364,6 +391,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(activitatsFBtn5, gridBagConstraints);
 
+        qolButtonGroup6.add(activitatsDBtn5);
         activitatsDBtn5.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -371,6 +399,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(activitatsDBtn5, gridBagConstraints);
 
+        qolButtonGroup6.add(activitatsDBtn4);
         activitatsDBtn4.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -505,6 +534,7 @@ public class IMAGE extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel.add(jLabel10, gridBagConstraints);
 
+        qolButtonGroup2.add(orientacioBtn6);
         orientacioBtn6.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -512,6 +542,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(orientacioBtn6, gridBagConstraints);
 
+        qolButtonGroup3.add(raoBtn6);
         raoBtn6.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -519,6 +550,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(raoBtn6, gridBagConstraints);
 
+        qolButtonGroup3.add(raoBtn7);
         raoBtn7.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -526,6 +558,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(raoBtn7, gridBagConstraints);
 
+        qolButtonGroup5.add(activitatsDBtn6);
         activitatsDBtn6.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -533,6 +566,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(activitatsDBtn6, gridBagConstraints);
 
+        qolButtonGroup5.add(raoBtn8);
         raoBtn8.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -540,6 +574,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(raoBtn8, gridBagConstraints);
 
+        qolButtonGroup6.add(activitatsDBtn7);
         activitatsDBtn7.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -547,6 +582,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(activitatsDBtn7, gridBagConstraints);
 
+        qolButtonGroup7.add(activitatsDBtn8);
         activitatsDBtn8.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -554,6 +590,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(activitatsDBtn8, gridBagConstraints);
 
+        qolButtonGroup7.add(cuidatBtn5);
         cuidatBtn5.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -561,6 +598,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(cuidatBtn5, gridBagConstraints);
 
+        qolButtonGroup7.add(cuidatBtn6);
         cuidatBtn6.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -568,6 +606,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel.add(cuidatBtn6, gridBagConstraints);
 
+        qolButtonGroup7.add(cuidatBtn7);
         cuidatBtn7.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -589,6 +628,7 @@ public class IMAGE extends Test {
         rseQPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Autoconciencia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         rseQPanel1.setLayout(new java.awt.GridBagLayout());
 
+        qolButtonGroup23.add(orientacioBtn7);
         orientacioBtn7.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -596,6 +636,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(orientacioBtn7, gridBagConstraints);
 
+        qolButtonGroup22.add(memoBtn6);
         memoBtn6.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -603,6 +644,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(memoBtn6, gridBagConstraints);
 
+        qolButtonGroup24.add(orientacioBtn8);
         orientacioBtn8.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -610,6 +652,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(orientacioBtn8, gridBagConstraints);
 
+        qolButtonGroup22.add(memoBtn7);
         memoBtn7.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -617,6 +660,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(memoBtn7, gridBagConstraints);
 
+        qolButtonGroup23.add(orientacioBtn9);
         orientacioBtn9.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -624,6 +668,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(orientacioBtn9, gridBagConstraints);
 
+        qolButtonGroup22.add(memoBtn8);
         memoBtn8.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -631,6 +676,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(memoBtn8, gridBagConstraints);
 
+        qolButtonGroup22.add(memoBtn9);
         memoBtn9.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -638,6 +684,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(memoBtn9, gridBagConstraints);
 
+        qolButtonGroup23.add(orientacioBtn10);
         orientacioBtn10.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -645,6 +692,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(orientacioBtn10, gridBagConstraints);
 
+        qolButtonGroup24.add(raoBtn9);
         raoBtn9.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -652,32 +700,32 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(raoBtn9, gridBagConstraints);
 
-        jLabel135.setText("1");
+        jLabel135.setText("22-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         rseQPanel1.add(jLabel135, gridBagConstraints);
 
-        jLabel136.setText("2");
+        jLabel136.setText("23-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         rseQPanel1.add(jLabel136, gridBagConstraints);
 
-        jLabel137.setText("3");
+        jLabel137.setText("24-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         rseQPanel1.add(jLabel137, gridBagConstraints);
 
-        jLabel15.setText("<html> - No suelo pensar sobre quién soy. <br><i>\"En mí mismo\"");
+        jLabel15.setText("<html> &nbsp No suelo pensar sobre quién soy. <br><i>\"En mí mismo\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel1.add(jLabel15, gridBagConstraints);
 
-        jLabel16.setText("<html> - Generalmente presto atención a lo que siento. <br><i>\"Presto atención a mis sentimientos\"");
+        jLabel16.setText("<html> &nbsp Generalmente presto atención a lo que siento. <br><i>\"Presto atención a mis sentimientos\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -685,13 +733,14 @@ public class IMAGE extends Test {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
         rseQPanel1.add(jLabel16, gridBagConstraints);
 
-        jLabel17.setText("<html> - Me cuesta detectar mis cambios de ánimo. <br><i>\"Humor\".");
+        jLabel17.setText("<html> &nbsp Me cuesta detectar mis cambios de ánimo. <br><i>\"Humor\".");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel1.add(jLabel17, gridBagConstraints);
 
+        qolButtonGroup23.add(orientacioBtn11);
         orientacioBtn11.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -699,6 +748,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(orientacioBtn11, gridBagConstraints);
 
+        qolButtonGroup24.add(raoBtn13);
         raoBtn13.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -706,6 +756,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel1.add(raoBtn13, gridBagConstraints);
 
+        qolButtonGroup24.add(raoBtn14);
         raoBtn14.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -748,6 +799,7 @@ public class IMAGE extends Test {
         rseQPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Conductual", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         rseQPanel2.setLayout(new java.awt.GridBagLayout());
 
+        qolButtonGroup9.add(orientacioBtn12);
         orientacioBtn12.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -755,6 +807,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(orientacioBtn12, gridBagConstraints);
 
+        qolButtonGroup8.add(memoBtn10);
         memoBtn10.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -762,6 +815,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(memoBtn10, gridBagConstraints);
 
+        qolButtonGroup10.add(orientacioBtn13);
         orientacioBtn13.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -769,6 +823,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(orientacioBtn13, gridBagConstraints);
 
+        qolButtonGroup8.add(memoBtn11);
         memoBtn11.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -776,6 +831,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(memoBtn11, gridBagConstraints);
 
+        qolButtonGroup9.add(orientacioBtn14);
         orientacioBtn14.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -783,6 +839,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(orientacioBtn14, gridBagConstraints);
 
+        qolButtonGroup8.add(memoBtn12);
         memoBtn12.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -790,6 +847,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(memoBtn12, gridBagConstraints);
 
+        qolButtonGroup8.add(memoBtn13);
         memoBtn13.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -797,6 +855,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(memoBtn13, gridBagConstraints);
 
+        qolButtonGroup9.add(orientacioBtn15);
         orientacioBtn15.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -804,6 +863,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(orientacioBtn15, gridBagConstraints);
 
+        qolButtonGroup10.add(raoBtn16);
         raoBtn16.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -811,6 +871,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(raoBtn16, gridBagConstraints);
 
+        qolButtonGroup11.add(raoBtn17);
         raoBtn17.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -818,6 +879,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(raoBtn17, gridBagConstraints);
 
+        qolButtonGroup13.add(raoBtn18);
         raoBtn18.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -825,6 +887,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(raoBtn18, gridBagConstraints);
 
+        qolButtonGroup11.add(raoBtn19);
         raoBtn19.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -832,6 +895,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(raoBtn19, gridBagConstraints);
 
+        qolButtonGroup11.add(activitatsFBtn10);
         activitatsFBtn10.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -839,6 +903,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsFBtn10, gridBagConstraints);
 
+        qolButtonGroup11.add(activitatsFBtn11);
         activitatsFBtn11.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -846,6 +911,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsFBtn11, gridBagConstraints);
 
+        qolButtonGroup12.add(activitatsFBtn12);
         activitatsFBtn12.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -853,6 +919,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsFBtn12, gridBagConstraints);
 
+        qolButtonGroup12.add(activitatsFBtn13);
         activitatsFBtn13.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -860,6 +927,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsFBtn13, gridBagConstraints);
 
+        qolButtonGroup13.add(activitatsDBtn20);
         activitatsDBtn20.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -867,6 +935,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsDBtn20, gridBagConstraints);
 
+        qolButtonGroup13.add(activitatsDBtn21);
         activitatsDBtn21.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -881,43 +950,43 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsDBtn23, gridBagConstraints);
 
-        jLabel143.setText("1");
+        jLabel143.setText("8-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         rseQPanel2.add(jLabel143, gridBagConstraints);
 
-        jLabel144.setText("2");
+        jLabel144.setText("9-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         rseQPanel2.add(jLabel144, gridBagConstraints);
 
-        jLabel145.setText("3");
+        jLabel145.setText("10-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         rseQPanel2.add(jLabel145, gridBagConstraints);
 
-        jLabel146.setText("5");
+        jLabel146.setText("12-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
         rseQPanel2.add(jLabel146, gridBagConstraints);
 
-        jLabel147.setText("6");
+        jLabel147.setText("13-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
         rseQPanel2.add(jLabel147, gridBagConstraints);
 
-        jLabel148.setText("7");
+        jLabel148.setText("14-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
         rseQPanel2.add(jLabel148, gridBagConstraints);
 
-        jLabel107.setText("<html>- No me importa mi apariencia. <i><br>\"La imágen que doy a los demás\"");
+        jLabel107.setText("<html>&nbsp No me importa mi apariencia. <i><br>\"La imágen que doy a los demás\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -925,14 +994,14 @@ public class IMAGE extends Test {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
         rseQPanel2.add(jLabel107, gridBagConstraints);
 
-        jLabel28.setText("<html> - A veces actúo de forma inmoral. <i><br>\"A veces actúo de forma inconsciente\"<br>\"A veces actúo sin escrúpulos\"<br>\"A veces actúo contra la ética, las normas sociales\"");
+        jLabel28.setText("<html> &nbsp A veces actúo de forma inmoral. <i><br>\"A veces actúo de forma inconsciente\"<br>\"A veces actúo sin escrúpulos\"<br>\"A veces actúo contra la ética, las normas sociales\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel2.add(jLabel28, gridBagConstraints);
 
-        jLabel29.setText("- Me cuesta hablar con gente que no conozco.");
+        jLabel29.setText(" Me cuesta hablar con gente que no conozco.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -940,40 +1009,41 @@ public class IMAGE extends Test {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
         rseQPanel2.add(jLabel29, gridBagConstraints);
 
-        jLabel30.setText("<html>- Carezco de autoconfianza. <i><br>\"No confío en mí mismo\"");
+        jLabel30.setText("<html> &nbsp Carezco de autoconfianza. <i><br>\"No confío en mí mismo\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel2.add(jLabel30, gridBagConstraints);
 
-        jLabel32.setText("<html>- Rara vez discuto con mi familia. <i><br>\"No suelo o acostumbro discutir con mi familia\"");
+        jLabel32.setText("<html>&nbsp Rara vez discuto con mi familia. <i><br>\"No suelo o acostumbro discutir con mi familia\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel2.add(jLabel32, gridBagConstraints);
 
-        jLabel33.setText("<html>- Tengo dificultades para aprender. <i><br>\"Me cuesta aprender\"");
+        jLabel33.setText("<html>&nbsp Tengo dificultades para aprender. <i><br>\"Me cuesta aprender\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel2.add(jLabel33, gridBagConstraints);
 
-        jLabel34.setText("4");
+        jLabel34.setText("11-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
         rseQPanel2.add(jLabel34, gridBagConstraints);
 
-        jLabel38.setText("- No me suelo enfadar.");
+        jLabel38.setText(" No me suelo enfadar.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel2.add(jLabel38, gridBagConstraints);
 
+        qolButtonGroup9.add(orientacioBtn16);
         orientacioBtn16.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -981,6 +1051,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(orientacioBtn16, gridBagConstraints);
 
+        qolButtonGroup10.add(raoBtn20);
         raoBtn20.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -988,6 +1059,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(raoBtn20, gridBagConstraints);
 
+        qolButtonGroup10.add(raoBtn21);
         raoBtn21.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -995,6 +1067,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(raoBtn21, gridBagConstraints);
 
+        qolButtonGroup12.add(activitatsDBtn24);
         activitatsDBtn24.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1002,6 +1075,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsDBtn24, gridBagConstraints);
 
+        qolButtonGroup12.add(raoBtn22);
         raoBtn22.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1009,6 +1083,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(raoBtn22, gridBagConstraints);
 
+        qolButtonGroup13.add(activitatsDBtn25);
         activitatsDBtn25.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1016,6 +1091,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsDBtn25, gridBagConstraints);
 
+        qolButtonGroup14.add(activitatsDBtn26);
         activitatsDBtn26.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1023,6 +1099,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(activitatsDBtn26, gridBagConstraints);
 
+        qolButtonGroup14.add(cuidatBtn29);
         cuidatBtn29.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1030,6 +1107,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(cuidatBtn29, gridBagConstraints);
 
+        qolButtonGroup14.add(cuidatBtn30);
         cuidatBtn30.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1037,6 +1115,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel2.add(cuidatBtn30, gridBagConstraints);
 
+        qolButtonGroup14.add(cuidatBtn31);
         cuidatBtn31.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1079,6 +1158,7 @@ public class IMAGE extends Test {
         rseQPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Autosatisfacción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         rseQPanel3.setLayout(new java.awt.GridBagLayout());
 
+        qolButtonGroup16.add(orientacioBtn17);
         orientacioBtn17.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1086,6 +1166,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(orientacioBtn17, gridBagConstraints);
 
+        qolButtonGroup15.add(memoBtn14);
         memoBtn14.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1093,6 +1174,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(memoBtn14, gridBagConstraints);
 
+        qolButtonGroup17.add(orientacioBtn18);
         orientacioBtn18.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1100,6 +1182,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(orientacioBtn18, gridBagConstraints);
 
+        qolButtonGroup15.add(memoBtn15);
         memoBtn15.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1107,6 +1190,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(memoBtn15, gridBagConstraints);
 
+        qolButtonGroup16.add(orientacioBtn19);
         orientacioBtn19.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1114,6 +1198,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(orientacioBtn19, gridBagConstraints);
 
+        qolButtonGroup15.add(memoBtn16);
         memoBtn16.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1121,6 +1206,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(memoBtn16, gridBagConstraints);
 
+        qolButtonGroup15.add(memoBtn17);
         memoBtn17.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1128,6 +1214,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(memoBtn17, gridBagConstraints);
 
+        qolButtonGroup16.add(orientacioBtn20);
         orientacioBtn20.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1135,6 +1222,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(orientacioBtn20, gridBagConstraints);
 
+        qolButtonGroup17.add(raoBtn23);
         raoBtn23.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1142,6 +1230,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(raoBtn23, gridBagConstraints);
 
+        qolButtonGroup18.add(raoBtn24);
         raoBtn24.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1149,6 +1238,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(raoBtn24, gridBagConstraints);
 
+        qolButtonGroup20.add(raoBtn25);
         raoBtn25.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1156,6 +1246,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(raoBtn25, gridBagConstraints);
 
+        qolButtonGroup18.add(raoBtn26);
         raoBtn26.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1163,6 +1254,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(raoBtn26, gridBagConstraints);
 
+        qolButtonGroup18.add(activitatsFBtn14);
         activitatsFBtn14.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1170,6 +1262,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsFBtn14, gridBagConstraints);
 
+        qolButtonGroup18.add(activitatsFBtn15);
         activitatsFBtn15.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1177,6 +1270,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsFBtn15, gridBagConstraints);
 
+        qolButtonGroup19.add(activitatsFBtn16);
         activitatsFBtn16.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1184,6 +1278,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsFBtn16, gridBagConstraints);
 
+        qolButtonGroup19.add(activitatsFBtn17);
         activitatsFBtn17.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1191,6 +1286,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsFBtn17, gridBagConstraints);
 
+        qolButtonGroup20.add(activitatsDBtn29);
         activitatsDBtn29.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1198,6 +1294,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsDBtn29, gridBagConstraints);
 
+        qolButtonGroup20.add(activitatsDBtn30);
         activitatsDBtn30.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1212,43 +1309,43 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsDBtn32, gridBagConstraints);
 
-        jLabel151.setText("1");
+        jLabel151.setText("15-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         rseQPanel3.add(jLabel151, gridBagConstraints);
 
-        jLabel152.setText("2");
+        jLabel152.setText("16-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         rseQPanel3.add(jLabel152, gridBagConstraints);
 
-        jLabel153.setText("3");
+        jLabel153.setText("17-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         rseQPanel3.add(jLabel153, gridBagConstraints);
 
-        jLabel154.setText("5");
+        jLabel154.setText("19-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
         rseQPanel3.add(jLabel154, gridBagConstraints);
 
-        jLabel155.setText("6");
+        jLabel155.setText("20-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
         rseQPanel3.add(jLabel155, gridBagConstraints);
 
-        jLabel156.setText("7");
+        jLabel156.setText("21-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
         rseQPanel3.add(jLabel156, gridBagConstraints);
 
-        jLabel110.setText("<html> - Estoy satisfecho con mi imágen <br><i>\"Aspecto físico\"");
+        jLabel110.setText("<html> &nbsp Estoy satisfecho con mi imágen <br><i>\"Aspecto físico\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -1256,14 +1353,14 @@ public class IMAGE extends Test {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
         rseQPanel3.add(jLabel110, gridBagConstraints);
 
-        jLabel42.setText("<html> - Miento con frecuencia. <br><i>\"A menudo\"");
+        jLabel42.setText("<html> &nbsp Miento con frecuencia. <br><i>\"A menudo\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel3.add(jLabel42, gridBagConstraints);
 
-        jLabel43.setText("- Debería ser más amable con la gente.");
+        jLabel43.setText(" Debería ser más amable con la gente.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -1271,40 +1368,41 @@ public class IMAGE extends Test {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
         rseQPanel3.add(jLabel43, gridBagConstraints);
 
-        jLabel44.setText("- Estoy contento con quién soy.");
+        jLabel44.setText(" Estoy contento con quién soy.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel3.add(jLabel44, gridBagConstraints);
 
-        jLabel45.setText("<html> - Exijo demasiado de la gente de mi alrededor.<br><i>\"Pido más de lo que los demás me pueden dar\"");
+        jLabel45.setText("<html> &nbsp Exijo demasiado de la gente de mi alrededor.<br><i>\"Pido más de lo que los demás me pueden dar\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel3.add(jLabel45, gridBagConstraints);
 
-        jLabel46.setText("<html> - Estoy satisfecho con mis habilidades intelectuales.<br><i>\"Inteligencia\"");
+        jLabel46.setText("<html> &nbsp Estoy satisfecho con mis habilidades intelectuales.<br><i>\"Inteligencia\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel3.add(jLabel46, gridBagConstraints);
 
-        jLabel47.setText("4");
+        jLabel47.setText("18-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
         rseQPanel3.add(jLabel47, gridBagConstraints);
 
-        jLabel51.setText("<html> - Vivo demasiado en el pasado. <br><i>\"Siempre pienso en el pasado en vez de<br> en el presente o futuro\"");
+        jLabel51.setText("<html> &nbsp Vivo demasiado en el pasado. <br><i>\"Siempre pienso en el pasado en vez de<br> en el presente o futuro\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         rseQPanel3.add(jLabel51, gridBagConstraints);
 
+        qolButtonGroup16.add(orientacioBtn21);
         orientacioBtn21.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1312,6 +1410,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(orientacioBtn21, gridBagConstraints);
 
+        qolButtonGroup17.add(raoBtn27);
         raoBtn27.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1319,6 +1418,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(raoBtn27, gridBagConstraints);
 
+        qolButtonGroup17.add(raoBtn28);
         raoBtn28.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1326,6 +1426,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(raoBtn28, gridBagConstraints);
 
+        qolButtonGroup19.add(activitatsDBtn33);
         activitatsDBtn33.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1333,6 +1434,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsDBtn33, gridBagConstraints);
 
+        qolButtonGroup19.add(raoBtn29);
         raoBtn29.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1340,6 +1442,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(raoBtn29, gridBagConstraints);
 
+        qolButtonGroup20.add(activitatsDBtn34);
         activitatsDBtn34.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1347,6 +1450,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsDBtn34, gridBagConstraints);
 
+        qolButtonGroup21.add(activitatsDBtn35);
         activitatsDBtn35.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1354,6 +1458,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(activitatsDBtn35, gridBagConstraints);
 
+        qolButtonGroup21.add(cuidatBtn41);
         cuidatBtn41.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1361,6 +1466,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(cuidatBtn41, gridBagConstraints);
 
+        qolButtonGroup21.add(cuidatBtn42);
         cuidatBtn42.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1368,6 +1474,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         rseQPanel3.add(cuidatBtn42, gridBagConstraints);
 
+        qolButtonGroup21.add(cuidatBtn43);
         cuidatBtn43.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1414,14 +1521,13 @@ public class IMAGE extends Test {
 
         jLabel55.setText("Edad Real:");
 
-        jTextField1.setText("jTextField1");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
-        jTextField2.setText("jTextField1");
+        jTextField2.setToolTipText("");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -1463,7 +1569,7 @@ public class IMAGE extends Test {
                                 .addComponent(rseQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(rseQPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IMAGESQPanelLayout.createSequentialGroup()
@@ -1717,7 +1823,18 @@ public class IMAGE extends Test {
     private javax.swing.ButtonGroup qolButtonGroup11;
     private javax.swing.ButtonGroup qolButtonGroup12;
     private javax.swing.ButtonGroup qolButtonGroup13;
+    private javax.swing.ButtonGroup qolButtonGroup14;
+    private javax.swing.ButtonGroup qolButtonGroup15;
+    private javax.swing.ButtonGroup qolButtonGroup16;
+    private javax.swing.ButtonGroup qolButtonGroup17;
+    private javax.swing.ButtonGroup qolButtonGroup18;
+    private javax.swing.ButtonGroup qolButtonGroup19;
     private javax.swing.ButtonGroup qolButtonGroup2;
+    private javax.swing.ButtonGroup qolButtonGroup20;
+    private javax.swing.ButtonGroup qolButtonGroup21;
+    private javax.swing.ButtonGroup qolButtonGroup22;
+    private javax.swing.ButtonGroup qolButtonGroup23;
+    private javax.swing.ButtonGroup qolButtonGroup24;
     private javax.swing.ButtonGroup qolButtonGroup3;
     private javax.swing.ButtonGroup qolButtonGroup4;
     private javax.swing.ButtonGroup qolButtonGroup5;

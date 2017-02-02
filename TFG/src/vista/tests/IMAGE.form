@@ -28,6 +28,28 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="qolButtonGroup13">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup14">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup15">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup16">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup17">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup18">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup19">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup20">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup21">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup22">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup23">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup24">
+    </Component>
   </NonVisualComponents>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -95,7 +117,7 @@
                                       <Component id="rseQPanel3" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace pref="21" max="32767" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="rseQPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="1" attributes="0">
@@ -208,6 +230,9 @@
               <SubComponents>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn2">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -218,6 +243,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn2">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -228,6 +256,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn3">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -238,6 +269,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn3">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -248,6 +282,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn4">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -258,6 +295,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn4">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -268,6 +308,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn5">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -278,6 +321,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn5">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -288,6 +334,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn2">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -298,6 +347,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn5">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -308,6 +360,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn3">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -318,6 +373,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn4">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -328,6 +386,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn2">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -338,6 +399,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn3">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -348,6 +412,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn4">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -358,6 +425,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn5">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -368,6 +438,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn5">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -378,6 +451,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn4">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -578,6 +654,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn6">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -588,6 +667,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn6">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -598,6 +680,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn7">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -608,6 +693,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn6">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -618,6 +706,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn8">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -628,6 +719,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn7">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -638,6 +732,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn8">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -648,6 +745,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn5">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -658,6 +758,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn6">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -668,6 +771,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn7">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -722,6 +828,9 @@
               <SubComponents>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn7">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup23"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -732,6 +841,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn6">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup22"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -742,6 +854,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn8">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup24"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -752,6 +867,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn7">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup22"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -762,6 +880,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn9">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup23"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -772,6 +893,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn8">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup22"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -782,6 +906,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn9">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup22"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -792,6 +919,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn10">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup23"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -802,6 +932,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn9">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup24"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -812,7 +945,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel135">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="1"/>
+                    <Property name="text" type="java.lang.String" value="22-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -822,7 +955,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel136">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="2"/>
+                    <Property name="text" type="java.lang.String" value="23-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -832,7 +965,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel137">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="3"/>
+                    <Property name="text" type="java.lang.String" value="24-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -842,7 +975,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel15">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - No suelo pensar sobre qui&#xe9;n soy. &lt;br&gt;&lt;i&gt;&quot;En m&#xed; mismo&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp No suelo pensar sobre qui&#xe9;n soy. &lt;br&gt;&lt;i&gt;&quot;En m&#xed; mismo&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -852,7 +985,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel16">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - Generalmente presto atenci&#xf3;n a lo que siento. &lt;br&gt;&lt;i&gt;&quot;Presto atenci&#xf3;n a mis sentimientos&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Generalmente presto atenci&#xf3;n a lo que siento. &lt;br&gt;&lt;i&gt;&quot;Presto atenci&#xf3;n a mis sentimientos&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -862,7 +995,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel17">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - Me cuesta detectar mis cambios de &#xe1;nimo. &lt;br&gt;&lt;i&gt;&quot;Humor&quot;."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Me cuesta detectar mis cambios de &#xe1;nimo. &lt;br&gt;&lt;i&gt;&quot;Humor&quot;."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -872,6 +1005,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn11">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup23"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -882,6 +1018,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn13">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup24"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -892,6 +1031,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn14">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup24"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -970,6 +1112,9 @@
               <SubComponents>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn12">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup9"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -980,6 +1125,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn10">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -990,6 +1138,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn13">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup10"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1000,6 +1151,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn11">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1010,6 +1164,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn14">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup9"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1020,6 +1177,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn12">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1030,6 +1190,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn13">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1040,6 +1203,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn15">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup9"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1050,6 +1216,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn16">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup10"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1060,6 +1229,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn17">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup11"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1070,6 +1242,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn18">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup13"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1080,6 +1255,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn19">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup11"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1090,6 +1268,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn10">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup11"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1100,6 +1281,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn11">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup11"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1110,6 +1294,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn12">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup12"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1120,6 +1307,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn13">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup12"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1130,6 +1320,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn20">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup13"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1140,6 +1333,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn21">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup13"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1160,7 +1356,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel143">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="1"/>
+                    <Property name="text" type="java.lang.String" value="8-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1170,7 +1366,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel144">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="2"/>
+                    <Property name="text" type="java.lang.String" value="9-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1180,7 +1376,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel145">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="3"/>
+                    <Property name="text" type="java.lang.String" value="10-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1190,7 +1386,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel146">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="5"/>
+                    <Property name="text" type="java.lang.String" value="12-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1200,7 +1396,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel147">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="6"/>
+                    <Property name="text" type="java.lang.String" value="13-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1210,7 +1406,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel148">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="7"/>
+                    <Property name="text" type="java.lang.String" value="14-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1220,7 +1416,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel107">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;- No me importa mi apariencia. &lt;i&gt;&lt;br&gt;&quot;La im&#xe1;gen que doy a los dem&#xe1;s&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&amp;nbsp No me importa mi apariencia. &lt;i&gt;&lt;br&gt;&quot;La im&#xe1;gen que doy a los dem&#xe1;s&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1230,7 +1426,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel28">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - A veces act&#xfa;o de forma inmoral. &lt;i&gt;&lt;br&gt;&quot;A veces act&#xfa;o de forma inconsciente&quot;&lt;br&gt;&quot;A veces act&#xfa;o sin escr&#xfa;pulos&quot;&lt;br&gt;&quot;A veces act&#xfa;o contra la &#xe9;tica, las normas sociales&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp A veces act&#xfa;o de forma inmoral. &lt;i&gt;&lt;br&gt;&quot;A veces act&#xfa;o de forma inconsciente&quot;&lt;br&gt;&quot;A veces act&#xfa;o sin escr&#xfa;pulos&quot;&lt;br&gt;&quot;A veces act&#xfa;o contra la &#xe9;tica, las normas sociales&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1240,7 +1436,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel29">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="- Me cuesta hablar con gente que no conozco."/>
+                    <Property name="text" type="java.lang.String" value=" Me cuesta hablar con gente que no conozco."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1250,7 +1446,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel30">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;- Carezco de autoconfianza. &lt;i&gt;&lt;br&gt;&quot;No conf&#xed;o en m&#xed; mismo&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Carezco de autoconfianza. &lt;i&gt;&lt;br&gt;&quot;No conf&#xed;o en m&#xed; mismo&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1260,7 +1456,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel32">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;- Rara vez discuto con mi familia. &lt;i&gt;&lt;br&gt;&quot;No suelo o acostumbro discutir con mi familia&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&amp;nbsp Rara vez discuto con mi familia. &lt;i&gt;&lt;br&gt;&quot;No suelo o acostumbro discutir con mi familia&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1270,7 +1466,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel33">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;- Tengo dificultades para aprender. &lt;i&gt;&lt;br&gt;&quot;Me cuesta aprender&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&amp;nbsp Tengo dificultades para aprender. &lt;i&gt;&lt;br&gt;&quot;Me cuesta aprender&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1280,7 +1476,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel34">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="4"/>
+                    <Property name="text" type="java.lang.String" value="11-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1290,7 +1486,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel38">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="- No me suelo enfadar."/>
+                    <Property name="text" type="java.lang.String" value=" No me suelo enfadar."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1300,6 +1496,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn16">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup9"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1310,6 +1509,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn20">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup10"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1320,6 +1522,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn21">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup10"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1330,6 +1535,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn24">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup12"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1340,6 +1548,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn22">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup12"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1350,6 +1561,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn25">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup13"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1360,6 +1574,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn26">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup14"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1370,6 +1587,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn29">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup14"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1380,6 +1600,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn30">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup14"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1390,6 +1613,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn31">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup14"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1468,6 +1694,9 @@
               <SubComponents>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn17">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup16"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1478,6 +1707,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn14">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup15"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1488,6 +1720,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn18">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup17"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1498,6 +1733,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn15">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup15"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1508,6 +1746,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn19">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup16"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1518,6 +1759,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn16">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup15"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1528,6 +1772,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="memoBtn17">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup15"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1538,6 +1785,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn20">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup16"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1548,6 +1798,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn23">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup17"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1558,6 +1811,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn24">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup18"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1568,6 +1824,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn25">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup20"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1578,6 +1837,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn26">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup18"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1588,6 +1850,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn14">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup18"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1598,6 +1863,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn15">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup18"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1608,6 +1876,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn16">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup19"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1618,6 +1889,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsFBtn17">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup19"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1628,6 +1902,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn29">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup20"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1638,6 +1915,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn30">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup20"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1658,7 +1938,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel151">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="1"/>
+                    <Property name="text" type="java.lang.String" value="15-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1668,7 +1948,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel152">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="2"/>
+                    <Property name="text" type="java.lang.String" value="16-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1678,7 +1958,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel153">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="3"/>
+                    <Property name="text" type="java.lang.String" value="17-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1688,7 +1968,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel154">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="5"/>
+                    <Property name="text" type="java.lang.String" value="19-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1698,7 +1978,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel155">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="6"/>
+                    <Property name="text" type="java.lang.String" value="20-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1708,7 +1988,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel156">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="7"/>
+                    <Property name="text" type="java.lang.String" value="21-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1718,7 +1998,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel110">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - Estoy satisfecho con mi im&#xe1;gen &lt;br&gt;&lt;i&gt;&quot;Aspecto f&#xed;sico&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Estoy satisfecho con mi im&#xe1;gen &lt;br&gt;&lt;i&gt;&quot;Aspecto f&#xed;sico&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1728,7 +2008,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel42">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - Miento con frecuencia. &lt;br&gt;&lt;i&gt;&quot;A menudo&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Miento con frecuencia. &lt;br&gt;&lt;i&gt;&quot;A menudo&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1738,7 +2018,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel43">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="- Deber&#xed;a ser m&#xe1;s amable con la gente."/>
+                    <Property name="text" type="java.lang.String" value=" Deber&#xed;a ser m&#xe1;s amable con la gente."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1748,7 +2028,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel44">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="- Estoy contento con qui&#xe9;n soy."/>
+                    <Property name="text" type="java.lang.String" value=" Estoy contento con qui&#xe9;n soy."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1758,7 +2038,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel45">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - Exijo demasiado de la gente de mi alrededor.&lt;br&gt;&lt;i&gt;&quot;Pido m&#xe1;s de lo que los dem&#xe1;s me pueden dar&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Exijo demasiado de la gente de mi alrededor.&lt;br&gt;&lt;i&gt;&quot;Pido m&#xe1;s de lo que los dem&#xe1;s me pueden dar&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1768,7 +2048,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel46">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - Estoy satisfecho con mis habilidades intelectuales.&lt;br&gt;&lt;i&gt;&quot;Inteligencia&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Estoy satisfecho con mis habilidades intelectuales.&lt;br&gt;&lt;i&gt;&quot;Inteligencia&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1778,7 +2058,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel47">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="4"/>
+                    <Property name="text" type="java.lang.String" value="18-"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1788,7 +2068,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel51">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; - Vivo demasiado en el pasado. &lt;br&gt;&lt;i&gt;&quot;Siempre pienso en el pasado en vez de&lt;br&gt; en el presente o futuro&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Vivo demasiado en el pasado. &lt;br&gt;&lt;i&gt;&quot;Siempre pienso en el pasado en vez de&lt;br&gt; en el presente o futuro&quot;"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1798,6 +2078,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="orientacioBtn21">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup16"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1808,6 +2091,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn27">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup17"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1818,6 +2104,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn28">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup17"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1828,6 +2117,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn33">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup19"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1838,6 +2130,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="raoBtn29">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup19"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1848,6 +2143,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn34">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup20"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1858,6 +2156,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="activitatsDBtn35">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup21"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Constraints>
@@ -1868,6 +2169,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn41">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup21"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Constraints>
@@ -1878,6 +2182,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn42">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup21"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                   <Constraints>
@@ -1888,6 +2195,9 @@
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="cuidatBtn43">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="qolButtonGroup21"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                   <Constraints>
@@ -1970,16 +2280,13 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>

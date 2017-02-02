@@ -48,19 +48,14 @@ public class EPT extends Test {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        dukeBtnGroup1 = new javax.swing.ButtonGroup();
-        dukeBtnGroup2 = new javax.swing.ButtonGroup();
-        dukeBtnGroup3 = new javax.swing.ButtonGroup();
-        dukeBtnGroup4 = new javax.swing.ButtonGroup();
-        dukeBtnGroup5 = new javax.swing.ButtonGroup();
-        dukeBtnGroup6 = new javax.swing.ButtonGroup();
-        dukeBtnGroup7 = new javax.swing.ButtonGroup();
-        dukeBtnGroup8 = new javax.swing.ButtonGroup();
-        dukeBtnGroup9 = new javax.swing.ButtonGroup();
-        dukeBtnGroup10 = new javax.swing.ButtonGroup();
-        dukeBtnGroup11 = new javax.swing.ButtonGroup();
-        dukeScroll = new javax.swing.JScrollPane();
-        dukePanel = new javax.swing.JPanel();
+        eptBtnGroup1 = new javax.swing.ButtonGroup();
+        eptBtnGroup2 = new javax.swing.ButtonGroup();
+        eptBtnGroup3 = new javax.swing.ButtonGroup();
+        eptBtnGroup4 = new javax.swing.ButtonGroup();
+        eptBtnGroup5 = new javax.swing.ButtonGroup();
+        eptBtnGroup6 = new javax.swing.ButtonGroup();
+        eptScroll = new javax.swing.JScrollPane();
+        eptPanel = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         EPTQPanel = new javax.swing.JPanel();
@@ -118,7 +113,7 @@ public class EPT extends Test {
         EPTQPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EPT", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         EPTQPanel.setLayout(new java.awt.GridBagLayout());
 
-        dukeBtnGroup2.add(orientacioBtn14);
+        eptBtnGroup2.add(orientacioBtn14);
         orientacioBtn14.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -126,7 +121,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(orientacioBtn14, gridBagConstraints);
 
-        dukeBtnGroup1.add(memoBtn14);
+        eptBtnGroup1.add(memoBtn14);
         memoBtn14.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -134,7 +129,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(memoBtn14, gridBagConstraints);
 
-        dukeBtnGroup2.add(orientacioBtn15);
+        eptBtnGroup2.add(orientacioBtn15);
         orientacioBtn15.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -142,7 +137,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(orientacioBtn15, gridBagConstraints);
 
-        dukeBtnGroup1.add(memoBtn15);
+        eptBtnGroup1.add(memoBtn15);
         memoBtn15.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -150,7 +145,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(memoBtn15, gridBagConstraints);
 
-        dukeBtnGroup2.add(orientacioBtn16);
+        eptBtnGroup2.add(orientacioBtn16);
         orientacioBtn16.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -158,7 +153,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(orientacioBtn16, gridBagConstraints);
 
-        dukeBtnGroup1.add(memoBtn16);
+        eptBtnGroup1.add(memoBtn16);
         memoBtn16.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -166,7 +161,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(memoBtn16, gridBagConstraints);
 
-        dukeBtnGroup1.add(memoBtn17);
+        eptBtnGroup1.add(memoBtn17);
         memoBtn17.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -174,7 +169,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(memoBtn17, gridBagConstraints);
 
-        dukeBtnGroup2.add(orientacioBtn17);
+        eptBtnGroup2.add(orientacioBtn17);
         orientacioBtn17.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -182,7 +177,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(orientacioBtn17, gridBagConstraints);
 
-        dukeBtnGroup3.add(raoBtn14);
+        eptBtnGroup3.add(raoBtn14);
         raoBtn14.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -190,7 +185,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(raoBtn14, gridBagConstraints);
 
-        dukeBtnGroup3.add(raoBtn15);
+        eptBtnGroup3.add(raoBtn15);
         raoBtn15.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -198,7 +193,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(raoBtn15, gridBagConstraints);
 
-        dukeBtnGroup5.add(raoBtn16);
+        eptBtnGroup5.add(raoBtn16);
         raoBtn16.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -206,7 +201,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(raoBtn16, gridBagConstraints);
 
-        dukeBtnGroup3.add(raoBtn17);
+        eptBtnGroup3.add(raoBtn17);
         raoBtn17.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -214,7 +209,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(raoBtn17, gridBagConstraints);
 
-        dukeBtnGroup4.add(activitatsFBtn14);
+        eptBtnGroup4.add(activitatsFBtn14);
         activitatsFBtn14.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -222,7 +217,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(activitatsFBtn14, gridBagConstraints);
 
-        dukeBtnGroup4.add(activitatsFBtn15);
+        eptBtnGroup4.add(activitatsFBtn15);
         activitatsFBtn15.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -230,7 +225,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(activitatsFBtn15, gridBagConstraints);
 
-        dukeBtnGroup5.add(activitatsFBtn16);
+        eptBtnGroup5.add(activitatsFBtn16);
         activitatsFBtn16.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -238,7 +233,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(activitatsFBtn16, gridBagConstraints);
 
-        dukeBtnGroup5.add(activitatsFBtn17);
+        eptBtnGroup5.add(activitatsFBtn17);
         activitatsFBtn17.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -246,7 +241,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(activitatsFBtn17, gridBagConstraints);
 
-        dukeBtnGroup6.add(activitatsDBtn14);
+        eptBtnGroup6.add(activitatsDBtn14);
         activitatsDBtn14.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -254,7 +249,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(activitatsDBtn14, gridBagConstraints);
 
-        dukeBtnGroup6.add(activitatsDBtn15);
+        eptBtnGroup6.add(activitatsDBtn15);
         activitatsDBtn15.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -262,7 +257,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(activitatsDBtn15, gridBagConstraints);
 
-        dukeBtnGroup5.add(activitatsDBtn16);
+        eptBtnGroup5.add(activitatsDBtn16);
         activitatsDBtn16.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -384,7 +379,7 @@ public class EPT extends Test {
         gridBagConstraints.gridy = 6;
         EPTQPanel.add(jLabel58, gridBagConstraints);
 
-        dukeBtnGroup3.add(jToggleButton37);
+        eptBtnGroup3.add(jToggleButton37);
         jToggleButton37.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -392,7 +387,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(jToggleButton37, gridBagConstraints);
 
-        dukeBtnGroup4.add(jToggleButton38);
+        eptBtnGroup4.add(jToggleButton38);
         jToggleButton38.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -400,7 +395,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(jToggleButton38, gridBagConstraints);
 
-        dukeBtnGroup4.add(jToggleButton39);
+        eptBtnGroup4.add(jToggleButton39);
         jToggleButton39.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -408,7 +403,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(jToggleButton39, gridBagConstraints);
 
-        dukeBtnGroup6.add(jToggleButton40);
+        eptBtnGroup6.add(jToggleButton40);
         jToggleButton40.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -416,7 +411,7 @@ public class EPT extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         EPTQPanel.add(jToggleButton40, gridBagConstraints);
 
-        dukeBtnGroup6.add(jToggleButton41);
+        eptBtnGroup6.add(jToggleButton41);
         jToggleButton41.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -429,19 +424,19 @@ public class EPT extends Test {
         EPTTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         EPTTotal.setText("0");
 
-        javax.swing.GroupLayout dukePanelLayout = new javax.swing.GroupLayout(dukePanel);
-        dukePanel.setLayout(dukePanelLayout);
-        dukePanelLayout.setHorizontalGroup(
-            dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dukePanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout eptPanelLayout = new javax.swing.GroupLayout(eptPanel);
+        eptPanel.setLayout(eptPanelLayout);
+        eptPanelLayout.setHorizontalGroup(
+            eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(eptPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel33)
-                    .addGroup(dukePanelLayout.createSequentialGroup()
+                    .addGroup(eptPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(dukePanelLayout.createSequentialGroup()
+                            .addGroup(eptPanelLayout.createSequentialGroup()
                                 .addComponent(EPTQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel217)
@@ -449,25 +444,25 @@ public class EPT extends Test {
                                 .addComponent(EPTTotal)))))
                 .addGap(91, 91, 91))
         );
-        dukePanelLayout.setVerticalGroup(
-            dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dukePanelLayout.createSequentialGroup()
+        eptPanelLayout.setVerticalGroup(
+            eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eptPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(EPTQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(dukePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel217)
                         .addComponent(EPTTotal)))
                 .addContainerGap())
         );
 
-        dukeScroll.setViewportView(dukePanel);
+        eptScroll.setViewportView(eptPanel);
 
-        add(dukeScroll, "card1");
+        add(eptScroll, "card1");
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -482,19 +477,14 @@ public class EPT extends Test {
     private javax.swing.JToggleButton activitatsFBtn15;
     private javax.swing.JToggleButton activitatsFBtn16;
     private javax.swing.JToggleButton activitatsFBtn17;
-    private javax.swing.ButtonGroup dukeBtnGroup1;
-    private javax.swing.ButtonGroup dukeBtnGroup10;
-    private javax.swing.ButtonGroup dukeBtnGroup11;
-    private javax.swing.ButtonGroup dukeBtnGroup2;
-    private javax.swing.ButtonGroup dukeBtnGroup3;
-    private javax.swing.ButtonGroup dukeBtnGroup4;
-    private javax.swing.ButtonGroup dukeBtnGroup5;
-    private javax.swing.ButtonGroup dukeBtnGroup6;
-    private javax.swing.ButtonGroup dukeBtnGroup7;
-    private javax.swing.ButtonGroup dukeBtnGroup8;
-    private javax.swing.ButtonGroup dukeBtnGroup9;
-    private javax.swing.JPanel dukePanel;
-    private javax.swing.JScrollPane dukeScroll;
+    private javax.swing.ButtonGroup eptBtnGroup1;
+    private javax.swing.ButtonGroup eptBtnGroup2;
+    private javax.swing.ButtonGroup eptBtnGroup3;
+    private javax.swing.ButtonGroup eptBtnGroup4;
+    private javax.swing.ButtonGroup eptBtnGroup5;
+    private javax.swing.ButtonGroup eptBtnGroup6;
+    private javax.swing.JPanel eptPanel;
+    private javax.swing.JScrollPane eptScroll;
     private javax.swing.JLabel jLabel112;
     private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;

@@ -25,6 +25,10 @@ import vista.tests.QOLAD;
 import vista.tests.RSE;
 import vista.tests.Test;
 import vista.tests.UPSA;
+import vista.tests.OHQSF;
+import vista.tests.IMAGE;
+import vista.tests.EPT;
+
 
 /**
  *
@@ -55,7 +59,7 @@ public class Sessio2 extends javax.swing.JFrame {
 
         initComponents();
 
-        this.setTitle(this.getTitle()+" | T"+valoracio);
+        this.setTitle(this.getTitle()+" | A"+valoracio);
 
         this.pacientActual = pacientActual;
 
@@ -67,13 +71,17 @@ public class Sessio2 extends javax.swing.JFrame {
 
         initTabs();
 
-        Utils.carregar(tabbedPanel,pacientActual.getId(), "Sessio2_T"+valoracio);
+        Utils.carregar(tabbedPanel,pacientActual.getId(), "Sessio2_A"+valoracio);
 
         this.toFront();
         this.repaint();
     }
     
     private void addTabs() {
+        
+        EPT ept = new EPT(pacientActual);
+        tabbedPanel.addTab(ept.getLabel(), ept);
+        
         MOCA moca = new MOCA(pacientActual);
         tabbedPanel.addTab(moca.getLabel(), moca);
         
@@ -94,6 +102,14 @@ public class Sessio2 extends javax.swing.JFrame {
         
         RSE rse = new RSE(pacientActual);
         tabbedPanel.addTab(rse.getLabel(), rse);
+        
+        OHQSF ohqsf = new OHQSF(pacientActual);
+        tabbedPanel.addTab(ohqsf.getLabel(), ohqsf);
+        
+        IMAGE image = new IMAGE(pacientActual);
+        tabbedPanel.addTab(image.getLabel(), image);
+        
+        
     }
 
     /**
@@ -213,7 +229,7 @@ public class Sessio2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptaBtnActionPerformed
-        Utils.guardar(tabbedPanel,pacientActual.getId(), "Sessio2_T"+valoracio);
+        Utils.guardar(tabbedPanel,pacientActual.getId(), "Sessio2_A"+valoracio);
         this.guardarResultats();
         Utils.generaResultatsCSV(pacientActual.getId());
         ((MenuAvaluador)parent).checkCsv();
@@ -336,7 +352,7 @@ public class Sessio2 extends javax.swing.JFrame {
             if (!f.exists()){
                 f.mkdir();
             }
-            File file = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator+"resultsSessio2_T"+valoracio+".dat");
+            File file = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator+"resultsSessio2_A"+valoracio+".dat");
 
             output = new FileOutputStream(file);
 

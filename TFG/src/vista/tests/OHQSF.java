@@ -47,21 +47,16 @@ public class OHQSF extends Test {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        qolButtonGroup1 = new javax.swing.ButtonGroup();
-        qolButtonGroup2 = new javax.swing.ButtonGroup();
-        qolButtonGroup3 = new javax.swing.ButtonGroup();
-        qolButtonGroup4 = new javax.swing.ButtonGroup();
-        qolButtonGroup5 = new javax.swing.ButtonGroup();
-        qolButtonGroup6 = new javax.swing.ButtonGroup();
-        qolButtonGroup7 = new javax.swing.ButtonGroup();
-        qolButtonGroup8 = new javax.swing.ButtonGroup();
-        qolButtonGroup9 = new javax.swing.ButtonGroup();
-        qolButtonGroup10 = new javax.swing.ButtonGroup();
-        qolButtonGroup11 = new javax.swing.ButtonGroup();
-        qolButtonGroup12 = new javax.swing.ButtonGroup();
-        qolButtonGroup13 = new javax.swing.ButtonGroup();
-        qolScroll = new javax.swing.JScrollPane();
-        qolPanel = new javax.swing.JPanel();
+        ohqsfButtonGroup1 = new javax.swing.ButtonGroup();
+        ohqsfButtonGroup2 = new javax.swing.ButtonGroup();
+        ohqsfButtonGroup3 = new javax.swing.ButtonGroup();
+        ohqsfButtonGroup4 = new javax.swing.ButtonGroup();
+        ohqsfButtonGroup5 = new javax.swing.ButtonGroup();
+        ohqsfButtonGroup6 = new javax.swing.ButtonGroup();
+        ohqsfButtonGroup7 = new javax.swing.ButtonGroup();
+        ohqsfButtonGroup8 = new javax.swing.ButtonGroup();
+        ohqsfScroll = new javax.swing.JScrollPane();
+        ohqsfPanel = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
         OHQSFQPanel = new javax.swing.JPanel();
         orientacioBtn10 = new javax.swing.JToggleButton();
@@ -148,7 +143,7 @@ public class OHQSF extends Test {
         OHQSFQPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Qüestionari", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         OHQSFQPanel.setLayout(new java.awt.GridBagLayout());
 
-        qolButtonGroup2.add(orientacioBtn10);
+        ohqsfButtonGroup2.add(orientacioBtn10);
         orientacioBtn10.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -156,7 +151,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(orientacioBtn10, gridBagConstraints);
 
-        qolButtonGroup1.add(memoBtn10);
+        ohqsfButtonGroup1.add(memoBtn10);
         memoBtn10.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -164,7 +159,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(memoBtn10, gridBagConstraints);
 
-        qolButtonGroup2.add(orientacioBtn11);
+        ohqsfButtonGroup2.add(orientacioBtn11);
         orientacioBtn11.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -172,7 +167,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(orientacioBtn11, gridBagConstraints);
 
-        qolButtonGroup1.add(memoBtn11);
+        ohqsfButtonGroup1.add(memoBtn11);
         memoBtn11.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -180,7 +175,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(memoBtn11, gridBagConstraints);
 
-        qolButtonGroup2.add(orientacioBtn12);
+        ohqsfButtonGroup2.add(orientacioBtn12);
         orientacioBtn12.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -188,7 +183,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(orientacioBtn12, gridBagConstraints);
 
-        qolButtonGroup2.add(orientacioBtn13);
+        ohqsfButtonGroup2.add(orientacioBtn13);
         orientacioBtn13.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -196,7 +191,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(orientacioBtn13, gridBagConstraints);
 
-        qolButtonGroup3.add(raoBtn10);
+        ohqsfButtonGroup3.add(raoBtn10);
         raoBtn10.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -204,7 +199,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(raoBtn10, gridBagConstraints);
 
-        qolButtonGroup3.add(raoBtn11);
+        ohqsfButtonGroup3.add(raoBtn11);
         raoBtn11.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -212,7 +207,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(raoBtn11, gridBagConstraints);
 
-        qolButtonGroup5.add(raoBtn12);
+        ohqsfButtonGroup5.add(raoBtn12);
         raoBtn12.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -220,7 +215,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(raoBtn12, gridBagConstraints);
 
-        qolButtonGroup3.add(raoBtn13);
+        ohqsfButtonGroup3.add(raoBtn13);
         raoBtn13.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -228,7 +223,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(raoBtn13, gridBagConstraints);
 
-        qolButtonGroup4.add(activitatsFBtn10);
+        ohqsfButtonGroup4.add(activitatsFBtn10);
         activitatsFBtn10.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -236,7 +231,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(activitatsFBtn10, gridBagConstraints);
 
-        qolButtonGroup4.add(activitatsFBtn11);
+        ohqsfButtonGroup4.add(activitatsFBtn11);
         activitatsFBtn11.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -244,7 +239,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(activitatsFBtn11, gridBagConstraints);
 
-        qolButtonGroup5.add(activitatsFBtn12);
+        ohqsfButtonGroup5.add(activitatsFBtn12);
         activitatsFBtn12.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -252,7 +247,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(activitatsFBtn12, gridBagConstraints);
 
-        qolButtonGroup5.add(activitatsFBtn13);
+        ohqsfButtonGroup5.add(activitatsFBtn13);
         activitatsFBtn13.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -260,7 +255,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(activitatsFBtn13, gridBagConstraints);
 
-        qolButtonGroup6.add(activitatsDBtn10);
+        ohqsfButtonGroup6.add(activitatsDBtn10);
         activitatsDBtn10.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -268,7 +263,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(activitatsDBtn10, gridBagConstraints);
 
-        qolButtonGroup6.add(activitatsDBtn11);
+        ohqsfButtonGroup6.add(activitatsDBtn11);
         activitatsDBtn11.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -276,7 +271,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(activitatsDBtn11, gridBagConstraints);
 
-        qolButtonGroup5.add(activitatsDBtn12);
+        ohqsfButtonGroup5.add(activitatsDBtn12);
         activitatsDBtn12.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -291,7 +286,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(activitatsDBtn13, gridBagConstraints);
 
-        qolButtonGroup7.add(cuidatBtn8);
+        ohqsfButtonGroup7.add(cuidatBtn8);
         cuidatBtn8.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -299,7 +294,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(cuidatBtn8, gridBagConstraints);
 
-        qolButtonGroup7.add(cuidatBtn10);
+        ohqsfButtonGroup7.add(cuidatBtn10);
         cuidatBtn10.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -440,7 +435,7 @@ public class OHQSF extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         OHQSFQPanel.add(jLabel44, gridBagConstraints);
 
-        qolButtonGroup7.add(jToggleButton3);
+        ohqsfButtonGroup7.add(jToggleButton3);
         jToggleButton3.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -448,7 +443,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton3, gridBagConstraints);
 
-        qolButtonGroup8.add(jToggleButton4);
+        ohqsfButtonGroup8.add(jToggleButton4);
         jToggleButton4.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -456,7 +451,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton4, gridBagConstraints);
 
-        qolButtonGroup6.add(jToggleButton6);
+        ohqsfButtonGroup6.add(jToggleButton6);
         jToggleButton6.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -464,7 +459,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton6, gridBagConstraints);
 
-        qolButtonGroup3.add(jToggleButton7);
+        ohqsfButtonGroup3.add(jToggleButton7);
         jToggleButton7.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -472,7 +467,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton7, gridBagConstraints);
 
-        qolButtonGroup4.add(jToggleButton8);
+        ohqsfButtonGroup4.add(jToggleButton8);
         jToggleButton8.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -480,7 +475,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton8, gridBagConstraints);
 
-        qolButtonGroup4.add(jToggleButton9);
+        ohqsfButtonGroup4.add(jToggleButton9);
         jToggleButton9.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -488,7 +483,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton9, gridBagConstraints);
 
-        qolButtonGroup6.add(jToggleButton10);
+        ohqsfButtonGroup6.add(jToggleButton10);
         jToggleButton10.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -496,7 +491,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton10, gridBagConstraints);
 
-        qolButtonGroup6.add(jToggleButton11);
+        ohqsfButtonGroup6.add(jToggleButton11);
         jToggleButton11.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -504,7 +499,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton11, gridBagConstraints);
 
-        qolButtonGroup7.add(jToggleButton12);
+        ohqsfButtonGroup7.add(jToggleButton12);
         jToggleButton12.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -512,7 +507,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton12, gridBagConstraints);
 
-        qolButtonGroup8.add(jToggleButton13);
+        ohqsfButtonGroup8.add(jToggleButton13);
         jToggleButton13.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -520,7 +515,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton13, gridBagConstraints);
 
-        qolButtonGroup8.add(jToggleButton14);
+        ohqsfButtonGroup8.add(jToggleButton14);
         jToggleButton14.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -528,7 +523,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton14, gridBagConstraints);
 
-        qolButtonGroup8.add(jToggleButton16);
+        ohqsfButtonGroup8.add(jToggleButton16);
         jToggleButton16.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -536,7 +531,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton16, gridBagConstraints);
 
-        qolButtonGroup1.add(jToggleButton18);
+        ohqsfButtonGroup1.add(jToggleButton18);
         jToggleButton18.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -544,7 +539,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton18, gridBagConstraints);
 
-        qolButtonGroup1.add(jToggleButton20);
+        ohqsfButtonGroup1.add(jToggleButton20);
         jToggleButton20.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -552,7 +547,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton20, gridBagConstraints);
 
-        qolButtonGroup2.add(jToggleButton22);
+        ohqsfButtonGroup2.add(jToggleButton22);
         jToggleButton22.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -560,7 +555,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton22, gridBagConstraints);
 
-        qolButtonGroup2.add(jToggleButton24);
+        ohqsfButtonGroup2.add(jToggleButton24);
         jToggleButton24.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -568,7 +563,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton24, gridBagConstraints);
 
-        qolButtonGroup6.add(jToggleButton26);
+        ohqsfButtonGroup6.add(jToggleButton26);
         jToggleButton26.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -576,7 +571,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton26, gridBagConstraints);
 
-        qolButtonGroup7.add(jToggleButton28);
+        ohqsfButtonGroup7.add(jToggleButton28);
         jToggleButton28.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -584,7 +579,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton28, gridBagConstraints);
 
-        qolButtonGroup8.add(jToggleButton30);
+        ohqsfButtonGroup8.add(jToggleButton30);
         jToggleButton30.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -592,7 +587,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton30, gridBagConstraints);
 
-        qolButtonGroup1.add(memoBtn16);
+        ohqsfButtonGroup1.add(memoBtn16);
         memoBtn16.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -600,7 +595,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(memoBtn16, gridBagConstraints);
 
-        qolButtonGroup1.add(memoBtn17);
+        ohqsfButtonGroup1.add(memoBtn17);
         memoBtn17.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -621,7 +616,7 @@ public class OHQSF extends Test {
         gridBagConstraints.gridy = 2;
         OHQSFQPanel.add(jLabel150, gridBagConstraints);
 
-        qolButtonGroup3.add(jToggleButton31);
+        ohqsfButtonGroup3.add(jToggleButton31);
         jToggleButton31.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -629,7 +624,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton31, gridBagConstraints);
 
-        qolButtonGroup3.add(jToggleButton32);
+        ohqsfButtonGroup3.add(jToggleButton32);
         jToggleButton32.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -637,7 +632,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton32, gridBagConstraints);
 
-        qolButtonGroup4.add(jToggleButton33);
+        ohqsfButtonGroup4.add(jToggleButton33);
         jToggleButton33.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -645,7 +640,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton33, gridBagConstraints);
 
-        qolButtonGroup4.add(jToggleButton34);
+        ohqsfButtonGroup4.add(jToggleButton34);
         jToggleButton34.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -653,7 +648,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton34, gridBagConstraints);
 
-        qolButtonGroup5.add(jToggleButton35);
+        ohqsfButtonGroup5.add(jToggleButton35);
         jToggleButton35.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -661,7 +656,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton35, gridBagConstraints);
 
-        qolButtonGroup5.add(jToggleButton36);
+        ohqsfButtonGroup5.add(jToggleButton36);
         jToggleButton36.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -669,7 +664,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(jToggleButton36, gridBagConstraints);
 
-        qolButtonGroup7.add(cuidatBtn11);
+        ohqsfButtonGroup7.add(cuidatBtn11);
         cuidatBtn11.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -677,7 +672,7 @@ public class OHQSF extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         OHQSFQPanel.add(cuidatBtn11, gridBagConstraints);
 
-        qolButtonGroup8.add(jToggleButton37);
+        ohqsfButtonGroup8.add(jToggleButton37);
         jToggleButton37.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -694,19 +689,19 @@ public class OHQSF extends Test {
 
         jLabel16.setText("<html>Joaquín Tomás-Sábado, Montserrat Edo-Gual, Amor Aradilla-Herrero, Josep V. Sorribes López, Beatriz Fernández-Nájar, Javier Montes-Hidalgo. <br>Propiedades psicométricas preliminares de la forma española del Oxford Happiness Questionnaire Short-Form (OHQ-SF).<br> Comunicación presentada al XV Congreso Virtual de Psiquiatría, Interpsiquis 2014.");
 
-        javax.swing.GroupLayout qolPanelLayout = new javax.swing.GroupLayout(qolPanel);
-        qolPanel.setLayout(qolPanelLayout);
-        qolPanelLayout.setHorizontalGroup(
-            qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(qolPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout ohqsfPanelLayout = new javax.swing.GroupLayout(ohqsfPanel);
+        ohqsfPanel.setLayout(ohqsfPanelLayout);
+        ohqsfPanelLayout.setHorizontalGroup(
+            ohqsfPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ohqsfPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ohqsfPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel30)
-                    .addGroup(qolPanelLayout.createSequentialGroup()
+                    .addGroup(ohqsfPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ohqsfPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(qolPanelLayout.createSequentialGroup()
+                            .addGroup(ohqsfPanelLayout.createSequentialGroup()
                                 .addComponent(OHQSFQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel213)
@@ -715,20 +710,20 @@ public class OHQSF extends Test {
                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(124, 124, 124))
         );
-        qolPanelLayout.setVerticalGroup(
-            qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, qolPanelLayout.createSequentialGroup()
+        ohqsfPanelLayout.setVerticalGroup(
+            ohqsfPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ohqsfPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel30)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(qolPanelLayout.createSequentialGroup()
+                .addGroup(ohqsfPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ohqsfPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(OHQSFQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(qolPanelLayout.createSequentialGroup()
+                    .addGroup(ohqsfPanelLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addGroup(qolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(ohqsfPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel213)
                             .addComponent(OHQSFTotal))))
                 .addGap(18, 18, 18)
@@ -736,9 +731,9 @@ public class OHQSF extends Test {
                 .addGap(111, 111, 111))
         );
 
-        qolScroll.setViewportView(qolPanel);
+        ohqsfScroll.setViewportView(ohqsfPanel);
 
-        add(qolScroll, "card1");
+        add(ohqsfScroll, "card1");
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -812,25 +807,20 @@ public class OHQSF extends Test {
     private javax.swing.JToggleButton memoBtn11;
     private javax.swing.JToggleButton memoBtn16;
     private javax.swing.JToggleButton memoBtn17;
+    private javax.swing.ButtonGroup ohqsfButtonGroup1;
+    private javax.swing.ButtonGroup ohqsfButtonGroup2;
+    private javax.swing.ButtonGroup ohqsfButtonGroup3;
+    private javax.swing.ButtonGroup ohqsfButtonGroup4;
+    private javax.swing.ButtonGroup ohqsfButtonGroup5;
+    private javax.swing.ButtonGroup ohqsfButtonGroup6;
+    private javax.swing.ButtonGroup ohqsfButtonGroup7;
+    private javax.swing.ButtonGroup ohqsfButtonGroup8;
+    private javax.swing.JPanel ohqsfPanel;
+    private javax.swing.JScrollPane ohqsfScroll;
     private javax.swing.JToggleButton orientacioBtn10;
     private javax.swing.JToggleButton orientacioBtn11;
     private javax.swing.JToggleButton orientacioBtn12;
     private javax.swing.JToggleButton orientacioBtn13;
-    private javax.swing.ButtonGroup qolButtonGroup1;
-    private javax.swing.ButtonGroup qolButtonGroup10;
-    private javax.swing.ButtonGroup qolButtonGroup11;
-    private javax.swing.ButtonGroup qolButtonGroup12;
-    private javax.swing.ButtonGroup qolButtonGroup13;
-    private javax.swing.ButtonGroup qolButtonGroup2;
-    private javax.swing.ButtonGroup qolButtonGroup3;
-    private javax.swing.ButtonGroup qolButtonGroup4;
-    private javax.swing.ButtonGroup qolButtonGroup5;
-    private javax.swing.ButtonGroup qolButtonGroup6;
-    private javax.swing.ButtonGroup qolButtonGroup7;
-    private javax.swing.ButtonGroup qolButtonGroup8;
-    private javax.swing.ButtonGroup qolButtonGroup9;
-    private javax.swing.JPanel qolPanel;
-    private javax.swing.JScrollPane qolScroll;
     private javax.swing.JToggleButton raoBtn10;
     private javax.swing.JToggleButton raoBtn11;
     private javax.swing.JToggleButton raoBtn12;

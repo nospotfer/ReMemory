@@ -47,1490 +47,1490 @@ public class IMAGE extends Test {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        qolButtonGroup1 = new javax.swing.ButtonGroup();
-        qolButtonGroup2 = new javax.swing.ButtonGroup();
-        qolButtonGroup3 = new javax.swing.ButtonGroup();
-        qolButtonGroup4 = new javax.swing.ButtonGroup();
-        qolButtonGroup5 = new javax.swing.ButtonGroup();
-        qolButtonGroup6 = new javax.swing.ButtonGroup();
-        qolButtonGroup7 = new javax.swing.ButtonGroup();
-        qolButtonGroup8 = new javax.swing.ButtonGroup();
-        qolButtonGroup9 = new javax.swing.ButtonGroup();
-        qolButtonGroup10 = new javax.swing.ButtonGroup();
-        qolButtonGroup11 = new javax.swing.ButtonGroup();
-        qolButtonGroup12 = new javax.swing.ButtonGroup();
-        qolButtonGroup13 = new javax.swing.ButtonGroup();
-        qolButtonGroup14 = new javax.swing.ButtonGroup();
-        qolButtonGroup15 = new javax.swing.ButtonGroup();
-        qolButtonGroup16 = new javax.swing.ButtonGroup();
-        qolButtonGroup17 = new javax.swing.ButtonGroup();
-        qolButtonGroup18 = new javax.swing.ButtonGroup();
-        qolButtonGroup19 = new javax.swing.ButtonGroup();
-        qolButtonGroup20 = new javax.swing.ButtonGroup();
-        qolButtonGroup21 = new javax.swing.ButtonGroup();
-        qolButtonGroup22 = new javax.swing.ButtonGroup();
-        qolButtonGroup23 = new javax.swing.ButtonGroup();
-        qolButtonGroup24 = new javax.swing.ButtonGroup();
+        imagesButtonGroup1 = new javax.swing.ButtonGroup();
+        imagesButtonGroup2 = new javax.swing.ButtonGroup();
+        imagesButtonGroup3 = new javax.swing.ButtonGroup();
+        imagesButtonGroup4 = new javax.swing.ButtonGroup();
+        imagesButtonGroup5 = new javax.swing.ButtonGroup();
+        imagesButtonGroup6 = new javax.swing.ButtonGroup();
+        imagesButtonGroup7 = new javax.swing.ButtonGroup();
+        imagesButtonGroup8 = new javax.swing.ButtonGroup();
+        imagesButtonGroup9 = new javax.swing.ButtonGroup();
+        imagesButtonGroup10 = new javax.swing.ButtonGroup();
+        imagesButtonGroup11 = new javax.swing.ButtonGroup();
+        imagesButtonGroup12 = new javax.swing.ButtonGroup();
+        imagesButtonGroup13 = new javax.swing.ButtonGroup();
+        imagesButtonGroup14 = new javax.swing.ButtonGroup();
+        imagesButtonGroup15 = new javax.swing.ButtonGroup();
+        imagesButtonGroup16 = new javax.swing.ButtonGroup();
+        imagesButtonGroup17 = new javax.swing.ButtonGroup();
+        imagesButtonGroup18 = new javax.swing.ButtonGroup();
+        imagesButtonGroup19 = new javax.swing.ButtonGroup();
+        imagesButtonGroup20 = new javax.swing.ButtonGroup();
+        imagesButtonGroup21 = new javax.swing.ButtonGroup();
+        imagesButtonGroup22 = new javax.swing.ButtonGroup();
+        imagesButtonGroup23 = new javax.swing.ButtonGroup();
+        imagesButtonGroup24 = new javax.swing.ButtonGroup();
         IMAGEScroll = new javax.swing.JScrollPane();
         IMAGESQPanel = new javax.swing.JPanel();
-        rseQPanel = new javax.swing.JPanel();
-        orientacioBtn2 = new javax.swing.JToggleButton();
-        memoBtn2 = new javax.swing.JToggleButton();
-        orientacioBtn3 = new javax.swing.JToggleButton();
-        memoBtn3 = new javax.swing.JToggleButton();
-        orientacioBtn4 = new javax.swing.JToggleButton();
-        memoBtn4 = new javax.swing.JToggleButton();
-        memoBtn5 = new javax.swing.JToggleButton();
-        orientacioBtn5 = new javax.swing.JToggleButton();
-        raoBtn2 = new javax.swing.JToggleButton();
-        raoBtn5 = new javax.swing.JToggleButton();
-        raoBtn3 = new javax.swing.JToggleButton();
-        raoBtn4 = new javax.swing.JToggleButton();
-        activitatsFBtn2 = new javax.swing.JToggleButton();
-        activitatsFBtn3 = new javax.swing.JToggleButton();
-        activitatsFBtn4 = new javax.swing.JToggleButton();
-        activitatsFBtn5 = new javax.swing.JToggleButton();
-        activitatsDBtn5 = new javax.swing.JToggleButton();
-        activitatsDBtn4 = new javax.swing.JToggleButton();
-        activitatsDBtn3 = new javax.swing.JToggleButton();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
-        jLabel125 = new javax.swing.JLabel();
-        jLabel126 = new javax.swing.JLabel();
-        jLabel127 = new javax.swing.JLabel();
-        jLabel128 = new javax.swing.JLabel();
-        jLabel129 = new javax.swing.JLabel();
-        jLabel130 = new javax.swing.JLabel();
-        jLabel131 = new javax.swing.JLabel();
-        jLabel132 = new javax.swing.JLabel();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        orientacioBtn6 = new javax.swing.JToggleButton();
-        raoBtn6 = new javax.swing.JToggleButton();
-        raoBtn7 = new javax.swing.JToggleButton();
-        activitatsDBtn6 = new javax.swing.JToggleButton();
-        raoBtn8 = new javax.swing.JToggleButton();
-        activitatsDBtn7 = new javax.swing.JToggleButton();
-        activitatsDBtn8 = new javax.swing.JToggleButton();
-        cuidatBtn5 = new javax.swing.JToggleButton();
-        cuidatBtn6 = new javax.swing.JToggleButton();
-        cuidatBtn7 = new javax.swing.JToggleButton();
-        jLabel220 = new javax.swing.JLabel();
-        jLabel224 = new javax.swing.JLabel();
+        imagesQPanel = new javax.swing.JPanel();
+        orientacioBtn2images = new javax.swing.JToggleButton();
+        memoBtn2images = new javax.swing.JToggleButton();
+        orientacioBtn3images = new javax.swing.JToggleButton();
+        memoBtn3images = new javax.swing.JToggleButton();
+        orientacioBtn4images = new javax.swing.JToggleButton();
+        memoBtn4images = new javax.swing.JToggleButton();
+        memoBtn5images = new javax.swing.JToggleButton();
+        orientacioBtn5images = new javax.swing.JToggleButton();
+        raoBtn2images = new javax.swing.JToggleButton();
+        raoBtn5images = new javax.swing.JToggleButton();
+        raoBtn3images = new javax.swing.JToggleButton();
+        raoBtn4images = new javax.swing.JToggleButton();
+        activitatsFBtn2images = new javax.swing.JToggleButton();
+        activitatsFBtn3images = new javax.swing.JToggleButton();
+        activitatsFBtn4images = new javax.swing.JToggleButton();
+        activitatsFBtn5images = new javax.swing.JToggleButton();
+        activitatsDBtn5images = new javax.swing.JToggleButton();
+        activitatsDBtn4images = new javax.swing.JToggleButton();
+        activitatsDBtn3images = new javax.swing.JToggleButton();
+        jLabel99images = new javax.swing.JLabel();
+        jLabel100images = new javax.swing.JLabel();
+        jLabel125images = new javax.swing.JLabel();
+        jLabel126images = new javax.swing.JLabel();
+        jLabel127images = new javax.swing.JLabel();
+        jLabel128images = new javax.swing.JLabel();
+        jLabel129images = new javax.swing.JLabel();
+        jLabel130images = new javax.swing.JLabel();
+        jLabel131images = new javax.swing.JLabel();
+        jLabel132images = new javax.swing.JLabel();
+        jLabel101images = new javax.swing.JLabel();
+        jLabel1images = new javax.swing.JLabel();
+        jLabel2images = new javax.swing.JLabel();
+        jLabel3images = new javax.swing.JLabel();
+        jLabel4images = new javax.swing.JLabel();
+        jLabel5images = new javax.swing.JLabel();
+        jLabel6images = new javax.swing.JLabel();
+        jLabel10images = new javax.swing.JLabel();
+        orientacioBtn6images = new javax.swing.JToggleButton();
+        raoBtn6images = new javax.swing.JToggleButton();
+        raoBtn7images = new javax.swing.JToggleButton();
+        activitatsDBtn6images = new javax.swing.JToggleButton();
+        raoBtn8images = new javax.swing.JToggleButton();
+        activitatsDBtn7images = new javax.swing.JToggleButton();
+        activitatsDBtn8images = new javax.swing.JToggleButton();
+        cuidatBtn5images = new javax.swing.JToggleButton();
+        cuidatBtn6images = new javax.swing.JToggleButton();
+        cuidatBtn7images = new javax.swing.JToggleButton();
+        jLabel220images = new javax.swing.JLabel();
+        jLabel224images = new javax.swing.JLabel();
         IMAGESTotal = new javax.swing.JLabel();
-        rseTotal = new javax.swing.JLabel();
-        rseQPanel1 = new javax.swing.JPanel();
-        orientacioBtn7 = new javax.swing.JToggleButton();
-        memoBtn6 = new javax.swing.JToggleButton();
-        orientacioBtn8 = new javax.swing.JToggleButton();
-        memoBtn7 = new javax.swing.JToggleButton();
-        orientacioBtn9 = new javax.swing.JToggleButton();
-        memoBtn8 = new javax.swing.JToggleButton();
-        memoBtn9 = new javax.swing.JToggleButton();
-        orientacioBtn10 = new javax.swing.JToggleButton();
-        raoBtn9 = new javax.swing.JToggleButton();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        orientacioBtn11 = new javax.swing.JToggleButton();
-        raoBtn13 = new javax.swing.JToggleButton();
-        raoBtn14 = new javax.swing.JToggleButton();
-        jLabel115 = new javax.swing.JLabel();
-        jLabel116 = new javax.swing.JLabel();
-        jLabel161 = new javax.swing.JLabel();
-        jLabel162 = new javax.swing.JLabel();
-        jLabel221 = new javax.swing.JLabel();
-        rseTotal1 = new javax.swing.JLabel();
-        rseQPanel2 = new javax.swing.JPanel();
-        orientacioBtn12 = new javax.swing.JToggleButton();
-        memoBtn10 = new javax.swing.JToggleButton();
-        orientacioBtn13 = new javax.swing.JToggleButton();
-        memoBtn11 = new javax.swing.JToggleButton();
-        orientacioBtn14 = new javax.swing.JToggleButton();
-        memoBtn12 = new javax.swing.JToggleButton();
-        memoBtn13 = new javax.swing.JToggleButton();
-        orientacioBtn15 = new javax.swing.JToggleButton();
-        raoBtn16 = new javax.swing.JToggleButton();
-        raoBtn17 = new javax.swing.JToggleButton();
-        raoBtn18 = new javax.swing.JToggleButton();
-        raoBtn19 = new javax.swing.JToggleButton();
-        activitatsFBtn10 = new javax.swing.JToggleButton();
-        activitatsFBtn11 = new javax.swing.JToggleButton();
-        activitatsFBtn12 = new javax.swing.JToggleButton();
-        activitatsFBtn13 = new javax.swing.JToggleButton();
-        activitatsDBtn20 = new javax.swing.JToggleButton();
-        activitatsDBtn21 = new javax.swing.JToggleButton();
-        activitatsDBtn23 = new javax.swing.JToggleButton();
-        jLabel143 = new javax.swing.JLabel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        jLabel107 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        orientacioBtn16 = new javax.swing.JToggleButton();
-        raoBtn20 = new javax.swing.JToggleButton();
-        raoBtn21 = new javax.swing.JToggleButton();
-        activitatsDBtn24 = new javax.swing.JToggleButton();
-        raoBtn22 = new javax.swing.JToggleButton();
-        activitatsDBtn25 = new javax.swing.JToggleButton();
-        activitatsDBtn26 = new javax.swing.JToggleButton();
-        cuidatBtn29 = new javax.swing.JToggleButton();
-        cuidatBtn30 = new javax.swing.JToggleButton();
-        cuidatBtn31 = new javax.swing.JToggleButton();
-        jLabel111 = new javax.swing.JLabel();
-        jLabel112 = new javax.swing.JLabel();
-        jLabel157 = new javax.swing.JLabel();
-        jLabel158 = new javax.swing.JLabel();
-        jLabel222 = new javax.swing.JLabel();
-        rseTotal2 = new javax.swing.JLabel();
-        rseQPanel3 = new javax.swing.JPanel();
-        orientacioBtn17 = new javax.swing.JToggleButton();
-        memoBtn14 = new javax.swing.JToggleButton();
-        orientacioBtn18 = new javax.swing.JToggleButton();
-        memoBtn15 = new javax.swing.JToggleButton();
-        orientacioBtn19 = new javax.swing.JToggleButton();
-        memoBtn16 = new javax.swing.JToggleButton();
-        memoBtn17 = new javax.swing.JToggleButton();
-        orientacioBtn20 = new javax.swing.JToggleButton();
-        raoBtn23 = new javax.swing.JToggleButton();
-        raoBtn24 = new javax.swing.JToggleButton();
-        raoBtn25 = new javax.swing.JToggleButton();
-        raoBtn26 = new javax.swing.JToggleButton();
-        activitatsFBtn14 = new javax.swing.JToggleButton();
-        activitatsFBtn15 = new javax.swing.JToggleButton();
-        activitatsFBtn16 = new javax.swing.JToggleButton();
-        activitatsFBtn17 = new javax.swing.JToggleButton();
-        activitatsDBtn29 = new javax.swing.JToggleButton();
-        activitatsDBtn30 = new javax.swing.JToggleButton();
-        activitatsDBtn32 = new javax.swing.JToggleButton();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
-        jLabel153 = new javax.swing.JLabel();
-        jLabel154 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
-        jLabel156 = new javax.swing.JLabel();
-        jLabel110 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        orientacioBtn21 = new javax.swing.JToggleButton();
-        raoBtn27 = new javax.swing.JToggleButton();
-        raoBtn28 = new javax.swing.JToggleButton();
-        activitatsDBtn33 = new javax.swing.JToggleButton();
-        raoBtn29 = new javax.swing.JToggleButton();
-        activitatsDBtn34 = new javax.swing.JToggleButton();
-        activitatsDBtn35 = new javax.swing.JToggleButton();
-        cuidatBtn41 = new javax.swing.JToggleButton();
-        cuidatBtn42 = new javax.swing.JToggleButton();
-        cuidatBtn43 = new javax.swing.JToggleButton();
-        jLabel113 = new javax.swing.JLabel();
-        jLabel114 = new javax.swing.JLabel();
-        jLabel159 = new javax.swing.JLabel();
-        jLabel160 = new javax.swing.JLabel();
-        jLabel223 = new javax.swing.JLabel();
-        rseTotal3 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        imagesTotal = new javax.swing.JLabel();
+        imagesQPanel1 = new javax.swing.JPanel();
+        orientacioBtn7images = new javax.swing.JToggleButton();
+        memoBtn6images = new javax.swing.JToggleButton();
+        orientacioBtn8images = new javax.swing.JToggleButton();
+        memoBtn7images = new javax.swing.JToggleButton();
+        orientacioBtn9images = new javax.swing.JToggleButton();
+        memoBtn8images = new javax.swing.JToggleButton();
+        memoBtn9images = new javax.swing.JToggleButton();
+        orientacioBtn10images = new javax.swing.JToggleButton();
+        raoBtn9images = new javax.swing.JToggleButton();
+        jLabel135images = new javax.swing.JLabel();
+        jLabel136images = new javax.swing.JLabel();
+        jLabel137images = new javax.swing.JLabel();
+        jLabel15images = new javax.swing.JLabel();
+        jLabel16images = new javax.swing.JLabel();
+        jLabel17images = new javax.swing.JLabel();
+        orientacioBtn11images = new javax.swing.JToggleButton();
+        raoBtn13images = new javax.swing.JToggleButton();
+        raoBtn14images = new javax.swing.JToggleButton();
+        jLabel115images = new javax.swing.JLabel();
+        jLabel116images = new javax.swing.JLabel();
+        jLabel161images = new javax.swing.JLabel();
+        jLabel162images = new javax.swing.JLabel();
+        jLabel221images = new javax.swing.JLabel();
+        imagesTotal1 = new javax.swing.JLabel();
+        imagesQPanel2 = new javax.swing.JPanel();
+        orientacioBtn12images = new javax.swing.JToggleButton();
+        memoBtn10images = new javax.swing.JToggleButton();
+        orientacioBtn13images = new javax.swing.JToggleButton();
+        memoBtn11images = new javax.swing.JToggleButton();
+        orientacioBtn14images = new javax.swing.JToggleButton();
+        memoBtn12images = new javax.swing.JToggleButton();
+        memoBtn13images = new javax.swing.JToggleButton();
+        orientacioBtn15images = new javax.swing.JToggleButton();
+        raoBtn16images = new javax.swing.JToggleButton();
+        raoBtn17images = new javax.swing.JToggleButton();
+        raoBtn18images = new javax.swing.JToggleButton();
+        raoBtn19images = new javax.swing.JToggleButton();
+        activitatsFBtn10images = new javax.swing.JToggleButton();
+        activitatsFBtn11images = new javax.swing.JToggleButton();
+        activitatsFBtn12images = new javax.swing.JToggleButton();
+        activitatsFBtn13images = new javax.swing.JToggleButton();
+        activitatsDBtn20images = new javax.swing.JToggleButton();
+        activitatsDBtn21images = new javax.swing.JToggleButton();
+        activitatsDBtn23images = new javax.swing.JToggleButton();
+        jLabel143images = new javax.swing.JLabel();
+        jLabel144images = new javax.swing.JLabel();
+        jLabel145images = new javax.swing.JLabel();
+        jLabel146images = new javax.swing.JLabel();
+        jLabel147images = new javax.swing.JLabel();
+        jLabel148images = new javax.swing.JLabel();
+        jLabel107images = new javax.swing.JLabel();
+        jLabel28images = new javax.swing.JLabel();
+        jLabel29images = new javax.swing.JLabel();
+        jLabel30images = new javax.swing.JLabel();
+        jLabel32images = new javax.swing.JLabel();
+        jLabel33images = new javax.swing.JLabel();
+        jLabel34images = new javax.swing.JLabel();
+        jLabel38images = new javax.swing.JLabel();
+        orientacioBtn16images = new javax.swing.JToggleButton();
+        raoBtn20images = new javax.swing.JToggleButton();
+        raoBtn21images = new javax.swing.JToggleButton();
+        activitatsDBtn24images = new javax.swing.JToggleButton();
+        raoBtn22images = new javax.swing.JToggleButton();
+        activitatsDBtn25images = new javax.swing.JToggleButton();
+        activitatsDBtn26images = new javax.swing.JToggleButton();
+        cuidatBtn29images = new javax.swing.JToggleButton();
+        cuidatBtn30images = new javax.swing.JToggleButton();
+        cuidatBtn31images = new javax.swing.JToggleButton();
+        jLabel111images = new javax.swing.JLabel();
+        jLabel112images = new javax.swing.JLabel();
+        jLabel157images = new javax.swing.JLabel();
+        jLabel158images = new javax.swing.JLabel();
+        jLabel222images = new javax.swing.JLabel();
+        imagesTotal2 = new javax.swing.JLabel();
+        imagesQPanel3 = new javax.swing.JPanel();
+        orientacioBtn17images = new javax.swing.JToggleButton();
+        memoBtn14images = new javax.swing.JToggleButton();
+        orientacioBtn18images = new javax.swing.JToggleButton();
+        memoBtn15images = new javax.swing.JToggleButton();
+        orientacioBtn19images = new javax.swing.JToggleButton();
+        memoBtn16images = new javax.swing.JToggleButton();
+        memoBtn17images = new javax.swing.JToggleButton();
+        orientacioBtn20images = new javax.swing.JToggleButton();
+        raoBtn23images = new javax.swing.JToggleButton();
+        raoBtn24images = new javax.swing.JToggleButton();
+        raoBtn25images = new javax.swing.JToggleButton();
+        raoBtn26images = new javax.swing.JToggleButton();
+        activitatsFBtn14images = new javax.swing.JToggleButton();
+        activitatsFBtn15images = new javax.swing.JToggleButton();
+        activitatsFBtn16images = new javax.swing.JToggleButton();
+        activitatsFBtn17images = new javax.swing.JToggleButton();
+        activitatsDBtn29images = new javax.swing.JToggleButton();
+        activitatsDBtn30images = new javax.swing.JToggleButton();
+        activitatsDBtn32images = new javax.swing.JToggleButton();
+        jLabel151images = new javax.swing.JLabel();
+        jLabel152images = new javax.swing.JLabel();
+        jLabel153images = new javax.swing.JLabel();
+        jLabel154images = new javax.swing.JLabel();
+        jLabel155images = new javax.swing.JLabel();
+        jLabel156images = new javax.swing.JLabel();
+        jLabel110images = new javax.swing.JLabel();
+        jLabel42images = new javax.swing.JLabel();
+        jLabel43images = new javax.swing.JLabel();
+        jLabel44images = new javax.swing.JLabel();
+        jLabel45images = new javax.swing.JLabel();
+        jLabel46images = new javax.swing.JLabel();
+        jLabel47images = new javax.swing.JLabel();
+        jLabel51images = new javax.swing.JLabel();
+        orientacioBtn21images = new javax.swing.JToggleButton();
+        raoBtn27images = new javax.swing.JToggleButton();
+        raoBtn28images = new javax.swing.JToggleButton();
+        activitatsDBtn33images = new javax.swing.JToggleButton();
+        raoBtn29images = new javax.swing.JToggleButton();
+        activitatsDBtn34images = new javax.swing.JToggleButton();
+        activitatsDBtn35images = new javax.swing.JToggleButton();
+        cuidatBtn41images = new javax.swing.JToggleButton();
+        cuidatBtn42images = new javax.swing.JToggleButton();
+        cuidatBtn43images = new javax.swing.JToggleButton();
+        jLabel113images = new javax.swing.JLabel();
+        jLabel114images = new javax.swing.JLabel();
+        jLabel159images = new javax.swing.JLabel();
+        jLabel160images = new javax.swing.JLabel();
+        jLabel223images = new javax.swing.JLabel();
+        imagesTotal3 = new javax.swing.JLabel();
+        jLabel14images = new javax.swing.JLabel();
+        jLabel31images = new javax.swing.JLabel();
+        jLabel55images = new javax.swing.JLabel();
+        jTextField1images = new javax.swing.JTextField();
+        jTextField2images = new javax.swing.JTextField();
         IMAGEScrollInstructions = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextArea1images = new javax.swing.JTextArea();
 
         setLayout(new java.awt.CardLayout());
 
-        rseQPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Identidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
-        rseQPanel.setLayout(new java.awt.GridBagLayout());
+        imagesQPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Identidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        imagesQPanel.setLayout(new java.awt.GridBagLayout());
 
-        qolButtonGroup2.add(orientacioBtn2);
-        orientacioBtn2.setText("1");
+        imagesButtonGroup2.add(orientacioBtn2images);
+        orientacioBtn2images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(orientacioBtn2, gridBagConstraints);
+        imagesQPanel.add(orientacioBtn2images, gridBagConstraints);
 
-        qolButtonGroup1.add(memoBtn2);
-        memoBtn2.setText("1");
+        imagesButtonGroup1.add(memoBtn2images);
+        memoBtn2images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(memoBtn2, gridBagConstraints);
+        imagesQPanel.add(memoBtn2images, gridBagConstraints);
 
-        qolButtonGroup3.add(orientacioBtn3);
-        orientacioBtn3.setText("2");
+        imagesButtonGroup3.add(orientacioBtn3images);
+        orientacioBtn3images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(orientacioBtn3, gridBagConstraints);
+        imagesQPanel.add(orientacioBtn3images, gridBagConstraints);
 
-        qolButtonGroup1.add(memoBtn3);
-        memoBtn3.setText("2");
+        imagesButtonGroup1.add(memoBtn3images);
+        memoBtn3images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(memoBtn3, gridBagConstraints);
+        imagesQPanel.add(memoBtn3images, gridBagConstraints);
 
-        qolButtonGroup2.add(orientacioBtn4);
-        orientacioBtn4.setText("3");
+        imagesButtonGroup2.add(orientacioBtn4images);
+        orientacioBtn4images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(orientacioBtn4, gridBagConstraints);
+        imagesQPanel.add(orientacioBtn4images, gridBagConstraints);
 
-        qolButtonGroup1.add(memoBtn4);
-        memoBtn4.setText("3");
+        imagesButtonGroup1.add(memoBtn4images);
+        memoBtn4images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(memoBtn4, gridBagConstraints);
+        imagesQPanel.add(memoBtn4images, gridBagConstraints);
 
-        qolButtonGroup1.add(memoBtn5);
-        memoBtn5.setText("4");
+        imagesButtonGroup1.add(memoBtn5images);
+        memoBtn5images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(memoBtn5, gridBagConstraints);
+        imagesQPanel.add(memoBtn5images, gridBagConstraints);
 
-        qolButtonGroup2.add(orientacioBtn5);
-        orientacioBtn5.setText("4");
+        imagesButtonGroup2.add(orientacioBtn5images);
+        orientacioBtn5images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(orientacioBtn5, gridBagConstraints);
+        imagesQPanel.add(orientacioBtn5images, gridBagConstraints);
 
-        qolButtonGroup3.add(raoBtn2);
-        raoBtn2.setText("1");
+        imagesButtonGroup3.add(raoBtn2images);
+        raoBtn2images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(raoBtn2, gridBagConstraints);
+        imagesQPanel.add(raoBtn2images, gridBagConstraints);
 
-        qolButtonGroup4.add(raoBtn5);
-        raoBtn5.setText("4");
+        imagesButtonGroup4.add(raoBtn5images);
+        raoBtn5images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(raoBtn5, gridBagConstraints);
+        imagesQPanel.add(raoBtn5images, gridBagConstraints);
 
-        qolButtonGroup6.add(raoBtn3);
-        raoBtn3.setText("2");
+        imagesButtonGroup6.add(raoBtn3images);
+        raoBtn3images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(raoBtn3, gridBagConstraints);
+        imagesQPanel.add(raoBtn3images, gridBagConstraints);
 
-        qolButtonGroup4.add(raoBtn4);
-        raoBtn4.setText("3");
+        imagesButtonGroup4.add(raoBtn4images);
+        raoBtn4images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(raoBtn4, gridBagConstraints);
+        imagesQPanel.add(raoBtn4images, gridBagConstraints);
 
-        qolButtonGroup4.add(activitatsFBtn2);
-        activitatsFBtn2.setText("1");
+        imagesButtonGroup4.add(activitatsFBtn2images);
+        activitatsFBtn2images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsFBtn2, gridBagConstraints);
+        imagesQPanel.add(activitatsFBtn2images, gridBagConstraints);
 
-        qolButtonGroup4.add(activitatsFBtn3);
-        activitatsFBtn3.setText("2");
+        imagesButtonGroup4.add(activitatsFBtn3images);
+        activitatsFBtn3images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsFBtn3, gridBagConstraints);
+        imagesQPanel.add(activitatsFBtn3images, gridBagConstraints);
 
-        qolButtonGroup5.add(activitatsFBtn4);
-        activitatsFBtn4.setText("3");
+        imagesButtonGroup5.add(activitatsFBtn4images);
+        activitatsFBtn4images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsFBtn4, gridBagConstraints);
+        imagesQPanel.add(activitatsFBtn4images, gridBagConstraints);
 
-        qolButtonGroup5.add(activitatsFBtn5);
-        activitatsFBtn5.setText("4");
+        imagesButtonGroup5.add(activitatsFBtn5images);
+        activitatsFBtn5images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsFBtn5, gridBagConstraints);
+        imagesQPanel.add(activitatsFBtn5images, gridBagConstraints);
 
-        qolButtonGroup6.add(activitatsDBtn5);
-        activitatsDBtn5.setText("4");
+        imagesButtonGroup6.add(activitatsDBtn5images);
+        activitatsDBtn5images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsDBtn5, gridBagConstraints);
+        imagesQPanel.add(activitatsDBtn5images, gridBagConstraints);
 
-        qolButtonGroup6.add(activitatsDBtn4);
-        activitatsDBtn4.setText("3");
+        imagesButtonGroup6.add(activitatsDBtn4images);
+        activitatsDBtn4images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsDBtn4, gridBagConstraints);
+        imagesQPanel.add(activitatsDBtn4images, gridBagConstraints);
 
-        activitatsDBtn3.setText("2");
+        activitatsDBtn3images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsDBtn3, gridBagConstraints);
+        imagesQPanel.add(activitatsDBtn3images, gridBagConstraints);
 
-        jLabel99.setText("<html><center>Totalmente<br>falso");
+        jLabel99images.setText("<html><center>Totalmente<br>falso");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel.add(jLabel99, gridBagConstraints);
+        imagesQPanel.add(jLabel99images, gridBagConstraints);
 
-        jLabel100.setText("<html><center>Parcialmente<br>falso");
+        jLabel100images.setText("<html><center>Parcialmente<br>falso");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel.add(jLabel100, gridBagConstraints);
+        imagesQPanel.add(jLabel100images, gridBagConstraints);
 
-        jLabel125.setText("<html><center>Totalmente<br>verdadero");
+        jLabel125images.setText("<html><center>Totalmente<br>verdadero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 2;
-        rseQPanel.add(jLabel125, gridBagConstraints);
+        imagesQPanel.add(jLabel125images, gridBagConstraints);
 
-        jLabel126.setText("<html><center>Parcialmente<br>verdadero");
+        jLabel126images.setText("<html><center>Parcialmente<br>verdadero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel.add(jLabel126, gridBagConstraints);
+        imagesQPanel.add(jLabel126images, gridBagConstraints);
 
-        jLabel127.setText("1");
+        jLabel127images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        rseQPanel.add(jLabel127, gridBagConstraints);
+        imagesQPanel.add(jLabel127images, gridBagConstraints);
 
-        jLabel128.setText("2");
+        jLabel128images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        rseQPanel.add(jLabel128, gridBagConstraints);
+        imagesQPanel.add(jLabel128images, gridBagConstraints);
 
-        jLabel129.setText("3");
+        jLabel129images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        rseQPanel.add(jLabel129, gridBagConstraints);
+        imagesQPanel.add(jLabel129images, gridBagConstraints);
 
-        jLabel130.setText("5");
+        jLabel130images.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        rseQPanel.add(jLabel130, gridBagConstraints);
+        imagesQPanel.add(jLabel130images, gridBagConstraints);
 
-        jLabel131.setText("6");
+        jLabel131images.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        rseQPanel.add(jLabel131, gridBagConstraints);
+        imagesQPanel.add(jLabel131images, gridBagConstraints);
 
-        jLabel132.setText("7");
+        jLabel132images.setText("7");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
-        rseQPanel.add(jLabel132, gridBagConstraints);
+        imagesQPanel.add(jLabel132images, gridBagConstraints);
 
-        jLabel101.setText("- Soy bastante atractivo físicamente.");
+        jLabel101images.setText("- Soy bastante atractivo físicamente.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        rseQPanel.add(jLabel101, gridBagConstraints);
+        imagesQPanel.add(jLabel101images, gridBagConstraints);
 
-        jLabel1.setText("- Soy una persona honesta.");
+        jLabel1images.setText("- Soy una persona honesta.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel.add(jLabel1, gridBagConstraints);
+        imagesQPanel.add(jLabel1images, gridBagConstraints);
 
-        jLabel2.setText("- Soy sociable.");
+        jLabel2images.setText("- Soy sociable.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
-        rseQPanel.add(jLabel2, gridBagConstraints);
+        imagesQPanel.add(jLabel2images, gridBagConstraints);
 
-        jLabel3.setText("- Estoy habitualmente contento/a.");
+        jLabel3images.setText("- Estoy habitualmente contento/a.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel.add(jLabel3, gridBagConstraints);
+        imagesQPanel.add(jLabel3images, gridBagConstraints);
 
-        jLabel4.setText("- Para mí la familia es importante.");
+        jLabel4images.setText("- Para mí la familia es importante.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel.add(jLabel4, gridBagConstraints);
+        imagesQPanel.add(jLabel4images, gridBagConstraints);
 
-        jLabel5.setText("- Soy bastante serio.");
+        jLabel5images.setText("- Soy bastante serio.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel.add(jLabel5, gridBagConstraints);
+        imagesQPanel.add(jLabel5images, gridBagConstraints);
 
-        jLabel6.setText("4");
+        jLabel6images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        rseQPanel.add(jLabel6, gridBagConstraints);
+        imagesQPanel.add(jLabel6images, gridBagConstraints);
 
-        jLabel10.setText("- Soy más bien una persona triste.");
+        jLabel10images.setText("- Soy más bien una persona triste.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel.add(jLabel10, gridBagConstraints);
+        imagesQPanel.add(jLabel10images, gridBagConstraints);
 
-        qolButtonGroup2.add(orientacioBtn6);
-        orientacioBtn6.setText("2");
+        imagesButtonGroup2.add(orientacioBtn6images);
+        orientacioBtn6images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(orientacioBtn6, gridBagConstraints);
+        imagesQPanel.add(orientacioBtn6images, gridBagConstraints);
 
-        qolButtonGroup3.add(raoBtn6);
-        raoBtn6.setText("3");
+        imagesButtonGroup3.add(raoBtn6images);
+        raoBtn6images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(raoBtn6, gridBagConstraints);
+        imagesQPanel.add(raoBtn6images, gridBagConstraints);
 
-        qolButtonGroup3.add(raoBtn7);
-        raoBtn7.setText("4");
+        imagesButtonGroup3.add(raoBtn7images);
+        raoBtn7images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(raoBtn7, gridBagConstraints);
+        imagesQPanel.add(raoBtn7images, gridBagConstraints);
 
-        qolButtonGroup5.add(activitatsDBtn6);
-        activitatsDBtn6.setText("1");
+        imagesButtonGroup5.add(activitatsDBtn6images);
+        activitatsDBtn6images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsDBtn6, gridBagConstraints);
+        imagesQPanel.add(activitatsDBtn6images, gridBagConstraints);
 
-        qolButtonGroup5.add(raoBtn8);
-        raoBtn8.setText("2");
+        imagesButtonGroup5.add(raoBtn8images);
+        raoBtn8images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(raoBtn8, gridBagConstraints);
+        imagesQPanel.add(raoBtn8images, gridBagConstraints);
 
-        qolButtonGroup6.add(activitatsDBtn7);
-        activitatsDBtn7.setText("1");
+        imagesButtonGroup6.add(activitatsDBtn7images);
+        activitatsDBtn7images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsDBtn7, gridBagConstraints);
+        imagesQPanel.add(activitatsDBtn7images, gridBagConstraints);
 
-        qolButtonGroup7.add(activitatsDBtn8);
-        activitatsDBtn8.setText("1");
+        imagesButtonGroup7.add(activitatsDBtn8images);
+        activitatsDBtn8images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(activitatsDBtn8, gridBagConstraints);
+        imagesQPanel.add(activitatsDBtn8images, gridBagConstraints);
 
-        qolButtonGroup7.add(cuidatBtn5);
-        cuidatBtn5.setText("2");
+        imagesButtonGroup7.add(cuidatBtn5images);
+        cuidatBtn5images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(cuidatBtn5, gridBagConstraints);
+        imagesQPanel.add(cuidatBtn5images, gridBagConstraints);
 
-        qolButtonGroup7.add(cuidatBtn6);
-        cuidatBtn6.setText("3");
+        imagesButtonGroup7.add(cuidatBtn6images);
+        cuidatBtn6images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(cuidatBtn6, gridBagConstraints);
+        imagesQPanel.add(cuidatBtn6images, gridBagConstraints);
 
-        qolButtonGroup7.add(cuidatBtn7);
-        cuidatBtn7.setText("4");
+        imagesButtonGroup7.add(cuidatBtn7images);
+        cuidatBtn7images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel.add(cuidatBtn7, gridBagConstraints);
+        imagesQPanel.add(cuidatBtn7images, gridBagConstraints);
 
-        jLabel220.setText("Puntuació total:");
+        jLabel220images.setText("Puntuació total:");
 
-        jLabel224.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel224.setText("<html><b>SUMA TOTAL COMPONENTES:");
+        jLabel224images.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel224images.setText("<html><b>SUMA TOTAL COMPONENTES:");
 
         IMAGESTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         IMAGESTotal.setText("0");
 
-        rseTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        rseTotal.setText("0");
+        imagesTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        imagesTotal.setText("0");
 
-        rseQPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Autoconciencia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
-        rseQPanel1.setLayout(new java.awt.GridBagLayout());
+        imagesQPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Autoconciencia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        imagesQPanel1.setLayout(new java.awt.GridBagLayout());
 
-        qolButtonGroup23.add(orientacioBtn7);
-        orientacioBtn7.setText("1");
+        imagesButtonGroup23.add(orientacioBtn7images);
+        orientacioBtn7images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(orientacioBtn7, gridBagConstraints);
+        imagesQPanel1.add(orientacioBtn7images, gridBagConstraints);
 
-        qolButtonGroup22.add(memoBtn6);
-        memoBtn6.setText("1");
+        imagesButtonGroup22.add(memoBtn6images);
+        memoBtn6images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(memoBtn6, gridBagConstraints);
+        imagesQPanel1.add(memoBtn6images, gridBagConstraints);
 
-        qolButtonGroup24.add(orientacioBtn8);
-        orientacioBtn8.setText("2");
+        imagesButtonGroup24.add(orientacioBtn8images);
+        orientacioBtn8images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(orientacioBtn8, gridBagConstraints);
+        imagesQPanel1.add(orientacioBtn8images, gridBagConstraints);
 
-        qolButtonGroup22.add(memoBtn7);
-        memoBtn7.setText("2");
+        imagesButtonGroup22.add(memoBtn7images);
+        memoBtn7images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(memoBtn7, gridBagConstraints);
+        imagesQPanel1.add(memoBtn7images, gridBagConstraints);
 
-        qolButtonGroup23.add(orientacioBtn9);
-        orientacioBtn9.setText("3");
+        imagesButtonGroup23.add(orientacioBtn9images);
+        orientacioBtn9images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(orientacioBtn9, gridBagConstraints);
+        imagesQPanel1.add(orientacioBtn9images, gridBagConstraints);
 
-        qolButtonGroup22.add(memoBtn8);
-        memoBtn8.setText("3");
+        imagesButtonGroup22.add(memoBtn8images);
+        memoBtn8images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(memoBtn8, gridBagConstraints);
+        imagesQPanel1.add(memoBtn8images, gridBagConstraints);
 
-        qolButtonGroup22.add(memoBtn9);
-        memoBtn9.setText("4");
+        imagesButtonGroup22.add(memoBtn9images);
+        memoBtn9images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(memoBtn9, gridBagConstraints);
+        imagesQPanel1.add(memoBtn9images, gridBagConstraints);
 
-        qolButtonGroup23.add(orientacioBtn10);
-        orientacioBtn10.setText("4");
+        imagesButtonGroup23.add(orientacioBtn10images);
+        orientacioBtn10images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(orientacioBtn10, gridBagConstraints);
+        imagesQPanel1.add(orientacioBtn10images, gridBagConstraints);
 
-        qolButtonGroup24.add(raoBtn9);
-        raoBtn9.setText("1");
+        imagesButtonGroup24.add(raoBtn9images);
+        raoBtn9images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(raoBtn9, gridBagConstraints);
+        imagesQPanel1.add(raoBtn9images, gridBagConstraints);
 
-        jLabel135.setText("22-");
+        jLabel135images.setText("22-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        rseQPanel1.add(jLabel135, gridBagConstraints);
+        imagesQPanel1.add(jLabel135images, gridBagConstraints);
 
-        jLabel136.setText("23-");
+        jLabel136images.setText("23-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        rseQPanel1.add(jLabel136, gridBagConstraints);
+        imagesQPanel1.add(jLabel136images, gridBagConstraints);
 
-        jLabel137.setText("24-");
+        jLabel137images.setText("24-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        rseQPanel1.add(jLabel137, gridBagConstraints);
+        imagesQPanel1.add(jLabel137images, gridBagConstraints);
 
-        jLabel15.setText("<html> &nbsp No suelo pensar sobre quién soy. <br><i>\"En mí mismo\"");
+        jLabel15images.setText("<html> &nbsp No suelo pensar sobre quién soy. <br><i>\"En mí mismo\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel1.add(jLabel15, gridBagConstraints);
+        imagesQPanel1.add(jLabel15images, gridBagConstraints);
 
-        jLabel16.setText("<html> &nbsp Generalmente presto atención a lo que siento. <br><i>\"Presto atención a mis sentimientos\"");
+        jLabel16images.setText("<html> &nbsp Generalmente presto atención a lo que siento. <br><i>\"Presto atención a mis sentimientos\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
-        rseQPanel1.add(jLabel16, gridBagConstraints);
+        imagesQPanel1.add(jLabel16images, gridBagConstraints);
 
-        jLabel17.setText("<html> &nbsp Me cuesta detectar mis cambios de ánimo. <br><i>\"Humor\".");
+        jLabel17images.setText("<html> &nbsp Me cuesta detectar mis cambios de ánimo. <br><i>\"Humor\".");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel1.add(jLabel17, gridBagConstraints);
+        imagesQPanel1.add(jLabel17images, gridBagConstraints);
 
-        qolButtonGroup23.add(orientacioBtn11);
-        orientacioBtn11.setText("2");
+        imagesButtonGroup23.add(orientacioBtn11images);
+        orientacioBtn11images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(orientacioBtn11, gridBagConstraints);
+        imagesQPanel1.add(orientacioBtn11images, gridBagConstraints);
 
-        qolButtonGroup24.add(raoBtn13);
-        raoBtn13.setText("3");
+        imagesButtonGroup24.add(raoBtn13images);
+        raoBtn13images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(raoBtn13, gridBagConstraints);
+        imagesQPanel1.add(raoBtn13images, gridBagConstraints);
 
-        qolButtonGroup24.add(raoBtn14);
-        raoBtn14.setText("4");
+        imagesButtonGroup24.add(raoBtn14images);
+        raoBtn14images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel1.add(raoBtn14, gridBagConstraints);
+        imagesQPanel1.add(raoBtn14images, gridBagConstraints);
 
-        jLabel115.setText("<html><center>Totalmente<br>falso");
+        jLabel115images.setText("<html><center>Totalmente<br>falso");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel1.add(jLabel115, gridBagConstraints);
+        imagesQPanel1.add(jLabel115images, gridBagConstraints);
 
-        jLabel116.setText("<html><center>Parcialmente<br>falso");
+        jLabel116images.setText("<html><center>Parcialmente<br>falso");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel1.add(jLabel116, gridBagConstraints);
+        imagesQPanel1.add(jLabel116images, gridBagConstraints);
 
-        jLabel161.setText("<html><center>Parcialmente<br>verdadero");
+        jLabel161images.setText("<html><center>Parcialmente<br>verdadero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel1.add(jLabel161, gridBagConstraints);
+        imagesQPanel1.add(jLabel161images, gridBagConstraints);
 
-        jLabel162.setText("<html><center>Totalmente<br>verdadero");
+        jLabel162images.setText("<html><center>Totalmente<br>verdadero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 2;
-        rseQPanel1.add(jLabel162, gridBagConstraints);
+        imagesQPanel1.add(jLabel162images, gridBagConstraints);
 
-        jLabel221.setText("Puntuació total:");
+        jLabel221images.setText("Puntuació total:");
 
-        rseTotal1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        rseTotal1.setText("0");
+        imagesTotal1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        imagesTotal1.setText("0");
 
-        rseQPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Conductual", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
-        rseQPanel2.setLayout(new java.awt.GridBagLayout());
+        imagesQPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Conductual", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        imagesQPanel2.setLayout(new java.awt.GridBagLayout());
 
-        qolButtonGroup9.add(orientacioBtn12);
-        orientacioBtn12.setText("1");
+        imagesButtonGroup9.add(orientacioBtn12images);
+        orientacioBtn12images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(orientacioBtn12, gridBagConstraints);
+        imagesQPanel2.add(orientacioBtn12images, gridBagConstraints);
 
-        qolButtonGroup8.add(memoBtn10);
-        memoBtn10.setText("1");
+        imagesButtonGroup8.add(memoBtn10images);
+        memoBtn10images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(memoBtn10, gridBagConstraints);
+        imagesQPanel2.add(memoBtn10images, gridBagConstraints);
 
-        qolButtonGroup10.add(orientacioBtn13);
-        orientacioBtn13.setText("2");
+        imagesButtonGroup10.add(orientacioBtn13images);
+        orientacioBtn13images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(orientacioBtn13, gridBagConstraints);
+        imagesQPanel2.add(orientacioBtn13images, gridBagConstraints);
 
-        qolButtonGroup8.add(memoBtn11);
-        memoBtn11.setText("2");
+        imagesButtonGroup8.add(memoBtn11images);
+        memoBtn11images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(memoBtn11, gridBagConstraints);
+        imagesQPanel2.add(memoBtn11images, gridBagConstraints);
 
-        qolButtonGroup9.add(orientacioBtn14);
-        orientacioBtn14.setText("3");
+        imagesButtonGroup9.add(orientacioBtn14images);
+        orientacioBtn14images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(orientacioBtn14, gridBagConstraints);
+        imagesQPanel2.add(orientacioBtn14images, gridBagConstraints);
 
-        qolButtonGroup8.add(memoBtn12);
-        memoBtn12.setText("3");
+        imagesButtonGroup8.add(memoBtn12images);
+        memoBtn12images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(memoBtn12, gridBagConstraints);
+        imagesQPanel2.add(memoBtn12images, gridBagConstraints);
 
-        qolButtonGroup8.add(memoBtn13);
-        memoBtn13.setText("4");
+        imagesButtonGroup8.add(memoBtn13images);
+        memoBtn13images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(memoBtn13, gridBagConstraints);
+        imagesQPanel2.add(memoBtn13images, gridBagConstraints);
 
-        qolButtonGroup9.add(orientacioBtn15);
-        orientacioBtn15.setText("4");
+        imagesButtonGroup9.add(orientacioBtn15images);
+        orientacioBtn15images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(orientacioBtn15, gridBagConstraints);
+        imagesQPanel2.add(orientacioBtn15images, gridBagConstraints);
 
-        qolButtonGroup10.add(raoBtn16);
-        raoBtn16.setText("1");
+        imagesButtonGroup10.add(raoBtn16images);
+        raoBtn16images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(raoBtn16, gridBagConstraints);
+        imagesQPanel2.add(raoBtn16images, gridBagConstraints);
 
-        qolButtonGroup11.add(raoBtn17);
-        raoBtn17.setText("4");
+        imagesButtonGroup11.add(raoBtn17images);
+        raoBtn17images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(raoBtn17, gridBagConstraints);
+        imagesQPanel2.add(raoBtn17images, gridBagConstraints);
 
-        qolButtonGroup13.add(raoBtn18);
-        raoBtn18.setText("2");
+        imagesButtonGroup13.add(raoBtn18images);
+        raoBtn18images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(raoBtn18, gridBagConstraints);
+        imagesQPanel2.add(raoBtn18images, gridBagConstraints);
 
-        qolButtonGroup11.add(raoBtn19);
-        raoBtn19.setText("3");
+        imagesButtonGroup11.add(raoBtn19images);
+        raoBtn19images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(raoBtn19, gridBagConstraints);
+        imagesQPanel2.add(raoBtn19images, gridBagConstraints);
 
-        qolButtonGroup11.add(activitatsFBtn10);
-        activitatsFBtn10.setText("1");
+        imagesButtonGroup11.add(activitatsFBtn10images);
+        activitatsFBtn10images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsFBtn10, gridBagConstraints);
+        imagesQPanel2.add(activitatsFBtn10images, gridBagConstraints);
 
-        qolButtonGroup11.add(activitatsFBtn11);
-        activitatsFBtn11.setText("2");
+        imagesButtonGroup11.add(activitatsFBtn11images);
+        activitatsFBtn11images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsFBtn11, gridBagConstraints);
+        imagesQPanel2.add(activitatsFBtn11images, gridBagConstraints);
 
-        qolButtonGroup12.add(activitatsFBtn12);
-        activitatsFBtn12.setText("3");
+        imagesButtonGroup12.add(activitatsFBtn12images);
+        activitatsFBtn12images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsFBtn12, gridBagConstraints);
+        imagesQPanel2.add(activitatsFBtn12images, gridBagConstraints);
 
-        qolButtonGroup12.add(activitatsFBtn13);
-        activitatsFBtn13.setText("4");
+        imagesButtonGroup12.add(activitatsFBtn13images);
+        activitatsFBtn13images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsFBtn13, gridBagConstraints);
+        imagesQPanel2.add(activitatsFBtn13images, gridBagConstraints);
 
-        qolButtonGroup13.add(activitatsDBtn20);
-        activitatsDBtn20.setText("4");
+        imagesButtonGroup13.add(activitatsDBtn20images);
+        activitatsDBtn20images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsDBtn20, gridBagConstraints);
+        imagesQPanel2.add(activitatsDBtn20images, gridBagConstraints);
 
-        qolButtonGroup13.add(activitatsDBtn21);
-        activitatsDBtn21.setText("3");
+        imagesButtonGroup13.add(activitatsDBtn21images);
+        activitatsDBtn21images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsDBtn21, gridBagConstraints);
+        imagesQPanel2.add(activitatsDBtn21images, gridBagConstraints);
 
-        activitatsDBtn23.setText("2");
+        activitatsDBtn23images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsDBtn23, gridBagConstraints);
+        imagesQPanel2.add(activitatsDBtn23images, gridBagConstraints);
 
-        jLabel143.setText("8-");
+        jLabel143images.setText("8-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        rseQPanel2.add(jLabel143, gridBagConstraints);
+        imagesQPanel2.add(jLabel143images, gridBagConstraints);
 
-        jLabel144.setText("9-");
+        jLabel144images.setText("9-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        rseQPanel2.add(jLabel144, gridBagConstraints);
+        imagesQPanel2.add(jLabel144images, gridBagConstraints);
 
-        jLabel145.setText("10-");
+        jLabel145images.setText("10-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        rseQPanel2.add(jLabel145, gridBagConstraints);
+        imagesQPanel2.add(jLabel145images, gridBagConstraints);
 
-        jLabel146.setText("12-");
+        jLabel146images.setText("12-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        rseQPanel2.add(jLabel146, gridBagConstraints);
+        imagesQPanel2.add(jLabel146images, gridBagConstraints);
 
-        jLabel147.setText("13-");
+        jLabel147images.setText("13-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        rseQPanel2.add(jLabel147, gridBagConstraints);
+        imagesQPanel2.add(jLabel147images, gridBagConstraints);
 
-        jLabel148.setText("14-");
+        jLabel148images.setText("14-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
-        rseQPanel2.add(jLabel148, gridBagConstraints);
+        imagesQPanel2.add(jLabel148images, gridBagConstraints);
 
-        jLabel107.setText("<html>&nbsp No me importa mi apariencia. <i><br>\"La imágen que doy a los demás\"");
+        jLabel107images.setText("<html>&nbsp No me importa mi apariencia. <i><br>\"La imágen que doy a los demás\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        rseQPanel2.add(jLabel107, gridBagConstraints);
+        imagesQPanel2.add(jLabel107images, gridBagConstraints);
 
-        jLabel28.setText("<html> &nbsp A veces actúo de forma inmoral. <i><br>\"A veces actúo de forma inconsciente\"<br>\"A veces actúo sin escrúpulos\"<br>\"A veces actúo contra la ética, las normas sociales\"");
+        jLabel28images.setText("<html> &nbsp A veces actúo de forma inmoral. <i><br>\"A veces actúo de forma inconsciente\"<br>\"A veces actúo sin escrúpulos\"<br>\"A veces actúo contra la ética, las normas sociales\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel2.add(jLabel28, gridBagConstraints);
+        imagesQPanel2.add(jLabel28images, gridBagConstraints);
 
-        jLabel29.setText(" Me cuesta hablar con gente que no conozco.");
+        jLabel29images.setText(" Me cuesta hablar con gente que no conozco.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
-        rseQPanel2.add(jLabel29, gridBagConstraints);
+        imagesQPanel2.add(jLabel29images, gridBagConstraints);
 
-        jLabel30.setText("<html> &nbsp Carezco de autoconfianza. <i><br>\"No confío en mí mismo\"");
+        jLabel30images.setText("<html> &nbsp Carezco de autoconfianza. <i><br>\"No confío en mí mismo\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel2.add(jLabel30, gridBagConstraints);
+        imagesQPanel2.add(jLabel30images, gridBagConstraints);
 
-        jLabel32.setText("<html>&nbsp Rara vez discuto con mi familia. <i><br>\"No suelo o acostumbro discutir con mi familia\"");
+        jLabel32images.setText("<html>&nbsp Rara vez discuto con mi familia. <i><br>\"No suelo o acostumbro discutir con mi familia\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel2.add(jLabel32, gridBagConstraints);
+        imagesQPanel2.add(jLabel32images, gridBagConstraints);
 
-        jLabel33.setText("<html>&nbsp Tengo dificultades para aprender. <i><br>\"Me cuesta aprender\"");
+        jLabel33images.setText("<html>&nbsp Tengo dificultades para aprender. <i><br>\"Me cuesta aprender\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel2.add(jLabel33, gridBagConstraints);
+        imagesQPanel2.add(jLabel33images, gridBagConstraints);
 
-        jLabel34.setText("11-");
+        jLabel34images.setText("11-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        rseQPanel2.add(jLabel34, gridBagConstraints);
+        imagesQPanel2.add(jLabel34images, gridBagConstraints);
 
-        jLabel38.setText(" No me suelo enfadar.");
+        jLabel38images.setText(" No me suelo enfadar.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel2.add(jLabel38, gridBagConstraints);
+        imagesQPanel2.add(jLabel38images, gridBagConstraints);
 
-        qolButtonGroup9.add(orientacioBtn16);
-        orientacioBtn16.setText("2");
+        imagesButtonGroup9.add(orientacioBtn16images);
+        orientacioBtn16images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(orientacioBtn16, gridBagConstraints);
+        imagesQPanel2.add(orientacioBtn16images, gridBagConstraints);
 
-        qolButtonGroup10.add(raoBtn20);
-        raoBtn20.setText("3");
+        imagesButtonGroup10.add(raoBtn20images);
+        raoBtn20images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(raoBtn20, gridBagConstraints);
+        imagesQPanel2.add(raoBtn20images, gridBagConstraints);
 
-        qolButtonGroup10.add(raoBtn21);
-        raoBtn21.setText("4");
+        imagesButtonGroup10.add(raoBtn21images);
+        raoBtn21images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(raoBtn21, gridBagConstraints);
+        imagesQPanel2.add(raoBtn21images, gridBagConstraints);
 
-        qolButtonGroup12.add(activitatsDBtn24);
-        activitatsDBtn24.setText("1");
+        imagesButtonGroup12.add(activitatsDBtn24images);
+        activitatsDBtn24images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsDBtn24, gridBagConstraints);
+        imagesQPanel2.add(activitatsDBtn24images, gridBagConstraints);
 
-        qolButtonGroup12.add(raoBtn22);
-        raoBtn22.setText("2");
+        imagesButtonGroup12.add(raoBtn22images);
+        raoBtn22images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(raoBtn22, gridBagConstraints);
+        imagesQPanel2.add(raoBtn22images, gridBagConstraints);
 
-        qolButtonGroup13.add(activitatsDBtn25);
-        activitatsDBtn25.setText("1");
+        imagesButtonGroup13.add(activitatsDBtn25images);
+        activitatsDBtn25images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsDBtn25, gridBagConstraints);
+        imagesQPanel2.add(activitatsDBtn25images, gridBagConstraints);
 
-        qolButtonGroup14.add(activitatsDBtn26);
-        activitatsDBtn26.setText("1");
+        imagesButtonGroup14.add(activitatsDBtn26images);
+        activitatsDBtn26images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(activitatsDBtn26, gridBagConstraints);
+        imagesQPanel2.add(activitatsDBtn26images, gridBagConstraints);
 
-        qolButtonGroup14.add(cuidatBtn29);
-        cuidatBtn29.setText("2");
+        imagesButtonGroup14.add(cuidatBtn29images);
+        cuidatBtn29images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(cuidatBtn29, gridBagConstraints);
+        imagesQPanel2.add(cuidatBtn29images, gridBagConstraints);
 
-        qolButtonGroup14.add(cuidatBtn30);
-        cuidatBtn30.setText("3");
+        imagesButtonGroup14.add(cuidatBtn30images);
+        cuidatBtn30images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(cuidatBtn30, gridBagConstraints);
+        imagesQPanel2.add(cuidatBtn30images, gridBagConstraints);
 
-        qolButtonGroup14.add(cuidatBtn31);
-        cuidatBtn31.setText("4");
+        imagesButtonGroup14.add(cuidatBtn31images);
+        cuidatBtn31images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel2.add(cuidatBtn31, gridBagConstraints);
+        imagesQPanel2.add(cuidatBtn31images, gridBagConstraints);
 
-        jLabel111.setText("<html><center>Totalmente<br>falso");
+        jLabel111images.setText("<html><center>Totalmente<br>falso");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel2.add(jLabel111, gridBagConstraints);
+        imagesQPanel2.add(jLabel111images, gridBagConstraints);
 
-        jLabel112.setText("<html><center>Parcialmente<br>falso");
+        jLabel112images.setText("<html><center>Parcialmente<br>falso");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel2.add(jLabel112, gridBagConstraints);
+        imagesQPanel2.add(jLabel112images, gridBagConstraints);
 
-        jLabel157.setText("<html><center>Parcialmente<br>verdadero");
+        jLabel157images.setText("<html><center>Parcialmente<br>verdadero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel2.add(jLabel157, gridBagConstraints);
+        imagesQPanel2.add(jLabel157images, gridBagConstraints);
 
-        jLabel158.setText("<html><center>Totalmente<br>verdadero");
+        jLabel158images.setText("<html><center>Totalmente<br>verdadero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 2;
-        rseQPanel2.add(jLabel158, gridBagConstraints);
+        imagesQPanel2.add(jLabel158images, gridBagConstraints);
 
-        jLabel222.setText("Puntuació total:");
+        jLabel222images.setText("Puntuació total:");
 
-        rseTotal2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        rseTotal2.setText("0");
+        imagesTotal2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        imagesTotal2.setText("0");
 
-        rseQPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Autosatisfacción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
-        rseQPanel3.setLayout(new java.awt.GridBagLayout());
+        imagesQPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Autosatisfacción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        imagesQPanel3.setLayout(new java.awt.GridBagLayout());
 
-        qolButtonGroup16.add(orientacioBtn17);
-        orientacioBtn17.setText("1");
+        imagesButtonGroup16.add(orientacioBtn17images);
+        orientacioBtn17images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(orientacioBtn17, gridBagConstraints);
+        imagesQPanel3.add(orientacioBtn17images, gridBagConstraints);
 
-        qolButtonGroup15.add(memoBtn14);
-        memoBtn14.setText("1");
+        imagesButtonGroup15.add(memoBtn14images);
+        memoBtn14images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(memoBtn14, gridBagConstraints);
+        imagesQPanel3.add(memoBtn14images, gridBagConstraints);
 
-        qolButtonGroup17.add(orientacioBtn18);
-        orientacioBtn18.setText("2");
+        imagesButtonGroup17.add(orientacioBtn18images);
+        orientacioBtn18images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(orientacioBtn18, gridBagConstraints);
+        imagesQPanel3.add(orientacioBtn18images, gridBagConstraints);
 
-        qolButtonGroup15.add(memoBtn15);
-        memoBtn15.setText("2");
+        imagesButtonGroup15.add(memoBtn15images);
+        memoBtn15images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(memoBtn15, gridBagConstraints);
+        imagesQPanel3.add(memoBtn15images, gridBagConstraints);
 
-        qolButtonGroup16.add(orientacioBtn19);
-        orientacioBtn19.setText("3");
+        imagesButtonGroup16.add(orientacioBtn19images);
+        orientacioBtn19images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(orientacioBtn19, gridBagConstraints);
+        imagesQPanel3.add(orientacioBtn19images, gridBagConstraints);
 
-        qolButtonGroup15.add(memoBtn16);
-        memoBtn16.setText("3");
+        imagesButtonGroup15.add(memoBtn16images);
+        memoBtn16images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(memoBtn16, gridBagConstraints);
+        imagesQPanel3.add(memoBtn16images, gridBagConstraints);
 
-        qolButtonGroup15.add(memoBtn17);
-        memoBtn17.setText("4");
+        imagesButtonGroup15.add(memoBtn17images);
+        memoBtn17images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(memoBtn17, gridBagConstraints);
+        imagesQPanel3.add(memoBtn17images, gridBagConstraints);
 
-        qolButtonGroup16.add(orientacioBtn20);
-        orientacioBtn20.setText("4");
+        imagesButtonGroup16.add(orientacioBtn20images);
+        orientacioBtn20images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(orientacioBtn20, gridBagConstraints);
+        imagesQPanel3.add(orientacioBtn20images, gridBagConstraints);
 
-        qolButtonGroup17.add(raoBtn23);
-        raoBtn23.setText("1");
+        imagesButtonGroup17.add(raoBtn23images);
+        raoBtn23images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(raoBtn23, gridBagConstraints);
+        imagesQPanel3.add(raoBtn23images, gridBagConstraints);
 
-        qolButtonGroup18.add(raoBtn24);
-        raoBtn24.setText("4");
+        imagesButtonGroup18.add(raoBtn24images);
+        raoBtn24images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(raoBtn24, gridBagConstraints);
+        imagesQPanel3.add(raoBtn24images, gridBagConstraints);
 
-        qolButtonGroup20.add(raoBtn25);
-        raoBtn25.setText("2");
+        imagesButtonGroup20.add(raoBtn25images);
+        raoBtn25images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(raoBtn25, gridBagConstraints);
+        imagesQPanel3.add(raoBtn25images, gridBagConstraints);
 
-        qolButtonGroup18.add(raoBtn26);
-        raoBtn26.setText("3");
+        imagesButtonGroup18.add(raoBtn26images);
+        raoBtn26images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(raoBtn26, gridBagConstraints);
+        imagesQPanel3.add(raoBtn26images, gridBagConstraints);
 
-        qolButtonGroup18.add(activitatsFBtn14);
-        activitatsFBtn14.setText("1");
+        imagesButtonGroup18.add(activitatsFBtn14images);
+        activitatsFBtn14images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsFBtn14, gridBagConstraints);
+        imagesQPanel3.add(activitatsFBtn14images, gridBagConstraints);
 
-        qolButtonGroup18.add(activitatsFBtn15);
-        activitatsFBtn15.setText("2");
+        imagesButtonGroup18.add(activitatsFBtn15images);
+        activitatsFBtn15images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsFBtn15, gridBagConstraints);
+        imagesQPanel3.add(activitatsFBtn15images, gridBagConstraints);
 
-        qolButtonGroup19.add(activitatsFBtn16);
-        activitatsFBtn16.setText("3");
+        imagesButtonGroup19.add(activitatsFBtn16images);
+        activitatsFBtn16images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsFBtn16, gridBagConstraints);
+        imagesQPanel3.add(activitatsFBtn16images, gridBagConstraints);
 
-        qolButtonGroup19.add(activitatsFBtn17);
-        activitatsFBtn17.setText("4");
+        imagesButtonGroup19.add(activitatsFBtn17images);
+        activitatsFBtn17images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsFBtn17, gridBagConstraints);
+        imagesQPanel3.add(activitatsFBtn17images, gridBagConstraints);
 
-        qolButtonGroup20.add(activitatsDBtn29);
-        activitatsDBtn29.setText("4");
+        imagesButtonGroup20.add(activitatsDBtn29images);
+        activitatsDBtn29images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsDBtn29, gridBagConstraints);
+        imagesQPanel3.add(activitatsDBtn29images, gridBagConstraints);
 
-        qolButtonGroup20.add(activitatsDBtn30);
-        activitatsDBtn30.setText("3");
+        imagesButtonGroup20.add(activitatsDBtn30images);
+        activitatsDBtn30images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsDBtn30, gridBagConstraints);
+        imagesQPanel3.add(activitatsDBtn30images, gridBagConstraints);
 
-        activitatsDBtn32.setText("2");
+        activitatsDBtn32images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsDBtn32, gridBagConstraints);
+        imagesQPanel3.add(activitatsDBtn32images, gridBagConstraints);
 
-        jLabel151.setText("15-");
+        jLabel151images.setText("15-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        rseQPanel3.add(jLabel151, gridBagConstraints);
+        imagesQPanel3.add(jLabel151images, gridBagConstraints);
 
-        jLabel152.setText("16-");
+        jLabel152images.setText("16-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        rseQPanel3.add(jLabel152, gridBagConstraints);
+        imagesQPanel3.add(jLabel152images, gridBagConstraints);
 
-        jLabel153.setText("17-");
+        jLabel153images.setText("17-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        rseQPanel3.add(jLabel153, gridBagConstraints);
+        imagesQPanel3.add(jLabel153images, gridBagConstraints);
 
-        jLabel154.setText("19-");
+        jLabel154images.setText("19-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        rseQPanel3.add(jLabel154, gridBagConstraints);
+        imagesQPanel3.add(jLabel154images, gridBagConstraints);
 
-        jLabel155.setText("20-");
+        jLabel155images.setText("20-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        rseQPanel3.add(jLabel155, gridBagConstraints);
+        imagesQPanel3.add(jLabel155images, gridBagConstraints);
 
-        jLabel156.setText("21-");
+        jLabel156images.setText("21-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
-        rseQPanel3.add(jLabel156, gridBagConstraints);
+        imagesQPanel3.add(jLabel156images, gridBagConstraints);
 
-        jLabel110.setText("<html> &nbsp Estoy satisfecho con mi imágen <br><i>\"Aspecto físico\"");
+        jLabel110images.setText("<html> &nbsp Estoy satisfecho con mi imágen <br><i>\"Aspecto físico\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        rseQPanel3.add(jLabel110, gridBagConstraints);
+        imagesQPanel3.add(jLabel110images, gridBagConstraints);
 
-        jLabel42.setText("<html> &nbsp Miento con frecuencia. <br><i>\"A menudo\"");
+        jLabel42images.setText("<html> &nbsp Miento con frecuencia. <br><i>\"A menudo\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel3.add(jLabel42, gridBagConstraints);
+        imagesQPanel3.add(jLabel42images, gridBagConstraints);
 
-        jLabel43.setText(" Debería ser más amable con la gente.");
+        jLabel43images.setText(" Debería ser más amable con la gente.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
-        rseQPanel3.add(jLabel43, gridBagConstraints);
+        imagesQPanel3.add(jLabel43images, gridBagConstraints);
 
-        jLabel44.setText(" Estoy contento con quién soy.");
+        jLabel44images.setText(" Estoy contento con quién soy.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel3.add(jLabel44, gridBagConstraints);
+        imagesQPanel3.add(jLabel44images, gridBagConstraints);
 
-        jLabel45.setText("<html> &nbsp Exijo demasiado de la gente de mi alrededor.<br><i>\"Pido más de lo que los demás me pueden dar\"");
+        jLabel45images.setText("<html> &nbsp Exijo demasiado de la gente de mi alrededor.<br><i>\"Pido más de lo que los demás me pueden dar\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel3.add(jLabel45, gridBagConstraints);
+        imagesQPanel3.add(jLabel45images, gridBagConstraints);
 
-        jLabel46.setText("<html> &nbsp Estoy satisfecho con mis habilidades intelectuales.<br><i>\"Inteligencia\"");
+        jLabel46images.setText("<html> &nbsp Estoy satisfecho con mis habilidades intelectuales.<br><i>\"Inteligencia\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel3.add(jLabel46, gridBagConstraints);
+        imagesQPanel3.add(jLabel46images, gridBagConstraints);
 
-        jLabel47.setText("18-");
+        jLabel47images.setText("18-");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        rseQPanel3.add(jLabel47, gridBagConstraints);
+        imagesQPanel3.add(jLabel47images, gridBagConstraints);
 
-        jLabel51.setText("<html> &nbsp Vivo demasiado en el pasado. <br><i>\"Siempre pienso en el pasado en vez de<br> en el presente o futuro\"");
+        jLabel51images.setText("<html> &nbsp Vivo demasiado en el pasado. <br><i>\"Siempre pienso en el pasado en vez de<br> en el presente o futuro\"");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        rseQPanel3.add(jLabel51, gridBagConstraints);
+        imagesQPanel3.add(jLabel51images, gridBagConstraints);
 
-        qolButtonGroup16.add(orientacioBtn21);
-        orientacioBtn21.setText("2");
+        imagesButtonGroup16.add(orientacioBtn21images);
+        orientacioBtn21images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(orientacioBtn21, gridBagConstraints);
+        imagesQPanel3.add(orientacioBtn21images, gridBagConstraints);
 
-        qolButtonGroup17.add(raoBtn27);
-        raoBtn27.setText("3");
+        imagesButtonGroup17.add(raoBtn27images);
+        raoBtn27images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(raoBtn27, gridBagConstraints);
+        imagesQPanel3.add(raoBtn27images, gridBagConstraints);
 
-        qolButtonGroup17.add(raoBtn28);
-        raoBtn28.setText("4");
+        imagesButtonGroup17.add(raoBtn28images);
+        raoBtn28images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(raoBtn28, gridBagConstraints);
+        imagesQPanel3.add(raoBtn28images, gridBagConstraints);
 
-        qolButtonGroup19.add(activitatsDBtn33);
-        activitatsDBtn33.setText("1");
+        imagesButtonGroup19.add(activitatsDBtn33images);
+        activitatsDBtn33images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsDBtn33, gridBagConstraints);
+        imagesQPanel3.add(activitatsDBtn33images, gridBagConstraints);
 
-        qolButtonGroup19.add(raoBtn29);
-        raoBtn29.setText("2");
+        imagesButtonGroup19.add(raoBtn29images);
+        raoBtn29images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(raoBtn29, gridBagConstraints);
+        imagesQPanel3.add(raoBtn29images, gridBagConstraints);
 
-        qolButtonGroup20.add(activitatsDBtn34);
-        activitatsDBtn34.setText("1");
+        imagesButtonGroup20.add(activitatsDBtn34images);
+        activitatsDBtn34images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsDBtn34, gridBagConstraints);
+        imagesQPanel3.add(activitatsDBtn34images, gridBagConstraints);
 
-        qolButtonGroup21.add(activitatsDBtn35);
-        activitatsDBtn35.setText("1");
+        imagesButtonGroup21.add(activitatsDBtn35images);
+        activitatsDBtn35images.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(activitatsDBtn35, gridBagConstraints);
+        imagesQPanel3.add(activitatsDBtn35images, gridBagConstraints);
 
-        qolButtonGroup21.add(cuidatBtn41);
-        cuidatBtn41.setText("2");
+        imagesButtonGroup21.add(cuidatBtn41images);
+        cuidatBtn41images.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(cuidatBtn41, gridBagConstraints);
+        imagesQPanel3.add(cuidatBtn41images, gridBagConstraints);
 
-        qolButtonGroup21.add(cuidatBtn42);
-        cuidatBtn42.setText("3");
+        imagesButtonGroup21.add(cuidatBtn42images);
+        cuidatBtn42images.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(cuidatBtn42, gridBagConstraints);
+        imagesQPanel3.add(cuidatBtn42images, gridBagConstraints);
 
-        qolButtonGroup21.add(cuidatBtn43);
-        cuidatBtn43.setText("4");
+        imagesButtonGroup21.add(cuidatBtn43images);
+        cuidatBtn43images.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        rseQPanel3.add(cuidatBtn43, gridBagConstraints);
+        imagesQPanel3.add(cuidatBtn43images, gridBagConstraints);
 
-        jLabel113.setText("<html><center>Totalmente<br>falso");
+        jLabel113images.setText("<html><center>Totalmente<br>falso");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel3.add(jLabel113, gridBagConstraints);
+        imagesQPanel3.add(jLabel113images, gridBagConstraints);
 
-        jLabel114.setText("<html><center>Parcialmente<br>falso");
+        jLabel114images.setText("<html><center>Parcialmente<br>falso");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel3.add(jLabel114, gridBagConstraints);
+        imagesQPanel3.add(jLabel114images, gridBagConstraints);
 
-        jLabel159.setText("<html><center>Parcialmente<br>verdadero");
+        jLabel159images.setText("<html><center>Parcialmente<br>verdadero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        rseQPanel3.add(jLabel159, gridBagConstraints);
+        imagesQPanel3.add(jLabel159images, gridBagConstraints);
 
-        jLabel160.setText("<html><center>Totalmente<br>verdadero");
+        jLabel160images.setText("<html><center>Totalmente<br>verdadero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 2;
-        rseQPanel3.add(jLabel160, gridBagConstraints);
+        imagesQPanel3.add(jLabel160images, gridBagConstraints);
 
-        jLabel223.setText("Puntuació total:");
+        jLabel223images.setText("Puntuació total:");
 
-        rseTotal3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        rseTotal3.setText("0");
+        imagesTotal3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        imagesTotal3.setText("0");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel14.setText("IMAGE test");
+        jLabel14images.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel14images.setText("IMAGE test");
 
-        jLabel31.setText("Edad Subjetiva:");
+        jLabel31images.setText("Edad Subjetiva:");
 
-        jLabel55.setText("Edad Real:");
+        jLabel55images.setText("Edad Real:");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextField1images.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextField1imagesActionPerformed(evt);
             }
         });
 
-        jTextField2.setToolTipText("");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jTextField2images.setToolTipText("");
+        jTextField2images.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jTextField2imagesActionPerformed(evt);
             }
         });
 
@@ -1540,9 +1540,9 @@ public class IMAGE extends Test {
             IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                 .addGap(354, 354, 354)
-                .addComponent(jLabel223)
+                .addComponent(jLabel223images)
                 .addGap(0, 0, 0)
-                .addComponent(rseTotal3)
+                .addComponent(imagesTotal3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1553,33 +1553,33 @@ public class IMAGE extends Test {
                                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                                         .addGap(261, 261, 261)
-                                        .addComponent(jLabel220)
+                                        .addComponent(jLabel220images)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rseTotal))
-                                    .addComponent(rseQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(imagesTotal))
+                                    .addComponent(imagesQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rseQPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(imagesQPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IMAGESQPanelLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel222)
+                                        .addComponent(jLabel222images)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rseTotal2)
+                                        .addComponent(imagesTotal2)
                                         .addGap(71, 71, 71))))
                             .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                .addComponent(rseQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(imagesQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(rseQPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(imagesQPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IMAGESQPanelLayout.createSequentialGroup()
-                                                .addComponent(jLabel221)
+                                                .addComponent(jLabel221images)
                                                 .addGap(0, 0, 0)
-                                                .addComponent(rseTotal1)
+                                                .addComponent(imagesTotal1)
                                                 .addGap(74, 74, 74))))
                                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                                         .addGap(118, 118, 118)
-                                        .addComponent(jLabel224, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel224images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(IMAGESTotal)
                                         .addGap(0, 0, Short.MAX_VALUE))))))
@@ -1587,56 +1587,56 @@ public class IMAGE extends Test {
                         .addGap(22, 22, 22)
                         .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel31)
+                                .addComponent(jLabel31images)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField2images, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(51, 51, 51)
-                                .addComponent(jLabel55)
+                                .addComponent(jLabel55images)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel14))))
+                                .addComponent(jTextField1images, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel14images))))
                 .addContainerGap(182, Short.MAX_VALUE))
         );
         IMAGESQPanelLayout.setVerticalGroup(
             IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IMAGESQPanelLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel14)
+                .addComponent(jLabel14images)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(jLabel55)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel31images)
+                    .addComponent(jLabel55images)
+                    .addComponent(jTextField1images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rseQPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rseQPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE))
+                    .addComponent(imagesQPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(imagesQPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel220)
-                        .addComponent(rseTotal))
+                        .addComponent(jLabel220images)
+                        .addComponent(imagesTotal))
                     .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel222)
-                        .addComponent(rseTotal2)))
+                        .addComponent(jLabel222images)
+                        .addComponent(imagesTotal2)))
                 .addGap(18, 18, 18)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                        .addComponent(rseQPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(imagesQPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel221)
-                            .addComponent(rseTotal1))
+                            .addComponent(jLabel221images)
+                            .addComponent(imagesTotal1))
                         .addGap(43, 43, 43)
                         .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel224, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel224images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(IMAGESTotal)))
-                    .addComponent(rseQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(imagesQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel223)
-                    .addComponent(rseTotal3))
+                    .addComponent(jLabel223images)
+                    .addComponent(imagesTotal3))
                 .addGap(67, 67, 67))
         );
 
@@ -1644,23 +1644,23 @@ public class IMAGE extends Test {
 
         add(IMAGEScroll, "card1");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("IMAGE TEST: Instrucciones\n\nSi la memoria autobiográfica es realmente crucial para la construcción del sentido de la identidad \ny para el sentimiento de autosuficiencia (Conway, 2005), qué pasa con el sentido de la identidad en \nlos pacientes que sufren de trastornos episódicos graves de memoria y que son, por tanto, incapaces \nde revivir eventos personales con “calidez e intimidad”. \nLa investigación sugiere que algunos componentes de la autoestima en pacientes con EA se deterioran \ncon el progreso de la enfermedad, mientras que otros parecen estar preservados, al menos parcialmente. \n\nEl IMAGE test, refleja el sentido general del individuo sobre su identidad y el nivel asociado \nde autoestima indicando si tiende a tener una visión positiva o negativa de sí mismo.\n \nInstrucciones de uso: \n\n1. Preguntar su edad subjetiva y compararla con la real. Si está por debajo de la real se atribuye \nvalor negativo. Estimación subjetiva de su propia edad, que es una de auto-representaciones que \nnecesita ser continuamente actualizada durante la vida.\n\n2. El examinador leerá la premisa y el paciente deberá responder si la considera verdadera o falsa. \nSi no la entiende el evaluador puede recurrir a la explicación descrita dentro del paréntesis. Las \ninstrucciones se pueden repetir tantas veces como haga falta. \n\n3. Una vez haya respondido si es verdadero o falso, el evaluador le preguntará cuánto de verdadero \n(totalmente o parcialmente) o, por el contrario, cuánto de falso (totalmente o verdaderamente) y \nlo anotará en la escala tipo Likert que aparece debajo de cada ítem. \n\n4. El cuestionario se evalúa contando las puntuaciones que van del 1-4 en la escala tipo Likert y \nse suman los ítems que se corresponden con la misma categoría (ejemplo: se suman las respuestas de \nlas escalas de los ítems 1-2-3-4-5-6-7 para obtener el resultado de identidad), obteniendo un \nresultado para cada una de las 4. \n\ta.Identidad (máx. 28): refleja cómo los participantes se describen a ellos mismos cuando \n\t  se refieren a quién fueron. \n\tb.Conductual (máx. 28): refleja cómo los participantes se describen cuando se refieren a \n\t  cómo se comportan.\n\tc.Autosatisfacción (máx. 28): refleja la forma en que los participantes se describen \n\t  cuando se refieren a cómo de contentos están con ellos mismos. \n\td.Autoconciencia privada (máx. 12): refleja la forma en que los participantes se describen \n\t  cuando se refieren a su habilidad de observarse y analizarse, sobretodo para los aspectos \n\t  personales y difícilmente accesibles para la curiosidad de otros, como sus propios sentimientos. \n\n5.La puntuación total se obtiene a partir de la suma de los resultados de los 4 componentes del Autoconcepto. \nFinalmente se suman todos ellos (identidad, conductual, autosatisfacción y autoconciencia), que son 4 y se \nobtiene una puntuación total que puede ser como máximo de 96. La puntuación total refleja el sentido de \nidentidad y nivel asociado de autoestima, indicando si tiende a tener una opinión sobre sí mismo generalmente \npositiva o generalmente negativa. Se debe repetir el mismo test “15 días” después de la intervención cognitiva.\n");
-        jTextArea1.setToolTipText("");
-        jTextArea1.setWrapStyleWord(true);
-        IMAGEScrollInstructions.setViewportView(jTextArea1);
+        jTextArea1images.setColumns(20);
+        jTextArea1images.setRows(5);
+        jTextArea1images.setText("IMAGE TEST: Instrucciones\n\nSi la memoria autobiográfica es realmente crucial para la construcción del sentido de la identidad \ny para el sentimiento de autosuficiencia (Conway, 2005), qué pasa con el sentido de la identidad en \nlos pacientes que sufren de trastornos episódicos graves de memoria y que son, por tanto, incapaces \nde revivir eventos personales con “calidez e intimidad”. \nLa investigación sugiere que algunos componentes de la autoestima en pacientes con EA se deterioran \ncon el progreso de la enfermedad, mientras que otros parecen estar preservados, al menos parcialmente. \n\nEl IMAGE test, refleja el sentido general del individuo sobre su identidad y el nivel asociado \nde autoestima indicando si tiende a tener una visión positiva o negativa de sí mismo.\n \nInstrucciones de uso: \n\n1. Preguntar su edad subjetiva y compararla con la real. Si está por debajo de la real se atribuye \nvalor negativo. Estimación subjetiva de su propia edad, que es una de auto-representaciones que \nnecesita ser continuamente actualizada durante la vida.\n\n2. El examinador leerá la premisa y el paciente deberá responder si la considera verdadera o falsa. \nSi no la entiende el evaluador puede recurrir a la explicación descrita dentro del paréntesis. Las \ninstrucciones se pueden repetir tantas veces como haga falta. \n\n3. Una vez haya respondido si es verdadero o falso, el evaluador le preguntará cuánto de verdadero \n(totalmente o parcialmente) o, por el contrario, cuánto de falso (totalmente o verdaderamente) y \nlo anotará en la escala tipo Likert que aparece debajo de cada ítem. \n\n4. El cuestionario se evalúa contando las puntuaciones que van del 1-4 en la escala tipo Likert y \nse suman los ítems que se corresponden con la misma categoría (ejemplo: se suman las respuestas de \nlas escalas de los ítems 1-2-3-4-5-6-7 para obtener el resultado de identidad), obteniendo un \nresultado para cada una de las 4. \n\ta.Identidad (máx. 28): refleja cómo los participantes se describen a ellos mismos cuando \n\t  se refieren a quién fueron. \n\tb.Conductual (máx. 28): refleja cómo los participantes se describen cuando se refieren a \n\t  cómo se comportan.\n\tc.Autosatisfacción (máx. 28): refleja la forma en que los participantes se describen \n\t  cuando se refieren a cómo de contentos están con ellos mismos. \n\td.Autoconciencia privada (máx. 12): refleja la forma en que los participantes se describen \n\t  cuando se refieren a su habilidad de observarse y analizarse, sobretodo para los aspectos \n\t  personales y difícilmente accesibles para la curiosidad de otros, como sus propios sentimientos. \n\n5.La puntuación total se obtiene a partir de la suma de los resultados de los 4 componentes del Autoconcepto. \nFinalmente se suman todos ellos (identidad, conductual, autosatisfacción y autoconciencia), que son 4 y se \nobtiene una puntuación total que puede ser como máximo de 96. La puntuación total refleja el sentido de \nidentidad y nivel asociado de autoestima, indicando si tiende a tener una opinión sobre sí mismo generalmente \npositiva o generalmente negativa. Se debe repetir el mismo test “15 días” después de la intervención cognitiva.\n");
+        jTextArea1images.setToolTipText("");
+        jTextArea1images.setWrapStyleWord(true);
+        IMAGEScrollInstructions.setViewportView(jTextArea1images);
 
         add(IMAGEScrollInstructions, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextField1imagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1imagesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextField1imagesActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jTextField2imagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2imagesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jTextField2imagesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1668,211 +1668,211 @@ public class IMAGE extends Test {
     private javax.swing.JLabel IMAGESTotal;
     private javax.swing.JScrollPane IMAGEScroll;
     private javax.swing.JScrollPane IMAGEScrollInstructions;
-    private javax.swing.JToggleButton activitatsDBtn20;
-    private javax.swing.JToggleButton activitatsDBtn21;
-    private javax.swing.JToggleButton activitatsDBtn23;
-    private javax.swing.JToggleButton activitatsDBtn24;
-    private javax.swing.JToggleButton activitatsDBtn25;
-    private javax.swing.JToggleButton activitatsDBtn26;
-    private javax.swing.JToggleButton activitatsDBtn29;
-    private javax.swing.JToggleButton activitatsDBtn3;
-    private javax.swing.JToggleButton activitatsDBtn30;
-    private javax.swing.JToggleButton activitatsDBtn32;
-    private javax.swing.JToggleButton activitatsDBtn33;
-    private javax.swing.JToggleButton activitatsDBtn34;
-    private javax.swing.JToggleButton activitatsDBtn35;
-    private javax.swing.JToggleButton activitatsDBtn4;
-    private javax.swing.JToggleButton activitatsDBtn5;
-    private javax.swing.JToggleButton activitatsDBtn6;
-    private javax.swing.JToggleButton activitatsDBtn7;
-    private javax.swing.JToggleButton activitatsDBtn8;
-    private javax.swing.JToggleButton activitatsFBtn10;
-    private javax.swing.JToggleButton activitatsFBtn11;
-    private javax.swing.JToggleButton activitatsFBtn12;
-    private javax.swing.JToggleButton activitatsFBtn13;
-    private javax.swing.JToggleButton activitatsFBtn14;
-    private javax.swing.JToggleButton activitatsFBtn15;
-    private javax.swing.JToggleButton activitatsFBtn16;
-    private javax.swing.JToggleButton activitatsFBtn17;
-    private javax.swing.JToggleButton activitatsFBtn2;
-    private javax.swing.JToggleButton activitatsFBtn3;
-    private javax.swing.JToggleButton activitatsFBtn4;
-    private javax.swing.JToggleButton activitatsFBtn5;
-    private javax.swing.JToggleButton cuidatBtn29;
-    private javax.swing.JToggleButton cuidatBtn30;
-    private javax.swing.JToggleButton cuidatBtn31;
-    private javax.swing.JToggleButton cuidatBtn41;
-    private javax.swing.JToggleButton cuidatBtn42;
-    private javax.swing.JToggleButton cuidatBtn43;
-    private javax.swing.JToggleButton cuidatBtn5;
-    private javax.swing.JToggleButton cuidatBtn6;
-    private javax.swing.JToggleButton cuidatBtn7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel107;
-    private javax.swing.JLabel jLabel110;
-    private javax.swing.JLabel jLabel111;
-    private javax.swing.JLabel jLabel112;
-    private javax.swing.JLabel jLabel113;
-    private javax.swing.JLabel jLabel114;
-    private javax.swing.JLabel jLabel115;
-    private javax.swing.JLabel jLabel116;
-    private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel127;
-    private javax.swing.JLabel jLabel128;
-    private javax.swing.JLabel jLabel129;
-    private javax.swing.JLabel jLabel130;
-    private javax.swing.JLabel jLabel131;
-    private javax.swing.JLabel jLabel132;
-    private javax.swing.JLabel jLabel135;
-    private javax.swing.JLabel jLabel136;
-    private javax.swing.JLabel jLabel137;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel143;
-    private javax.swing.JLabel jLabel144;
-    private javax.swing.JLabel jLabel145;
-    private javax.swing.JLabel jLabel146;
-    private javax.swing.JLabel jLabel147;
-    private javax.swing.JLabel jLabel148;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel151;
-    private javax.swing.JLabel jLabel152;
-    private javax.swing.JLabel jLabel153;
-    private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
-    private javax.swing.JLabel jLabel156;
-    private javax.swing.JLabel jLabel157;
-    private javax.swing.JLabel jLabel158;
-    private javax.swing.JLabel jLabel159;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel160;
-    private javax.swing.JLabel jLabel161;
-    private javax.swing.JLabel jLabel162;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel220;
-    private javax.swing.JLabel jLabel221;
-    private javax.swing.JLabel jLabel222;
-    private javax.swing.JLabel jLabel223;
-    private javax.swing.JLabel jLabel224;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel99;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JToggleButton memoBtn10;
-    private javax.swing.JToggleButton memoBtn11;
-    private javax.swing.JToggleButton memoBtn12;
-    private javax.swing.JToggleButton memoBtn13;
-    private javax.swing.JToggleButton memoBtn14;
-    private javax.swing.JToggleButton memoBtn15;
-    private javax.swing.JToggleButton memoBtn16;
-    private javax.swing.JToggleButton memoBtn17;
-    private javax.swing.JToggleButton memoBtn2;
-    private javax.swing.JToggleButton memoBtn3;
-    private javax.swing.JToggleButton memoBtn4;
-    private javax.swing.JToggleButton memoBtn5;
-    private javax.swing.JToggleButton memoBtn6;
-    private javax.swing.JToggleButton memoBtn7;
-    private javax.swing.JToggleButton memoBtn8;
-    private javax.swing.JToggleButton memoBtn9;
-    private javax.swing.JToggleButton orientacioBtn10;
-    private javax.swing.JToggleButton orientacioBtn11;
-    private javax.swing.JToggleButton orientacioBtn12;
-    private javax.swing.JToggleButton orientacioBtn13;
-    private javax.swing.JToggleButton orientacioBtn14;
-    private javax.swing.JToggleButton orientacioBtn15;
-    private javax.swing.JToggleButton orientacioBtn16;
-    private javax.swing.JToggleButton orientacioBtn17;
-    private javax.swing.JToggleButton orientacioBtn18;
-    private javax.swing.JToggleButton orientacioBtn19;
-    private javax.swing.JToggleButton orientacioBtn2;
-    private javax.swing.JToggleButton orientacioBtn20;
-    private javax.swing.JToggleButton orientacioBtn21;
-    private javax.swing.JToggleButton orientacioBtn3;
-    private javax.swing.JToggleButton orientacioBtn4;
-    private javax.swing.JToggleButton orientacioBtn5;
-    private javax.swing.JToggleButton orientacioBtn6;
-    private javax.swing.JToggleButton orientacioBtn7;
-    private javax.swing.JToggleButton orientacioBtn8;
-    private javax.swing.JToggleButton orientacioBtn9;
-    private javax.swing.ButtonGroup qolButtonGroup1;
-    private javax.swing.ButtonGroup qolButtonGroup10;
-    private javax.swing.ButtonGroup qolButtonGroup11;
-    private javax.swing.ButtonGroup qolButtonGroup12;
-    private javax.swing.ButtonGroup qolButtonGroup13;
-    private javax.swing.ButtonGroup qolButtonGroup14;
-    private javax.swing.ButtonGroup qolButtonGroup15;
-    private javax.swing.ButtonGroup qolButtonGroup16;
-    private javax.swing.ButtonGroup qolButtonGroup17;
-    private javax.swing.ButtonGroup qolButtonGroup18;
-    private javax.swing.ButtonGroup qolButtonGroup19;
-    private javax.swing.ButtonGroup qolButtonGroup2;
-    private javax.swing.ButtonGroup qolButtonGroup20;
-    private javax.swing.ButtonGroup qolButtonGroup21;
-    private javax.swing.ButtonGroup qolButtonGroup22;
-    private javax.swing.ButtonGroup qolButtonGroup23;
-    private javax.swing.ButtonGroup qolButtonGroup24;
-    private javax.swing.ButtonGroup qolButtonGroup3;
-    private javax.swing.ButtonGroup qolButtonGroup4;
-    private javax.swing.ButtonGroup qolButtonGroup5;
-    private javax.swing.ButtonGroup qolButtonGroup6;
-    private javax.swing.ButtonGroup qolButtonGroup7;
-    private javax.swing.ButtonGroup qolButtonGroup8;
-    private javax.swing.ButtonGroup qolButtonGroup9;
-    private javax.swing.JToggleButton raoBtn13;
-    private javax.swing.JToggleButton raoBtn14;
-    private javax.swing.JToggleButton raoBtn16;
-    private javax.swing.JToggleButton raoBtn17;
-    private javax.swing.JToggleButton raoBtn18;
-    private javax.swing.JToggleButton raoBtn19;
-    private javax.swing.JToggleButton raoBtn2;
-    private javax.swing.JToggleButton raoBtn20;
-    private javax.swing.JToggleButton raoBtn21;
-    private javax.swing.JToggleButton raoBtn22;
-    private javax.swing.JToggleButton raoBtn23;
-    private javax.swing.JToggleButton raoBtn24;
-    private javax.swing.JToggleButton raoBtn25;
-    private javax.swing.JToggleButton raoBtn26;
-    private javax.swing.JToggleButton raoBtn27;
-    private javax.swing.JToggleButton raoBtn28;
-    private javax.swing.JToggleButton raoBtn29;
-    private javax.swing.JToggleButton raoBtn3;
-    private javax.swing.JToggleButton raoBtn4;
-    private javax.swing.JToggleButton raoBtn5;
-    private javax.swing.JToggleButton raoBtn6;
-    private javax.swing.JToggleButton raoBtn7;
-    private javax.swing.JToggleButton raoBtn8;
-    private javax.swing.JToggleButton raoBtn9;
-    private javax.swing.JPanel rseQPanel;
-    private javax.swing.JPanel rseQPanel1;
-    private javax.swing.JPanel rseQPanel2;
-    private javax.swing.JPanel rseQPanel3;
-    private javax.swing.JLabel rseTotal;
-    private javax.swing.JLabel rseTotal1;
-    private javax.swing.JLabel rseTotal2;
-    private javax.swing.JLabel rseTotal3;
+    private javax.swing.JToggleButton activitatsDBtn20images;
+    private javax.swing.JToggleButton activitatsDBtn21images;
+    private javax.swing.JToggleButton activitatsDBtn23images;
+    private javax.swing.JToggleButton activitatsDBtn24images;
+    private javax.swing.JToggleButton activitatsDBtn25images;
+    private javax.swing.JToggleButton activitatsDBtn26images;
+    private javax.swing.JToggleButton activitatsDBtn29images;
+    private javax.swing.JToggleButton activitatsDBtn30images;
+    private javax.swing.JToggleButton activitatsDBtn32images;
+    private javax.swing.JToggleButton activitatsDBtn33images;
+    private javax.swing.JToggleButton activitatsDBtn34images;
+    private javax.swing.JToggleButton activitatsDBtn35images;
+    private javax.swing.JToggleButton activitatsDBtn3images;
+    private javax.swing.JToggleButton activitatsDBtn4images;
+    private javax.swing.JToggleButton activitatsDBtn5images;
+    private javax.swing.JToggleButton activitatsDBtn6images;
+    private javax.swing.JToggleButton activitatsDBtn7images;
+    private javax.swing.JToggleButton activitatsDBtn8images;
+    private javax.swing.JToggleButton activitatsFBtn10images;
+    private javax.swing.JToggleButton activitatsFBtn11images;
+    private javax.swing.JToggleButton activitatsFBtn12images;
+    private javax.swing.JToggleButton activitatsFBtn13images;
+    private javax.swing.JToggleButton activitatsFBtn14images;
+    private javax.swing.JToggleButton activitatsFBtn15images;
+    private javax.swing.JToggleButton activitatsFBtn16images;
+    private javax.swing.JToggleButton activitatsFBtn17images;
+    private javax.swing.JToggleButton activitatsFBtn2images;
+    private javax.swing.JToggleButton activitatsFBtn3images;
+    private javax.swing.JToggleButton activitatsFBtn4images;
+    private javax.swing.JToggleButton activitatsFBtn5images;
+    private javax.swing.JToggleButton cuidatBtn29images;
+    private javax.swing.JToggleButton cuidatBtn30images;
+    private javax.swing.JToggleButton cuidatBtn31images;
+    private javax.swing.JToggleButton cuidatBtn41images;
+    private javax.swing.JToggleButton cuidatBtn42images;
+    private javax.swing.JToggleButton cuidatBtn43images;
+    private javax.swing.JToggleButton cuidatBtn5images;
+    private javax.swing.JToggleButton cuidatBtn6images;
+    private javax.swing.JToggleButton cuidatBtn7images;
+    private javax.swing.ButtonGroup imagesButtonGroup1;
+    private javax.swing.ButtonGroup imagesButtonGroup10;
+    private javax.swing.ButtonGroup imagesButtonGroup11;
+    private javax.swing.ButtonGroup imagesButtonGroup12;
+    private javax.swing.ButtonGroup imagesButtonGroup13;
+    private javax.swing.ButtonGroup imagesButtonGroup14;
+    private javax.swing.ButtonGroup imagesButtonGroup15;
+    private javax.swing.ButtonGroup imagesButtonGroup16;
+    private javax.swing.ButtonGroup imagesButtonGroup17;
+    private javax.swing.ButtonGroup imagesButtonGroup18;
+    private javax.swing.ButtonGroup imagesButtonGroup19;
+    private javax.swing.ButtonGroup imagesButtonGroup2;
+    private javax.swing.ButtonGroup imagesButtonGroup20;
+    private javax.swing.ButtonGroup imagesButtonGroup21;
+    private javax.swing.ButtonGroup imagesButtonGroup22;
+    private javax.swing.ButtonGroup imagesButtonGroup23;
+    private javax.swing.ButtonGroup imagesButtonGroup24;
+    private javax.swing.ButtonGroup imagesButtonGroup3;
+    private javax.swing.ButtonGroup imagesButtonGroup4;
+    private javax.swing.ButtonGroup imagesButtonGroup5;
+    private javax.swing.ButtonGroup imagesButtonGroup6;
+    private javax.swing.ButtonGroup imagesButtonGroup7;
+    private javax.swing.ButtonGroup imagesButtonGroup8;
+    private javax.swing.ButtonGroup imagesButtonGroup9;
+    private javax.swing.JPanel imagesQPanel;
+    private javax.swing.JPanel imagesQPanel1;
+    private javax.swing.JPanel imagesQPanel2;
+    private javax.swing.JPanel imagesQPanel3;
+    private javax.swing.JLabel imagesTotal;
+    private javax.swing.JLabel imagesTotal1;
+    private javax.swing.JLabel imagesTotal2;
+    private javax.swing.JLabel imagesTotal3;
+    private javax.swing.JLabel jLabel100images;
+    private javax.swing.JLabel jLabel101images;
+    private javax.swing.JLabel jLabel107images;
+    private javax.swing.JLabel jLabel10images;
+    private javax.swing.JLabel jLabel110images;
+    private javax.swing.JLabel jLabel111images;
+    private javax.swing.JLabel jLabel112images;
+    private javax.swing.JLabel jLabel113images;
+    private javax.swing.JLabel jLabel114images;
+    private javax.swing.JLabel jLabel115images;
+    private javax.swing.JLabel jLabel116images;
+    private javax.swing.JLabel jLabel125images;
+    private javax.swing.JLabel jLabel126images;
+    private javax.swing.JLabel jLabel127images;
+    private javax.swing.JLabel jLabel128images;
+    private javax.swing.JLabel jLabel129images;
+    private javax.swing.JLabel jLabel130images;
+    private javax.swing.JLabel jLabel131images;
+    private javax.swing.JLabel jLabel132images;
+    private javax.swing.JLabel jLabel135images;
+    private javax.swing.JLabel jLabel136images;
+    private javax.swing.JLabel jLabel137images;
+    private javax.swing.JLabel jLabel143images;
+    private javax.swing.JLabel jLabel144images;
+    private javax.swing.JLabel jLabel145images;
+    private javax.swing.JLabel jLabel146images;
+    private javax.swing.JLabel jLabel147images;
+    private javax.swing.JLabel jLabel148images;
+    private javax.swing.JLabel jLabel14images;
+    private javax.swing.JLabel jLabel151images;
+    private javax.swing.JLabel jLabel152images;
+    private javax.swing.JLabel jLabel153images;
+    private javax.swing.JLabel jLabel154images;
+    private javax.swing.JLabel jLabel155images;
+    private javax.swing.JLabel jLabel156images;
+    private javax.swing.JLabel jLabel157images;
+    private javax.swing.JLabel jLabel158images;
+    private javax.swing.JLabel jLabel159images;
+    private javax.swing.JLabel jLabel15images;
+    private javax.swing.JLabel jLabel160images;
+    private javax.swing.JLabel jLabel161images;
+    private javax.swing.JLabel jLabel162images;
+    private javax.swing.JLabel jLabel16images;
+    private javax.swing.JLabel jLabel17images;
+    private javax.swing.JLabel jLabel1images;
+    private javax.swing.JLabel jLabel220images;
+    private javax.swing.JLabel jLabel221images;
+    private javax.swing.JLabel jLabel222images;
+    private javax.swing.JLabel jLabel223images;
+    private javax.swing.JLabel jLabel224images;
+    private javax.swing.JLabel jLabel28images;
+    private javax.swing.JLabel jLabel29images;
+    private javax.swing.JLabel jLabel2images;
+    private javax.swing.JLabel jLabel30images;
+    private javax.swing.JLabel jLabel31images;
+    private javax.swing.JLabel jLabel32images;
+    private javax.swing.JLabel jLabel33images;
+    private javax.swing.JLabel jLabel34images;
+    private javax.swing.JLabel jLabel38images;
+    private javax.swing.JLabel jLabel3images;
+    private javax.swing.JLabel jLabel42images;
+    private javax.swing.JLabel jLabel43images;
+    private javax.swing.JLabel jLabel44images;
+    private javax.swing.JLabel jLabel45images;
+    private javax.swing.JLabel jLabel46images;
+    private javax.swing.JLabel jLabel47images;
+    private javax.swing.JLabel jLabel4images;
+    private javax.swing.JLabel jLabel51images;
+    private javax.swing.JLabel jLabel55images;
+    private javax.swing.JLabel jLabel5images;
+    private javax.swing.JLabel jLabel6images;
+    private javax.swing.JLabel jLabel99images;
+    private javax.swing.JTextArea jTextArea1images;
+    private javax.swing.JTextField jTextField1images;
+    private javax.swing.JTextField jTextField2images;
+    private javax.swing.JToggleButton memoBtn10images;
+    private javax.swing.JToggleButton memoBtn11images;
+    private javax.swing.JToggleButton memoBtn12images;
+    private javax.swing.JToggleButton memoBtn13images;
+    private javax.swing.JToggleButton memoBtn14images;
+    private javax.swing.JToggleButton memoBtn15images;
+    private javax.swing.JToggleButton memoBtn16images;
+    private javax.swing.JToggleButton memoBtn17images;
+    private javax.swing.JToggleButton memoBtn2images;
+    private javax.swing.JToggleButton memoBtn3images;
+    private javax.swing.JToggleButton memoBtn4images;
+    private javax.swing.JToggleButton memoBtn5images;
+    private javax.swing.JToggleButton memoBtn6images;
+    private javax.swing.JToggleButton memoBtn7images;
+    private javax.swing.JToggleButton memoBtn8images;
+    private javax.swing.JToggleButton memoBtn9images;
+    private javax.swing.JToggleButton orientacioBtn10images;
+    private javax.swing.JToggleButton orientacioBtn11images;
+    private javax.swing.JToggleButton orientacioBtn12images;
+    private javax.swing.JToggleButton orientacioBtn13images;
+    private javax.swing.JToggleButton orientacioBtn14images;
+    private javax.swing.JToggleButton orientacioBtn15images;
+    private javax.swing.JToggleButton orientacioBtn16images;
+    private javax.swing.JToggleButton orientacioBtn17images;
+    private javax.swing.JToggleButton orientacioBtn18images;
+    private javax.swing.JToggleButton orientacioBtn19images;
+    private javax.swing.JToggleButton orientacioBtn20images;
+    private javax.swing.JToggleButton orientacioBtn21images;
+    private javax.swing.JToggleButton orientacioBtn2images;
+    private javax.swing.JToggleButton orientacioBtn3images;
+    private javax.swing.JToggleButton orientacioBtn4images;
+    private javax.swing.JToggleButton orientacioBtn5images;
+    private javax.swing.JToggleButton orientacioBtn6images;
+    private javax.swing.JToggleButton orientacioBtn7images;
+    private javax.swing.JToggleButton orientacioBtn8images;
+    private javax.swing.JToggleButton orientacioBtn9images;
+    private javax.swing.JToggleButton raoBtn13images;
+    private javax.swing.JToggleButton raoBtn14images;
+    private javax.swing.JToggleButton raoBtn16images;
+    private javax.swing.JToggleButton raoBtn17images;
+    private javax.swing.JToggleButton raoBtn18images;
+    private javax.swing.JToggleButton raoBtn19images;
+    private javax.swing.JToggleButton raoBtn20images;
+    private javax.swing.JToggleButton raoBtn21images;
+    private javax.swing.JToggleButton raoBtn22images;
+    private javax.swing.JToggleButton raoBtn23images;
+    private javax.swing.JToggleButton raoBtn24images;
+    private javax.swing.JToggleButton raoBtn25images;
+    private javax.swing.JToggleButton raoBtn26images;
+    private javax.swing.JToggleButton raoBtn27images;
+    private javax.swing.JToggleButton raoBtn28images;
+    private javax.swing.JToggleButton raoBtn29images;
+    private javax.swing.JToggleButton raoBtn2images;
+    private javax.swing.JToggleButton raoBtn3images;
+    private javax.swing.JToggleButton raoBtn4images;
+    private javax.swing.JToggleButton raoBtn5images;
+    private javax.swing.JToggleButton raoBtn6images;
+    private javax.swing.JToggleButton raoBtn7images;
+    private javax.swing.JToggleButton raoBtn8images;
+    private javax.swing.JToggleButton raoBtn9images;
     // End of variables declaration//GEN-END:variables
 }

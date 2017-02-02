@@ -75,11 +75,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel106" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel106npi" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="npiPanel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jLabel145" alignment="0" pref="648" max="32767" attributes="0"/>
-                              <Component id="jLabel144" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jLabel145npi" alignment="0" pref="648" max="32767" attributes="0"/>
+                              <Component id="jLabel144npi" alignment="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -90,20 +90,20 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel106" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel106npi" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="npiPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel144" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel144npi" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel145" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel145npi" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel106">
+            <Component class="javax.swing.JLabel" name="jLabel106npi">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -124,7 +124,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn20">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn20npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup2"/>
@@ -137,7 +137,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn20">
+                <Component class="javax.swing.JToggleButton" name="memoBtn20npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup1"/>
@@ -150,7 +150,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn19">
+                <Component class="javax.swing.JToggleButton" name="raoBtn19npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup3"/>
@@ -163,7 +163,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn21">
+                <Component class="javax.swing.JToggleButton" name="raoBtn21npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup7"/>
@@ -176,7 +176,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn22">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn22npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup4"/>
@@ -189,7 +189,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn15">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn15npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup6"/>
@@ -202,7 +202,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel166">
+                <Component class="javax.swing.JLabel" name="jLabel166npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Depressi&#xf3;/disf&#xf2;ria"/>
                   </Properties>
@@ -212,7 +212,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel191">
+                <Component class="javax.swing.JLabel" name="jLabel191npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;&lt;b&gt;Total (Freq&#xfc;&#xe8;ncia x&lt;br&gt;Gravetat)"/>
                   </Properties>
@@ -222,7 +222,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel83">
+                <Component class="javax.swing.JLabel" name="jLabel83npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Puntuaci&#xf3; total"/>
                   </Properties>
@@ -232,7 +232,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel84">
+                <Component class="javax.swing.JLabel" name="jLabel84npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Deliris"/>
                   </Properties>
@@ -242,7 +242,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel85">
+                <Component class="javax.swing.JLabel" name="jLabel85npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agitaci&#xf3;"/>
                   </Properties>
@@ -252,7 +252,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel86">
+                <Component class="javax.swing.JLabel" name="jLabel86npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ansietat"/>
                   </Properties>
@@ -262,7 +262,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel192">
+                <Component class="javax.swing.JLabel" name="jLabel192npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Euf&#xf2;r/alegria"/>
                   </Properties>
@@ -272,7 +272,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel193">
+                <Component class="javax.swing.JLabel" name="jLabel193npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Apat&#xed;a/indifer&#xe8;ncia"/>
                   </Properties>
@@ -282,7 +282,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel194">
+                <Component class="javax.swing.JLabel" name="jLabel194npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Desinhibici&#xf3;"/>
                   </Properties>
@@ -292,7 +292,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel202">
+                <Component class="javax.swing.JLabel" name="jLabel202npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Irritabilitat/labilitat"/>
                   </Properties>
@@ -302,7 +302,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton118">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton118npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup8"/>
@@ -315,7 +315,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton122">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton122npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup5"/>
@@ -328,7 +328,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton134">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton134npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup6"/>
@@ -341,7 +341,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton138">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton138npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup7"/>
@@ -354,7 +354,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton142">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton142npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup5"/>
@@ -367,7 +367,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton146">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton146npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup10"/>
@@ -380,7 +380,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton147">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton147npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup10"/>
@@ -393,7 +393,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel206">
+                <Component class="javax.swing.JLabel" name="jLabel206npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;No valorable&lt;br&gt;"/>
                   </Properties>
@@ -403,7 +403,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn25">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn25npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup6"/>
@@ -416,7 +416,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton150">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton150npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup7"/>
@@ -429,7 +429,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton151">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton151npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup8"/>
@@ -442,7 +442,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton152">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton152npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup9"/>
@@ -455,7 +455,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton153">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton153npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup10"/>
@@ -468,7 +468,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel4">
+                <Component class="javax.swing.JLabel" name="jLabel4npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Transtorn"/>
                   </Properties>
@@ -478,7 +478,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel5">
+                <Component class="javax.swing.JLabel" name="jLabel5npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Freq&#xfc;&#xe8;ncia"/>
                   </Properties>
@@ -488,7 +488,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel6">
+                <Component class="javax.swing.JLabel" name="jLabel6npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Conducta motora sense finalitat"/>
                   </Properties>
@@ -498,7 +498,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel7">
+                <Component class="javax.swing.JLabel" name="jLabel7npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Gravetat"/>
                   </Properties>
@@ -508,7 +508,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel8">
+                <Component class="javax.swing.JLabel" name="jLabel8npi">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Al&#xb7;lucinacions"/>
                   </Properties>
@@ -581,7 +581,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn27">
+                <Component class="javax.swing.JToggleButton" name="raoBtn27npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup7"/>
@@ -594,7 +594,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton158">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton158npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup5"/>
@@ -607,7 +607,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton159">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton159npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup4"/>
@@ -620,7 +620,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn20">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn20npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup2"/>
@@ -633,7 +633,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton160">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton160npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup3"/>
@@ -646,7 +646,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn28">
+                <Component class="javax.swing.JToggleButton" name="raoBtn28npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup1"/>
@@ -659,7 +659,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton161">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton161npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup3"/>
@@ -672,7 +672,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton162">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton162npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup2"/>
@@ -685,7 +685,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn21">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn21npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup1"/>
@@ -698,7 +698,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton163">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton163npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup6"/>
@@ -711,7 +711,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton164">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton164npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup4"/>
@@ -724,7 +724,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton165">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton165npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup8"/>
@@ -737,7 +737,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton166">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton166npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup10"/>
@@ -750,7 +750,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton167">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton167npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup8"/>
@@ -763,7 +763,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton168">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton168npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup5"/>
@@ -776,7 +776,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton169">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton169npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup4"/>
@@ -789,7 +789,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton170">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton170npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup3"/>
@@ -802,7 +802,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton171">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton171npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup2"/>
@@ -815,7 +815,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn26">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn26npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup1"/>
@@ -828,7 +828,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton172">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton172npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup9"/>
@@ -841,7 +841,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton173">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton173npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup9"/>
@@ -854,7 +854,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton174">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton174npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup9"/>
@@ -867,7 +867,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn27">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn27npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup1"/>
@@ -880,7 +880,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton175">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton175npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup2"/>
@@ -893,7 +893,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton176">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton176npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup3"/>
@@ -906,7 +906,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton177">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton177npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup4"/>
@@ -919,7 +919,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton178">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton178npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup5"/>
@@ -932,7 +932,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn28">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn28npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup6"/>
@@ -945,7 +945,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton179">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton179npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup7"/>
@@ -958,7 +958,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton180">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton180npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup8"/>
@@ -971,7 +971,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton181">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton181npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup9"/>
@@ -984,7 +984,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton182">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton182npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup10"/>
@@ -997,7 +997,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn29">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn29npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup1"/>
@@ -1010,7 +1010,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton183">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton183npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup2"/>
@@ -1023,7 +1023,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton184">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton184npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup3"/>
@@ -1036,7 +1036,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton185">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton185npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup4"/>
@@ -1049,7 +1049,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton186">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton186npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup5"/>
@@ -1062,7 +1062,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn30">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn30npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup6"/>
@@ -1075,7 +1075,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton187">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton187npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup7"/>
@@ -1088,7 +1088,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton188">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton188npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup8"/>
@@ -1101,7 +1101,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton189">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton189npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup9"/>
@@ -1114,7 +1114,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton190">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton190npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiGravBtnGroup10"/>
@@ -1127,7 +1127,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn31">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn31npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup1"/>
@@ -1140,7 +1140,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton191">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton191npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup2"/>
@@ -1153,7 +1153,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton192">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton192npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup3"/>
@@ -1166,7 +1166,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton193">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton193npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup4"/>
@@ -1179,7 +1179,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton194">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton194npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup5"/>
@@ -1192,7 +1192,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn32">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn32npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup6"/>
@@ -1205,7 +1205,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton195">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton195npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup7"/>
@@ -1218,7 +1218,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton196">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton196npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup8"/>
@@ -1231,7 +1231,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton197">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton197npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup9"/>
@@ -1244,7 +1244,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton198">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton198npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup10"/>
@@ -1257,7 +1257,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn33">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn33npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup1"/>
@@ -1270,7 +1270,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton199">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton199npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup2"/>
@@ -1283,7 +1283,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton200">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton200npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup3"/>
@@ -1296,7 +1296,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton201">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton201npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup4"/>
@@ -1309,7 +1309,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton202">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton202npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup5"/>
@@ -1322,7 +1322,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn34">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn34npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup6"/>
@@ -1335,7 +1335,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton203">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton203npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup7"/>
@@ -1348,7 +1348,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton204">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton204npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup8"/>
@@ -1361,7 +1361,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton205">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton205npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup9"/>
@@ -1374,7 +1374,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton206">
+                <Component class="javax.swing.JToggleButton" name="jToggleButton206npi">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="npiFreqBtnGroup10"/>
@@ -1509,12 +1509,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel144">
+            <Component class="javax.swing.JLabel" name="jLabel144npi">
               <Properties>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;u&gt;&lt;b&gt;Freq&#xfc;&#xe8;ncia:&lt;/b&gt;&lt;/u&gt; 0 = Absent; 1 = Ocasionalment (menys d&apos;una vegada per setmana); 2 = Sovint (al voltant d&apos;una vegada per setmana); 3 = Freq&#xfc;entment (diverses vegades per setmana, per&#xf2; no di&#xe0;riament); 4 = Molt freq&#xfc;entment (di&#xe0;riament o cont&#xed;nuament)"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel145">
+            <Component class="javax.swing.JLabel" name="jLabel145npi">
               <Properties>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;&lt;u&gt;Gravetat:&lt;/b&gt;&lt;/u&gt; 1 = Lleu (provoca poca mol&#xe8;sties al pacient); 2 = Moderada (m&#xe9;s molest per al pacient, per&#xf2; pot es redirigit pel cuidador); 3 = Greu (molt molest per al pacient i dif&#xed;cil de redirigir)"/>
               </Properties>

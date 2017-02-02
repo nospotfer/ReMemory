@@ -2,53 +2,53 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup1">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup1">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup2">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup2">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup3">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup3">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup4">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup4">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup5">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup5">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup6">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup6">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup7">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup7">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup8">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup8">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup9">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup9">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup10">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup10">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup11">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup11">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup12">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup12">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup13">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup13">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup14">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup14">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup15">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup15">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup16">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup16">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup17">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup17">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup18">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup18">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup19">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup19">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup20">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup20">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup21">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup21">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup22">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup22">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup23">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup23">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="qolButtonGroup24">
+    <Component class="javax.swing.ButtonGroup" name="imagesButtonGroup24">
     </Component>
   </NonVisualComponents>
   <AuxValues>
@@ -82,9 +82,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="354" max="-2" attributes="0"/>
-                      <Component id="jLabel223" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel223images" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="rseTotal3" min="-2" max="-2" attributes="0"/>
+                      <Component id="imagesTotal3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -96,41 +96,41 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="261" max="-2" attributes="0"/>
-                                              <Component id="jLabel220" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel220images" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="rseTotal" min="-2" max="-2" attributes="0"/>
+                                              <Component id="imagesTotal" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="rseQPanel" alignment="0" min="-2" pref="513" max="-2" attributes="0"/>
+                                          <Component id="imagesQPanel" alignment="0" min="-2" pref="513" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rseQPanel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="imagesQPanel2" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel222" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel222images" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="rseTotal2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="imagesTotal2" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="rseQPanel3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="imagesQPanel3" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="rseQPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="imagesQPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jLabel221" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel221images" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                                      <Component id="rseTotal1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="imagesTotal1" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
-                                              <Component id="jLabel224" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel224images" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="IMAGESTotal" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -143,15 +143,15 @@
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel31images" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField2" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="jTextField2images" min="-2" pref="31" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                      <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel55images" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField1" min="-2" pref="33" max="-2" attributes="0"/>
+                                      <Component id="jTextField1images" min="-2" pref="33" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14images" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -163,51 +163,51 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel14images" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel55" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel31images" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel55images" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField1images" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField2images" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="rseQPanel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="rseQPanel2" alignment="0" pref="320" max="32767" attributes="0"/>
+                          <Component id="imagesQPanel" alignment="0" max="32767" attributes="0"/>
+                          <Component id="imagesQPanel2" alignment="0" pref="320" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLabel220" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rseTotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel220images" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="imagesTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLabel222" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rseTotal2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel222images" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="imagesTotal2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="rseQPanel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="imagesQPanel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel221" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="rseTotal1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel221images" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="imagesTotal1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel224" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel224images" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="IMAGESTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="rseQPanel3" alignment="0" min="-2" pref="301" max="-2" attributes="0"/>
+                          <Component id="imagesQPanel3" alignment="0" min="-2" pref="301" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel223" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rseTotal3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel223images" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="imagesTotal3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                   </Group>
@@ -215,7 +215,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="rseQPanel">
+            <Container class="javax.swing.JPanel" name="imagesQPanel">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -228,10 +228,10 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn2">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn2images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup2"/>
+                      <ComponentRef name="imagesButtonGroup2"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -241,10 +241,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn2">
+                <Component class="javax.swing.JToggleButton" name="memoBtn2images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup1"/>
+                      <ComponentRef name="imagesButtonGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -254,10 +254,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn3">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn3images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup3"/>
+                      <ComponentRef name="imagesButtonGroup3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -267,10 +267,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn3">
+                <Component class="javax.swing.JToggleButton" name="memoBtn3images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup1"/>
+                      <ComponentRef name="imagesButtonGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -280,10 +280,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn4">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn4images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup2"/>
+                      <ComponentRef name="imagesButtonGroup2"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -293,10 +293,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn4">
+                <Component class="javax.swing.JToggleButton" name="memoBtn4images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup1"/>
+                      <ComponentRef name="imagesButtonGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -306,10 +306,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn5">
+                <Component class="javax.swing.JToggleButton" name="memoBtn5images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup1"/>
+                      <ComponentRef name="imagesButtonGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -319,10 +319,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn5">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn5images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup2"/>
+                      <ComponentRef name="imagesButtonGroup2"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -332,10 +332,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn2">
+                <Component class="javax.swing.JToggleButton" name="raoBtn2images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup3"/>
+                      <ComponentRef name="imagesButtonGroup3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -345,10 +345,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn5">
+                <Component class="javax.swing.JToggleButton" name="raoBtn5images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup4"/>
+                      <ComponentRef name="imagesButtonGroup4"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -358,10 +358,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn3">
+                <Component class="javax.swing.JToggleButton" name="raoBtn3images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup6"/>
+                      <ComponentRef name="imagesButtonGroup6"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -371,10 +371,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn4">
+                <Component class="javax.swing.JToggleButton" name="raoBtn4images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup4"/>
+                      <ComponentRef name="imagesButtonGroup4"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -384,10 +384,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn2">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn2images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup4"/>
+                      <ComponentRef name="imagesButtonGroup4"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -397,10 +397,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn3">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn3images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup4"/>
+                      <ComponentRef name="imagesButtonGroup4"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -410,10 +410,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn4">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn4images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup5"/>
+                      <ComponentRef name="imagesButtonGroup5"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -423,10 +423,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn5">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn5images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup5"/>
+                      <ComponentRef name="imagesButtonGroup5"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -436,10 +436,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn5">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn5images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup6"/>
+                      <ComponentRef name="imagesButtonGroup6"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -449,10 +449,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn4">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn4images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup6"/>
+                      <ComponentRef name="imagesButtonGroup6"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -462,7 +462,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn3">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn3images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -472,7 +472,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel99">
+                <Component class="javax.swing.JLabel" name="jLabel99images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Totalmente&lt;br&gt;falso"/>
                   </Properties>
@@ -482,7 +482,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel100">
+                <Component class="javax.swing.JLabel" name="jLabel100images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Parcialmente&lt;br&gt;falso"/>
                   </Properties>
@@ -492,7 +492,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel125">
+                <Component class="javax.swing.JLabel" name="jLabel125images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Totalmente&lt;br&gt;verdadero"/>
                   </Properties>
@@ -502,7 +502,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel126">
+                <Component class="javax.swing.JLabel" name="jLabel126images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Parcialmente&lt;br&gt;verdadero"/>
                   </Properties>
@@ -512,7 +512,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel127">
+                <Component class="javax.swing.JLabel" name="jLabel127images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -522,7 +522,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel128">
+                <Component class="javax.swing.JLabel" name="jLabel128images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -532,7 +532,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel129">
+                <Component class="javax.swing.JLabel" name="jLabel129images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -542,7 +542,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel130">
+                <Component class="javax.swing.JLabel" name="jLabel130images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="5"/>
                   </Properties>
@@ -552,7 +552,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel131">
+                <Component class="javax.swing.JLabel" name="jLabel131images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="6"/>
                   </Properties>
@@ -562,7 +562,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel132">
+                <Component class="javax.swing.JLabel" name="jLabel132images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="7"/>
                   </Properties>
@@ -572,7 +572,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel101">
+                <Component class="javax.swing.JLabel" name="jLabel101images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Soy bastante atractivo f&#xed;sicamente."/>
                   </Properties>
@@ -582,7 +582,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel1">
+                <Component class="javax.swing.JLabel" name="jLabel1images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Soy una persona honesta."/>
                   </Properties>
@@ -592,7 +592,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel2">
+                <Component class="javax.swing.JLabel" name="jLabel2images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Soy sociable."/>
                   </Properties>
@@ -602,7 +602,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel3">
+                <Component class="javax.swing.JLabel" name="jLabel3images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Estoy habitualmente contento/a."/>
                   </Properties>
@@ -612,7 +612,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel4">
+                <Component class="javax.swing.JLabel" name="jLabel4images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Para m&#xed; la familia es importante."/>
                   </Properties>
@@ -622,7 +622,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel5">
+                <Component class="javax.swing.JLabel" name="jLabel5images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Soy bastante serio."/>
                   </Properties>
@@ -632,7 +632,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel6">
+                <Component class="javax.swing.JLabel" name="jLabel6images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -642,7 +642,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel10">
+                <Component class="javax.swing.JLabel" name="jLabel10images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Soy m&#xe1;s bien una persona triste."/>
                   </Properties>
@@ -652,10 +652,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn6">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn6images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup2"/>
+                      <ComponentRef name="imagesButtonGroup2"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -665,10 +665,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn6">
+                <Component class="javax.swing.JToggleButton" name="raoBtn6images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup3"/>
+                      <ComponentRef name="imagesButtonGroup3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -678,10 +678,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn7">
+                <Component class="javax.swing.JToggleButton" name="raoBtn7images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup3"/>
+                      <ComponentRef name="imagesButtonGroup3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -691,10 +691,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn6">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn6images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup5"/>
+                      <ComponentRef name="imagesButtonGroup5"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -704,10 +704,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn8">
+                <Component class="javax.swing.JToggleButton" name="raoBtn8images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup5"/>
+                      <ComponentRef name="imagesButtonGroup5"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -717,10 +717,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn7">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn7images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup6"/>
+                      <ComponentRef name="imagesButtonGroup6"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -730,10 +730,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn8">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn8images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup7"/>
+                      <ComponentRef name="imagesButtonGroup7"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -743,10 +743,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn5">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn5images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup7"/>
+                      <ComponentRef name="imagesButtonGroup7"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -756,10 +756,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn6">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn6images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup7"/>
+                      <ComponentRef name="imagesButtonGroup7"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -769,10 +769,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn7">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn7images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup7"/>
+                      <ComponentRef name="imagesButtonGroup7"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -784,12 +784,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel220">
+            <Component class="javax.swing.JLabel" name="jLabel220images">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Puntuaci&#xf3; total:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel224">
+            <Component class="javax.swing.JLabel" name="jLabel224images">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="18" style="0"/>
@@ -805,7 +805,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="rseTotal">
+            <Component class="javax.swing.JLabel" name="imagesTotal">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="12" style="1"/>
@@ -813,7 +813,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="rseQPanel1">
+            <Container class="javax.swing.JPanel" name="imagesQPanel1">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -826,10 +826,10 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn7">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn7images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup23"/>
+                      <ComponentRef name="imagesButtonGroup23"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -839,10 +839,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn6">
+                <Component class="javax.swing.JToggleButton" name="memoBtn6images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup22"/>
+                      <ComponentRef name="imagesButtonGroup22"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -852,10 +852,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn8">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn8images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup24"/>
+                      <ComponentRef name="imagesButtonGroup24"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -865,10 +865,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn7">
+                <Component class="javax.swing.JToggleButton" name="memoBtn7images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup22"/>
+                      <ComponentRef name="imagesButtonGroup22"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -878,10 +878,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn9">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn9images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup23"/>
+                      <ComponentRef name="imagesButtonGroup23"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -891,10 +891,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn8">
+                <Component class="javax.swing.JToggleButton" name="memoBtn8images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup22"/>
+                      <ComponentRef name="imagesButtonGroup22"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -904,10 +904,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn9">
+                <Component class="javax.swing.JToggleButton" name="memoBtn9images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup22"/>
+                      <ComponentRef name="imagesButtonGroup22"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -917,10 +917,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn10">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn10images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup23"/>
+                      <ComponentRef name="imagesButtonGroup23"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -930,10 +930,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn9">
+                <Component class="javax.swing.JToggleButton" name="raoBtn9images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup24"/>
+                      <ComponentRef name="imagesButtonGroup24"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -943,7 +943,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel135">
+                <Component class="javax.swing.JLabel" name="jLabel135images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="22-"/>
                   </Properties>
@@ -953,7 +953,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel136">
+                <Component class="javax.swing.JLabel" name="jLabel136images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="23-"/>
                   </Properties>
@@ -963,7 +963,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel137">
+                <Component class="javax.swing.JLabel" name="jLabel137images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="24-"/>
                   </Properties>
@@ -973,7 +973,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel15">
+                <Component class="javax.swing.JLabel" name="jLabel15images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp No suelo pensar sobre qui&#xe9;n soy. &lt;br&gt;&lt;i&gt;&quot;En m&#xed; mismo&quot;"/>
                   </Properties>
@@ -983,7 +983,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel16">
+                <Component class="javax.swing.JLabel" name="jLabel16images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Generalmente presto atenci&#xf3;n a lo que siento. &lt;br&gt;&lt;i&gt;&quot;Presto atenci&#xf3;n a mis sentimientos&quot;"/>
                   </Properties>
@@ -993,7 +993,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel17">
+                <Component class="javax.swing.JLabel" name="jLabel17images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Me cuesta detectar mis cambios de &#xe1;nimo. &lt;br&gt;&lt;i&gt;&quot;Humor&quot;."/>
                   </Properties>
@@ -1003,10 +1003,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn11">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn11images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup23"/>
+                      <ComponentRef name="imagesButtonGroup23"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1016,10 +1016,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn13">
+                <Component class="javax.swing.JToggleButton" name="raoBtn13images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup24"/>
+                      <ComponentRef name="imagesButtonGroup24"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1029,10 +1029,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn14">
+                <Component class="javax.swing.JToggleButton" name="raoBtn14images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup24"/>
+                      <ComponentRef name="imagesButtonGroup24"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1042,7 +1042,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel115">
+                <Component class="javax.swing.JLabel" name="jLabel115images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Totalmente&lt;br&gt;falso"/>
                   </Properties>
@@ -1052,7 +1052,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel116">
+                <Component class="javax.swing.JLabel" name="jLabel116images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Parcialmente&lt;br&gt;falso"/>
                   </Properties>
@@ -1062,7 +1062,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel161">
+                <Component class="javax.swing.JLabel" name="jLabel161images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Parcialmente&lt;br&gt;verdadero"/>
                   </Properties>
@@ -1072,7 +1072,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel162">
+                <Component class="javax.swing.JLabel" name="jLabel162images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Totalmente&lt;br&gt;verdadero"/>
                   </Properties>
@@ -1084,12 +1084,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel221">
+            <Component class="javax.swing.JLabel" name="jLabel221images">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Puntuaci&#xf3; total:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="rseTotal1">
+            <Component class="javax.swing.JLabel" name="imagesTotal1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="12" style="1"/>
@@ -1097,7 +1097,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="rseQPanel2">
+            <Container class="javax.swing.JPanel" name="imagesQPanel2">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1110,10 +1110,10 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn12">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn12images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup9"/>
+                      <ComponentRef name="imagesButtonGroup9"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1123,10 +1123,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn10">
+                <Component class="javax.swing.JToggleButton" name="memoBtn10images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup8"/>
+                      <ComponentRef name="imagesButtonGroup8"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1136,10 +1136,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn13">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn13images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup10"/>
+                      <ComponentRef name="imagesButtonGroup10"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1149,10 +1149,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn11">
+                <Component class="javax.swing.JToggleButton" name="memoBtn11images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup8"/>
+                      <ComponentRef name="imagesButtonGroup8"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1162,10 +1162,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn14">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn14images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup9"/>
+                      <ComponentRef name="imagesButtonGroup9"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1175,10 +1175,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn12">
+                <Component class="javax.swing.JToggleButton" name="memoBtn12images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup8"/>
+                      <ComponentRef name="imagesButtonGroup8"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1188,10 +1188,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn13">
+                <Component class="javax.swing.JToggleButton" name="memoBtn13images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup8"/>
+                      <ComponentRef name="imagesButtonGroup8"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1201,10 +1201,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn15">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn15images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup9"/>
+                      <ComponentRef name="imagesButtonGroup9"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1214,10 +1214,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn16">
+                <Component class="javax.swing.JToggleButton" name="raoBtn16images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup10"/>
+                      <ComponentRef name="imagesButtonGroup10"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1227,10 +1227,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn17">
+                <Component class="javax.swing.JToggleButton" name="raoBtn17images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup11"/>
+                      <ComponentRef name="imagesButtonGroup11"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1240,10 +1240,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn18">
+                <Component class="javax.swing.JToggleButton" name="raoBtn18images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup13"/>
+                      <ComponentRef name="imagesButtonGroup13"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1253,10 +1253,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn19">
+                <Component class="javax.swing.JToggleButton" name="raoBtn19images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup11"/>
+                      <ComponentRef name="imagesButtonGroup11"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1266,10 +1266,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn10">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn10images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup11"/>
+                      <ComponentRef name="imagesButtonGroup11"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1279,10 +1279,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn11">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn11images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup11"/>
+                      <ComponentRef name="imagesButtonGroup11"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1292,10 +1292,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn12">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn12images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup12"/>
+                      <ComponentRef name="imagesButtonGroup12"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1305,10 +1305,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn13">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn13images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup12"/>
+                      <ComponentRef name="imagesButtonGroup12"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1318,10 +1318,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn20">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn20images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup13"/>
+                      <ComponentRef name="imagesButtonGroup13"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1331,10 +1331,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn21">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn21images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup13"/>
+                      <ComponentRef name="imagesButtonGroup13"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1344,7 +1344,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn23">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn23images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1354,7 +1354,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel143">
+                <Component class="javax.swing.JLabel" name="jLabel143images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="8-"/>
                   </Properties>
@@ -1364,7 +1364,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel144">
+                <Component class="javax.swing.JLabel" name="jLabel144images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="9-"/>
                   </Properties>
@@ -1374,7 +1374,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel145">
+                <Component class="javax.swing.JLabel" name="jLabel145images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="10-"/>
                   </Properties>
@@ -1384,7 +1384,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel146">
+                <Component class="javax.swing.JLabel" name="jLabel146images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="12-"/>
                   </Properties>
@@ -1394,7 +1394,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel147">
+                <Component class="javax.swing.JLabel" name="jLabel147images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="13-"/>
                   </Properties>
@@ -1404,7 +1404,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel148">
+                <Component class="javax.swing.JLabel" name="jLabel148images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="14-"/>
                   </Properties>
@@ -1414,7 +1414,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel107">
+                <Component class="javax.swing.JLabel" name="jLabel107images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&amp;nbsp No me importa mi apariencia. &lt;i&gt;&lt;br&gt;&quot;La im&#xe1;gen que doy a los dem&#xe1;s&quot;"/>
                   </Properties>
@@ -1424,7 +1424,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel28">
+                <Component class="javax.swing.JLabel" name="jLabel28images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp A veces act&#xfa;o de forma inmoral. &lt;i&gt;&lt;br&gt;&quot;A veces act&#xfa;o de forma inconsciente&quot;&lt;br&gt;&quot;A veces act&#xfa;o sin escr&#xfa;pulos&quot;&lt;br&gt;&quot;A veces act&#xfa;o contra la &#xe9;tica, las normas sociales&quot;"/>
                   </Properties>
@@ -1434,7 +1434,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel29">
+                <Component class="javax.swing.JLabel" name="jLabel29images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value=" Me cuesta hablar con gente que no conozco."/>
                   </Properties>
@@ -1444,7 +1444,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel30">
+                <Component class="javax.swing.JLabel" name="jLabel30images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Carezco de autoconfianza. &lt;i&gt;&lt;br&gt;&quot;No conf&#xed;o en m&#xed; mismo&quot;"/>
                   </Properties>
@@ -1454,7 +1454,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel32">
+                <Component class="javax.swing.JLabel" name="jLabel32images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&amp;nbsp Rara vez discuto con mi familia. &lt;i&gt;&lt;br&gt;&quot;No suelo o acostumbro discutir con mi familia&quot;"/>
                   </Properties>
@@ -1464,7 +1464,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel33">
+                <Component class="javax.swing.JLabel" name="jLabel33images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&amp;nbsp Tengo dificultades para aprender. &lt;i&gt;&lt;br&gt;&quot;Me cuesta aprender&quot;"/>
                   </Properties>
@@ -1474,7 +1474,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel34">
+                <Component class="javax.swing.JLabel" name="jLabel34images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="11-"/>
                   </Properties>
@@ -1484,7 +1484,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel38">
+                <Component class="javax.swing.JLabel" name="jLabel38images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value=" No me suelo enfadar."/>
                   </Properties>
@@ -1494,10 +1494,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn16">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn16images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup9"/>
+                      <ComponentRef name="imagesButtonGroup9"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1507,10 +1507,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn20">
+                <Component class="javax.swing.JToggleButton" name="raoBtn20images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup10"/>
+                      <ComponentRef name="imagesButtonGroup10"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1520,10 +1520,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn21">
+                <Component class="javax.swing.JToggleButton" name="raoBtn21images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup10"/>
+                      <ComponentRef name="imagesButtonGroup10"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1533,10 +1533,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn24">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn24images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup12"/>
+                      <ComponentRef name="imagesButtonGroup12"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1546,10 +1546,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn22">
+                <Component class="javax.swing.JToggleButton" name="raoBtn22images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup12"/>
+                      <ComponentRef name="imagesButtonGroup12"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1559,10 +1559,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn25">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn25images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup13"/>
+                      <ComponentRef name="imagesButtonGroup13"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1572,10 +1572,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn26">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn26images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup14"/>
+                      <ComponentRef name="imagesButtonGroup14"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1585,10 +1585,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn29">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn29images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup14"/>
+                      <ComponentRef name="imagesButtonGroup14"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1598,10 +1598,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn30">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn30images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup14"/>
+                      <ComponentRef name="imagesButtonGroup14"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1611,10 +1611,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn31">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn31images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup14"/>
+                      <ComponentRef name="imagesButtonGroup14"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1624,7 +1624,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel111">
+                <Component class="javax.swing.JLabel" name="jLabel111images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Totalmente&lt;br&gt;falso"/>
                   </Properties>
@@ -1634,7 +1634,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel112">
+                <Component class="javax.swing.JLabel" name="jLabel112images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Parcialmente&lt;br&gt;falso"/>
                   </Properties>
@@ -1644,7 +1644,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel157">
+                <Component class="javax.swing.JLabel" name="jLabel157images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Parcialmente&lt;br&gt;verdadero"/>
                   </Properties>
@@ -1654,7 +1654,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel158">
+                <Component class="javax.swing.JLabel" name="jLabel158images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Totalmente&lt;br&gt;verdadero"/>
                   </Properties>
@@ -1666,12 +1666,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel222">
+            <Component class="javax.swing.JLabel" name="jLabel222images">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Puntuaci&#xf3; total:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="rseTotal2">
+            <Component class="javax.swing.JLabel" name="imagesTotal2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="12" style="1"/>
@@ -1679,7 +1679,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="rseQPanel3">
+            <Container class="javax.swing.JPanel" name="imagesQPanel3">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1692,10 +1692,10 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn17">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn17images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup16"/>
+                      <ComponentRef name="imagesButtonGroup16"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1705,10 +1705,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn14">
+                <Component class="javax.swing.JToggleButton" name="memoBtn14images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup15"/>
+                      <ComponentRef name="imagesButtonGroup15"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1718,10 +1718,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn18">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn18images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup17"/>
+                      <ComponentRef name="imagesButtonGroup17"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1731,10 +1731,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn15">
+                <Component class="javax.swing.JToggleButton" name="memoBtn15images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup15"/>
+                      <ComponentRef name="imagesButtonGroup15"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1744,10 +1744,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn19">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn19images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup16"/>
+                      <ComponentRef name="imagesButtonGroup16"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1757,10 +1757,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn16">
+                <Component class="javax.swing.JToggleButton" name="memoBtn16images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup15"/>
+                      <ComponentRef name="imagesButtonGroup15"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1770,10 +1770,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn17">
+                <Component class="javax.swing.JToggleButton" name="memoBtn17images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup15"/>
+                      <ComponentRef name="imagesButtonGroup15"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1783,10 +1783,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn20">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn20images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup16"/>
+                      <ComponentRef name="imagesButtonGroup16"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1796,10 +1796,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn23">
+                <Component class="javax.swing.JToggleButton" name="raoBtn23images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup17"/>
+                      <ComponentRef name="imagesButtonGroup17"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1809,10 +1809,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn24">
+                <Component class="javax.swing.JToggleButton" name="raoBtn24images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup18"/>
+                      <ComponentRef name="imagesButtonGroup18"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1822,10 +1822,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn25">
+                <Component class="javax.swing.JToggleButton" name="raoBtn25images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup20"/>
+                      <ComponentRef name="imagesButtonGroup20"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1835,10 +1835,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn26">
+                <Component class="javax.swing.JToggleButton" name="raoBtn26images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup18"/>
+                      <ComponentRef name="imagesButtonGroup18"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1848,10 +1848,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn14">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn14images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup18"/>
+                      <ComponentRef name="imagesButtonGroup18"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -1861,10 +1861,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn15">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn15images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup18"/>
+                      <ComponentRef name="imagesButtonGroup18"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1874,10 +1874,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn16">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn16images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup19"/>
+                      <ComponentRef name="imagesButtonGroup19"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1887,10 +1887,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn17">
+                <Component class="javax.swing.JToggleButton" name="activitatsFBtn17images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup19"/>
+                      <ComponentRef name="imagesButtonGroup19"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1900,10 +1900,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn29">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn29images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup20"/>
+                      <ComponentRef name="imagesButtonGroup20"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -1913,10 +1913,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn30">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn30images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup20"/>
+                      <ComponentRef name="imagesButtonGroup20"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -1926,7 +1926,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn32">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn32images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -1936,7 +1936,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel151">
+                <Component class="javax.swing.JLabel" name="jLabel151images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="15-"/>
                   </Properties>
@@ -1946,7 +1946,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel152">
+                <Component class="javax.swing.JLabel" name="jLabel152images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="16-"/>
                   </Properties>
@@ -1956,7 +1956,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel153">
+                <Component class="javax.swing.JLabel" name="jLabel153images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="17-"/>
                   </Properties>
@@ -1966,7 +1966,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel154">
+                <Component class="javax.swing.JLabel" name="jLabel154images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="19-"/>
                   </Properties>
@@ -1976,7 +1976,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel155">
+                <Component class="javax.swing.JLabel" name="jLabel155images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="20-"/>
                   </Properties>
@@ -1986,7 +1986,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel156">
+                <Component class="javax.swing.JLabel" name="jLabel156images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="21-"/>
                   </Properties>
@@ -1996,7 +1996,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel110">
+                <Component class="javax.swing.JLabel" name="jLabel110images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Estoy satisfecho con mi im&#xe1;gen &lt;br&gt;&lt;i&gt;&quot;Aspecto f&#xed;sico&quot;"/>
                   </Properties>
@@ -2006,7 +2006,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel42">
+                <Component class="javax.swing.JLabel" name="jLabel42images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Miento con frecuencia. &lt;br&gt;&lt;i&gt;&quot;A menudo&quot;"/>
                   </Properties>
@@ -2016,7 +2016,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel43">
+                <Component class="javax.swing.JLabel" name="jLabel43images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value=" Deber&#xed;a ser m&#xe1;s amable con la gente."/>
                   </Properties>
@@ -2026,7 +2026,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel44">
+                <Component class="javax.swing.JLabel" name="jLabel44images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value=" Estoy contento con qui&#xe9;n soy."/>
                   </Properties>
@@ -2036,7 +2036,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel45">
+                <Component class="javax.swing.JLabel" name="jLabel45images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Exijo demasiado de la gente de mi alrededor.&lt;br&gt;&lt;i&gt;&quot;Pido m&#xe1;s de lo que los dem&#xe1;s me pueden dar&quot;"/>
                   </Properties>
@@ -2046,7 +2046,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel46">
+                <Component class="javax.swing.JLabel" name="jLabel46images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Estoy satisfecho con mis habilidades intelectuales.&lt;br&gt;&lt;i&gt;&quot;Inteligencia&quot;"/>
                   </Properties>
@@ -2056,7 +2056,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel47">
+                <Component class="javax.swing.JLabel" name="jLabel47images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="18-"/>
                   </Properties>
@@ -2066,7 +2066,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel51">
+                <Component class="javax.swing.JLabel" name="jLabel51images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt; &amp;nbsp Vivo demasiado en el pasado. &lt;br&gt;&lt;i&gt;&quot;Siempre pienso en el pasado en vez de&lt;br&gt; en el presente o futuro&quot;"/>
                   </Properties>
@@ -2076,10 +2076,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn21">
+                <Component class="javax.swing.JToggleButton" name="orientacioBtn21images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup16"/>
+                      <ComponentRef name="imagesButtonGroup16"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -2089,10 +2089,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn27">
+                <Component class="javax.swing.JToggleButton" name="raoBtn27images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup17"/>
+                      <ComponentRef name="imagesButtonGroup17"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -2102,10 +2102,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn28">
+                <Component class="javax.swing.JToggleButton" name="raoBtn28images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup17"/>
+                      <ComponentRef name="imagesButtonGroup17"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -2115,10 +2115,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn33">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn33images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup19"/>
+                      <ComponentRef name="imagesButtonGroup19"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -2128,10 +2128,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn29">
+                <Component class="javax.swing.JToggleButton" name="raoBtn29images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup19"/>
+                      <ComponentRef name="imagesButtonGroup19"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -2141,10 +2141,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn34">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn34images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup20"/>
+                      <ComponentRef name="imagesButtonGroup20"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -2154,10 +2154,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn35">
+                <Component class="javax.swing.JToggleButton" name="activitatsDBtn35images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup21"/>
+                      <ComponentRef name="imagesButtonGroup21"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -2167,10 +2167,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn41">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn41images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup21"/>
+                      <ComponentRef name="imagesButtonGroup21"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -2180,10 +2180,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn42">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn42images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup21"/>
+                      <ComponentRef name="imagesButtonGroup21"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -2193,10 +2193,10 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="cuidatBtn43">
+                <Component class="javax.swing.JToggleButton" name="cuidatBtn43images">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="qolButtonGroup21"/>
+                      <ComponentRef name="imagesButtonGroup21"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -2206,7 +2206,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel113">
+                <Component class="javax.swing.JLabel" name="jLabel113images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Totalmente&lt;br&gt;falso"/>
                   </Properties>
@@ -2216,7 +2216,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel114">
+                <Component class="javax.swing.JLabel" name="jLabel114images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Parcialmente&lt;br&gt;falso"/>
                   </Properties>
@@ -2226,7 +2226,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel159">
+                <Component class="javax.swing.JLabel" name="jLabel159images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Parcialmente&lt;br&gt;verdadero"/>
                   </Properties>
@@ -2236,7 +2236,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel160">
+                <Component class="javax.swing.JLabel" name="jLabel160images">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Totalmente&lt;br&gt;verdadero"/>
                   </Properties>
@@ -2248,12 +2248,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel223">
+            <Component class="javax.swing.JLabel" name="jLabel223images">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Puntuaci&#xf3; total:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="rseTotal3">
+            <Component class="javax.swing.JLabel" name="imagesTotal3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="12" style="1"/>
@@ -2261,7 +2261,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="jLabel14images">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="24" style="0"/>
@@ -2269,27 +2269,27 @@
                 <Property name="text" type="java.lang.String" value="IMAGE test"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel31">
+            <Component class="javax.swing.JLabel" name="jLabel31images">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edad Subjetiva:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel55">
+            <Component class="javax.swing.JLabel" name="jLabel55images">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edad Real:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="jTextField1images">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1imagesActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="jTextField2images">
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2imagesActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -2305,7 +2305,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="jTextArea1images">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>

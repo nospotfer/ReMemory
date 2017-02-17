@@ -219,7 +219,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Tractamientos");
+        jLabel2.setText("Tratamientos");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

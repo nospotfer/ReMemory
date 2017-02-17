@@ -614,7 +614,7 @@ public class IMAGE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         imagesQPanel.add(cuidatBtn7images, gridBagConstraints);
 
-        jLabel220images.setText("Puntuació total:");
+        jLabel220images.setText("<html>Puntuación<br>Identidad:");
 
         jLabel224images.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel224images.setText("<html><b>SUMA TOTAL COMPONENTES:");
@@ -791,7 +791,7 @@ public class IMAGE extends Test {
         gridBagConstraints.gridy = 2;
         imagesQPanel1.add(jLabel162images, gridBagConstraints);
 
-        jLabel221images.setText("Puntuació total:");
+        jLabel221images.setText("<html>Puntuación<br>Autosatisfacción:");
 
         imagesTotal1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         imagesTotal1.setText("0");
@@ -1150,7 +1150,7 @@ public class IMAGE extends Test {
         gridBagConstraints.gridy = 2;
         imagesQPanel2.add(jLabel158images, gridBagConstraints);
 
-        jLabel222images.setText("Puntuació total:");
+        jLabel222images.setText("<html>Puntuación<br>Conductual:");
 
         imagesTotal2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         imagesTotal2.setText("0");
@@ -1509,7 +1509,7 @@ public class IMAGE extends Test {
         gridBagConstraints.gridy = 2;
         imagesQPanel3.add(jLabel160images, gridBagConstraints);
 
-        jLabel223images.setText("Puntuació total:");
+        jLabel223images.setText("<html>Puntuación<br>Autoconciencia:");
 
         imagesTotal3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         imagesTotal3.setText("0");
@@ -1539,50 +1539,14 @@ public class IMAGE extends Test {
         IMAGESQPanelLayout.setHorizontalGroup(
             IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                .addGap(354, 354, 354)
-                .addComponent(jLabel223images)
-                .addGap(0, 0, 0)
-                .addComponent(imagesTotal3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                        .addGap(261, 261, 261)
-                                        .addComponent(jLabel220images)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(imagesTotal))
-                                    .addComponent(imagesQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(imagesQPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IMAGESQPanelLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel222images)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(imagesTotal2)
-                                        .addGap(71, 71, 71))))
-                            .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                .addComponent(imagesQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(imagesQPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IMAGESQPanelLayout.createSequentialGroup()
-                                                .addComponent(jLabel221images)
-                                                .addGap(0, 0, 0)
-                                                .addComponent(imagesTotal1)
-                                                .addGap(74, 74, 74))))
-                                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                        .addGap(118, 118, 118)
-                                        .addComponent(jLabel224images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(IMAGESTotal)
-                                        .addGap(0, 0, Short.MAX_VALUE))))))
+                        .addGap(10, 10, 10)
+                        .addComponent(imagesQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel220images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagesTotal))
                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1594,8 +1558,34 @@ public class IMAGE extends Test {
                                 .addComponent(jLabel55images)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField1images, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel14images))))
-                .addContainerGap(182, Short.MAX_VALUE))
+                            .addComponent(jLabel14images)))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imagesQPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel222images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagesTotal2))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imagesQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel221images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagesTotal1))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imagesQPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel223images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagesTotal3))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(jLabel224images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(IMAGESTotal)))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         IMAGESQPanelLayout.setVerticalGroup(
             IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1608,36 +1598,47 @@ public class IMAGE extends Test {
                     .addComponent(jLabel55images)
                     .addComponent(jTextField1images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField2images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
-                .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imagesQPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(imagesQPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel220images)
-                        .addComponent(imagesTotal))
-                    .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel222images)
-                        .addComponent(imagesTotal2)))
-                .addGap(18, 18, 18)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                        .addComponent(imagesQPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)
+                        .addComponent(imagesQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(imagesTotal)
+                            .addComponent(jLabel220images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel221images)
-                            .addComponent(imagesTotal1))
-                        .addGap(43, 43, 43)
-                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel224images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(IMAGESTotal)))
-                    .addComponent(imagesQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagesQPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(imagesTotal2)
+                            .addComponent(jLabel222images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagesQPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(imagesTotal1)
+                            .addComponent(jLabel221images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagesQPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(imagesTotal3)
+                            .addComponent(jLabel223images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel223images)
-                    .addComponent(imagesTotal3))
-                .addGap(67, 67, 67))
+                    .addComponent(jLabel224images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IMAGESTotal))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         IMAGEScroll.setViewportView(IMAGESQPanel);

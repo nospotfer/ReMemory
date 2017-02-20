@@ -90,24 +90,26 @@ public class Sessio2 extends javax.swing.JFrame {
         
         MFE mfe = new MFE(pacientActual);
         tabbedPanel.addTab(mfe.getLabel(), mfe);
-        
-        HAD had = new HAD(pacientActual);
-        tabbedPanel.addTab(had.getLabel(), had);
-        
+       
         QOLAD qolAd = new QOLAD(pacientActual);
-        tabbedPanel.addTab(qolAd.getLabel(), qolAd);
-        
+        tabbedPanel.addTab(qolAd.getLabel(), qolAd); 
+                
         DUKE duke = new DUKE(pacientActual);
         tabbedPanel.addTab(duke.getLabel(), duke);
-        
-        RSE rse = new RSE(pacientActual);
-        tabbedPanel.addTab(rse.getLabel(), rse);
-        
+                
+        HAD had = new HAD(pacientActual);
+        tabbedPanel.addTab(had.getLabel(), had);
+                
         OHQSF ohqsf = new OHQSF(pacientActual);
         tabbedPanel.addTab(ohqsf.getLabel(), ohqsf);
         
         IMAGE image = new IMAGE(pacientActual);
         tabbedPanel.addTab(image.getLabel(), image);
+                
+        RSE rse = new RSE(pacientActual);
+        tabbedPanel.addTab(rse.getLabel(), rse);
+        
+        
         
         
     }

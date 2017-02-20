@@ -109,7 +109,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;&lt;b&gt;Memoria L&#xf2;gica II&lt;/b&gt;"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;&lt;b&gt;Mem&#xf2;ria L&#xf2;gica II&lt;/b&gt;"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane10">
@@ -206,7 +206,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a0" green="6e" red="41" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Total Historia A (max 14):"/>
+                <Property name="text" type="java.lang.String" value="Total Hist&#xf2;ria A (max 14):"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel41">
@@ -217,12 +217,12 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a0" green="6e" red="41" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Historia A"/>
+                <Property name="text" type="java.lang.String" value="Hist&#xf2;ria A"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Nota:&lt;/b&gt; Memoria l&#xf3;gica II debe aplicarse transcurridos entre 20 y 30 minutos desde la aplicaci&#xf3;n de Memoria l&#xf3;gica I. "/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Nota:&lt;/b&gt; La Memoria l&#xf2;gica II s&apos;ha d&apos;aplicar 20 o 30 minuts despr&#xe9;s d&apos;haver aplicat la Mem&#xf2;ria l&#xf2;gica I. "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="historiaAprimerTotal2">

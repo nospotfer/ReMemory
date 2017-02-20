@@ -63,7 +63,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,5,-52,0,0,2,-18"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,5,-52,0,0,3,119"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -264,7 +264,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel277">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;Targeta de joc de rols - Carta de cita M&#xe8;dica.&lt;br&gt;Nota: La data de la cita M&#xe8;dica ha d&apos;&#xe9;sser de Almenys un o dos mesos Despr&#xe9;s de la Data d&apos;administraci&#xf3; de la UPSA. Aquesta data s&apos;ha de modificar amb Freq&#xfc;&#xe8;ncia.&lt;br&gt;Anoteu la data del dilluns imprimaci&#xf3; de Cada mes, o de l&apos;segon dilluns del mes si dilluns imprimaci&#xf3; &#xe9;s d&#xf3;na festiu."/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Targeta de joc de rols - Carta de cita m&#xe8;dica.&lt;br&gt;Nota: La data de la cita m&#xe8;dica ha d&apos;&#xe9;sser de almenys un o dos mesos despr&#xe9;s de la data d&apos;administraci&#xf3; de la UPSA. Aquesta data s&apos;ha de modificar amb freq&#xfc;&#xe8;ncia.&lt;br&gt;Anoteu la data del dilluns imprimaci&#xf3; de cada mes, o de l&apos;segon dilluns del mes si dilluns imprimaci&#xf3; &#xe9;s d&#xf3;na festiu."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel278">
@@ -351,7 +351,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Marqueu el nombre de casa i digui que va a arribar tard a dinar."/>
+                    <Property name="text" type="java.lang.String" value="Marqui el n&#xfa;mero de casa i digui que arribar&#xe0; tard a dinar."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel282">
@@ -382,7 +382,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel286">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="N&#xba; de tel&#xe8;fon (marcar)"/>
+                    <Property name="text" type="java.lang.String" value="Arribar&#xe9; tard a dinar (parla)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="jToggleButton68">
@@ -417,19 +417,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel284" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel330" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jToggleButton60" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jToggleButton64" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel330" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jToggleButton60" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jToggleButton64" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
+                      <Component id="jLabel284" alignment="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -443,7 +438,7 @@
                                   <Component id="jToggleButton64" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel284" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -456,7 +451,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Escolta atentament aquest n&#xfa;mero i marqui&apos;l de mem&#xf2;ria:&lt;br&gt;&lt;center&gt;596 6996"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Escolti atentament aquest n&#xfa;mero i marqui&apos;l de mem&#xf2;ria:&lt;br&gt;&lt;center&gt;596 6996"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel284">
@@ -526,7 +521,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="5. Despr&#xe9;s que el pacient hagi llegit la carta, doni-li les seg&#xfc;ents instruccions (no a part o tapi la carta de cita m&#xe8;dica):"/>
+                    <TitledBorder title="5. Despr&#xe9;s que el pacient hagi llegit la carta, doni-li les seg&#xfc;ents instruccions (no aparti o tapi la carta de cita m&#xe8;dica):"/>
                   </Border>
                 </Property>
               </Properties>
@@ -1418,7 +1413,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Imagini que pret&#xe9;n passar el dia a la platja. Hi pot haver moltes coses que li agrad&#xe9;s portar, per&#xf2; digui &lt;u&gt;CINC&lt;/u&gt; coses que s&#xf3;n &lt;u&gt;NECESS&#xc0;RIES&lt;/u&gt; per vestir o portar amb vost&#xe8; durant tot aquest d&#xf3;na a la platja"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Imagini que pret&#xe9;n passar el dia a la platja. Hi pot haver moltes coses que li agrad&#xe9;s portar, per&#xf2; digui &lt;u&gt;CINC&lt;/u&gt; coses que s&#xf3;n &lt;u&gt;NECESS&#xc0;RIES&lt;/u&gt; per vestir o portar amb vost&#xe8; durant tot aquest dia a la platja"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel315">

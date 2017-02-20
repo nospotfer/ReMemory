@@ -251,9 +251,7 @@ public class ColorTrails extends Test {
         jLabel30 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
         colorTrailsTable = new org.jdesktop.swingx.JXTable();
-        jLabel10 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         colorTrailsCronoBtn = new javax.swing.JButton();
@@ -315,9 +313,6 @@ public class ColorTrails extends Test {
         colorTrailsTable.setSortsOnUpdates(false);
         jScrollPane9.setViewportView(colorTrailsTable);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel10.setText("Normative table:");
-
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel17.setText("Notes:");
 
@@ -326,24 +321,40 @@ public class ColorTrails extends Test {
         jScrollPane1.setViewportView(jTextArea1);
 
         colorTrailsCronoBtn.setText("<html><center>Comença Crono Color Trails 1");
-        colorTrailsCronoBtn.addActionListener(this::colorTrailsCronoBtnActionPerformed);
+        colorTrailsCronoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorTrailsCronoBtnActionPerformed(evt);
+            }
+        });
 
         colorTrailsCronoLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         colorTrailsCronoLabel.setText("00:00:00");
 
         jButton3.setText("Marcar data");
-        jButton3.addActionListener(this::jButton3ActionPerformed);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         dataColor.setText("Data: \"encara no s'ha fet el test\"");
 
         colorTrailsCronoBtn1.setText("<html><center>Comença Crono Color Trails 2");
-        colorTrailsCronoBtn1.addActionListener(this::colorTrailsCronoBtn1ActionPerformed);
+        colorTrailsCronoBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorTrailsCronoBtn1ActionPerformed(evt);
+            }
+        });
 
         colorTrailsCronoLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         colorTrailsCronoLabel1.setText("00:00:00");
 
         jButton20.setText("Veure Taula");
-        jButton20.addActionListener(this::jButton20ActionPerformed);
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout digitsDirectePanel1Layout = new javax.swing.GroupLayout(digitsDirectePanel1);
         digitsDirectePanel1.setLayout(digitsDirectePanel1Layout);
@@ -357,13 +368,11 @@ public class ColorTrails extends Test {
                         .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
                             .addComponent(jLabel17)
                             .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
                                         .addComponent(colorTrailsCronoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
@@ -388,10 +397,7 @@ public class ColorTrails extends Test {
                 .addGap(18, 18, 18)
                 .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(63, 63, 63)
                         .addGroup(digitsDirectePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(digitsDirectePanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel17)
@@ -419,26 +425,16 @@ public class ColorTrails extends Test {
         add(digitsDirecteScroll1, "card1");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void colorTrailsCronoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorTrailsCronoBtnActionPerformed
-        if (timerColor.isRunning()){
-            timerColor.stop();
-            colorTrailsCronoBtn.setText("Comença crono Color Trails 1");
-            this.colorTrailsTable.setValueAt(secondsColor1+"", 0, 1);
-            colorTrailsCronoLabel.setText("");
-            calculaIndexColor();
-        } else {
-            this.secondsColor1 = 0;
-            startTime = System.currentTimeMillis();
-            this.timerColor.start();
-            colorTrailsCronoBtn.setText("Marcar crono");
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        File file = new File(Utils.RES_PATH+"ColorTrails.pdf");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-    }//GEN-LAST:event_colorTrailsCronoBtnActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date date = new Date();
-        dataColor.setText("Data del test: "+dateFormat.format(date));
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButton20ActionPerformed
 
     private void colorTrailsCronoBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorTrailsCronoBtn1ActionPerformed
         if (timerColor2.isRunning()){
@@ -455,16 +451,26 @@ public class ColorTrails extends Test {
         }
     }//GEN-LAST:event_colorTrailsCronoBtn1ActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        File file = new File(Utils.RES_PATH+"ColorTrails.pdf");
-        if (file.exists()){
-            try {
-                Desktop.getDesktop().open(file);
-            } catch (IOException ex) {
-                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
-            }
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        dataColor.setText("Data del test: "+dateFormat.format(date));
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void colorTrailsCronoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorTrailsCronoBtnActionPerformed
+        if (timerColor.isRunning()){
+            timerColor.stop();
+            colorTrailsCronoBtn.setText("Comença crono Color Trails 1");
+            this.colorTrailsTable.setValueAt(secondsColor1+"", 0, 1);
+            colorTrailsCronoLabel.setText("");
+            calculaIndexColor();
+        } else {
+            this.secondsColor1 = 0;
+            startTime = System.currentTimeMillis();
+            this.timerColor.start();
+            colorTrailsCronoBtn.setText("Marcar crono");
         }
-    }//GEN-LAST:event_jButton20ActionPerformed
+    }//GEN-LAST:event_colorTrailsCronoBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -478,12 +484,10 @@ public class ColorTrails extends Test {
     private javax.swing.JScrollPane digitsDirecteScroll1;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

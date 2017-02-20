@@ -98,7 +98,7 @@ public class BNT extends Test {
                 {"4", "Pop (animal marí)","","0","0"},
                 {"5", "Bolet (quelcom per menjar)","","0","0"},
                 {"6", "Helicòpter (serveix per viatjar per l'aire)","","0","0"},
-                {"7", "Corona de flors","", "0","0"},
+                {"7", "Corona de flors (dels difuntos)","", "0","0"},
                 {"8", "Pinces (utensili)","","0","0"},
                 {"9", "Compàs (serveix per dibuixar)","","0","0"},
                 {"10", "Magdalena (quelcom per menjar)","","0","0"},
@@ -1032,27 +1032,6 @@ public class BNT extends Test {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BNTScroll5 = new javax.swing.JScrollPane();
-        MLPanel4 = new javax.swing.JPanel();
-        jLabel111 = new javax.swing.JLabel();
-        jScrollPane16 = new javax.swing.JScrollPane();
-        BNTATable = new org.jdesktop.swingx.JXTable();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        resetHistoriaB2 = new javax.swing.JButton();
-        jLabel67 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        semanticaBntA = new javax.swing.JLabel();
-        correctesBntA = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
-        totalBntA = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jLabel81 = new javax.swing.JLabel();
-        percentilBNTA = new javax.swing.JLabel();
-        jLabel82 = new javax.swing.JLabel();
-        nssaBNTA = new javax.swing.JLabel();
-        dataBnt1 = new javax.swing.JLabel();
         BNTScroll6 = new javax.swing.JScrollPane();
         MLPanel5 = new javax.swing.JPanel();
         jLabel112 = new javax.swing.JLabel();
@@ -1095,238 +1074,29 @@ public class BNT extends Test {
         jLabel84 = new javax.swing.JLabel();
         nssaBNTC = new javax.swing.JLabel();
         dataBnt3 = new javax.swing.JLabel();
+        BNTScroll5 = new javax.swing.JScrollPane();
+        MLPanel4 = new javax.swing.JPanel();
+        jLabel111 = new javax.swing.JLabel();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        BNTATable = new org.jdesktop.swingx.JXTable();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        resetHistoriaB2 = new javax.swing.JButton();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        semanticaBntA = new javax.swing.JLabel();
+        correctesBntA = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        totalBntA = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jButton6 = new javax.swing.JButton();
+        jLabel81 = new javax.swing.JLabel();
+        percentilBNTA = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        nssaBNTA = new javax.swing.JLabel();
+        dataBnt1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
-
-        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel111.setText("<html><center><b>BOSTON NAMING TEST\t\t\t </b>");
-
-        BNTATable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"1", "9 - 7			 ", null, "0", null},
-                {null, "6 - 3", null, "0", null},
-                {"2", "5 - 8 - 2			 ", null, "0", null},
-                {null, "6 - 9 - 4			 ", null, "0", null},
-                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
-                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
-                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
-                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
-                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
-                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
-                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
-                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
-                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
-                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
-                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
-                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
-            },
-            new String [] {
-                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
-            };
-            boolean[] canEdit = new boolean [] {
-                true, false, true, true, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        BNTATable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
-        BNTATable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BNTATable.setRowSelectionAllowed(false);
-        BNTATable.setSelectionBackground(new java.awt.Color(255, 255, 255));
-        BNTATable.setSortable(false);
-        BNTATable.setSortsOnUpdates(false);
-        jScrollPane16.setViewportView(BNTATable);
-
-        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel62.setForeground(new java.awt.Color(65, 110, 160));
-        jLabel62.setText("Correctes:");
-
-        jLabel65.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel65.setForeground(new java.awt.Color(65, 110, 160));
-        jLabel65.setText("Ajuda semàntica:");
-
-        resetHistoriaB2.setText("Reset");
-        resetHistoriaB2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resetHistoriaB2ActionPerformed(evt);
-            }
-        });
-
-        jLabel67.setText("(max. 25)");
-
-        jLabel68.setText("(max. 53)");
-
-        semanticaBntA.setBackground(new java.awt.Color(255, 255, 255));
-        semanticaBntA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        semanticaBntA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        semanticaBntA.setText("0");
-        semanticaBntA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        semanticaBntA.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        semanticaBntA.setOpaque(true);
-
-        correctesBntA.setBackground(new java.awt.Color(255, 255, 255));
-        correctesBntA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        correctesBntA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        correctesBntA.setText("0");
-        correctesBntA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        correctesBntA.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        correctesBntA.setOpaque(true);
-
-        jLabel71.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel71.setForeground(new java.awt.Color(65, 110, 160));
-        jLabel71.setText("TOTAL:");
-
-        totalBntA.setBackground(new java.awt.Color(255, 255, 255));
-        totalBntA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        totalBntA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        totalBntA.setText("0");
-        totalBntA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        totalBntA.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        totalBntA.setOpaque(true);
-
-        jPanel7.setBackground(new java.awt.Color(250, 150, 70));
-
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton6.setText("Calcular");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
-        jLabel81.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel81.setText("<html>Percentil<br>range:");
-
-        percentilBNTA.setBackground(new java.awt.Color(255, 255, 255));
-        percentilBNTA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        percentilBNTA.setText("0");
-        percentilBNTA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        percentilBNTA.setOpaque(true);
-
-        jLabel82.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel82.setText("<html>NSSA<br>NEURONORMA<br>Scaled Score<br>age-adjusted");
-
-        nssaBNTA.setBackground(new java.awt.Color(255, 255, 255));
-        nssaBNTA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nssaBNTA.setText("0");
-        nssaBNTA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        nssaBNTA.setOpaque(true);
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton6)
-                .addGap(22, 22, 22)
-                .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(percentilBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nssaBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(percentilBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(nssaBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout MLPanel4Layout = new javax.swing.GroupLayout(MLPanel4);
-        MLPanel4.setLayout(MLPanel4Layout);
-        MLPanel4Layout.setHorizontalGroup(
-            MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MLPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MLPanel4Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(MLPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel65)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(semanticaBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel68))
-                            .addComponent(resetHistoriaB2)
-                            .addGroup(MLPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel62)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(correctesBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel67))
-                            .addGroup(MLPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel71)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(totalBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dataBnt1)))
-                    .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-        MLPanel4Layout.setVerticalGroup(
-            MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MLPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MLPanel4Layout.createSequentialGroup()
-                        .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel62)
-                            .addComponent(jLabel67)
-                            .addComponent(correctesBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel65)
-                            .addComponent(semanticaBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel68))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel71)
-                            .addComponent(totalBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(resetHistoriaB2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(dataBnt1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        BNTScroll5.setViewportView(MLPanel4);
-
-        add(BNTScroll5, "card1");
 
         jLabel112.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel112.setText("<html><center><b>BOSTON NAMING TEST\t\t\t </b>");
@@ -1392,9 +1162,9 @@ public class BNT extends Test {
             }
         });
 
-        jLabel69.setText("(max. 25)");
+        jLabel69.setText("(max. 15)");
 
-        jLabel72.setText("(max. 53)");
+        jLabel72.setText("(max. 15)");
 
         jPanel5.setBackground(new java.awt.Color(250, 150, 70));
 
@@ -1787,6 +1557,236 @@ public class BNT extends Test {
         BNTScroll7.setViewportView(MLPanel6);
 
         add(BNTScroll7, "card3");
+
+        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel111.setText("<html><center><b>BOSTON NAMING TEST\t\t\t </b>");
+
+        BNTATable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", null},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", null},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+            },
+            new String [] {
+                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                true, false, true, true, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        BNTATable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        BNTATable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BNTATable.setRowSelectionAllowed(false);
+        BNTATable.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        BNTATable.setSortable(false);
+        BNTATable.setSortsOnUpdates(false);
+        jScrollPane16.setViewportView(BNTATable);
+
+        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(65, 110, 160));
+        jLabel62.setText("Correctes:");
+
+        jLabel65.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(65, 110, 160));
+        jLabel65.setText("Ajuda semàntica:");
+
+        resetHistoriaB2.setText("Reset");
+        resetHistoriaB2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetHistoriaB2ActionPerformed(evt);
+            }
+        });
+
+        jLabel67.setText("(max. 15)");
+
+        jLabel68.setText("(max. 15)");
+
+        semanticaBntA.setBackground(new java.awt.Color(255, 255, 255));
+        semanticaBntA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        semanticaBntA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        semanticaBntA.setText("0");
+        semanticaBntA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        semanticaBntA.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        semanticaBntA.setOpaque(true);
+
+        correctesBntA.setBackground(new java.awt.Color(255, 255, 255));
+        correctesBntA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        correctesBntA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        correctesBntA.setText("0");
+        correctesBntA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        correctesBntA.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        correctesBntA.setOpaque(true);
+
+        jLabel71.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(65, 110, 160));
+        jLabel71.setText("TOTAL:");
+
+        totalBntA.setBackground(new java.awt.Color(255, 255, 255));
+        totalBntA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        totalBntA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalBntA.setText("0");
+        totalBntA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        totalBntA.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        totalBntA.setOpaque(true);
+
+        jPanel7.setBackground(new java.awt.Color(250, 150, 70));
+
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton6.setText("Calcular");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jLabel81.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel81.setText("<html>Percentil<br>range:");
+
+        percentilBNTA.setBackground(new java.awt.Color(255, 255, 255));
+        percentilBNTA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        percentilBNTA.setText("0");
+        percentilBNTA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        percentilBNTA.setOpaque(true);
+
+        jLabel82.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel82.setText("<html>NSSA<br>NEURONORMA<br>Scaled Score<br>age-adjusted");
+
+        nssaBNTA.setBackground(new java.awt.Color(255, 255, 255));
+        nssaBNTA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nssaBNTA.setText("0");
+        nssaBNTA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        nssaBNTA.setOpaque(true);
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton6)
+                .addGap(22, 22, 22)
+                .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(percentilBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nssaBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(percentilBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nssaBNTA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout MLPanel4Layout = new javax.swing.GroupLayout(MLPanel4);
+        MLPanel4.setLayout(MLPanel4Layout);
+        MLPanel4Layout.setHorizontalGroup(
+            MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MLPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MLPanel4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MLPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel65)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(semanticaBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel68))
+                            .addComponent(resetHistoriaB2)
+                            .addGroup(MLPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel62)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(correctesBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel67))
+                            .addGroup(MLPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel71)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(totalBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dataBnt1)))
+                    .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        MLPanel4Layout.setVerticalGroup(
+            MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MLPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MLPanel4Layout.createSequentialGroup()
+                        .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel62)
+                            .addComponent(jLabel67)
+                            .addComponent(correctesBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel65)
+                            .addComponent(semanticaBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel68))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel71)
+                            .addComponent(totalBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(resetHistoriaB2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dataBnt1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        BNTScroll5.setViewportView(MLPanel4);
+
+        add(BNTScroll5, "card1");
     }// </editor-fold>//GEN-END:initComponents
 
     private void resetHistoriaB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetHistoriaB2ActionPerformed

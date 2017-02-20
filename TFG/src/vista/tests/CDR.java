@@ -704,7 +704,7 @@ public class CDR extends Test {
 
         idiomaLabel.setText("1a. En cas afirmatiu, es tracta d'un problema constant (en lloc de intermitent)?");
 
-        naixementLabel.setText("2. ¿Pot ell/ella recordar fets recents?");
+        naixementLabel.setText("2. Pot ell/ella recordar fets recents?");
 
         nivellEscolaritatLabel.setText("3. Pot ell / a recordar una llista curta de coses (compres)?");
 
@@ -712,9 +712,9 @@ public class CDR extends Test {
 
         estatCivilLabel.setText("5. La seva memòria s'ha vist deteriorada fins al punt que podia haver interferit en les seves activitats de la vida diària fa uns anys (o activitats pre-jubilació)? (Opinió de fonts col·laterals)");
 
-        professioLabel.setText("6. ¿Oblida completament un esdeveniment molt important (per ex. Un viatge, una festa, un casament familiar) poques setmanes després de l'esdeveniment?");
+        professioLabel.setText("6. Oblida completament un esdeveniment molt important (per ex. Un viatge, una festa, un casament familiar) poques setmanes després de l'esdeveniment?");
 
-        categoriaProLabel.setText("7. Oblida detalls importants d'aquest esdeveniment important?");
+        categoriaProLabel.setText("7. Oblida detalls rellevants d'aquest esdeveniment important?");
 
         situacioLaboralLabel.setText("8. Oblida completament la informació important del passat llunyà (per ex., La data del seu naixement, la data del seu casament, el lloc de treball)?");
 
@@ -773,7 +773,19 @@ public class CDR extends Test {
 
         jLabel37.setText("Curs:");
 
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
         jLabel38.setText("13. Quina era la seva principal ocupació (o ocupació del/de la espòs/a si ell/ella no treballava)?");
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
 
         jLabel39.setText("14. Quin va ser la seva última feina (o el del / de la espòs / a si ell / ella no treballava)?");
 
@@ -1373,7 +1385,11 @@ public class CDR extends Test {
 
         cdrRaonament4BtnGroup.add(jCheckBox45);
         jCheckBox45.setText("Pitjor que abans, per altres motius (Quins?)");
-        jCheckBox45.addChangeListener(this::jCheckBox45StateChanged);
+        jCheckBox45.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jCheckBox45StateChanged(evt);
+            }
+        });
 
         orientacioLabel4.setText("5. Pot ell/a entendre situacions o explicacions?");
 
@@ -1700,7 +1716,11 @@ public class CDR extends Test {
 
         cdrSocial7BtnGroup.add(jCheckBox127);
         jCheckBox127.setText("No, perquè:");
-        jCheckBox127.addChangeListener(this::jCheckBox127StateChanged);
+        jCheckBox127.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jCheckBox127StateChanged(evt);
+            }
+        });
 
         orientacioLabel35.setText("8. Exerceix funcions socials fora de la casa?");
 
@@ -2050,7 +2070,7 @@ public class CDR extends Test {
         cdrHabilitatBtnGroup.add(jCheckBox38);
         jCheckBox38.setToolTipText("");
         jCheckBox38.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jCheckBox38.setText("<html><center>Sense pèrdua<br>0");
+        jCheckBox38.setLabel("<html><center>Sense pèrdua<br>0");
         jCheckBox38.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
         cdrHabilitatBtnGroup.add(jCheckBox39);
@@ -2281,7 +2301,7 @@ public class CDR extends Test {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jLabel73.setText("<html><b>* Pot puntuar-se amb un 1, si la cura personal del subjecte s'ha vist limitat pel que fa a un nivell previ, fins i tot si no rep consell.");
+        jLabel73.setText("<html><b>* Pot puntuar-se amb un 1, si la cura personal del subjecte s'ha vist limitada pel que fa a un nivell previ, fins i tot si no rep consell.");
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "<html>B. Rentar-se, arreglar-se", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
@@ -2664,7 +2684,12 @@ public class CDR extends Test {
 
         jLabel82.setText("5");
 
-        jCheckBox179.setText("Juan");
+        jCheckBox179.setText("Joan");
+        jCheckBox179.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox179ActionPerformed(evt);
+            }
+        });
 
         jCheckBox180.setText("García,");
 
@@ -2674,7 +2699,13 @@ public class CDR extends Test {
 
         jCheckBox183.setText("Barcelona");
 
-        jCheckBox184.setText("Juan");
+        jCheckBox184.setActionCommand("Joan");
+        jCheckBox184.setLabel("Joan");
+        jCheckBox184.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox184ActionPerformed(evt);
+            }
+        });
 
         jCheckBox185.setText("García,");
 
@@ -2684,7 +2715,8 @@ public class CDR extends Test {
 
         jCheckBox188.setText("Barcelona");
 
-        jCheckBox189.setText("Juan");
+        jCheckBox189.setActionCommand("Joan");
+        jCheckBox189.setLabel("Joan");
 
         jCheckBox190.setText("García,");
 
@@ -4092,6 +4124,22 @@ public class CDR extends Test {
             jTextField11.setText("");
         }
     }//GEN-LAST:event_jCheckBox127StateChanged
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jCheckBox179ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox179ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox179ActionPerformed
+
+    private void jCheckBox184ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox184ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox184ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

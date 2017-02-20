@@ -1542,7 +1542,7 @@
             </Container>
             <Component class="javax.swing.JLabel" name="jLabel69">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;Aquesta prova est&#xe0; dirigida a determinar com t&apos;has sentit en l&apos;&#xfa;ltima setmana tot i que les preguntes estan formulades en present.&lt;br&gt;Has de triar entre una de quatre possibilitats pel que fa a la pregunta realitzada."/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Aquesta prova est&#xe0; dirigida a determinar com t&apos;has sentit en l&apos;&#xfa;ltima setmana tot i que les preguntes estan formulades en present.&lt;br&gt;Ha de triar entre una de quatre possibilitats pel que fa a la pregunta realitzada."/>
               </Properties>
             </Component>
           </SubComponents>

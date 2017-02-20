@@ -744,7 +744,7 @@ public class MFE extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel117, gridBagConstraints);
 
-        jLabel133.setText("<html>Oblidar una cosa que li van dir ahir o fa pocs dies, i potser veure obligat a demanar<br>que l'hi repeteixin.");
+        jLabel133.setText("<html>Oblidar una cosa que li van dir ahir o fa pocs dies, i potser veure's obligat a demanar<br>que l'hi repeteixin.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 10;
@@ -1014,28 +1014,28 @@ public class MFE extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel184, gridBagConstraints);
 
-        jLabel185.setText("<html>Perdre o seguir una adreça errònia en un viatge, en un passeig o en un edifici <br>on ha estat <b>moltes vegades.");
+        jLabel185.setText("<html>Perdre's o seguir una adreça errònia en un viatge, en un passeig o en un edifici <br>on ha estat <b>moltes vegades.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 27;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel185, gridBagConstraints);
 
-        jLabel186.setText("<html>Realizar una acción dos veces por error. Por ejemplo, echar doble ración de sal<br>a la comida o ir a peinarse de nuevo cuando acaba de hacerlo.  0 ");
+        jLabel186.setText("<html>Realtizar una acció dos vegades per error. Per exemple, afegir dos vegades sal<br>al menjar o anar a pentinarse una altre vegada quan ja ho ha fet. ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 29;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel186, gridBagConstraints);
 
-        jLabel187.setText("<html>Perdre o seguir una adreça errònia en un viatge, en un passeig o en un edifici <br>on ha estat només <b>una o dues vegades");
+        jLabel187.setText("<html>Perdre's o seguir una adreça errònia en un viatge, en un passeig o en un edifici <br>on ha estat només <b>una o dues vegades");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 28;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel187, gridBagConstraints);
 
-        jLabel188.setText("Repetir a algú el que acaba d'explicar-o fer-ho dues vegades la mateixa pregunta.");
+        jLabel188.setText("Repetir a algú el que acaba d'explicar-li o fer-li dues vegades la mateixa pregunta.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 30;

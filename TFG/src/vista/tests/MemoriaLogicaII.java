@@ -623,36 +623,36 @@ public class MemoriaLogicaII extends Test {
         setLayout(new java.awt.CardLayout());
 
         jLabel109.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel109.setText("<html><center><b>Memoria Lògica II</b>");
+        jLabel109.setText("<html><center><b>Memòria Lògica II</b>");
 
         ML2ATable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object [][] {
-                        {"1", "9 - 7			 ", null, "0", null},
-                        {null, "6 - 3", null, "0", null},
-                        {"2", "5 - 8 - 2			 ", null, "0", null},
-                        {null, "6 - 9 - 4			 ", null, "0", null},
-                        {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 4 - 3 - 9			 ", null, "0", null},
-                        {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
-                        {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
-                        {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
-                        {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
-                        {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
-                        {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
-                        {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
-                        {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
-                        {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
-                },
-                new String [] {
-                        "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
-                }
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", null},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", null},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+            },
+            new String [] {
+                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+            }
         ) {
             Class[] types = new Class [] {
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                    true, false, true, true, false
+                true, false, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -673,13 +673,13 @@ public class MemoriaLogicaII extends Test {
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(65, 110, 160));
-        jLabel40.setText("Total Historia A (max 14):");
+        jLabel40.setText("Total Història A (max 14):");
 
         jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(65, 110, 160));
-        jLabel41.setText("Historia A");
+        jLabel41.setText("Història A");
 
-        jLabel2.setText("<html><b>Nota:</b> Memoria lógica II debe aplicarse transcurridos entre 20 y 30 minutos desde la aplicación de Memoria lógica I. ");
+        jLabel2.setText("<html><b>Nota:</b> La Memoria lògica II s'ha d'aplicar 20 o 30 minuts després d'haver aplicat la Memòria lògica I. ");
 
         historiaAprimerTotal2.setBackground(new java.awt.Color(255, 255, 255));
         historiaAprimerTotal2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -709,62 +709,62 @@ public class MemoriaLogicaII extends Test {
         javax.swing.GroupLayout ML2Panel2Layout = new javax.swing.GroupLayout(ML2Panel2);
         ML2Panel2.setLayout(ML2Panel2Layout);
         ML2Panel2Layout.setHorizontalGroup(
-                ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(ML2Panel2Layout.createSequentialGroup()
-                                .addContainerGap()
+            ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ML2Panel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ML2Panel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ML2Panel2Layout.createSequentialGroup()
+                                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(ML2Panel2Layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(ML2Panel2Layout.createSequentialGroup()
-                                                                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addGroup(ML2Panel2Layout.createSequentialGroup()
-                                                                                .addComponent(jLabel40)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addComponent(historiaAprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                        .addComponent(resetHistoriaA1)
-                                                                        .addComponent(jLabel7)
-                                                                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                        .addGroup(ML2Panel2Layout.createSequentialGroup()
-                                                                .addComponent(jLabel41)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(jLabel9)
-                                                                        .addComponent(jLabel8)
-                                                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                                .addContainerGap())
+                                    .addGroup(ML2Panel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel40)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(historiaAprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(resetHistoriaA1)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(ML2Panel2Layout.createSequentialGroup()
+                                .addComponent(jLabel41)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap())
         );
         ML2Panel2Layout.setVerticalGroup(
-                ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(ML2Panel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel41)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9)
-                                .addGap(18, 18, 18)
-                                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(ML2Panel2Layout.createSequentialGroup()
-                                                .addGap(8, 8, 8)
-                                                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel40)
-                                                        .addComponent(historiaAprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel7)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(resetHistoriaA1)))
-                                .addContainerGap())
+            ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ML2Panel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addGap(18, 18, 18)
+                .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ML2Panel2Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addGroup(ML2Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel40)
+                            .addComponent(historiaAprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(resetHistoriaA1)))
+                .addContainerGap())
         );
 
         ML2Scroll1.setViewportView(ML2Panel2);
@@ -775,33 +775,33 @@ public class MemoriaLogicaII extends Test {
         jLabel110.setText("<html><center><b>Memoria Lògica II</b>");
 
         ML2BTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object [][] {
-                        {"1", "9 - 7			 ", null, "0", null},
-                        {null, "6 - 3", null, "0", null},
-                        {"2", "5 - 8 - 2			 ", null, "0", null},
-                        {null, "6 - 9 - 4			 ", null, "0", null},
-                        {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 4 - 3 - 9			 ", null, "0", null},
-                        {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
-                        {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
-                        {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
-                        {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
-                        {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
-                        {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
-                        {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
-                        {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
-                        {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
-                },
-                new String [] {
-                        "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
-                }
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", null},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", null},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+            },
+            new String [] {
+                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+            }
         ) {
             Class[] types = new Class [] {
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                    true, false, true, true, false
+                true, false, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -875,25 +875,25 @@ public class MemoriaLogicaII extends Test {
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jButton2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel58)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(puntuacioML2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                                .addContainerGap())
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton2)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel58)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(puntuacioML2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
-                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel58)
-                                        .addComponent(puntuacioML2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(32, Short.MAX_VALUE))
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel58)
+                    .addComponent(puntuacioML2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         ML2Total.setBackground(new java.awt.Color(255, 255, 255));
@@ -915,75 +915,75 @@ public class MemoriaLogicaII extends Test {
         javax.swing.GroupLayout MLPanel3Layout = new javax.swing.GroupLayout(MLPanel3);
         MLPanel3.setLayout(MLPanel3Layout);
         MLPanel3Layout.setHorizontalGroup(
-                MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(MLPanel3Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(MLPanel3Layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(MLPanel3Layout.createSequentialGroup()
-                                                                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                        .addGroup(MLPanel3Layout.createSequentialGroup()
-                                                                                .addComponent(jLabel53)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addComponent(ML2Total, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                                .addComponent(jLabel56))
-                                                                        .addComponent(jLabel54)
-                                                                        .addComponent(resetHistoriaB1)
-                                                                        .addGroup(MLPanel3Layout.createSequentialGroup()
-                                                                                .addComponent(jLabel50)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addComponent(historiaBprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addGap(10, 10, 10)
-                                                                                .addComponent(jLabel55))
-                                                                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                        .addComponent(dataMl2)
-                                                                        .addComponent(jScrollPane14)))
-                                                        .addGroup(MLPanel3Layout.createSequentialGroup()
-                                                                .addComponent(jLabel51)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap())
+            MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MLPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MLPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MLPanel3Layout.createSequentialGroup()
+                                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(MLPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel53)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(ML2Total, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel56))
+                                    .addComponent(jLabel54)
+                                    .addComponent(resetHistoriaB1)
+                                    .addGroup(MLPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel50)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(historiaBprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel55))
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(dataMl2)
+                                    .addComponent(jScrollPane14)))
+                            .addGroup(MLPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel51)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         MLPanel3Layout.setVerticalGroup(
-                MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(MLPanel3Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel51)
-                                        .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(MLPanel3Layout.createSequentialGroup()
-                                                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel50)
-                                                        .addComponent(jLabel55)
-                                                        .addComponent(historiaBprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel53)
-                                                        .addComponent(ML2Total, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jLabel56))
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel54)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(resetHistoriaB1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(dataMl2)
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                        .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 696, Short.MAX_VALUE))
-                                .addContainerGap())
+            MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MLPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel51)
+                    .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MLPanel3Layout.createSequentialGroup()
+                        .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel50)
+                            .addComponent(jLabel55)
+                            .addComponent(historiaBprimerTotal2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(MLPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel53)
+                            .addComponent(ML2Total, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel56))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel54)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(resetHistoriaB1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dataMl2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 696, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         ML2Scroll3.setViewportView(MLPanel3);
@@ -994,33 +994,33 @@ public class MemoriaLogicaII extends Test {
         jLabel113.setText("<html><center><b>Memoria Lògica II</b>");
 
         ML2RecTableA.setModel(new javax.swing.table.DefaultTableModel(
-                new Object [][] {
-                        {"1", "9 - 7			 ", null, "0", null},
-                        {null, "6 - 3", null, "0", null},
-                        {"2", "5 - 8 - 2			 ", null, "0", null},
-                        {null, "6 - 9 - 4			 ", null, "0", null},
-                        {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 4 - 3 - 9			 ", null, "0", null},
-                        {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
-                        {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
-                        {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
-                        {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
-                        {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
-                        {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
-                        {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
-                        {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
-                        {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
-                },
-                new String [] {
-                        "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
-                }
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", null},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", null},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+            },
+            new String [] {
+                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+            }
         ) {
             Class[] types = new Class [] {
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                    true, false, true, true, false
+                true, false, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1055,33 +1055,33 @@ public class MemoriaLogicaII extends Test {
         totalRecA.setOpaque(true);
 
         ML2RecTableB.setModel(new javax.swing.table.DefaultTableModel(
-                new Object [][] {
-                        {"1", "9 - 7			 ", null, "0", null},
-                        {null, "6 - 3", null, "0", null},
-                        {"2", "5 - 8 - 2			 ", null, "0", null},
-                        {null, "6 - 9 - 4			 ", null, "0", null},
-                        {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 4 - 3 - 9			 ", null, "0", null},
-                        {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
-                        {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
-                        {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
-                        {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
-                        {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
-                        {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
-                        {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
-                        {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
-                        {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
-                },
-                new String [] {
-                        "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
-                }
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", null},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", null},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+            },
+            new String [] {
+                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+            }
         ) {
             Class[] types = new Class [] {
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                    true, false, true, true, false
+                true, false, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1135,87 +1135,87 @@ public class MemoriaLogicaII extends Test {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel4)
-                                        .addComponent(jLabel6)
-                                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                                .addComponent(jLabel60)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(totalRec, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(95, Short.MAX_VALUE))
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel60)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(totalRec, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
-                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel60)
-                                        .addComponent(totalRec, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel6)
-                                .addContainerGap())
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel60)
+                    .addComponent(totalRec, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout ML2Panel4Layout = new javax.swing.GroupLayout(ML2Panel4);
         ML2Panel4.setLayout(ML2Panel4Layout);
         ML2Panel4Layout.setHorizontalGroup(
-                ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(ML2Panel4Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(ML2Panel4Layout.createSequentialGroup()
-                                                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(ML2Panel4Layout.createSequentialGroup()
-                                                                .addGap(10, 10, 10)
-                                                                .addComponent(jLabel49))
-                                                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ML2Panel4Layout.createSequentialGroup()
-                                                                .addComponent(jLabel48)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(totalRecA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addGroup(ML2Panel4Layout.createSequentialGroup()
-                                                                .addComponent(jLabel59)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(totalRecB, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addComponent(jLabel61)
-                                                                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addContainerGap())
+            ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ML2Panel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ML2Panel4Layout.createSequentialGroup()
+                        .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ML2Panel4Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel49))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ML2Panel4Layout.createSequentialGroup()
+                                .addComponent(jLabel48)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(totalRecA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(ML2Panel4Layout.createSequentialGroup()
+                                .addComponent(jLabel59)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(totalRecB, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel61)
+                                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap())
         );
         ML2Panel4Layout.setVerticalGroup(
-                ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(ML2Panel4Layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel61)
-                                        .addComponent(jLabel49))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(ML2Panel4Layout.createSequentialGroup()
-                                                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel48)
-                                                        .addComponent(totalRecA, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel59)
-                                        .addComponent(totalRecB, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap())
+            ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ML2Panel4Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel61)
+                    .addComponent(jLabel49))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(ML2Panel4Layout.createSequentialGroup()
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel48)
+                            .addComponent(totalRecA, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ML2Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel59)
+                    .addComponent(totalRecB, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         ML2Scroll4.setViewportView(ML2Panel4);

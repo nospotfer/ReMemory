@@ -656,7 +656,7 @@ public class UPSA extends Test {
         jLabel326.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel326.setText("Material");
 
-        jLabel277.setText("<html>Targeta de joc de rols - Carta de cita Mèdica.<br>Nota: La data de la cita Mèdica ha d'ésser de Almenys un o dos mesos Després de la Data d'administració de la UPSA. Aquesta data s'ha de modificar amb Freqüència.<br>Anoteu la data del dilluns imprimació de Cada mes, o de l'segon dilluns del mes si dilluns imprimació és dóna festiu.");
+        jLabel277.setText("<html>Targeta de joc de rols - Carta de cita mèdica.<br>Nota: La data de la cita mèdica ha d'ésser de almenys un o dos mesos després de la data d'administració de la UPSA. Aquesta data s'ha de modificar amb freqüència.<br>Anoteu la data del dilluns imprimació de cada mes, o de l'segon dilluns del mes si dilluns imprimació és dóna festiu.");
 
         jLabel278.setText("<html>Telèfon amb botons depresibles (desconnectat). Assegureu-vos que els botons per marcar són a la base del telèfon i NO a l'auricular. A més, en cas que sigui possible,<br>escolliu un model de telèfon en què es requereixi aixecar l'auricular per marcar el número.");
 
@@ -668,7 +668,7 @@ public class UPSA extends Test {
         jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Indiqueu el subjecte que realitzi el següent:"));
 
         jLabel329.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel329.setText("Marqueu el nombre de casa i digui que va a arribar tard a dinar.");
+        jLabel329.setText("Marqui el número de casa i digui que arribarà tard a dinar.");
 
         jLabel282.setText("Nº de telèfon (marcar)");
 
@@ -680,7 +680,7 @@ public class UPSA extends Test {
         upsaButtonGroup2.add(jToggleButton34);
         jToggleButton34.setText("1");
 
-        jLabel286.setText("Nº de telèfon (marcar)");
+        jLabel286.setText("Arribaré tard a dinar (parla)");
 
         upsaButtonGroup3.add(jToggleButton68);
         jToggleButton68.setText("0");
@@ -734,7 +734,7 @@ public class UPSA extends Test {
         jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder("3. Indiqueu el subjecte que realitzi el següent:"));
 
         jLabel330.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel330.setText("<html>Escolta atentament aquest número i marqui'l de memòria:<br><center>596 6996");
+        jLabel330.setText("<html>Escolti atentament aquest número i marqui'l de memòria:<br><center>596 6996");
 
         jLabel284.setText("<html><div style=\"text-align:justify\"><b><u>NOTA A L'AVALUADOR:</b></u> El nombre ha de ser marcat de memòria però es pot repetir si el subjecte ho sol·licita. Si el subjecte comença a marcar el número i després demana que es repeteixi el nombre, l'avaluador pot repetir tot el nombre de nou. El subjecte pot marcar els números restants per ordre o pot penjar i marcar tot el número. Si el subjecte sol·licita que l'entrevistador repeteixi el nombre una tercera vegada, l'entrevistador ha de indicar-li al subjecte que marqui el que recordi.");
 
@@ -750,16 +750,13 @@ public class UPSA extends Test {
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel49Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel284, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel49Layout.createSequentialGroup()
-                        .addComponent(jLabel330, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jToggleButton60)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton64)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(jLabel330, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jToggleButton60)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jToggleButton64)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabel284, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         jPanel49Layout.setVerticalGroup(
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -770,7 +767,7 @@ public class UPSA extends Test {
                     .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jToggleButton60)
                         .addComponent(jToggleButton64)))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel284, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -797,7 +794,7 @@ public class UPSA extends Test {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder("5. Després que el pacient hagi llegit la carta, doni-li les següents instruccions (no a part o tapi la carta de cita mèdica):"));
+        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder("5. Després que el pacient hagi llegit la carta, doni-li les següents instruccions (no aparti o tapi la carta de cita mèdica):"));
 
         jLabel332.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel332.setText("<html>Truqui a la consulta del metge i deixi un missatge al contestador automàtic demanant que li canviï la cita per el dia següent a la mateixa hora. Assegureu-vos d'incloure tota la informació necessària.");
@@ -1196,7 +1193,7 @@ public class UPSA extends Test {
         jLabel343.setText("Digueu-me dues activitats que vostè pot fer a la platja.");
 
         jLabel344.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel344.setText("<html>Imagini que pretén passar el dia a la platja. Hi pot haver moltes coses que li agradés portar, però digui <u>CINC</u> coses que són <u>NECESSÀRIES</u> per vestir o portar amb vostè durant tot aquest dóna a la platja");
+        jLabel344.setText("<html>Imagini que pretén passar el dia a la platja. Hi pot haver moltes coses que li agradés portar, però digui <u>CINC</u> coses que són <u>NECESSÀRIES</u> per vestir o portar amb vostè durant tot aquest dia a la platja");
 
         jLabel315.setText("<html><i>Respostes acceptables:</i> vestit de bany, loció solar, tovallola, aigua per beure, esmorzar, muda de roba, paraigües, impermeable, etc.");
 

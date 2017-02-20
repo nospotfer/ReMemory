@@ -11,7 +11,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,44,0,0,1,-112"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-19,0,0,3,-1"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -2020,12 +2020,12 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel166">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel167">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel170">
@@ -2043,7 +2043,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel172">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="compteigTemps">
@@ -2053,7 +2053,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel176">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel177">
@@ -2076,7 +2076,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel181">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="eleccioTemps">
@@ -2086,7 +2086,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel185">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel186">
@@ -2109,7 +2109,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel190">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="alternTemps">
@@ -2119,7 +2119,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel194">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel195">
@@ -2279,7 +2279,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel205">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator2">
@@ -2400,7 +2400,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel213">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PC:"/>
+                    <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator4">

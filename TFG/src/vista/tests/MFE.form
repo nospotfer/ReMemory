@@ -69,7 +69,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-56,0,0,3,-108"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,-112,0,0,3,-108"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -946,7 +946,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel133">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar una cosa que li van dir ahir o fa pocs dies, i potser veure obligat a demanar&lt;br&gt;que l&apos;hi repeteixin."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar una cosa que li van dir ahir o fa pocs dies, i potser veure&apos;s obligat a demanar&lt;br&gt;que l&apos;hi repeteixin."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1333,7 +1333,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel185">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Perdre o seguir una adre&#xe7;a err&#xf2;nia en un viatge, en un passeig o en un edifici &lt;br&gt;on ha estat &lt;b&gt;moltes vegades."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Perdre&apos;s o seguir una adre&#xe7;a err&#xf2;nia en un viatge, en un passeig o en un edifici &lt;br&gt;on ha estat &lt;b&gt;moltes vegades."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1343,7 +1343,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel186">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Realizar una acci&#xf3;n dos veces por error. Por ejemplo, echar doble raci&#xf3;n de sal&lt;br&gt;a la comida o ir a peinarse de nuevo cuando acaba de hacerlo.  0 "/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Realtizar una acci&#xf3; dos vegades per error. Per exemple, afegir dos vegades sal&lt;br&gt;al menjar o anar a pentinarse una altre vegada quan ja ho ha fet. "/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1353,7 +1353,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel187">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Perdre o seguir una adre&#xe7;a err&#xf2;nia en un viatge, en un passeig o en un edifici &lt;br&gt;on ha estat nom&#xe9;s &lt;b&gt;una o dues vegades"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Perdre&apos;s o seguir una adre&#xe7;a err&#xf2;nia en un viatge, en un passeig o en un edifici &lt;br&gt;on ha estat nom&#xe9;s &lt;b&gt;una o dues vegades"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1363,7 +1363,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel188">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Repetir a alg&#xfa; el que acaba d&apos;explicar-o fer-ho dues vegades la mateixa pregunta."/>
+                    <Property name="text" type="java.lang.String" value="Repetir a alg&#xfa; el que acaba d&apos;explicar-li o fer-li dues vegades la mateixa pregunta."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">

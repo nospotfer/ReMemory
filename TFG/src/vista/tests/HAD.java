@@ -1124,7 +1124,7 @@ public class HAD extends Test{
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel69.setText("<html>Aquesta prova està dirigida a determinar com t'has sentit en l'última setmana tot i que les preguntes estan formulades en present.<br>Has de triar entre una de quatre possibilitats pel que fa a la pregunta realitzada.");
+        jLabel69.setText("<html>Aquesta prova està dirigida a determinar com t'has sentit en l'última setmana tot i que les preguntes estan formulades en present.<br>Ha de triar entre una de quatre possibilitats pel que fa a la pregunta realitzada.");
 
         javax.swing.GroupLayout hadPanelLayout = new javax.swing.GroupLayout(hadPanel);
         hadPanel.setLayout(hadPanelLayout);

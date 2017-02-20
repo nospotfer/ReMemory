@@ -133,7 +133,6 @@ public class OHQSF extends Test {
         jLabel14ohqs = new javax.swing.JLabel();
         jLabel213ohqs = new javax.swing.JLabel();
         OHQSFTotal = new javax.swing.JLabel();
-        jLabel16ohqs = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -687,8 +686,6 @@ public class OHQSF extends Test {
         OHQSFTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         OHQSFTotal.setText("0");
 
-        jLabel16ohqs.setText("<html>Joaquín Tomás-Sábado, Montserrat Edo-Gual, Amor Aradilla-Herrero, Josep V. Sorribes López, Beatriz Fernández-Nájar, Javier Montes-Hidalgo. <br>Propiedades psicométricas preliminares de la forma española del Oxford Happiness Questionnaire Short-Form (OHQ-SF).<br> Comunicación presentada al XV Congreso Virtual de Psiquiatría, Interpsiquis 2014.");
-
         javax.swing.GroupLayout ohqsfPanelLayout = new javax.swing.GroupLayout(ohqsfPanel);
         ohqsfPanel.setLayout(ohqsfPanelLayout);
         ohqsfPanelLayout.setHorizontalGroup(
@@ -706,9 +703,8 @@ public class OHQSF extends Test {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel213ohqs)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OHQSFTotal))
-                            .addComponent(jLabel16ohqs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(124, 124, 124))
+                                .addComponent(OHQSFTotal)))))
+                .addGap(159, 159, 159))
         );
         ohqsfPanelLayout.setVerticalGroup(
             ohqsfPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -726,9 +722,7 @@ public class OHQSF extends Test {
                         .addGroup(ohqsfPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel213ohqs)
                             .addComponent(OHQSFTotal))))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel16ohqs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(111, 111, 111))
+                .addGap(171, 171, 171))
         );
 
         ohqsfScroll.setViewportView(ohqsfPanel);
@@ -765,7 +759,6 @@ public class OHQSF extends Test {
     private javax.swing.JLabel jLabel149ohqs;
     private javax.swing.JLabel jLabel14ohqs;
     private javax.swing.JLabel jLabel150ohqs;
-    private javax.swing.JLabel jLabel16ohqs;
     private javax.swing.JLabel jLabel213ohqs;
     private javax.swing.JLabel jLabel30ohqs;
     private javax.swing.JLabel jLabel34ohqs;

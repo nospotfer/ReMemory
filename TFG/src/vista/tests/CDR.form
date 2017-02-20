@@ -457,7 +457,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="naixementLabel">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="2. &#xbf;Pot ell/ella recordar fets recents?"/>
+                    <Property name="text" type="java.lang.String" value="2. Pot ell/ella recordar fets recents?"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="nivellEscolaritatLabel">
@@ -477,12 +477,12 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="professioLabel">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="6. &#xbf;Oblida completament un esdeveniment molt important (per ex. Un viatge, una festa, un casament familiar) poques setmanes despr&#xe9;s de l&apos;esdeveniment?"/>
+                    <Property name="text" type="java.lang.String" value="6. Oblida completament un esdeveniment molt important (per ex. Un viatge, una festa, un casament familiar) poques setmanes despr&#xe9;s de l&apos;esdeveniment?"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="categoriaProLabel">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="7. Oblida detalls importants d&apos;aquest esdeveniment important?"/>
+                    <Property name="text" type="java.lang.String" value="7. Oblida detalls rellevants d&apos;aquest esdeveniment important?"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="situacioLaboralLabel">
@@ -710,6 +710,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField5">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel38">
                   <Properties>
@@ -717,6 +720,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField6">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel39">
                   <Properties>
@@ -3093,7 +3099,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel73">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;* Pot puntuar-se amb un 1, si la cura personal del subjecte s&apos;ha vist limitat pel que fa a un nivell previ, fins i tot si no rep consell."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;* Pot puntuar-se amb un 1, si la cura personal del subjecte s&apos;ha vist limitada pel que fa a un nivell previ, fins i tot si no rep consell."/>
                   </Properties>
                 </Component>
                 <Container class="javax.swing.JPanel" name="jPanel13">
@@ -4074,8 +4080,11 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox179">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Juan"/>
+                    <Property name="text" type="java.lang.String" value="Joan"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox179ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox180">
                   <Properties>
@@ -4101,8 +4110,12 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox184">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Juan"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Joan"/>
+                    <Property name="label" type="java.lang.String" value="Joan"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox184ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox185">
                   <Properties>
@@ -4126,7 +4139,8 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox189">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Juan"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Joan"/>
+                    <Property name="label" type="java.lang.String" value="Joan"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox190">

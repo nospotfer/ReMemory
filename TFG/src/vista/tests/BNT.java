@@ -679,9 +679,9 @@ public class BNT extends Test {
     
     private void calcularBNTA() {
         List<Object> list;
-        System.out.println(Integer.parseInt(correctesBntA.getText()));
+        System.out.println(Integer.parseInt(totalBntA.getText()));
         System.out.println(edatPacient);
-        list = taulaBNTA.get(edatPacient).get(Integer.parseInt(correctesBntA.getText()));
+        list = taulaBNTA.get(edatPacient).get(Integer.parseInt(totalBntA.getText()));
         percentilBNTA.setText((String) list.get(1));
         
         int scaledScore = (int) list.get(0);
@@ -823,9 +823,9 @@ public class BNT extends Test {
     
     private void calcularBNTB() {
         List<Object> list;
-        System.out.println(Integer.parseInt(correctesBntB.getText()));
+        System.out.println(Integer.parseInt(totalBntB.getText()));
         System.out.println(edatPacient);
-        list = taulaBNTB.get(edatPacient).get(Integer.parseInt(correctesBntB.getText()));
+        list = taulaBNTB.get(edatPacient).get(Integer.parseInt(totalBntB.getText()));
         percentilBNTB.setText((String) list.get(1));
         
         int scaledScore = (int) list.get(0);
@@ -985,9 +985,9 @@ public class BNT extends Test {
     
     private void calcularBNTC() {
         List<Object> list;
-        System.out.println(Integer.parseInt(correctesBntC.getText()));
+        System.out.println(Integer.parseInt(totalBntC.getText()));
         System.out.println(edatPacient);
-        list = taulaBNTC.get(edatPacient).get(Integer.parseInt(correctesBntC.getText()));
+        list = taulaBNTC.get(edatPacient).get(Integer.parseInt(totalBntC.getText()));
         percentilBNTC.setText((String) list.get(1));
         
         int scaledScore = (int) list.get(0);

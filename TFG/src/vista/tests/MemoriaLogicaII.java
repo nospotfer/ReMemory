@@ -32,7 +32,7 @@ import org.jdesktop.swingx.decorator.HighlighterFactory;
  */
 public class MemoriaLogicaII extends Test {
 
-    Pacient pacientActual;
+    //Pacient pacientActual;
 
     /**
      * Creates new form MemoriaLogicaII
@@ -1243,6 +1243,7 @@ public class MemoriaLogicaII extends Test {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int MLII = calculaMLII(Integer.parseInt(ML2Total.getText()));
+        System.out.println(Integer.parseInt(ML2Total.getText()));
         puntuacioML2.setText(MLII+"");
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date date = new Date();

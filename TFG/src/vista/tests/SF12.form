@@ -37,6 +37,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,-74,0,0,3,-77"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -587,7 +588,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel34">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Les seg&#xfc;ents preguntes es refereixen a activitats o coses que vost&#xe8; podria fer en un dia normal.&lt;br&gt;La seva salut, el limita per fer aquestes activitats o coses? Si &#xe9;s aix&#xed;, quant?"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Les seg&#xfc;ents preguntes es refereixen a activitats o coses que vost&#xe8; podria fer en un dia normal.&lt;br&gt;La seva salut el limita per fer aquestes activitats o coses? Si &#xe9;s aix&#xed;, quant?"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel35">
@@ -617,7 +618,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel38">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Durant les 4 &#xfa;ltimes setmanes, ha tingut algun dels seg&#xfc;ents problemes a la seva feina o en les seves activitats&lt;br&gt;quotidianes, a causa de la seva salut f&#xed;sica?"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Durant les 4 &#xfa;ltimes setmanes, ha tingut algun dels seg&#xfc;ents problemes a la seva feina o en les seves activitats&lt;br&gt;quotidianes a causa de la seva salut f&#xed;sica?"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel39">
@@ -652,12 +653,12 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel45">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;7.&lt;/b&gt; No va fer la seva feina o les seves activitats quotidianes tan cuidadosament&lt;br&gt;que de costum per algun problema emocional?"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;7.&lt;/b&gt; No va fer la seva feina o les seves activitats quotidianes tan cuidadosament&lt;br&gt;com de costum per algun problema emocional?"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel46">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;8.&lt;/b&gt; Durant les 4 &#xfa;ltimes setmanes, fina a quin punt el mal li ha dificultat&lt;br&gt;la seva feina (incl&#xf2;s la feina fora de casa i tasques quotidianes)?"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;8.&lt;/b&gt; Durant les 4 &#xfa;ltimes setmanes, fins a quin punt el mal li ha dificultat&lt;br&gt;fer la seva feina (incl&#xf2;s la feina fora de casa i tasques quotidianes)?"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel47">

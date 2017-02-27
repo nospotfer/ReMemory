@@ -191,7 +191,7 @@ public class SF12 extends Test {
 
         jLabel15.setText("<html><b>1.</b> En general, vostè diria que la seva salut és:");
 
-        jLabel34.setText("<html><b>Les següents preguntes es refereixen a activitats o coses que vostè podria fer en un dia normal.<br>La seva salut, el limita per fer aquestes activitats o coses? Si és així, quant?");
+        jLabel34.setText("<html><b>Les següents preguntes es refereixen a activitats o coses que vostè podria fer en un dia normal.<br>La seva salut el limita per fer aquestes activitats o coses? Si és així, quant?");
 
         jLabel35.setText("<html><b>2.</b> Esforços moderats, com moure una taula, passar<br>l'aspiradora, jugar a bitlles o caminar més d'una hora");
 
@@ -203,7 +203,7 @@ public class SF12 extends Test {
 
         jLabel37.setText("<html><b>3.</b> Pujar diversos pisos per l'escala");
 
-        jLabel38.setText("<html><b>Durant les 4 últimes setmanes, ha tingut algun dels següents problemes a la seva feina o en les seves activitats<br>quotidianes, a causa de la seva salut física?");
+        jLabel38.setText("<html><b>Durant les 4 últimes setmanes, ha tingut algun dels següents problemes a la seva feina o en les seves activitats<br>quotidianes a causa de la seva salut física?");
 
         jLabel39.setText("<html><b>4.</b> Va fer menys del que hauria volgut fer?");
 
@@ -217,9 +217,9 @@ public class SF12 extends Test {
 
         jLabel44.setText("<html><b>6.</b> Va fer menys del que hauria volgut fer per algun problema emocional?");
 
-        jLabel45.setText("<html><b>7.</b> No va fer la seva feina o les seves activitats quotidianes tan cuidadosament<br>que de costum per algun problema emocional?");
+        jLabel45.setText("<html><b>7.</b> No va fer la seva feina o les seves activitats quotidianes tan cuidadosament<br>com de costum per algun problema emocional?");
 
-        jLabel46.setText("<html><b>8.</b> Durant les 4 últimes setmanes, fina a quin punt el mal li ha dificultat<br>la seva feina (inclòs la feina fora de casa i tasques quotidianes)?");
+        jLabel46.setText("<html><b>8.</b> Durant les 4 últimes setmanes, fins a quin punt el mal li ha dificultat<br>fer la seva feina (inclòs la feina fora de casa i tasques quotidianes)?");
 
         jLabel47.setText("Sí");
 

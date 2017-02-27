@@ -507,7 +507,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel91">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar quan va passar alguna cosa; per exemple, oblidar si va passar ahir o b&#xe9;&lt;br&gt;la setmana passada"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar quan va passar alguna cosa; per exemple, oblidar si va passar ahir o b&#xe9;&lt;br&gt;la setmana passada."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -557,7 +557,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel97">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Oblidar detalls importants del que va fer o li va passar el dia anterior."/>
+                    <Property name="text" type="java.lang.String" value="Oblidar detalls importants de qu&#xe8; va fer o li va passar el dia anterior."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -567,7 +567,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel98">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Quan parla amb alg&#xfa;, oblidar el que acaba de dir o preguntar a vegades:&lt;br&gt;&quot;&#xbf;de qu&#xe8; est&#xe0;vem parlant?&quot;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Quan parla amb alg&#xfa;, oblidar el que acaba de dir o preguntar de vegades&lt;br&gt;de qu&#xe8; estaven parlant."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -577,7 +577,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel102">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Quan llegeix un diari o una revista, ser incapa&#xe7; de seguir la trama d&apos;una hist&#xf2;ria,&lt;br&gt;perdre el fil de l&apos;argumentaci&#xf3;."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Quan llegeix un diari o una revista, ser incapa&#xe7; de seguir la trama d&apos;una hist&#xf2;ria o&lt;br&gt;perdre el fil de l&apos;argumentaci&#xf3;."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -597,7 +597,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel121">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Tenir dificultats en l&apos;aprenentatge d&apos;una nova habilitat; per exemple, en aprendre&lt;br&gt;les regles d&apos;un nou joc o el funcionament d&apos;un mecanisme, despr&#xe9;s de practicar-una&lt;br&gt;o dues vegades."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Tenir dificultats en l&apos;aprenentatge d&apos;una nova habilitat; per exemple, aprendre&lt;br&gt;les regles d&apos;un nou joc o el funcionament d&apos;un mecanisme, despr&#xe9;s de d&apos;haver-ho &lt;br&gt; practicat una o dues vegades."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -607,7 +607,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel122">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Tenir una paraula &quot;a la punta de la llengua&quot;. Saber el que vol dir, per&#xf2; no trobar&lt;br&gt;l&apos;expressi&#xf3; adequada."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Tenir una paraula &quot;a la punta de la llengua&quot;. Saber qu&#xe8; vol dir per&#xf2; no trobar&lt;br&gt;l&apos;expressi&#xf3; adequada."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -936,7 +936,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel117">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar completament portar amb ell/a objectes que necessita (claus, ulleres,&lt;br&gt;moneder,...) o deixar-se objectes i haver de tornar a buscar-los."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar completament portar amb vost&#xe8; objectes que necessita (claus, ulleres,&lt;br&gt;moneder,...) o deixar-se objectes i haver de tornar a buscar-los."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -956,7 +956,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel136">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;No recon&#xe8;ixer, encara havent-se vist, a parents i amics quan es creua amb ells&lt;br&gt;pel carrer."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;No recon&#xe8;ixer, encara veient-se, a parents i amics quan es creua amb ells&lt;br&gt;pel carrer."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1133,7 +1133,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel139">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar detalls importants sobre si mateix; per exemple, el dia del seu aniversari&lt;br&gt;o el lloc on viu."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar detalls importants sobre s&#xed; mateix; per exemple, el dia del seu aniversari&lt;br&gt;o el lloc on viu."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1293,7 +1293,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel181">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Explicar-li a alg&#xfa; una an&#xe8;cdota o un acudit que li havia explicat anteriorment."/>
+                    <Property name="text" type="java.lang.String" value="Tornar a explicar-li a alg&#xfa; una an&#xe8;cdota o un acudit que li havia explicat anteriorment."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1303,7 +1303,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel182">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar detalls de coses que fa habitualment, ja sigui a casa oa la feina; per exemple&lt;br&gt;oblidar detalls sobre el que ha de fer o b&#xe9; sobre l&apos;hora en qu&#xe8; ha de fer."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Oblidar detalls de coses que fa habitualment, ja sigui a casa o a la feina; per exemple&lt;br&gt;oblidar detalls sobre qu&#xe8; ha de fer o b&#xe9; sobre l&apos;hora que ho ha de fer."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1323,7 +1323,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel184">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;No recon&#xe8;ixer les cares de persones famoses que veu amb freq&#xfc;&#xe8;ncia a la televisi&#xf3;&lt;br&gt;o en fotografia."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;No recon&#xe8;ixer les cares de persones famoses que veu amb freq&#xfc;&#xe8;ncia a la televisi&#xf3;&lt;br&gt;o en una fotografia."/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1343,7 +1343,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel186">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Realtizar una acci&#xf3; dos vegades per error. Per exemple, afegir dos vegades sal&lt;br&gt;al menjar o anar a pentinarse una altre vegada quan ja ho ha fet. "/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Realtizar una acci&#xf3; dos vegades per error; per exemple, afegir dos vegades sal&lt;br&gt;al menjar o anar a pentinarse una altre vegada quan ja ho ha fet. "/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1843,7 +1843,7 @@
             </Container>
             <Component class="javax.swing.JLabel" name="jLabel16">
               <Properties>
-                <Property name="text" type="java.lang.String" value="ASSENYALI AMB QUINA FREQ&#xdc;&#xc8;NCIA LI OCORREN A VOST&#xc8; ELS SEG&#xdc;ENTS ERRORS DE MEM&#xd2;RIA"/>
+                <Property name="text" type="java.lang.String" value="PREGUNTAR I ASSENYALAR AMB QUINA FREQ&#xdc;&#xc8;NCIA OCORREN ELS SEG&#xdc;ENTS ERRORS DE MEM&#xd2;RIA"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel70">

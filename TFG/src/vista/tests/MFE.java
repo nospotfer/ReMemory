@@ -459,7 +459,7 @@ public class MFE extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel90, gridBagConstraints);
 
-        jLabel91.setText("<html>Oblidar quan va passar alguna cosa; per exemple, oblidar si va passar ahir o bé<br>la setmana passada");
+        jLabel91.setText("<html>Oblidar quan va passar alguna cosa; per exemple, oblidar si va passar ahir o bé<br>la setmana passada.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
@@ -494,21 +494,21 @@ public class MFE extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel96, gridBagConstraints);
 
-        jLabel97.setText("Oblidar detalls importants del que va fer o li va passar el dia anterior.");
+        jLabel97.setText("Oblidar detalls importants de què va fer o li va passar el dia anterior.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel97, gridBagConstraints);
 
-        jLabel98.setText("<html>Quan parla amb algú, oblidar el que acaba de dir o preguntar a vegades:<br>\"¿de què estàvem parlant?\"");
+        jLabel98.setText("<html>Quan parla amb algú, oblidar el que acaba de dir o preguntar de vegades<br>de què estaven parlant.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel98, gridBagConstraints);
 
-        jLabel102.setText("<html>Quan llegeix un diari o una revista, ser incapaç de seguir la trama d'una història,<br>perdre el fil de l'argumentació.");
+        jLabel102.setText("<html>Quan llegeix un diari o una revista, ser incapaç de seguir la trama d'una història o<br>perdre el fil de l'argumentació.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 19;
@@ -523,14 +523,14 @@ public class MFE extends Test {
         gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
         mfeQPanel.add(jLabel104, gridBagConstraints);
 
-        jLabel121.setText("<html>Tenir dificultats en l'aprenentatge d'una nova habilitat; per exemple, en aprendre<br>les regles d'un nou joc o el funcionament d'un mecanisme, després de practicar-una<br>o dues vegades.");
+        jLabel121.setText("<html>Tenir dificultats en l'aprenentatge d'una nova habilitat; per exemple, aprendre<br>les regles d'un nou joc o el funcionament d'un mecanisme, després de d'haver-ho <br> practicat una o dues vegades.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel121, gridBagConstraints);
 
-        jLabel122.setText("<html>Tenir una paraula \"a la punta de la llengua\". Saber el que vol dir, però no trobar<br>l'expressió adequada.");
+        jLabel122.setText("<html>Tenir una paraula \"a la punta de la llengua\". Saber què vol dir però no trobar<br>l'expressió adequada.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 15;
@@ -737,7 +737,7 @@ public class MFE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         mfeQPanel.add(jToggleButton111, gridBagConstraints);
 
-        jLabel117.setText("<html>Oblidar completament portar amb ell/a objectes que necessita (claus, ulleres,<br>moneder,...) o deixar-se objectes i haver de tornar a buscar-los.");
+        jLabel117.setText("<html>Oblidar completament portar amb vostè objectes que necessita (claus, ulleres,<br>moneder,...) o deixar-se objectes i haver de tornar a buscar-los.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
@@ -751,7 +751,7 @@ public class MFE extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel133, gridBagConstraints);
 
-        jLabel136.setText("<html>No reconèixer, encara havent-se vist, a parents i amics quan es creua amb ells<br>pel carrer.");
+        jLabel136.setText("<html>No reconèixer, encara veient-se, a parents i amics quan es creua amb ells<br>pel carrer.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 13;
@@ -865,7 +865,7 @@ public class MFE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         mfeQPanel.add(jToggleButton67, gridBagConstraints);
 
-        jLabel139.setText("<html>Oblidar detalls importants sobre si mateix; per exemple, el dia del seu aniversari<br>o el lloc on viu.");
+        jLabel139.setText("<html>Oblidar detalls importants sobre sí mateix; per exemple, el dia del seu aniversari<br>o el lloc on viu.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 21;
@@ -986,14 +986,14 @@ public class MFE extends Test {
         gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 5);
         mfeQPanel.add(jLabel180, gridBagConstraints);
 
-        jLabel181.setText("Explicar-li a algú una anècdota o un acudit que li havia explicat anteriorment.");
+        jLabel181.setText("Tornar a explicar-li a algú una anècdota o un acudit que li havia explicat anteriorment.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 23;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel181, gridBagConstraints);
 
-        jLabel182.setText("<html>Oblidar detalls de coses que fa habitualment, ja sigui a casa oa la feina; per exemple<br>oblidar detalls sobre el que ha de fer o bé sobre l'hora en què ha de fer.");
+        jLabel182.setText("<html>Oblidar detalls de coses que fa habitualment, ja sigui a casa o a la feina; per exemple<br>oblidar detalls sobre què ha de fer o bé sobre l'hora que ho ha de fer.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 24;
@@ -1007,7 +1007,7 @@ public class MFE extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel183, gridBagConstraints);
 
-        jLabel184.setText("<html>No reconèixer les cares de persones famoses que veu amb freqüència a la televisió<br>o en fotografia.");
+        jLabel184.setText("<html>No reconèixer les cares de persones famoses que veu amb freqüència a la televisió<br>o en una fotografia.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 25;
@@ -1021,7 +1021,7 @@ public class MFE extends Test {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         mfeQPanel.add(jLabel185, gridBagConstraints);
 
-        jLabel186.setText("<html>Realtizar una acció dos vegades per error. Per exemple, afegir dos vegades sal<br>al menjar o anar a pentinarse una altre vegada quan ja ho ha fet. ");
+        jLabel186.setText("<html>Realtizar una acció dos vegades per error; per exemple, afegir dos vegades sal<br>al menjar o anar a pentinarse una altre vegada quan ja ho ha fet. ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 29;
@@ -1330,7 +1330,7 @@ public class MFE extends Test {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         mfeQPanel.add(jToggleButton145, gridBagConstraints);
 
-        jLabel16.setText("ASSENYALI AMB QUINA FREQÜÈNCIA LI OCORREN A VOSTÈ ELS SEGÜENTS ERRORS DE MEMÒRIA");
+        jLabel16.setText("PREGUNTAR I ASSENYALAR AMB QUINA FREQÜÈNCIA OCORREN ELS SEGÜENTS ERRORS DE MEMÒRIA");
 
         jLabel70.setText("Puntuació total:");
 

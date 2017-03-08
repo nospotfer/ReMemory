@@ -714,7 +714,7 @@ public class CDR extends Test {
 
         professioLabel.setText("6. Oblida completament un esdeveniment molt important (per ex. Un viatge, una festa, un casament familiar) poques setmanes després de l'esdeveniment?");
 
-        categoriaProLabel.setText("7. Oblida detalls rellevants d'aquest esdeveniment important?");
+        categoriaProLabel.setText("7. Oblida detalls importants d'aquest esdeveniment important?");
 
         situacioLaboralLabel.setText("8. Oblida completament la informació important del passat llunyà (per ex., La data del seu naixement, la data del seu casament, el lloc de treball)?");
 

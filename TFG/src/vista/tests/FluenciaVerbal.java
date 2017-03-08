@@ -91,7 +91,7 @@ public class FluenciaVerbal extends Test {
                         {"24.", null,"24.",null,"24.",null,"24.",null},
                         {"25.", null,"25.",null,"25.",null,"25.",null},
                         {"<html><b>Total", null,"<html><b>Total",null,"<html><b>Total",null,"<html><b>Total",null},
-                        {"<html><b>Percentil", null,"<html><b>Percentil",null,"<html><b>Percentil",null,"<html><b>Percentil",null},
+                        //{"<html><b>Percentil", null,"<html><b>Percentil",null,"<html><b>Percentil",null,"<html><b>Percentil",null}, // DESCOMENTAR SI SE QUIERE VOLVER A TENER PERCENTILES
                         {"<html><b>NSSA", null,"<html><b>NSSA",null,"<html><b>NSSA",null,"<html><b>NSSA",null}
                 },
                 new String [] {
@@ -131,9 +131,10 @@ public class FluenciaVerbal extends Test {
             fluenciaVerbalTable.setRowHeight(i, 20);
         }
 
+        
         fluenciaVerbalTable.setRowHeight(25, 35);
         fluenciaVerbalTable.setRowHeight(26, 35);
-        fluenciaVerbalTable.setRowHeight(27, 35);
+        //fluenciaVerbalTable.setRowHeight(27, 35); //DESCOMENTAR SI SE QUIERE VOLVER A TENER PERCENTILES!
 
 
         fluenciaVerbalTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
@@ -153,8 +154,8 @@ public class FluenciaVerbal extends Test {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        digitsDirecteScroll2 = new javax.swing.JScrollPane();
-        digitsDirectePanel2 = new javax.swing.JPanel();
+        fluenciaVerbalScroll2 = new javax.swing.JScrollPane();
+        fluenciaVerbalPanel2 = new javax.swing.JPanel();
         jLabel164 = new javax.swing.JLabel();
         jScrollPane19 = new javax.swing.JScrollPane();
         fluenciaVerbalTable = new org.jdesktop.swingx.JXTable();
@@ -168,33 +169,33 @@ public class FluenciaVerbal extends Test {
         jLabel164.setText("Fluència verbal");
 
         fluenciaVerbalTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object [][] {
-                        {"1", "9 - 7			 ", null, "0", null},
-                        {null, "6 - 3", null, "0", null},
-                        {"2", "5 - 8 - 2			 ", null, "0", null},
-                        {null, "6 - 9 - 4			 ", null, "0", null},
-                        {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 4 - 3 - 9			 ", null, "0", null},
-                        {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
-                        {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
-                        {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
-                        {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
-                        {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
-                        {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
-                        {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
-                        {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
-                        {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
-                        {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
-                },
-                new String [] {
-                        "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
-                }
+            new Object [][] {
+                {"1", "9 - 7			 ", null, "0", null},
+                {null, "6 - 3", null, "0", null},
+                {"2", "5 - 8 - 2			 ", null, "0", null},
+                {null, "6 - 9 - 4			 ", null, "0", null},
+                {"3", "7 - 2 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 4 - 3 - 9			 ", null, "0", null},
+                {"4", "4 - 2 - 7 - 3 - 1			 ", null, "0", null},
+                {null, "7 - 5 - 8 - 3 - 6			 ", null, "0", null},
+                {"5", "3 - 9 - 2 - 4 - 8 - 7			 ", null, "0", null},
+                {null, "6 - 1 - 9 - 7 - 4 - 2			 ", null, "0", null},
+                {"6", "4 - 1 - 7 - 9 - 3 - 8 - 6			 ", null, "0", null},
+                {null, "6 - 9 - 1 - 7 - 4 - 2 - 8			 ", null, "0", null},
+                {"7", "3 - 8 - 2 - 9 - 6 - 1 - 7 - 4			 ", null, "0", null},
+                {null, "5 - 8 - 1 - 3 - 2 - 6 - 4 - 7			 ", null, "0", null},
+                {"8", "2 - 7 - 5 - 8 - 6 - 3 - 1 - 9 - 4			 ", null, "0", null},
+                {null, "7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8			 ", null, "0", null}
+            },
+            new String [] {
+                "Ítem", "Intent", "Resposta", "<html><center>Puntuació intent<br>(0-1)", "Puntuació ítem"
+            }
         ) {
             Class[] types = new Class [] {
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                    true, false, true, true, false
+                true, false, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -229,45 +230,46 @@ public class FluenciaVerbal extends Test {
             }
         });
 
-        javax.swing.GroupLayout digitsDirectePanel2Layout = new javax.swing.GroupLayout(digitsDirectePanel2);
-        digitsDirectePanel2.setLayout(digitsDirectePanel2Layout);
-        digitsDirectePanel2Layout.setHorizontalGroup(
-                digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jButton17)
-                                                        .addComponent(dataFluencia)
-                                                        .addComponent(jButton21)))
-                                        .addComponent(jLabel164))
-                                .addContainerGap())
+        javax.swing.GroupLayout fluenciaVerbalPanel2Layout = new javax.swing.GroupLayout(fluenciaVerbalPanel2);
+        fluenciaVerbalPanel2.setLayout(fluenciaVerbalPanel2Layout);
+        fluenciaVerbalPanel2Layout.setHorizontalGroup(
+            fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton17)
+                            .addComponent(dataFluencia)
+                            .addComponent(jButton21)))
+                    .addComponent(jLabel164))
+                .addContainerGap())
         );
-        digitsDirectePanel2Layout.setVerticalGroup(
-                digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, digitsDirectePanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel164)
-                                .addGap(18, 18, 18)
-                                .addGroup(digitsDirectePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 766, Short.MAX_VALUE)
-                                        .addGroup(digitsDirectePanel2Layout.createSequentialGroup()
-                                                .addComponent(jButton17)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(dataFluencia)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jButton21)
-                                                .addGap(0, 0, Short.MAX_VALUE)))
-                                .addContainerGap())
+        fluenciaVerbalPanel2Layout.setVerticalGroup(
+            fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fluenciaVerbalPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel164)
+                .addGap(18, 18, 18)
+                .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 913, Short.MAX_VALUE)
+                        .addGap(930, 930, 930))
+                    .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(dataFluencia)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton21)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        digitsDirecteScroll2.setViewportView(digitsDirectePanel2);
+        fluenciaVerbalScroll2.setViewportView(fluenciaVerbalPanel2);
 
-        add(digitsDirecteScroll2, "card1");
+        add(fluenciaVerbalScroll2, "card1");
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
@@ -290,8 +292,8 @@ public class FluenciaVerbal extends Test {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dataFluencia;
-    private javax.swing.JPanel digitsDirectePanel2;
-    private javax.swing.JScrollPane digitsDirecteScroll2;
+    private javax.swing.JPanel fluenciaVerbalPanel2;
+    private javax.swing.JScrollPane fluenciaVerbalScroll2;
     private org.jdesktop.swingx.JXTable fluenciaVerbalTable;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton21;

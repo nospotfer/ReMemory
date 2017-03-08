@@ -37,6 +37,7 @@ public class FiveDigit extends Test {
 
     /**
      * Creates new form FiveDigit
+     * @param pacientActual
      */
     public FiveDigit(Pacient pacientActual) {
         super(pacientActual);
@@ -144,7 +145,7 @@ public class FiveDigit extends Test {
                 dif = Math.round(dif % 1000);
                 long centiseconds = dif / 10;
 
-                llistaBtn5digits[pagina].setText(timeFormatter.format(minutes) + ":"
+                llistaBtn5digits[pagina-1].setText(timeFormatter.format(minutes) + ":"
                         + timeFormatter.format(seconds) + "."
                         + timeFormatter.format(centiseconds));
             }
@@ -169,8 +170,8 @@ public class FiveDigit extends Test {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         fiveDigitStart1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        fiveDigitsButton5 = new javax.swing.JButton();
+        fiveDigitsButton10 = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
@@ -198,44 +199,44 @@ public class FiveDigit extends Test {
         jLabel98 = new javax.swing.JLabel();
         jLabel99 = new javax.swing.JLabel();
         fiveDigitStart2 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jLabel100 = new javax.swing.JLabel();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
-        jLabel104 = new javax.swing.JLabel();
-        jLabel105 = new javax.swing.JLabel();
-        jLabel108 = new javax.swing.JLabel();
-        jLabel115 = new javax.swing.JLabel();
-        jLabel116 = new javax.swing.JLabel();
-        jLabel117 = new javax.swing.JLabel();
-        jLabel118 = new javax.swing.JLabel();
-        jLabel119 = new javax.swing.JLabel();
+        fiveDigitsButton11 = new javax.swing.JButton();
+        fiveDigitsButton12 = new javax.swing.JButton();
+        fiveDigitsLabel100 = new javax.swing.JLabel();
+        fiveDigitsLabel101 = new javax.swing.JLabel();
+        fiveDigitsLabel102 = new javax.swing.JLabel();
+        fiveDigitsLabel103 = new javax.swing.JLabel();
+        fiveDigitsLabel104 = new javax.swing.JLabel();
+        fiveDigitsLabel105 = new javax.swing.JLabel();
+        fiveDigitsLabel108 = new javax.swing.JLabel();
+        fiveDigitsLabel115 = new javax.swing.JLabel();
+        fiveDigitsLabel116 = new javax.swing.JLabel();
+        fiveDigitsLabel117 = new javax.swing.JLabel();
+        fiveDigitsLabel118 = new javax.swing.JLabel();
+        fiveDigitsLabel119 = new javax.swing.JLabel();
         temps3 = new javax.swing.JLabel();
         temps4 = new javax.swing.JLabel();
-        jLabel120 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
+        fiveDigitsLabel120 = new javax.swing.JLabel();
+        fiveDigitsLabel121 = new javax.swing.JLabel();
         compteigError1 = new javax.swing.JTextField();
         compteigError2 = new javax.swing.JTextField();
         fiveDigitsScroll2 = new javax.swing.JScrollPane();
         Panel2 = new javax.swing.JPanel();
-        jLabel122 = new javax.swing.JLabel();
+        fiveDigitsLabel122 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
-        jLabel123 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
-        jLabel125 = new javax.swing.JLabel();
-        jLabel126 = new javax.swing.JLabel();
+        fiveDigitsLabel123 = new javax.swing.JLabel();
+        fiveDigitsLabel124 = new javax.swing.JLabel();
+        fiveDigitsLabel125 = new javax.swing.JLabel();
+        fiveDigitsLabel126 = new javax.swing.JLabel();
         fiveDigitStart3 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jLabel127 = new javax.swing.JLabel();
-        jLabel128 = new javax.swing.JLabel();
-        jLabel129 = new javax.swing.JLabel();
-        jLabel130 = new javax.swing.JLabel();
-        jLabel131 = new javax.swing.JLabel();
-        jLabel132 = new javax.swing.JLabel();
-        jLabel133 = new javax.swing.JLabel();
+        fiveDigitsButton13 = new javax.swing.JButton();
+        fiveDigitsButton14 = new javax.swing.JButton();
+        fiveDigitsLabel127 = new javax.swing.JLabel();
+        fiveDigitsLabel128 = new javax.swing.JLabel();
+        fiveDigitsLabel129 = new javax.swing.JLabel();
+        fiveDigitsLabel130 = new javax.swing.JLabel();
+        fiveDigitsLabel131 = new javax.swing.JLabel();
+        fiveDigitsLabel132 = new javax.swing.JLabel();
+        fiveDigitsLabel133 = new javax.swing.JLabel();
         jLabel134 = new javax.swing.JLabel();
         jLabel135 = new javax.swing.JLabel();
         jLabel136 = new javax.swing.JLabel();
@@ -256,8 +257,8 @@ public class FiveDigit extends Test {
         jLabel144 = new javax.swing.JLabel();
         jLabel145 = new javax.swing.JLabel();
         fiveDigitStart4 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        fiveDigitsButton15 = new javax.swing.JButton();
+        fiveDigitsButton16 = new javax.swing.JButton();
         jLabel146 = new javax.swing.JLabel();
         jLabel147 = new javax.swing.JLabel();
         jLabel148 = new javax.swing.JLabel();
@@ -342,7 +343,7 @@ public class FiveDigit extends Test {
         flexibilitatPCField = new javax.swing.JTextField();
         calculPercentilsFiveDigit = new javax.swing.JButton();
         dataFive = new javax.swing.JLabel();
-        jButton22 = new javax.swing.JButton();
+        fiveDigitsButton22 = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
 
@@ -370,17 +371,17 @@ public class FiveDigit extends Test {
             }
         });
 
-        jButton5.setText("Marcar Temps");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton5.setText("Marcar Temps");
+        fiveDigitsButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                fiveDigitsButton5ActionPerformed(evt);
             }
         });
 
-        jButton10.setText("Parar Crono");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton10.setText("Parar Crono");
+        fiveDigitsButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                fiveDigitsButton10ActionPerformed(evt);
             }
         });
 
@@ -470,8 +471,8 @@ public class FiveDigit extends Test {
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitsButton10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitsButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(fiveDigitStart1, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -533,7 +534,7 @@ public class FiveDigit extends Test {
                     .addComponent(fiveDigitStart1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
+                    .addComponent(fiveDigitsButton5)
                     .addComponent(jLabel21)
                     .addComponent(jLabel22)
                     .addComponent(jLabel23)
@@ -545,7 +546,7 @@ public class FiveDigit extends Test {
                     .addComponent(lecturaError1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton10)
+                    .addComponent(fiveDigitsButton10)
                     .addComponent(jLabel26)
                     .addComponent(jLabel27)
                     .addComponent(jLabel28)
@@ -607,91 +608,91 @@ public class FiveDigit extends Test {
             }
         });
 
-        jButton11.setText("Marcar Temps");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton11.setText("Marcar Temps");
+        fiveDigitsButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                fiveDigitsButton11ActionPerformed(evt);
             }
         });
 
-        jButton12.setText("Parar Crono");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton12.setText("Parar Crono");
+        fiveDigitsButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                fiveDigitsButton12ActionPerformed(evt);
             }
         });
 
-        jLabel100.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel100.setText("1 4 3 2 5");
-        jLabel100.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel100.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel100.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel100.setText("1 4 3 2 5");
+        fiveDigitsLabel100.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel100.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel101.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel101.setText("4 3 1 5 2");
-        jLabel101.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel101.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel101.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel101.setText("4 3 1 5 2");
+        fiveDigitsLabel101.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel101.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel102.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel102.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel102.setText("5 4 2 3 1");
-        jLabel102.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel102.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel102.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel102.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel102.setText("5 4 2 3 1");
+        fiveDigitsLabel102.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel102.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel103.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel103.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel103.setText("2 5 1 4 3");
-        jLabel103.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel103.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel103.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel103.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel103.setText("2 5 1 4 3");
+        fiveDigitsLabel103.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel103.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel104.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel104.setText("1 3 2 5 4");
-        jLabel104.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel104.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel104.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel104.setText("1 3 2 5 4");
+        fiveDigitsLabel104.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel104.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel105.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel105.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel105.setText("3 5 4 1 2");
-        jLabel105.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel105.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel105.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel105.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel105.setText("3 5 4 1 2");
+        fiveDigitsLabel105.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel105.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel108.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel108.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel108.setText("1 4 3 2 5");
-        jLabel108.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel108.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel108.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel108.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel108.setText("1 4 3 2 5");
+        fiveDigitsLabel108.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel108.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel115.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel115.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel115.setText("4 1 5 3 2");
-        jLabel115.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel115.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel115.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel115.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel115.setText("4 1 5 3 2");
+        fiveDigitsLabel115.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel115.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel116.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel116.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel116.setText("5 2 1 4 3");
-        jLabel116.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel116.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel116.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel116.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel116.setText("5 2 1 4 3");
+        fiveDigitsLabel116.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel116.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel117.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel117.setText("2 5 3 1 4");
-        jLabel117.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel117.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel117.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel117.setText("2 5 3 1 4");
+        fiveDigitsLabel117.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel117.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel118.setText("Temps:");
+        fiveDigitsLabel118.setText("Temps:");
 
-        jLabel119.setText("Temps:");
+        fiveDigitsLabel119.setText("Temps:");
 
         temps3.setText("00:00:00");
 
         temps4.setText("00:00:00");
 
-        jLabel120.setText("Errors:");
+        fiveDigitsLabel120.setText("Errors:");
 
-        jLabel121.setText("Errors:");
+        fiveDigitsLabel121.setText("Errors:");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -707,8 +708,8 @@ public class FiveDigit extends Test {
                         .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitsButton12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitsButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(fiveDigitStart2, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -716,41 +717,41 @@ public class FiveDigit extends Test {
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel6Layout.createSequentialGroup()
-                                        .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jLabel118)
+                                        .addComponent(fiveDigitsLabel118)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(temps3))
                                     .addGroup(jPanel6Layout.createSequentialGroup()
-                                        .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jLabel119)
+                                        .addComponent(fiveDigitsLabel119)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(temps4)))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel6Layout.createSequentialGroup()
-                                        .addComponent(jLabel120)
+                                        .addComponent(fiveDigitsLabel120)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(compteigError1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel6Layout.createSequentialGroup()
-                                        .addComponent(jLabel121)
+                                        .addComponent(fiveDigitsLabel121)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(compteigError2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -770,27 +771,27 @@ public class FiveDigit extends Test {
                     .addComponent(fiveDigitStart2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton11)
-                    .addComponent(jLabel100)
-                    .addComponent(jLabel101)
-                    .addComponent(jLabel102)
-                    .addComponent(jLabel103)
-                    .addComponent(jLabel104)
-                    .addComponent(jLabel118)
+                    .addComponent(fiveDigitsButton11)
+                    .addComponent(fiveDigitsLabel100)
+                    .addComponent(fiveDigitsLabel101)
+                    .addComponent(fiveDigitsLabel102)
+                    .addComponent(fiveDigitsLabel103)
+                    .addComponent(fiveDigitsLabel104)
+                    .addComponent(fiveDigitsLabel118)
                     .addComponent(temps3)
-                    .addComponent(jLabel120)
+                    .addComponent(fiveDigitsLabel120)
                     .addComponent(compteigError1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton12)
-                    .addComponent(jLabel105)
-                    .addComponent(jLabel108)
-                    .addComponent(jLabel115)
-                    .addComponent(jLabel116)
-                    .addComponent(jLabel117)
-                    .addComponent(jLabel119)
+                    .addComponent(fiveDigitsButton12)
+                    .addComponent(fiveDigitsLabel105)
+                    .addComponent(fiveDigitsLabel108)
+                    .addComponent(fiveDigitsLabel115)
+                    .addComponent(fiveDigitsLabel116)
+                    .addComponent(fiveDigitsLabel117)
+                    .addComponent(fiveDigitsLabel119)
                     .addComponent(temps4)
-                    .addComponent(jLabel121)
+                    .addComponent(fiveDigitsLabel121)
                     .addComponent(compteigError2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -820,22 +821,22 @@ public class FiveDigit extends Test {
 
         add(fiveDigitsScroll1, "card2");
 
-        jLabel122.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel122.setText("Five digit test");
+        fiveDigitsLabel122.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        fiveDigitsLabel122.setText("Five digit test");
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Part 3. Processos Automàtics: ELECCIÓ"));
 
-        jLabel123.setText("<html>1a fila: \"Ara vull que compti quants números hi ha en cada quadre. <br> Recordi que ha de comptar els nombres en lloc de llegir-los: un, dos, tres ... \"(quatre, cinc).");
+        fiveDigitsLabel123.setText("<html>1a fila: \"Ara vull que compti quants números hi ha en cada quadre. <br> Recordi que ha de comptar els nombres en lloc de llegir-los: un, dos, tres ... \"(quatre, cinc).");
 
-        jLabel124.setText("2a fila: \"Continuï\" (Repetiu la tasca fins que l'examinat no cometi cap error).");
+        fiveDigitsLabel124.setText("2a fila: \"Continuï\" (Repetiu la tasca fins que l'examinat no cometi cap error).");
 
-        jLabel125.setText("\"D'acord, ara comenci aquí dalt i treballi el més de pressa que pugui\" (comenci a cronometrar el temps)");
+        fiveDigitsLabel125.setText("\"D'acord, ara comenci aquí dalt i treballi el més de pressa que pugui\" (comenci a cronometrar el temps)");
 
-        jLabel126.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel126.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel126.setText("<html>1 2 3 4 5<br>5 2 3 1 4");
-        jLabel126.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel126.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel126.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel126.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel126.setText("<html>1 2 3 4 5<br>5 2 3 1 4");
+        fiveDigitsLabel126.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel126.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         fiveDigitStart3.setText("<html><center>Comença Crono<br>Elecció");
         fiveDigitStart3.addActionListener(new java.awt.event.ActionListener() {
@@ -844,61 +845,61 @@ public class FiveDigit extends Test {
             }
         });
 
-        jButton13.setText("Marcar Temps");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton13.setText("Marcar Temps");
+        fiveDigitsButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                fiveDigitsButton13ActionPerformed(evt);
             }
         });
 
-        jButton14.setText("Parar Crono");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton14.setText("Parar Crono");
+        fiveDigitsButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                fiveDigitsButton14ActionPerformed(evt);
             }
         });
 
-        jLabel127.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel127.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel127.setText("1 4 3 2 5");
-        jLabel127.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel127.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel127.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel127.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel127.setText("1 4 3 2 5");
+        fiveDigitsLabel127.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel127.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel128.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel128.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel128.setText("4 3 1 5 2");
-        jLabel128.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel128.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel128.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel128.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel128.setText("4 3 1 5 2");
+        fiveDigitsLabel128.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel128.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel129.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel129.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel129.setText("5 4 2 3 1");
-        jLabel129.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel129.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel129.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel129.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel129.setText("5 4 2 3 1");
+        fiveDigitsLabel129.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel129.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel130.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel130.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel130.setText("2 5 1 4 3");
-        jLabel130.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel130.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel130.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel130.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel130.setText("2 5 1 4 3");
+        fiveDigitsLabel130.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel130.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel131.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel131.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel131.setText("1 3 2 5 4");
-        jLabel131.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel131.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel131.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel131.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel131.setText("1 3 2 5 4");
+        fiveDigitsLabel131.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel131.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel132.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel132.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel132.setText("3 5 4 1 2");
-        jLabel132.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel132.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel132.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel132.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel132.setText("3 5 4 1 2");
+        fiveDigitsLabel132.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel132.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel133.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel133.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel133.setText("1 4 3 2 5");
-        jLabel133.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel133.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel133.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        fiveDigitsLabel133.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fiveDigitsLabel133.setText("1 4 3 2 5");
+        fiveDigitsLabel133.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fiveDigitsLabel133.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel134.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel134.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -937,39 +938,39 @@ public class FiveDigit extends Test {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel124)
-                    .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fiveDigitsLabel124)
+                    .addComponent(fiveDigitsLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(fiveDigitsLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitsButton14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitsButton13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(fiveDigitStart3, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel125)
+                            .addComponent(fiveDigitsLabel125)
                             .addGroup(jPanel13Layout.createSequentialGroup()
                                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel13Layout.createSequentialGroup()
-                                        .addComponent(jLabel127, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel127, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel129, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel129, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel130, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel130, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel137)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(temps5))
                                     .addGroup(jPanel13Layout.createSequentialGroup()
-                                        .addComponent(jLabel132, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel132, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel133, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fiveDigitsLabel133, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel134, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -996,32 +997,32 @@ public class FiveDigit extends Test {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fiveDigitsLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel124)
+                .addComponent(fiveDigitsLabel124)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fiveDigitsLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel125)
+                    .addComponent(fiveDigitsLabel125)
                     .addComponent(fiveDigitStart3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton13)
-                    .addComponent(jLabel127)
-                    .addComponent(jLabel128)
-                    .addComponent(jLabel129)
-                    .addComponent(jLabel130)
-                    .addComponent(jLabel131)
+                    .addComponent(fiveDigitsButton13)
+                    .addComponent(fiveDigitsLabel127)
+                    .addComponent(fiveDigitsLabel128)
+                    .addComponent(fiveDigitsLabel129)
+                    .addComponent(fiveDigitsLabel130)
+                    .addComponent(fiveDigitsLabel131)
                     .addComponent(jLabel137)
                     .addComponent(temps5)
                     .addComponent(jLabel139)
                     .addComponent(eleccioError1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14)
-                    .addComponent(jLabel132)
-                    .addComponent(jLabel133)
+                    .addComponent(fiveDigitsButton14)
+                    .addComponent(fiveDigitsLabel132)
+                    .addComponent(fiveDigitsLabel133)
                     .addComponent(jLabel134)
                     .addComponent(jLabel135)
                     .addComponent(jLabel136)
@@ -1039,7 +1040,7 @@ public class FiveDigit extends Test {
             .addGroup(Panel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel122)
+                    .addComponent(fiveDigitsLabel122)
                     .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -1047,7 +1048,7 @@ public class FiveDigit extends Test {
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel122)
+                .addComponent(fiveDigitsLabel122)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1081,17 +1082,17 @@ public class FiveDigit extends Test {
             }
         });
 
-        jButton15.setText("Marcar Temps");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton15.setText("Marcar Temps");
+        fiveDigitsButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                fiveDigitsButton15ActionPerformed(evt);
             }
         });
 
-        jButton16.setText("Parar Crono");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton16.setText("Parar Crono");
+        fiveDigitsButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                fiveDigitsButton16ActionPerformed(evt);
             }
         });
 
@@ -1181,8 +1182,8 @@ public class FiveDigit extends Test {
                         .addComponent(jLabel145, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitsButton16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fiveDigitsButton15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(fiveDigitStart4, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1244,7 +1245,7 @@ public class FiveDigit extends Test {
                     .addComponent(fiveDigitStart4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton15)
+                    .addComponent(fiveDigitsButton15)
                     .addComponent(jLabel146)
                     .addComponent(jLabel147)
                     .addComponent(jLabel148)
@@ -1256,7 +1257,7 @@ public class FiveDigit extends Test {
                     .addComponent(alternError1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton16)
+                    .addComponent(fiveDigitsButton16)
                     .addComponent(jLabel151)
                     .addComponent(jLabel152)
                     .addComponent(jLabel153)
@@ -1673,10 +1674,10 @@ public class FiveDigit extends Test {
             }
         });
 
-        jButton22.setText("Veure taula");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
+        fiveDigitsButton22.setText("Veure taula");
+        fiveDigitsButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
+                fiveDigitsButton22ActionPerformed(evt);
             }
         });
 
@@ -1701,7 +1702,7 @@ public class FiveDigit extends Test {
                                 .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jButton22))))
+                            .addComponent(fiveDigitsButton22))))
                 .addContainerGap())
         );
         Panel4Layout.setVerticalGroup(
@@ -1712,7 +1713,7 @@ public class FiveDigit extends Test {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel4Layout.createSequentialGroup()
-                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1721,7 +1722,7 @@ public class FiveDigit extends Test {
                     .addComponent(calculPercentilsFiveDigit)
                     .addComponent(dataFive))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton22)
+                .addComponent(fiveDigitsButton22)
                 .addContainerGap())
         );
 
@@ -1738,13 +1739,13 @@ public class FiveDigit extends Test {
         fiveDigitStart1.setEnabled(false);
     }//GEN-LAST:event_fiveDigitStart1ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void fiveDigitsButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton5ActionPerformed
         if (timer.isRunning()){
             temps1.setText(this.fiveDigitStart1.getText());
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton5ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void fiveDigitsButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton10ActionPerformed
         if (timer.isRunning()){
             temps2.setText(this.fiveDigitStart1.getText());
             timer.stop();
@@ -1755,7 +1756,7 @@ public class FiveDigit extends Test {
             fiveDigitStart1.setText("<html><center>Comença Crono<br>Lectura");
             fiveDigitStart1.setEnabled(true);
         }
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton10ActionPerformed
 
     private void fiveDigitStart2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitStart2ActionPerformed
         temps3.setText("00:00.00");
@@ -1765,13 +1766,13 @@ public class FiveDigit extends Test {
         fiveDigitStart2.setEnabled(false);
     }//GEN-LAST:event_fiveDigitStart2ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void fiveDigitsButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton11ActionPerformed
         if (timer.isRunning()){
             temps3.setText(this.fiveDigitStart2.getText());
         }
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton11ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void fiveDigitsButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton12ActionPerformed
         if (timer.isRunning()){
             temps4.setText(this.fiveDigitStart2.getText());
             timer.stop();
@@ -1782,7 +1783,7 @@ public class FiveDigit extends Test {
             fiveDigitStart2.setText("<html><center>Comença Crono<br>Lectura");
             fiveDigitStart2.setEnabled(true);
         }
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton12ActionPerformed
 
     private void fiveDigitStart3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitStart3ActionPerformed
         temps5.setText("00:00.00");
@@ -1792,13 +1793,13 @@ public class FiveDigit extends Test {
         fiveDigitStart3.setEnabled(false);
     }//GEN-LAST:event_fiveDigitStart3ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void fiveDigitsButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton13ActionPerformed
         if (timer.isRunning()){
             temps5.setText(this.fiveDigitStart3.getText());
         }
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton13ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void fiveDigitsButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton14ActionPerformed
         if (timer.isRunning()){
             temps6.setText(this.fiveDigitStart3.getText());
             timer.stop();
@@ -1809,7 +1810,7 @@ public class FiveDigit extends Test {
             fiveDigitStart3.setText("<html><center>Comença Crono<br>Lectura");
             fiveDigitStart3.setEnabled(true);
         }
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton14ActionPerformed
 
     private void fiveDigitStart4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitStart4ActionPerformed
         temps7.setText("00:00.00");
@@ -1819,13 +1820,13 @@ public class FiveDigit extends Test {
         fiveDigitStart4.setEnabled(false);
     }//GEN-LAST:event_fiveDigitStart4ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void fiveDigitsButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton15ActionPerformed
         if (timer.isRunning()){
             temps7.setText(this.fiveDigitStart4.getText());
         }
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton15ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void fiveDigitsButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton16ActionPerformed
         if (timer.isRunning()){
             temps8.setText(this.fiveDigitStart4.getText());
             timer.stop();
@@ -1836,7 +1837,7 @@ public class FiveDigit extends Test {
             fiveDigitStart4.setText("<html><center>Comença Crono<br>Lectura");
             fiveDigitStart4.setEnabled(true);
         }
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton16ActionPerformed
 
     private void calculPercentilsFiveDigitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculPercentilsFiveDigitActionPerformed
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -1844,7 +1845,7 @@ public class FiveDigit extends Test {
         dataFive.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_calculPercentilsFiveDigitActionPerformed
 
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+    private void fiveDigitsButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsButton22ActionPerformed
         File file = new File(Utils.RES_PATH+"FiveDigit.pdf");
         if (file.exists()){
             try {
@@ -1853,7 +1854,7 @@ public class FiveDigit extends Test {
                 Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }//GEN-LAST:event_jButton22ActionPerformed
+    }//GEN-LAST:event_fiveDigitsButton22ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1889,6 +1890,41 @@ public class FiveDigit extends Test {
     private javax.swing.JButton fiveDigitStart2;
     private javax.swing.JButton fiveDigitStart3;
     private javax.swing.JButton fiveDigitStart4;
+    private javax.swing.JButton fiveDigitsButton10;
+    private javax.swing.JButton fiveDigitsButton11;
+    private javax.swing.JButton fiveDigitsButton12;
+    private javax.swing.JButton fiveDigitsButton13;
+    private javax.swing.JButton fiveDigitsButton14;
+    private javax.swing.JButton fiveDigitsButton15;
+    private javax.swing.JButton fiveDigitsButton16;
+    private javax.swing.JButton fiveDigitsButton22;
+    private javax.swing.JButton fiveDigitsButton5;
+    private javax.swing.JLabel fiveDigitsLabel100;
+    private javax.swing.JLabel fiveDigitsLabel101;
+    private javax.swing.JLabel fiveDigitsLabel102;
+    private javax.swing.JLabel fiveDigitsLabel103;
+    private javax.swing.JLabel fiveDigitsLabel104;
+    private javax.swing.JLabel fiveDigitsLabel105;
+    private javax.swing.JLabel fiveDigitsLabel108;
+    private javax.swing.JLabel fiveDigitsLabel115;
+    private javax.swing.JLabel fiveDigitsLabel116;
+    private javax.swing.JLabel fiveDigitsLabel117;
+    private javax.swing.JLabel fiveDigitsLabel118;
+    private javax.swing.JLabel fiveDigitsLabel119;
+    private javax.swing.JLabel fiveDigitsLabel120;
+    private javax.swing.JLabel fiveDigitsLabel121;
+    private javax.swing.JLabel fiveDigitsLabel122;
+    private javax.swing.JLabel fiveDigitsLabel123;
+    private javax.swing.JLabel fiveDigitsLabel124;
+    private javax.swing.JLabel fiveDigitsLabel125;
+    private javax.swing.JLabel fiveDigitsLabel126;
+    private javax.swing.JLabel fiveDigitsLabel127;
+    private javax.swing.JLabel fiveDigitsLabel128;
+    private javax.swing.JLabel fiveDigitsLabel129;
+    private javax.swing.JLabel fiveDigitsLabel130;
+    private javax.swing.JLabel fiveDigitsLabel131;
+    private javax.swing.JLabel fiveDigitsLabel132;
+    private javax.swing.JLabel fiveDigitsLabel133;
     private javax.swing.JScrollPane fiveDigitsScroll;
     private javax.swing.JScrollPane fiveDigitsScroll1;
     private javax.swing.JScrollPane fiveDigitsScroll2;
@@ -1898,41 +1934,6 @@ public class FiveDigit extends Test {
     private javax.swing.JTextField flexibilitatPDField;
     private javax.swing.JTextField inhibicioPCField;
     private javax.swing.JTextField inhibicioPDField;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
-    private javax.swing.JLabel jLabel104;
-    private javax.swing.JLabel jLabel105;
-    private javax.swing.JLabel jLabel108;
-    private javax.swing.JLabel jLabel115;
-    private javax.swing.JLabel jLabel116;
-    private javax.swing.JLabel jLabel117;
-    private javax.swing.JLabel jLabel118;
-    private javax.swing.JLabel jLabel119;
-    private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
-    private javax.swing.JLabel jLabel123;
-    private javax.swing.JLabel jLabel124;
-    private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel127;
-    private javax.swing.JLabel jLabel128;
-    private javax.swing.JLabel jLabel129;
-    private javax.swing.JLabel jLabel130;
-    private javax.swing.JLabel jLabel131;
-    private javax.swing.JLabel jLabel132;
-    private javax.swing.JLabel jLabel133;
     private javax.swing.JLabel jLabel134;
     private javax.swing.JLabel jLabel135;
     private javax.swing.JLabel jLabel136;

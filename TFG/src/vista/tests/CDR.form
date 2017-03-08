@@ -482,7 +482,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="categoriaProLabel">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="7. Oblida detalls rellevants d&apos;aquest esdeveniment important?"/>
+                    <Property name="text" type="java.lang.String" value="7. Oblida detalls importants d&apos;aquest esdeveniment important?"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="situacioLaboralLabel">

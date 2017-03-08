@@ -8,16 +8,21 @@ package vista.tests;
 import controlador.Utils;
 import java.awt.Color;
 import java.awt.Desktop;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.Timer;
 import javax.swing.table.DefaultTableCellRenderer;
 import model.Pacient;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
@@ -32,6 +37,11 @@ public class FluenciaVerbal extends Test {
     /**
      * Creates new form FluenciaVerbal
      */
+    
+    private Timer timer;
+    private long startTime;
+    DecimalFormat timeFormatter;
+    JButton[] llistaBtnFV;
     public FluenciaVerbal(Pacient pacientActual) {
         super(pacientActual);
         initComponents();
@@ -41,6 +51,8 @@ public class FluenciaVerbal extends Test {
         numPaginesTotal = this.getComponentCount();
 
         initFluenciaVerbalTable();
+        
+        initTimer();
     }
 
     @Override
@@ -52,6 +64,30 @@ public class FluenciaVerbal extends Test {
         prop.setProperty("fluenciaAnimals",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,7)));
     }
 
+    private void initTimer() {
+        this.llistaBtnFV = new JButton[1];
+        llistaBtnFV[0] = FVStart1;
+       
+        timeFormatter = new DecimalFormat("00");
+        timer = new Timer(10, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                long now = System.currentTimeMillis();
+                long dif = now - startTime;
+
+                long minutes = dif / (60 * 1000);
+                dif = Math.round(dif % (60 * 1000));
+                long seconds = dif / 1000;
+                dif = Math.round(dif % 1000);
+                long centiseconds = dif / 10;
+
+                llistaBtnFV[0].setText(timeFormatter.format(minutes) + ":"
+                        + timeFormatter.format(seconds) + "."
+                        + timeFormatter.format(centiseconds));
+            }
+        });
+    }
     private String getStringFromTable(String string) {
         if (string != null){
             return string;
@@ -162,6 +198,13 @@ public class FluenciaVerbal extends Test {
         jButton17 = new javax.swing.JButton();
         dataFluencia = new javax.swing.JLabel();
         jButton21 = new javax.swing.JButton();
+        FVStart1 = new javax.swing.JButton();
+        FVStart1Button5 = new javax.swing.JButton();
+        fiveDigitsFVStart1 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        temps1 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        temps2 = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -230,6 +273,35 @@ public class FluenciaVerbal extends Test {
             }
         });
 
+        FVStart1.setText("Començar Crono");
+        FVStart1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FVStart1ActionPerformed(evt);
+            }
+        });
+
+        FVStart1Button5.setText("Marcar Temps");
+        FVStart1Button5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FVStart1Button5ActionPerformed(evt);
+            }
+        });
+
+        fiveDigitsFVStart1.setText("Parar i Reiniciar");
+        fiveDigitsFVStart1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fiveDigitsFVStart1ActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setText("Temps:");
+
+        temps1.setText("00:00:00");
+
+        jLabel78.setText("Temps:");
+
+        temps2.setText("00:00:00");
+
         javax.swing.GroupLayout fluenciaVerbalPanel2Layout = new javax.swing.GroupLayout(fluenciaVerbalPanel2);
         fluenciaVerbalPanel2.setLayout(fluenciaVerbalPanel2Layout);
         fluenciaVerbalPanel2Layout.setHorizontalGroup(
@@ -237,16 +309,31 @@ public class FluenciaVerbal extends Test {
             .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel164)
                     .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton17)
                             .addComponent(dataFluencia)
-                            .addComponent(jButton21)))
-                    .addComponent(jLabel164))
-                .addContainerGap())
+                            .addComponent(jButton21)
+                            .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
+                                .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(FVStart1Button5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(FVStart1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(fiveDigitsFVStart1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel20)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps1))
+                                    .addGroup(fluenciaVerbalPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel78)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(temps2)))))))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
         fluenciaVerbalPanel2Layout.setVerticalGroup(
             fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,6 +351,20 @@ public class FluenciaVerbal extends Test {
                         .addComponent(dataFluencia)
                         .addGap(18, 18, 18)
                         .addComponent(jButton21)
+                        .addGap(38, 38, 38)
+                        .addComponent(FVStart1)
+                        .addGap(18, 18, 18)
+                        .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(FVStart1Button5)
+                            .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel20)
+                                .addComponent(temps1)))
+                        .addGap(18, 18, 18)
+                        .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fiveDigitsFVStart1)
+                            .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel78)
+                                .addComponent(temps2)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -289,15 +390,49 @@ public class FluenciaVerbal extends Test {
         }
     }//GEN-LAST:event_jButton21ActionPerformed
 
+    private void FVStart1Button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FVStart1Button5ActionPerformed
+        if (timer.isRunning()){
+            temps1.setText(this.FVStart1.getText());
+        }
+    }//GEN-LAST:event_FVStart1Button5ActionPerformed
+
+    private void fiveDigitsFVStart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveDigitsFVStart1ActionPerformed
+        if (timer.isRunning()){
+            temps2.setText(this.FVStart1.getText());
+            timer.stop();
+            FVStart1.setText("<html><center>Comença Crono<br>Lectura");
+            //lecturaTemps.setText(this.temps2.getText());
+            FVStart1.setEnabled(true);
+        }else {
+            FVStart1.setText("<html><center>Comença Crono<br>Lectura");
+            FVStart1.setEnabled(true);
+        }
+    }//GEN-LAST:event_fiveDigitsFVStart1ActionPerformed
+
+    private void FVStart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FVStart1ActionPerformed
+        temps1.setText("00:00.00");
+        temps2.setText("00:00.00");
+        startTime = System.currentTimeMillis();
+        timer.start();
+        FVStart1.setEnabled(false);
+    }//GEN-LAST:event_FVStart1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton FVStart1;
+    private javax.swing.JButton FVStart1Button5;
     private javax.swing.JLabel dataFluencia;
+    private javax.swing.JButton fiveDigitsFVStart1;
     private javax.swing.JPanel fluenciaVerbalPanel2;
     private javax.swing.JScrollPane fluenciaVerbalScroll2;
     private org.jdesktop.swingx.JXTable fluenciaVerbalTable;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton21;
     private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel78;
     private javax.swing.JScrollPane jScrollPane19;
+    private javax.swing.JLabel temps1;
+    private javax.swing.JLabel temps2;
     // End of variables declaration//GEN-END:variables
 }

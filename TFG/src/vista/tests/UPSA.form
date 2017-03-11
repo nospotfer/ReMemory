@@ -84,32 +84,38 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jPanel51" alignment="1" min="-2" pref="832" max="-2" attributes="0"/>
-                          <Component id="jLabel276" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel326" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel327" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel335" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jPanel50" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jPanel48" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jPanel37" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel278" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel277" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel279" alignment="0" min="-2" pref="799" max="-2" attributes="0"/>
-                                      <Component id="jPanel52" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jPanel53" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jPanel49" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel300" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="jPanel51" alignment="1" min="-2" pref="832" max="-2" attributes="0"/>
+                              <Component id="jLabel276" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel326" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel327" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel335" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel299" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="mocaPunts2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel298" alignment="0" min="-2" pref="822" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jPanel50" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanel48" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanel37" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel278" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel277" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel279" alignment="0" min="-2" pref="799" max="-2" attributes="0"/>
+                                          <Component id="jPanel52" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanel53" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanel49" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel299" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="mocaPunts2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jLabel298" alignment="0" min="-2" pref="822" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -142,7 +148,9 @@
                       <Component id="jPanel50" min="-2" pref="59" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel51" min="-2" pref="271" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel300" min="-2" pref="55" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Component id="jPanel52" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel53" min="-2" max="-2" attributes="0"/>
@@ -155,7 +163,7 @@
                           <Component id="jLabel299" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="mocaPunts2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="98" max="32767" attributes="0"/>
+                      <EmptySpace pref="44" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -223,7 +231,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Utilitzarem aquest tel&#xe8;fon per durant les properes tasques. Encara que l&apos;aparell est&#xe0; desconnectat, mostra com utilitza el tel&#xe8;fon habitualment.&lt;br&gt;&lt;br&gt;En primer lloc, mostra com far&#xe0; per demanar ajuda en cas que tingu&#xe9;s una emerg&#xe8;ncia."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Utilitzarem aquest tel&#xe8;fon durant les properes tasques. Encara que l&apos;aparell est&#xe0; desconnectat, mostri com utilitza el tel&#xe8;fon habitualment.&lt;br&gt;&lt;br&gt;En primer lloc, mostri com far&#xe0; per demanar ajuda en cas que tingu&#xe9;s una emerg&#xe8;ncia."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel280">
@@ -264,7 +272,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel277">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;Targeta de joc de rols - Carta de cita m&#xe8;dica.&lt;br&gt;Nota: La data de la cita m&#xe8;dica ha d&apos;&#xe9;sser de almenys un o dos mesos despr&#xe9;s de la data d&apos;administraci&#xf3; de la UPSA. Aquesta data s&apos;ha de modificar amb freq&#xfc;&#xe8;ncia.&lt;br&gt;Anoteu la data del dilluns imprimaci&#xf3; de cada mes, o de l&apos;segon dilluns del mes si dilluns imprimaci&#xf3; &#xe9;s d&#xf3;na festiu."/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Targeta de joc de rols - Carta de cita m&#xe8;dica.&lt;br&gt;Nota: La data de la cita m&#xe8;dica ha d&apos;&#xe9;sser d&apos;almenys un o dos mesos despr&#xe9;s de la data d&apos;administraci&#xf3; de la UPSA. Aquesta data s&apos;ha de modificar amb freq&#xfc;&#xe8;ncia.&lt;br&gt;Anoteu la data del primer dilluns de cada mes, o del segon dilluns del mes si el primer dilluns &#xe9;s festiu."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel278">
@@ -289,7 +297,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="2. Indiqueu el subjecte que realitzi el seg&#xfc;ent:"/>
+                    <TitledBorder title="2. Indiqueu al subjecte que realitzi el seg&#xfc;ent:"/>
                   </Border>
                 </Property>
               </Properties>
@@ -407,7 +415,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="3. Indiqueu el subjecte que realitzi el seg&#xfc;ent:"/>
+                    <TitledBorder title="3. Indiqueu al subjecte que realitzi el seg&#xfc;ent:"/>
                   </Border>
                 </Property>
               </Properties>
@@ -456,7 +464,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel284">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;div style=&quot;text-align:justify&quot;&gt;&lt;b&gt;&lt;u&gt;NOTA A L&apos;AVALUADOR:&lt;/b&gt;&lt;/u&gt; El nombre ha de ser marcat de mem&#xf2;ria per&#xf2; es pot repetir si el subjecte ho sol&#xb7;licita. Si el subjecte comen&#xe7;a a marcar el n&#xfa;mero i despr&#xe9;s demana que es repeteixi el nombre, l&apos;avaluador pot repetir tot el nombre de nou. El subjecte pot marcar els n&#xfa;meros restants per ordre o pot penjar i marcar tot el n&#xfa;mero. Si el subjecte sol&#xb7;licita que l&apos;entrevistador repeteixi el nombre una tercera vegada, l&apos;entrevistador ha de indicar-li al subjecte que marqui el que recordi."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;div style=&quot;text-align:justify&quot;&gt;&lt;b&gt;&lt;u&gt;NOTA A L&apos;AVALUADOR:&lt;/b&gt;&lt;/u&gt; El n&#xfa;mero ha de ser marcat de mem&#xf2;ria per&#xf2; es pot repetir si el subjecte ho sol&#xb7;licita. Si el subjecte comen&#xe7;a a marcar el n&#xfa;mero i despr&#xe9;s demana que es repeteixi el n&#xfa;mero, l&apos;avaluador pot repetir tot el n&#xfa;mero de nou. El subjecte pot marcar els n&#xfa;meros restants per ordre o pot penjar i marcar tot el n&#xfa;mero. Si el subjecte sol&#xb7;licita que l&apos;entrevistador repeteixi el n&#xfa;mero una tercera vegada, l&apos;entrevistador ha de indicar-li al subjecte que marqui el que recordi."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JToggleButton" name="jToggleButton60">
@@ -481,7 +489,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="4. Indiqueu el subjecte que llegeixi la carta de la seva cita amb el metge dient:"/>
+                    <TitledBorder title="4. Indiqueu al subjecte que llegeixi la carta de la seva cita amb el metge dient:"/>
                   </Border>
                 </Property>
               </Properties>
@@ -512,7 +520,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Imagineu que aquesta &#xe9;s una carta del seu metge. Llegiu aquesta carta en alt i presti molta atenci&#xf3; perqu&#xe8; posteriorment li far&#xe9; algunes preguntes sobre aix&#xf2;."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Imagineu que aquesta &#xe9;s una carta del seu metge. Llegiu aquesta carta en veu alta i presti molta atenci&#xf3; perqu&#xe8; posteriorment li far&#xe9; algunes preguntes sobre aix&#xf2;."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -521,7 +529,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="5. Despr&#xe9;s que el pacient hagi llegit la carta, doni-li les seg&#xfc;ents instruccions (no aparti o tapi la carta de cita m&#xe8;dica):"/>
+                    <TitledBorder title="5. Despr&#xe9;s que el pacient hagi llegit la carta, d&#xf3;na-li les seg&#xfc;ents instruccions (no aparti o tapi la carta de cita m&#xe8;dica):"/>
                   </Border>
                 </Property>
               </Properties>
@@ -613,7 +621,7 @@
                               <Component id="jToggleButton112" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel292" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Component id="jLabel287" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -968,6 +976,11 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel300">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;div style=&quot;text-align:justify&quot;&gt;&lt;b&gt;&lt;u&gt;NOTA A L&apos;AVALUADOR:&lt;/b&gt;&lt;/u&gt; El pacient ha de trobar el n&#xfa;mero de tel&#xe8;fon per reprogramar la seva cita que est&#xe0; escrit a la carta (96) 324 561 i marcar el n&#xfa;mero correctament (1 punt), ha de donar el seu nom (1 punt), la data actual de la cita DILLUNS, 6 DE JUNY (la data que correspongui en cada cas) a les 8:00 (1 punt), la data de la nova cita (1 punt), i deixar un n&#xfa;mero de tel&#xe8;fon perque li puguin tornar la trucada (1 punt)."/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
@@ -998,7 +1011,6 @@
                                   <Component id="jLabel345" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel303" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel302" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel304" alignment="0" min="-2" pref="799" max="-2" attributes="0"/>
                                   <Component id="jPanel38" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel321" min="-2" max="-2" attributes="0"/>
@@ -1030,11 +1042,9 @@
                       <Component id="jLabel303" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel338" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel304" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Component id="jPanel38" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jPanel57" min="-2" pref="511" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel345" min="-2" max="-2" attributes="0"/>
@@ -1063,7 +1073,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="1. Mostri-li al pacient la targeta de role-play (la platja) i doni-li les seg&#xfc;ents instruccions:"/>
+                    <TitledBorder title="1. Mostri-li al pacient la targeta de role-play (la platja) i d&#xf3;na-li les seg&#xfc;ents instruccions:"/>
                   </Border>
                 </Property>
               </Properties>
@@ -1093,7 +1103,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Si us plau llegiu aquesta hist&#xf2;ria sobre un viatge a la platja en veu alta. Llegiu-lo atentament perqu&#xe8; despr&#xe9;s li far&#xe9; algunes preguntes sobre aix&#xf2;."/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Si us plau llegiu aquesta hist&#xf2;ria sobre un viatge a la platja en veu alta. Llegixi atentament perqu&#xe8; despr&#xe9;s li far&#xe9; algunes preguntes sobre aix&#xf2;."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1122,11 +1132,6 @@
                   <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Procediment"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel304">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p align=&quot;justify&quot;&gt;Aquesta tasca requereix que el subjecte demostri que sap com utilitzar el tel&#xe8;fon. Els passos a seguir inclouen agafar l&apos;auricular, tocar els botons per marcar el n&#xfa;mero de tel&#xe8;fon, i parlar pel micr&#xf2;fon de l&apos;auricular. El pacient ha de posar l&apos;auricular al seu lloc i repetir aquesta seq&#xfc;&#xe8;ncia en cadascuna de les tasques seg&#xfc;ents. Les instruccions es donaran una sola vegada, excepte en la tasca de marcar un n&#xfa;mero de mem&#xf2;ria."/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel57">
@@ -1248,7 +1253,7 @@
                           <Component id="jLabel343" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel311" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel312" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1262,7 +1267,7 @@
                               <Component id="jToggleButton172" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel314" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel344" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel315" min="-2" max="-2" attributes="0"/>
@@ -1303,9 +1308,9 @@
                               <Component id="jLabel323" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jToggleButton186" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="32767" attributes="0"/>
-                          <Component id="jLabel309" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel309" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1413,7 +1418,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Imagini que pret&#xe9;n passar el dia a la platja. Hi pot haver moltes coses que li agrad&#xe9;s portar, per&#xf2; digui &lt;u&gt;CINC&lt;/u&gt; coses que s&#xf3;n &lt;u&gt;NECESS&#xc0;RIES&lt;/u&gt; per vestir o portar amb vost&#xe8; durant tot aquest dia a la platja"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Imagini que pret&#xe9;n passar el dia a la platja. Hi pot haver moltes coses que li agradaria portar, per&#xf2; digui &lt;u&gt;CINC&lt;/u&gt; coses que s&#xf3;n &lt;u&gt;NECESS&#xc0;RIES&lt;/u&gt; per vestir o portar amb vost&#xe8; durant tot aquest dia a la platja"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel315">

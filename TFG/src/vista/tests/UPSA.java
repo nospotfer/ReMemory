@@ -435,6 +435,7 @@ public class UPSA extends Test {
         jLabel298 = new javax.swing.JLabel();
         jLabel299 = new javax.swing.JLabel();
         mocaPunts2 = new javax.swing.JLabel();
+        jLabel300 = new javax.swing.JLabel();
         upsaScroll2 = new javax.swing.JScrollPane();
         mocaPanel2 = new javax.swing.JPanel();
         jLabel285 = new javax.swing.JLabel();
@@ -444,7 +445,6 @@ public class UPSA extends Test {
         jLabel302 = new javax.swing.JLabel();
         jLabel303 = new javax.swing.JLabel();
         jLabel338 = new javax.swing.JLabel();
-        jLabel304 = new javax.swing.JLabel();
         jPanel57 = new javax.swing.JPanel();
         jLabel342 = new javax.swing.JLabel();
         jLabel309 = new javax.swing.JLabel();
@@ -609,7 +609,7 @@ public class UPSA extends Test {
         jPanel37.setBorder(javax.swing.BorderFactory.createTitledBorder("1. Col·loqueu el telèfon davant del subjecte i dóna-li les següents instruccions:"));
 
         jLabel328.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel328.setText("<html>Utilitzarem aquest telèfon per durant les properes tasques. Encara que l'aparell està desconnectat, mostra com utilitza el telèfon habitualment.<br><br>En primer lloc, mostra com farà per demanar ajuda en cas que tingués una emergència.");
+        jLabel328.setText("<html>Utilitzarem aquest telèfon durant les properes tasques. Encara que l'aparell està desconnectat, mostri com utilitza el telèfon habitualment.<br><br>En primer lloc, mostri com farà per demanar ajuda en cas que tingués una emergència.");
 
         jLabel280.setText("1 - 1 - 2 (marcar)");
 
@@ -656,7 +656,7 @@ public class UPSA extends Test {
         jLabel326.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel326.setText("Material");
 
-        jLabel277.setText("<html>Targeta de joc de rols - Carta de cita mèdica.<br>Nota: La data de la cita mèdica ha d'ésser de almenys un o dos mesos després de la data d'administració de la UPSA. Aquesta data s'ha de modificar amb freqüència.<br>Anoteu la data del dilluns imprimació de cada mes, o de l'segon dilluns del mes si dilluns imprimació és dóna festiu.");
+        jLabel277.setText("<html>Targeta de joc de rols - Carta de cita mèdica.<br>Nota: La data de la cita mèdica ha d'ésser d'almenys un o dos mesos després de la data d'administració de la UPSA. Aquesta data s'ha de modificar amb freqüència.<br>Anoteu la data del primer dilluns de cada mes, o del segon dilluns del mes si el primer dilluns és festiu.");
 
         jLabel278.setText("<html>Telèfon amb botons depresibles (desconnectat). Assegureu-vos que els botons per marcar són a la base del telèfon i NO a l'auricular. A més, en cas que sigui possible,<br>escolliu un model de telèfon en què es requereixi aixecar l'auricular per marcar el número.");
 
@@ -665,7 +665,7 @@ public class UPSA extends Test {
 
         jLabel279.setText("<html><p align=\"justify\">Aquesta tasca requereix que el subjecte demostri que sap com utilitzar el telèfon. Els passos a seguir inclouen agafar l'auricular, tocar els botons per marcar el número de telèfon, i parlar pel micròfon de l'auricular. El pacient ha de posar l'auricular al seu lloc i repetir aquesta seqüència en cadascuna de les tasques següents. Les instruccions es donaran una sola vegada, excepte en la tasca de marcar un número de memòria.");
 
-        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Indiqueu el subjecte que realitzi el següent:"));
+        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Indiqueu al subjecte que realitzi el següent:"));
 
         jLabel329.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel329.setText("Marqui el número de casa i digui que arribarà tard a dinar.");
@@ -731,12 +731,12 @@ public class UPSA extends Test {
                 .addGap(10, 10, 10))
         );
 
-        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder("3. Indiqueu el subjecte que realitzi el següent:"));
+        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder("3. Indiqueu al subjecte que realitzi el següent:"));
 
         jLabel330.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel330.setText("<html>Escolti atentament aquest número i marqui'l de memòria:<br><center>596 6996");
 
-        jLabel284.setText("<html><div style=\"text-align:justify\"><b><u>NOTA A L'AVALUADOR:</b></u> El nombre ha de ser marcat de memòria però es pot repetir si el subjecte ho sol·licita. Si el subjecte comença a marcar el número i després demana que es repeteixi el nombre, l'avaluador pot repetir tot el nombre de nou. El subjecte pot marcar els números restants per ordre o pot penjar i marcar tot el número. Si el subjecte sol·licita que l'entrevistador repeteixi el nombre una tercera vegada, l'entrevistador ha de indicar-li al subjecte que marqui el que recordi.");
+        jLabel284.setText("<html><div style=\"text-align:justify\"><b><u>NOTA A L'AVALUADOR:</b></u> El número ha de ser marcat de memòria però es pot repetir si el subjecte ho sol·licita. Si el subjecte comença a marcar el número i després demana que es repeteixi el número, l'avaluador pot repetir tot el número de nou. El subjecte pot marcar els números restants per ordre o pot penjar i marcar tot el número. Si el subjecte sol·licita que l'entrevistador repeteixi el número una tercera vegada, l'entrevistador ha de indicar-li al subjecte que marqui el que recordi.");
 
         upsaButtonGroup4.add(jToggleButton60);
         jToggleButton60.setText("0");
@@ -772,10 +772,10 @@ public class UPSA extends Test {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel50.setBorder(javax.swing.BorderFactory.createTitledBorder("4. Indiqueu el subjecte que llegeixi la carta de la seva cita amb el metge dient:"));
+        jPanel50.setBorder(javax.swing.BorderFactory.createTitledBorder("4. Indiqueu al subjecte que llegeixi la carta de la seva cita amb el metge dient:"));
 
         jLabel331.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel331.setText("<html>Imagineu que aquesta és una carta del seu metge. Llegiu aquesta carta en alt i presti molta atenció perquè posteriorment li faré algunes preguntes sobre això.");
+        jLabel331.setText("<html>Imagineu que aquesta és una carta del seu metge. Llegiu aquesta carta en veu alta i presti molta atenció perquè posteriorment li faré algunes preguntes sobre això.");
 
         javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
         jPanel50.setLayout(jPanel50Layout);
@@ -794,7 +794,7 @@ public class UPSA extends Test {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder("5. Després que el pacient hagi llegit la carta, doni-li les següents instruccions (no aparti o tapi la carta de cita mèdica):"));
+        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder("5. Després que el pacient hagi llegit la carta, dóna-li les següents instruccions (no aparti o tapi la carta de cita mèdica):"));
 
         jLabel332.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel332.setText("<html>Truqui a la consulta del metge i deixi un missatge al contestador automàtic demanant que li canviï la cita per el dia següent a la mateixa hora. Assegureu-vos d'incloure tota la informació necessària.");
@@ -912,7 +912,7 @@ public class UPSA extends Test {
                     .addComponent(jToggleButton114)
                     .addComponent(jToggleButton112)
                     .addComponent(jLabel292))
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel287, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
 
@@ -1039,36 +1039,42 @@ public class UPSA extends Test {
         mocaPunts2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         mocaPunts2.setText("0");
 
+        jLabel300.setText("<html><div style=\"text-align:justify\"><b><u>NOTA A L'AVALUADOR:</b></u> El pacient ha de trobar el número de telèfon per reprogramar la seva cita que està escrit a la carta (96) 324 561 i marcar el número correctament (1 punt), ha de donar el seu nom (1 punt), la data actual de la cita DILLUNS, 6 DE JUNY (la data que correspongui en cada cas) a les 8:00 (1 punt), la data de la nova cita (1 punt), i deixar un número de telèfon perque li puguin tornar la trucada (1 punt).");
+
         javax.swing.GroupLayout mocaPanel1Layout = new javax.swing.GroupLayout(mocaPanel1);
         mocaPanel1.setLayout(mocaPanel1Layout);
         mocaPanel1Layout.setHorizontalGroup(
             mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mocaPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, 832, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel276, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel326, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel327, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mocaPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel335)
-                            .addGroup(mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jPanel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel278, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel277, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel279, javax.swing.GroupLayout.PREFERRED_SIZE, 799, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel52, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(mocaPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel299)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mocaPunts2))
-                            .addComponent(jLabel298, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(mocaPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel300, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, 832, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel276, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel326, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel327, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mocaPanel1Layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addGroup(mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel335)
+                                .addGroup(mocaPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel299)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(mocaPunts2))
+                                .addComponent(jLabel298, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel278, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel277, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel279, javax.swing.GroupLayout.PREFERRED_SIZE, 799, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel52, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap())
         );
         mocaPanel1Layout.setVerticalGroup(
@@ -1096,7 +1102,9 @@ public class UPSA extends Test {
                 .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel300, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1108,7 +1116,7 @@ public class UPSA extends Test {
                 .addGroup(mocaPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel299)
                     .addComponent(mocaPunts2))
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         upsaScroll1.setViewportView(mocaPanel1);
@@ -1118,10 +1126,10 @@ public class UPSA extends Test {
         jLabel285.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel285.setText("3. COMPRENSIÓ I PLANIFICACIÓ: La platja");
 
-        jPanel38.setBorder(javax.swing.BorderFactory.createTitledBorder("1. Mostri-li al pacient la targeta de role-play (la platja) i doni-li les següents instruccions:"));
+        jPanel38.setBorder(javax.swing.BorderFactory.createTitledBorder("1. Mostri-li al pacient la targeta de role-play (la platja) i dóna-li les següents instruccions:"));
 
         jLabel336.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel336.setText("<html>Si us plau llegiu aquesta història sobre un viatge a la platja en veu alta. Llegiu-lo atentament perquè després li faré algunes preguntes sobre això.");
+        jLabel336.setText("<html>Si us plau llegiu aquesta història sobre un viatge a la platja en veu alta. Llegixi atentament perquè després li faré algunes preguntes sobre això.");
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
@@ -1148,8 +1156,6 @@ public class UPSA extends Test {
 
         jLabel338.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel338.setText("Procediment");
-
-        jLabel304.setText("<html><p align=\"justify\">Aquesta tasca requereix que el subjecte demostri que sap com utilitzar el telèfon. Els passos a seguir inclouen agafar l'auricular, tocar els botons per marcar el número de telèfon, i parlar pel micròfon de l'auricular. El pacient ha de posar l'auricular al seu lloc i repetir aquesta seqüència en cadascuna de les tasques següents. Les instruccions es donaran una sola vegada, excepte en la tasca de marcar un número de memòria.");
 
         jPanel57.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Quan el subjecte hagi acabat de llegir, tapi o amagui la targeta i faci les següents preguntes:"));
 
@@ -1193,7 +1199,7 @@ public class UPSA extends Test {
         jLabel343.setText("Digueu-me dues activitats que vostè pot fer a la platja.");
 
         jLabel344.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel344.setText("<html>Imagini que pretén passar el dia a la platja. Hi pot haver moltes coses que li agradés portar, però digui <u>CINC</u> coses que són <u>NECESSÀRIES</u> per vestir o portar amb vostè durant tot aquest dia a la platja");
+        jLabel344.setText("<html>Imagini que pretén passar el dia a la platja. Hi pot haver moltes coses que li agradaria portar, però digui <u>CINC</u> coses que són <u>NECESSÀRIES</u> per vestir o portar amb vostè durant tot aquest dia a la platja");
 
         jLabel315.setText("<html><i>Respostes acceptables:</i> vestit de bany, loció solar, tovallola, aigua per beure, esmorzar, muda de roba, paraigües, impermeable, etc.");
 
@@ -1353,7 +1359,7 @@ public class UPSA extends Test {
                 .addComponent(jLabel343)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel311, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel312, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1365,7 +1371,7 @@ public class UPSA extends Test {
                     .addComponent(jToggleButton173)
                     .addComponent(jToggleButton172)
                     .addComponent(jLabel314))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel344, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel315, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1401,9 +1407,9 @@ public class UPSA extends Test {
                     .addComponent(jToggleButton187)
                     .addComponent(jLabel323)
                     .addComponent(jToggleButton186))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel309, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel345.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1432,7 +1438,6 @@ public class UPSA extends Test {
                             .addComponent(jLabel345)
                             .addComponent(jLabel303, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel302, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel304, javax.swing.GroupLayout.PREFERRED_SIZE, 799, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(mocaPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel321)
@@ -1457,11 +1462,9 @@ public class UPSA extends Test {
                 .addComponent(jLabel303, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel338)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel304, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel345)
@@ -2455,9 +2458,9 @@ public class UPSA extends Test {
     private javax.swing.JLabel jLabel297;
     private javax.swing.JLabel jLabel298;
     private javax.swing.JLabel jLabel299;
+    private javax.swing.JLabel jLabel300;
     private javax.swing.JLabel jLabel302;
     private javax.swing.JLabel jLabel303;
-    private javax.swing.JLabel jLabel304;
     private javax.swing.JLabel jLabel309;
     private javax.swing.JLabel jLabel310;
     private javax.swing.JLabel jLabel311;

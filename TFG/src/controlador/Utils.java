@@ -218,7 +218,7 @@ public class Utils {
 
     public static int getPunctuationFromButtonGroup(ButtonGroup buttonGroup){
         if (buttonGroup.getSelection() != null){
-            System.out.println(buttonGroup.getSelection().getActionCommand());
+            //System.out.println(buttonGroup.getSelection().getActionCommand());
             return Integer.parseInt(buttonGroup.getSelection().getActionCommand());
         } else {
             return 0;

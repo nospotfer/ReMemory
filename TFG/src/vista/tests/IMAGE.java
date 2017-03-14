@@ -6,9 +6,14 @@
 package vista.tests;
 
 import controlador.Utils;
+import java.awt.Component;
+import java.awt.Container;
 import model.Pacient;
 
 import java.util.Properties;
+import javax.swing.JToggleButton;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 /**
  *
@@ -29,6 +34,8 @@ public class IMAGE extends Test {
         numPaginesTotal = this.getComponentCount();
         
         Utils.initTaula(IMAGESQPanel,IMAGESTotal);
+        
+        setListeners(IMAGESQPanel);
     }
 
     @Override
@@ -37,6 +44,86 @@ public class IMAGE extends Test {
         Utils.setProperty(prop,"IMAGETotal",IMAGESTotal);
     }
 
+    private void setListeners(Container c){
+        Component[] components = c.getComponents();
+        for (Component com : components){
+            if (com instanceof JToggleButton){
+                ((JToggleButton) com).addChangeListener(changeListener1);
+            
+            }
+            else if (com instanceof Container){
+                setListeners((Container) com);
+            }
+        }
+    }
+    private ChangeListener changeListener1 = new ChangeListener() {
+        @Override
+        public void stateChanged(ChangeEvent e) {
+            int punts1 = sumaPunts1();
+            int punts2 = sumaPunts2();
+            int punts3 = sumaPunts3();
+            int punts4 = sumaPunts4();
+            imagesTotal.setText(punts1+"");
+            imagesTotal2.setText(punts2+"");
+            imagesTotal1.setText(punts3+"");
+            imagesTotal3.setText(punts4+"");
+            int total = punts1+punts2+punts3+punts4;
+            IMAGESTotal.setText(total+"");
+                       
+        }
+    };
+    
+    
+    private int sumaPunts1(){
+        int count = 0;
+
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup1);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup2);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup3);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup4);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup5);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup6);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup7);
+
+        return count;
+    }
+    private int sumaPunts2(){
+        int count = 0;
+
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup8);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup9);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup10);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup11);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup12);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup13);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup14);
+
+        return count;
+    }
+    private int sumaPunts3(){
+        int count = 0;
+
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup15);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup16);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup17);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup18);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup19);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup20);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup21);
+
+        return count;
+    }
+    private int sumaPunts4(){
+        int count = 0;
+
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup22);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup23);
+        count += Utils.getPunctuationFromButtonGroup(imagesButtonGroup24);
+
+        return count;
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -313,6 +400,11 @@ public class IMAGE extends Test {
 
         imagesButtonGroup1.add(memoBtn5images);
         memoBtn5images.setText("4");
+        memoBtn5images.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                memoBtn5imagesActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
@@ -1662,6 +1754,10 @@ public class IMAGE extends Test {
     private void jTextField2imagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2imagesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2imagesActionPerformed
+
+    private void memoBtn5imagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memoBtn5imagesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_memoBtn5imagesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

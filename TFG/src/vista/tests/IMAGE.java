@@ -342,8 +342,7 @@ public class IMAGE extends Test {
         jLabel55images = new javax.swing.JLabel();
         jTextField1images = new javax.swing.JTextField();
         jTextField2images = new javax.swing.JTextField();
-        IMAGEScrollInstructions = new javax.swing.JScrollPane();
-        jTextArea1images = new javax.swing.JTextArea();
+        imagejLabel1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -1626,31 +1625,14 @@ public class IMAGE extends Test {
             }
         });
 
+        imagejLabel1.setText("<html><b>Instruccions:</b><br> Preguntar l’edat subjectiva per a comparar-la amb la real. L’avaluador llegirà la premissa i el pacient haurà<br> de contestar si és vertadera o falsa; posteriorment ha d’especificar el grau de certesa de la seva decisió <br>(quant de vertadera  o de falsa és per a ell/a). ");
+
         javax.swing.GroupLayout IMAGESQPanelLayout = new javax.swing.GroupLayout(IMAGESQPanel);
         IMAGESQPanel.setLayout(IMAGESQPanelLayout);
         IMAGESQPanelLayout.setHorizontalGroup(
             IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(imagesQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel220images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(imagesTotal))
-                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel31images)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2images, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(51, 51, 51)
-                                .addComponent(jLabel55images)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1images, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel14images)))
                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(imagesQPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1676,8 +1658,28 @@ public class IMAGE extends Test {
                         .addGap(117, 117, 117)
                         .addComponent(jLabel224images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(IMAGESTotal)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .addComponent(IMAGESTotal))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel31images)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField2images, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(51, 51, 51)
+                                .addComponent(jLabel55images)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1images, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(imagejLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14images)))
+                    .addGroup(IMAGESQPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imagesQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel220images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagesTotal)))
+                .addGap(53, 754, Short.MAX_VALUE))
         );
         IMAGESQPanelLayout.setVerticalGroup(
             IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1685,14 +1687,17 @@ public class IMAGE extends Test {
                 .addGap(23, 23, 23)
                 .addComponent(jLabel14images)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(imagejLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31images)
                     .addComponent(jLabel55images)
                     .addComponent(jTextField1images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField2images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
+                        .addGap(5, 5, 5)
                         .addComponent(imagesQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(IMAGESQPanelLayout.createSequentialGroup()
                         .addGap(24, 24, 24)
@@ -1730,21 +1735,12 @@ public class IMAGE extends Test {
                 .addGroup(IMAGESQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel224images, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(IMAGESTotal))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         IMAGEScroll.setViewportView(IMAGESQPanel);
 
         add(IMAGEScroll, "card1");
-
-        jTextArea1images.setColumns(20);
-        jTextArea1images.setRows(5);
-        jTextArea1images.setText("Instruccions: Preguntar l’edat subjectiva per a comparar-la amb la real. L’avaluador llegirà la premissa i el pacient haurà de contestar si és vertadera o falsa; posteriorment ha d’especificar el grau de certesa de la seva decisió (quant de vertadera o de falsa és per a ell/a). ");
-        jTextArea1images.setToolTipText("");
-        jTextArea1images.setWrapStyleWord(true);
-        IMAGEScrollInstructions.setViewportView(jTextArea1images);
-
-        add(IMAGEScrollInstructions, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1imagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1imagesActionPerformed
@@ -1764,7 +1760,6 @@ public class IMAGE extends Test {
     private javax.swing.JPanel IMAGESQPanel;
     private javax.swing.JLabel IMAGESTotal;
     private javax.swing.JScrollPane IMAGEScroll;
-    private javax.swing.JScrollPane IMAGEScrollInstructions;
     private javax.swing.JToggleButton activitatsDBtn20images;
     private javax.swing.JToggleButton activitatsDBtn21images;
     private javax.swing.JToggleButton activitatsDBtn23images;
@@ -1804,6 +1799,7 @@ public class IMAGE extends Test {
     private javax.swing.JToggleButton cuidatBtn5images;
     private javax.swing.JToggleButton cuidatBtn6images;
     private javax.swing.JToggleButton cuidatBtn7images;
+    private javax.swing.JLabel imagejLabel1;
     private javax.swing.ButtonGroup imagesButtonGroup1;
     private javax.swing.ButtonGroup imagesButtonGroup10;
     private javax.swing.ButtonGroup imagesButtonGroup11;
@@ -1908,7 +1904,6 @@ public class IMAGE extends Test {
     private javax.swing.JLabel jLabel5images;
     private javax.swing.JLabel jLabel6images;
     private javax.swing.JLabel jLabel99images;
-    private javax.swing.JTextArea jTextArea1images;
     private javax.swing.JTextField jTextField1images;
     private javax.swing.JTextField jTextField2images;
     private javax.swing.JToggleButton memoBtn10images;

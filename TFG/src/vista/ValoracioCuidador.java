@@ -72,6 +72,9 @@ public class ValoracioCuidador extends javax.swing.JFrame {
         
         FAQ faq = new FAQ(pacientActual);
         tabbedPanel.addTab(faq.getLabel(), faq);
+        
+        OHQSF ohqsf = new OHQSF(pacientActual);
+        tabbedPanel.addTab(ohqsf.getLabel(), ohqsf);
     }
     
     private void guardarResultats(){

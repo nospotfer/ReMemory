@@ -609,62 +609,62 @@ public class Utils {
         //Fitxa
 
         writeLineCSV(writer, "Codi subjecte");
-        // Dades sociodemogràfiques
+        // Dades sociodemografiques
         writeLineCSV(writer, "Sexe");
         writeLineCSV(writer, "Idioma");
         writeLineCSV(writer, "Data naixement");
         writeLineCSV(writer, "Nivell escolaritat");
         writeLineCSV(writer, "Anys escolaritat");
         writeLineCSV(writer, "Estat civil");
-        writeLineCSV(writer, "Professió");
+        writeLineCSV(writer, "Professio");
         writeLineCSV(writer, "Categoria professional");
-        writeLineCSV(writer, "Situació laboral");
-        writeLineCSV(writer, "Nivell socioeconòmic");
-        // Dades clíniques
+        writeLineCSV(writer, "Situacio laboral");
+        writeLineCSV(writer, "Nivell socioeconomic");
+        // Dades cliniques
         writeLineCSV(writer, "Fumador/a actualment");
         writeLineCSV(writer, "Cigarrets / dia");
         writeLineCSV(writer, "Anys que ha fumat");
         writeLineCSV(writer, "Edat inici fumar");
         writeLineCSV(writer, "Consum d'alcohol actual");
-        writeLineCSV(writer, "Núm. i tipus de begudes alcohòliques/dia");
+        writeLineCSV(writer, "Num. i tipus de begudes alcoholiques/dia");
         writeLineCSV(writer, "UBE/dia");
         writeLineCSV(writer, "Anys consum alcohol");
         writeLineCSV(writer, "Edat inici alcohol");
-        writeLineCSV(writer, "Malalties cròniqus concomitants");
-        // Teràpia no farmacològica
-        writeLineCSV(writer, "Temps en tractament no farmacològic");
+        writeLineCSV(writer, "Malalties croniqus concomitants");
+        // Terapia no farmacologica
+        writeLineCSV(writer, "Temps en tractament no farmacologic");
 
-        // Dades mèdiques
+        // Dades mediques
         writeLineCSV(writer, "Malaltia d'Alzheimer");
         writeLineCSV(writer, "Malaltia de Parkinson");
         writeLineCSV(writer, "Sindrome de Down");
-        writeLineCSV(writer, "Altres demències");
+        writeLineCSV(writer, "Altres demencies");
         writeLineCSV(writer, "Antecedents del pare");
         writeLineCSV(writer, "Antecedents de la mare");
         writeLineCSV(writer, "Altres familiars");
-        // Dades clíniques
-        writeLineCSV(writer, "Cafè i te");
+        // Dades cliniques
+        writeLineCSV(writer, "Cafe i te");
         writeLineCSV(writer, "Tabac");
         writeLineCSV(writer, "Alcohol");
         writeLineCSV(writer, "Cannabis");
-        writeLineCSV(writer, "Feina i tòxics laborals");
+        writeLineCSV(writer, "Feina i toxics laborals");
         writeLineCSV(writer, "Altres antecedents personals");
-        // Antecedents patològics personals
+        // Antecedents patologics personals
         //  Cardiovascular
-        writeLineCSV(writer, "Hipertensió");
+        writeLineCSV(writer, "Hipertensio");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Insuficiència cardíaca");
+        writeLineCSV(writer, "Insuficiencia cardiaca");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Infart de miocardi");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Cardiopatia isquèmica");
+        writeLineCSV(writer, "Cardiopatia isquemica");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Arritmia");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Malaltia vascular perifèrica arterial");
+        writeLineCSV(writer, "Malaltia vascular periferica arterial");
         writeLineCSV(writer, "Data");
-        // Endocrino/Metabòlic
-        writeLineCSV(writer, "Diabètis");
+        // Endocrino/Metabolic
+        writeLineCSV(writer, "Diabetis");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Obesitat");
         writeLineCSV(writer, "Data");
@@ -681,29 +681,29 @@ public class Utils {
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Hepatopatia");
         writeLineCSV(writer, "Data");
-        //  Psiquiàtric/Abús
-        writeLineCSV(writer, "Depressió");
+        //  Psiquiatric/Abus
+        writeLineCSV(writer, "Depressio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Ansietat");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Psicosis");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Abús d'alcohol");
+        writeLineCSV(writer, "Abus d'alcohol");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Abús de drogues");
+        writeLineCSV(writer, "Abus de drogues");
         writeLineCSV(writer, "Data");
-        //  Neurològic
+        //  Neurologic
         writeLineCSV(writer, "AVC establert");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "AVC transitori");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Epilèpsia");
+        writeLineCSV(writer, "Epilepsia");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Trauma craneal greu");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Malaltia de Parkinson");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Esclerosis múltiple");
+        writeLineCSV(writer, "Esclerosis multiple");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Cefalea");
         writeLineCSV(writer, "Data");
@@ -712,15 +712,15 @@ public class Utils {
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "EPOC");
         writeLineCSV(writer, "Data");
-        //  Hematològic
-        writeLineCSV(writer, "Anèmia");
+        //  Hematologic
+        writeLineCSV(writer, "Anemia");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Leucosis");
         writeLineCSV(writer, "Data");
-        //  Immunològic
-        writeLineCSV(writer, "Al·lèrgia");
+        //  Immunologic
+        writeLineCSV(writer, "Al.lergia");
         writeLineCSV(writer, "Data");
-        //  Oftalmològic
+        //  Oftalmologic
         writeLineCSV(writer, "Glaucoma");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Cataractes");
@@ -742,103 +742,103 @@ public class Utils {
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Maligne");
         writeLineCSV(writer, "Data");
-        //  Tractament farmacològic actual
+        //  Tractament farmacologic actual
         //   Farmacs sistema nervios
-        writeLineCSV(writer, "Ansiolítics i sedants");
-        writeLineCSV(writer, "Hipnòtics");
+        writeLineCSV(writer, "Ansiolitics i sedants");
+        writeLineCSV(writer, "Hipnotics");
         writeLineCSV(writer, "Antidepresius");
         writeLineCSV(writer, "Animaniacs");
-        writeLineCSV(writer, "Anipsicòtics/Neurolèptics");
+        writeLineCSV(writer, "Anipsicotics/Neuroleptics");
         writeLineCSV(writer, "Animigranyosos");
         writeLineCSV(writer, "Opioides");
-        writeLineCSV(writer, "Antiepilèptics/Anticonvulsivants");
+        writeLineCSV(writer, "Antiepileptics/Anticonvulsivants");
         writeLineCSV(writer, "Antiparkinsonians");
-        writeLineCSV(writer, "Fàrmacs i múscul estriat");
-        writeLineCSV(writer, "Vasodilatadors cerebrals i nootròpics");
+        writeLineCSV(writer, "Farmacs i muscul estriat");
+        writeLineCSV(writer, "Vasodilatadors cerebrals i nootropics");
         writeLineCSV(writer, "Alzheimer: inhibidors de la Ac-esterasa");
         writeLineCSV(writer, "Alzheimer: memantina");
         writeLineCSV(writer, "Psicoestimulants");
-        writeLineCSV(writer, "Substàncies d'abús");
-        writeLineCSV(writer, "Deshabituació de substàncies d'abús");
+        writeLineCSV(writer, "Substancies d'abus");
+        writeLineCSV(writer, "Deshabituacio de substancies d'abus");
         //    Altres farmacs
-        writeLineCSV(writer, "Antiàcids/protectors gàstrics");
-        writeLineCSV(writer, "Antidiabètics");
-        writeLineCSV(writer, "Antitrombòtics/Anticoagulants");
+        writeLineCSV(writer, "Antiacids/protectors gastrics");
+        writeLineCSV(writer, "Antidiabetics");
+        writeLineCSV(writer, "Antitrombotics/Anticoagulants");
         writeLineCSV(writer, "Antiagregants");
-        writeLineCSV(writer, "Cardiotònics/Antiarritmics");
+        writeLineCSV(writer, "Cardiotonics/Antiarritmics");
         writeLineCSV(writer, "Antihipertenius");
-        writeLineCSV(writer, "Diurètics");
+        writeLineCSV(writer, "Diuretics");
         writeLineCSV(writer, "Hipolipemiants");
-        writeLineCSV(writer, "Dermatològics");
+        writeLineCSV(writer, "Dermatologics");
         writeLineCSV(writer, "Hormones sexuals");
-        writeLineCSV(writer, "Urològics");
-        writeLineCSV(writer, "Corticosteroides sintètics");
+        writeLineCSV(writer, "Urologics");
+        writeLineCSV(writer, "Corticosteroides sintetics");
         writeLineCSV(writer, "Terapia tiroidea");
-        writeLineCSV(writer, "Antineapàstics/Immunomoduladors");
-        writeLineCSV(writer, "Antiinflamatoris/Antirreumàtics");
-        writeLineCSV(writer, "Analgèsics/Antipirètics");
+        writeLineCSV(writer, "Antineapastics/Immunomoduladors");
+        writeLineCSV(writer, "Antiinflamatoris/Antirreumatics");
+        writeLineCSV(writer, "Analgesics/Antipiretics");
         writeLineCSV(writer, "Broncodilatadors");
-        writeLineCSV(writer, "Oftalmològics");
+        writeLineCSV(writer, "Oftalmologics");
 
         // Proves complementaries
         writeLineCSV(writer, "ECG: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Analítica de sang: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Analitica de sang: codi resultat");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Analítica d'orina: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Analitica d'orina: codi resultat");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Analítica de LCR: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Analitica de LCR: codi resultat");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Genètica: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Genetica: codi resultat");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "RX de tòrax: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "RX de torax: codi resultat");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "EEG: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "Potencials evocats: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "EMG: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "N-TMS: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
-        writeLineCSV(writer, "Anatomia patològica: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Anatomia patologica: codi resultat");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
 
         // Neuroimatge
         writeLineCSV(writer, "TC: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "RM: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "RM funcional: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "RM tractografia: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "SPECT: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "SISCOM: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "DaT-Scan: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
         writeLineCSV(writer, "PET: codi resultat");
-        writeLineCSV(writer, "Descripció");
+        writeLineCSV(writer, "Descripcio");
         writeLineCSV(writer, "Data");
 
 
@@ -963,7 +963,7 @@ public class Utils {
             writeLineCSV(writer, "FD - Alternança Temps PC_T"+i);
             writeLineCSV(writer, "FD - Alternança Errors_T"+i);
             writeLineCSV(writer, "FD - Alternança Errors PC_T"+i);
-            writeLineCSV(writer, "Five Digits - Inhibició PC_T"+i);
+            writeLineCSV(writer, "Five Digits - Inhibicio PC_T"+i);
             writeLineCSV(writer, "Five Digits - Flexibilitat PC_T"+i);
             // Fluencia verbal
             writeLineCSV(writer, "Fluencia verbal - P_T"+i);
@@ -974,9 +974,10 @@ public class Utils {
             writer.append(";");
 
             //Sessio 2
+            writeLineCSV(writer, "EPT_T"+i);
             writeLineCSV(writer, "MoCA_T"+i);
             writeLineCSV(writer, "UPSA Comunicacio_T"+i);
-            writeLineCSV(writer, "UPSA Comprensió_T"+i);
+            writeLineCSV(writer, "UPSA Comprensio_T"+i);
             writeLineCSV(writer, "UPSA total_T"+i);
             writeLineCSV(writer, "MFE_T"+i);
             writeLineCSV(writer, "HAD-A_T"+i);
@@ -984,6 +985,8 @@ public class Utils {
             writeLineCSV(writer, "QoL-AD_T"+i);
             writeLineCSV(writer, "Duke_T"+i);
             writeLineCSV(writer, "Rosemberg_T"+i);
+            writeLineCSV(writer, "OHQSF_T"+i);
+            writeLineCSV(writer, "IMAGE_T"+i);
 
             writer.append(";");
 
@@ -995,6 +998,7 @@ public class Utils {
             writeLineCSV(writer, "ZARIT_T"+i);
             writeLineCSV(writer, "SF-12_T"+i);
             writeLineCSV(writer, "Duke_T"+i);
+            writeLineCSV(writer, "OHQSF_T_VC"+i);
 
             writer.append(";");
         }
@@ -1496,7 +1500,10 @@ public class Utils {
 
                 // load a properties file
                 prop.load(input);
-
+                
+                // EPT
+                propertyToCSV(writer,prop,"EPTTotal");
+                
                 // MOCA
                 propertyToCSV(writer,prop,"puntTotalMoca1");
                 // UPSA
@@ -1514,6 +1521,11 @@ public class Utils {
                 propertyToCSV(writer,prop,"dukeTotal");
                 // RSE
                 propertyToCSV(writer,prop,"rseTotal");
+                
+                //OHQSF
+                propertyToCSV(writer,prop,"OHQSFTotal");
+                //IMAGE
+                propertyToCSV(writer,prop,"IMAGESTotal");
 
             }
 
@@ -1557,6 +1569,8 @@ public class Utils {
                 propertyToCSV(writer,prop,"sf12Total");
                 // DUKE
                 propertyToCSV(writer,prop,"dukeTotal");
+                // DUKE
+                propertyToCSV(writer,prop,"OHQSFTotal");
 
             }
 

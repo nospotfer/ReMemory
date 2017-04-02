@@ -186,8 +186,7 @@ public class DadesBasiques extends Test {
 
         dateChooser.setDateFormatString("dd/MM/yyyy");
 
-        nivellEscolaritatCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No sap llegir ni escriure", "Sense estudis; sap llegir i escriure", "Estudis primaris no finalitzats", "Estudis primaris complets", "Estudis mitjos; batxillerat", "Universitari grau mig", "Universitari grau superior" }));
-        nivellEscolaritatCombo.setSelectedIndex(-1);
+        nivellEscolaritatCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No sap llegir ni escriure", "Sense estudis-sap llegir i escriure", "Estudis primaris no finalitzats", "Estudis primaris complets", "Estudis mitjos-batxillerat", "Universitari grau mig", "Universitari grau superior" }));
 
         estatCivilCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Casat", "Solter", "Separat", "Divorciat", "Vidu" }));
         estatCivilCombo.setSelectedIndex(-1);

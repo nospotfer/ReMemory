@@ -47,15 +47,15 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="eptLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="eptLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="EPTQPanel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel217" min="-2" max="-2" attributes="0"/>
+                                      <Component id="eptLabel217" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="EPTTotal" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -70,14 +70,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                      <Component id="eptLabel33" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                      <Component id="eptLabel32" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="EPTQPanel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLabel217" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eptLabel217" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="EPTTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -87,7 +87,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel33">
+            <Component class="javax.swing.JLabel" name="eptLabel33">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -95,7 +95,7 @@
                 <Property name="text" type="java.lang.String" value="Evaluaci&#xf3;n Pre-Tratamiento - EPT"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel32">
+            <Component class="javax.swing.JLabel" name="eptLabel32">
               <Properties>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;Instrucciones: Las siguientes preguntas se refieren al tratamiento que est&#xe1; a punto de recibir.&lt;br&gt; Queremos saber c&#xf3;mo cree usted que va a responder a este tratamiento.&lt;br&gt; Por favor, indique su grado de acuerdo con cada frase marcando la respuesta correspondiente.&lt;br&gt; No hay respuestas correctas o incorrectas. "/>
               </Properties>
@@ -113,7 +113,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn14">
+                <Component class="javax.swing.JToggleButton" name="eptBtn1411">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup2"/>
@@ -126,7 +126,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn14">
+                <Component class="javax.swing.JToggleButton" name="eptBtn14">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup1"/>
@@ -139,7 +139,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn15">
+                <Component class="javax.swing.JToggleButton" name="eptBtn151">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup2"/>
@@ -152,7 +152,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn15">
+                <Component class="javax.swing.JToggleButton" name="eptBtn15">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup1"/>
@@ -165,7 +165,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn16">
+                <Component class="javax.swing.JToggleButton" name="eptBtn161">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup2"/>
@@ -178,7 +178,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn16">
+                <Component class="javax.swing.JToggleButton" name="eptBtn16">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup1"/>
@@ -191,7 +191,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="memoBtn17">
+                <Component class="javax.swing.JToggleButton" name="eptBtn17">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup1"/>
@@ -204,7 +204,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="orientacioBtn17">
+                <Component class="javax.swing.JToggleButton" name="eptBtn171">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup2"/>
@@ -217,7 +217,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn14">
+                <Component class="javax.swing.JToggleButton" name="eptBtn141">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup3"/>
@@ -230,7 +230,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn15">
+                <Component class="javax.swing.JToggleButton" name="eptBtn1511">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup3"/>
@@ -243,7 +243,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn16">
+                <Component class="javax.swing.JToggleButton" name="eptBtn1611">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup5"/>
@@ -256,7 +256,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="raoBtn17">
+                <Component class="javax.swing.JToggleButton" name="eptBtn1711">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup3"/>
@@ -269,7 +269,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn14">
+                <Component class="javax.swing.JToggleButton" name="eptFBtn14">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup4"/>
@@ -282,7 +282,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn15">
+                <Component class="javax.swing.JToggleButton" name="eptFBtn15">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup4"/>
@@ -295,7 +295,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn16">
+                <Component class="javax.swing.JToggleButton" name="eptFBtn16">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup5"/>
@@ -308,7 +308,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsFBtn17">
+                <Component class="javax.swing.JToggleButton" name="eptFBtn17">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup5"/>
@@ -321,7 +321,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn14">
+                <Component class="javax.swing.JToggleButton" name="eptDBtn14">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup6"/>
@@ -334,7 +334,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn15">
+                <Component class="javax.swing.JToggleButton" name="eptDBtn15">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup6"/>
@@ -347,7 +347,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn16">
+                <Component class="javax.swing.JToggleButton" name="eptDBtn16">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup5"/>
@@ -360,7 +360,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="activitatsDBtn17">
+                <Component class="javax.swing.JToggleButton" name="eptDBtn17">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -370,7 +370,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel112">
+                <Component class="javax.swing.JLabel" name="eptLabel112">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Nada&lt;br&gt;(0)"/>
                   </Properties>
@@ -380,7 +380,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel113">
+                <Component class="javax.swing.JLabel" name="eptLabel11">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Algo&lt;br&gt;(1)"/>
                   </Properties>
@@ -390,7 +390,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel149">
+                <Component class="javax.swing.JLabel" name="eptLabel149">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Mucho&lt;br&gt;(3)"/>
                   </Properties>
@@ -400,7 +400,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel150">
+                <Component class="javax.swing.JLabel" name="eptLabel150">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Bastante&lt;br&gt;(2)"/>
                   </Properties>
@@ -410,7 +410,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel151">
+                <Component class="javax.swing.JLabel" name="eptLabel151">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -420,7 +420,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel152">
+                <Component class="javax.swing.JLabel" name="eptLabel152">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -430,7 +430,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel153">
+                <Component class="javax.swing.JLabel" name="eptLabel153">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -440,7 +440,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel154">
+                <Component class="javax.swing.JLabel" name="eptLabel154">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="5"/>
                   </Properties>
@@ -450,7 +450,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel155">
+                <Component class="javax.swing.JLabel" name="eptLabel155">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="6"/>
                   </Properties>
@@ -460,7 +460,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel114">
+                <Component class="javax.swing.JLabel" name="eptLabel114">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Tengo miedo de este tratamiento."/>
                   </Properties>
@@ -470,7 +470,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel53">
+                <Component class="javax.swing.JLabel" name="eptLabel53">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Este tratamiento ser&#xe1; completamente efectivo."/>
                   </Properties>
@@ -480,7 +480,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel54">
+                <Component class="javax.swing.JLabel" name="eptLabel54">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Estoy preocupado con respecto al tratamiento."/>
                   </Properties>
@@ -490,7 +490,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel55">
+                <Component class="javax.swing.JLabel" name="eptLabel55">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Mi problema se habr&#xe1; resuelto completamente despu&#xe9;s del tratamiento."/>
                   </Properties>
@@ -500,7 +500,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel56">
+                <Component class="javax.swing.JLabel" name="eptLabel56">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Tengo completa confianza en este tratamiento."/>
                   </Properties>
@@ -510,7 +510,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel57">
+                <Component class="javax.swing.JLabel" name="eptLabel57">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;- Estoy nervioso con respecto a los efectos negativos &lt;br&gt;&amp;nbsp  que pueda tener este tratamiento"/>
                   </Properties>
@@ -520,7 +520,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel58">
+                <Component class="javax.swing.JLabel" name="eptLabel58">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -530,7 +530,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton37">
+                <Component class="javax.swing.JToggleButton" name="eptToggleButton37">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup3"/>
@@ -543,7 +543,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton38">
+                <Component class="javax.swing.JToggleButton" name="eptToggleButton38">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup4"/>
@@ -556,7 +556,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton39">
+                <Component class="javax.swing.JToggleButton" name="eptToggleButton39">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup4"/>
@@ -569,7 +569,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton40">
+                <Component class="javax.swing.JToggleButton" name="eptToggleButton40">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup6"/>
@@ -582,7 +582,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton41">
+                <Component class="javax.swing.JToggleButton" name="eptToggleButton41">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup6"/>
@@ -597,7 +597,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel217">
+            <Component class="javax.swing.JLabel" name="eptLabel217">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Puntuaci&#xf3; total:"/>
               </Properties>

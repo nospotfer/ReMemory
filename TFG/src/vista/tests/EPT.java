@@ -56,370 +56,370 @@ public class EPT extends Test {
         eptBtnGroup6 = new javax.swing.ButtonGroup();
         eptScroll = new javax.swing.JScrollPane();
         eptPanel = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
+        eptLabel33 = new javax.swing.JLabel();
+        eptLabel32 = new javax.swing.JLabel();
         EPTQPanel = new javax.swing.JPanel();
-        orientacioBtn14 = new javax.swing.JToggleButton();
-        memoBtn14 = new javax.swing.JToggleButton();
-        orientacioBtn15 = new javax.swing.JToggleButton();
-        memoBtn15 = new javax.swing.JToggleButton();
-        orientacioBtn16 = new javax.swing.JToggleButton();
-        memoBtn16 = new javax.swing.JToggleButton();
-        memoBtn17 = new javax.swing.JToggleButton();
-        orientacioBtn17 = new javax.swing.JToggleButton();
-        raoBtn14 = new javax.swing.JToggleButton();
-        raoBtn15 = new javax.swing.JToggleButton();
-        raoBtn16 = new javax.swing.JToggleButton();
-        raoBtn17 = new javax.swing.JToggleButton();
-        activitatsFBtn14 = new javax.swing.JToggleButton();
-        activitatsFBtn15 = new javax.swing.JToggleButton();
-        activitatsFBtn16 = new javax.swing.JToggleButton();
-        activitatsFBtn17 = new javax.swing.JToggleButton();
-        activitatsDBtn14 = new javax.swing.JToggleButton();
-        activitatsDBtn15 = new javax.swing.JToggleButton();
-        activitatsDBtn16 = new javax.swing.JToggleButton();
-        activitatsDBtn17 = new javax.swing.JToggleButton();
-        jLabel112 = new javax.swing.JLabel();
-        jLabel113 = new javax.swing.JLabel();
-        jLabel149 = new javax.swing.JLabel();
-        jLabel150 = new javax.swing.JLabel();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
-        jLabel153 = new javax.swing.JLabel();
-        jLabel154 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
-        jLabel114 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jToggleButton37 = new javax.swing.JToggleButton();
-        jToggleButton38 = new javax.swing.JToggleButton();
-        jToggleButton39 = new javax.swing.JToggleButton();
-        jToggleButton40 = new javax.swing.JToggleButton();
-        jToggleButton41 = new javax.swing.JToggleButton();
-        jLabel217 = new javax.swing.JLabel();
+        eptBtn1411 = new javax.swing.JToggleButton();
+        eptBtn14 = new javax.swing.JToggleButton();
+        eptBtn151 = new javax.swing.JToggleButton();
+        eptBtn15 = new javax.swing.JToggleButton();
+        eptBtn161 = new javax.swing.JToggleButton();
+        eptBtn16 = new javax.swing.JToggleButton();
+        eptBtn17 = new javax.swing.JToggleButton();
+        eptBtn171 = new javax.swing.JToggleButton();
+        eptBtn141 = new javax.swing.JToggleButton();
+        eptBtn1511 = new javax.swing.JToggleButton();
+        eptBtn1611 = new javax.swing.JToggleButton();
+        eptBtn1711 = new javax.swing.JToggleButton();
+        eptFBtn14 = new javax.swing.JToggleButton();
+        eptFBtn15 = new javax.swing.JToggleButton();
+        eptFBtn16 = new javax.swing.JToggleButton();
+        eptFBtn17 = new javax.swing.JToggleButton();
+        eptDBtn14 = new javax.swing.JToggleButton();
+        eptDBtn15 = new javax.swing.JToggleButton();
+        eptDBtn16 = new javax.swing.JToggleButton();
+        eptDBtn17 = new javax.swing.JToggleButton();
+        eptLabel112 = new javax.swing.JLabel();
+        eptLabel11 = new javax.swing.JLabel();
+        eptLabel149 = new javax.swing.JLabel();
+        eptLabel150 = new javax.swing.JLabel();
+        eptLabel151 = new javax.swing.JLabel();
+        eptLabel152 = new javax.swing.JLabel();
+        eptLabel153 = new javax.swing.JLabel();
+        eptLabel154 = new javax.swing.JLabel();
+        eptLabel155 = new javax.swing.JLabel();
+        eptLabel114 = new javax.swing.JLabel();
+        eptLabel53 = new javax.swing.JLabel();
+        eptLabel54 = new javax.swing.JLabel();
+        eptLabel55 = new javax.swing.JLabel();
+        eptLabel56 = new javax.swing.JLabel();
+        eptLabel57 = new javax.swing.JLabel();
+        eptLabel58 = new javax.swing.JLabel();
+        eptToggleButton37 = new javax.swing.JToggleButton();
+        eptToggleButton38 = new javax.swing.JToggleButton();
+        eptToggleButton39 = new javax.swing.JToggleButton();
+        eptToggleButton40 = new javax.swing.JToggleButton();
+        eptToggleButton41 = new javax.swing.JToggleButton();
+        eptLabel217 = new javax.swing.JLabel();
         EPTTotal = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
-        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel33.setText("Evaluación Pre-Tratamiento - EPT");
+        eptLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        eptLabel33.setText("Evaluación Pre-Tratamiento - EPT");
 
-        jLabel32.setText("<html>Instrucciones: Las siguientes preguntas se refieren al tratamiento que está a punto de recibir.<br> Queremos saber cómo cree usted que va a responder a este tratamiento.<br> Por favor, indique su grado de acuerdo con cada frase marcando la respuesta correspondiente.<br> No hay respuestas correctas o incorrectas. ");
+        eptLabel32.setText("<html>Instrucciones: Las siguientes preguntas se refieren al tratamiento que está a punto de recibir.<br> Queremos saber cómo cree usted que va a responder a este tratamiento.<br> Por favor, indique su grado de acuerdo con cada frase marcando la respuesta correspondiente.<br> No hay respuestas correctas o incorrectas. ");
 
         EPTQPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EPT", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         EPTQPanel.setLayout(new java.awt.GridBagLayout());
 
-        eptBtnGroup2.add(orientacioBtn14);
-        orientacioBtn14.setText("0");
+        eptBtnGroup2.add(eptBtn1411);
+        eptBtn1411.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(orientacioBtn14, gridBagConstraints);
+        EPTQPanel.add(eptBtn1411, gridBagConstraints);
 
-        eptBtnGroup1.add(memoBtn14);
-        memoBtn14.setText("0");
+        eptBtnGroup1.add(eptBtn14);
+        eptBtn14.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(memoBtn14, gridBagConstraints);
+        EPTQPanel.add(eptBtn14, gridBagConstraints);
 
-        eptBtnGroup2.add(orientacioBtn15);
-        orientacioBtn15.setText("1");
+        eptBtnGroup2.add(eptBtn151);
+        eptBtn151.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(orientacioBtn15, gridBagConstraints);
+        EPTQPanel.add(eptBtn151, gridBagConstraints);
 
-        eptBtnGroup1.add(memoBtn15);
-        memoBtn15.setText("1");
+        eptBtnGroup1.add(eptBtn15);
+        eptBtn15.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(memoBtn15, gridBagConstraints);
+        EPTQPanel.add(eptBtn15, gridBagConstraints);
 
-        eptBtnGroup2.add(orientacioBtn16);
-        orientacioBtn16.setText("2");
+        eptBtnGroup2.add(eptBtn161);
+        eptBtn161.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(orientacioBtn16, gridBagConstraints);
+        EPTQPanel.add(eptBtn161, gridBagConstraints);
 
-        eptBtnGroup1.add(memoBtn16);
-        memoBtn16.setText("2");
+        eptBtnGroup1.add(eptBtn16);
+        eptBtn16.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(memoBtn16, gridBagConstraints);
+        EPTQPanel.add(eptBtn16, gridBagConstraints);
 
-        eptBtnGroup1.add(memoBtn17);
-        memoBtn17.setText("3");
+        eptBtnGroup1.add(eptBtn17);
+        eptBtn17.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(memoBtn17, gridBagConstraints);
+        EPTQPanel.add(eptBtn17, gridBagConstraints);
 
-        eptBtnGroup2.add(orientacioBtn17);
-        orientacioBtn17.setText("3");
+        eptBtnGroup2.add(eptBtn171);
+        eptBtn171.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(orientacioBtn17, gridBagConstraints);
+        EPTQPanel.add(eptBtn171, gridBagConstraints);
 
-        eptBtnGroup3.add(raoBtn14);
-        raoBtn14.setText("0");
+        eptBtnGroup3.add(eptBtn141);
+        eptBtn141.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(raoBtn14, gridBagConstraints);
+        EPTQPanel.add(eptBtn141, gridBagConstraints);
 
-        eptBtnGroup3.add(raoBtn15);
-        raoBtn15.setText("3");
+        eptBtnGroup3.add(eptBtn1511);
+        eptBtn1511.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(raoBtn15, gridBagConstraints);
+        EPTQPanel.add(eptBtn1511, gridBagConstraints);
 
-        eptBtnGroup5.add(raoBtn16);
-        raoBtn16.setText("1");
+        eptBtnGroup5.add(eptBtn1611);
+        eptBtn1611.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(raoBtn16, gridBagConstraints);
+        EPTQPanel.add(eptBtn1611, gridBagConstraints);
 
-        eptBtnGroup3.add(raoBtn17);
-        raoBtn17.setText("2");
+        eptBtnGroup3.add(eptBtn1711);
+        eptBtn1711.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(raoBtn17, gridBagConstraints);
+        EPTQPanel.add(eptBtn1711, gridBagConstraints);
 
-        eptBtnGroup4.add(activitatsFBtn14);
-        activitatsFBtn14.setText("0");
+        eptBtnGroup4.add(eptFBtn14);
+        eptFBtn14.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(activitatsFBtn14, gridBagConstraints);
+        EPTQPanel.add(eptFBtn14, gridBagConstraints);
 
-        eptBtnGroup4.add(activitatsFBtn15);
-        activitatsFBtn15.setText("1");
+        eptBtnGroup4.add(eptFBtn15);
+        eptFBtn15.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(activitatsFBtn15, gridBagConstraints);
+        EPTQPanel.add(eptFBtn15, gridBagConstraints);
 
-        eptBtnGroup5.add(activitatsFBtn16);
-        activitatsFBtn16.setText("2");
+        eptBtnGroup5.add(eptFBtn16);
+        eptFBtn16.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(activitatsFBtn16, gridBagConstraints);
+        EPTQPanel.add(eptFBtn16, gridBagConstraints);
 
-        eptBtnGroup5.add(activitatsFBtn17);
-        activitatsFBtn17.setText("3");
+        eptBtnGroup5.add(eptFBtn17);
+        eptFBtn17.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(activitatsFBtn17, gridBagConstraints);
+        EPTQPanel.add(eptFBtn17, gridBagConstraints);
 
-        eptBtnGroup6.add(activitatsDBtn14);
-        activitatsDBtn14.setText("3");
+        eptBtnGroup6.add(eptDBtn14);
+        eptDBtn14.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(activitatsDBtn14, gridBagConstraints);
+        EPTQPanel.add(eptDBtn14, gridBagConstraints);
 
-        eptBtnGroup6.add(activitatsDBtn15);
-        activitatsDBtn15.setText("2");
+        eptBtnGroup6.add(eptDBtn15);
+        eptDBtn15.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(activitatsDBtn15, gridBagConstraints);
+        EPTQPanel.add(eptDBtn15, gridBagConstraints);
 
-        eptBtnGroup5.add(activitatsDBtn16);
-        activitatsDBtn16.setText("0");
+        eptBtnGroup5.add(eptDBtn16);
+        eptDBtn16.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(activitatsDBtn16, gridBagConstraints);
+        EPTQPanel.add(eptDBtn16, gridBagConstraints);
 
-        activitatsDBtn17.setText("2");
+        eptDBtn17.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(activitatsDBtn17, gridBagConstraints);
+        EPTQPanel.add(eptDBtn17, gridBagConstraints);
 
-        jLabel112.setText("<html><center>Nada<br>(0)");
+        eptLabel112.setText("<html><center>Nada<br>(0)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        EPTQPanel.add(jLabel112, gridBagConstraints);
+        EPTQPanel.add(eptLabel112, gridBagConstraints);
 
-        jLabel113.setText("<html><center>Algo<br>(1)");
+        eptLabel11.setText("<html><center>Algo<br>(1)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        EPTQPanel.add(jLabel113, gridBagConstraints);
+        EPTQPanel.add(eptLabel11, gridBagConstraints);
 
-        jLabel149.setText("<html><center>Mucho<br>(3)");
+        eptLabel149.setText("<html><center>Mucho<br>(3)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 2;
-        EPTQPanel.add(jLabel149, gridBagConstraints);
+        EPTQPanel.add(eptLabel149, gridBagConstraints);
 
-        jLabel150.setText("<html><center>Bastante<br>(2)");
+        eptLabel150.setText("<html><center>Bastante<br>(2)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        EPTQPanel.add(jLabel150, gridBagConstraints);
+        EPTQPanel.add(eptLabel150, gridBagConstraints);
 
-        jLabel151.setText("1");
+        eptLabel151.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        EPTQPanel.add(jLabel151, gridBagConstraints);
+        EPTQPanel.add(eptLabel151, gridBagConstraints);
 
-        jLabel152.setText("2");
+        eptLabel152.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        EPTQPanel.add(jLabel152, gridBagConstraints);
+        EPTQPanel.add(eptLabel152, gridBagConstraints);
 
-        jLabel153.setText("3");
+        eptLabel153.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        EPTQPanel.add(jLabel153, gridBagConstraints);
+        EPTQPanel.add(eptLabel153, gridBagConstraints);
 
-        jLabel154.setText("5");
+        eptLabel154.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        EPTQPanel.add(jLabel154, gridBagConstraints);
+        EPTQPanel.add(eptLabel154, gridBagConstraints);
 
-        jLabel155.setText("6");
+        eptLabel155.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        EPTQPanel.add(jLabel155, gridBagConstraints);
+        EPTQPanel.add(eptLabel155, gridBagConstraints);
 
-        jLabel114.setText("- Tengo miedo de este tratamiento.");
+        eptLabel114.setText("- Tengo miedo de este tratamiento.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        EPTQPanel.add(jLabel114, gridBagConstraints);
+        EPTQPanel.add(eptLabel114, gridBagConstraints);
 
-        jLabel53.setText("- Este tratamiento será completamente efectivo.");
+        eptLabel53.setText("- Este tratamiento será completamente efectivo.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        EPTQPanel.add(jLabel53, gridBagConstraints);
+        EPTQPanel.add(eptLabel53, gridBagConstraints);
 
-        jLabel54.setText("- Estoy preocupado con respecto al tratamiento.");
+        eptLabel54.setText("- Estoy preocupado con respecto al tratamiento.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
-        EPTQPanel.add(jLabel54, gridBagConstraints);
+        EPTQPanel.add(eptLabel54, gridBagConstraints);
 
-        jLabel55.setText("- Mi problema se habrá resuelto completamente después del tratamiento.");
+        eptLabel55.setText("- Mi problema se habrá resuelto completamente después del tratamiento.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        EPTQPanel.add(jLabel55, gridBagConstraints);
+        EPTQPanel.add(eptLabel55, gridBagConstraints);
 
-        jLabel56.setText("- Tengo completa confianza en este tratamiento.");
+        eptLabel56.setText("- Tengo completa confianza en este tratamiento.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        EPTQPanel.add(jLabel56, gridBagConstraints);
+        EPTQPanel.add(eptLabel56, gridBagConstraints);
 
-        jLabel57.setText("<html>- Estoy nervioso con respecto a los efectos negativos <br>&nbsp  que pueda tener este tratamiento");
+        eptLabel57.setText("<html>- Estoy nervioso con respecto a los efectos negativos <br>&nbsp  que pueda tener este tratamiento");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        EPTQPanel.add(jLabel57, gridBagConstraints);
+        EPTQPanel.add(eptLabel57, gridBagConstraints);
 
-        jLabel58.setText("4");
+        eptLabel58.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        EPTQPanel.add(jLabel58, gridBagConstraints);
+        EPTQPanel.add(eptLabel58, gridBagConstraints);
 
-        eptBtnGroup3.add(jToggleButton37);
-        jToggleButton37.setText("1");
+        eptBtnGroup3.add(eptToggleButton37);
+        eptToggleButton37.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(jToggleButton37, gridBagConstraints);
+        EPTQPanel.add(eptToggleButton37, gridBagConstraints);
 
-        eptBtnGroup4.add(jToggleButton38);
-        jToggleButton38.setText("2");
+        eptBtnGroup4.add(eptToggleButton38);
+        eptToggleButton38.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(jToggleButton38, gridBagConstraints);
+        EPTQPanel.add(eptToggleButton38, gridBagConstraints);
 
-        eptBtnGroup4.add(jToggleButton39);
-        jToggleButton39.setText("3");
+        eptBtnGroup4.add(eptToggleButton39);
+        eptToggleButton39.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(jToggleButton39, gridBagConstraints);
+        EPTQPanel.add(eptToggleButton39, gridBagConstraints);
 
-        eptBtnGroup6.add(jToggleButton40);
-        jToggleButton40.setText("1");
+        eptBtnGroup6.add(eptToggleButton40);
+        eptToggleButton40.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(jToggleButton40, gridBagConstraints);
+        EPTQPanel.add(eptToggleButton40, gridBagConstraints);
 
-        eptBtnGroup6.add(jToggleButton41);
-        jToggleButton41.setText("0");
+        eptBtnGroup6.add(eptToggleButton41);
+        eptToggleButton41.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        EPTQPanel.add(jToggleButton41, gridBagConstraints);
+        EPTQPanel.add(eptToggleButton41, gridBagConstraints);
 
-        jLabel217.setText("Puntuació total:");
+        eptLabel217.setText("Puntuació total:");
 
         EPTTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         EPTTotal.setText("0");
@@ -431,15 +431,15 @@ public class EPT extends Test {
             .addGroup(eptPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel33)
+                    .addComponent(eptLabel33)
                     .addGroup(eptPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(eptLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(eptPanelLayout.createSequentialGroup()
                                 .addComponent(EPTQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel217)
+                                .addComponent(eptLabel217)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(EPTTotal)))))
                 .addGap(91, 91, 91))
@@ -448,14 +448,14 @@ public class EPT extends Test {
             eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eptPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel33)
+                .addComponent(eptLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(eptLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(EPTQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel217)
+                        .addComponent(eptLabel217)
                         .addComponent(EPTTotal)))
                 .addContainerGap())
         );
@@ -469,57 +469,57 @@ public class EPT extends Test {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel EPTQPanel;
     private javax.swing.JLabel EPTTotal;
-    private javax.swing.JToggleButton activitatsDBtn14;
-    private javax.swing.JToggleButton activitatsDBtn15;
-    private javax.swing.JToggleButton activitatsDBtn16;
-    private javax.swing.JToggleButton activitatsDBtn17;
-    private javax.swing.JToggleButton activitatsFBtn14;
-    private javax.swing.JToggleButton activitatsFBtn15;
-    private javax.swing.JToggleButton activitatsFBtn16;
-    private javax.swing.JToggleButton activitatsFBtn17;
+    private javax.swing.JToggleButton eptBtn14;
+    private javax.swing.JToggleButton eptBtn141;
+    private javax.swing.JToggleButton eptBtn1411;
+    private javax.swing.JToggleButton eptBtn15;
+    private javax.swing.JToggleButton eptBtn151;
+    private javax.swing.JToggleButton eptBtn1511;
+    private javax.swing.JToggleButton eptBtn16;
+    private javax.swing.JToggleButton eptBtn161;
+    private javax.swing.JToggleButton eptBtn1611;
+    private javax.swing.JToggleButton eptBtn17;
+    private javax.swing.JToggleButton eptBtn171;
+    private javax.swing.JToggleButton eptBtn1711;
     private javax.swing.ButtonGroup eptBtnGroup1;
     private javax.swing.ButtonGroup eptBtnGroup2;
     private javax.swing.ButtonGroup eptBtnGroup3;
     private javax.swing.ButtonGroup eptBtnGroup4;
     private javax.swing.ButtonGroup eptBtnGroup5;
     private javax.swing.ButtonGroup eptBtnGroup6;
+    private javax.swing.JToggleButton eptDBtn14;
+    private javax.swing.JToggleButton eptDBtn15;
+    private javax.swing.JToggleButton eptDBtn16;
+    private javax.swing.JToggleButton eptDBtn17;
+    private javax.swing.JToggleButton eptFBtn14;
+    private javax.swing.JToggleButton eptFBtn15;
+    private javax.swing.JToggleButton eptFBtn16;
+    private javax.swing.JToggleButton eptFBtn17;
+    private javax.swing.JLabel eptLabel11;
+    private javax.swing.JLabel eptLabel112;
+    private javax.swing.JLabel eptLabel114;
+    private javax.swing.JLabel eptLabel149;
+    private javax.swing.JLabel eptLabel150;
+    private javax.swing.JLabel eptLabel151;
+    private javax.swing.JLabel eptLabel152;
+    private javax.swing.JLabel eptLabel153;
+    private javax.swing.JLabel eptLabel154;
+    private javax.swing.JLabel eptLabel155;
+    private javax.swing.JLabel eptLabel217;
+    private javax.swing.JLabel eptLabel32;
+    private javax.swing.JLabel eptLabel33;
+    private javax.swing.JLabel eptLabel53;
+    private javax.swing.JLabel eptLabel54;
+    private javax.swing.JLabel eptLabel55;
+    private javax.swing.JLabel eptLabel56;
+    private javax.swing.JLabel eptLabel57;
+    private javax.swing.JLabel eptLabel58;
     private javax.swing.JPanel eptPanel;
     private javax.swing.JScrollPane eptScroll;
-    private javax.swing.JLabel jLabel112;
-    private javax.swing.JLabel jLabel113;
-    private javax.swing.JLabel jLabel114;
-    private javax.swing.JLabel jLabel149;
-    private javax.swing.JLabel jLabel150;
-    private javax.swing.JLabel jLabel151;
-    private javax.swing.JLabel jLabel152;
-    private javax.swing.JLabel jLabel153;
-    private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
-    private javax.swing.JLabel jLabel217;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JToggleButton jToggleButton37;
-    private javax.swing.JToggleButton jToggleButton38;
-    private javax.swing.JToggleButton jToggleButton39;
-    private javax.swing.JToggleButton jToggleButton40;
-    private javax.swing.JToggleButton jToggleButton41;
-    private javax.swing.JToggleButton memoBtn14;
-    private javax.swing.JToggleButton memoBtn15;
-    private javax.swing.JToggleButton memoBtn16;
-    private javax.swing.JToggleButton memoBtn17;
-    private javax.swing.JToggleButton orientacioBtn14;
-    private javax.swing.JToggleButton orientacioBtn15;
-    private javax.swing.JToggleButton orientacioBtn16;
-    private javax.swing.JToggleButton orientacioBtn17;
-    private javax.swing.JToggleButton raoBtn14;
-    private javax.swing.JToggleButton raoBtn15;
-    private javax.swing.JToggleButton raoBtn16;
-    private javax.swing.JToggleButton raoBtn17;
+    private javax.swing.JToggleButton eptToggleButton37;
+    private javax.swing.JToggleButton eptToggleButton38;
+    private javax.swing.JToggleButton eptToggleButton39;
+    private javax.swing.JToggleButton eptToggleButton40;
+    private javax.swing.JToggleButton eptToggleButton41;
     // End of variables declaration//GEN-END:variables
 }

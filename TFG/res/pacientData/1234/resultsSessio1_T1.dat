@@ -1,12 +1,12 @@
 #Sessio1
-#Wed Mar 08 17:49:06 CET 2017
+#Mon Apr 03 01:52:23 CEST 2017
 inhibicioPCField=
 color2timePercentile=
 color2nearPercentile=
 color2timeStandard=
 color1nearRaw=
 color1promptsRaw=
-historiaAprimerTotal=0
+historiaAprimerTotal=3
 percentilDI=0
 lecturaErrorsField=0
 color2nearRaw=
@@ -45,7 +45,7 @@ colorInterferencePercentile=
 alternTempsPCField=
 color2timeRaw=
 flexibilitatPCField=
-historiaBprimerTotal=0
+historiaBprimerTotal=8
 alternErrorsPCField=
 alternErrors=0
 color2errorRaw=
@@ -53,11 +53,11 @@ textHistoriaAsegon=
 color1promptsPercentile=
 fluenciaAnimals=
 puntuacioML2=0
-historiaAsegonTotal=0
-puntuacioML1=0
+historiaAsegonTotal=12
+puntuacioML1=11
 spanDI=0
 nssaBNT1=0
-ML1Total=0
+ML1Total=23
 compteigErrorsPCField=
 lecturaTemps=00\:04.83
 totalRecB=0

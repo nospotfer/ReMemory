@@ -34,7 +34,7 @@ public class EPT extends Test {
 
     @Override
     public void guardarResultats(Properties prop) {
-        // DUKE
+        // EPT
         Utils.setProperty(prop,"EPTTotal",EPTTotal);
     }
 

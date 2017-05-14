@@ -33,7 +33,7 @@ public class OHQSF extends Test {
 
     @Override
     public void guardarResultats(Properties prop) {
-        // QOL-AD
+        // OHQSF
         Utils.setProperty(prop,"OHQSFTotal",OHQSFTotal);
     }
 

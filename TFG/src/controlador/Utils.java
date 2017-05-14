@@ -845,9 +845,12 @@ public class Utils {
         //Valoracio cognitiva previa
         writeLineCSV(writer,"CDR");
         writeLineCSV(writer,"CRC total");
+        writeLineCSV(writer,"CRC Rang"); //NOU
         writeLineCSV(writer,"TAP total");
         writeLineCSV(writer,"TAP CI estimat");
         writeLineCSV(writer,"MMSE total");
+        writeLineCSV(writer,"MMSE Comentarios");
+        
 
         writer.append(";");
 
@@ -1605,11 +1608,13 @@ public class Utils {
                 propertyToCSV(writer,prop,"cdr");
                 // CRC
                 propertyToCSV(writer,prop,"crcTotal");
+                propertyToCSV(writer,prop,"rangLabel"); //
                 // TAP
                 propertyToCSV(writer,prop,"tapTotal");
                 propertyToCSV(writer,prop,"tapCi");
                 // MMSE
                 propertyToCSV(writer,prop,"totalMMSE");
+                propertyToCSV(writer,prop,"notasMMSE");
 
             }
 

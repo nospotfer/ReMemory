@@ -38,6 +38,7 @@ public class CRC extends Test {
     public void guardarResultats(Properties prop) {
         // CRC
         Utils.setProperty(prop,"crcTotal",crcTotal);
+        Utils.setProperty(prop,"rangLabel",rangLabel);
     }
 
     private void actualitzaPuntuacioCrc(){

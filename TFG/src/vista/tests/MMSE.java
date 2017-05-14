@@ -43,6 +43,7 @@ public class MMSE extends Test {
     public void guardarResultats(Properties prop) {
         // MMSE
         Utils.setProperty(prop,"totalMMSE",totalMMSE);
+        Utils.setProperty(prop,"notasMMSE",notasMMSE);
     }
 
     private void actualitzaPuntuacioMMSE() {
@@ -200,9 +201,9 @@ public class MMSE extends Test {
         referenciaMMSELabel = new javax.swing.JLabel();
         jLabel108 = new javax.swing.JLabel();
         jLabel110 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        notasMMSE = new javax.swing.JTextArea();
 
         setLayout(new java.awt.CardLayout());
 
@@ -713,50 +714,53 @@ public class MMSE extends Test {
 
         jLabel110.setText(" a.e.g.(1999)");
 
-        jScrollPane2.setViewportView(jTextPane1);
-
         jLabel1.setText("NOTES AVALUADOR");
+
+        notasMMSE.setColumns(20);
+        notasMMSE.setRows(5);
+        jScrollPane3.setViewportView(notasMMSE);
 
         javax.swing.GroupLayout MMSEPanelLayout = new javax.swing.GroupLayout(MMSEPanel);
         MMSEPanel.setLayout(MMSEPanelLayout);
         MMSEPanelLayout.setHorizontalGroup(
             MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MMSEPanelLayout.createSequentialGroup()
-                .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MMSEPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(MMSEPanelLayout.createSequentialGroup()
-                                .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(MMSEPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(MMSEPanelLayout.createSequentialGroup()
+                                    .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(MMSEPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(MMSEPanelLayout.createSequentialGroup()
+                                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGroup(MMSEPanelLayout.createSequentialGroup()
+                                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(MMSEPanelLayout.createSequentialGroup()
-                                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(jLabel41)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(referenciaMMSELabel))
                                         .addGroup(MMSEPanelLayout.createSequentialGroup()
-                                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(MMSEPanelLayout.createSequentialGroup()
-                                        .addComponent(jLabel41)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(referenciaMMSELabel))
-                                    .addGroup(MMSEPanelLayout.createSequentialGroup()
-                                        .addComponent(jLabel27)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(totalMMSE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel26)))
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel110)
-                            .addComponent(jScrollPane2)))
-                    .addGroup(MMSEPanelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1)))
+                                            .addComponent(jLabel27)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(totalMMSE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jLabel26)))
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel110)))
+                        .addGroup(MMSEPanelLayout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel1))))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
         MMSEPanelLayout.setVerticalGroup(
@@ -787,9 +791,9 @@ public class MMSE extends Test {
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel110)
                 .addContainerGap())
         );
@@ -852,14 +856,13 @@ public class MMSE extends Test {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JCheckBox llenguatgeCheck1;
     private javax.swing.JCheckBox llenguatgeCheck2;
     private javax.swing.JCheckBox llenguatgeCheck3;
@@ -870,6 +873,7 @@ public class MMSE extends Test {
     private javax.swing.JCheckBox llenguatgeCheck8;
     private javax.swing.JCheckBox llenguatgeCheck9;
     private javax.swing.JLabel llenguatgeLabel;
+    private javax.swing.JTextArea notasMMSE;
     private javax.swing.JCheckBox recordCheck1;
     private javax.swing.JCheckBox recordCheck2;
     private javax.swing.JCheckBox recordCheck3;

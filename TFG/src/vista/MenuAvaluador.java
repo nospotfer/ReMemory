@@ -447,7 +447,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             outFile.delete();
 
         }  else {
-            FileFilter filter = new FileNameExtensionFilter("ReMemory file","ReMemoryPacient");
+            FileFilter filter = new FileNameExtensionFilter("ReMemory file","zip");
             c.addChoosableFileFilter(filter);
             c.setAcceptAllFileFilterUsed(false);
             int rVal = c.showOpenDialog(this);
@@ -594,11 +594,12 @@ public class MenuAvaluador extends javax.swing.JFrame {
             while ( i < users.length() && !trobat){
                 if (users.getJSONObject(i).getString("name").equals(pacient.getString("name"))){
                     trobat = true;
+                    System.out.println("Consta que el pacient ja existeix a USERS_PATH");
                 }
                 i++;
             }
 
-            if (trobat){
+            //if (trobat){
                 /*
                 int result = JOptionPane.showConfirmDialog(this, "El pacient ja existeix, el vols sobreescrire?",
         "Alerta", JOptionPane.YES_NO_OPTION);
@@ -609,9 +610,9 @@ public class MenuAvaluador extends javax.swing.JFrame {
                     System.out.println("pacient no importat");
                 }
                 */
-            } else{
+            //} else{
                 importaPacient(obj, pacient, users);
-            }
+            //}
         } catch (JSONException ex) {
             Logger.getLogger(NewPacient.class.getName()).log(Level.SEVERE, null, ex);
         } catch (FileNotFoundException ex) {
@@ -621,6 +622,9 @@ public class MenuAvaluador extends javax.swing.JFrame {
 
     private void importaPacient(JSONObject obj, JSONObject pacient, JSONArray users) throws JSONException, FileNotFoundException {
         int i;
+        String nom =pacient.getString("name");
+        String id =pacient.getString("id");
+        
         JSONArray usr = new JSONArray();
         for (i = 0; i < users.length(); i++){
             usr.put(users.getJSONObject(i));
@@ -629,9 +633,12 @@ public class MenuAvaluador extends javax.swing.JFrame {
         usr.put(pacient);
 
         obj.put("Users", usr);
+        
         PrintWriter out = new PrintWriter(Utils.USERS_PATH);
         out.write(obj.toString());
         out.close();
+        controlador.crearPacient(nom, Integer.parseInt(id) , 0, 0, "cst");
+        //controlador.crearPacient(nom, Integer.parseInt(id) , 0, 0, evaluadorLabel.getText());
     }
 
     private void back(){

@@ -81,7 +81,7 @@ public class NewPacient extends javax.swing.JDialog {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 2, 9)); // NOI18N
-        jLabel2.setText("NOTA: Els IDs han de ser numèrics i començar per \"1\" .");
+        jLabel2.setText("NOTA: Els IDs han de ser numèrics i no poden començar per \"0\" .");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

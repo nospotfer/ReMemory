@@ -144,7 +144,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="9" style="2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="NOTA: Els IDs han de ser num&#xe8;rics i comen&#xe7;ar per &quot;1&quot; ."/>
+            <Property name="text" type="java.lang.String" value="NOTA: Els IDs han de ser num&#xe8;rics i no poden comen&#xe7;ar per &quot;0&quot; ."/>
           </Properties>
         </Component>
       </SubComponents>

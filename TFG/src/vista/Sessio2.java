@@ -235,7 +235,7 @@ public class Sessio2 extends javax.swing.JFrame {
         this.guardarResultats();
         Utils.generaResultatsCSV(pacientActual.getId());
         ((MenuAvaluador)parent).checkCsv();
-        ((MenuAvaluador)parent).checkCsvTotal();
+        //((MenuAvaluador)parent).checkCsvTotal();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

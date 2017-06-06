@@ -35,7 +35,7 @@ import model.PacientDatabase;
  *
  * @author USER
  */
-public class MenuAvaluador extends javax.swing.JFrame {
+public class MenuAvaluador_backup extends javax.swing.JFrame {
 
     private boolean pacient = false;
     private Pacient pacientActual;
@@ -50,7 +50,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     /**
      * Creates new form mainMenu
      */
-    public MenuAvaluador(String evaluador) {
+    public MenuAvaluador_backup(String evaluador) {
         Utils.setIcon(this);
         initComponents();
         this.evaluador = evaluador;
@@ -60,7 +60,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         pacientActual = null;
         idText.requestFocusInWindow();
         this.getRootPane().setDefaultButton(seleccionaBtn);
-        //checkCsvTotal();
+        checkCsvTotal();
     }
 
     /**
@@ -86,9 +86,13 @@ public class MenuAvaluador extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         testsTextualsBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        testsVisualsBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         csvButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        csvTotalButton = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         evaluadorLabel = new javax.swing.JLabel();
@@ -205,27 +209,47 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Evaluación");
+
+        testsVisualsBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pictureTest.png"))); // NOI18N
+        testsVisualsBtn.setEnabled(false);
+        testsVisualsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                testsVisualsBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Tratamientos");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(testsTextualsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jLabel1)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(testsTextualsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel1)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(testsVisualsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(testsTextualsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(testsVisualsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(testsTextualsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultados"));
@@ -238,8 +262,17 @@ public class MenuAvaluador extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Obtener Resultados");
+        jLabel3.setText("Paciente actual");
+
+        csvTotalButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/avaluacioTots.png"))); // NOI18N
+        csvTotalButton.setEnabled(false);
+        csvTotalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                csvTotalButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Todos");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -247,21 +280,30 @@ public class MenuAvaluador extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(csvButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel3)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(csvButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(csvTotalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(21, 21, 21)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(csvButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(csvTotalButton)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(csvButton)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         backBtn.setText("Salir al menu principal");
@@ -332,7 +374,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         }
     }
     
-    /*public void checkCsvTotal() {
+    public void checkCsvTotal() {
         File file = new File(Utils.RES_PATH+"Resultats.csv");
         if (file.exists()){
             csvTotalButton.setEnabled(true);
@@ -340,7 +382,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         else {
             csvTotalButton.setEnabled(false);
         }
-    }*/
+    }
 
     private void fitxaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitxaBtnActionPerformed
         FitxaPacient nF = new FitxaPacient(this,pacientActual);
@@ -465,10 +507,21 @@ public class MenuAvaluador extends javax.swing.JFrame {
             try {
                 Desktop.getDesktop().open(file);
             } catch (IOException ex) {
-                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuAvaluador_backup.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_csvButtonActionPerformed
+
+    private void csvTotalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csvTotalButtonActionPerformed
+        File file = new File(Utils.RES_PATH+"Resultats.csv");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(MenuAvaluador_backup.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_csvTotalButtonActionPerformed
 
     private void seleccionaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionaBtnActionPerformed
 
@@ -510,16 +563,38 @@ public class MenuAvaluador extends javax.swing.JFrame {
             try {
                 checkPacient();
             } catch (JSONException ex) {
-                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuAvaluador_backup.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
-                Logger.getLogger(MenuAvaluador.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuAvaluador_backup.class.getName()).log(Level.SEVERE, null, ex);
             }
             checkCsv();
             
             testsTextualsBtn.setEnabled(true);
-            //testsVisualsBtn.setEnabled(true);
+            testsVisualsBtn.setEnabled(true);
         }
     }//GEN-LAST:event_seleccionaBtnActionPerformed
+
+    private void testsVisualsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testsVisualsBtnActionPerformed
+        if (idPacient != ""){
+            /* File file = new File("src"+ File.separator+"resources");
+            String[] names = file.list();
+            for(String name : names) {
+                if (!new File("src"+ File.separator+"resources"+ File.separator + nomText.getText()).isDirectory()) {
+                    utils.crearCarpeta("src"+ File.separator+"resources" + File.separator + nomText.getText());
+                }
+            }*///for
+
+            EscullSessio eS = new EscullSessio(nomText.getText(),Integer.parseInt(idPacient));
+            eS.pack();
+            eS.setVisible(true);
+            this.toBack();
+        } else {
+            JOptionPane.showMessageDialog(this,
+                "Introdueix un pacient",
+                "Alerta",
+                JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_testsVisualsBtnActionPerformed
 
     private void guardarJSON() {
         JSONArray usr = new JSONArray();
@@ -649,7 +724,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
             eliminaBtn.setEnabled(true);
             fitxaBtn.setEnabled(true);
             testsTextualsBtn.setEnabled(true);
-            //testsVisualsBtn.setEnabled(true);
+            testsVisualsBtn.setEnabled(true);
         } else{
 //            System.out.println(trobat);
         }
@@ -716,14 +791,22 @@ public class MenuAvaluador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuAvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuAvaluador_backup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuAvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuAvaluador_backup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuAvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuAvaluador_backup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuAvaluador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuAvaluador_backup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -736,7 +819,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuAvaluador("").setVisible(true);
+                new MenuAvaluador_backup("").setVisible(true);
             }
         });
     }
@@ -744,6 +827,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
     private javax.swing.JButton csvButton;
+    private javax.swing.JButton csvTotalButton;
     private javax.swing.JButton eliminaBtn;
     private javax.swing.JLabel evaluadorLabel;
     private javax.swing.JButton fitxaBtn;
@@ -751,10 +835,12 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JButton importaBtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -762,5 +848,6 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private javax.swing.JButton nouPacientBtn;
     private javax.swing.JButton seleccionaBtn;
     private javax.swing.JButton testsTextualsBtn;
+    private javax.swing.JButton testsVisualsBtn;
     // End of variables declaration//GEN-END:variables
 }

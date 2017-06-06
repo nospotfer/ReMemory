@@ -241,7 +241,7 @@ public class FitxaPacient extends JFrame {
         guardarFitxa();
         Utils.generaResultatsCSV(pacientActual.getId());
         ((MenuAvaluador)parent).checkCsv();
-        ((MenuAvaluador)parent).checkCsvTotal();
+        //((MenuAvaluador)parent).checkCsvTotal();
         this.dispose();
     }//GEN-LAST:event_acceptaBtnActionPerformed
 

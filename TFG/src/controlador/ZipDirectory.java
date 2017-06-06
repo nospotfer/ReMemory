@@ -43,7 +43,7 @@ public class ZipDirectory {
 	public static void writeZipFile(File directoryToZip, List<File> fileList, String directoryToSave) {
 
 		try {
-			FileOutputStream fos = new FileOutputStream(directoryToSave+ ".ReMemoryPacient");
+			FileOutputStream fos = new FileOutputStream(directoryToSave+ ".zip");
 			ZipOutputStream zos = new ZipOutputStream(fos);
 
 			for (File file : fileList) {

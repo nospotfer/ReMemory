@@ -73,7 +73,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="subjecteLabel">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Codi de subjecte:"/>
+                <Property name="text" type="java.lang.String" value="ID ReMemory:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="subjecteText">

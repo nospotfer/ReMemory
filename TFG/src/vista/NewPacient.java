@@ -38,6 +38,9 @@ public class NewPacient extends javax.swing.JDialog {
         this.setLocationRelativeTo(null);
         controlador = new ControladorHibernate();
     }
+    
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,6 +59,7 @@ public class NewPacient extends javax.swing.JDialog {
         cancelBtn = new javax.swing.JButton();
         nameTextBox = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -64,9 +68,16 @@ public class NewPacient extends javax.swing.JDialog {
 
         jLabel1.setText("ID ReMemory:");
 
+        idTextBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idTextBoxActionPerformed(evt);
+            }
+        });
+
         idLabel.setText("ID:");
 
         newBtn.setText("Nou");
+        newBtn.setEnabled(false);
         newBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newBtnActionPerformed(evt);
@@ -80,8 +91,17 @@ public class NewPacient extends javax.swing.JDialog {
             }
         });
 
+        nameTextBox.setEditable(false);
+
         jLabel2.setFont(new java.awt.Font("Tahoma", 2, 9)); // NOI18N
-        jLabel2.setText("NOTA: Els IDs han de ser numèrics i no poden començar per \"0\" .");
+        jLabel2.setText("NOTA: Els IDs de ReMemory han de ser del tipus REM-GXXXXX.");
+
+        jButton1.setText("Generar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,13 +116,15 @@ public class NewPacient extends javax.swing.JDialog {
                                 .addGap(4, 4, 4)
                                 .addComponent(idLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(idTextBox, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
                             .addComponent(nameTextBox))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2)
-                        .addContainerGap(20, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jLabel2))
+                        .addContainerGap(18, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(newBtn)
                         .addGap(35, 35, 35)
@@ -112,15 +134,16 @@ public class NewPacient extends javax.swing.JDialog {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idLabel)
                     .addComponent(idTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(nameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idLabel)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newBtn)
@@ -135,7 +158,7 @@ public class NewPacient extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,9 +176,9 @@ public class NewPacient extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelBtnActionPerformed
 
     private void newBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newBtnActionPerformed
-        System.out.println(nameTextBox.getText());
-        System.out.println(Integer.parseInt(idTextBox.getText()));
-        controlador.crearPacient(nameTextBox.getText(), Integer.parseInt(idTextBox.getText()) , 0, 0, nomEvaluador);
+        System.out.println(idTextBox.getText());
+        System.out.println(Integer.parseInt(nameTextBox.getText()));
+        controlador.crearPacient(idTextBox.getText(), Integer.parseInt(nameTextBox.getText()) , 0, 0, nomEvaluador);
         JSONObject obj = null;
         try {
             obj = new JSONObject(getStringFile(Utils.USERS_PATH));
@@ -164,16 +187,16 @@ public class NewPacient extends javax.swing.JDialog {
             boolean trobatNom = false;
             boolean trobatId = false;
             while ( i < users.length() && !trobatNom && !trobatId){
-                if (users.getJSONObject(i).getString("name").equals(nameTextBox.getText())){
+                if (users.getJSONObject(i).getString("name").equals(idTextBox.getText())){
                     trobatNom = true;
                 }
-                if (users.getJSONObject(i).getString("id").equals(idTextBox.getText())){
+                if (users.getJSONObject(i).getString("id").equals(nameTextBox.getText())){
                     trobatId = true;
                 }
                 i++;
             }
             boolean buits;
-            buits = "".equals(idTextBox.getText()) || "".equals(nameTextBox.getText());
+            buits = "".equals(nameTextBox.getText()) || "".equals(idTextBox.getText());
             
             if (trobatNom || trobatId || buits){
                 if (buits) JOptionPane.showMessageDialog(this, "Has d'omplir tots els buits",
@@ -189,8 +212,8 @@ public class NewPacient extends javax.swing.JDialog {
                 }
                 
                 JSONObject o = new JSONObject();
-                o.put("id",idTextBox.getText().toLowerCase());
-                o.put("name", nameTextBox.getText().toLowerCase());
+                o.put("id",nameTextBox.getText().toLowerCase());
+                o.put("name", idTextBox.getText().toLowerCase());
                 o.put("role", "pacient");
                 
                 usr.put(o);
@@ -200,7 +223,7 @@ public class NewPacient extends javax.swing.JDialog {
                 out.write(obj.toString());
                 out.close();
 
-                File dataDir = new File(Utils.PACIENT_DATA_PATH+idTextBox.getText().toLowerCase());
+                File dataDir = new File(Utils.PACIENT_DATA_PATH+nameTextBox.getText().toLowerCase());
                 if (!dataDir.exists()){
                     dataDir.mkdir();
                 }
@@ -216,6 +239,20 @@ public class NewPacient extends javax.swing.JDialog {
         }
   
     }//GEN-LAST:event_newBtnActionPerformed
+
+    private void idTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTextBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idTextBoxActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        if(idTextBox.getText().replaceAll("\\D+","").isEmpty() || !idTextBox.getText().startsWith("REM-G") ){
+            JOptionPane.showMessageDialog(null, "ID ReMemory no valido", "Aviso: ", JOptionPane.INFORMATION_MESSAGE);
+        }else{ 
+            nameTextBox.setText("1" + idTextBox.getText().replaceAll("\\D+",""));
+            newBtn.setEnabled(true);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,7 +283,7 @@ public class NewPacient extends javax.swing.JDialog {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-
+        
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -288,15 +325,23 @@ public class NewPacient extends javax.swing.JDialog {
 	}
 	return null;
     }
-    
+
+
+        
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelBtn;
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextBox;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nameTextBox;
     private javax.swing.JButton newBtn;
     // End of variables declaration//GEN-END:variables
+
+
+
 }
+
+

@@ -604,11 +604,11 @@ public class Utils {
     }
 
     private static void writeHeader(Writer writer, String idPacient) throws IOException {
-        writeLineCSV(writer,"Pacient");
+        writeLineCSV(writer,"ID");
 
         //Fitxa
 
-        writeLineCSV(writer, "Codi subjecte");
+        writeLineCSV(writer, "ID ReMemory");
         // Dades sociodemografiques
         writeLineCSV(writer, "Sexe");
         writeLineCSV(writer, "Idioma");

@@ -154,7 +154,7 @@ public class DadesBasiques extends Test {
         tempsTractamentLabel = new javax.swing.JLabel();
         tempsTractamentCombo = new javax.swing.JComboBox<>();
 
-        subjecteLabel.setText("Codi de subjecte:");
+        subjecteLabel.setText("ID ReMemory:");
 
         dadesSociodemografiquesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Dades sociodemogràfiques"));
 

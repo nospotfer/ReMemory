@@ -45,6 +45,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     private ArrayList<Pacient> llistaPacients = new ArrayList<>();
     private ControladorHibernate controlador = new ControladorHibernate();
     private Integer s;
+    private String temp;
     private boolean trobat = false;
     
     /**
@@ -495,17 +496,19 @@ public class MenuAvaluador extends javax.swing.JFrame {
              Object[] ids = new Object[pacients.size()];
             for(int i=0;i<pacients.size();i++){
                 PacientDatabase pacient = (PacientDatabase)pacients.get(i);
-                ids[i] = pacient.getId();
+                ids[i] = "REM-G"+Integer.toString(pacient.getId()).substring(1);
+                
+                
             }
  
             try{
-                s = (int) JOptionPane.showInputDialog(
+                temp = (String) JOptionPane.showInputDialog(
                 this,
                 "Pacients: ",
                 "Llistat de pacients",
                 JOptionPane.PLAIN_MESSAGE,
                 null,
-                ids,
+                ids, //selection values
                 ids[0]);
             }catch(NullPointerException ex){
                 System.out.println("No s'ha seleccionat res");
@@ -514,6 +517,10 @@ public class MenuAvaluador extends javax.swing.JFrame {
         else{
            JOptionPane.showMessageDialog(this, "No hi ha cap pacient a la llista", "Llistapacients", JOptionPane.ERROR_MESSAGE);
         }
+        
+              
+        s = Integer.parseInt("1" + temp.substring(5));
+        
         
         
         if(s != null) {    

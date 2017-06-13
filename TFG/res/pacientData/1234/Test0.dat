@@ -1,5 +1,5 @@
 #VALORACIO COGNITIVA PREVIA
-#Sun May 14 20:35:45 CEST 2017
+#Tue Jun 13 19:09:02 CEST 2017
 escoParesRadio3=no
 escoParesRadio2=no
 raoBtn5=si
@@ -90,7 +90,6 @@ orientacioLabel49=2. A quin dia de la setmana estem?
 jLabel99=<html><center>Dubt\u00F3s<br>0.5
 jLabel98=10. Repetiu el nom i l'adre\u00E7a que li he demanat abans que memoritz\u00E9s\:
 jLabel97=(Seleccioneu els elements repetits correctament)
-jTextArea1MMSE=cccccccccccccccccccccccccccccccccccccccccccccccc
 jLabel96=5
 orientacioLabel45=<html><t>Per favor, descriu-ho\:
 jLabel95=4
@@ -563,6 +562,7 @@ jCheckBox10=si
 jCheckBox221=no
 jCheckBox220=no
 orientacioBtn3text=<html>Dificultat moderada amb<br>les relacions temporals;<br>orientat en el lloc de l'ex\u00E0men;<br>pot tenir una mica de<br>desorientaci\u00F3 geogr\u00E0fica en un<br>altre lloc
+notasMMSE=asdvfadfbadfbadfbadfbadfbafafg  afg afgadvadvfdV
 jCheckBox219=si
 jCheckBox218=no
 jCheckBox217=no

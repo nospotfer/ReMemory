@@ -25,7 +25,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="Panel">
+        <Container class="javax.swing.JPanel" name="fdPanel">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -33,8 +33,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -44,16 +44,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                      <Component id="fdjLabel33" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                      <Component id="fdjPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel33">
+            <Component class="javax.swing.JLabel" name="fdjLabel33">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -61,7 +61,7 @@
                 <Property name="text" type="java.lang.String" value="Five digit test"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel4">
+            <Container class="javax.swing.JPanel" name="fdjPanel4">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -76,11 +76,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Component id="jLabel19" min="-2" pref="83" max="-2" attributes="0"/>
+                                  <Component id="fdjLabel19" min="-2" pref="83" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -90,51 +90,51 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel21" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel21" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel22" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel22" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel23" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel23" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel24" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel24" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel25" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel25" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel20" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="temps1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdtemps1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel26" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel26" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel27" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel27" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel28" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel28" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel57" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel57" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel70" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel70" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel78" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel78" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="temps2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdtemps2" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel95" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel95" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lecturaError1" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="fdlecturaError1" min="-2" pref="29" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel96" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel96" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lecturaError2" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="fdlecturaError2" min="-2" pref="29" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -149,41 +149,41 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel15" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel16" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel19" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="fdjLabel19" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitStart1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="fiveDigitsButton5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="temps1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel95" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lecturaError1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdtemps1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel95" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdlecturaError1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="fiveDigitsButton10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel57" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel70" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel78" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="temps2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel96" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lecturaError2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel57" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel70" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel78" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdtemps2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel96" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdlecturaError2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -191,22 +191,22 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel15">
+                <Component class="javax.swing.JLabel" name="fdjLabel15">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1a fila: &quot;Vull que llegeixi un nombre en cada quadre: un, dos ...&quot; (... tres, quatre, cinc)."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel16">
+                <Component class="javax.swing.JLabel" name="fdjLabel16">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2a fila: &quot;Continu&#xef;&quot; (Repetiu la tasca fins que l&apos;examinat no cometi cap error)."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel18">
+                <Component class="javax.swing.JLabel" name="fdjLabel18">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&quot;D&apos;acord, ara comenci aqu&#xed; dalt i treballi el m&#xe9;s de pressa que pugui&quot; (comenci a cronometrar el temps)"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel19">
+                <Component class="javax.swing.JLabel" name="fdjLabel19">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -245,7 +245,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fiveDigitsButton10ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel21">
+                <Component class="javax.swing.JLabel" name="fdjLabel21">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -260,7 +260,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel22">
+                <Component class="javax.swing.JLabel" name="fdjLabel22">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -275,7 +275,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel23">
+                <Component class="javax.swing.JLabel" name="fdjLabel23">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -290,7 +290,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel24">
+                <Component class="javax.swing.JLabel" name="fdjLabel24">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -305,7 +305,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel25">
+                <Component class="javax.swing.JLabel" name="fdjLabel25">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -320,7 +320,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel26">
+                <Component class="javax.swing.JLabel" name="fdjLabel26">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -335,7 +335,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel27">
+                <Component class="javax.swing.JLabel" name="fdjLabel27">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -350,7 +350,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel28">
+                <Component class="javax.swing.JLabel" name="fdjLabel28">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -365,7 +365,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel57">
+                <Component class="javax.swing.JLabel" name="fdjLabel57">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -380,7 +380,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel70">
+                <Component class="javax.swing.JLabel" name="fdjLabel70">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -395,39 +395,39 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel20">
+                <Component class="javax.swing.JLabel" name="fdjLabel20">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel78">
+                <Component class="javax.swing.JLabel" name="fdjLabel78">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="temps1">
+                <Component class="javax.swing.JLabel" name="fdtemps1">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="temps2">
+                <Component class="javax.swing.JLabel" name="fdtemps2">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel95">
+                <Component class="javax.swing.JLabel" name="fdjLabel95">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel96">
+                <Component class="javax.swing.JLabel" name="fdjLabel96">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="lecturaError1">
+                <Component class="javax.swing.JTextField" name="fdlecturaError1">
                 </Component>
-                <Component class="javax.swing.JTextField" name="lecturaError2">
+                <Component class="javax.swing.JTextField" name="fdlecturaError2">
                 </Component>
               </SubComponents>
             </Container>
@@ -444,7 +444,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="Panel1">
+        <Container class="javax.swing.JPanel" name="fdPanel1">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -452,8 +452,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel93" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPanel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel93" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjPanel6" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -463,16 +463,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel93" min="-2" max="-2" attributes="0"/>
+                      <Component id="fdjLabel93" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                      <Component id="fdjPanel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel93">
+            <Component class="javax.swing.JLabel" name="fdjLabel93">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -480,7 +480,7 @@
                 <Property name="text" type="java.lang.String" value="Five digit test"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel6">
+            <Container class="javax.swing.JPanel" name="fdjPanel6">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -495,11 +495,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel97" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel94" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel97" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel94" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Component id="jLabel99" min="-2" pref="83" max="-2" attributes="0"/>
+                                  <Component id="fdjLabel99" min="-2" pref="83" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -509,7 +509,7 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel98" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel98" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
@@ -525,7 +525,7 @@
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Component id="fiveDigitsLabel118" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="temps3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdtemps3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="fiveDigitsLabel105" min="-2" pref="73" max="-2" attributes="0"/>
@@ -540,7 +540,7 @@
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Component id="fiveDigitsLabel119" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="temps4" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdtemps4" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -548,12 +548,12 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="fiveDigitsLabel120" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="compteigError1" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="fdcompteigError1" min="-2" pref="29" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="fiveDigitsLabel121" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="compteigError2" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="fdcompteigError2" min="-2" pref="29" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -568,14 +568,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel94" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel94" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel97" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel97" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel99" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="fdjLabel99" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel98" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel98" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitStart2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -587,9 +587,9 @@
                               <Component id="fiveDigitsLabel103" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel104" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel118" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="temps3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdtemps3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel120" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="compteigError1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdcompteigError1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -600,9 +600,9 @@
                               <Component id="fiveDigitsLabel116" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel117" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel119" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="temps4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdtemps4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel121" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="compteigError2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdcompteigError2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -610,22 +610,22 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel94">
+                <Component class="javax.swing.JLabel" name="fdjLabel94">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1a fila: &quot;Vull que compti un nombre en cada quadre: un, dos ...&quot; (... tres, quatre, cinc)."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel97">
+                <Component class="javax.swing.JLabel" name="fdjLabel97">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2a fila: &quot;Continu&#xef;&quot; (Repetiu la tasca fins que l&apos;examinat no cometi cap error)."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel98">
+                <Component class="javax.swing.JLabel" name="fdjLabel98">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&quot;D&apos;acord, ara comenci aqu&#xed; dalt i treballi el m&#xe9;s de pressa que pugui&quot; (comenci a cronometrar el temps)"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel99">
+                <Component class="javax.swing.JLabel" name="fdjLabel99">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -824,12 +824,12 @@
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="temps3">
+                <Component class="javax.swing.JLabel" name="fdtemps3">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="temps4">
+                <Component class="javax.swing.JLabel" name="fdtemps4">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
@@ -844,9 +844,9 @@
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="compteigError1">
+                <Component class="javax.swing.JTextField" name="fdcompteigError1">
                 </Component>
-                <Component class="javax.swing.JTextField" name="compteigError2">
+                <Component class="javax.swing.JTextField" name="fdcompteigError2">
                 </Component>
               </SubComponents>
             </Container>
@@ -863,7 +863,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="Panel2">
+        <Container class="javax.swing.JPanel" name="fdPanel2">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -872,7 +872,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="fiveDigitsLabel122" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPanel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjPanel13" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -884,7 +884,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="fiveDigitsLabel122" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
+                      <Component id="fdjPanel13" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -899,7 +899,7 @@
                 <Property name="text" type="java.lang.String" value="Five digit test"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel13">
+            <Container class="javax.swing.JPanel" name="fdjPanel13">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -942,37 +942,37 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="fiveDigitsLabel131" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel137" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel137" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="temps5" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdtemps5" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="fiveDigitsLabel132" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="fiveDigitsLabel133" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel134" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel134" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel135" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel135" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel136" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel136" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel138" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel138" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="temps6" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdtemps6" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel139" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel139" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="eleccioError1" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="fdeleccioError1" min="-2" pref="29" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel140" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel140" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="eleccioError2" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="fdeleccioError2" min="-2" pref="29" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -1005,23 +1005,23 @@
                               <Component id="fiveDigitsLabel129" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel130" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel131" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel137" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="temps5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel139" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="eleccioError1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel137" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdtemps5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel139" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdeleccioError1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="fiveDigitsButton14" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel132" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitsLabel133" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel134" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel135" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel136" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel138" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="temps6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel140" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="eleccioError2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel134" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel135" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel136" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel138" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdtemps6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel140" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdeleccioError2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1188,7 +1188,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel134">
+                <Component class="javax.swing.JLabel" name="fdjLabel134">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1203,7 +1203,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel135">
+                <Component class="javax.swing.JLabel" name="fdjLabel135">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1218,7 +1218,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel136">
+                <Component class="javax.swing.JLabel" name="fdjLabel136">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1233,39 +1233,39 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel137">
+                <Component class="javax.swing.JLabel" name="fdjLabel137">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel138">
+                <Component class="javax.swing.JLabel" name="fdjLabel138">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="temps5">
+                <Component class="javax.swing.JLabel" name="fdtemps5">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="temps6">
+                <Component class="javax.swing.JLabel" name="fdtemps6">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel139">
+                <Component class="javax.swing.JLabel" name="fdjLabel139">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel140">
+                <Component class="javax.swing.JLabel" name="fdjLabel140">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="eleccioError1">
+                <Component class="javax.swing.JTextField" name="fdeleccioError1">
                 </Component>
-                <Component class="javax.swing.JTextField" name="eleccioError2">
+                <Component class="javax.swing.JTextField" name="fdeleccioError2">
                 </Component>
               </SubComponents>
             </Container>
@@ -1282,7 +1282,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="Panel3">
+        <Container class="javax.swing.JPanel" name="fdPanel3">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -1290,8 +1290,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel141" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPanel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel141" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjPanel14" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1301,16 +1301,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel141" min="-2" max="-2" attributes="0"/>
+                      <Component id="fdjLabel141" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
+                      <Component id="fdjPanel14" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel141">
+            <Component class="javax.swing.JLabel" name="fdjLabel141">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -1318,7 +1318,7 @@
                 <Property name="text" type="java.lang.String" value="Five digit test"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel14">
+            <Container class="javax.swing.JPanel" name="fdjPanel14">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1333,11 +1333,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel143" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel142" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel143" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel142" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Component id="jLabel145" min="-2" pref="83" max="-2" attributes="0"/>
+                                  <Component id="fdjLabel145" min="-2" pref="83" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -1347,51 +1347,51 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel144" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel144" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel146" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel146" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel147" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel147" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel148" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel148" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel149" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel149" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel150" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel150" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel156" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel156" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="temps7" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdtemps7" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel151" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel151" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel152" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel152" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel153" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel153" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel154" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel154" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel155" min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel155" min="-2" pref="73" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel157" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel157" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="temps8" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdtemps8" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel158" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel158" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="alternError1" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="fdalternError1" min="-2" pref="29" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel159" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel159" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="alternError2" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="fdalternError2" min="-2" pref="29" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -1406,41 +1406,41 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel142" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel142" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel143" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel143" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel145" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="fdjLabel145" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel144" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel144" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveDigitStart4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="fiveDigitsButton15" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel146" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel147" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel148" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel149" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel150" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel156" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="temps7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel158" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="alternError1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel146" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel147" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel148" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel149" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel150" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel156" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdtemps7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel158" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdalternError1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="fiveDigitsButton16" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel151" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel152" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel153" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel154" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel155" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel157" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="temps8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel159" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="alternError2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel151" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel152" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel153" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel154" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel155" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel157" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdtemps8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel159" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdalternError2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1448,22 +1448,22 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel142">
+                <Component class="javax.swing.JLabel" name="fdjLabel142">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;1a fila: &quot;Ara ha de comptar els n&#xfa;meros com ha fet abans, per&#xf2; quan arribi a un quadre amb la vora m&#xe9;s gruixuda (assenyalar) &lt;br&gt; ha de canviar la regla i llegir el n&#xfa;mero: un, dos, tres ...&quot; (quatre, cinc)."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel143">
+                <Component class="javax.swing.JLabel" name="fdjLabel143">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2a fila: &quot;Continu&#xef;&quot; (Repetiu la tasca fins que l&apos;examinat no cometi cap error)."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel144">
+                <Component class="javax.swing.JLabel" name="fdjLabel144">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&quot;D&apos;acord, ara comenci aqu&#xed; dalt i treballi el m&#xe9;s de pressa que pugui&quot; (comenci a cronometrar el temps)"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel145">
+                <Component class="javax.swing.JLabel" name="fdjLabel145">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1502,7 +1502,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fiveDigitsButton16ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel146">
+                <Component class="javax.swing.JLabel" name="fdjLabel146">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1517,7 +1517,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel147">
+                <Component class="javax.swing.JLabel" name="fdjLabel147">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1532,7 +1532,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel148">
+                <Component class="javax.swing.JLabel" name="fdjLabel148">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1547,7 +1547,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel149">
+                <Component class="javax.swing.JLabel" name="fdjLabel149">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1562,7 +1562,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel150">
+                <Component class="javax.swing.JLabel" name="fdjLabel150">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1577,7 +1577,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel151">
+                <Component class="javax.swing.JLabel" name="fdjLabel151">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1592,7 +1592,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel152">
+                <Component class="javax.swing.JLabel" name="fdjLabel152">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1607,7 +1607,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel153">
+                <Component class="javax.swing.JLabel" name="fdjLabel153">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1622,7 +1622,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel154">
+                <Component class="javax.swing.JLabel" name="fdjLabel154">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1637,7 +1637,7 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel155">
+                <Component class="javax.swing.JLabel" name="fdjLabel155">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -1652,39 +1652,39 @@
                     <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel156">
+                <Component class="javax.swing.JLabel" name="fdjLabel156">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel157">
+                <Component class="javax.swing.JLabel" name="fdjLabel157">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="temps7">
+                <Component class="javax.swing.JLabel" name="fdtemps7">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="temps8">
+                <Component class="javax.swing.JLabel" name="fdtemps8">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel158">
+                <Component class="javax.swing.JLabel" name="fdjLabel158">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel159">
+                <Component class="javax.swing.JLabel" name="fdjLabel159">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="alternError1">
+                <Component class="javax.swing.JTextField" name="fdalternError1">
                 </Component>
-                <Component class="javax.swing.JTextField" name="alternError2">
+                <Component class="javax.swing.JTextField" name="fdalternError2">
                 </Component>
               </SubComponents>
             </Container>
@@ -1701,7 +1701,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="Panel4">
+        <Container class="javax.swing.JPanel" name="fdPanel4">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -1709,21 +1709,21 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel160" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel160" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="calculPercentilsFiveDigit" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdcalculPercentilsFiveDigit" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="dataFive" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fddataFive" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjPanel15" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jPanel16" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jPanel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fdjPanel16" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="fdjPanel17" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Component id="fiveDigitsButton22" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1738,20 +1738,20 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel160" min="-2" max="-2" attributes="0"/>
+                      <Component id="fdjLabel160" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jPanel16" pref="0" max="32767" attributes="0"/>
+                              <Component id="fdjPanel16" pref="0" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjPanel17" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jPanel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjPanel15" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="calculPercentilsFiveDigit" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="dataFive" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdcalculPercentilsFiveDigit" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fddataFive" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="fiveDigitsButton22" min="-2" max="-2" attributes="0"/>
@@ -1761,7 +1761,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel160">
+            <Component class="javax.swing.JLabel" name="fdjLabel160">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -1769,7 +1769,7 @@
                 <Property name="text" type="java.lang.String" value="RESUM DE PUNTUACIONS"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel15">
+            <Container class="javax.swing.JPanel" name="fdjPanel15">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1786,10 +1786,10 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel161" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel170" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel179" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel188" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel161" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel170" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel179" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel188" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -1800,44 +1800,44 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="jLabel186" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel180" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel186" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel180" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="eleccioTemps" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="eleccioErrors" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdeleccioTemps" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdeleccioErrors" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel185" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel181" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel185" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel181" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="eleccioTempsPCField" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
-                                                      <Component id="eleccioErrorsPCField" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
+                                                      <Component id="fdeleccioTempsPCField" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
+                                                      <Component id="fdeleccioErrorsPCField" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="jLabel177" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel171" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel177" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel171" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="compteigTemps" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="compteigErrors" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdcompteigTemps" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdcompteigErrors" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel176" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel172" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel176" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel172" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="compteigTempsPCField" alignment="0" pref="24" max="32767" attributes="0"/>
-                                                      <Component id="compteigErrorsPCField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="fdcompteigTempsPCField" alignment="0" pref="24" max="32767" attributes="0"/>
+                                                      <Component id="fdfdfd" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -1848,45 +1848,45 @@
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="jLabel195" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel189" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel195" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel189" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="alternTemps" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="alternErrors" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdalternTemps" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdalternErrors" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel194" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel190" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel194" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel190" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="alternTempsPCField" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
-                                                      <Component id="alternErrorsPCField" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
+                                                      <Component id="fdalternTempsPCField" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
+                                                      <Component id="fdalternErrorsPCField" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="jLabel163" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel162" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel163" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fdjLabel162" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="lecturaErrors" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="fdlecturaErrors" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="jLabel166" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="fdjLabel166" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="lecturaErrorsPCField" min="-2" pref="23" max="-2" attributes="0"/>
+                                                          <Component id="fdlecturaErrorsPCField" min="-2" pref="23" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="lecturaTemps" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="fdlecturaTemps" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="jLabel167" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="fdjLabel167" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="lecturaTempsPCField" min="-2" pref="23" max="-2" attributes="0"/>
+                                                          <Component id="fdlecturaTempsPCField" min="-2" pref="23" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -1903,88 +1903,88 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel161" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel161" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel162" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lecturaTemps" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fdjLabel162" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fdlecturaTemps" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lecturaTempsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel167" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdlecturaTempsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel167" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lecturaErrorsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel166" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel163" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lecturaErrors" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdlecturaErrorsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel166" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel163" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdlecturaErrors" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel170" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel170" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel171" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="compteigTemps" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel172" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="compteigTempsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fdjLabel171" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fdcompteigTemps" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fdjLabel172" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fdcompteigTempsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="compteigErrorsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel176" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel177" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="compteigErrors" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdfdfd" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel176" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel177" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdcompteigErrors" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel179" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel179" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="eleccioTempsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel181" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="eleccioTemps" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel180" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdeleccioTempsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel181" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdeleccioTemps" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel180" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="eleccioErrorsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel185" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel186" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="eleccioErrors" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdeleccioErrorsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel185" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel186" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdeleccioErrors" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel188" min="-2" max="-2" attributes="0"/>
+                          <Component id="fdjLabel188" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel190" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="alternTempsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fdjLabel190" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fdalternTempsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel189" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="alternTemps" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fdjLabel189" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fdalternTemps" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel195" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="alternErrors" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel195" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdalternErrors" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                          <Component id="alternErrorsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel194" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fdalternErrorsPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fdjLabel194" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1995,7 +1995,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel161">
+                <Component class="javax.swing.JLabel" name="fdjLabel161">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
@@ -2003,32 +2003,32 @@
                     <Property name="text" type="java.lang.String" value="Lectura:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel162">
+                <Component class="javax.swing.JLabel" name="fdjLabel162">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel163">
+                <Component class="javax.swing.JLabel" name="fdjLabel163">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lecturaTemps">
+                <Component class="javax.swing.JLabel" name="fdlecturaTemps">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel166">
+                <Component class="javax.swing.JLabel" name="fdjLabel166">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel167">
+                <Component class="javax.swing.JLabel" name="fdjLabel167">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel170">
+                <Component class="javax.swing.JLabel" name="fdjLabel170">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
@@ -2036,32 +2036,32 @@
                     <Property name="text" type="java.lang.String" value="Compteig:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel171">
+                <Component class="javax.swing.JLabel" name="fdjLabel171">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel172">
+                <Component class="javax.swing.JLabel" name="fdjLabel172">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="compteigTemps">
+                <Component class="javax.swing.JLabel" name="fdcompteigTemps">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel176">
+                <Component class="javax.swing.JLabel" name="fdjLabel176">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel177">
+                <Component class="javax.swing.JLabel" name="fdjLabel177">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel179">
+                <Component class="javax.swing.JLabel" name="fdjLabel179">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
@@ -2069,32 +2069,32 @@
                     <Property name="text" type="java.lang.String" value="Elecci&#xf3;:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel180">
+                <Component class="javax.swing.JLabel" name="fdjLabel180">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel181">
+                <Component class="javax.swing.JLabel" name="fdjLabel181">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eleccioTemps">
+                <Component class="javax.swing.JLabel" name="fdeleccioTemps">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel185">
+                <Component class="javax.swing.JLabel" name="fdjLabel185">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel186">
+                <Component class="javax.swing.JLabel" name="fdjLabel186">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel188">
+                <Component class="javax.swing.JLabel" name="fdjLabel188">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
@@ -2102,70 +2102,70 @@
                     <Property name="text" type="java.lang.String" value="Alternan&#xe7;a:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel189">
+                <Component class="javax.swing.JLabel" name="fdjLabel189">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel190">
+                <Component class="javax.swing.JLabel" name="fdjLabel190">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="alternTemps">
+                <Component class="javax.swing.JLabel" name="fdalternTemps">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="00:00:00"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel194">
+                <Component class="javax.swing.JLabel" name="fdjLabel194">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel195">
+                <Component class="javax.swing.JLabel" name="fdjLabel195">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Errors:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="lecturaTempsPCField">
+                <Component class="javax.swing.JTextField" name="fdlecturaTempsPCField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="lecturaErrorsPCField">
+                <Component class="javax.swing.JTextField" name="fdlecturaErrorsPCField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="compteigTempsPCField">
+                <Component class="javax.swing.JTextField" name="fdcompteigTempsPCField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="compteigErrorsPCField">
+                <Component class="javax.swing.JTextField" name="fdfdfd">
                 </Component>
-                <Component class="javax.swing.JTextField" name="eleccioTempsPCField">
+                <Component class="javax.swing.JTextField" name="fdeleccioTempsPCField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="eleccioErrorsPCField">
+                <Component class="javax.swing.JTextField" name="fdeleccioErrorsPCField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="alternTempsPCField">
+                <Component class="javax.swing.JTextField" name="fdalternTempsPCField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="alternErrorsPCField">
+                <Component class="javax.swing.JTextField" name="fdalternErrorsPCField">
                 </Component>
-                <Component class="javax.swing.JLabel" name="lecturaErrors">
+                <Component class="javax.swing.JLabel" name="fdlecturaErrors">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="compteigErrors">
+                <Component class="javax.swing.JLabel" name="fdcompteigErrors">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eleccioErrors">
+                <Component class="javax.swing.JLabel" name="fdeleccioErrors">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="alternErrors">
+                <Component class="javax.swing.JLabel" name="fdalternErrors">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel16">
+            <Container class="javax.swing.JPanel" name="fdjPanel16">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -2182,34 +2182,34 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSeparator2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="fdjSeparator2" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel199" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel198" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel202" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fdjLabel199" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fdjLabel198" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fdjLabel202" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="inhibicioPDField" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
+                                              <Component id="fdinhibicioPDField" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jLabel233" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="fdjLabel233" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="eleccioTemps2Field" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
-                                                      <Component id="lecturaTemps2Field" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
+                                                      <Component id="fdeleccioTemps2Field" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
+                                                      <Component id="fdlecturaTemps2Field" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel205" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fdjLabel205" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="inhibicioPCField" min="-2" pref="23" max="-2" attributes="0"/>
+                                          <Component id="fdinhibicioPCField" min="-2" pref="23" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jSeparator1" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
+                                      <Component id="fdjSeparator1" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -2223,28 +2223,28 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel198" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="eleccioTemps2Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel198" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdeleccioTemps2Field" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel199" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel233" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lecturaTemps2Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel199" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel233" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdlecturaTemps2Field" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="fdjSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel202" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="inhibicioPDField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel202" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdinhibicioPDField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="fdjSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel205" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="inhibicioPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel205" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdinhibicioPCField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -2252,17 +2252,17 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel198">
+                <Component class="javax.swing.JLabel" name="fdjLabel198">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps d&apos;elecci&#xf3;:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel199">
+                <Component class="javax.swing.JLabel" name="fdjLabel199">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps de lectura:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel233">
+                <Component class="javax.swing.JLabel" name="fdjLabel233">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
@@ -2270,31 +2270,31 @@
                     <Property name="text" type="java.lang.String" value="-"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSeparator" name="jSeparator1">
+                <Component class="javax.swing.JSeparator" name="fdjSeparator1">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel202">
+                <Component class="javax.swing.JLabel" name="fdjLabel202">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="PD inhibici&#xf3;:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel205">
+                <Component class="javax.swing.JLabel" name="fdjLabel205">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSeparator" name="jSeparator2">
+                <Component class="javax.swing.JSeparator" name="fdjSeparator2">
                 </Component>
-                <Component class="javax.swing.JTextField" name="eleccioTemps2Field">
+                <Component class="javax.swing.JTextField" name="fdeleccioTemps2Field">
                 </Component>
-                <Component class="javax.swing.JTextField" name="lecturaTemps2Field">
+                <Component class="javax.swing.JTextField" name="fdlecturaTemps2Field">
                 </Component>
-                <Component class="javax.swing.JTextField" name="inhibicioPDField">
+                <Component class="javax.swing.JTextField" name="fdinhibicioPDField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="inhibicioPCField">
+                <Component class="javax.swing.JTextField" name="fdinhibicioPCField">
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel17">
+            <Container class="javax.swing.JPanel" name="fdjPanel17">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -2311,29 +2311,29 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSeparator4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="fdjSeparator4" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel207" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fdjLabel207" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel213" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fdjLabel213" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="flexibilitatPCField" min="-2" pref="23" max="-2" attributes="0"/>
+                                          <Component id="fdflexibilitatPCField" min="-2" pref="23" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel206" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel210" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fdjLabel206" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fdjLabel210" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jLabel234" min="-2" pref="8" max="-2" attributes="0"/>
+                                          <Component id="fdjLabel234" min="-2" pref="8" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="alternanTemps2Field" alignment="0" pref="23" max="32767" attributes="0"/>
-                                              <Component id="compteigTemps2Field" alignment="0" pref="23" max="32767" attributes="0"/>
-                                              <Component id="flexibilitatPDField" alignment="0" pref="23" max="32767" attributes="0"/>
-                                              <Component id="jSeparator3" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="fdalternanTemps2Field" alignment="0" pref="23" max="32767" attributes="0"/>
+                                              <Component id="fdcompteigTemps2Field" alignment="0" pref="23" max="32767" attributes="0"/>
+                                              <Component id="fdflexibilitatPDField" alignment="0" pref="23" max="32767" attributes="0"/>
+                                              <Component id="fdjSeparator3" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -2349,28 +2349,28 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel207" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="alternanTemps2Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel207" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdalternanTemps2Field" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel234" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel206" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="compteigTemps2Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel234" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel206" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdcompteigTemps2Field" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="fdjSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel210" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="flexibilitatPDField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel210" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdflexibilitatPDField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="fdjSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel213" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="flexibilitatPCField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdjLabel213" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fdflexibilitatPCField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -2378,12 +2378,12 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel206">
+                <Component class="javax.swing.JLabel" name="fdjLabel206">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps de compteig:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel234">
+                <Component class="javax.swing.JLabel" name="fdjLabel234">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
@@ -2391,44 +2391,44 @@
                     <Property name="text" type="java.lang.String" value="-"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSeparator" name="jSeparator3">
+                <Component class="javax.swing.JSeparator" name="fdjSeparator3">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel210">
+                <Component class="javax.swing.JLabel" name="fdjLabel210">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="PD flexibilitat:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel213">
+                <Component class="javax.swing.JLabel" name="fdjLabel213">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pc:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSeparator" name="jSeparator4">
+                <Component class="javax.swing.JSeparator" name="fdjSeparator4">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel207">
+                <Component class="javax.swing.JLabel" name="fdjLabel207">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Temps d&apos;alternan&#xe7;a:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="alternanTemps2Field">
+                <Component class="javax.swing.JTextField" name="fdalternanTemps2Field">
                 </Component>
-                <Component class="javax.swing.JTextField" name="compteigTemps2Field">
+                <Component class="javax.swing.JTextField" name="fdcompteigTemps2Field">
                 </Component>
-                <Component class="javax.swing.JTextField" name="flexibilitatPDField">
+                <Component class="javax.swing.JTextField" name="fdflexibilitatPDField">
                 </Component>
-                <Component class="javax.swing.JTextField" name="flexibilitatPCField">
+                <Component class="javax.swing.JTextField" name="fdflexibilitatPCField">
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="calculPercentilsFiveDigit">
+            <Component class="javax.swing.JButton" name="fdcalculPercentilsFiveDigit">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Marcar data"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculPercentilsFiveDigitActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fdcalculPercentilsFiveDigitActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="dataFive">
+            <Component class="javax.swing.JLabel" name="fddataFive">
             </Component>
             <Component class="javax.swing.JButton" name="fiveDigitsButton22">
               <Properties>

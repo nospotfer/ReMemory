@@ -1085,27 +1085,27 @@ public class Utils {
                 // Color trails interference index
                 propertyToCSV(writer,prop,"colorInterferenceRaw");
                 propertyToCSV(writer,prop,"colorInterferencePercentile");
-                // Five digit
+                // Five digit lectura
                 propertyToCSV(writer,prop,"lecturaTemps");
                 propertyToCSV(writer,prop,"lecturaTempsPCField");
                 propertyToCSV(writer,prop,"lecturaErrorsField");
                 propertyToCSV(writer,prop,"lecturaErrorsPCField");
-                // Five digit
+                // Five digit comtpeig
                 propertyToCSV(writer,prop,"compteigTemps");
                 propertyToCSV(writer,prop,"compteigTempsPCField");
                 propertyToCSV(writer,prop,"compteigErrors");
                 propertyToCSV(writer,prop,"compteigErrorsPCField");
-                // Five digit
-                propertyToCSV(writer,prop,"lecturaTemps");
-                propertyToCSV(writer,prop,"lecturaTempsPCField");
-                propertyToCSV(writer,prop,"lecturaErrorsField");
-                propertyToCSV(writer,prop,"lecturaErrorsPCField");
-                // Five digit
+                // Five digit eleccio
+                propertyToCSV(writer,prop,"eleccioTemps");
+                propertyToCSV(writer,prop,"eleccioTempsPCField");
+                propertyToCSV(writer,prop,"eleccioErrorsField");
+                propertyToCSV(writer,prop,"eleccioErrorsPCField");
+                // Five digit temps
                 propertyToCSV(writer,prop,"alternTemps");
                 propertyToCSV(writer,prop,"alternTempsPCField");
                 propertyToCSV(writer,prop,"alternErrors");
                 propertyToCSV(writer,prop,"alternErrorsPCField");
-                // Five digit
+                // Five digit resum
                 propertyToCSV(writer,prop,"inhibicioPCField");
                 propertyToCSV(writer,prop,"flexibilitatPCField");
                 // Fluencia verbal
@@ -1648,7 +1648,7 @@ public class Utils {
     public static void csvToXLSX(String idPacient) {
         try {
             String csvFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv"; //csv file address
-            String xlsxFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats.xlsx"; //xlsx file address
+            String xlsxFileAddress = Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_REM-G"+idPacient+".xlsx"; //xlsx file address
             XSSFWorkbook workBook = new XSSFWorkbook();
             XSSFSheet sheet = workBook.createSheet("sheet1");
             String currentLine=null;

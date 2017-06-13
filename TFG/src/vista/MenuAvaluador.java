@@ -477,7 +477,7 @@ public class MenuAvaluador extends javax.swing.JFrame {
     }//GEN-LAST:event_eliminaBtnActionPerformed
 
     private void csvButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csvButtonActionPerformed
-        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_"+idPacient+".csv");
+        File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"Resultats_REM-G"+idPacient+".xlsx");
         if (file.exists()){
             try {
                 Desktop.getDesktop().open(file);

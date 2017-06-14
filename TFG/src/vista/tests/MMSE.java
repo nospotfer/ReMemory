@@ -422,19 +422,20 @@ public class MMSE extends Test {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "4-Atenció càlcul", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        calculCheck1.setText("<html>30<br>(O)");
+        calculCheck1.setText("<html>27<br>(O)");
         calculCheck1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
-        calculCheck2.setText("<html>27<br>(D)");
+        calculCheck2.setText("<html>24<br>(D)");
+        calculCheck2.setActionCommand("<html>24<br>(D)");
         calculCheck2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
-        calculCheck3.setText("<html>24<br>(N)");
+        calculCheck3.setText("<html>21<br>(N)");
         calculCheck3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
-        calculCheck4.setText("<html>21<br>(U)");
+        calculCheck4.setText("<html>18<br>(U)");
         calculCheck4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
-        calculCheck5.setText("<html>18<br>(M)");
+        calculCheck5.setText("<html>15<br>(M)");
         calculCheck5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N

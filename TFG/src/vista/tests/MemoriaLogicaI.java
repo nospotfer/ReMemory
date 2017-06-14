@@ -71,7 +71,7 @@ public class MemoriaLogicaI extends Test {
                         {"8", "queda", "<html>qualsevol indicació que reflecteixi que els personatges queden intencionadament", "0", "0"},
                         {"9", "per esmorzar", "<html>es requereix <i>esmorzar</i> (en qualsevol context)", "0", "0"},
                         {"10", "al bar", "<html>es requereix <i>bar</i>", "0", "0"},
-                        {"11", "Cervanted", "<html>es requereix <i>Cervantes</i> (en qualsevol context)", "0", "0"},
+                        {"11", "Cervantes", "<html>es requereix <i>Cervantes</i> (en qualsevol context)", "0", "0"},
                         {"12", "Després surten junts a passejar", "indicació que els personatges passegen", "0", "0"},
                         {"13", "pel parc", "<html>es requereix <i>parc</i> (en qualsevol context)", "0", "0"},
                         {"14", "del Retiro.", "<html>es requereix <i>Retiro</i> (en qualsevol context)", "0", "0"}
@@ -162,7 +162,7 @@ public class MemoriaLogicaI extends Test {
                         {"2", "Pérez,", "<html>es requereix<i>Pérez</i>","0"},
                         {"3", "del sud", "<html><i>sud</i> (en qualsevol context)", "0"},
                         {"4", "de Madrid,", "<html><i>Madrid</i> (en qualsevol context), no es requereix el nombre específic d'anys", "0"},
-                        {"5", "treballadora", "indicació que tenia una feina", "0"},
+                        {"5", "treballa", "indicació que tenia una feina", "0"},
                         {"6", "com a cuinera", "<html>es requereix <i>cuinera</i> o variant", "0"},
                         {"7", "al menjador", "<html>es requereix <i>menjador</i>", "0"},
                         {"8", "d'una escola,", "<html>es requereix <i>escola</i> o <i>col·legi</i>", "0"},

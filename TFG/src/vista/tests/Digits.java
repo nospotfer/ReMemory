@@ -137,6 +137,7 @@ public class Digits extends Test {
                 int sumaAnteriors = 1;
                 
                 if (row > 1){
+                    //TODO Add verifiction for "1001" here
                     sumaAnteriors = 0;
                     sumaAnteriors+=Integer.parseInt((String)table.getValueAt(row-1,3));
                     sumaAnteriors+=Integer.parseInt((String)table.getValueAt(row-2,3));
@@ -151,7 +152,9 @@ public class Digits extends Test {
                     if (table.getValueAt(j,3).equals("1")) num1++;
                 }
                 int val = Integer.parseInt((String)table.getValueAt(row, 3));
-                if (sumaAnteriors > 0 && num1 < 1) {
+                    if (num1 < 1) {
+                    //TODO Fix this IF if verifiction for "1001" is added
+                    //if (sumaAnteriors > 0 && num1 < 1) {
                     if (val == 0) {
                         table.setValueAt("1", row, 3);
                         table.setValueAt(table.getValueAt(row, 1), row, 2);
@@ -284,6 +287,7 @@ public class Digits extends Test {
                 int sumaAnteriors = 1;
                 
                 if (row > 1){
+                    //TODO Add verifiction for "1001" here
                     sumaAnteriors = 0;
                     sumaAnteriors+=Integer.parseInt((String)table.getValueAt(row-1,4));
                     sumaAnteriors+=Integer.parseInt((String)table.getValueAt(row-2,4));
@@ -299,8 +303,9 @@ public class Digits extends Test {
                 for (int j = row+1; j < table.getRowCount(); j++){
                     if (table.getValueAt(j,4).equals("1")) num1++;
                 }
-
-                if (sumaAnteriors > 0 && num1 < 1) {
+                if (num1 < 1) {
+                //TODO Fix this IF if verifiction for "1001" is added
+                //if (sumaAnteriors > 0 && num1 < 1) {
                     if (val == 0) {
                         table.setValueAt("1", row, 4);
                         table.setValueAt(table.getValueAt(row, 2), row, 3);

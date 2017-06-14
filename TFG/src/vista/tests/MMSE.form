@@ -568,31 +568,32 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="calculCheck1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;30&lt;br&gt;(O)"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;27&lt;br&gt;(O)"/>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="calculCheck2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;27&lt;br&gt;(D)"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;24&lt;br&gt;(D)"/>
+                    <Property name="actionCommand" type="java.lang.String" value="&lt;html&gt;24&lt;br&gt;(D)"/>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="calculCheck3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;24&lt;br&gt;(N)"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;21&lt;br&gt;(N)"/>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="calculCheck4">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;21&lt;br&gt;(U)"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;18&lt;br&gt;(U)"/>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="calculCheck5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;18&lt;br&gt;(M)"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;15&lt;br&gt;(M)"/>
                     <Property name="horizontalTextPosition" type="int" value="2"/>
                   </Properties>
                 </Component>

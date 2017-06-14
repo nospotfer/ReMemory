@@ -1,5 +1,5 @@
 #Sessio1
-#Tue Jun 13 19:02:50 CEST 2017
+#Wed Jun 14 14:56:10 CEST 2017
 color1timeRaw=1
 nssaDI=14
 historiaAprimerTotal2=9
@@ -14,7 +14,7 @@ textHistoriaAprimer=transcripci\u00F31
 color1promptsPercentile=6
 colorInterferenceRaw=4.0
 compteigTemps=00\:03.35
-puntuacioDirectaDI=10
+puntuacioDirectaDI=1
 puntuacioDirectaDD=10
 color1promptsRaw=7
 fluenciaAnimals=sdfg
@@ -44,11 +44,11 @@ totalRec=0
 color1timeTscore=3
 fluenciaP=adfg1
 percentilDI=90-94
-spanDI=5
+spanDI=1
 fluenciaM=sdfgsdg
 percentilDD=72-81
 color2nearPercentile=4
-spanDD=6
+spanDD=8
 textHistoriaBprimer2=record2
 lecturaErrorsPCField=2
 historiaAprimerTotal=3

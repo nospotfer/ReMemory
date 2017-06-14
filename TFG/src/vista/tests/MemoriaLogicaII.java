@@ -151,7 +151,7 @@ public class MemoriaLogicaII extends Test {
                         {"2", "Pérez,", "<html>es requereix<i>Pérez</i>","0"},
                         {"3", "del sud", "<html><i>sud</i> (en qualsevol context)", "0"},
                         {"4", "de Madrid,", "<html><i>Madrid</i> (en qualsevol context), no es requereix el nombre específic d'anys", "0"},
-                        {"5", "treballadora", "indicació que tenia una feina", "0"},
+                        {"5", "treballa", "indicació que tenia una feina", "0"},
                         {"6", "com a cuinera", "<html>es requereix <i>cuinera</i> o variant", "0"},
                         {"7", "al menjador", "<html>es requereix <i>menjador</i>", "0"},
                         {"8", "d'una escola,", "<html>es requereix <i>escola</i> o <i>col·legi</i>", "0"},
@@ -244,7 +244,7 @@ public class MemoriaLogicaII extends Test {
                         {"4", "Eren amics des de feia 20 anys?", no, "0"},
                         {"5", "Quedaven cada dimarts?", si, "0"},
                         {"6", "Menjaven al bar El Retiro?", no, "0"},
-                        {"7", "Desrés d'esmorzar, anaven a observar ocells a casa del Pedro?", no, "0"},
+                        {"7", "Després d'esmorzar, anaven a observar ocells a casa del Pedro?", no, "0"},
                         {"8", "Passejaven pel parc del Retiro?", si, "0"}
                 },
                 new String [] {
@@ -269,7 +269,7 @@ public class MemoriaLogicaII extends Test {
                         {"9", "La dona, es deia Diana Pérez?", no,"0"},
                         {"10", "Vivia al sud de Madrid?", si, "0"},
                         {"11", "La dona era cuinera?", si, "0"},
-                        {"12", "Traballava a un restaurant?", no, "0"},
+                        {"12", "Treballava a un restaurant?", no, "0"},
                         {"13", "Tenia quatre fills?", si, "0"},
                         {"14", "Els fills eren adolescents?", no, "0"},
                         {"15", "Va tenir lloc el robatori al carrer Reial?", no, "0"},
@@ -828,7 +828,7 @@ public class MemoriaLogicaII extends Test {
         jLabel51.setForeground(new java.awt.Color(65, 110, 160));
         jLabel51.setText("Historia B");
 
-        jLabel52.setText("<html>Elena Pérez, del sud de Madrid, treballadora com a cuinera al menjador d'una escola, va denunciar a la comissaria de <br> policia que havia estat assaltada la nit anterior al carrer Padilla, i que li havien robat 56 euros. Tenia quatre <br> nens petits, no havia pogut pagar el lloguer i portaven dos dies sense menjar. La policia, commoguda per la història <br> de la dona, va realitzar una col·lecta per ajudar-la.");
+        jLabel52.setText("<html>Elena Pérez, del sud de Madrid, treballa com a cuinera al menjador d'una escola, va denunciar a la comissaria de <br> policia que havia estat assaltada la nit anterior al carrer Padilla, i que li havien robat 56 euros. Tenia quatre <br> nens petits, no havia pogut pagar el lloguer i portaven dos dies sense menjar. La policia, commoguda per la història <br> de la dona, va realitzar una col·lecta per ajudar-la.");
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(65, 110, 160));

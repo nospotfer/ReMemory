@@ -44,7 +44,11 @@ public class MOCA extends Test {
         
         if (pacientActual.getAnysEscola() < 11){
             puntTotalMoca1.setText("1");
+        }else{
+            puntTotalMoca1.setText("0");
         }
+        
+        System.out.println(pacientActual.getAnysEscola());
         
         this.checkVisuoEspacial1.addActionListener(createMocaActionListener(puntVisuo));
         this.checkVisuoEspacial2.addActionListener(createMocaActionListener(puntVisuo));

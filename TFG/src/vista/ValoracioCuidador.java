@@ -90,7 +90,10 @@ public class ValoracioCuidador extends javax.swing.JFrame {
         File file = new File(Utils.PACIENT_DATA_PATH+pacientActual.getId()+File.separator+"resultsValCuid_T"+valoracio+".dat");
 
         output = new FileOutputStream(file);
-
+        //added this. Maybe it fixes all my problems.
+        for (Component component : tabbedPanel.getComponents()) {
+                ((Test)component).guardarResultats(prop);
+        }
 
 
         prop.store(output, "NEUROIMATGE");

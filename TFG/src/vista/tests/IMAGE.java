@@ -36,6 +36,7 @@ public class IMAGE extends Test {
         Utils.initTaula(IMAGESQPanel,IMAGESTotal);
         
         setListeners(IMAGESQPanel);
+        jTextField1images.setText(String.valueOf(pacientActual.getEdat()));
     }
 
     @Override
@@ -1612,6 +1613,7 @@ public class IMAGE extends Test {
 
         jLabel55images.setText("Edad Real:");
 
+        jTextField1images.setEditable(false);
         jTextField1images.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1imagesActionPerformed(evt);

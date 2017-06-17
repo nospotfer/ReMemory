@@ -597,7 +597,7 @@ public class Utils {
             writeSessio2(idPacient, i, writer);
             writer.append(';');
             writeValoracioCuidador(idPacient, i, writer);
-            writer.append(';');
+            //writer.append(';'); Experiment
         }
         writer.flush();
         writer.close();
@@ -1494,9 +1494,9 @@ public class Utils {
         Properties prop = new Properties();
         InputStream input = null;
         try {
-            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsSessio2_T"+i+".dat");
+            File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsSessio2_A"+i+".dat");
             if(!file.exists()) {
-                writeBlank(writer,9);
+                writeBlank(writer,13);
             }
             else{
                 input = new FileInputStream(file);
@@ -1528,7 +1528,7 @@ public class Utils {
                 //OHQSF
                 propertyToCSV(writer,prop,"OHQSFTotal");
                 //IMAGE
-                propertyToCSV(writer,prop,"IMAGESTotal");
+                propertyToCSV(writer,prop,"IMAGETotal");
 
             }
 
@@ -1551,7 +1551,7 @@ public class Utils {
         try {
             File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsValCuid_T"+i+".dat");
             if(!file.exists()) {
-                writeBlank(writer, 6);
+                writeBlank(writer, 8);
             }
             else{
                 input = new FileInputStream(file);
@@ -1572,7 +1572,7 @@ public class Utils {
                 propertyToCSV(writer,prop,"sf12Total");
                 // DUKE
                 propertyToCSV(writer,prop,"dukeTotal");
-                // DUKE
+                // OHQSF
                 propertyToCSV(writer,prop,"OHQSFTotal");
 
             }
@@ -1596,7 +1596,7 @@ public class Utils {
         try {
             File file = new File(Utils.PACIENT_DATA_PATH+idPacient+File.separator+"resultsValCogPrev"+".dat");
             if(!file.exists()) {
-                writeBlank(writer, 5);
+                writeBlank(writer, 7);
             }
             else{
                 input = new FileInputStream(file);

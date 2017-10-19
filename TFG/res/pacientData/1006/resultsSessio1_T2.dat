@@ -1,5 +1,5 @@
 #Sessio1
-#Thu Jun 15 19:47:59 CEST 2017
+#Wed Jul 05 16:49:37 CEST 2017
 color1timeRaw=4
 nssaDI=11
 historiaAprimerTotal2=12
@@ -27,6 +27,7 @@ eleccioTempsPCField=5
 puntuacioML2=16
 puntuacioML1=10
 semanticaBnt2=8
+fluenciaPNSSA=8888
 alternErrorsPCField=4
 alternTemps=00\:01.06
 compteigErrorsPCField=6
@@ -54,6 +55,7 @@ lecturaErrorsPCField=4
 historiaAprimerTotal=9
 compteigErrors=7
 color2promptsRaw=0
+fluenciaAnimalsNSSA=8888
 eleccioErrorsPCField=4
 lecturaTempsPCField=3
 color1timeStandard=90
@@ -69,7 +71,9 @@ historiaBprimerTotal=9
 color1errorPercentile=99
 flexibilitatPCField=2
 color2timeTscore=90
+fluenciaMNSSA=8888
 color1errorRaw=0
 colorInterferencePercentile=99
 eleccioTemps=00\:04.73
+fluenciaRNSSA=8888
 color1nearRaw=0

@@ -11,7 +11,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,6,-76,0,0,3,-70"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,6,-36,0,0,3,-70"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -40,6 +40,10 @@
                           <Component id="jPanel30" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel35" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel34" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jPanel36" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel31" alignment="0" max="32767" attributes="0"/>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel308" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -47,11 +51,14 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel325" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jLabel231" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel23122" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel23822" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jPanel36" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel31" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="anysestudi11" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="puntAnysExtra" min="-2" pref="15" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -79,14 +86,20 @@
                       <Component id="jPanel34" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jPanel35" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel308" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="puntTotalMoca1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel325" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel231" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel23122" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel23822" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="58" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="anysestudi11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="puntAnysExtra" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="83" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1347,14 +1360,6 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel272" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="puntOrientacio" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel274" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="checkOrientacio1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="checkOrientacio2" min="-2" max="-2" attributes="0"/>
@@ -1366,6 +1371,14 @@
                                   <Component id="checkOrientacio5" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="checkOrientacio6" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel272" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="puntOrientacio" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel274" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="10" max="32767" attributes="0"/>
@@ -1390,7 +1403,7 @@
                               <Component id="puntOrientacio" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel274" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="14" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1482,9 +1495,9 @@
                 <Property name="text" type="java.lang.String" value="/ 30"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel231">
+            <Component class="javax.swing.JLabel" name="jLabel23122">
               <Properties>
-                <Property name="text" type="java.lang.String" value="(1 punt m&#xe9;s si te &lt; 11 anys d&apos;estudi)"/>
+                <Property name="text" type="java.lang.String" value="Anys d&apos;estudi:"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel36">
@@ -1538,7 +1551,7 @@
                               <Component id="checkAbstraccio1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="checkAbstraccio2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel273" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="puntAbstraccio" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1591,6 +1604,28 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JCheckBox" name="anysestudi11">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Marqui aquesta casella si te m&#xe9;s d&apos;11 anys d&apos;estudi"/>
+                <Property name="horizontalTextPosition" type="int" value="10"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="anysestudi11ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel23822">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="_"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="puntAnysExtra">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>

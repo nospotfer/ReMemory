@@ -973,6 +973,10 @@ public class Utils {
             writeLineCSV(writer, "FV - M_T"+i);
             writeLineCSV(writer, "FV - R_T"+i);
             writeLineCSV(writer, "FV - Animals_T"+i);
+            writeLineCSV(writer, "Fluencia verbal NSSA - P_T"+i);
+            writeLineCSV(writer, "FV NSSA - M_T"+i);
+            writeLineCSV(writer, "FV NSSA - R_T"+i);
+            writeLineCSV(writer, "FV NSSA - Animals_T"+i);
 
             writer.append(";");
 
@@ -1113,6 +1117,11 @@ public class Utils {
                 propertyToCSV(writer,prop,"fluenciaM");
                 propertyToCSV(writer,prop,"fluenciaR");
                 propertyToCSV(writer,prop,"fluenciaAnimals");
+                propertyToCSV(writer,prop,"fluenciaPNSSA");
+                propertyToCSV(writer,prop,"fluenciaMNSSA");
+                propertyToCSV(writer,prop,"fluenciaRNSSA");
+                propertyToCSV(writer,prop,"fluenciaAnimalsNSSA");
+
 
             }
 

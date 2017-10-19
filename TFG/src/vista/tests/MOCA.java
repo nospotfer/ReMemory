@@ -42,13 +42,15 @@ public class MOCA extends Test {
 
     private void initMoca() {
         
+         
         if (pacientActual.getAnysEscola() < 11){
             puntTotalMoca1.setText("1");
         }else{
             puntTotalMoca1.setText("0");
         }
+        jLabel23822.setText(String.valueOf(pacientActual.getAnysEscola()));
         
-        System.out.println(pacientActual.getAnysEscola());
+        //System.out.println(pacientActual.getAnysEscola());
         
         this.checkVisuoEspacial1.addActionListener(createMocaActionListener(puntVisuo));
         this.checkVisuoEspacial2.addActionListener(createMocaActionListener(puntVisuo));
@@ -128,6 +130,8 @@ public class MOCA extends Test {
         this.checkOrientacio4.addActionListener(createMocaActionListener(puntOrientacio));
         this.checkOrientacio5.addActionListener(createMocaActionListener(puntOrientacio));
         this.checkOrientacio6.addActionListener(createMocaActionListener(puntOrientacio));
+        
+        this.anysestudi11.addActionListener(createMocaActionListener2(puntAnysExtra));
     }
 
     private ActionListener createMocaActionListener(JLabel jLabel) {
@@ -147,6 +151,26 @@ public class MOCA extends Test {
         
         return actionListener;
     }
+        private ActionListener createMocaActionListener2(JLabel jLabel) {
+        
+        ActionListener actionListener = new ActionListener() {
+            public void actionPerformed(ActionEvent actionEvent) {
+                JCheckBox jCheckBox = (JCheckBox) actionEvent.getSource();
+                if (jCheckBox.isSelected()){
+                    jLabel.setText((Integer.parseInt(jLabel.getText())-1)+"");
+                    puntTotalMoca1.setText((Integer.parseInt(puntTotalMoca1.getText())-1)+"");
+                   
+                } else {
+                    
+                    jLabel.setText((Integer.parseInt(jLabel.getText())+1)+"");
+                    puntTotalMoca1.setText((Integer.parseInt(puntTotalMoca1.getText())+1)+"");
+                }
+            }
+        };
+        
+        return actionListener;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -278,7 +302,7 @@ public class MOCA extends Test {
         jLabel308 = new javax.swing.JLabel();
         puntTotalMoca1 = new javax.swing.JLabel();
         jLabel325 = new javax.swing.JLabel();
-        jLabel231 = new javax.swing.JLabel();
+        jLabel23122 = new javax.swing.JLabel();
         jPanel36 = new javax.swing.JPanel();
         checkAbstraccio1 = new javax.swing.JCheckBox();
         checkAbstraccio2 = new javax.swing.JCheckBox();
@@ -286,6 +310,9 @@ public class MOCA extends Test {
         puntAbstraccio = new javax.swing.JLabel();
         jLabel300 = new javax.swing.JLabel();
         jLabel74 = new javax.swing.JLabel();
+        anysestudi11 = new javax.swing.JCheckBox();
+        jLabel23822 = new javax.swing.JLabel();
+        puntAnysExtra = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -1091,13 +1118,6 @@ public class MOCA extends Test {
                 .addContainerGap()
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addComponent(jLabel272)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(puntOrientacio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel274)
-                        .addGap(43, 43, 43))
-                    .addGroup(jPanel35Layout.createSequentialGroup()
                         .addComponent(checkOrientacio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(checkOrientacio2)
@@ -1108,7 +1128,14 @@ public class MOCA extends Test {
                         .addGap(18, 18, 18)
                         .addComponent(checkOrientacio5)
                         .addGap(18, 18, 18)
-                        .addComponent(checkOrientacio6)))
+                        .addComponent(checkOrientacio6))
+                    .addGroup(jPanel35Layout.createSequentialGroup()
+                        .addComponent(jLabel272)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(puntOrientacio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel274)
+                        .addGap(43, 43, 43)))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
         jPanel35Layout.setVerticalGroup(
@@ -1127,7 +1154,7 @@ public class MOCA extends Test {
                     .addComponent(jLabel272)
                     .addComponent(puntOrientacio)
                     .addComponent(jLabel274))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel308.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1137,7 +1164,7 @@ public class MOCA extends Test {
 
         jLabel325.setText("/ 30");
 
-        jLabel231.setText("(1 punt més si te < 11 anys d'estudi)");
+        jLabel23122.setText("Anys d'estudi:");
 
         jPanel36.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ABSTRACCIÓ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
@@ -1196,6 +1223,19 @@ public class MOCA extends Test {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
+        anysestudi11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        anysestudi11.setText("<html>Marqui aquesta casella si te més d'11 anys d'estudi");
+        anysestudi11.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        anysestudi11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anysestudi11ActionPerformed(evt);
+            }
+        });
+
+        jLabel23822.setText("_");
+
+        puntAnysExtra.setText("0");
+
         javax.swing.GroupLayout mocaPanelLayout = new javax.swing.GroupLayout(mocaPanel);
         mocaPanel.setLayout(mocaPanelLayout);
         mocaPanelLayout.setHorizontalGroup(
@@ -1210,6 +1250,9 @@ public class MOCA extends Test {
                     .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel36, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel31, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(mocaPanelLayout.createSequentialGroup()
                         .addComponent(jLabel308)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1217,10 +1260,13 @@ public class MOCA extends Test {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel325)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel231))
-                    .addGroup(mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanel36, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel31, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel23122)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel23822))
+                    .addGroup(mocaPanelLayout.createSequentialGroup()
+                        .addComponent(anysestudi11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(puntAnysExtra, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         mocaPanelLayout.setVerticalGroup(
@@ -1244,13 +1290,18 @@ public class MOCA extends Test {
                 .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel308)
                     .addComponent(puntTotalMoca1)
                     .addComponent(jLabel325)
-                    .addComponent(jLabel231))
-                .addContainerGap(58, Short.MAX_VALUE))
+                    .addComponent(jLabel23122)
+                    .addComponent(jLabel23822))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(mocaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(anysestudi11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(puntAnysExtra, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         mocaScroll.setViewportView(mocaPanel);
@@ -1258,8 +1309,13 @@ public class MOCA extends Test {
         add(mocaScroll, "card1");
     }// </editor-fold>//GEN-END:initComponents
 
+    private void anysestudi11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anysestudi11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_anysestudi11ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox anysestudi11;
     private javax.swing.JCheckBox checkAbstraccio1;
     private javax.swing.JCheckBox checkAbstraccio2;
     private javax.swing.JCheckBox checkAtencio1;
@@ -1296,13 +1352,14 @@ public class MOCA extends Test {
     private javax.swing.JLabel jLabel224;
     private javax.swing.JLabel jLabel225;
     private javax.swing.JLabel jLabel229;
-    private javax.swing.JLabel jLabel231;
+    private javax.swing.JLabel jLabel23122;
     private javax.swing.JLabel jLabel232;
     private javax.swing.JLabel jLabel233;
     private javax.swing.JLabel jLabel234;
     private javax.swing.JLabel jLabel235;
     private javax.swing.JLabel jLabel236;
     private javax.swing.JLabel jLabel237;
+    private javax.swing.JLabel jLabel23822;
     private javax.swing.JLabel jLabel239;
     private javax.swing.JLabel jLabel240;
     private javax.swing.JLabel jLabel241;
@@ -1378,6 +1435,7 @@ public class MOCA extends Test {
     private javax.swing.JPanel mocaPanel;
     private javax.swing.JScrollPane mocaScroll;
     private javax.swing.JLabel puntAbstraccio;
+    private javax.swing.JLabel puntAnysExtra;
     private javax.swing.JLabel puntAtencio1;
     private javax.swing.JLabel puntAtencio2;
     private javax.swing.JLabel puntAtencio3;

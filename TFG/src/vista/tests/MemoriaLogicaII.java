@@ -76,10 +76,10 @@ public class MemoriaLogicaII extends Test {
                         {"5", "anys", "<html>es requereix <i>anys</i>", "0"},
                         {"6", "Cada", "<html><i>cada</i>, tots (en referencia només als dimarts), o <i>els dimarts</i>", "0"},
                         {"7", "dimarts", "<html>es requereix <i>dimarts</i> (en qualsevol context)", "0", "0"},
-                        {"8", "queda", "<html>qualsevol indicació que reflecteixi que els personatges queden intencionadament", "0"},
+                        {"8", "queden", "<html>qualsevol indicació que reflecteixi que els personatges queden intencionadament", "0"},
                         {"9", "per esmorzar", "<html>es requereix <i>esmorzar</i> (en qualsevol context)", "0"},
                         {"10", "al bar", "<html>es requereix <i>bar</i>", "0"},
-                        {"11", "Cervanted", "<html>es requereix <i>Cervantes</i> (en qualsevol context)", "0"},
+                        {"11", "Cervantes", "<html>es requereix <i>Cervantes</i> (en qualsevol context)", "0"},
                         {"12", "Després surten junts a passejar", "indicació que els personatges passegen", "0"},
                         {"13", "pel parc", "<html>es requereix <i>parc</i> (en qualsevol context)", "0"},
                         {"14", "del Retiro.", "<html>es requereix <i>Retiro</i> (en qualsevol context)", "0"}

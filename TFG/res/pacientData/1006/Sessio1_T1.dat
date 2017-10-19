@@ -1,5 +1,5 @@
 #VALORACIO COGNITIVA PREVIA
-#Thu Jun 15 19:46:03 CEST 2017
+#Wed Jul 05 16:49:12 CEST 2017
 fdflexibilitatPDField=2
 fluenciaVerbalTable_18_6=19.
 fluenciaVerbalTable_18_4=19.
@@ -108,6 +108,9 @@ colorTrailsTable_0_2=X
 ML2RecTableB_5_0=14
 colorTrailsTable_0_1=7
 colorTrailsTable_0_0=<html><b>Color Trails 1 - Time in seconds
+BNTjButton23=Veure Taula
+BNTjButton22=Veure Taula
+BNTjButton21=Veure Taula
 resetHistoriaA1=Reset
 ML1ATable_9_4=0
 ML1ATable_9_3=1
@@ -1232,9 +1235,13 @@ fluenciaVerbalTable_6_3=mina
 fluenciaVerbalTable_6_2=7.
 fluenciaVerbalTable_6_1=padel
 fluenciaVerbalTable_6_0=7.
+fluenciaVerbalTable_26_7=999
 fluenciaVerbalTable_26_6=<html><b>NSSA
+fluenciaVerbalTable_26_5=999
 fluenciaVerbalTable_26_4=<html><b>NSSA
+fluenciaVerbalTable_26_3=999
 fluenciaVerbalTable_26_2=<html><b>NSSA
+fluenciaVerbalTable_26_1=999
 fluenciaVerbalTable_26_0=<html><b>NSSA
 BNTATable_8_4=
 BNTATable_8_3=1

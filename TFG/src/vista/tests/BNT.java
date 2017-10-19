@@ -9,10 +9,15 @@ import controlador.ButtonColumn;
 import controlador.Utils;
 import controlador.VerticalTableHeaderCellRenderer;
 import java.awt.CardLayout;
+import java.awt.Desktop;
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JLabel;
@@ -22,6 +27,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
 import model.Pacient;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
+import vista.Sessio1;
 
 /**
  *
@@ -1053,6 +1059,7 @@ public class BNT extends Test {
         jLabel74 = new javax.swing.JLabel();
         totalBntB = new javax.swing.JLabel();
         dataBnt2 = new javax.swing.JLabel();
+        BNTjButton21 = new javax.swing.JButton();
         BNTScroll7 = new javax.swing.JScrollPane();
         MLPanel6 = new javax.swing.JPanel();
         jLabel114 = new javax.swing.JLabel();
@@ -1074,6 +1081,7 @@ public class BNT extends Test {
         jLabel84 = new javax.swing.JLabel();
         nssaBNTC = new javax.swing.JLabel();
         dataBnt3 = new javax.swing.JLabel();
+        BNTjButton22 = new javax.swing.JButton();
         BNTScroll5 = new javax.swing.JScrollPane();
         MLPanel4 = new javax.swing.JPanel();
         jLabel111 = new javax.swing.JLabel();
@@ -1095,6 +1103,7 @@ public class BNT extends Test {
         jLabel82 = new javax.swing.JLabel();
         nssaBNTA = new javax.swing.JLabel();
         dataBnt1 = new javax.swing.JLabel();
+        BNTjButton23 = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
 
@@ -1258,6 +1267,13 @@ public class BNT extends Test {
         totalBntB.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         totalBntB.setOpaque(true);
 
+        BNTjButton21.setText("Veure Taula");
+        BNTjButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BNTjButton21ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout MLPanel5Layout = new javax.swing.GroupLayout(MLPanel5);
         MLPanel5.setLayout(MLPanel5Layout);
         MLPanel5Layout.setHorizontalGroup(
@@ -1288,7 +1304,8 @@ public class BNT extends Test {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(totalBntB, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dataBnt2)))
+                            .addComponent(dataBnt2)
+                            .addComponent(BNTjButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -1318,9 +1335,11 @@ public class BNT extends Test {
                         .addGap(18, 18, 18)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(BNTjButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(dataBnt2)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane17, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE))
+                    .addComponent(jScrollPane17, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1488,6 +1507,13 @@ public class BNT extends Test {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
+        BNTjButton22.setText("Veure Taula");
+        BNTjButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BNTjButton22ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout MLPanel6Layout = new javax.swing.GroupLayout(MLPanel6);
         MLPanel6.setLayout(MLPanel6Layout);
         MLPanel6Layout.setHorizontalGroup(
@@ -1518,9 +1544,10 @@ public class BNT extends Test {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(totalBntC, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dataBnt3)))
+                            .addComponent(dataBnt3)
+                            .addComponent(BNTjButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGap(14, 14, 14))
         );
         MLPanel6Layout.setVerticalGroup(
             MLPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1547,10 +1574,12 @@ public class BNT extends Test {
                         .addComponent(resetHistoriaB4)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BNTjButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)
                         .addComponent(dataBnt3)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE))
+                    .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1718,6 +1747,13 @@ public class BNT extends Test {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
+        BNTjButton23.setText("Veure Taula");
+        BNTjButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BNTjButton23ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout MLPanel4Layout = new javax.swing.GroupLayout(MLPanel4);
         MLPanel4.setLayout(MLPanel4Layout);
         MLPanel4Layout.setHorizontalGroup(
@@ -1748,9 +1784,10 @@ public class BNT extends Test {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(totalBntA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dataBnt1)))
+                            .addComponent(dataBnt1)
+                            .addComponent(BNTjButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGap(14, 14, 14))
         );
         MLPanel4Layout.setVerticalGroup(
             MLPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1778,9 +1815,11 @@ public class BNT extends Test {
                         .addGap(18, 18, 18)
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(BNTjButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(dataBnt1)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE))
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1846,6 +1885,39 @@ public class BNT extends Test {
         dataBnt3.setText("Data del test: "+dateFormat.format(date));
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void BNTjButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BNTjButton21ActionPerformed
+        File file = new File(Utils.RES_PATH+"taulaBNT.pdf");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_BNTjButton21ActionPerformed
+
+    private void BNTjButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BNTjButton22ActionPerformed
+            File file = new File(Utils.RES_PATH+"taulaBNT.pdf");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_BNTjButton22ActionPerformed
+
+    private void BNTjButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BNTjButton23ActionPerformed
+            File file = new File(Utils.RES_PATH+"taulaBNT.pdf");
+        if (file.exists()){
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (IOException ex) {
+                Logger.getLogger(Sessio1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_BNTjButton23ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.jdesktop.swingx.JXTable BNTATable;
@@ -1854,6 +1926,9 @@ public class BNT extends Test {
     private javax.swing.JScrollPane BNTScroll5;
     private javax.swing.JScrollPane BNTScroll6;
     private javax.swing.JScrollPane BNTScroll7;
+    private javax.swing.JButton BNTjButton21;
+    private javax.swing.JButton BNTjButton22;
+    private javax.swing.JButton BNTjButton23;
     private javax.swing.JPanel MLPanel4;
     private javax.swing.JPanel MLPanel5;
     private javax.swing.JPanel MLPanel6;

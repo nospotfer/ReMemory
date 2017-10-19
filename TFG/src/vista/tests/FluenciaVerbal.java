@@ -62,6 +62,10 @@ public class FluenciaVerbal extends Test {
         prop.setProperty("fluenciaM",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,3)));
         prop.setProperty("fluenciaR",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,5)));
         prop.setProperty("fluenciaAnimals",getStringFromTable((String)fluenciaVerbalTable.getValueAt(25,7)));
+        prop.setProperty("fluenciaPNSSA",getStringFromTable((String)fluenciaVerbalTable.getValueAt(26,1)));
+        prop.setProperty("fluenciaMNSSA",getStringFromTable((String)fluenciaVerbalTable.getValueAt(26,3)));
+        prop.setProperty("fluenciaRNSSA",getStringFromTable((String)fluenciaVerbalTable.getValueAt(26,5)));
+        prop.setProperty("fluenciaAnimalsNSSA",getStringFromTable((String)fluenciaVerbalTable.getValueAt(26,7)));
     }
 
     private void initTimer() {
@@ -354,17 +358,17 @@ public class FluenciaVerbal extends Test {
                         .addGap(38, 38, 38)
                         .addComponent(FVStart1)
                         .addGap(18, 18, 18)
-                        .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(FVStart1Button5)
+                        .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel20)
-                                .addComponent(temps1)))
+                                .addComponent(temps1))
+                            .addComponent(FVStart1Button5))
                         .addGap(18, 18, 18)
-                        .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(fiveDigitsFVStart1)
+                        .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(fluenciaVerbalPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel78)
-                                .addComponent(temps2)))
+                                .addComponent(temps2))
+                            .addComponent(fiveDigitsFVStart1))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 

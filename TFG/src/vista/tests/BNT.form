@@ -60,6 +60,7 @@
                                   </Group>
                                   <Component id="jPanel5" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="dataBnt2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BNTjButton21" min="-2" pref="106" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jLabel112" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -97,10 +98,12 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="BNTjButton21" min="-2" pref="29" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="dataBnt2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane17" alignment="0" pref="773" max="32767" attributes="0"/>
+                          <Component id="jScrollPane17" alignment="0" pref="843" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -423,6 +426,14 @@
             </Component>
             <Component class="javax.swing.JLabel" name="dataBnt2">
             </Component>
+            <Component class="javax.swing.JButton" name="BNTjButton21">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Veure Taula"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BNTjButton21ActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
@@ -471,11 +482,12 @@
                                   </Group>
                                   <Component id="jPanel8" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="dataBnt3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BNTjButton22" min="-2" pref="106" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jLabel114" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -507,11 +519,13 @@
                               <Component id="resetHistoriaB4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="BNTjButton22" min="-2" pref="29" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                               <Component id="dataBnt3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane18" alignment="0" pref="773" max="32767" attributes="0"/>
+                          <Component id="jScrollPane18" alignment="0" pref="843" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -834,6 +848,14 @@
             </Container>
             <Component class="javax.swing.JLabel" name="dataBnt3">
             </Component>
+            <Component class="javax.swing.JButton" name="BNTjButton22">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Veure Taula"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BNTjButton22ActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
@@ -882,11 +904,12 @@
                                   </Group>
                                   <Component id="jPanel7" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="dataBnt1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BNTjButton23" min="-2" pref="106" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jLabel111" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -919,10 +942,12 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="BNTjButton23" min="-2" pref="29" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="dataBnt1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane16" alignment="0" pref="773" max="32767" attributes="0"/>
+                          <Component id="jScrollPane16" alignment="0" pref="808" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1244,6 +1269,14 @@
               </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="dataBnt1">
+            </Component>
+            <Component class="javax.swing.JButton" name="BNTjButton23">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Veure Taula"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BNTjButton23ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

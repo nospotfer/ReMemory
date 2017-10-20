@@ -28,6 +28,8 @@ import vista.tests.UPSA;
 import vista.tests.OHQSF;
 import vista.tests.IMAGE;
 import vista.tests.EPT;
+import vista.tests.MOS;
+import vista.tests.PANAS;
 
 
 /**
@@ -109,6 +111,11 @@ public class Sessio2 extends javax.swing.JFrame {
         RSE rse = new RSE(pacientActual);
         tabbedPanel.addTab(rse.getLabel(), rse);
         
+        PANAS panas = new PANAS(pacientActual);
+        tabbedPanel.addTab(panas.getLabel(), panas);
+        
+        MOS mos = new MOS(pacientActual);
+        tabbedPanel.addTab(mos.getLabel(), mos);
         
         
         

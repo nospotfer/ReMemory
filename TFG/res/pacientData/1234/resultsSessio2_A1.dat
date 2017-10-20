@@ -1,15 +1,25 @@
 #NEUROIMATGE
-#Wed Jul 05 19:29:00 CEST 2017
-OHQSFTotal=48
-mfeTotal=38
-hadTotalD=8
-upsaTotal=48.08
-comunicacioSub=25
-hadTotalA=15
-EPTTotal=18
+#Fri Oct 20 19:31:56 CEST 2017
+MOSFamilia=2
 rseTotal=40
-comprensioSub=23.08
-qolTotal=40
-IMAGETotal=96
+AfectPositivo=18
+OHQSFTotal=48
 dukeTotal=43
+qolTotal=40
+comunicacioSub=25
+IMAGETotal=96
+upsaTotal=48.08
+AfectNegativo=19
+hadTotalD=8
 puntTotalMoca1=0
+hadTotalA=15
+MOSAmigos=1
+comprensioSub=23.08
+MOSTotal=52
+EPTTotal=18
+AyudaMaterial=10
+SocialOcio=12
+ApoyoAfectivo=8
+PanasTotal=37
+mfeTotal=38
+ApoyoEmocional=22

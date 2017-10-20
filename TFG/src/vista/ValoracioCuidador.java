@@ -55,6 +55,9 @@ public class ValoracioCuidador extends javax.swing.JFrame {
     }
     
     private void addTabs() {
+        EPTCuidador eptcuidador = new EPTCuidador(pacientActual);
+        tabbedPanel.addTab(eptcuidador.getLabel(), eptcuidador);
+        
         NPI npi = new NPI(pacientActual);
         tabbedPanel.addTab(npi.getLabel(), npi);
 

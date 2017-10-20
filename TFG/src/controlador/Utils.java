@@ -843,6 +843,7 @@ public class Utils {
 
 
         //Valoracio cognitiva previa
+        
         writeLineCSV(writer,"CDR");
         writeLineCSV(writer,"CRC total");
         writeLineCSV(writer,"CRC Rang"); //NOU
@@ -994,10 +995,21 @@ public class Utils {
             writeLineCSV(writer, "Rosemberg_T"+i);
             writeLineCSV(writer, "OHQSF_T"+i);
             writeLineCSV(writer, "IMAGE_T"+i);
+            writeLineCSV(writer, "PANAS_afect-positivo_T"+i);
+            writeLineCSV(writer, "PANAS_afect-negativo_T"+i);
+            writeLineCSV(writer, "PANAS_TOTAL_T"+i);
+            writeLineCSV(writer, "MOS_Amigos_T"+i);
+            writeLineCSV(writer, "MOS_Familia_T"+i);
+            writeLineCSV(writer, "MOS_ApoyoEmocional_T"+i);
+            writeLineCSV(writer, "MOS_AyudaMaterial_T"+i);
+            writeLineCSV(writer, "MOS_SocialOcio_T"+i);
+            writeLineCSV(writer, "MOS_ApoyoAfectivo_T"+i);
+            writeLineCSV(writer, "MOS_TOTAL_T"+i);
 
             writer.append(";");
 
             //Valoracio cuidador
+            writeLineCSV(writer, "EPTTotalCuidador_T"+i);
             writeLineCSV(writer, "FAQ_T"+i);
             writeLineCSV(writer, "NPI_T"+i);
             writeLineCSV(writer, "HAD-A_T"+i);
@@ -1538,7 +1550,19 @@ public class Utils {
                 propertyToCSV(writer,prop,"OHQSFTotal");
                 //IMAGE
                 propertyToCSV(writer,prop,"IMAGETotal");
-
+                //PANAS
+                propertyToCSV(writer,prop,"AfectPositivo");
+                propertyToCSV(writer,prop,"AfectNegativo");
+                propertyToCSV(writer,prop,"PanasTotal");
+                //MOS
+                propertyToCSV(writer,prop,"MOSAmigos");
+                propertyToCSV(writer,prop,"MOSFamilia");
+                propertyToCSV(writer,prop,"ApoyoEmocional");
+                propertyToCSV(writer,prop,"AyudaMaterial");
+                propertyToCSV(writer,prop,"SocialOcio");
+                propertyToCSV(writer,prop,"ApoyoAfectivo");
+                propertyToCSV(writer,prop,"MOSTotal");
+            
             }
 
         } catch (IOException ex) {
@@ -1568,6 +1592,8 @@ public class Utils {
                 // load a properties file
                 prop.load(input);
 
+                //EPT (NOU)
+                propertyToCSV(writer,prop,"EPTTotalCuidador");
                 // FAQ
                 propertyToCSV(writer,prop,"faqTotal");
                 // NPI

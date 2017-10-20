@@ -182,7 +182,8 @@ public class Digits extends Test {
                 if (sumaAnteriors > 0 && num1 < 1){
                     puntuacioDirectaDD.setText(sumaTotal+"");
                     sumaTotal+=num0;
-                    span = sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1;
+                    span = (sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1)+1;
+                    if (span ==1) span = 0;
                     spanDD.setText(span+"");
                 }
             }
@@ -332,6 +333,7 @@ public class Digits extends Test {
                     sumaTotal+=num0;
                     puntuacioDirectaDI.setText(sumaTotal+"");
                     span = sumaTotal%2==0 ? sumaTotal/2 : sumaTotal/2+1;
+                    if (span == 1) span = 2;
                     spanDI.setText(span+"");
                     puntuacioDirectaDI.setText(sumaTotal+"");
                 }

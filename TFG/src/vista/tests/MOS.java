@@ -35,7 +35,7 @@ public class MOS extends Test  {
         label = "MOS";
         numPaginesTotal = this.getComponentCount();
         
-        initTaula(MOSPanel);
+        initTaula(PANASSPanel);
        // PANAS.initTaula(MOSPanel,AfectivoNegativo);
         //PANAS.initTaula(MOSPanel,PanasTotal);
     }
@@ -140,7 +140,7 @@ public class MOS extends Test  {
         eptScroll = new javax.swing.JScrollPane();
         PANASPanel = new javax.swing.JPanel();
         PANASLabel33 = new javax.swing.JLabel();
-        MOSPanel = new javax.swing.JPanel();
+        PANASSPanel = new javax.swing.JPanel();
         PANASBtn1411 = new javax.swing.JToggleButton();
         PANASBtn151 = new javax.swing.JToggleButton();
         PANASBtn161 = new javax.swing.JToggleButton();
@@ -303,8 +303,8 @@ public class MOS extends Test  {
         PANASLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         PANASLabel33.setText("Cuestionario MOS de apoyo social");
 
-        MOSPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MOS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
-        MOSPanel.setLayout(new java.awt.GridBagLayout());
+        PANASSPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MOS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        PANASSPanel.setLayout(new java.awt.GridBagLayout());
 
         eptBtnGroup2.add(PANASBtn1411);
         PANASBtn1411.setText("1");
@@ -313,7 +313,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASBtn1411, gridBagConstraints);
+        PANASSPanel.add(PANASBtn1411, gridBagConstraints);
 
         eptBtnGroup2.add(PANASBtn151);
         PANASBtn151.setText("2");
@@ -322,7 +322,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASBtn151, gridBagConstraints);
+        PANASSPanel.add(PANASBtn151, gridBagConstraints);
 
         eptBtnGroup2.add(PANASBtn161);
         PANASBtn161.setText("3");
@@ -331,7 +331,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASBtn161, gridBagConstraints);
+        PANASSPanel.add(PANASBtn161, gridBagConstraints);
 
         eptBtnGroup2.add(PANASBtn171);
         PANASBtn171.setText("5");
@@ -340,7 +340,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(PANASBtn171, gridBagConstraints);
+        PANASSPanel.add(PANASBtn171, gridBagConstraints);
 
         eptBtnGroup3.add(PANASBtn141);
         PANASBtn141.setText("1");
@@ -349,7 +349,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASBtn141, gridBagConstraints);
+        PANASSPanel.add(PANASBtn141, gridBagConstraints);
 
         eptBtnGroup3.add(PANASBtn1511);
         PANASBtn1511.setText("5");
@@ -358,7 +358,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(PANASBtn1511, gridBagConstraints);
+        PANASSPanel.add(PANASBtn1511, gridBagConstraints);
 
         eptBtnGroup5.add(PANASBtn1611);
         PANASBtn1611.setText("2");
@@ -367,7 +367,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASBtn1611, gridBagConstraints);
+        PANASSPanel.add(PANASBtn1611, gridBagConstraints);
 
         eptBtnGroup3.add(PANASBtn1711);
         PANASBtn1711.setText("3");
@@ -376,7 +376,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASBtn1711, gridBagConstraints);
+        PANASSPanel.add(PANASBtn1711, gridBagConstraints);
 
         eptBtnGroup4.add(PANASFBtn14);
         PANASFBtn14.setText("1");
@@ -385,7 +385,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASFBtn14, gridBagConstraints);
+        PANASSPanel.add(PANASFBtn14, gridBagConstraints);
 
         eptBtnGroup4.add(PANASFBtn15);
         PANASFBtn15.setText("2");
@@ -394,7 +394,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASFBtn15, gridBagConstraints);
+        PANASSPanel.add(PANASFBtn15, gridBagConstraints);
 
         eptBtnGroup5.add(PANASFBtn16);
         PANASFBtn16.setText("3");
@@ -403,7 +403,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASFBtn16, gridBagConstraints);
+        PANASSPanel.add(PANASFBtn16, gridBagConstraints);
 
         eptBtnGroup5.add(PANASFBtn17);
         PANASFBtn17.setText("5");
@@ -412,7 +412,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(PANASFBtn17, gridBagConstraints);
+        PANASSPanel.add(PANASFBtn17, gridBagConstraints);
 
         eptBtnGroup6.add(PANASDBtn14);
         PANASDBtn14.setText("5");
@@ -422,7 +422,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipady = 2;
-        MOSPanel.add(PANASDBtn14, gridBagConstraints);
+        PANASSPanel.add(PANASDBtn14, gridBagConstraints);
 
         eptBtnGroup6.add(PANASDBtn15);
         PANASDBtn15.setText("3");
@@ -431,7 +431,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASDBtn15, gridBagConstraints);
+        PANASSPanel.add(PANASDBtn15, gridBagConstraints);
 
         eptBtnGroup5.add(PANASDBtn16);
         PANASDBtn16.setText("1");
@@ -440,65 +440,65 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASDBtn16, gridBagConstraints);
+        PANASSPanel.add(PANASDBtn16, gridBagConstraints);
 
         PANASDBtn17.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASDBtn17, gridBagConstraints);
+        PANASSPanel.add(PANASDBtn17, gridBagConstraints);
 
         PANASLabel112.setText("<html><center>Nunca<br>");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        MOSPanel.add(PANASLabel112, gridBagConstraints);
+        PANASSPanel.add(PANASLabel112, gridBagConstraints);
 
         PANASLabel11.setText("<html><center>Pocas<br>veces");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        MOSPanel.add(PANASLabel11, gridBagConstraints);
+        PANASSPanel.add(PANASLabel11, gridBagConstraints);
 
         PANASLabel149.setText("<html><center>Siempre<br>");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 2;
-        MOSPanel.add(PANASLabel149, gridBagConstraints);
+        PANASSPanel.add(PANASLabel149, gridBagConstraints);
 
         PANASLabel150.setText("<html><center>Algunas<br>veces");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        MOSPanel.add(PANASLabel150, gridBagConstraints);
+        PANASSPanel.add(PANASLabel150, gridBagConstraints);
 
         PANASLabel152.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        MOSPanel.add(PANASLabel152, gridBagConstraints);
+        PANASSPanel.add(PANASLabel152, gridBagConstraints);
 
         PANASLabel153.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        MOSPanel.add(PANASLabel153, gridBagConstraints);
+        PANASSPanel.add(PANASLabel153, gridBagConstraints);
 
         PANASLabel154.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        MOSPanel.add(PANASLabel154, gridBagConstraints);
+        PANASSPanel.add(PANASLabel154, gridBagConstraints);
 
         PANASLabel155.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        MOSPanel.add(PANASLabel155, gridBagConstraints);
+        PANASSPanel.add(PANASLabel155, gridBagConstraints);
 
         PANASLabel114.setText("- Que le aconseje cuando tenga problemas");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -506,7 +506,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        MOSPanel.add(PANASLabel114, gridBagConstraints);
+        PANASSPanel.add(PANASLabel114, gridBagConstraints);
 
         PANASLabel54.setText("- Que le ayude cuando tenga que estar en la cama");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -514,34 +514,34 @@ public class MOS extends Test  {
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
-        MOSPanel.add(PANASLabel54, gridBagConstraints);
+        PANASSPanel.add(PANASLabel54, gridBagConstraints);
 
         PANASLabel55.setText("- Con quien pueda contar cuando necesite hablar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(PANASLabel55, gridBagConstraints);
+        PANASSPanel.add(PANASLabel55, gridBagConstraints);
 
         PANASLabel56.setText("- Que le lleve al médico cuando lo necesite");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(PANASLabel56, gridBagConstraints);
+        PANASSPanel.add(PANASLabel56, gridBagConstraints);
 
         PANASLabel57.setText("- Que le muestre amor y afecto");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(PANASLabel57, gridBagConstraints);
+        PANASSPanel.add(PANASLabel57, gridBagConstraints);
 
         PANASLabel58.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        MOSPanel.add(PANASLabel58, gridBagConstraints);
+        PANASSPanel.add(PANASLabel58, gridBagConstraints);
 
         eptBtnGroup3.add(PANASToggleButton37);
         PANASToggleButton37.setText("2");
@@ -550,7 +550,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASToggleButton37, gridBagConstraints);
+        PANASSPanel.add(PANASToggleButton37, gridBagConstraints);
 
         eptBtnGroup4.add(PANASToggleButton38);
         PANASToggleButton38.setText("3");
@@ -559,7 +559,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASToggleButton38, gridBagConstraints);
+        PANASSPanel.add(PANASToggleButton38, gridBagConstraints);
 
         eptBtnGroup4.add(PANASToggleButton39);
         PANASToggleButton39.setText("5");
@@ -568,7 +568,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(PANASToggleButton39, gridBagConstraints);
+        PANASSPanel.add(PANASToggleButton39, gridBagConstraints);
 
         eptBtnGroup6.add(PANASToggleButton40);
         PANASToggleButton40.setText("2");
@@ -577,7 +577,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASToggleButton40, gridBagConstraints);
+        PANASSPanel.add(PANASToggleButton40, gridBagConstraints);
 
         eptBtnGroup6.add(PANASToggleButton41);
         PANASToggleButton41.setText("1");
@@ -586,13 +586,13 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASToggleButton41, gridBagConstraints);
+        PANASSPanel.add(PANASToggleButton41, gridBagConstraints);
 
         PANASLabel156.setText("<html><center>La mayoría<br>de veces");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 2;
-        MOSPanel.add(PANASLabel156, gridBagConstraints);
+        PANASSPanel.add(PANASLabel156, gridBagConstraints);
 
         eptBtnGroup2.add(PANASBtn172);
         PANASBtn172.setText("4");
@@ -601,7 +601,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASBtn172, gridBagConstraints);
+        PANASSPanel.add(PANASBtn172, gridBagConstraints);
 
         eptBtnGroup3.add(PANASBtn1512);
         PANASBtn1512.setText("4");
@@ -610,7 +610,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASBtn1512, gridBagConstraints);
+        PANASSPanel.add(PANASBtn1512, gridBagConstraints);
 
         eptBtnGroup4.add(PANASToggleButton42);
         PANASToggleButton42.setText("4");
@@ -619,7 +619,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASToggleButton42, gridBagConstraints);
+        PANASSPanel.add(PANASToggleButton42, gridBagConstraints);
 
         eptBtnGroup6.add(PANASDBtn18);
         PANASDBtn18.setText("4");
@@ -628,7 +628,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASDBtn18, gridBagConstraints);
+        PANASSPanel.add(PANASDBtn18, gridBagConstraints);
 
         eptBtnGroup5.add(PANASFBtn18);
         PANASFBtn18.setText("4");
@@ -637,20 +637,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(PANASFBtn18, gridBagConstraints);
+        PANASSPanel.add(PANASFBtn18, gridBagConstraints);
 
         eptLabel157.setText("7");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
-        MOSPanel.add(eptLabel157, gridBagConstraints);
+        PANASSPanel.add(eptLabel157, gridBagConstraints);
 
         eptLabel59.setText("- Con quien pasar un buen rato");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel59, gridBagConstraints);
+        PANASSPanel.add(eptLabel59, gridBagConstraints);
 
         eptBtnGroup7.add(eptBtn18);
         eptBtn18.setText("1");
@@ -659,7 +659,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn18, gridBagConstraints);
+        PANASSPanel.add(eptBtn18, gridBagConstraints);
 
         eptBtnGroup7.add(eptBtn20);
         eptBtn20.setText("2");
@@ -668,7 +668,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn20, gridBagConstraints);
+        PANASSPanel.add(eptBtn20, gridBagConstraints);
 
         eptBtnGroup7.add(eptBtn21);
         eptBtn21.setText("3");
@@ -677,7 +677,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn21, gridBagConstraints);
+        PANASSPanel.add(eptBtn21, gridBagConstraints);
 
         eptBtnGroup7.add(eptBtn22);
         eptBtn22.setText("4");
@@ -686,7 +686,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn22, gridBagConstraints);
+        PANASSPanel.add(eptBtn22, gridBagConstraints);
 
         eptBtnGroup7.add(eptBtn23);
         eptBtn23.setText("5");
@@ -695,20 +695,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn23, gridBagConstraints);
+        PANASSPanel.add(eptBtn23, gridBagConstraints);
 
         eptLabel158.setText("8");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
-        MOSPanel.add(eptLabel158, gridBagConstraints);
+        PANASSPanel.add(eptLabel158, gridBagConstraints);
 
         eptLabel60.setText("- Que le informe y ayude a entender la situación");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel60, gridBagConstraints);
+        PANASSPanel.add(eptLabel60, gridBagConstraints);
 
         eptBtnGroup8.add(eptBtn24);
         eptBtn24.setText("1");
@@ -717,7 +717,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn24, gridBagConstraints);
+        PANASSPanel.add(eptBtn24, gridBagConstraints);
 
         eptBtnGroup8.add(eptBtn25);
         eptBtn25.setText("2");
@@ -726,7 +726,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn25, gridBagConstraints);
+        PANASSPanel.add(eptBtn25, gridBagConstraints);
 
         eptBtnGroup8.add(eptBtn26);
         eptBtn26.setText("3");
@@ -735,7 +735,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn26, gridBagConstraints);
+        PANASSPanel.add(eptBtn26, gridBagConstraints);
 
         eptBtnGroup8.add(eptBtn27);
         eptBtn27.setText("4");
@@ -744,7 +744,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn27, gridBagConstraints);
+        PANASSPanel.add(eptBtn27, gridBagConstraints);
 
         eptBtnGroup8.add(eptBtn28);
         eptBtn28.setText("5");
@@ -753,20 +753,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn28, gridBagConstraints);
+        PANASSPanel.add(eptBtn28, gridBagConstraints);
 
         eptLabel159.setText("9 - ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 11;
-        MOSPanel.add(eptLabel159, gridBagConstraints);
+        PANASSPanel.add(eptLabel159, gridBagConstraints);
 
         eptLabel61.setText("<html> En quien confiar o con quién hablar de sí mismo<br> y sus preocupaciones");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel61, gridBagConstraints);
+        PANASSPanel.add(eptLabel61, gridBagConstraints);
 
         eptBtnGroup9.add(eptBtn29);
         eptBtn29.setText("1");
@@ -775,7 +775,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn29, gridBagConstraints);
+        PANASSPanel.add(eptBtn29, gridBagConstraints);
 
         eptBtnGroup9.add(eptBtn30);
         eptBtn30.setText("2");
@@ -784,7 +784,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn30, gridBagConstraints);
+        PANASSPanel.add(eptBtn30, gridBagConstraints);
 
         eptBtnGroup9.add(eptBtn31);
         eptBtn31.setText("3");
@@ -793,7 +793,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn31, gridBagConstraints);
+        PANASSPanel.add(eptBtn31, gridBagConstraints);
 
         eptBtnGroup9.add(eptBtn32);
         eptBtn32.setText("4");
@@ -802,7 +802,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn32, gridBagConstraints);
+        PANASSPanel.add(eptBtn32, gridBagConstraints);
 
         eptBtnGroup9.add(eptBtn33);
         eptBtn33.setText("5");
@@ -811,20 +811,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn33, gridBagConstraints);
+        PANASSPanel.add(eptBtn33, gridBagConstraints);
 
         eptLabel160.setText("10 - ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 12;
-        MOSPanel.add(eptLabel160, gridBagConstraints);
+        PANASSPanel.add(eptLabel160, gridBagConstraints);
 
         eptLabel62.setText("Que le abrace");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel62, gridBagConstraints);
+        PANASSPanel.add(eptLabel62, gridBagConstraints);
 
         eptBtnGroup10.add(eptBtn34);
         eptBtn34.setText("1");
@@ -833,7 +833,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn34, gridBagConstraints);
+        PANASSPanel.add(eptBtn34, gridBagConstraints);
 
         eptBtnGroup10.add(eptBtn35);
         eptBtn35.setText("2");
@@ -842,7 +842,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn35, gridBagConstraints);
+        PANASSPanel.add(eptBtn35, gridBagConstraints);
 
         eptBtnGroup10.add(eptBtn36);
         eptBtn36.setText("3");
@@ -851,7 +851,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn36, gridBagConstraints);
+        PANASSPanel.add(eptBtn36, gridBagConstraints);
 
         eptBtnGroup10.add(eptBtn37);
         eptBtn37.setText("4");
@@ -860,7 +860,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn37, gridBagConstraints);
+        PANASSPanel.add(eptBtn37, gridBagConstraints);
 
         eptBtnGroup10.add(eptBtn38);
         eptBtn38.setText("5");
@@ -869,14 +869,14 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn38, gridBagConstraints);
+        PANASSPanel.add(eptBtn38, gridBagConstraints);
 
         eptLabel63.setText("Que le prepare la comida si no puede hacerlo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel63, gridBagConstraints);
+        PANASSPanel.add(eptLabel63, gridBagConstraints);
 
         eptBtnGroup12.add(eptBtn39);
         eptBtn39.setText("1");
@@ -885,7 +885,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn39, gridBagConstraints);
+        PANASSPanel.add(eptBtn39, gridBagConstraints);
 
         eptBtnGroup12.add(eptBtn40);
         eptBtn40.setText("2");
@@ -894,7 +894,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn40, gridBagConstraints);
+        PANASSPanel.add(eptBtn40, gridBagConstraints);
 
         eptBtnGroup12.add(eptBtn41);
         eptBtn41.setText("3");
@@ -903,7 +903,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn41, gridBagConstraints);
+        PANASSPanel.add(eptBtn41, gridBagConstraints);
 
         eptBtnGroup12.add(eptBtn42);
         eptBtn42.setText("4");
@@ -912,7 +912,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn42, gridBagConstraints);
+        PANASSPanel.add(eptBtn42, gridBagConstraints);
 
         eptBtnGroup12.add(eptBtn43);
         eptBtn43.setText("5");
@@ -926,20 +926,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn43, gridBagConstraints);
+        PANASSPanel.add(eptBtn43, gridBagConstraints);
 
         eptLabel162.setText("11 - ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 13;
-        MOSPanel.add(eptLabel162, gridBagConstraints);
+        PANASSPanel.add(eptLabel162, gridBagConstraints);
 
         eptLabel64.setText("Con quien pueda relajarse");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel64, gridBagConstraints);
+        PANASSPanel.add(eptLabel64, gridBagConstraints);
 
         eptBtnGroup11.add(eptBtn44);
         eptBtn44.setText("1");
@@ -948,7 +948,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn44, gridBagConstraints);
+        PANASSPanel.add(eptBtn44, gridBagConstraints);
 
         eptBtnGroup11.add(eptBtn45);
         eptBtn45.setText("2");
@@ -957,7 +957,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn45, gridBagConstraints);
+        PANASSPanel.add(eptBtn45, gridBagConstraints);
 
         eptBtnGroup11.add(eptBtn46);
         eptBtn46.setText("3");
@@ -966,7 +966,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn46, gridBagConstraints);
+        PANASSPanel.add(eptBtn46, gridBagConstraints);
 
         eptBtnGroup11.add(eptBtn47);
         eptBtn47.setText("4");
@@ -975,7 +975,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn47, gridBagConstraints);
+        PANASSPanel.add(eptBtn47, gridBagConstraints);
 
         eptBtnGroup11.add(eptBtn48);
         eptBtn48.setText("5");
@@ -984,26 +984,26 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn48, gridBagConstraints);
+        PANASSPanel.add(eptBtn48, gridBagConstraints);
 
         eptLabel163.setText("12 - ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 14;
-        MOSPanel.add(eptLabel163, gridBagConstraints);
+        PANASSPanel.add(eptLabel163, gridBagConstraints);
 
         eptLabel164.setText("13 - ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 15;
-        MOSPanel.add(eptLabel164, gridBagConstraints);
+        PANASSPanel.add(eptLabel164, gridBagConstraints);
 
         eptLabel66.setText("Cuyo consejo realmente desee");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel66, gridBagConstraints);
+        PANASSPanel.add(eptLabel66, gridBagConstraints);
 
         eptBtnGroup13.add(eptBtn54);
         eptBtn54.setText("1");
@@ -1012,7 +1012,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn54, gridBagConstraints);
+        PANASSPanel.add(eptBtn54, gridBagConstraints);
 
         eptBtnGroup13.add(eptBtn55);
         eptBtn55.setText("2");
@@ -1021,7 +1021,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn55, gridBagConstraints);
+        PANASSPanel.add(eptBtn55, gridBagConstraints);
 
         eptBtnGroup13.add(eptBtn56);
         eptBtn56.setText("3");
@@ -1030,7 +1030,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn56, gridBagConstraints);
+        PANASSPanel.add(eptBtn56, gridBagConstraints);
 
         eptBtnGroup13.add(eptBtn57);
         eptBtn57.setText("4");
@@ -1039,7 +1039,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn57, gridBagConstraints);
+        PANASSPanel.add(eptBtn57, gridBagConstraints);
 
         eptBtnGroup13.add(eptBtn58);
         eptBtn58.setText("5");
@@ -1048,20 +1048,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn58, gridBagConstraints);
+        PANASSPanel.add(eptBtn58, gridBagConstraints);
 
         eptLabel165.setText("14 -");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 16;
-        MOSPanel.add(eptLabel165, gridBagConstraints);
+        PANASSPanel.add(eptLabel165, gridBagConstraints);
 
         eptLabel67.setText("<html> Con quien hacer cosas que le sirvan para olvidar<br> sus problemas");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel67, gridBagConstraints);
+        PANASSPanel.add(eptLabel67, gridBagConstraints);
 
         eptBtnGroup14.add(eptBtn59);
         eptBtn59.setText("1");
@@ -1070,7 +1070,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn59, gridBagConstraints);
+        PANASSPanel.add(eptBtn59, gridBagConstraints);
 
         eptBtnGroup14.add(eptBtn60);
         eptBtn60.setText("2");
@@ -1079,7 +1079,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn60, gridBagConstraints);
+        PANASSPanel.add(eptBtn60, gridBagConstraints);
 
         eptBtnGroup14.add(eptBtn61);
         eptBtn61.setText("3");
@@ -1088,7 +1088,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn61, gridBagConstraints);
+        PANASSPanel.add(eptBtn61, gridBagConstraints);
 
         eptBtnGroup14.add(eptBtn62);
         eptBtn62.setText("4");
@@ -1097,7 +1097,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn62, gridBagConstraints);
+        PANASSPanel.add(eptBtn62, gridBagConstraints);
 
         eptBtnGroup14.add(eptBtn63);
         eptBtn63.setText("5");
@@ -1106,20 +1106,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn63, gridBagConstraints);
+        PANASSPanel.add(eptBtn63, gridBagConstraints);
 
         eptLabel166.setText("15 -");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 17;
-        MOSPanel.add(eptLabel166, gridBagConstraints);
+        PANASSPanel.add(eptLabel166, gridBagConstraints);
 
         eptLabel68.setText("<html>Que le ayude en sus tareas domésticas si<br> está enfermo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel68, gridBagConstraints);
+        PANASSPanel.add(eptLabel68, gridBagConstraints);
 
         eptBtnGroup15.add(eptBtn64);
         eptBtn64.setText("1");
@@ -1128,7 +1128,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn64, gridBagConstraints);
+        PANASSPanel.add(eptBtn64, gridBagConstraints);
 
         eptBtnGroup15.add(eptBtn65);
         eptBtn65.setText("2");
@@ -1137,7 +1137,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn65, gridBagConstraints);
+        PANASSPanel.add(eptBtn65, gridBagConstraints);
 
         eptBtnGroup15.add(eptBtn66);
         eptBtn66.setText("3");
@@ -1146,7 +1146,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn66, gridBagConstraints);
+        PANASSPanel.add(eptBtn66, gridBagConstraints);
 
         eptBtnGroup15.add(eptBtn67);
         eptBtn67.setText("4");
@@ -1155,7 +1155,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn67, gridBagConstraints);
+        PANASSPanel.add(eptBtn67, gridBagConstraints);
 
         eptBtnGroup15.add(eptBtn68);
         eptBtn68.setText("5");
@@ -1164,20 +1164,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn68, gridBagConstraints);
+        PANASSPanel.add(eptBtn68, gridBagConstraints);
 
         eptLabel167.setText("16 -");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 18;
-        MOSPanel.add(eptLabel167, gridBagConstraints);
+        PANASSPanel.add(eptLabel167, gridBagConstraints);
 
         eptLabel69.setText("<html>Alguien con quien compartir sus temores y<br>problemas más íntimos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel69, gridBagConstraints);
+        PANASSPanel.add(eptLabel69, gridBagConstraints);
 
         eptBtnGroup16.add(eptBtn69);
         eptBtn69.setText("1");
@@ -1186,7 +1186,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn69, gridBagConstraints);
+        PANASSPanel.add(eptBtn69, gridBagConstraints);
 
         eptBtnGroup16.add(eptBtn70);
         eptBtn70.setText("2");
@@ -1195,7 +1195,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn70, gridBagConstraints);
+        PANASSPanel.add(eptBtn70, gridBagConstraints);
 
         eptBtnGroup16.add(eptBtn71);
         eptBtn71.setText("3");
@@ -1204,7 +1204,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn71, gridBagConstraints);
+        PANASSPanel.add(eptBtn71, gridBagConstraints);
 
         eptBtnGroup16.add(eptBtn72);
         eptBtn72.setText("4");
@@ -1213,7 +1213,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn72, gridBagConstraints);
+        PANASSPanel.add(eptBtn72, gridBagConstraints);
 
         eptBtnGroup16.add(eptBtn73);
         eptBtn73.setText("5");
@@ -1222,20 +1222,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn73, gridBagConstraints);
+        PANASSPanel.add(eptBtn73, gridBagConstraints);
 
         eptLabel168.setText("17 -");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 19;
-        MOSPanel.add(eptLabel168, gridBagConstraints);
+        PANASSPanel.add(eptLabel168, gridBagConstraints);
 
         eptLabel70.setText("<html>Que le aconseje cómo resolver sus problemas<br> personales");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel70, gridBagConstraints);
+        PANASSPanel.add(eptLabel70, gridBagConstraints);
 
         eptBtnGroup17.add(eptBtn74);
         eptBtn74.setText("1");
@@ -1244,7 +1244,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn74, gridBagConstraints);
+        PANASSPanel.add(eptBtn74, gridBagConstraints);
 
         eptBtnGroup17.add(eptBtn75);
         eptBtn75.setText("2");
@@ -1253,7 +1253,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn75, gridBagConstraints);
+        PANASSPanel.add(eptBtn75, gridBagConstraints);
 
         eptBtnGroup17.add(eptBtn76);
         eptBtn76.setText("3");
@@ -1262,7 +1262,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn76, gridBagConstraints);
+        PANASSPanel.add(eptBtn76, gridBagConstraints);
 
         eptBtnGroup17.add(eptBtn77);
         eptBtn77.setText("4");
@@ -1271,7 +1271,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn77, gridBagConstraints);
+        PANASSPanel.add(eptBtn77, gridBagConstraints);
 
         eptBtnGroup17.add(eptBtn78);
         eptBtn78.setText("5");
@@ -1280,20 +1280,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn78, gridBagConstraints);
+        PANASSPanel.add(eptBtn78, gridBagConstraints);
 
         eptLabel169.setText("18 - ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 20;
-        MOSPanel.add(eptLabel169, gridBagConstraints);
+        PANASSPanel.add(eptLabel169, gridBagConstraints);
 
         eptLabel71.setText("Con quien divertirse");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel71, gridBagConstraints);
+        PANASSPanel.add(eptLabel71, gridBagConstraints);
 
         eptBtnGroup18.add(eptBtn79);
         eptBtn79.setText("1");
@@ -1302,7 +1302,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn79, gridBagConstraints);
+        PANASSPanel.add(eptBtn79, gridBagConstraints);
 
         eptBtnGroup18.add(eptBtn80);
         eptBtn80.setText("2");
@@ -1311,7 +1311,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn80, gridBagConstraints);
+        PANASSPanel.add(eptBtn80, gridBagConstraints);
 
         eptBtnGroup18.add(eptBtn81);
         eptBtn81.setText("3");
@@ -1320,7 +1320,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn81, gridBagConstraints);
+        PANASSPanel.add(eptBtn81, gridBagConstraints);
 
         eptBtnGroup18.add(eptBtn82);
         eptBtn82.setText("4");
@@ -1329,7 +1329,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn82, gridBagConstraints);
+        PANASSPanel.add(eptBtn82, gridBagConstraints);
 
         eptBtnGroup18.add(eptBtn83);
         eptBtn83.setText("5");
@@ -1338,20 +1338,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn83, gridBagConstraints);
+        PANASSPanel.add(eptBtn83, gridBagConstraints);
 
         eptLabel170.setText("19 - ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 21;
-        MOSPanel.add(eptLabel170, gridBagConstraints);
+        PANASSPanel.add(eptLabel170, gridBagConstraints);
 
         eptLabel72.setText("Que comprenda sus problemas");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel72, gridBagConstraints);
+        PANASSPanel.add(eptLabel72, gridBagConstraints);
 
         eptBtnGroup19.add(eptBtn84);
         eptBtn84.setText("1");
@@ -1360,7 +1360,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn84, gridBagConstraints);
+        PANASSPanel.add(eptBtn84, gridBagConstraints);
 
         eptBtnGroup19.add(eptBtn85);
         eptBtn85.setText("2");
@@ -1369,7 +1369,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn85, gridBagConstraints);
+        PANASSPanel.add(eptBtn85, gridBagConstraints);
 
         eptBtnGroup19.add(eptBtn86);
         eptBtn86.setText("3");
@@ -1378,7 +1378,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn86, gridBagConstraints);
+        PANASSPanel.add(eptBtn86, gridBagConstraints);
 
         eptBtnGroup19.add(eptBtn87);
         eptBtn87.setText("4");
@@ -1387,7 +1387,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn87, gridBagConstraints);
+        PANASSPanel.add(eptBtn87, gridBagConstraints);
 
         eptBtnGroup19.add(eptBtn88);
         eptBtn88.setText("5");
@@ -1396,20 +1396,20 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn88, gridBagConstraints);
+        PANASSPanel.add(eptBtn88, gridBagConstraints);
 
         eptLabel171.setText("20 - ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 22;
-        MOSPanel.add(eptLabel171, gridBagConstraints);
+        PANASSPanel.add(eptLabel171, gridBagConstraints);
 
         eptLabel73.setText("A quien amar y hacerle sentirse querido");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(eptLabel73, gridBagConstraints);
+        PANASSPanel.add(eptLabel73, gridBagConstraints);
 
         eptBtnGroup20.add(eptBtn89);
         eptBtn89.setText("1");
@@ -1418,7 +1418,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn89, gridBagConstraints);
+        PANASSPanel.add(eptBtn89, gridBagConstraints);
 
         eptBtnGroup20.add(eptBtn90);
         eptBtn90.setText("2");
@@ -1427,7 +1427,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn90, gridBagConstraints);
+        PANASSPanel.add(eptBtn90, gridBagConstraints);
 
         eptBtnGroup20.add(eptBtn91);
         eptBtn91.setText("3");
@@ -1436,7 +1436,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn91, gridBagConstraints);
+        PANASSPanel.add(eptBtn91, gridBagConstraints);
 
         eptBtnGroup20.add(eptBtn92);
         eptBtn92.setText("4");
@@ -1445,7 +1445,7 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        MOSPanel.add(eptBtn92, gridBagConstraints);
+        PANASSPanel.add(eptBtn92, gridBagConstraints);
 
         eptBtnGroup20.add(eptBtn93);
         eptBtn93.setText("5");
@@ -1454,14 +1454,14 @@ public class MOS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        MOSPanel.add(eptBtn93, gridBagConstraints);
+        PANASSPanel.add(eptBtn93, gridBagConstraints);
 
         PANASLabel74.setText("CUESTIONES: ¿Cuenta con ALGUIEN?");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        MOSPanel.add(PANASLabel74, gridBagConstraints);
+        PANASSPanel.add(PANASLabel74, gridBagConstraints);
 
         PANASLabel32.setText("<html>La gente busca a otras personas para encontrar compañía, asistencia u otros tipos de ayuda. <br> ¿Con qué frecuencia Vd. dispone de cada uno de los siguientes tipos de apoyo cuando lo necesita? <br> (Seleccione los números de cada fila). <br></html>");
 
@@ -1549,7 +1549,7 @@ public class MOS extends Test  {
                         .addGap(10, 10, 10)
                         .addGroup(PANASPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PANASLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MOSPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 657, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(PANASSPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 657, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(47, 47, 47))
         );
         PANASPanelLayout.setVerticalGroup(
@@ -1591,7 +1591,7 @@ public class MOS extends Test  {
                             .addComponent(PANASLabel221, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(MOSTotal))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(MOSPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PANASSPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PANASLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7))
@@ -1602,13 +1602,13 @@ public class MOS extends Test  {
         add(eptScroll, "card1");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void eptBtn43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eptBtn43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_eptBtn43ActionPerformed
-
     private void MOSFamiliaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MOSFamiliaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MOSFamiliaActionPerformed
+
+    private void eptBtn43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eptBtn43ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eptBtn43ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1617,7 +1617,6 @@ public class MOS extends Test  {
     private javax.swing.JLabel AyudaMaterial;
     private javax.swing.JTextField MOSAmigos;
     private javax.swing.JTextField MOSFamilia;
-    private javax.swing.JPanel MOSPanel;
     private javax.swing.JLabel MOSTotal;
     private javax.swing.JToggleButton PANASBtn141;
     private javax.swing.JToggleButton PANASBtn1411;
@@ -1666,6 +1665,7 @@ public class MOS extends Test  {
     private javax.swing.JLabel PANASLabel65;
     private javax.swing.JLabel PANASLabel74;
     private javax.swing.JPanel PANASPanel;
+    private javax.swing.JPanel PANASSPanel;
     private javax.swing.JToggleButton PANASToggleButton37;
     private javax.swing.JToggleButton PANASToggleButton38;
     private javax.swing.JToggleButton PANASToggleButton39;

@@ -53,12 +53,12 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,60,0,0,2,-15"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-29,0,0,3,41"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
   <SubComponents>
-    <Container class="javax.swing.JScrollPane" name="eptScroll">
+    <Container class="javax.swing.JScrollPane" name="MOSScroll">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
           <CardConstraints cardName="card1"/>
@@ -67,7 +67,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="eptPanel">
+        <Container class="javax.swing.JPanel" name="MOSPanel">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -81,7 +81,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="MOSLabel32" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <Component id="PANASPanel" min="-2" pref="657" max="-2" attributes="0"/>
+                                      <Component id="MOSSSPanel" min="-2" pref="657" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
@@ -117,7 +117,7 @@
                       <Component id="MOSLabel32" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="PANASPanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="MOSSSPanel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="MOSLabel217" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -154,7 +154,7 @@
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;A continuaci&#xf3;n se indican diversos sentimientos y emociones que suele experimentar la gente.&lt;br&gt;  Lea cada uno de ellos y, refiri&#xe9;ndolo a usted, conteste indicando como se ha sentido &lt;b&gt;habitualmente&lt;/b&gt;.&lt;br&gt;&lt;br&gt;&lt;i&gt;Habitualmente (en general) me he sentido:&lt;/i&gt;&lt;/html&gt; "/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="PANASPanel">
+            <Container class="javax.swing.JPanel" name="MOSSSPanel">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -475,7 +475,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel151">
+                <Component class="javax.swing.JLabel" name="MOSLabel151">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
@@ -485,7 +485,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel152">
+                <Component class="javax.swing.JLabel" name="MOSLabel152">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
@@ -495,7 +495,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel153">
+                <Component class="javax.swing.JLabel" name="MOSLabel153">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
@@ -505,7 +505,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel154">
+                <Component class="javax.swing.JLabel" name="MOSLabel154">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="5"/>
                   </Properties>
@@ -515,7 +515,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel155">
+                <Component class="javax.swing.JLabel" name="MOSLabel155">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="6"/>
                   </Properties>
@@ -585,7 +585,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel58">
+                <Component class="javax.swing.JLabel" name="MOSLabel58">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
@@ -595,7 +595,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptToggleButton37">
+                <Component class="javax.swing.JToggleButton" name="MOSToggleButton37">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup3"/>
@@ -609,7 +609,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptToggleButton38">
+                <Component class="javax.swing.JToggleButton" name="MOSToggleButton38">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup4"/>
@@ -622,7 +622,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptToggleButton39">
+                <Component class="javax.swing.JToggleButton" name="MOSToggleButton39">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup4"/>
@@ -635,7 +635,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptToggleButton40">
+                <Component class="javax.swing.JToggleButton" name="MOSToggleButton40">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup6"/>
@@ -648,7 +648,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptToggleButton41">
+                <Component class="javax.swing.JToggleButton" name="MOSToggleButton41">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup6"/>
@@ -671,7 +671,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn19">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn19">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup1"/>
@@ -685,7 +685,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn172">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn172">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup2"/>
@@ -698,7 +698,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn1512">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn1512">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup3"/>
@@ -712,7 +712,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptToggleButton42">
+                <Component class="javax.swing.JToggleButton" name="MOSToggleButton42">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup4"/>
@@ -725,7 +725,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptDBtn18">
+                <Component class="javax.swing.JToggleButton" name="MOSDBtn18">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup6"/>
@@ -738,7 +738,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptFBtn18">
+                <Component class="javax.swing.JToggleButton" name="MOSFBtn18">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup5"/>
@@ -752,7 +752,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel157">
+                <Component class="javax.swing.JLabel" name="MOSLabel157">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="7"/>
                   </Properties>
@@ -772,7 +772,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn18">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn18">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup7"/>
@@ -785,7 +785,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn20">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn20">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup7"/>
@@ -798,7 +798,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn21">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn21">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup7"/>
@@ -811,7 +811,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn22">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn22">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup7"/>
@@ -824,7 +824,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn23">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn23">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup7"/>
@@ -837,7 +837,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel158">
+                <Component class="javax.swing.JLabel" name="MOSLabel158">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="8"/>
                   </Properties>
@@ -847,7 +847,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel60">
+                <Component class="javax.swing.JLabel" name="MOSSLabel60">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Enojado/a, hostil"/>
                   </Properties>
@@ -857,7 +857,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn24">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn24">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup8"/>
@@ -870,7 +870,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn25">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn25">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup8"/>
@@ -883,7 +883,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn26">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn26">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup8"/>
@@ -896,7 +896,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn27">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn27">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup8"/>
@@ -909,7 +909,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn28">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn28">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup8"/>
@@ -922,7 +922,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel159">
+                <Component class="javax.swing.JLabel" name="MOSLabel159">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="9"/>
                   </Properties>
@@ -942,7 +942,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn29">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn29">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup9"/>
@@ -956,7 +956,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn30">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn30">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup9"/>
@@ -970,7 +970,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn31">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn31">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup9"/>
@@ -984,7 +984,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn32">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn32">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup9"/>
@@ -998,7 +998,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn33">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn33">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup9"/>
@@ -1012,7 +1012,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel160">
+                <Component class="javax.swing.JLabel" name="MOSLabel160">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="10"/>
                   </Properties>
@@ -1032,7 +1032,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn34">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn34">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup10"/>
@@ -1046,7 +1046,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn35">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn35">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup10"/>
@@ -1060,7 +1060,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn36">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn36">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup10"/>
@@ -1074,7 +1074,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn37">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn37">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup10"/>
@@ -1088,7 +1088,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn38">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn38">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup10"/>
@@ -1112,7 +1112,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn39">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn39">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup12"/>
@@ -1126,7 +1126,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn40">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn40">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup12"/>
@@ -1140,7 +1140,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn41">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn41">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup12"/>
@@ -1154,7 +1154,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn42">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn42">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup12"/>
@@ -1168,7 +1168,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn43">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn43">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup12"/>
@@ -1177,7 +1177,7 @@
                     <Property name="name" type="java.lang.String" value="positivo" noResource="true"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eptBtn43ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MOSBtn43ActionPerformed"/>
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -1185,7 +1185,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel162">
+                <Component class="javax.swing.JLabel" name="MOSLabel162">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="11"/>
                   </Properties>
@@ -1195,7 +1195,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel64">
+                <Component class="javax.swing.JLabel" name="MOSLabel64">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Irritable, malhumorado/a"/>
                   </Properties>
@@ -1205,7 +1205,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn44">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn44">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup11"/>
@@ -1218,7 +1218,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn45">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn45">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup11"/>
@@ -1231,7 +1231,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn46">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn46">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup11"/>
@@ -1244,7 +1244,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn47">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn47">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup11"/>
@@ -1257,7 +1257,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn48">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn48">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup11"/>
@@ -1270,7 +1270,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel163">
+                <Component class="javax.swing.JLabel" name="MOSLabel163">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="12"/>
                   </Properties>
@@ -1280,7 +1280,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel164">
+                <Component class="javax.swing.JLabel" name="MOSLabel164">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="13"/>
                   </Properties>
@@ -1300,7 +1300,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn54">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn54">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup13"/>
@@ -1313,7 +1313,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn55">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn55">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup13"/>
@@ -1326,7 +1326,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn56">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn56">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup13"/>
@@ -1339,7 +1339,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn57">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn57">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup13"/>
@@ -1352,7 +1352,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn58">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn58">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup13"/>
@@ -1365,7 +1365,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel165">
+                <Component class="javax.swing.JLabel" name="MOSLabel165">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="14"/>
                   </Properties>
@@ -1385,7 +1385,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn59">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn59">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup14"/>
@@ -1399,7 +1399,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn60">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn60">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup14"/>
@@ -1413,7 +1413,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn61">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn61">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup14"/>
@@ -1427,7 +1427,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn62">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn62">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup14"/>
@@ -1441,7 +1441,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn63">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn63">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup14"/>
@@ -1455,7 +1455,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel166">
+                <Component class="javax.swing.JLabel" name="MOSLabel166">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="15"/>
                   </Properties>
@@ -1465,7 +1465,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel68">
+                <Component class="javax.swing.JLabel" name="MOSLabel68">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="- Nervioso/a"/>
                   </Properties>
@@ -1475,7 +1475,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn64">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn64">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup15"/>
@@ -1488,7 +1488,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn65">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn65">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup15"/>
@@ -1501,7 +1501,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn66">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn66">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup15"/>
@@ -1514,7 +1514,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn67">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn67">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup15"/>
@@ -1527,7 +1527,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn68">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn68">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup15"/>
@@ -1540,7 +1540,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel167">
+                <Component class="javax.swing.JLabel" name="MOSLabel167">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="16"/>
                   </Properties>
@@ -1560,7 +1560,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn69">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn69">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup16"/>
@@ -1574,7 +1574,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn70">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn70">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup16"/>
@@ -1588,7 +1588,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn71">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn71">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup16"/>
@@ -1602,7 +1602,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn72">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn72">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup16"/>
@@ -1616,7 +1616,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn73">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn73">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup16"/>
@@ -1630,7 +1630,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel168">
+                <Component class="javax.swing.JLabel" name="MOSLabel168">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="17"/>
                   </Properties>
@@ -1650,7 +1650,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn74">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn74">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup17"/>
@@ -1664,7 +1664,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn75">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn75">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup17"/>
@@ -1678,7 +1678,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn76">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn76">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup17"/>
@@ -1692,7 +1692,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn77">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn77">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup17"/>
@@ -1706,7 +1706,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn78">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn78">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup17"/>
@@ -1720,7 +1720,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel169">
+                <Component class="javax.swing.JLabel" name="MOSLabel169">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="18"/>
                   </Properties>
@@ -1740,7 +1740,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn79">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn79">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup18"/>
@@ -1753,7 +1753,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn80">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn80">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup18"/>
@@ -1766,7 +1766,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn81">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn81">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup18"/>
@@ -1779,7 +1779,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn82">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn82">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup18"/>
@@ -1792,7 +1792,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn83">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn83">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup18"/>
@@ -1805,7 +1805,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel170">
+                <Component class="javax.swing.JLabel" name="MOSLabel170">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="19"/>
                   </Properties>
@@ -1825,7 +1825,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn84">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn84">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup19"/>
@@ -1839,7 +1839,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn85">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn85">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup19"/>
@@ -1853,7 +1853,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn86">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn86">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup19"/>
@@ -1861,13 +1861,16 @@
                     <Property name="text" type="java.lang.String" value="3"/>
                     <Property name="name" type="java.lang.String" value="positivo" noResource="true"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MOSBtn86ActionPerformed"/>
+                  </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
                       <GridBagConstraints gridX="4" gridY="21" gridWidth="1" gridHeight="1" fill="1" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn87">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn87">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup19"/>
@@ -1881,7 +1884,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn88">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn88">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup19"/>
@@ -1895,7 +1898,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="eptLabel171">
+                <Component class="javax.swing.JLabel" name="MOSLabel171">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="20"/>
                   </Properties>
@@ -1915,7 +1918,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn89">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn89">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup20"/>
@@ -1928,7 +1931,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn90">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn90">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup20"/>
@@ -1941,7 +1944,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn91">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn91">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup20"/>
@@ -1954,7 +1957,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn92">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn92">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup20"/>
@@ -1967,7 +1970,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="eptBtn93">
+                <Component class="javax.swing.JToggleButton" name="MOSBtn93">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="eptBtnGroup20"/>

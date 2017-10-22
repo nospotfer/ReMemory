@@ -1,15 +1,25 @@
 #NEUROIMATGE
-#Thu Oct 19 14:38:05 CEST 2017
-OHQSFTotal=0
-mfeTotal=0
-hadTotalD=0
-upsaTotal=0
-comunicacioSub=0
-hadTotalA=0
-EPTTotal=7
+#Sun Oct 22 20:49:12 CEST 2017
+MOSFamilia=
 rseTotal=0
-comprensioSub=0
-qolTotal=0
-IMAGETotal=0
+AfectPositivo=0
+OHQSFTotal=0
 dukeTotal=0
+qolTotal=0
+comunicacioSub=0
+IMAGETotal=0
+upsaTotal=0
+AfectNegativo=0
+hadTotalD=0
 puntTotalMoca1=1
+hadTotalA=0
+MOSAmigos=
+comprensioSub=0
+MOSTotal=0
+EPTTotal=6
+AyudaMaterial=0
+SocialOcio=0
+ApoyoAfectivo=0
+PanasTotal=0
+mfeTotal=0
+ApoyoEmocional=0

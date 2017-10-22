@@ -35,7 +35,7 @@ public class PANAS extends Test  {
         label = "PANAS";
         numPaginesTotal = this.getComponentCount();
         
-        initTaula(PANASPanel);
+        initTaula(MOSSSPanel);
        // PANAS.initTaula(PANASPanel,AfectivoNegativo);
         //PANAS.initTaula(PANASPanel,PanasTotal);
     }
@@ -122,11 +122,11 @@ public class PANAS extends Test  {
         eptBtnGroup18 = new javax.swing.ButtonGroup();
         eptBtnGroup19 = new javax.swing.ButtonGroup();
         eptBtnGroup20 = new javax.swing.ButtonGroup();
-        eptScroll = new javax.swing.JScrollPane();
-        eptPanel = new javax.swing.JPanel();
+        MOSScroll = new javax.swing.JScrollPane();
+        MOSPanel = new javax.swing.JPanel();
         MOSLabel33 = new javax.swing.JLabel();
         MOSLabel32 = new javax.swing.JLabel();
-        PANASPanel = new javax.swing.JPanel();
+        MOSSSPanel = new javax.swing.JPanel();
         MOSBtn1411 = new javax.swing.JToggleButton();
         MOSBtn14 = new javax.swing.JToggleButton();
         MOSBtn151 = new javax.swing.JToggleButton();
@@ -151,128 +151,128 @@ public class PANAS extends Test  {
         MOSLabel11 = new javax.swing.JLabel();
         MOSLabel149 = new javax.swing.JLabel();
         MOSLabel150 = new javax.swing.JLabel();
-        eptLabel151 = new javax.swing.JLabel();
-        eptLabel152 = new javax.swing.JLabel();
-        eptLabel153 = new javax.swing.JLabel();
-        eptLabel154 = new javax.swing.JLabel();
-        eptLabel155 = new javax.swing.JLabel();
+        MOSLabel151 = new javax.swing.JLabel();
+        MOSLabel152 = new javax.swing.JLabel();
+        MOSLabel153 = new javax.swing.JLabel();
+        MOSLabel154 = new javax.swing.JLabel();
+        MOSLabel155 = new javax.swing.JLabel();
         MOSLabel114 = new javax.swing.JLabel();
         MOSLabel53 = new javax.swing.JLabel();
         MOSLabel54 = new javax.swing.JLabel();
         MOSLabel55 = new javax.swing.JLabel();
         MOSLabel56 = new javax.swing.JLabel();
         MOSLabel57 = new javax.swing.JLabel();
-        eptLabel58 = new javax.swing.JLabel();
-        eptToggleButton37 = new javax.swing.JToggleButton();
-        eptToggleButton38 = new javax.swing.JToggleButton();
-        eptToggleButton39 = new javax.swing.JToggleButton();
-        eptToggleButton40 = new javax.swing.JToggleButton();
-        eptToggleButton41 = new javax.swing.JToggleButton();
+        MOSLabel58 = new javax.swing.JLabel();
+        MOSToggleButton37 = new javax.swing.JToggleButton();
+        MOSToggleButton38 = new javax.swing.JToggleButton();
+        MOSToggleButton39 = new javax.swing.JToggleButton();
+        MOSToggleButton40 = new javax.swing.JToggleButton();
+        MOSToggleButton41 = new javax.swing.JToggleButton();
         MOSLabel156 = new javax.swing.JLabel();
-        eptBtn19 = new javax.swing.JToggleButton();
-        eptBtn172 = new javax.swing.JToggleButton();
-        eptBtn1512 = new javax.swing.JToggleButton();
-        eptToggleButton42 = new javax.swing.JToggleButton();
-        eptDBtn18 = new javax.swing.JToggleButton();
-        eptFBtn18 = new javax.swing.JToggleButton();
-        eptLabel157 = new javax.swing.JLabel();
+        MOSBtn19 = new javax.swing.JToggleButton();
+        MOSBtn172 = new javax.swing.JToggleButton();
+        MOSBtn1512 = new javax.swing.JToggleButton();
+        MOSToggleButton42 = new javax.swing.JToggleButton();
+        MOSDBtn18 = new javax.swing.JToggleButton();
+        MOSFBtn18 = new javax.swing.JToggleButton();
+        MOSLabel157 = new javax.swing.JLabel();
         MOSLabel59 = new javax.swing.JLabel();
-        eptBtn18 = new javax.swing.JToggleButton();
-        eptBtn20 = new javax.swing.JToggleButton();
-        eptBtn21 = new javax.swing.JToggleButton();
-        eptBtn22 = new javax.swing.JToggleButton();
-        eptBtn23 = new javax.swing.JToggleButton();
-        eptLabel158 = new javax.swing.JLabel();
-        eptLabel60 = new javax.swing.JLabel();
-        eptBtn24 = new javax.swing.JToggleButton();
-        eptBtn25 = new javax.swing.JToggleButton();
-        eptBtn26 = new javax.swing.JToggleButton();
-        eptBtn27 = new javax.swing.JToggleButton();
-        eptBtn28 = new javax.swing.JToggleButton();
-        eptLabel159 = new javax.swing.JLabel();
+        MOSBtn18 = new javax.swing.JToggleButton();
+        MOSBtn20 = new javax.swing.JToggleButton();
+        MOSBtn21 = new javax.swing.JToggleButton();
+        MOSBtn22 = new javax.swing.JToggleButton();
+        MOSBtn23 = new javax.swing.JToggleButton();
+        MOSLabel158 = new javax.swing.JLabel();
+        MOSSLabel60 = new javax.swing.JLabel();
+        MOSBtn24 = new javax.swing.JToggleButton();
+        MOSBtn25 = new javax.swing.JToggleButton();
+        MOSBtn26 = new javax.swing.JToggleButton();
+        MOSBtn27 = new javax.swing.JToggleButton();
+        MOSBtn28 = new javax.swing.JToggleButton();
+        MOSLabel159 = new javax.swing.JLabel();
         MOSLabel60 = new javax.swing.JLabel();
-        eptBtn29 = new javax.swing.JToggleButton();
-        eptBtn30 = new javax.swing.JToggleButton();
-        eptBtn31 = new javax.swing.JToggleButton();
-        eptBtn32 = new javax.swing.JToggleButton();
-        eptBtn33 = new javax.swing.JToggleButton();
-        eptLabel160 = new javax.swing.JLabel();
+        MOSBtn29 = new javax.swing.JToggleButton();
+        MOSBtn30 = new javax.swing.JToggleButton();
+        MOSBtn31 = new javax.swing.JToggleButton();
+        MOSBtn32 = new javax.swing.JToggleButton();
+        MOSBtn33 = new javax.swing.JToggleButton();
+        MOSLabel160 = new javax.swing.JLabel();
         MOSLabel62 = new javax.swing.JLabel();
-        eptBtn34 = new javax.swing.JToggleButton();
-        eptBtn35 = new javax.swing.JToggleButton();
-        eptBtn36 = new javax.swing.JToggleButton();
-        eptBtn37 = new javax.swing.JToggleButton();
-        eptBtn38 = new javax.swing.JToggleButton();
+        MOSBtn34 = new javax.swing.JToggleButton();
+        MOSBtn35 = new javax.swing.JToggleButton();
+        MOSBtn36 = new javax.swing.JToggleButton();
+        MOSBtn37 = new javax.swing.JToggleButton();
+        MOSBtn38 = new javax.swing.JToggleButton();
         MOSLabel63 = new javax.swing.JLabel();
-        eptBtn39 = new javax.swing.JToggleButton();
-        eptBtn40 = new javax.swing.JToggleButton();
-        eptBtn41 = new javax.swing.JToggleButton();
-        eptBtn42 = new javax.swing.JToggleButton();
-        eptBtn43 = new javax.swing.JToggleButton();
-        eptLabel162 = new javax.swing.JLabel();
-        eptLabel64 = new javax.swing.JLabel();
-        eptBtn44 = new javax.swing.JToggleButton();
-        eptBtn45 = new javax.swing.JToggleButton();
-        eptBtn46 = new javax.swing.JToggleButton();
-        eptBtn47 = new javax.swing.JToggleButton();
-        eptBtn48 = new javax.swing.JToggleButton();
-        eptLabel163 = new javax.swing.JLabel();
-        eptLabel164 = new javax.swing.JLabel();
+        MOSBtn39 = new javax.swing.JToggleButton();
+        MOSBtn40 = new javax.swing.JToggleButton();
+        MOSBtn41 = new javax.swing.JToggleButton();
+        MOSBtn42 = new javax.swing.JToggleButton();
+        MOSBtn43 = new javax.swing.JToggleButton();
+        MOSLabel162 = new javax.swing.JLabel();
+        MOSLabel64 = new javax.swing.JLabel();
+        MOSBtn44 = new javax.swing.JToggleButton();
+        MOSBtn45 = new javax.swing.JToggleButton();
+        MOSBtn46 = new javax.swing.JToggleButton();
+        MOSBtn47 = new javax.swing.JToggleButton();
+        MOSBtn48 = new javax.swing.JToggleButton();
+        MOSLabel163 = new javax.swing.JLabel();
+        MOSLabel164 = new javax.swing.JLabel();
         MOSLabel66 = new javax.swing.JLabel();
-        eptBtn54 = new javax.swing.JToggleButton();
-        eptBtn55 = new javax.swing.JToggleButton();
-        eptBtn56 = new javax.swing.JToggleButton();
-        eptBtn57 = new javax.swing.JToggleButton();
-        eptBtn58 = new javax.swing.JToggleButton();
-        eptLabel165 = new javax.swing.JLabel();
+        MOSBtn54 = new javax.swing.JToggleButton();
+        MOSBtn55 = new javax.swing.JToggleButton();
+        MOSBtn56 = new javax.swing.JToggleButton();
+        MOSBtn57 = new javax.swing.JToggleButton();
+        MOSBtn58 = new javax.swing.JToggleButton();
+        MOSLabel165 = new javax.swing.JLabel();
         MOSLabel67 = new javax.swing.JLabel();
-        eptBtn59 = new javax.swing.JToggleButton();
-        eptBtn60 = new javax.swing.JToggleButton();
-        eptBtn61 = new javax.swing.JToggleButton();
-        eptBtn62 = new javax.swing.JToggleButton();
-        eptBtn63 = new javax.swing.JToggleButton();
-        eptLabel166 = new javax.swing.JLabel();
-        eptLabel68 = new javax.swing.JLabel();
-        eptBtn64 = new javax.swing.JToggleButton();
-        eptBtn65 = new javax.swing.JToggleButton();
-        eptBtn66 = new javax.swing.JToggleButton();
-        eptBtn67 = new javax.swing.JToggleButton();
-        eptBtn68 = new javax.swing.JToggleButton();
-        eptLabel167 = new javax.swing.JLabel();
+        MOSBtn59 = new javax.swing.JToggleButton();
+        MOSBtn60 = new javax.swing.JToggleButton();
+        MOSBtn61 = new javax.swing.JToggleButton();
+        MOSBtn62 = new javax.swing.JToggleButton();
+        MOSBtn63 = new javax.swing.JToggleButton();
+        MOSLabel166 = new javax.swing.JLabel();
+        MOSLabel68 = new javax.swing.JLabel();
+        MOSBtn64 = new javax.swing.JToggleButton();
+        MOSBtn65 = new javax.swing.JToggleButton();
+        MOSBtn66 = new javax.swing.JToggleButton();
+        MOSBtn67 = new javax.swing.JToggleButton();
+        MOSBtn68 = new javax.swing.JToggleButton();
+        MOSLabel167 = new javax.swing.JLabel();
         MOSLabel69 = new javax.swing.JLabel();
-        eptBtn69 = new javax.swing.JToggleButton();
-        eptBtn70 = new javax.swing.JToggleButton();
-        eptBtn71 = new javax.swing.JToggleButton();
-        eptBtn72 = new javax.swing.JToggleButton();
-        eptBtn73 = new javax.swing.JToggleButton();
-        eptLabel168 = new javax.swing.JLabel();
+        MOSBtn69 = new javax.swing.JToggleButton();
+        MOSBtn70 = new javax.swing.JToggleButton();
+        MOSBtn71 = new javax.swing.JToggleButton();
+        MOSBtn72 = new javax.swing.JToggleButton();
+        MOSBtn73 = new javax.swing.JToggleButton();
+        MOSLabel168 = new javax.swing.JLabel();
         MOSLabel70 = new javax.swing.JLabel();
-        eptBtn74 = new javax.swing.JToggleButton();
-        eptBtn75 = new javax.swing.JToggleButton();
-        eptBtn76 = new javax.swing.JToggleButton();
-        eptBtn77 = new javax.swing.JToggleButton();
-        eptBtn78 = new javax.swing.JToggleButton();
-        eptLabel169 = new javax.swing.JLabel();
+        MOSBtn74 = new javax.swing.JToggleButton();
+        MOSBtn75 = new javax.swing.JToggleButton();
+        MOSBtn76 = new javax.swing.JToggleButton();
+        MOSBtn77 = new javax.swing.JToggleButton();
+        MOSBtn78 = new javax.swing.JToggleButton();
+        MOSLabel169 = new javax.swing.JLabel();
         MOSLabel71 = new javax.swing.JLabel();
-        eptBtn79 = new javax.swing.JToggleButton();
-        eptBtn80 = new javax.swing.JToggleButton();
-        eptBtn81 = new javax.swing.JToggleButton();
-        eptBtn82 = new javax.swing.JToggleButton();
-        eptBtn83 = new javax.swing.JToggleButton();
-        eptLabel170 = new javax.swing.JLabel();
+        MOSBtn79 = new javax.swing.JToggleButton();
+        MOSBtn80 = new javax.swing.JToggleButton();
+        MOSBtn81 = new javax.swing.JToggleButton();
+        MOSBtn82 = new javax.swing.JToggleButton();
+        MOSBtn83 = new javax.swing.JToggleButton();
+        MOSLabel170 = new javax.swing.JLabel();
         MOSLabel72 = new javax.swing.JLabel();
-        eptBtn84 = new javax.swing.JToggleButton();
-        eptBtn85 = new javax.swing.JToggleButton();
-        eptBtn86 = new javax.swing.JToggleButton();
-        eptBtn87 = new javax.swing.JToggleButton();
-        eptBtn88 = new javax.swing.JToggleButton();
-        eptLabel171 = new javax.swing.JLabel();
+        MOSBtn84 = new javax.swing.JToggleButton();
+        MOSBtn85 = new javax.swing.JToggleButton();
+        MOSBtn86 = new javax.swing.JToggleButton();
+        MOSBtn87 = new javax.swing.JToggleButton();
+        MOSBtn88 = new javax.swing.JToggleButton();
+        MOSLabel171 = new javax.swing.JLabel();
         MOSLabel73 = new javax.swing.JLabel();
-        eptBtn89 = new javax.swing.JToggleButton();
-        eptBtn90 = new javax.swing.JToggleButton();
-        eptBtn91 = new javax.swing.JToggleButton();
-        eptBtn92 = new javax.swing.JToggleButton();
-        eptBtn93 = new javax.swing.JToggleButton();
+        MOSBtn89 = new javax.swing.JToggleButton();
+        MOSBtn90 = new javax.swing.JToggleButton();
+        MOSBtn91 = new javax.swing.JToggleButton();
+        MOSBtn92 = new javax.swing.JToggleButton();
+        MOSBtn93 = new javax.swing.JToggleButton();
         MOSLabel217 = new javax.swing.JLabel();
         AfectivoPositivo = new javax.swing.JLabel();
         MOSLabel218 = new javax.swing.JLabel();
@@ -287,8 +287,8 @@ public class PANAS extends Test  {
 
         MOSLabel32.setText("<html>A continuación se indican diversos sentimientos y emociones que suele experimentar la gente.<br>  Lea cada uno de ellos y, refiriéndolo a usted, conteste indicando como se ha sentido <b>habitualmente</b>.<br><br><i>Habitualmente (en general) me he sentido:</i></html> ");
 
-        PANASPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PANAS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
-        PANASPanel.setLayout(new java.awt.GridBagLayout());
+        MOSSSPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PANAS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        MOSSSPanel.setLayout(new java.awt.GridBagLayout());
 
         eptBtnGroup2.add(MOSBtn1411);
         MOSBtn1411.setText("1");
@@ -296,7 +296,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn1411, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn1411, gridBagConstraints);
 
         eptBtnGroup1.add(MOSBtn14);
         MOSBtn14.setText("1");
@@ -305,7 +305,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn14, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn14, gridBagConstraints);
 
         eptBtnGroup2.add(MOSBtn151);
         MOSBtn151.setText("2");
@@ -313,7 +313,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn151, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn151, gridBagConstraints);
 
         eptBtnGroup1.add(MOSBtn15);
         MOSBtn15.setText("2");
@@ -322,7 +322,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn15, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn15, gridBagConstraints);
 
         eptBtnGroup2.add(MOSBtn161);
         MOSBtn161.setText("3");
@@ -330,7 +330,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn161, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn161, gridBagConstraints);
 
         eptBtnGroup1.add(MOSBtn16);
         MOSBtn16.setText("3");
@@ -339,7 +339,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn16, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn16, gridBagConstraints);
 
         eptBtnGroup1.add(MOSBtn17);
         MOSBtn17.setText("5");
@@ -348,7 +348,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(MOSBtn17, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn17, gridBagConstraints);
 
         eptBtnGroup2.add(MOSBtn171);
         MOSBtn171.setText("5");
@@ -356,7 +356,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(MOSBtn171, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn171, gridBagConstraints);
 
         eptBtnGroup3.add(MOSBtn141);
         MOSBtn141.setText("1");
@@ -365,7 +365,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn141, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn141, gridBagConstraints);
 
         eptBtnGroup3.add(MOSBtn1511);
         MOSBtn1511.setText("5");
@@ -374,7 +374,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(MOSBtn1511, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn1511, gridBagConstraints);
 
         eptBtnGroup5.add(MOSBtn1611);
         MOSBtn1611.setText("2");
@@ -383,7 +383,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn1611, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn1611, gridBagConstraints);
 
         eptBtnGroup3.add(MOSBtn1711);
         MOSBtn1711.setText("3");
@@ -392,7 +392,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSBtn1711, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn1711, gridBagConstraints);
 
         eptBtnGroup4.add(MOSFBtn14);
         MOSFBtn14.setText("1");
@@ -400,7 +400,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSFBtn14, gridBagConstraints);
+        MOSSSPanel.add(MOSFBtn14, gridBagConstraints);
 
         eptBtnGroup4.add(MOSFBtn15);
         MOSFBtn15.setText("2");
@@ -408,7 +408,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSFBtn15, gridBagConstraints);
+        MOSSSPanel.add(MOSFBtn15, gridBagConstraints);
 
         eptBtnGroup5.add(MOSFBtn16);
         MOSFBtn16.setText("3");
@@ -417,7 +417,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSFBtn16, gridBagConstraints);
+        MOSSSPanel.add(MOSFBtn16, gridBagConstraints);
 
         eptBtnGroup5.add(MOSFBtn17);
         MOSFBtn17.setText("5");
@@ -426,7 +426,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(MOSFBtn17, gridBagConstraints);
+        MOSSSPanel.add(MOSFBtn17, gridBagConstraints);
 
         eptBtnGroup6.add(MOSDBtn14);
         MOSDBtn14.setText("5");
@@ -435,7 +435,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipady = 2;
-        PANASPanel.add(MOSDBtn14, gridBagConstraints);
+        MOSSSPanel.add(MOSDBtn14, gridBagConstraints);
 
         eptBtnGroup6.add(MOSDBtn15);
         MOSDBtn15.setText("3");
@@ -443,7 +443,7 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSDBtn15, gridBagConstraints);
+        MOSSSPanel.add(MOSDBtn15, gridBagConstraints);
 
         eptBtnGroup5.add(MOSDBtn16);
         MOSDBtn16.setText("1");
@@ -452,71 +452,71 @@ public class PANAS extends Test  {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSDBtn16, gridBagConstraints);
+        MOSSSPanel.add(MOSDBtn16, gridBagConstraints);
 
         MOSDBtn17.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(MOSDBtn17, gridBagConstraints);
+        MOSSSPanel.add(MOSDBtn17, gridBagConstraints);
 
         MOSLabel112.setText("<html><center>Nada<br>(1)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        PANASPanel.add(MOSLabel112, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel112, gridBagConstraints);
 
         MOSLabel11.setText("<html><center>Algo<br>(2)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        PANASPanel.add(MOSLabel11, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel11, gridBagConstraints);
 
         MOSLabel149.setText("<html><center>Muchísimo<br>(5)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 2;
-        PANASPanel.add(MOSLabel149, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel149, gridBagConstraints);
 
         MOSLabel150.setText("<html><center>Moderado<br>(3)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 2);
-        PANASPanel.add(MOSLabel150, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel150, gridBagConstraints);
 
-        eptLabel151.setText("1");
+        MOSLabel151.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        PANASPanel.add(eptLabel151, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel151, gridBagConstraints);
 
-        eptLabel152.setText("2");
+        MOSLabel152.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        PANASPanel.add(eptLabel152, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel152, gridBagConstraints);
 
-        eptLabel153.setText("3");
+        MOSLabel153.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        PANASPanel.add(eptLabel153, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel153, gridBagConstraints);
 
-        eptLabel154.setText("5");
+        MOSLabel154.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        PANASPanel.add(eptLabel154, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel154, gridBagConstraints);
 
-        eptLabel155.setText("6");
+        MOSLabel155.setText("6");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        PANASPanel.add(eptLabel155, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel155, gridBagConstraints);
 
         MOSLabel114.setText("- Disgustado/a, molesto/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -524,14 +524,14 @@ public class PANAS extends Test  {
         gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        PANASPanel.add(MOSLabel114, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel114, gridBagConstraints);
 
         MOSLabel53.setText("- Interesado/a (que muestra interés)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel53, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel53, gridBagConstraints);
 
         MOSLabel54.setText("- Estresado/a, con malestar emocional o agobio");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -539,914 +539,919 @@ public class PANAS extends Test  {
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 8);
-        PANASPanel.add(MOSLabel54, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel54, gridBagConstraints);
 
         MOSLabel55.setText("- Emocionado/a, animado/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel55, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel55, gridBagConstraints);
 
         MOSLabel56.setText("- Enérgico/a, con vitalidad");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel56, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel56, gridBagConstraints);
 
         MOSLabel57.setText("- Culpable");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel57, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel57, gridBagConstraints);
 
-        eptLabel58.setText("4");
+        MOSLabel58.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        PANASPanel.add(eptLabel58, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel58, gridBagConstraints);
 
-        eptBtnGroup3.add(eptToggleButton37);
-        eptToggleButton37.setText("2");
-        eptToggleButton37.setName("positivo"); // NOI18N
+        eptBtnGroup3.add(MOSToggleButton37);
+        MOSToggleButton37.setText("2");
+        MOSToggleButton37.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptToggleButton37, gridBagConstraints);
+        MOSSSPanel.add(MOSToggleButton37, gridBagConstraints);
 
-        eptBtnGroup4.add(eptToggleButton38);
-        eptToggleButton38.setText("3");
+        eptBtnGroup4.add(MOSToggleButton38);
+        MOSToggleButton38.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptToggleButton38, gridBagConstraints);
+        MOSSSPanel.add(MOSToggleButton38, gridBagConstraints);
 
-        eptBtnGroup4.add(eptToggleButton39);
-        eptToggleButton39.setText("5");
+        eptBtnGroup4.add(MOSToggleButton39);
+        MOSToggleButton39.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptToggleButton39, gridBagConstraints);
+        MOSSSPanel.add(MOSToggleButton39, gridBagConstraints);
 
-        eptBtnGroup6.add(eptToggleButton40);
-        eptToggleButton40.setText("2");
+        eptBtnGroup6.add(MOSToggleButton40);
+        MOSToggleButton40.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptToggleButton40, gridBagConstraints);
+        MOSSSPanel.add(MOSToggleButton40, gridBagConstraints);
 
-        eptBtnGroup6.add(eptToggleButton41);
-        eptToggleButton41.setText("1");
+        eptBtnGroup6.add(MOSToggleButton41);
+        MOSToggleButton41.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptToggleButton41, gridBagConstraints);
+        MOSSSPanel.add(MOSToggleButton41, gridBagConstraints);
 
         MOSLabel156.setText("<html><center>Bastante<br>(4)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 2;
-        PANASPanel.add(MOSLabel156, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel156, gridBagConstraints);
 
-        eptBtnGroup1.add(eptBtn19);
-        eptBtn19.setText("4");
-        eptBtn19.setName("positivo"); // NOI18N
+        eptBtnGroup1.add(MOSBtn19);
+        MOSBtn19.setText("4");
+        MOSBtn19.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn19, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn19, gridBagConstraints);
 
-        eptBtnGroup2.add(eptBtn172);
-        eptBtn172.setText("4");
+        eptBtnGroup2.add(MOSBtn172);
+        MOSBtn172.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn172, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn172, gridBagConstraints);
 
-        eptBtnGroup3.add(eptBtn1512);
-        eptBtn1512.setText("4");
-        eptBtn1512.setName("positivo"); // NOI18N
+        eptBtnGroup3.add(MOSBtn1512);
+        MOSBtn1512.setText("4");
+        MOSBtn1512.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn1512, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn1512, gridBagConstraints);
 
-        eptBtnGroup4.add(eptToggleButton42);
-        eptToggleButton42.setText("4");
+        eptBtnGroup4.add(MOSToggleButton42);
+        MOSToggleButton42.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptToggleButton42, gridBagConstraints);
+        MOSSSPanel.add(MOSToggleButton42, gridBagConstraints);
 
-        eptBtnGroup6.add(eptDBtn18);
-        eptDBtn18.setText("4");
+        eptBtnGroup6.add(MOSDBtn18);
+        MOSDBtn18.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptDBtn18, gridBagConstraints);
+        MOSSSPanel.add(MOSDBtn18, gridBagConstraints);
 
-        eptBtnGroup5.add(eptFBtn18);
-        eptFBtn18.setText("4");
-        eptFBtn18.setName("positivo"); // NOI18N
+        eptBtnGroup5.add(MOSFBtn18);
+        MOSFBtn18.setText("4");
+        MOSFBtn18.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptFBtn18, gridBagConstraints);
+        MOSSSPanel.add(MOSFBtn18, gridBagConstraints);
 
-        eptLabel157.setText("7");
+        MOSLabel157.setText("7");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
-        PANASPanel.add(eptLabel157, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel157, gridBagConstraints);
 
         MOSLabel59.setText("- Asustado/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel59, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel59, gridBagConstraints);
 
-        eptBtnGroup7.add(eptBtn18);
-        eptBtn18.setText("1");
+        eptBtnGroup7.add(MOSBtn18);
+        MOSBtn18.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn18, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn18, gridBagConstraints);
 
-        eptBtnGroup7.add(eptBtn20);
-        eptBtn20.setText("2");
+        eptBtnGroup7.add(MOSBtn20);
+        MOSBtn20.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn20, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn20, gridBagConstraints);
 
-        eptBtnGroup7.add(eptBtn21);
-        eptBtn21.setText("3");
+        eptBtnGroup7.add(MOSBtn21);
+        MOSBtn21.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn21, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn21, gridBagConstraints);
 
-        eptBtnGroup7.add(eptBtn22);
-        eptBtn22.setText("4");
+        eptBtnGroup7.add(MOSBtn22);
+        MOSBtn22.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn22, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn22, gridBagConstraints);
 
-        eptBtnGroup7.add(eptBtn23);
-        eptBtn23.setText("5");
+        eptBtnGroup7.add(MOSBtn23);
+        MOSBtn23.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn23, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn23, gridBagConstraints);
 
-        eptLabel158.setText("8");
+        MOSLabel158.setText("8");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
-        PANASPanel.add(eptLabel158, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel158, gridBagConstraints);
 
-        eptLabel60.setText("- Enojado/a, hostil");
+        MOSSLabel60.setText("- Enojado/a, hostil");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(eptLabel60, gridBagConstraints);
+        MOSSSPanel.add(MOSSLabel60, gridBagConstraints);
 
-        eptBtnGroup8.add(eptBtn24);
-        eptBtn24.setText("1");
+        eptBtnGroup8.add(MOSBtn24);
+        MOSBtn24.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn24, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn24, gridBagConstraints);
 
-        eptBtnGroup8.add(eptBtn25);
-        eptBtn25.setText("2");
+        eptBtnGroup8.add(MOSBtn25);
+        MOSBtn25.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn25, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn25, gridBagConstraints);
 
-        eptBtnGroup8.add(eptBtn26);
-        eptBtn26.setText("3");
+        eptBtnGroup8.add(MOSBtn26);
+        MOSBtn26.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn26, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn26, gridBagConstraints);
 
-        eptBtnGroup8.add(eptBtn27);
-        eptBtn27.setText("4");
+        eptBtnGroup8.add(MOSBtn27);
+        MOSBtn27.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn27, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn27, gridBagConstraints);
 
-        eptBtnGroup8.add(eptBtn28);
-        eptBtn28.setText("5");
+        eptBtnGroup8.add(MOSBtn28);
+        MOSBtn28.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn28, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn28, gridBagConstraints);
 
-        eptLabel159.setText("9");
+        MOSLabel159.setText("9");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 11;
-        PANASPanel.add(eptLabel159, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel159, gridBagConstraints);
 
         MOSLabel60.setText("- Entusiasmado/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel60, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel60, gridBagConstraints);
 
-        eptBtnGroup9.add(eptBtn29);
-        eptBtn29.setText("1");
-        eptBtn29.setName("positivo"); // NOI18N
+        eptBtnGroup9.add(MOSBtn29);
+        MOSBtn29.setText("1");
+        MOSBtn29.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn29, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn29, gridBagConstraints);
 
-        eptBtnGroup9.add(eptBtn30);
-        eptBtn30.setText("2");
-        eptBtn30.setName("positivo"); // NOI18N
+        eptBtnGroup9.add(MOSBtn30);
+        MOSBtn30.setText("2");
+        MOSBtn30.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn30, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn30, gridBagConstraints);
 
-        eptBtnGroup9.add(eptBtn31);
-        eptBtn31.setText("3");
-        eptBtn31.setName("positivo"); // NOI18N
+        eptBtnGroup9.add(MOSBtn31);
+        MOSBtn31.setText("3");
+        MOSBtn31.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn31, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn31, gridBagConstraints);
 
-        eptBtnGroup9.add(eptBtn32);
-        eptBtn32.setText("4");
-        eptBtn32.setName("positivo"); // NOI18N
+        eptBtnGroup9.add(MOSBtn32);
+        MOSBtn32.setText("4");
+        MOSBtn32.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn32, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn32, gridBagConstraints);
 
-        eptBtnGroup9.add(eptBtn33);
-        eptBtn33.setText("5");
-        eptBtn33.setName("positivo"); // NOI18N
+        eptBtnGroup9.add(MOSBtn33);
+        MOSBtn33.setText("5");
+        MOSBtn33.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn33, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn33, gridBagConstraints);
 
-        eptLabel160.setText("10");
+        MOSLabel160.setText("10");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 12;
-        PANASPanel.add(eptLabel160, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel160, gridBagConstraints);
 
         MOSLabel62.setText("- Orgulloso/a (de algo) satisfecho/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel62, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel62, gridBagConstraints);
 
-        eptBtnGroup10.add(eptBtn34);
-        eptBtn34.setText("1");
-        eptBtn34.setName("positivo"); // NOI18N
+        eptBtnGroup10.add(MOSBtn34);
+        MOSBtn34.setText("1");
+        MOSBtn34.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn34, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn34, gridBagConstraints);
 
-        eptBtnGroup10.add(eptBtn35);
-        eptBtn35.setText("2");
-        eptBtn35.setName("positivo"); // NOI18N
+        eptBtnGroup10.add(MOSBtn35);
+        MOSBtn35.setText("2");
+        MOSBtn35.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn35, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn35, gridBagConstraints);
 
-        eptBtnGroup10.add(eptBtn36);
-        eptBtn36.setText("3");
-        eptBtn36.setName("positivo"); // NOI18N
+        eptBtnGroup10.add(MOSBtn36);
+        MOSBtn36.setText("3");
+        MOSBtn36.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn36, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn36, gridBagConstraints);
 
-        eptBtnGroup10.add(eptBtn37);
-        eptBtn37.setText("4");
-        eptBtn37.setName("positivo"); // NOI18N
+        eptBtnGroup10.add(MOSBtn37);
+        MOSBtn37.setText("4");
+        MOSBtn37.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn37, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn37, gridBagConstraints);
 
-        eptBtnGroup10.add(eptBtn38);
-        eptBtn38.setText("5");
-        eptBtn38.setName("positivo"); // NOI18N
+        eptBtnGroup10.add(MOSBtn38);
+        MOSBtn38.setText("5");
+        MOSBtn38.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn38, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn38, gridBagConstraints);
 
         MOSLabel63.setText("- Alerta (despierto/a), despejado/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel63, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel63, gridBagConstraints);
 
-        eptBtnGroup12.add(eptBtn39);
-        eptBtn39.setText("1");
-        eptBtn39.setName("positivo"); // NOI18N
+        eptBtnGroup12.add(MOSBtn39);
+        MOSBtn39.setText("1");
+        MOSBtn39.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn39, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn39, gridBagConstraints);
 
-        eptBtnGroup12.add(eptBtn40);
-        eptBtn40.setText("2");
-        eptBtn40.setName("positivo"); // NOI18N
+        eptBtnGroup12.add(MOSBtn40);
+        MOSBtn40.setText("2");
+        MOSBtn40.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn40, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn40, gridBagConstraints);
 
-        eptBtnGroup12.add(eptBtn41);
-        eptBtn41.setText("3");
-        eptBtn41.setName("positivo"); // NOI18N
+        eptBtnGroup12.add(MOSBtn41);
+        MOSBtn41.setText("3");
+        MOSBtn41.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn41, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn41, gridBagConstraints);
 
-        eptBtnGroup12.add(eptBtn42);
-        eptBtn42.setText("4");
-        eptBtn42.setName("positivo"); // NOI18N
+        eptBtnGroup12.add(MOSBtn42);
+        MOSBtn42.setText("4");
+        MOSBtn42.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn42, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn42, gridBagConstraints);
 
-        eptBtnGroup12.add(eptBtn43);
-        eptBtn43.setText("5");
-        eptBtn43.setName("positivo"); // NOI18N
-        eptBtn43.addActionListener(new java.awt.event.ActionListener() {
+        eptBtnGroup12.add(MOSBtn43);
+        MOSBtn43.setText("5");
+        MOSBtn43.setName("positivo"); // NOI18N
+        MOSBtn43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eptBtn43ActionPerformed(evt);
+                MOSBtn43ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn43, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn43, gridBagConstraints);
 
-        eptLabel162.setText("11");
+        MOSLabel162.setText("11");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 13;
-        PANASPanel.add(eptLabel162, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel162, gridBagConstraints);
 
-        eptLabel64.setText("- Irritable, malhumorado/a");
+        MOSLabel64.setText("- Irritable, malhumorado/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(eptLabel64, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel64, gridBagConstraints);
 
-        eptBtnGroup11.add(eptBtn44);
-        eptBtn44.setText("1");
+        eptBtnGroup11.add(MOSBtn44);
+        MOSBtn44.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn44, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn44, gridBagConstraints);
 
-        eptBtnGroup11.add(eptBtn45);
-        eptBtn45.setText("2");
+        eptBtnGroup11.add(MOSBtn45);
+        MOSBtn45.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn45, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn45, gridBagConstraints);
 
-        eptBtnGroup11.add(eptBtn46);
-        eptBtn46.setText("3");
+        eptBtnGroup11.add(MOSBtn46);
+        MOSBtn46.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn46, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn46, gridBagConstraints);
 
-        eptBtnGroup11.add(eptBtn47);
-        eptBtn47.setText("4");
+        eptBtnGroup11.add(MOSBtn47);
+        MOSBtn47.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn47, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn47, gridBagConstraints);
 
-        eptBtnGroup11.add(eptBtn48);
-        eptBtn48.setText("5");
+        eptBtnGroup11.add(MOSBtn48);
+        MOSBtn48.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn48, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn48, gridBagConstraints);
 
-        eptLabel163.setText("12");
+        MOSLabel163.setText("12");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 14;
-        PANASPanel.add(eptLabel163, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel163, gridBagConstraints);
 
-        eptLabel164.setText("13");
+        MOSLabel164.setText("13");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 15;
-        PANASPanel.add(eptLabel164, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel164, gridBagConstraints);
 
         MOSLabel66.setText("- Avergonzado/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel66, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel66, gridBagConstraints);
 
-        eptBtnGroup13.add(eptBtn54);
-        eptBtn54.setText("1");
+        eptBtnGroup13.add(MOSBtn54);
+        MOSBtn54.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn54, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn54, gridBagConstraints);
 
-        eptBtnGroup13.add(eptBtn55);
-        eptBtn55.setText("2");
+        eptBtnGroup13.add(MOSBtn55);
+        MOSBtn55.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn55, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn55, gridBagConstraints);
 
-        eptBtnGroup13.add(eptBtn56);
-        eptBtn56.setText("3");
+        eptBtnGroup13.add(MOSBtn56);
+        MOSBtn56.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn56, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn56, gridBagConstraints);
 
-        eptBtnGroup13.add(eptBtn57);
-        eptBtn57.setText("4");
+        eptBtnGroup13.add(MOSBtn57);
+        MOSBtn57.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn57, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn57, gridBagConstraints);
 
-        eptBtnGroup13.add(eptBtn58);
-        eptBtn58.setText("5");
+        eptBtnGroup13.add(MOSBtn58);
+        MOSBtn58.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn58, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn58, gridBagConstraints);
 
-        eptLabel165.setText("14");
+        MOSLabel165.setText("14");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 16;
-        PANASPanel.add(eptLabel165, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel165, gridBagConstraints);
 
         MOSLabel67.setText("- Inspirado/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel67, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel67, gridBagConstraints);
 
-        eptBtnGroup14.add(eptBtn59);
-        eptBtn59.setText("1");
-        eptBtn59.setName("positivo"); // NOI18N
+        eptBtnGroup14.add(MOSBtn59);
+        MOSBtn59.setText("1");
+        MOSBtn59.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn59, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn59, gridBagConstraints);
 
-        eptBtnGroup14.add(eptBtn60);
-        eptBtn60.setText("2");
-        eptBtn60.setName("positivo"); // NOI18N
+        eptBtnGroup14.add(MOSBtn60);
+        MOSBtn60.setText("2");
+        MOSBtn60.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn60, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn60, gridBagConstraints);
 
-        eptBtnGroup14.add(eptBtn61);
-        eptBtn61.setText("3");
-        eptBtn61.setName("positivo"); // NOI18N
+        eptBtnGroup14.add(MOSBtn61);
+        MOSBtn61.setText("3");
+        MOSBtn61.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn61, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn61, gridBagConstraints);
 
-        eptBtnGroup14.add(eptBtn62);
-        eptBtn62.setText("4");
-        eptBtn62.setName("positivo"); // NOI18N
+        eptBtnGroup14.add(MOSBtn62);
+        MOSBtn62.setText("4");
+        MOSBtn62.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn62, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn62, gridBagConstraints);
 
-        eptBtnGroup14.add(eptBtn63);
-        eptBtn63.setText("5");
-        eptBtn63.setName("positivo"); // NOI18N
+        eptBtnGroup14.add(MOSBtn63);
+        MOSBtn63.setText("5");
+        MOSBtn63.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn63, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn63, gridBagConstraints);
 
-        eptLabel166.setText("15");
+        MOSLabel166.setText("15");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 17;
-        PANASPanel.add(eptLabel166, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel166, gridBagConstraints);
 
-        eptLabel68.setText("- Nervioso/a");
+        MOSLabel68.setText("- Nervioso/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(eptLabel68, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel68, gridBagConstraints);
 
-        eptBtnGroup15.add(eptBtn64);
-        eptBtn64.setText("1");
+        eptBtnGroup15.add(MOSBtn64);
+        MOSBtn64.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn64, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn64, gridBagConstraints);
 
-        eptBtnGroup15.add(eptBtn65);
-        eptBtn65.setText("2");
+        eptBtnGroup15.add(MOSBtn65);
+        MOSBtn65.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn65, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn65, gridBagConstraints);
 
-        eptBtnGroup15.add(eptBtn66);
-        eptBtn66.setText("3");
+        eptBtnGroup15.add(MOSBtn66);
+        MOSBtn66.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn66, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn66, gridBagConstraints);
 
-        eptBtnGroup15.add(eptBtn67);
-        eptBtn67.setText("4");
+        eptBtnGroup15.add(MOSBtn67);
+        MOSBtn67.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn67, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn67, gridBagConstraints);
 
-        eptBtnGroup15.add(eptBtn68);
-        eptBtn68.setText("5");
+        eptBtnGroup15.add(MOSBtn68);
+        MOSBtn68.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn68, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn68, gridBagConstraints);
 
-        eptLabel167.setText("16");
+        MOSLabel167.setText("16");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 18;
-        PANASPanel.add(eptLabel167, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel167, gridBagConstraints);
 
         MOSLabel69.setText("- Decidido/a, atrevido/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel69, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel69, gridBagConstraints);
 
-        eptBtnGroup16.add(eptBtn69);
-        eptBtn69.setText("1");
-        eptBtn69.setName("positivo"); // NOI18N
+        eptBtnGroup16.add(MOSBtn69);
+        MOSBtn69.setText("1");
+        MOSBtn69.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn69, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn69, gridBagConstraints);
 
-        eptBtnGroup16.add(eptBtn70);
-        eptBtn70.setText("2");
-        eptBtn70.setName("positivo"); // NOI18N
+        eptBtnGroup16.add(MOSBtn70);
+        MOSBtn70.setText("2");
+        MOSBtn70.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn70, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn70, gridBagConstraints);
 
-        eptBtnGroup16.add(eptBtn71);
-        eptBtn71.setText("3");
-        eptBtn71.setName("positivo"); // NOI18N
+        eptBtnGroup16.add(MOSBtn71);
+        MOSBtn71.setText("3");
+        MOSBtn71.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn71, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn71, gridBagConstraints);
 
-        eptBtnGroup16.add(eptBtn72);
-        eptBtn72.setText("4");
-        eptBtn72.setName("positivo"); // NOI18N
+        eptBtnGroup16.add(MOSBtn72);
+        MOSBtn72.setText("4");
+        MOSBtn72.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn72, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn72, gridBagConstraints);
 
-        eptBtnGroup16.add(eptBtn73);
-        eptBtn73.setText("5");
-        eptBtn73.setName("positivo"); // NOI18N
+        eptBtnGroup16.add(MOSBtn73);
+        MOSBtn73.setText("5");
+        MOSBtn73.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn73, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn73, gridBagConstraints);
 
-        eptLabel168.setText("17");
+        MOSLabel168.setText("17");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 19;
-        PANASPanel.add(eptLabel168, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel168, gridBagConstraints);
 
         MOSLabel70.setText("- Atento/a o consciente (pongo atención)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel70, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel70, gridBagConstraints);
 
-        eptBtnGroup17.add(eptBtn74);
-        eptBtn74.setText("1");
-        eptBtn74.setName("positivo"); // NOI18N
+        eptBtnGroup17.add(MOSBtn74);
+        MOSBtn74.setText("1");
+        MOSBtn74.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn74, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn74, gridBagConstraints);
 
-        eptBtnGroup17.add(eptBtn75);
-        eptBtn75.setText("2");
-        eptBtn75.setName("positivo"); // NOI18N
+        eptBtnGroup17.add(MOSBtn75);
+        MOSBtn75.setText("2");
+        MOSBtn75.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn75, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn75, gridBagConstraints);
 
-        eptBtnGroup17.add(eptBtn76);
-        eptBtn76.setText("3");
-        eptBtn76.setName("positivo"); // NOI18N
+        eptBtnGroup17.add(MOSBtn76);
+        MOSBtn76.setText("3");
+        MOSBtn76.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn76, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn76, gridBagConstraints);
 
-        eptBtnGroup17.add(eptBtn77);
-        eptBtn77.setText("4");
-        eptBtn77.setName("positivo"); // NOI18N
+        eptBtnGroup17.add(MOSBtn77);
+        MOSBtn77.setText("4");
+        MOSBtn77.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn77, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn77, gridBagConstraints);
 
-        eptBtnGroup17.add(eptBtn78);
-        eptBtn78.setText("5");
-        eptBtn78.setName("positivo"); // NOI18N
+        eptBtnGroup17.add(MOSBtn78);
+        MOSBtn78.setText("5");
+        MOSBtn78.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 19;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn78, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn78, gridBagConstraints);
 
-        eptLabel169.setText("18");
+        MOSLabel169.setText("18");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 20;
-        PANASPanel.add(eptLabel169, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel169, gridBagConstraints);
 
         MOSLabel71.setText("- Intranquilo/a o inquieto");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel71, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel71, gridBagConstraints);
 
-        eptBtnGroup18.add(eptBtn79);
-        eptBtn79.setText("1");
+        eptBtnGroup18.add(MOSBtn79);
+        MOSBtn79.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn79, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn79, gridBagConstraints);
 
-        eptBtnGroup18.add(eptBtn80);
-        eptBtn80.setText("2");
+        eptBtnGroup18.add(MOSBtn80);
+        MOSBtn80.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn80, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn80, gridBagConstraints);
 
-        eptBtnGroup18.add(eptBtn81);
-        eptBtn81.setText("3");
+        eptBtnGroup18.add(MOSBtn81);
+        MOSBtn81.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn81, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn81, gridBagConstraints);
 
-        eptBtnGroup18.add(eptBtn82);
-        eptBtn82.setText("4");
+        eptBtnGroup18.add(MOSBtn82);
+        MOSBtn82.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn82, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn82, gridBagConstraints);
 
-        eptBtnGroup18.add(eptBtn83);
-        eptBtn83.setText("5");
+        eptBtnGroup18.add(MOSBtn83);
+        MOSBtn83.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn83, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn83, gridBagConstraints);
 
-        eptLabel170.setText("19");
+        MOSLabel170.setText("19");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 21;
-        PANASPanel.add(eptLabel170, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel170, gridBagConstraints);
 
         MOSLabel72.setText("- Activo/a");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel72, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel72, gridBagConstraints);
 
-        eptBtnGroup19.add(eptBtn84);
-        eptBtn84.setText("1");
-        eptBtn84.setName("positivo"); // NOI18N
+        eptBtnGroup19.add(MOSBtn84);
+        MOSBtn84.setText("1");
+        MOSBtn84.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn84, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn84, gridBagConstraints);
 
-        eptBtnGroup19.add(eptBtn85);
-        eptBtn85.setText("2");
-        eptBtn85.setName("positivo"); // NOI18N
+        eptBtnGroup19.add(MOSBtn85);
+        MOSBtn85.setText("2");
+        MOSBtn85.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn85, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn85, gridBagConstraints);
 
-        eptBtnGroup19.add(eptBtn86);
-        eptBtn86.setText("3");
-        eptBtn86.setName("positivo"); // NOI18N
+        eptBtnGroup19.add(MOSBtn86);
+        MOSBtn86.setText("3");
+        MOSBtn86.setName("positivo"); // NOI18N
+        MOSBtn86.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MOSBtn86ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn86, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn86, gridBagConstraints);
 
-        eptBtnGroup19.add(eptBtn87);
-        eptBtn87.setText("4");
-        eptBtn87.setName("positivo"); // NOI18N
+        eptBtnGroup19.add(MOSBtn87);
+        MOSBtn87.setText("4");
+        MOSBtn87.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn87, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn87, gridBagConstraints);
 
-        eptBtnGroup19.add(eptBtn88);
-        eptBtn88.setText("5");
-        eptBtn88.setName("positivo"); // NOI18N
+        eptBtnGroup19.add(MOSBtn88);
+        MOSBtn88.setText("5");
+        MOSBtn88.setName("positivo"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn88, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn88, gridBagConstraints);
 
-        eptLabel171.setText("20");
+        MOSLabel171.setText("20");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 22;
-        PANASPanel.add(eptLabel171, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel171, gridBagConstraints);
 
         MOSLabel73.setText("- Temeroso/a, con miedo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        PANASPanel.add(MOSLabel73, gridBagConstraints);
+        MOSSSPanel.add(MOSLabel73, gridBagConstraints);
 
-        eptBtnGroup20.add(eptBtn89);
-        eptBtn89.setText("1");
+        eptBtnGroup20.add(MOSBtn89);
+        MOSBtn89.setText("1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn89, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn89, gridBagConstraints);
 
-        eptBtnGroup20.add(eptBtn90);
-        eptBtn90.setText("2");
+        eptBtnGroup20.add(MOSBtn90);
+        MOSBtn90.setText("2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn90, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn90, gridBagConstraints);
 
-        eptBtnGroup20.add(eptBtn91);
-        eptBtn91.setText("3");
+        eptBtnGroup20.add(MOSBtn91);
+        MOSBtn91.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn91, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn91, gridBagConstraints);
 
-        eptBtnGroup20.add(eptBtn92);
-        eptBtn92.setText("4");
+        eptBtnGroup20.add(MOSBtn92);
+        MOSBtn92.setText("4");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        PANASPanel.add(eptBtn92, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn92, gridBagConstraints);
 
-        eptBtnGroup20.add(eptBtn93);
-        eptBtn93.setText("5");
+        eptBtnGroup20.add(MOSBtn93);
+        MOSBtn93.setText("5");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        PANASPanel.add(eptBtn93, gridBagConstraints);
+        MOSSSPanel.add(MOSBtn93, gridBagConstraints);
 
         MOSLabel217.setText("Afectivo Positivo:");
 
@@ -1463,69 +1468,73 @@ public class PANAS extends Test  {
         PanasTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         PanasTotal.setText("0");
 
-        javax.swing.GroupLayout eptPanelLayout = new javax.swing.GroupLayout(eptPanel);
-        eptPanel.setLayout(eptPanelLayout);
-        eptPanelLayout.setHorizontalGroup(
-            eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(eptPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout MOSPanelLayout = new javax.swing.GroupLayout(MOSPanel);
+        MOSPanel.setLayout(MOSPanelLayout);
+        MOSPanelLayout.setHorizontalGroup(
+            MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MOSPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(MOSLabel33)
-                    .addGroup(eptPanelLayout.createSequentialGroup()
+                    .addGroup(MOSPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(MOSLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(eptPanelLayout.createSequentialGroup()
-                                .addComponent(PANASPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 657, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(MOSPanelLayout.createSequentialGroup()
+                                .addComponent(MOSSSPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 657, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(eptPanelLayout.createSequentialGroup()
+                                .addGroup(MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(MOSPanelLayout.createSequentialGroup()
                                         .addComponent(MOSLabel217)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(AfectivoPositivo))
-                                    .addGroup(eptPanelLayout.createSequentialGroup()
+                                    .addGroup(MOSPanelLayout.createSequentialGroup()
                                         .addComponent(MOSLabel218)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(AfectivoNegativo))
-                                    .addGroup(eptPanelLayout.createSequentialGroup()
+                                    .addGroup(MOSPanelLayout.createSequentialGroup()
                                         .addComponent(MOSLabel219)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(PanasTotal)))))))
                 .addGap(91, 91, 91))
         );
-        eptPanelLayout.setVerticalGroup(
-            eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eptPanelLayout.createSequentialGroup()
+        MOSPanelLayout.setVerticalGroup(
+            MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MOSPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(MOSLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MOSLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PANASPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(eptPanelLayout.createSequentialGroup()
-                        .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MOSSSPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(MOSPanelLayout.createSequentialGroup()
+                        .addGroup(MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(MOSLabel217)
                             .addComponent(AfectivoPositivo))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(MOSLabel218)
                             .addComponent(AfectivoNegativo))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(eptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(MOSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(MOSLabel219)
                             .addComponent(PanasTotal))))
                 .addContainerGap())
         );
 
-        eptScroll.setViewportView(eptPanel);
+        MOSScroll.setViewportView(MOSPanel);
 
-        add(eptScroll, "card1");
+        add(MOSScroll, "card1");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void eptBtn43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eptBtn43ActionPerformed
+    private void MOSBtn43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MOSBtn43ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_eptBtn43ActionPerformed
+    }//GEN-LAST:event_MOSBtn43ActionPerformed
+
+    private void MOSBtn86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MOSBtn86ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MOSBtn86ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1537,26 +1546,120 @@ public class PANAS extends Test  {
     private javax.swing.JToggleButton MOSBtn15;
     private javax.swing.JToggleButton MOSBtn151;
     private javax.swing.JToggleButton MOSBtn1511;
+    private javax.swing.JToggleButton MOSBtn1512;
     private javax.swing.JToggleButton MOSBtn16;
     private javax.swing.JToggleButton MOSBtn161;
     private javax.swing.JToggleButton MOSBtn1611;
     private javax.swing.JToggleButton MOSBtn17;
     private javax.swing.JToggleButton MOSBtn171;
     private javax.swing.JToggleButton MOSBtn1711;
+    private javax.swing.JToggleButton MOSBtn172;
+    private javax.swing.JToggleButton MOSBtn18;
+    private javax.swing.JToggleButton MOSBtn19;
+    private javax.swing.JToggleButton MOSBtn20;
+    private javax.swing.JToggleButton MOSBtn21;
+    private javax.swing.JToggleButton MOSBtn22;
+    private javax.swing.JToggleButton MOSBtn23;
+    private javax.swing.JToggleButton MOSBtn24;
+    private javax.swing.JToggleButton MOSBtn25;
+    private javax.swing.JToggleButton MOSBtn26;
+    private javax.swing.JToggleButton MOSBtn27;
+    private javax.swing.JToggleButton MOSBtn28;
+    private javax.swing.JToggleButton MOSBtn29;
+    private javax.swing.JToggleButton MOSBtn30;
+    private javax.swing.JToggleButton MOSBtn31;
+    private javax.swing.JToggleButton MOSBtn32;
+    private javax.swing.JToggleButton MOSBtn33;
+    private javax.swing.JToggleButton MOSBtn34;
+    private javax.swing.JToggleButton MOSBtn35;
+    private javax.swing.JToggleButton MOSBtn36;
+    private javax.swing.JToggleButton MOSBtn37;
+    private javax.swing.JToggleButton MOSBtn38;
+    private javax.swing.JToggleButton MOSBtn39;
+    private javax.swing.JToggleButton MOSBtn40;
+    private javax.swing.JToggleButton MOSBtn41;
+    private javax.swing.JToggleButton MOSBtn42;
+    private javax.swing.JToggleButton MOSBtn43;
+    private javax.swing.JToggleButton MOSBtn44;
+    private javax.swing.JToggleButton MOSBtn45;
+    private javax.swing.JToggleButton MOSBtn46;
+    private javax.swing.JToggleButton MOSBtn47;
+    private javax.swing.JToggleButton MOSBtn48;
+    private javax.swing.JToggleButton MOSBtn54;
+    private javax.swing.JToggleButton MOSBtn55;
+    private javax.swing.JToggleButton MOSBtn56;
+    private javax.swing.JToggleButton MOSBtn57;
+    private javax.swing.JToggleButton MOSBtn58;
+    private javax.swing.JToggleButton MOSBtn59;
+    private javax.swing.JToggleButton MOSBtn60;
+    private javax.swing.JToggleButton MOSBtn61;
+    private javax.swing.JToggleButton MOSBtn62;
+    private javax.swing.JToggleButton MOSBtn63;
+    private javax.swing.JToggleButton MOSBtn64;
+    private javax.swing.JToggleButton MOSBtn65;
+    private javax.swing.JToggleButton MOSBtn66;
+    private javax.swing.JToggleButton MOSBtn67;
+    private javax.swing.JToggleButton MOSBtn68;
+    private javax.swing.JToggleButton MOSBtn69;
+    private javax.swing.JToggleButton MOSBtn70;
+    private javax.swing.JToggleButton MOSBtn71;
+    private javax.swing.JToggleButton MOSBtn72;
+    private javax.swing.JToggleButton MOSBtn73;
+    private javax.swing.JToggleButton MOSBtn74;
+    private javax.swing.JToggleButton MOSBtn75;
+    private javax.swing.JToggleButton MOSBtn76;
+    private javax.swing.JToggleButton MOSBtn77;
+    private javax.swing.JToggleButton MOSBtn78;
+    private javax.swing.JToggleButton MOSBtn79;
+    private javax.swing.JToggleButton MOSBtn80;
+    private javax.swing.JToggleButton MOSBtn81;
+    private javax.swing.JToggleButton MOSBtn82;
+    private javax.swing.JToggleButton MOSBtn83;
+    private javax.swing.JToggleButton MOSBtn84;
+    private javax.swing.JToggleButton MOSBtn85;
+    private javax.swing.JToggleButton MOSBtn86;
+    private javax.swing.JToggleButton MOSBtn87;
+    private javax.swing.JToggleButton MOSBtn88;
+    private javax.swing.JToggleButton MOSBtn89;
+    private javax.swing.JToggleButton MOSBtn90;
+    private javax.swing.JToggleButton MOSBtn91;
+    private javax.swing.JToggleButton MOSBtn92;
+    private javax.swing.JToggleButton MOSBtn93;
     private javax.swing.JToggleButton MOSDBtn14;
     private javax.swing.JToggleButton MOSDBtn15;
     private javax.swing.JToggleButton MOSDBtn16;
     private javax.swing.JToggleButton MOSDBtn17;
+    private javax.swing.JToggleButton MOSDBtn18;
     private javax.swing.JToggleButton MOSFBtn14;
     private javax.swing.JToggleButton MOSFBtn15;
     private javax.swing.JToggleButton MOSFBtn16;
     private javax.swing.JToggleButton MOSFBtn17;
+    private javax.swing.JToggleButton MOSFBtn18;
     private javax.swing.JLabel MOSLabel11;
     private javax.swing.JLabel MOSLabel112;
     private javax.swing.JLabel MOSLabel114;
     private javax.swing.JLabel MOSLabel149;
     private javax.swing.JLabel MOSLabel150;
+    private javax.swing.JLabel MOSLabel151;
+    private javax.swing.JLabel MOSLabel152;
+    private javax.swing.JLabel MOSLabel153;
+    private javax.swing.JLabel MOSLabel154;
+    private javax.swing.JLabel MOSLabel155;
     private javax.swing.JLabel MOSLabel156;
+    private javax.swing.JLabel MOSLabel157;
+    private javax.swing.JLabel MOSLabel158;
+    private javax.swing.JLabel MOSLabel159;
+    private javax.swing.JLabel MOSLabel160;
+    private javax.swing.JLabel MOSLabel162;
+    private javax.swing.JLabel MOSLabel163;
+    private javax.swing.JLabel MOSLabel164;
+    private javax.swing.JLabel MOSLabel165;
+    private javax.swing.JLabel MOSLabel166;
+    private javax.swing.JLabel MOSLabel167;
+    private javax.swing.JLabel MOSLabel168;
+    private javax.swing.JLabel MOSLabel169;
+    private javax.swing.JLabel MOSLabel170;
+    private javax.swing.JLabel MOSLabel171;
     private javax.swing.JLabel MOSLabel217;
     private javax.swing.JLabel MOSLabel218;
     private javax.swing.JLabel MOSLabel219;
@@ -1567,92 +1670,31 @@ public class PANAS extends Test  {
     private javax.swing.JLabel MOSLabel55;
     private javax.swing.JLabel MOSLabel56;
     private javax.swing.JLabel MOSLabel57;
+    private javax.swing.JLabel MOSLabel58;
     private javax.swing.JLabel MOSLabel59;
     private javax.swing.JLabel MOSLabel60;
     private javax.swing.JLabel MOSLabel62;
     private javax.swing.JLabel MOSLabel63;
+    private javax.swing.JLabel MOSLabel64;
     private javax.swing.JLabel MOSLabel66;
     private javax.swing.JLabel MOSLabel67;
+    private javax.swing.JLabel MOSLabel68;
     private javax.swing.JLabel MOSLabel69;
     private javax.swing.JLabel MOSLabel70;
     private javax.swing.JLabel MOSLabel71;
     private javax.swing.JLabel MOSLabel72;
     private javax.swing.JLabel MOSLabel73;
-    private javax.swing.JPanel PANASPanel;
+    private javax.swing.JPanel MOSPanel;
+    private javax.swing.JLabel MOSSLabel60;
+    private javax.swing.JPanel MOSSSPanel;
+    private javax.swing.JScrollPane MOSScroll;
+    private javax.swing.JToggleButton MOSToggleButton37;
+    private javax.swing.JToggleButton MOSToggleButton38;
+    private javax.swing.JToggleButton MOSToggleButton39;
+    private javax.swing.JToggleButton MOSToggleButton40;
+    private javax.swing.JToggleButton MOSToggleButton41;
+    private javax.swing.JToggleButton MOSToggleButton42;
     private javax.swing.JLabel PanasTotal;
-    private javax.swing.JToggleButton eptBtn1512;
-    private javax.swing.JToggleButton eptBtn172;
-    private javax.swing.JToggleButton eptBtn18;
-    private javax.swing.JToggleButton eptBtn19;
-    private javax.swing.JToggleButton eptBtn20;
-    private javax.swing.JToggleButton eptBtn21;
-    private javax.swing.JToggleButton eptBtn22;
-    private javax.swing.JToggleButton eptBtn23;
-    private javax.swing.JToggleButton eptBtn24;
-    private javax.swing.JToggleButton eptBtn25;
-    private javax.swing.JToggleButton eptBtn26;
-    private javax.swing.JToggleButton eptBtn27;
-    private javax.swing.JToggleButton eptBtn28;
-    private javax.swing.JToggleButton eptBtn29;
-    private javax.swing.JToggleButton eptBtn30;
-    private javax.swing.JToggleButton eptBtn31;
-    private javax.swing.JToggleButton eptBtn32;
-    private javax.swing.JToggleButton eptBtn33;
-    private javax.swing.JToggleButton eptBtn34;
-    private javax.swing.JToggleButton eptBtn35;
-    private javax.swing.JToggleButton eptBtn36;
-    private javax.swing.JToggleButton eptBtn37;
-    private javax.swing.JToggleButton eptBtn38;
-    private javax.swing.JToggleButton eptBtn39;
-    private javax.swing.JToggleButton eptBtn40;
-    private javax.swing.JToggleButton eptBtn41;
-    private javax.swing.JToggleButton eptBtn42;
-    private javax.swing.JToggleButton eptBtn43;
-    private javax.swing.JToggleButton eptBtn44;
-    private javax.swing.JToggleButton eptBtn45;
-    private javax.swing.JToggleButton eptBtn46;
-    private javax.swing.JToggleButton eptBtn47;
-    private javax.swing.JToggleButton eptBtn48;
-    private javax.swing.JToggleButton eptBtn54;
-    private javax.swing.JToggleButton eptBtn55;
-    private javax.swing.JToggleButton eptBtn56;
-    private javax.swing.JToggleButton eptBtn57;
-    private javax.swing.JToggleButton eptBtn58;
-    private javax.swing.JToggleButton eptBtn59;
-    private javax.swing.JToggleButton eptBtn60;
-    private javax.swing.JToggleButton eptBtn61;
-    private javax.swing.JToggleButton eptBtn62;
-    private javax.swing.JToggleButton eptBtn63;
-    private javax.swing.JToggleButton eptBtn64;
-    private javax.swing.JToggleButton eptBtn65;
-    private javax.swing.JToggleButton eptBtn66;
-    private javax.swing.JToggleButton eptBtn67;
-    private javax.swing.JToggleButton eptBtn68;
-    private javax.swing.JToggleButton eptBtn69;
-    private javax.swing.JToggleButton eptBtn70;
-    private javax.swing.JToggleButton eptBtn71;
-    private javax.swing.JToggleButton eptBtn72;
-    private javax.swing.JToggleButton eptBtn73;
-    private javax.swing.JToggleButton eptBtn74;
-    private javax.swing.JToggleButton eptBtn75;
-    private javax.swing.JToggleButton eptBtn76;
-    private javax.swing.JToggleButton eptBtn77;
-    private javax.swing.JToggleButton eptBtn78;
-    private javax.swing.JToggleButton eptBtn79;
-    private javax.swing.JToggleButton eptBtn80;
-    private javax.swing.JToggleButton eptBtn81;
-    private javax.swing.JToggleButton eptBtn82;
-    private javax.swing.JToggleButton eptBtn83;
-    private javax.swing.JToggleButton eptBtn84;
-    private javax.swing.JToggleButton eptBtn85;
-    private javax.swing.JToggleButton eptBtn86;
-    private javax.swing.JToggleButton eptBtn87;
-    private javax.swing.JToggleButton eptBtn88;
-    private javax.swing.JToggleButton eptBtn89;
-    private javax.swing.JToggleButton eptBtn90;
-    private javax.swing.JToggleButton eptBtn91;
-    private javax.swing.JToggleButton eptBtn92;
-    private javax.swing.JToggleButton eptBtn93;
     private javax.swing.ButtonGroup eptBtnGroup1;
     private javax.swing.ButtonGroup eptBtnGroup10;
     private javax.swing.ButtonGroup eptBtnGroup11;
@@ -1673,38 +1715,5 @@ public class PANAS extends Test  {
     private javax.swing.ButtonGroup eptBtnGroup7;
     private javax.swing.ButtonGroup eptBtnGroup8;
     private javax.swing.ButtonGroup eptBtnGroup9;
-    private javax.swing.JToggleButton eptDBtn18;
-    private javax.swing.JToggleButton eptFBtn18;
-    private javax.swing.JLabel eptLabel151;
-    private javax.swing.JLabel eptLabel152;
-    private javax.swing.JLabel eptLabel153;
-    private javax.swing.JLabel eptLabel154;
-    private javax.swing.JLabel eptLabel155;
-    private javax.swing.JLabel eptLabel157;
-    private javax.swing.JLabel eptLabel158;
-    private javax.swing.JLabel eptLabel159;
-    private javax.swing.JLabel eptLabel160;
-    private javax.swing.JLabel eptLabel162;
-    private javax.swing.JLabel eptLabel163;
-    private javax.swing.JLabel eptLabel164;
-    private javax.swing.JLabel eptLabel165;
-    private javax.swing.JLabel eptLabel166;
-    private javax.swing.JLabel eptLabel167;
-    private javax.swing.JLabel eptLabel168;
-    private javax.swing.JLabel eptLabel169;
-    private javax.swing.JLabel eptLabel170;
-    private javax.swing.JLabel eptLabel171;
-    private javax.swing.JLabel eptLabel58;
-    private javax.swing.JLabel eptLabel60;
-    private javax.swing.JLabel eptLabel64;
-    private javax.swing.JLabel eptLabel68;
-    private javax.swing.JPanel eptPanel;
-    private javax.swing.JScrollPane eptScroll;
-    private javax.swing.JToggleButton eptToggleButton37;
-    private javax.swing.JToggleButton eptToggleButton38;
-    private javax.swing.JToggleButton eptToggleButton39;
-    private javax.swing.JToggleButton eptToggleButton40;
-    private javax.swing.JToggleButton eptToggleButton41;
-    private javax.swing.JToggleButton eptToggleButton42;
     // End of variables declaration//GEN-END:variables
 }

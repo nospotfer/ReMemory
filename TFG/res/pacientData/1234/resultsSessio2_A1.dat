@@ -1,25 +1,25 @@
 #NEUROIMATGE
-#Fri Oct 20 19:31:56 CEST 2017
+#Sun Oct 22 21:16:27 CEST 2017
 MOSFamilia=2
 rseTotal=40
-AfectPositivo=18
+AfectPositivo=30
 OHQSFTotal=48
 dukeTotal=43
 qolTotal=40
 comunicacioSub=25
 IMAGETotal=96
 upsaTotal=48.08
-AfectNegativo=19
+AfectNegativo=30
 hadTotalD=8
 puntTotalMoca1=0
 hadTotalA=15
 MOSAmigos=1
 comprensioSub=23.08
-MOSTotal=52
-EPTTotal=18
-AyudaMaterial=10
-SocialOcio=12
-ApoyoAfectivo=8
-PanasTotal=37
+MOSTotal=76
+EPTTotal=12
+AyudaMaterial=16
+SocialOcio=16
+ApoyoAfectivo=12
+PanasTotal=60
 mfeTotal=38
-ApoyoEmocional=22
+ApoyoEmocional=32

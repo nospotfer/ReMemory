@@ -1227,8 +1227,15 @@ public class Utils {
         CellReference cellReference = new CellReference(cell);
         XSSFRow row = sheet.getRow(cellReference.getRow());
         XSSFCell c = row.getCell(cellReference.getCol());
-        c.setCellType(XSSFCell.CELL_TYPE_STRING);
-        return c.getStringCellValue();
+        if (c != null){
+            c.setCellType(XSSFCell.CELL_TYPE_STRING);
+            return c.getStringCellValue();
+        } else {
+            System.out.println("cell "+cell +" from Cogstate XLS is null!! Skipping...\n");
+            //c.setCellType(XSSFCell.CELL_TYPE_STRING);
+            return "";
+        }
+       
     }
 
     private static void writeFitxa(String idPacient, Writer writer){

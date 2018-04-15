@@ -2349,11 +2349,11 @@ public class DadesMediques extends Test {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
+            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+            .addComponent(dadesMediquesScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 3325, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

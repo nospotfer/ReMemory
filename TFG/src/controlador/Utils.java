@@ -66,6 +66,8 @@ public class Utils {
 	    String line;
 	    StringBuilder stringBuilder = new StringBuilder();
 	    String ls = System.getProperty("line.separator");
+            System.out.println ("El separador de sistema es: "+ls);
+            
 	    while( ( line = reader.readLine() ) != null ) {
 		stringBuilder.append( line );
 		stringBuilder.append( ls );

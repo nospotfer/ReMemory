@@ -396,8 +396,8 @@ public class Digits extends Test {
         else if (edatPacient>=78 && edatPacient<=80){
             edat = "78-80";
         }
-        else if (edatPacient<=81){
-            edat = "81-90";
+        else if (edatPacient>=81){
+            edat = "81-100";
         }
         
         List<Object> list;
@@ -456,7 +456,7 @@ public class Digits extends Test {
         auxMap.put(7, auxList);
         auxList = Arrays.asList(15, "95-97");
         auxMap.put(8, auxList);
-        auxList = Arrays.asList(18, ">99");
+        auxList = Arrays.asList(18, ">98");
         auxMap.put(9, auxList);
         taulaDigitsDD.put("50-56", new HashMap(auxMap));
         
@@ -514,7 +514,7 @@ public class Digits extends Test {
         auxMap.put(5, auxList);
         auxList = Arrays.asList(18, ">99");
         auxMap.put(7, auxList);
-        taulaDigitsDD.put("81-90", new HashMap(auxMap));
+        taulaDigitsDD.put("81-100", new HashMap(auxMap));
     }
     
     private void initHashDI() {
@@ -582,7 +582,7 @@ public class Digits extends Test {
         auxMap.put(3, auxList);
         auxList = Arrays.asList(18, ">99");
         auxMap.put(6, auxList);
-        taulaDigitsDI.put("81-90", new HashMap(auxMap));
+        taulaDigitsDI.put("81-100", new HashMap(auxMap));
     }
 
     /**

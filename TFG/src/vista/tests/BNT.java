@@ -677,7 +677,7 @@ public class BNT extends Test {
         else if (edatP>=78 && edatP<=80){
             edat = "78-80";
         }
-        else if (edatP<=81){
+        else if (edatP>=81){
             edat = "81+";
         }
         edatPacient =  edat;
